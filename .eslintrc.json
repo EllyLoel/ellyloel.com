@@ -1,0 +1,13 @@
+{
+  "globals": {
+    "__PATH_PREFIX__": true
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended", "react-app"],
+  "plugins": ["react", "prettier"],
+  "parser": "babel-eslint",
+  "rules": {
+    "prettier/prettier": "error",
+    "no-unused-vars": "warn",
+    "react/prop-types": "off"
+  }
+}

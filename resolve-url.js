@@ -1,2 +1,2 @@
-const slugify = require('slugify');
-module.exports = title => `/notes/${slugify(title)}`;
+const slugify = require("slugify");
+module.exports = (title) => `/notes/${slugify(title)}`;
