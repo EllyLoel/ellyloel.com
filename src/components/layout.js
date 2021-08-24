@@ -8,8 +8,21 @@ import Header from './header';
 import Footer from './footer';
 
 const Global = createGlobalStyle`
+  :root {
+    --light: #FFF;
+    --dark: #393939;
+    --accent: #FFDC84;
+    --bg-blue: #84ffdc;
+    --bg-purple: #dc84ff;
+  }
+
   * {
     box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 `;
 
