@@ -1,5 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 
 const Footer = () => (
   <footer>
@@ -7,7 +8,7 @@ const Footer = () => (
     <span role="img" aria-label="sparkling heart">
       💖
     </span>
-    {` `}by <a href="https://www.ellyloel.com">Elly</a>
+    {` `}by <Link to="/#about">Elly</Link>
   </footer>
 );
 

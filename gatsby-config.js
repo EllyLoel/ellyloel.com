@@ -41,5 +41,6 @@ module.exports = {
         types: ['Mdx'], // or ['RemarkMarkdown'] (or both)
       },
     },
+    `gatsby-plugin-styled-components`,
   ],
 };
