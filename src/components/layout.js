@@ -1,11 +1,15 @@
+// IMPORTS ////////////////////////////////////////////////////////////////////
+
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import 'normalize.css';
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
-import Header from './header';
+import Header from './header/header';
 import Footer from './footer';
+
+// STYLES /////////////////////////////////////////////////////////////////////
 
 const Global = createGlobalStyle`
   :root {
@@ -23,8 +27,17 @@ const Global = createGlobalStyle`
 
   html {
     scroll-behavior: smooth;
+    max-width: 100vw;
+  }
+
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    position: relative;
   }
 `;
+
+// COMPONENTS /////////////////////////////////////////////////////////////////
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

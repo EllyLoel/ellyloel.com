@@ -43,7 +43,24 @@ const HeroHeader = styled.header`
   }
 `;
 
-// RENDERING //////////////////////////////////////////////////////////////////
+const Heading = styled.h1`
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .emoji-wrapper {
+      width: max-content;
+      font-size: 0.75em;
+    }
+  }
+`;
+
+const SubHeading = styled.p`
+  padding-left: 0.4rem;
+`;
+
+// COMPONENTS /////////////////////////////////////////////////////////////////
 
 const Landing = () => {
   return (
@@ -61,16 +78,19 @@ const Landing = () => {
 
 export default Landing;
 
-// COMPONENTS /////////////////////////////////////////////////////////////////
-
 const HeroText = () => (
   <HeroHeader>
-    <h1>
-      Hello.
+    <Heading>
+      <span className="flex-container">
+        Hello.{' '}
+        <span role="img" aria-label="sparkles" className="emoji-wrapper">
+          ✨
+        </span>
+      </span>
       <span style={{ display: 'block' }}>I am Elly</span>
-    </h1>
-    <p>
-      <em>I design & build things for the web.</em>
-    </p>
+    </Heading>
+    <SubHeading>
+      <em>I design &amp; build things for the web.</em>
+    </SubHeading>
   </HeroHeader>
 );
