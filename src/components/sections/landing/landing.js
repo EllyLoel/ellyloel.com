@@ -3,30 +3,40 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import BGWrapper from './bg-wrapper';
-import SVGGraphic from '../../images/svg/sitting-laptop.svg';
-import CTAButton from '../cta-button';
+import BGWrapper from '../bg-wrapper';
+import Nav from '../../nav/nav';
+import SVGGraphic from '../../../images/svg/sitting-laptop.svg';
+import CTAButton from './cta-button';
 
 // STYLES /////////////////////////////////////////////////////////////////////
 
 const LandingSection = styled.section`
   position: relative;
-
-  grid-area: landing;
-
   width: 100vw;
   height: 100vh;
+
+  grid-area: landing;
+  display: grid;
+  grid-template-rows: max-content auto;
 `;
 
 const Content = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 4em;
+
+  @media (min-width: 64em) {
+    height: auto;
+
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 0;
+  }
 `;
 
 const HeroHeader = styled.header`
@@ -40,6 +50,26 @@ const HeroHeader = styled.header`
     font-size: 0.935rem;
     margin: 0;
     letter-spacing: -0.0025em;
+  }
+
+  @media (min-width: 64em) {
+    h1 {
+      font-size: 5rem;
+    }
+
+    p {
+      font-size: 1.15rem;
+    }
+  }
+
+  @media (min-width: 90em) {
+    h1 {
+      font-size: 6rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+    }
   }
 `;
 
@@ -60,15 +90,31 @@ const SubHeading = styled.p`
   padding-left: 0.4rem;
 `;
 
+const StyledGraphic = styled.div`
+  width: min(80vw, 22.5em);
+
+  @media (min-width: 64em) {
+    width: 100%;
+    max-width: 22.5rem;
+  }
+
+  @media (min-width: 90em) {
+    max-width: 30rem;
+  }
+`;
+
 // COMPONENTS /////////////////////////////////////////////////////////////////
 
 const Landing = () => {
   return (
     <LandingSection id="landing">
       <BGWrapper>
+        <Nav siteTitle="<e//y>" />
         <Content>
           <HeroText />
-          <SVGGraphic />
+          <StyledGraphic>
+            <SVGGraphic />
+          </StyledGraphic>
           <CTAButton />
         </Content>
       </BGWrapper>

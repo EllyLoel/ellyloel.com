@@ -5,7 +5,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const result = await graphql(`
     {
-      allFile {
+      allFile(filter: { sourceInstanceName: { eq: "notes" } }) {
         edges {
           node {
             childMdx {

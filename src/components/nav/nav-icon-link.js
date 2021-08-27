@@ -4,9 +4,9 @@ import React from 'react';
 
 // COMPONENTS /////////////////////////////////////////////////////////////////
 
-const NavIconLink = ({ link, children }) => {
+const NavIconLink = ({ link, navOpen, setNavOpen, children }) => {
   return (
-    <li>
+    <li onClick={() => setNavOpen(!navOpen)}>
       <a href={link} target="_blank" rel="noreferrer">
         {children}
       </a>

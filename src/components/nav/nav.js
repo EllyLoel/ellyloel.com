@@ -25,8 +25,8 @@ const underlineHoverTransition = `
   &::after {
     position: absolute;
     width: 95%;
-    height: 4px;
-    border-radius: 2px;
+    height: 2.5px;
+    border-radius: 9999px;
     background: var(--light);
     top: 105%;
     left: 2.5%;
@@ -47,18 +47,11 @@ const underlineHoverTransition = `
   }
 `;
 
-const Header = styled.header`
-  position: absolute;
-  z-index: 2;
-  height: 100vh;
-  width: 100%;
-  padding: 1rem;
-`;
-
 const Nav = styled.nav`
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
 
@@ -129,6 +122,9 @@ const Nav = styled.nav`
     flex-direction: row;
     justify-content: space-between;
 
+    visibility: visible;
+    opacity: 1;
+
     background: none;
 
     a {
@@ -150,67 +146,113 @@ const Nav = styled.nav`
 const Heading = styled.h1`
   margin: 0;
 
+  font-size: 1rem;
+
+  a {
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 3rem;
+
+    @media (min-width: 64em) {
+      font-size: 1.6rem;
+    }
+  }
+
   ${underlineHoverTransition}
+`;
+
+const StyledHamburger = styled.div`
+  position: fixed;
+  z-index: 1;
+  top: 1em;
+  left: 1em;
 
   @media (min-width: 64em) {
-    font-size: 1rem;
+    display: none;
   }
 `;
 
 // COMPONENTS /////////////////////////////////////////////////////////////////
 
-const HeaderSection = ({ siteTitle }) => {
+const NavSection = ({ siteTitle }) => {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
-    <Header>
+    <>
       <Nav navOpen={navOpen}>
-        <Heading>
+        <Heading onClick={() => setNavOpen(!navOpen)}>
           <Link to="/#landing">{siteTitle}</Link>
         </Heading>
 
         <ul className="text-links-list">
-          <NavLink link="/#projects">🛠️ Projects</NavLink>
+          <NavLink link="/#projects" navOpen={navOpen} setNavOpen={setNavOpen}>
+            🛠️ Projects
+          </NavLink>
 
-          <NavLink link="/#about">👩🏼 About</NavLink>
+          <NavLink link="/#about" navOpen={navOpen} setNavOpen={setNavOpen}>
+            👩🏼 About
+          </NavLink>
 
-          <NavLink link="/#contact">📥 Contact</NavLink>
+          <NavLink link="/#contact" navOpen={navOpen} setNavOpen={setNavOpen}>
+            📥 Contact
+          </NavLink>
 
-          <NavLink link="/resume/">📑 Resume</NavLink>
+          <NavLink link="/resume/" navOpen={navOpen} setNavOpen={setNavOpen}>
+            📑 Resume
+          </NavLink>
 
-          <NavLink link="/digital-garden/">🌿 Digital Garden</NavLink>
+          <NavLink
+            link="/digital-garden/"
+            navOpen={navOpen}
+            setNavOpen={setNavOpen}
+          >
+            🌿 Digital Garden
+          </NavLink>
         </ul>
         <ul className="icon-links-list">
-          <NavIconLink link="http://github.ellyloel.com/">
+          <NavIconLink
+            link="http://github.ellyloel.com/"
+            navOpen={navOpen}
+            setNavOpen={setNavOpen}
+          >
             <RiGithubFill />
           </NavIconLink>
 
-          <NavIconLink link="http://linkedin.ellyloel.com/">
+          <NavIconLink
+            link="http://linkedin.ellyloel.com/"
+            navOpen={navOpen}
+            setNavOpen={setNavOpen}
+          >
             <RiLinkedinBoxFill />
           </NavIconLink>
 
-          <NavIconLink link="mailto:hello@ellyloel.com">
+          <NavIconLink
+            link="mailto:hello@ellyloel.com"
+            navOpen={navOpen}
+            setNavOpen={setNavOpen}
+          >
             <RiMailSendFill />
           </NavIconLink>
         </ul>
       </Nav>
-      <Hamburger
-        toggled={navOpen}
-        toggle={setNavOpen}
-        rounded
-        label="Show menu"
-        color="#FFF"
-      />
-    </Header>
+      <StyledHamburger>
+        <Hamburger
+          toggled={navOpen}
+          toggle={setNavOpen}
+          rounded
+          label="Show menu"
+          color="#FFF"
+        />
+      </StyledHamburger>
+    </>
   );
 };
 
-HeaderSection.propTypes = {
+NavSection.propTypes = {
   siteTitle: PropTypes.string,
 };
 
-HeaderSection.defaultProps = {
+NavSection.defaultProps = {
   siteTitle: ``,
 };
 
-export default HeaderSection;
+export default NavSection;

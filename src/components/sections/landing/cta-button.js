@@ -11,12 +11,16 @@ const bgAnimation = keyframes`
 
 const Button = styled.button`
   position: absolute;
+  z-index: 0;
   bottom: 2.5%;
-  background-color: var(--accent);
   height: 50px;
   width: 50px;
+  padding-top: 0.5rem;
+
   border: none;
   border-radius: 50%;
+
+  background-color: var(--accent);
   color: var(--light);
   font-size: 1.25rem;
   cursor: pointer;

@@ -7,16 +7,17 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        extensions: [`.mdx`, `.md`],
+        name: `notes`,
+        path: `${__dirname}/content/notes/`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `notes`,
-        path: `${__dirname}/content/notes/`,
+        name: `projects`,
+        path: `${__dirname}/content/projects/`,
       },
     },
     {
@@ -53,9 +54,20 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Raleway:400,400i,600,800,800i`],
+        fonts: [`Raleway:400,400i,600,800,800i`, `Nanum Pen Script:400`],
         display: 'swap',
       },
     },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+    `gatsby-transformer-remark`,
   ],
 };

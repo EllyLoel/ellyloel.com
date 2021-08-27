@@ -5,9 +5,9 @@ import { Link } from 'gatsby';
 
 // COMPONENTS /////////////////////////////////////////////////////////////////
 
-const NavLink = ({ link, children }) => {
+const NavLink = ({ link, navOpen, setNavOpen, children }) => {
   return (
-    <li>
+    <li onClick={() => setNavOpen(!navOpen)}>
       <Link to={link}>{children}</Link>
     </li>
   );

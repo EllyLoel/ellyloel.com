@@ -29,7 +29,7 @@ const DigitalGarden = ({
 export default DigitalGarden;
 
 export const pageQuery = graphql`
-  query MyQuery {
+  query {
     allMdx {
       edges {
         node {
