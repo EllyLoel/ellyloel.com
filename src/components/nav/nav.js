@@ -173,7 +173,7 @@ const StyledHamburger = styled.div`
 
 // COMPONENTS /////////////////////////////////////////////////////////////////
 
-const NavSection = ({ siteTitle }) => {
+const NavSection = ({ siteTitle, color }) => {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
@@ -240,7 +240,7 @@ const NavSection = ({ siteTitle }) => {
           toggle={setNavOpen}
           rounded
           label="Show menu"
-          color="#FFF"
+          color={color}
         />
       </StyledHamburger>
     </>

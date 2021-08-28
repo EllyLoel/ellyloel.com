@@ -3,9 +3,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import 'normalize.css';
-import { createGlobalStyle } from 'styled-components';
-
-import Footer from './footer';
+import styled, { createGlobalStyle } from 'styled-components';
 
 // STYLES /////////////////////////////////////////////////////////////////////
 
@@ -35,13 +33,22 @@ const Global = createGlobalStyle`
   }
 `;
 
+const Main = styled.main`
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-areas:
+    'landing'
+    'projects'
+    'about'
+    'contact';
+`;
+
 // COMPONENTS /////////////////////////////////////////////////////////////////
 
 const Layout = ({ children }) => (
   <>
     <Global />
-    <main>{children}</main>
-    <Footer />
+    <Main>{children}</Main>
   </>
 );
 

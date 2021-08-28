@@ -3,9 +3,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import BGWrapper from '../bg-wrapper';
-import Nav from '../../nav/nav';
-import SVGGraphic from '../../../images/svg/sitting-laptop.svg';
+import LandingBGWrapper from './landing-bg-wrapper';
+import Nav from '../../../nav/nav';
+import SVGGraphic from '../../../../images/svg/sitting-with-laptop.svg';
 import CTAButton from './cta-button';
 
 // STYLES /////////////////////////////////////////////////////////////////////
@@ -30,12 +30,27 @@ const Content = styled.div`
   justify-content: center;
   gap: 4em;
 
+  .svg-graphic {
+    width: min(80vw, 22.5em);
+  }
+
   @media (min-width: 64em) {
     height: auto;
 
     flex-direction: row;
     justify-content: space-evenly;
     gap: 0;
+
+    .svg-graphic {
+      width: 100%;
+      max-width: 22.5rem;
+    }
+  }
+
+  @media (min-width: 90em) {
+    .svg-graphic {
+      max-width: 30rem;
+    }
   }
 `;
 
@@ -90,34 +105,19 @@ const SubHeading = styled.p`
   padding-left: 0.4rem;
 `;
 
-const StyledGraphic = styled.div`
-  width: min(80vw, 22.5em);
-
-  @media (min-width: 64em) {
-    width: 100%;
-    max-width: 22.5rem;
-  }
-
-  @media (min-width: 90em) {
-    max-width: 30rem;
-  }
-`;
-
 // COMPONENTS /////////////////////////////////////////////////////////////////
 
 const Landing = () => {
   return (
     <LandingSection id="landing">
-      <BGWrapper>
-        <Nav siteTitle="<e//y>" />
+      <LandingBGWrapper>
+        <Nav siteTitle="<e//y>" color="#393939" />
         <Content>
           <HeroText />
-          <StyledGraphic>
-            <SVGGraphic />
-          </StyledGraphic>
+          <SVGGraphic />
           <CTAButton />
         </Content>
-      </BGWrapper>
+      </LandingBGWrapper>
     </LandingSection>
   );
 };

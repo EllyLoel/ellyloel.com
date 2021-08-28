@@ -19,6 +19,10 @@ const CardStyled = styled.article`
 
   transform: scale(1);
   transition: transform 500ms cubic-bezier(0.57, 2.2, 0.26, 0.99);
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 const CardImg = styled.a`
@@ -64,7 +68,7 @@ const Title = styled.h2`
   }
 `;
 
-const Content = styled.p`
+const Content = styled.div`
   line-height: 1.7;
 
   a {
