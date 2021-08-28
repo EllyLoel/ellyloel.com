@@ -23,6 +23,22 @@ const CardStyled = styled.article`
   &:hover {
     transform: scale(1.05);
   }
+
+  .no-click {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  .blur {
+    filter: blur(3px);
+    user-select: none;
+  }
+
+  .blur-img {
+    filter: blur(20px);
+    user-select: none;
+    transform: scale(1.1);
+  }
 `;
 
 const CardImg = styled.a`
@@ -48,11 +64,6 @@ const CardContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  .blur {
-    filter: blur(3px);
-    user-select: none;
-  }
 `;
 
 const Title = styled.h2`
@@ -82,18 +93,31 @@ const Content = styled.div`
 
 const Card = ({ project }) => (
   <CardStyled>
-    <CardImg href={project.frontmatter.demo} target="_blank" rel="noreferrer">
+    <CardImg
+      href={project.frontmatter.demo}
+      target="_blank"
+      rel="noreferrer"
+      className={project.frontmatter.comingSoon && 'no-click'}
+    >
       <GatsbyImage
         image={getImage(project.frontmatter.imageSrc)}
         alt={project.frontmatter.imageAlt}
+        className={project.frontmatter.comingSoon && 'blur-img'}
       />
     </CardImg>
     <CardContent>
-      <Title>{project.frontmatter.title}</Title>
-      <Content dangerouslySetInnerHTML={{ __html: project.html }} />
+      <Title>
+        {project.frontmatter.title}
+        {project.frontmatter.comingSoon && <span>Coming Soon</span>}
+      </Title>
+      <Content
+        dangerouslySetInnerHTML={{ __html: project.html }}
+        className={project.frontmatter.comingSoon && 'blur'}
+      />
       <CardLinks
         demo={project.frontmatter.demo}
         github={project.frontmatter.github}
+        comingSoon={project.frontmatter.comingSoon}
       />
     </CardContent>
   </CardStyled>

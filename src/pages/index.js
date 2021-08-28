@@ -25,7 +25,7 @@ export const pageQuery = graphql`
   query {
     projects: allMarkdownRemark(
       filter: { frontmatter: { github: { ne: null } } }
-      sort: { fields: frontmatter___id, order: ASC }
+      sort: { fields: frontmatter___id, order: DESC }
     ) {
       edges {
         node {
@@ -40,6 +40,7 @@ export const pageQuery = graphql`
                 gatsbyImageData(placeholder: DOMINANT_COLOR, width: 500)
               }
             }
+            comingSoon
           }
           html
         }

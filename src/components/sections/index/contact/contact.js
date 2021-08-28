@@ -83,9 +83,11 @@ const BTTButton = styled.button`
   bottom: 1.5em;
   right: 1.5em;
   z-index: 1;
-  background-color: var(--accent);
   height: 50px;
   width: 50px;
+  padding-top: 0.2rem;
+
+  background-color: var(--accent);
   border-radius: 50%;
   border: none;
   color: var(--light);

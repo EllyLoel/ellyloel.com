@@ -37,14 +37,24 @@ const Link = styled.a`
   }
 `;
 
-const CardLinks = ({ demo, github }) => {
+const CardLinks = ({ demo, github, comingSoon }) => {
   return (
     <Links>
-      <Link href={demo} target="_blank" rel="noreferrer">
+      <Link
+        href={demo}
+        target="_blank"
+        rel="noreferrer"
+        className={comingSoon && 'blur no-click'}
+      >
         Live Demo
         <FaAngleRight />
       </Link>
-      <Link href={github} target="_blank" rel="noreferrer">
+      <Link
+        href={github}
+        target="_blank"
+        rel="noreferrer"
+        className={comingSoon && 'blur no-click'}
+      >
         GitHub
         <FaAngleRight />
       </Link>
