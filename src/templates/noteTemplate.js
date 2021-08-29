@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Layout from '../components/layout';
-import Graph from '../components/graph';
+import Graph from '../components/garden/graph';
 
 export default function noteTemplate({ data: { mdx } }) {
   return (

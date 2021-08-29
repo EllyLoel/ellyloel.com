@@ -8,6 +8,7 @@ tags:
   - zettelkasten
   - learning
   - notes
+stage: budding
 ---
 
 Permanent Notes in a [[Zettelkasten]] should follow this framework...

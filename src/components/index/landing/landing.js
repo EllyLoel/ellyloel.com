@@ -4,8 +4,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 import LandingBGWrapper from './landing-bg-wrapper';
-import Nav from '../../../nav/nav';
-import SVGGraphic from '../../../../images/svg/sitting-with-laptop.svg';
+import Nav from '../../nav/nav';
+import SVGGraphic from '../../../images/svg/sitting-with-laptop.svg';
 import CTAButton from './cta-button';
 
 // STYLES /////////////////////////////////////////////////////////////////////

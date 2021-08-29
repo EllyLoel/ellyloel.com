@@ -129,6 +129,7 @@ const Nav = styled.nav`
 
     a {
       font-size: 1rem;
+      color: ${({ navColor }) => (navColor ? navColor : 'var(--light)')};
     }
 
     .text-links-list {
@@ -173,12 +174,12 @@ const StyledHamburger = styled.div`
 
 // COMPONENTS /////////////////////////////////////////////////////////////////
 
-const NavSection = ({ siteTitle, color }) => {
+const NavSection = ({ siteTitle, color, navColor }) => {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
     <>
-      <Nav navOpen={navOpen}>
+      <Nav navOpen={navOpen} navColor={navColor}>
         <Heading onClick={() => setNavOpen(!navOpen)}>
           <Link to="/#landing">{siteTitle}</Link>
         </Heading>
@@ -240,7 +241,7 @@ const NavSection = ({ siteTitle, color }) => {
           toggle={setNavOpen}
           rounded
           label="Show menu"
-          color={color}
+          color={navOpen ? '#FFF' : color}
         />
       </StyledHamburger>
     </>

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { navigate } from 'gatsby';
 import { FaAngleUp } from 'react-icons/fa';
 
-import Footer from '../../../footer';
+import Footer from '../../footer';
 import ContactBGWrapper from './contact-bg-wrapper';
 
 const ContactSection = styled.section`

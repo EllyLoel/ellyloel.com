@@ -3,15 +3,15 @@ import styled, { keyframes } from 'styled-components';
 
 import Layout from '../components/layout';
 import Nav from '../components/nav/nav';
-import Header from '../components/sections/resume/header';
-import ContactDetails from '../components/sections/resume/contact-details';
-import Summary from '../components/sections/resume/summary';
-import KeySkills from '../components/sections/resume/key-skills';
-import Software from '../components/sections/resume/software';
-import WorkHistory from '../components/sections/resume/work-history';
-import Education from '../components/sections/resume/education';
-import Certifications from '../components/sections/resume/certifications';
-import Interests from '../components/sections/resume/interests';
+import Header from '../components/resume/header';
+import ContactDetails from '../components/resume/contact-details';
+import Summary from '../components/resume/summary';
+import KeySkills from '../components/resume/key-skills';
+import Software from '../components/resume/software';
+import WorkHistory from '../components/resume/work-history';
+import Education from '../components/resume/education';
+import Certifications from '../components/resume/certifications';
+import Interests from '../components/resume/interests';
 
 const bgAnimation = keyframes`
 		0% { background-position:0% 13% }
@@ -30,7 +30,7 @@ const ResumeBody = styled.div`
 
 const ResumeContainer = styled.div`
   width: min(80%, 70rem);
-  margin: 2em auto;
+  margin: 5em auto 2em auto;
 
   display: grid;
   grid-template-columns: 1fr;
@@ -107,7 +107,7 @@ const Resume = () => {
   return (
     <Layout>
       <ResumeBody>
-        <Nav siteTitle="<e//y>" color="#393939" />
+        <Nav siteTitle="<e//y>" color="#FFDC84" />
         <ResumeContainer>
           <Header />
           <ContactDetails />

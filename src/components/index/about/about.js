@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import LeftSVGGraphic from '../../../../images/svg/standing-infront-webpage.svg';
-import RightSVGGraphic from '../../../../images/svg/sitting-behind-laptop.svg';
+import LeftSVGGraphic from '../../../images/svg/standing-infront-webpage.svg';
+import RightSVGGraphic from '../../../images/svg/sitting-behind-laptop.svg';
 import AboutBGWrapper from './about-bg-wrapper';
 
 const AboutSection = styled.section`

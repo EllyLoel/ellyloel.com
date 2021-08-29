@@ -6,6 +6,7 @@ aliases:
 tags:
   - zettelkasten
   - learning
+stage: evergreen
 ---
 
 You will know how well you understood something only when you explain it to someone else. [[Permanent Notes]] will serve this purpose.

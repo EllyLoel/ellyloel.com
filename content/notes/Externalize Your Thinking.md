@@ -8,6 +8,7 @@ tags:
   - learning
   - thinking
   - notes
+stage: seedling
 ---
 
 Real thinking requires some type of externalization. Notebook, mind maps, text editor, etc.
