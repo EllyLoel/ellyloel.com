@@ -24,18 +24,30 @@ const Global = createGlobalStyle`
   html {
     scroll-behavior: smooth;
     max-width: 100vw;
+    height: 100vh;
   }
 
   body {
     max-width: 100vw;
+    height: 100vh;
     overflow-x: hidden;
     position: relative;
+  }
+
+  #___gatsby {
+    height: 100vh;
+  }
+
+  #gatsby-focus-wrapper {
+    height: 100vh;
   }
 `;
 
 const Main = styled.main`
+  min-height: 100%;
   display: grid;
   grid-template-columns: 100vw;
+  grid-template-rows: auto 1fr auto;
   grid-template-areas:
     'landing'
     'projects'

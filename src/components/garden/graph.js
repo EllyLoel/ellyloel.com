@@ -29,12 +29,26 @@ const Graph = ({ location, data }) => {
   const fgRef = useRef();
   let width = useWindowWidth();
 
-  if (width < 1216) {
-    width -= 48;
-  } else if (width < 1440) {
-    width = width / 3 - 74;
+  if (location === 'home') {
+    if (width < 1216) {
+      width -= 48;
+    } else if (width < 1440) {
+      width = width / 3 - 74;
+    } else {
+      width = width / 5;
+    }
   } else {
-    width = width / 5;
+    if (width < 768) {
+      width -= 48;
+    } else if (width < 1024) {
+      width = width / 2 - 24;
+    } else if (width < 1200) {
+      width = (width * 0.75) / 2 - 24;
+    } else if (width < 1440) {
+      width = (width * 0.65) / 2.5 - 24;
+    } else {
+      width = (width * 0.55) / 2.75 - 48;
+    }
   }
 
   return (
@@ -45,7 +59,7 @@ const Graph = ({ location, data }) => {
           location === 'home' ? getHomeGraphData(data) : getNoteGraphData(data)
         }
         width={width}
-        height={350}
+        height={location === 'home' ? 350 : 200}
         backgroundColor={backgroundColor}
         nodeLabel="name"
         linkWidth={3}

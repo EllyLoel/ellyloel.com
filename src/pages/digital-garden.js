@@ -11,11 +11,13 @@ import Graph from '../components/garden/graph';
 import Footer from '../components/footer';
 
 const NavStyled = styled.div`
-  nav ul li::before,
-  nav ul li::after,
-  nav h1::before,
-  nav h1::after {
-    background: rgb(221, 231, 174);
+  @media (min-width: 64em) {
+    nav ul li::before,
+    nav ul li::after,
+    nav h1::before,
+    nav h1::after {
+      background: rgb(221, 231, 174);
+    }
   }
 `;
 
