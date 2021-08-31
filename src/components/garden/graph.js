@@ -1,8 +1,10 @@
 import React, { useRef } from 'react';
 import { navigate } from 'gatsby';
-import { ForceGraph2D } from 'react-force-graph';
-import { useWindowWidth } from '@react-hook/window-size';
+import loadable from '@loadable/component';
+import { window, document } from 'browser-monads';
 import styled from 'styled-components';
+
+const ForceGraph = loadable(() => import('./forceGraph'));
 
 const primaryNodeColor = '#bcd05f';
 const secondaryNodeColor = '#8da130';
@@ -27,7 +29,10 @@ const GraphStyled = styled.div`
 
 const Graph = ({ location, data }) => {
   const fgRef = useRef();
-  let width = useWindowWidth();
+  let width =
+    window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth;
 
   if (location === 'home') {
     if (width < 1216) {
@@ -53,7 +58,7 @@ const Graph = ({ location, data }) => {
 
   return (
     <GraphStyled>
-      <ForceGraph2D
+      <ForceGraph
         ref={fgRef}
         graphData={
           location === 'home' ? getHomeGraphData(data) : getNoteGraphData(data)
