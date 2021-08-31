@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 import Nav from '../components/nav/nav';
 import Header from '../components/resume/header';
 import ContactDetails from '../components/resume/contact-details';
@@ -106,6 +107,7 @@ const ResumeContainer = styled.div`
 const Resume = () => {
   return (
     <Layout>
+      <SEO title="Resume" />
       <ResumeBody>
         <Nav siteTitle="<e//y>" color="#FFDC84" />
         <ResumeContainer>

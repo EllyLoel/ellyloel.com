@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.ellyloel.com',
     title: 'Elly Loel',
-    description: 'My little corner of the internet.',
+    description:
+      'This is my own lovely little corner of the internet. Look forward to plenty of interesting ideas & projects.',
     author: 'Elly Loel',
   },
   plugins: [
@@ -69,5 +70,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
+    `gatsby-plugin-react-helmet`,
   ],
 };

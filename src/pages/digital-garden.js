@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import styled from 'styled-components';
 
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 import Nav from '../components/nav/nav';
 import Header from '../components/garden/header';
 import Filters from '../components/garden/filters';
@@ -40,9 +41,9 @@ const Container = styled.div`
     gap: 5em;
   }
 
-  @media (min-width: 76em) {
+  @media (min-width: 75em) {
     grid-template-columns: 1fr max-content;
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: repeat(3, max-content);
     grid-template-areas:
       'header header'
       'filters graph'
@@ -101,6 +102,7 @@ const DigitalGarden = ({
 
   return (
     <Layout>
+      <SEO title="Digital Garden" />
       <NavStyled>
         <Nav siteTitle="<e//y>" color="#99af33" navColor="#99af33" />
       </NavStyled>

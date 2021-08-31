@@ -4,6 +4,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from 'styled-components';
 
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 import Nav from '../components/nav/nav';
 import FormatStage from '../components/garden/format-stage';
 import FormatTag from '../components/garden/format-tag';
@@ -39,21 +40,6 @@ const Container = styled.article`
     text-underline-offset: 1px;
     color: #bcd05f;
     font-weight: 600;
-
-    &::before,
-    &::after {
-      display: inline-block;
-      color: var(--dark);
-      font-weight: 400;
-    }
-
-    &::before {
-      content: '[[';
-    }
-
-    &::after {
-      content: ']]';
-    }
   }
 
   @media (min-width: 48em) {
@@ -275,6 +261,7 @@ export default function noteTemplate({
 }) {
   return (
     <Layout>
+      <SEO title={mdx.frontmatter.title} />
       <NavStyled>
         <Nav siteTitle="<e//y>" color="#99af33" navColor="#99af33" />
       </NavStyled>
@@ -313,16 +300,18 @@ export default function noteTemplate({
         <Content>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </Content>
-        <References>
-          {mdx.inboundReferences.length > 0 ? <h2>Referenced in:</h2> : ''}
-          <ul>
-            {mdx.inboundReferences.map((ref, index) => (
-              <li key={index}>
-                <Link to={`/notes/${ref.slug}`}>{ref.frontmatter.title}</Link>
-              </li>
-            ))}
-          </ul>
-        </References>
+        {mdx.inboundReferences.length > 0 && (
+          <References>
+            <h2>Referenced in:</h2>
+            <ul>
+              {mdx.inboundReferences.map((ref, index) => (
+                <li key={index}>
+                  <Link to={`/notes/${ref.slug}`}>{ref.frontmatter.title}</Link>
+                </li>
+              ))}
+            </ul>
+          </References>
+        )}
         <GraphStyled>
           <Graph location={'note'} data={mdx} />
         </GraphStyled>
