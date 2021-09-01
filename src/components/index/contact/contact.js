@@ -82,7 +82,12 @@ const ContactForm = styled.form`
 `;
 
 const SubmitMessage = styled.h3`
+  max-width: 80%;
+  margin: 1em auto;
+  max-width: 22.5ch;
+
   font-weight: 600;
+  text-align: center;
 `;
 
 const BTTButton = styled.button`

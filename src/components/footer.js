@@ -66,6 +66,7 @@ const FooterStyled = styled.footer`
   }
 
   small {
+    width: max-content;
     position: absolute;
     bottom: 0.8rem;
     left: 50%;
