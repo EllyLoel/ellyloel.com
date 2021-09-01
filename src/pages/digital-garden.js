@@ -90,15 +90,16 @@ const DigitalGarden = ({
   const [activeTagFilter, setActiveTagFilter] = useState([]);
   const [activeStageFilter, setActiveStageFilter] = useState('');
 
-  const tags = new Set();
-  const stages = new Set();
+  let tags = new Set();
+  let stages = ['seedling', 'budding', 'evergreen'];
 
   for (const edge of edges) {
     for (const tag of edge.node.frontmatter.tags) {
       tags.add(tag);
     }
-    stages.add(edge.node.frontmatter.stage);
   }
+
+  tags = Array.from(tags).sort();
 
   return (
     <Layout>
@@ -109,8 +110,8 @@ const DigitalGarden = ({
       <Container>
         <Header />
         <Filters
-          tags={Array.from(tags)}
-          stages={Array.from(stages)}
+          tags={tags}
+          stages={stages}
           activeTagFilter={activeTagFilter}
           setActiveTagFilter={setActiveTagFilter}
           activeStageFilter={activeStageFilter}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { navigate } from 'gatsby';
 import { FaAngleUp } from 'react-icons/fa';
@@ -29,10 +29,13 @@ const Heading = styled.h1`
   }
 `;
 
+const FormSection = styled.section`
+  margin-bottom: 10em;
+`;
+
 const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
-  margin-bottom: 10em;
 
   label {
     margin-bottom: 0.25em;
@@ -53,11 +56,11 @@ const ContactForm = styled.form`
   }
 
   input {
-    padding: 0.5em 1em;
+    padding: 0.5em 0.75em;
   }
 
   textarea {
-    padding: 0.75em 1em;
+    padding: 0.75em;
     resize: none;
   }
 
@@ -78,6 +81,10 @@ const ContactForm = styled.form`
   }
 `;
 
+const SubmitMessage = styled.h3`
+  font-weight: 600;
+`;
+
 const BTTButton = styled.button`
   position: absolute;
   bottom: 1.5em;
@@ -96,47 +103,124 @@ const BTTButton = styled.button`
 `;
 
 const Contact = () => {
+  const [contact, setContact] = useState({
+    name: '',
+    email: '',
+    subject: 'StaticForms - Contact Form',
+    honeypot: '',
+    message: '',
+    replyTo: '@',
+    accessKey: '80a98840-c5bd-4eb4-8cdb-d647a7c928e8',
+  });
+
+  const [response, setResponse] = useState({
+    type: '',
+    message: '',
+  });
+
+  const handleChange = (e) =>
+    setContact({ ...contact, [e.target.name]: e.target.value });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await fetch('https://api.staticforms.xyz/submit', {
+        method: 'POST',
+        body: JSON.stringify(contact),
+        headers: { 'Content-Type': 'application/json' },
+      });
+
+      const json = await res.json();
+
+      if (json.success) {
+        setResponse({
+          type: 'success',
+          message: `Thank you for reaching out, I'll be in touch soon.`,
+        });
+      } else {
+        setResponse({
+          type: 'error',
+          message: json.message,
+        });
+      }
+    } catch (e) {
+      console.log('An error occurred', e);
+      setResponse({
+        type: 'error',
+        message:
+          'An error occured while submitting the form, feel free to email me using the link below.',
+      });
+    }
+  };
+
   return (
     <ContactSection id="contact">
       <ContactBGWrapper>
         <Content>
           <Heading>Contact</Heading>
-          <ContactForm name="contact" method="POST" netlify>
-            <label className="name-label" htmlFor="full-name">
-              Name
-            </label>
-            <input
-              className="name-input"
-              id="full-name"
-              name="Name"
-              type="text"
-              placeholder="Name"
-            />
-
-            <label className="email-label" htmlFor="email">
-              Email
-            </label>
-            <input
-              className="email-input"
-              id="email"
-              name="Email"
-              type="text"
-              placeholder="Email"
-            />
-
-            <label className="message-label" htmlFor="message">
-              Message
-            </label>
-            <textarea
-              className="message-input"
-              id="message"
-              name="Message"
-              placeholder="Message..."
-              rows="3"
-            ></textarea>
-
-            <button type="submit">Send</button>
-          </ContactForm>
+          <FormSection>
+            {!response.type ? (
+              <ContactForm
+                name="contact"
+                action="https://api.staticforms.xyz/submit"
+                method="post"
+                onSubmit={handleSubmit}
+              >
+                <label>Name</label>
+                <input
+                  type="text"
+                  placeholder="Name"
+                  name="name"
+                  onChange={handleChange}
+                  required
+                />
+                <label>Email</label>
+                <input
+                  type="email"
+                  placeholder="Email"
+                  name="email"
+                  onChange={handleChange}
+                  required
+                />
+                <div style={{ display: 'none' }}>
+                  <label>Title</label>
+                  <div>
+                    <input
+                      type="text"
+                      name="honeypot"
+                      style={{ display: 'none' }}
+                      onChange={handleChange}
+                    />
+                    <input
+                      type="hidden"
+                      name="subject"
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
+                <label>Message</label>
+                <textarea
+                  placeholder="Message..."
+                  name="message"
+                  onChange={handleChange}
+                  required
+                />
+                <button type="submit">Send</button>
+              </ContactForm>
+            ) : (
+              <div>
+                <SubmitMessage
+                  style={
+                    response.type === 'error'
+                      ? { color: '#ff0033' }
+                      : { color: 'var(--light)' }
+                  }
+                >
+                  {response.message}
+                </SubmitMessage>
+              </div>
+            )}
+          </FormSection>
 
           <BTTButton
             className="btt-btn"

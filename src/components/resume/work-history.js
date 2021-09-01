@@ -22,8 +22,8 @@ const WorkHistory = () => {
       <h2>Work history</h2>
       <ul>
         <li className="mt-1">
-          <Title>PC Sales, Support &amp; Service Technician</Title>
-          at Aftershock PC Australia - Dec 2020-Jun 2021
+          <Title>PC Sales, Support &amp; Service Technician</Title> at
+          Aftershock PC Australia - Dec 2020-Jun 2021
           <ul>
             <li>
               Created &amp; finalised sales leads for hundreds of high end
@@ -43,8 +43,8 @@ const WorkHistory = () => {
           </ul>
         </li>
         <li className="mt-1">
-          <Title>Social Media Manager &amp; Content Curator</Title>
-          at Coaching Psychology Online - 2017–2018
+          <Title>Social Media Manager &amp; Content Curator</Title> at Coaching
+          Psychology Online - 2017–2018
           <ul>
             <li>
               After consultation with the client I created and edited visual
