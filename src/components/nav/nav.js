@@ -227,7 +227,7 @@ const NavSection = ({ siteTitle, color, navColor }) => {
           </NavIconLink>
 
           <NavIconLink
-            link="mailto:hello@ellyloel.com"
+            link="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&colon;&#x68;&#x65;&#x6c;&#x6c;&#x6f;&commat;&#x65;&#x6c;&#x6c;&#x79;&#x6c;&#x6f;&#x65;&#x6c;&period;&#x63;&#x6f;&#x6d;"
             navOpen={navOpen}
             setNavOpen={setNavOpen}
           >
