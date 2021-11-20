@@ -39,7 +39,9 @@ const Cards = styled.section`
   }
 
   @media (min-width: 120em) {
+    padding: 2.5rem;
     grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
   }
 `;
 
