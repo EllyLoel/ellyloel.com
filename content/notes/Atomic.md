@@ -6,7 +6,7 @@ aliases:
 tags:
   - learning
   - notes
-	- habits
+  - habits
 stage: budding
 ---
 
