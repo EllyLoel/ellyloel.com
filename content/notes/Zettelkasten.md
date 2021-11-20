@@ -1,19 +1,52 @@
 ---
 title: Zettelkasten
-date: 2021-08-19T14:23
+date: 2021-08-10T21:23
 slug: zettelkasten
 aliases:
   - slip box
 tags:
-  - pkm
+  - PKM
   - zettelkasten
   - learning
   - notes
 stage: evergreen
 ---
 
-Zettelkasten is a Note Taking Process and a Knowledge Management System. It has 3 types of notes…
+> The zettelkasten is a method of note-taking and personal knowledge management
 
-- Fleeting notes: Temporary notes for remembering
-- Literature Notes: Fleeting notes combined and cleanup. Will be a summary of the content.
-- [[Permanent Notes]]
+The direct translation of zettelkasten is slip-box, a place to keep & sort your notes.
+
+Traditionally the 5 most important components of a Zettelkasten system are:
+
+1. [[Fleeting notes]]
+   - Capture ideas from your mind.
+2. [[Literature notes]]
+   - Capture ideas from the content you consume.
+3. [[Permanent notes]]
+   - [[Atomise]] & polish the ideas from the previous two steps.
+4. [[Index notes]]
+   - Link broader concepts down into specific [[ideas]].
+5. [[Keyword notes]]
+   - Define unclear words.
+
+But this is not set in stone, for example I have a slightly different system:
+
+1. [[Core zettel idea notes]]
+   - These are essentially a combination of [[Fleeting notes]] & [[Permanent notes]], though they have a few different stages of development (🌱 Seedling, 🌿 Budding & 🌲 Evergreen).
+2. [[Reference notes]]
+   - Which are esentially [[Literature notes]].
+3. [[Maps of Content]]
+   - Hub notes for a certain area/concept that are linked to from many other notes.
+
+> Do not brainstorm for a topic. Look into the slip-box instead to see where chains of notes have developed and ideas have been built up to clusters.
+
+> Your topic is now based on what you have, not based on an unfounded idea about what the literature you are about to read might provide.
+
+\- Sönke Ahrens
+
+Once you have enough notes bring them together as if they were cards scattered on a workbench and try placing them together to start making an initial rough draft.
+Don't just copy them, mold them to fit each other and the piece of content.
+
+> Translate them into something coherent and embed them into the context of your argument while you build your argument out of the notes at the same time. Detect holes in your argument, fill them or change your argument.
+
+\- Sönke Ahrens
