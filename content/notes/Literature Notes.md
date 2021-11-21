@@ -1,5 +1,5 @@
 ---
-title: Literature Notes
+title: Literature notes
 date: 2021-08-10T21:23
 slug: literature-notes
 aliases:

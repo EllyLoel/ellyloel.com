@@ -1,5 +1,5 @@
 ---
-title: Index Notes
+title: Index notes
 date: 2021-08-10T21:23
 slug: index-notes
 aliases:

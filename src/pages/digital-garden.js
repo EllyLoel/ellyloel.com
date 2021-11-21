@@ -136,21 +136,23 @@ export default DigitalGarden;
 export const pageQuery = graphql`
   query {
     allMdx(
-      filter: { frontmatter: { date: { ne: null } } }
+      filter: { frontmatter: { slug: { ne: null } } }
       sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {
         node {
-          slug
           frontmatter {
             title
+            slug
             date
             stage
             tags
           }
           outboundReferences {
             ... on Mdx {
-              slug
+              frontmatter {
+                slug
+              }
             }
           }
         }

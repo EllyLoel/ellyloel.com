@@ -111,14 +111,12 @@ const Footer = () => (
         </a>
       </li>
       <li>
-        <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&colon;&#x68;&#x65;&#x6c;&#x6c;&#x6f;&commat;&#x65;&#x6c;&#x6c;&#x79;&#x6c;&#x6f;&#x65;&#x6c;&period;&#x63;&#x6f;&#x6d;">
-          Email
-        </a>
+        <a href="mailto:hello@ellyloel.com">Email</a>
       </li>
     </ul>
     <small>
       &copy; {new Date().getFullYear()}, Made with{' '}
-      <span role="img" aria-label="sparkling heart">
+      <span role="img" aria-label="love">
         💖
       </span>
       {` `}by{' '}

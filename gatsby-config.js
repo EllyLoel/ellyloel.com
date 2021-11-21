@@ -31,12 +31,14 @@ module.exports = {
             options: {
               titleToURLPath: `${__dirname}/resolve-url.js`,
               stripBrackets: true,
+              parseWikiLinks: true,
             },
           },
         ],
       },
     },
     `gatsby-plugin-catch-links`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-transformer-markdown-references`,
       options: {
@@ -69,7 +71,6 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
-    `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
   ],
 };

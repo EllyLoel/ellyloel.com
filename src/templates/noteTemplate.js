@@ -190,6 +190,37 @@ const Content = styled.div`
   grid-area: content;
 
   line-height: 1.5;
+
+  blockquote {
+    position: relative;
+    width: fit-content;
+    margin-left: 1em;
+    padding: 1em 2em;
+    background: #bcd05f1a;
+    border-top-left-radius: 0;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 0;
+    color: #707070;
+    font-style: italic;
+    letter-spacing: 0.5px;
+
+    p {
+      margin: 0;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      display: block;
+      width: 4px;
+      height: 100%;
+      background-color: #bcd05f;
+      border-radius: 2px;
+    }
+  }
 `;
 
 const References = styled.div`
@@ -225,7 +256,7 @@ const References = styled.div`
     margin-top: 0.25em;
 
     li::marker {
-      content: '🠖  ';
+      content: '→  ';
     }
   }
 `;
@@ -283,16 +314,10 @@ export default function noteTemplate({
             </StageTagsContainer>
             <TimeContainer>
               <CreatedTime>
-                <span role="img" aria-label="seedling">
-                  🌱
-                </span>{' '}
-                Sprouted on {formatDate(mdx.frontmatter.date)}
+                🌱 Sprouted on {formatDate(mdx.frontmatter.date)}
               </CreatedTime>
               <ModifiedTime>
-                <span role="img" aria-label="rain">
-                  🌧️
-                </span>{' '}
-                Last watered on {formatDate(modifiedTime)}
+                🌧️ Last watered on {formatDate(modifiedTime)}
               </ModifiedTime>
             </TimeContainer>
           </Metadata>
@@ -306,7 +331,9 @@ export default function noteTemplate({
             <ul>
               {mdx.inboundReferences.map((ref, index) => (
                 <li key={index}>
-                  <Link to={`/notes/${ref.slug}`}>{ref.frontmatter.title}</Link>
+                  <Link to={`/notes/${ref.frontmatter.slug}`}>
+                    {ref.frontmatter.title}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -332,26 +359,34 @@ const formatDate = (date) => {
 };
 
 export const query = graphql`
-  query ($slug: String!) {
-    mdx(slug: { eq: $slug }) {
+  query ($slug: String!, $title: String!) {
+    mdx(frontmatter: { slug: { eq: $slug } }) {
       body
       inboundReferences {
         ... on Mdx {
           frontmatter {
             title
+            slug
           }
-          slug
+        }
+      }
+      outboundReferences {
+        ... on Mdx {
+          frontmatter {
+            title
+            slug
+          }
         }
       }
       frontmatter {
         title
+        slug
         stage
         tags
         date
       }
-      slug
     }
-    file {
+    file(name: { eq: $title }) {
       modifiedTime
     }
   }

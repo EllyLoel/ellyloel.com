@@ -1,5 +1,5 @@
 ---
-title: Keyword Notes
+title: Keyword notes
 date: 2021-08-10T21:26
 slug: keyword-notes
 aliases:

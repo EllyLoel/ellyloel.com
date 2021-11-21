@@ -85,8 +85,7 @@ const getHomeGraphData = (edges) => {
   if (edges.length) {
     for (const edge of edges) {
       const {
-        slug,
-        frontmatter: { title },
+        frontmatter: { slug, title },
         outboundReferences,
       } = edge.node;
 
@@ -97,10 +96,10 @@ const getHomeGraphData = (edges) => {
         color: primaryNodeColor,
       });
 
-      for (const ref of outboundReferences) {
+      for (const outboundReference of outboundReferences) {
         links.push({
           source: slug,
-          target: ref.slug,
+          target: outboundReference.frontmatter.slug,
         });
       }
     }
@@ -119,9 +118,9 @@ const getHomeGraphData = (edges) => {
 };
 
 const getNoteGraphData = ({
-  slug,
-  frontmatter: { title },
+  frontmatter: { slug, title },
   inboundReferences,
+  outboundReferences,
 }) => {
   const nodes = [];
   const links = [];
@@ -133,17 +132,34 @@ const getNoteGraphData = ({
     color: secondaryNodeColor,
   });
 
-  for (const ref of inboundReferences) {
+  for (const inboundReference of inboundReferences) {
     nodes.push({
-      id: ref.slug,
-      name: ref.frontmatter.title,
+      id: inboundReference.frontmatter.slug,
+      name: inboundReference.frontmatter.title,
       val: 1,
       color: primaryNodeColor,
     });
 
     links.push({
       source: slug,
-      target: ref.slug,
+      target: inboundReference.frontmatter.slug,
+    });
+  }
+
+  for (const outboundReference of outboundReferences) {
+    console.log(outboundReference);
+    if (!nodes.find((node) => node.id === outboundReference.frontmatter.slug)) {
+      nodes.push({
+        id: outboundReference.frontmatter.slug,
+        name: outboundReference.frontmatter.title,
+        val: 1,
+        color: primaryNodeColor,
+      });
+    }
+
+    links.push({
+      source: slug,
+      target: outboundReference.frontmatter.slug,
     });
   }
 
