@@ -1,5 +1,5 @@
 ---
-title: Permanent Notes
+title: Permanent notes
 date: 2021-08-10T21:26
 slug: permanent-notes
 aliases:
@@ -11,7 +11,7 @@ tags:
 stage: budding
 ---
 
-Everyday you should go through your inbox and seek to refine the [[Fleeting notes|fleeting]] & [[Literature notes|literature]] notes that you've taken. Making connections and turning them into permanent notes.
+Everyday you should go through your inbox and seek to refine the [[Fleeting notes]] & [[Literature notes]] that you've taken. Making connections and turning them into permanent notes.
 
 Ideally this should happen roughly everyday so that you don't forget the conceptual ideas behind the notes.
 
@@ -30,6 +30,7 @@ Your [[Zettelkasten]] isn't just for collecting all of your ideas, it is meant t
 These are important questions to answer as if you ignore them you will end up with a [[Zettelkasten]] that is lacking these kind of horizontally generated ideas.
 
 > One idea = One note
+
 > One note = One idea
 
 Your permanent notes should only encompass a single idea, so as not to cause overlapping which will cause issues when you try to piece together your permanent notes into a whole piece of content.

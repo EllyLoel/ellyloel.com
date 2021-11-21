@@ -91,7 +91,7 @@ const Notes = ({ edges, activeTagFilter, activeStageFilter }) => {
     })
     .map((edge, index) => {
       return (
-        <Link to={`/notes/${edge.node.slug}`} key={index}>
+        <Link to={`/notes/${edge.node.frontmatter.slug}`} key={index}>
           <Note>
             <Title>{edge.node.frontmatter.title}</Title>
             <Metadata

@@ -18,23 +18,23 @@ The direct translation of zettelkasten is slip-box, a place to keep & sort your 
 
 Traditionally the 5 most important components of a Zettelkasten system are:
 
-1. [[Fleeting Notes]]
+1. [[Fleeting notes]]
    - Capture ideas from your mind.
-2. [[Literature Notes]]
+2. [[Literature notes]]
    - Capture ideas from the content you consume.
-3. [[Permanent Notes]]
+3. [[Permanent notes]]
    - Atomise ([[Atomic]]) & polish the ideas from the previous two steps.
-4. [[Index Notes]]
-   - Link broader concepts down into specific [[Permanent Notes]].
-5. [[Keyword Notes]]
+4. [[Index notes]]
+   - Link broader concepts down into specific [[Permanent notes]].
+5. [[Keyword notes]]
    - Define unclear words.
 
 But this is not set in stone, for example I have a slightly different system:
 
 1. [[Core zettel idea notes]]
-   - These are essentially a combination of [[Fleeting Notes]] & [[Permanent Notes]], though they have a few different stages of development (🌱 Seedling, 🌿 Budding & 🌲 Evergreen).
-2. [[Reference Notes]]
-   - Which are esentially [[Literature Notes]].
+   - These are essentially a combination of [[Fleeting notes]] & [[Permanent notes]], though they have a few different stages of development (🌱 Seedling, 🌿 Budding & 🌲 Evergreen).
+2. [[Reference notes]]
+   - Which are esentially [[Literature notes]].
 3. [[Maps of Content]]
    - Hub notes for a certain area/concept that are linked to from many other notes.
 

@@ -5,12 +5,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const result = await graphql(`
     {
-      allFile(filter: { sourceInstanceName: { eq: "notes" } }) {
-        edges {
-          node {
-            childMdx {
-              slug
-            }
+      allMdx(filter: { frontmatter: { slug: { ne: null } } }) {
+        nodes {
+          frontmatter {
+            slug
+            title
           }
         }
       }
@@ -22,13 +21,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return;
   }
 
-  result.data.allFile.edges.forEach(({ node }) => {
+  result.data.allMdx.nodes.forEach((node) => {
     createPage({
-      path: `notes/${node.childMdx.slug}`,
+      path: `notes/${node.frontmatter.slug}`,
       component: notesTemplate,
       context: {
         // additional data can be passed via context
-        slug: node.childMdx.slug,
+        slug: node.frontmatter.slug,
+        title: node.frontmatter.title,
       },
     });
   });
