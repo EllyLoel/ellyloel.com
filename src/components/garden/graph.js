@@ -147,7 +147,6 @@ const getNoteGraphData = ({
   }
 
   for (const outboundReference of outboundReferences) {
-    console.log(outboundReference);
     if (!nodes.find((node) => node.id === outboundReference.frontmatter.slug)) {
       nodes.push({
         id: outboundReference.frontmatter.slug,
