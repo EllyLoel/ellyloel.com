@@ -359,7 +359,7 @@ const formatDate = (date) => {
 };
 
 export const query = graphql`
-  query ($slug: String!, $title: String!) {
+  query ($slug: String!, $content: String!) {
     mdx(frontmatter: { slug: { eq: $slug } }) {
       body
       inboundReferences {
@@ -386,7 +386,7 @@ export const query = graphql`
         date
       }
     }
-    file(name: { eq: $title }) {
+    file(internal: { content: { eq: $content } }) {
       modifiedTime
     }
   }
