@@ -1,5 +1,5 @@
 exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
 
   const notesTemplate = require.resolve(`./src/templates/noteTemplate.js`);
 
@@ -37,5 +37,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         content: result.data.allFile.nodes[index].internal.content,
       },
     });
+  });
+
+  createRedirect({
+    fromPath: `/now`,
+    toPath: `/notes/now`,
   });
 };

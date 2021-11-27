@@ -6,6 +6,14 @@ module.exports = {
       'This is my own lovely little corner of the internet. Look forward to plenty of interesting ideas & projects.',
     author: 'Elly Loel',
   },
+  flags: {
+    DEV_SSR: false,
+    DEV_WEBPACK_CACHE: false,
+    FAST_DEV: false,
+    PRESERVE_FILE_DOWNLOAD_CACHE: false,
+    PARALLEL_SOURCING: false,
+    LMDB_STORE: false,
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
