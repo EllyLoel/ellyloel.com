@@ -4,11 +4,9 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import {
-  RiGithubFill,
-  RiLinkedinBoxFill,
-  RiMailSendFill,
-} from 'react-icons/ri';
+import { RiGithubFill, RiLinkedinBoxFill } from 'react-icons/ri';
+import { SiPolywork } from 'react-icons/si';
+import { BsMailbox2 } from 'react-icons/bs';
 import { Spin as Hamburger } from 'hamburger-react';
 
 import NavLink from './nav-link';
@@ -208,8 +206,20 @@ const NavSection = ({ siteTitle, color, navColor }) => {
           >
             🌿 Digital Garden
           </NavLink>
+
+          <NavLink link="/notes/now" navOpen={navOpen} setNavOpen={setNavOpen}>
+            ⌚️ Now
+          </NavLink>
         </ul>
         <ul className="icon-links-list">
+          <NavIconLink
+            link="http://timeline.ellyloel.com/"
+            navOpen={navOpen}
+            setNavOpen={setNavOpen}
+          >
+            <SiPolywork style={{ transform: 'scale(0.8)' }} />
+          </NavIconLink>
+
           <NavIconLink
             link="http://github.ellyloel.com/"
             navOpen={navOpen}
@@ -231,7 +241,7 @@ const NavSection = ({ siteTitle, color, navColor }) => {
             navOpen={navOpen}
             setNavOpen={setNavOpen}
           >
-            <RiMailSendFill />
+            <BsMailbox2 />
           </NavIconLink>
         </ul>
       </Nav>

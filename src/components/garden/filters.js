@@ -118,7 +118,7 @@ const Filters = ({
     <FiltersStyled>
       <TagFilter>
         {tags.map((tag, index) => {
-          return (
+          return !tag ? null : (
             <FormatTagStyled
               key={index}
               onClick={() => handleTagFilterClick(tag)}
