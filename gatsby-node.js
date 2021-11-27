@@ -9,7 +9,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         nodes {
           frontmatter {
             slug
-            title
+          }
+        }
+      }
+      allFile(filter: { internal: { description: { regex: "/notes/" } } }) {
+        nodes {
+          internal {
+            content
           }
         }
       }
@@ -21,14 +27,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return;
   }
 
-  result.data.allMdx.nodes.forEach((node) => {
+  result.data.allMdx.nodes.forEach((node, index) => {
     createPage({
       path: `notes/${node.frontmatter.slug}`,
       component: notesTemplate,
       context: {
         // additional data can be passed via context
         slug: node.frontmatter.slug,
-        title: node.frontmatter.title,
+        content: result.data.allFile.nodes[index].internal.content,
       },
     });
   });
