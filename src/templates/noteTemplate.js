@@ -305,11 +305,13 @@ export default function noteTemplate({
                 <FormatStage stage={mdx.frontmatter.stage} />
               </FormatStageStyled>
               <Tags>
-                {mdx.frontmatter.tags.map((tag, index) => (
-                  <FormatTagStyled key={index}>
-                    <FormatTag tag={tag} />
-                  </FormatTagStyled>
-                ))}
+                {mdx.frontmatter.tags.map((tag, index) => {
+                  return !tag ? null : (
+                    <FormatTagStyled key={index}>
+                      <FormatTag tag={tag} />
+                    </FormatTagStyled>
+                  );
+                })}
               </Tags>
             </StageTagsContainer>
             <TimeContainer>
