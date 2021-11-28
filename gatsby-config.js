@@ -8,11 +8,9 @@ module.exports = {
   },
   flags: {
     DEV_SSR: false,
-    DEV_WEBPACK_CACHE: false,
     FAST_DEV: false,
     PRESERVE_FILE_DOWNLOAD_CACHE: false,
     PARALLEL_SOURCING: false,
-    LMDB_STORE: false,
   },
   plugins: [
     {
@@ -80,5 +78,14 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Elly Loel`,
+        short_name: `ellyloel`,
+        start_url: `/`,
+        icon: `src/images/logo.png`,
+      },
+    },
   ],
 };
