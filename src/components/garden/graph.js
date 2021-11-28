@@ -70,7 +70,9 @@ const Graph = ({ location, data }) => {
         linkWidth={3}
         onNodeClick={onClickNode}
         cooldownTicks={100}
-        onEngineStop={() => fgRef.current.zoomToFit(400, 25)}
+        onEngineStop={() =>
+          data.length ? fgRef.current.zoomToFit(400, 25) : null
+        }
         linkDirectionalParticles={2}
         linkDirectionalParticleSpeed={0.005}
       />
