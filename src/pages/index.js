@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => {
 export default IndexPage;
 
 export const pageQuery = graphql`
-  query {
+  {
     projects: allMarkdownRemark(
       filter: { frontmatter: { github: { ne: null } } }
       sort: { fields: frontmatter___id, order: DESC }
@@ -39,7 +39,11 @@ export const pageQuery = graphql`
             title
             imageSrc {
               childImageSharp {
-                gatsbyImageData(placeholder: DOMINANT_COLOR, width: 500)
+                gatsbyImageData(
+                  placeholder: BLURRED
+                  width: 500
+                  aspectRatio: 1.6
+                )
               }
             }
             comingSoon
