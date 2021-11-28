@@ -315,9 +315,11 @@ export default function noteTemplate({
               </Tags>
             </StageTagsContainer>
             <TimeContainer>
-              <CreatedTime>
-                🌱 Sprouted on {formatDate(mdx.frontmatter.date)}
-              </CreatedTime>
+              {mdx.frontmatter.slug === 'now' ? null : (
+                <CreatedTime>
+                  🌱 Sprouted on {formatDate(mdx.frontmatter.date)}
+                </CreatedTime>
+              )}
               <ModifiedTime>
                 🌧️ Last watered on {formatDate(modifiedTime)}
               </ModifiedTime>
