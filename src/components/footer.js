@@ -1,7 +1,5 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
 
 const underlineHoverTransition = `
   transition: color 200ms ease-out;
@@ -45,7 +43,7 @@ const FooterStyled = styled.footer`
     list-style-type: none;
 
     display: grid;
-    grid-template-columns: repeat(3, max-content);
+    grid-template-columns: repeat(4, max-content);
     grid-template-rows: auto;
     justify-items: center;
     align-items: center;
@@ -87,12 +85,10 @@ const FooterStyled = styled.footer`
     }
   }
 
-  @media (max-width: 23.4375em) {
+  @media (max-width: 31.25em) {
     ul {
-      .linked-li {
-        grid-column: 1;
-        margin-left: 1.5em;
-      }
+      grid-template-columns: repeat(2, max-content);
+      grid-template-rows: auto;
     }
   }
 `;
@@ -100,6 +96,11 @@ const FooterStyled = styled.footer`
 const Footer = () => (
   <FooterStyled>
     <ul>
+      <li>
+        <a href="http://timeline.ellyloel.com" target="_blank" rel="noreferrer">
+          Timeline
+        </a>
+      </li>
       <li>
         <a href="http://linkedin.ellyloel.com" target="_blank" rel="noreferrer">
           LinkedIn
@@ -120,19 +121,11 @@ const Footer = () => (
         💖
       </span>
       {` `}by{' '}
-      <Link to="/#about">
+      <a href="http://twitter.ellyloel.com" target="_blank" rel="noreferrer">
         <span className="logo">&lt;e//y&gt;</span>
-      </Link>
+      </a>
     </small>
   </FooterStyled>
 );
-
-Footer.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Footer.defaultProps = {
-  siteTitle: ``,
-};
 
 export default Footer;
