@@ -25,7 +25,7 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   {
-    projects: allMarkdownRemark(
+    projects: allMdx(
       filter: { frontmatter: { github: { ne: null } } }
       sort: { fields: frontmatter___id, order: DESC }
     ) {
@@ -48,7 +48,7 @@ export const pageQuery = graphql`
             }
             comingSoon
           }
-          html
+          body
         }
       }
     }
