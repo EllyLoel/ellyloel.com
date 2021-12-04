@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
+import { window } from 'browser-monads';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -80,6 +81,10 @@ const FooterStyled = styled.div`
   footer ul li::after {
     background: rgb(221, 231, 174);
   }
+
+  @media (max-width: 31.25em) {
+    height: 8rem;
+  }
 `;
 
 const DigitalGarden = ({
@@ -89,6 +94,7 @@ const DigitalGarden = ({
 }) => {
   const [activeTagFilter, setActiveTagFilter] = useState([]);
   const [activeStageFilter, setActiveStageFilter] = useState('');
+  const [width, setWidth] = useState(0);
 
   let tags = new Set();
   let stages = ['seedling', 'budding', 'evergreen'];
@@ -100,6 +106,21 @@ const DigitalGarden = ({
   }
 
   tags = Array.from(tags).sort();
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 1216) {
+        setWidth(window.innerWidth - 48);
+      } else if (window.innerWidth < 1440) {
+        setWidth(window.innerWidth / 3 - 74);
+      } else {
+        setWidth(window.innerWidth / 5);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <Layout>
@@ -122,7 +143,7 @@ const DigitalGarden = ({
           activeTagFilter={activeTagFilter}
           activeStageFilter={activeStageFilter}
         />
-        <Graph location={'home'} data={edges} />
+        <Graph location={'home'} data={edges} width={width} />
       </Container>
       <FooterStyled>
         <Footer />
@@ -149,6 +170,13 @@ export const pageQuery = graphql`
             tags
           }
           outboundReferences {
+            ... on Mdx {
+              frontmatter {
+                slug
+              }
+            }
+          }
+          inboundReferences {
             ... on Mdx {
               frontmatter {
                 slug

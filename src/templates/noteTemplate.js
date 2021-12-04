@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { graphql, Link } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from 'styled-components';
+import { window } from 'browser-monads';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -31,8 +32,7 @@ const Container = styled.article`
   grid-template-areas:
     'header'
     'content'
-    'references'
-    'graph';
+    'graphrefs';
   gap: 2em;
 
   a {
@@ -42,23 +42,14 @@ const Container = styled.article`
     font-weight: 600;
   }
 
-  @media (min-width: 48em) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      'header header'
-      'content content'
-      'graph references';
-  }
-
   @media (min-width: 64em) {
     margin: 4em auto;
     width: 75%;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-areas:
       'header header'
-      'content graph'
-      'content references';
+      'content graphrefs';
     gap: 3em;
   }
 
@@ -224,8 +215,8 @@ const Content = styled.div`
 `;
 
 const References = styled.div`
-  grid-area: references;
-  justify-self: end;
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
   width: 100%;
   height: fit-content;
   max-height: max-content;
@@ -259,11 +250,43 @@ const References = styled.div`
       content: '→  ';
     }
   }
+
+  @media (min-width: 48em) {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    height: 100%;
+  }
+
+  @media (min-width: 64em) {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    height: fit-content;
+  }
 `;
 
 const GraphStyled = styled.div`
-  grid-area: graph;
-  justify-self: end;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+`;
+
+const GraphRefsContainer = styled.div`
+  grid-area: graphrefs;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 1fr;
+  gap: 2em;
+
+  @media (min-width: 48em) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  @media (min-width: 64em) {
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr;
+    /* align-self: start; */
+  }
 `;
 
 const FooterStyled = styled.div`
@@ -284,12 +307,25 @@ const FooterStyled = styled.div`
   }
 `;
 
-export default function noteTemplate({
+const NoteTemplate = ({
   data: {
     mdx,
     file: { modifiedTime },
   },
-}) {
+}) => {
+  const ref = useRef(null);
+
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(ref.current ? ref.current.offsetWidth : 0);
+    };
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <Layout>
       <SEO title={mdx.frontmatter.title} />
@@ -329,30 +365,38 @@ export default function noteTemplate({
         <Content>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </Content>
-        {mdx.inboundReferences.length > 0 && (
-          <References>
-            <h2>Referenced in:</h2>
-            <ul>
-              {mdx.inboundReferences.map((ref, index) => (
-                <li key={index}>
-                  <Link to={`/notes/${ref.frontmatter.slug}`}>
-                    {ref.frontmatter.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+        <GraphRefsContainer>
+          <References ref={ref}>
+            {mdx.inboundReferences.length > 0 ? (
+              <>
+                <h2>Referenced in:</h2>
+                <ul>
+                  {mdx.inboundReferences.map((ref, index) => (
+                    <li key={index}>
+                      <Link to={`/notes/${ref.frontmatter.slug}`}>
+                        {ref.frontmatter.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : (
+              <h2 style={{ marginBottom: 0 }}>No references</h2>
+            )}
           </References>
-        )}
-        <GraphStyled>
-          <Graph location={'note'} data={mdx} />
-        </GraphStyled>
+          <GraphStyled>
+            <Graph location={'note'} data={mdx} width={width} />
+          </GraphStyled>
+        </GraphRefsContainer>
       </Container>
       <FooterStyled>
         <Footer />
       </FooterStyled>
     </Layout>
   );
-}
+};
+
+export default NoteTemplate;
 
 const formatDate = (date) => {
   return new Date(date).toLocaleDateString('en-US', {
