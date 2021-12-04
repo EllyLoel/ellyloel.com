@@ -19,6 +19,6 @@ I finally got all of the bug fixes and small tweaks for my website shipped. Most
 
 ## November, 2021
 
-I've been working on a presentation about [[neurodivergent|neurodiversity]] with a few colleagues, which we'll be presenting internally on the 6th of December.
+I've been working on a presentation about [[neurodiversity]] with a few colleagues, which we'll be presenting internally on the 6th of December.
 
 I've also been working on fixing up this website as there's been plenty of big & small bugs plaguing the site.
