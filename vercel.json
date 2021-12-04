@@ -1,0 +1,28 @@
+{
+  "rewrites": [
+    {
+      "source": "/now",
+      "destination": "/notes/now"
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "garden.ellyloel.com"
+        }
+      ],
+      "destination": "/notes/:path*"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "resume.ellyloel.com"
+        }
+      ],
+      "destination": "/resume"
+    }
+  ]
+}
