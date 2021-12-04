@@ -3,6 +3,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 
 import CardLinks from './card-links';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 const CardStyled = styled.article`
   max-width: min(80vw, 25em);
@@ -110,10 +111,9 @@ const Card = ({ project }) => (
         {project.frontmatter.title}
         {project.frontmatter.comingSoon && <span>Coming Soon</span>}
       </Title>
-      <Content
-        dangerouslySetInnerHTML={{ __html: project.html }}
-        className={project.frontmatter.comingSoon && 'blur'}
-      />
+      <Content className={project.frontmatter.comingSoon && 'blur'}>
+        <MDXRenderer>{project.body}</MDXRenderer>
+      </Content>
       <CardLinks
         demo={project.frontmatter.demo}
         github={project.frontmatter.github}
