@@ -207,7 +207,7 @@ const NavSection = ({ siteTitle, color, navColor }) => {
             🌿 Digital Garden
           </NavLink>
 
-          <NavLink link="/notes/now" navOpen={navOpen} setNavOpen={setNavOpen}>
+          <NavLink link="/now" navOpen={navOpen} setNavOpen={setNavOpen}>
             ⌚️ Now
           </NavLink>
         </ul>
