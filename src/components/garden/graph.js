@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import { navigate } from 'gatsby';
 import loadable from '@loadable/component';
-import { window, document } from 'browser-monads';
 import styled from 'styled-components';
 
 const ForceGraph = loadable(() => import('./forceGraph'));
@@ -27,34 +26,8 @@ const GraphStyled = styled.div`
   }
 `;
 
-const Graph = ({ location, data }) => {
+const Graph = ({ location, data, width }) => {
   const fgRef = useRef();
-  let width =
-    window.innerWidth ||
-    document.documentElement.clientWidth ||
-    document.body.clientWidth;
-
-  if (location === 'home') {
-    if (width < 1216) {
-      width -= 48;
-    } else if (width < 1440) {
-      width = width / 3 - 74;
-    } else {
-      width = width / 5;
-    }
-  } else {
-    if (width < 768) {
-      width -= 48;
-    } else if (width < 1024) {
-      width = width / 2 - 24;
-    } else if (width < 1200) {
-      width = (width * 0.75) / 2 - 24;
-    } else if (width < 1440) {
-      width = (width * 0.65) / 2.5 - 24;
-    } else {
-      width = (width * 0.55) / 2.75 - 48;
-    }
-  }
 
   return (
     <GraphStyled>
@@ -89,6 +62,7 @@ const getHomeGraphData = (edges) => {
       const {
         frontmatter: { slug, title },
         outboundReferences,
+        inboundReferences,
       } = edge.node;
 
       nodes.push({
@@ -102,6 +76,13 @@ const getHomeGraphData = (edges) => {
         links.push({
           source: slug,
           target: outboundReference.frontmatter.slug,
+        });
+      }
+
+      for (const inboundReference of inboundReferences) {
+        links.push({
+          source: inboundReference.frontmatter.slug,
+          target: slug,
         });
       }
     }
@@ -143,8 +124,8 @@ const getNoteGraphData = ({
     });
 
     links.push({
-      source: slug,
-      target: inboundReference.frontmatter.slug,
+      source: inboundReference.frontmatter.slug,
+      target: slug,
     });
   }
 
