@@ -33,24 +33,22 @@ module.exports = {
         extensions: [`.mdx`, `.md`],
         gatsbyRemarkPlugins: [
           {
-            resolve: 'gatsby-remark-double-brackets-link',
+            resolve: `gatsby-remark-wiki-link`,
             options: {
               titleToURLPath: `${__dirname}/resolve-url.js`,
               stripBrackets: true,
-              parseWikiLinks: true,
             },
           },
         ],
       },
     },
-    `gatsby-plugin-catch-links`,
-    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-transformer-markdown-references`,
       options: {
-        types: ['Mdx'], // or ['RemarkMarkdown'] (or both)
+        types: ['Mdx'],
       },
     },
+    `gatsby-plugin-catch-links`,
     `gatsby-plugin-styled-components`,
     {
       resolve: 'gatsby-plugin-react-svg',

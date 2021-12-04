@@ -1,7 +1,7 @@
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
-  const notesTemplate = require.resolve(`./src/templates/noteTemplate.js`);
+  const NotesTemplate = require.resolve(`./src/templates/noteTemplate.js`);
 
   const result = await graphql(`
     {
@@ -30,9 +30,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   result.data.allMdx.nodes.forEach((node, index) => {
     createPage({
       path: `notes/${node.frontmatter.slug}`,
-      component: notesTemplate,
+      component: NotesTemplate,
       context: {
-        // additional data can be passed via context
         slug: node.frontmatter.slug,
         content: result.data.allFile.nodes[index].internal.content,
       },
