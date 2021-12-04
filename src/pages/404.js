@@ -95,11 +95,7 @@ const NotFoundPage = () => {
         <Content>
           <Title>Page not found</Title>
           <Paragraph>
-            Sorry{' '}
-            <span role="img" aria-label="Pensive emoji">
-              😔
-            </span>{' '}
-            we couldn’t find what you were looking for.
+            Sorry 😔 we couldn’t find what you were looking for.
           </Paragraph>
           <Link to="/">Go home</Link>
         </Content>
