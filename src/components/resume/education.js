@@ -13,11 +13,11 @@ const Education = () => {
       <ul>
         <li>
           <span>The Frontend Developer Career Path</span> - Scrimba - June 2021
-          - Present
+          - December 2021
         </li>
         <li>
           <span>Bachelor of Computer Science</span> - Swinburne University of
-          Technology - March 2020 - Present
+          Technology - March 2020 - September 2021
         </li>
         <li>
           <span>Victorian Certificate of Education</span> - Rosebud Secondary
