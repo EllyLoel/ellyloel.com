@@ -22,6 +22,17 @@ const WorkHistory = () => {
       <h2>Work history</h2>
       <ul>
         <li className="mt-1">
+          <Title>Junior Developer</Title> at Portable - Sep 2021-Present
+          <ul>
+            <li>
+              Developed web apps for client (VEOHRC, Headspace, etc.) projects
+              using a range of web technologies (React, Gatsby, PHP,
+              SilverStripe, Docker, etc.) as well as gave talks on
+              neurodiversity and landing your first tech job.
+            </li>
+          </ul>
+        </li>
+        <li className="mt-1">
           <Title>PC Sales, Support &amp; Service Technician</Title> at
           Aftershock PC Australia - Dec 2020-Jun 2021
           <ul>
