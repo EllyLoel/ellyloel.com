@@ -16,15 +16,15 @@ const SoftwareStyled = styled.section`
 const Software = () => {
   return (
     <SoftwareStyled id="software">
-      <div className="container">
+      <div>
         <h2>Software</h2>
         <ul>
-          <li className="notion">Notion</li>
-          <li className="atlassian">Atlassian Suite</li>
-          <li className="figma">Figma</li>
-          <li className="adobe">Adobe Creative Suite</li>
-          <li className="google">G Suite</li>
-          <li className="microsoft">Microsoft 365 Suite</li>
+          <li>Notion</li>
+          <li>Atlassian Suite</li>
+          <li>Figma</li>
+          <li>Adobe Creative Suite</li>
+          <li>Google Workspace</li>
+          <li>Microsoft 365 Suite</li>
         </ul>
       </div>
     </SoftwareStyled>

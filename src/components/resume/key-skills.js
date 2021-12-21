@@ -20,42 +20,31 @@ const KeySkillsStyled = styled.section`
 const KeySkills = () => {
   return (
     <KeySkillsStyled id="key-skills">
-      <div className="container">
+      <div>
         <h2>Key skills</h2>
         <div className="skills-container">
           <ul>
-            <li className="html">
-              HTML
-              <ul>
-                <li className="a11y">A11y</li>
-                <li className="semantic">Semantic HTML</li>
-              </ul>
-            </li>
-            <li className="css">
-              CSS
-              <ul>
-                <li className="sass">Sass</li>
-                <li className="tailwind-css">Tailwind</li>
-              </ul>
-            </li>
-            <li className="php">PHP</li>
+            <li>Semantic HTML</li>
+            <li>Advanced CSS</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+            <li>Git</li>
+            <li>A11y</li>
           </ul>
           <ul>
-            <li className="javascript">
-              JavaScript
-              <ul>
-                <li className="react">React</li>
-                <li className="nextjs">Next.js</li>
-                <li className="gatsby">Gatsby</li>
-              </ul>
-            </li>
-            <li className="git">
-              Git
-              <ul>
-                <li className="github">GitHub</li>
-              </ul>
-            </li>
-            <li className="oop">OOP</li>
+            <li>Sass</li>
+            <li>Tailwind</li>
+            <li>React</li>
+            <li>Gatsby</li>
+            <li>Next.js</li>
+            <li>WordPress</li>
+          </ul>
+          <ul>
+            <li>SilverStripe</li>
+            <li>Laravel</li>
+            <li>Docker</li>
+            <li>GitHub</li>
+            <li>Bitbucket</li>
           </ul>
         </div>
       </div>

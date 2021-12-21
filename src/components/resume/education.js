@@ -12,16 +12,16 @@ const Education = () => {
       <h2>Education</h2>
       <ul>
         <li>
-          <span>The Frontend Developer Career Path</span> - Scrimba - June 2021
-          - December 2021
+          <span>The Frontend Developer Career Path</span> - Scrimba - Jun
+          2021-Dec 2021
         </li>
         <li>
           <span>Bachelor of Computer Science</span> - Swinburne University of
-          Technology - March 2020 - September 2021
+          Technology - Mar 2020-Sep 2021
         </li>
         <li>
           <span>Victorian Certificate of Education</span> - Rosebud Secondary
-          College - Graduated 2019
+          College - 2014-2019
         </li>
       </ul>
     </EducationStyled>
