@@ -87,8 +87,8 @@ const About = () => {
             <LeftSVGGraphic />
             <article>
               <p>
-                I&apos;m a computer science student who is looking to start my
-                journey as a Frontend developer.
+                I&apos;m a junior developer who has recently started my journey
+                as a web developer.
               </p>
               <p>
                 I&apos;m a self-motivated learner with strong organisation, time
