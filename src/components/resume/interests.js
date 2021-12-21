@@ -11,9 +11,10 @@ const Interests = () => {
     <InterestsStyled id="interests">
       <h2>Interests</h2>
       <ul>
+        <li>Personal knowledge management &amp; digital gardening</li>
+        <li>Developing general development skills</li>
+        <li>Building artisan mechanical keyboards</li>
         <li>Landscape photography</li>
-        <li>Building artisan Mechanical Keyboards</li>
-        <li>Developing skills in Front-end Web Development</li>
       </ul>
     </InterestsStyled>
   );

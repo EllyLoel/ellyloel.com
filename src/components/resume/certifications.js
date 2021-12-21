@@ -15,6 +15,9 @@ const Certifications = () => {
           <span>Certificate III</span> in Information, Digital Media &amp;
           Technology
         </li>
+        <li>
+          <span>The Frontend Developer Career Path</span> from Scrimba
+        </li>
       </ul>
     </CertificationsStyled>
   );
