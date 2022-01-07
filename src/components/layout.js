@@ -4,6 +4,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import 'normalize.css';
 import styled, { createGlobalStyle } from 'styled-components';
+import { motion } from 'framer-motion';
 
 // STYLES /////////////////////////////////////////////////////////////////////
 
@@ -43,7 +44,7 @@ const Global = createGlobalStyle`
   }
 `;
 
-const Main = styled.main`
+const Main = styled(motion.main)`
   min-height: 100%;
   display: grid;
   grid-template-columns: 100vw;
@@ -57,10 +58,23 @@ const Main = styled.main`
 
 // COMPONENTS /////////////////////////////////////////////////////////////////
 
-const Layout = ({ children }) => (
+const Layout = ({ children, path }) => (
   <>
     <Global />
-    <Main>{children}</Main>
+    <Main
+      key={path}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{
+        type: 'spring',
+        mass: 0.35,
+        stiffness: 75,
+        duration: 0.3,
+      }}
+    >
+      {children}
+    </Main>
   </>
 );
 
