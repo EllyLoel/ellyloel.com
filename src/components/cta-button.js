@@ -56,7 +56,7 @@ const CTAButton = () => (
   <Button
     className="cta-btn"
     onClick={() => {
-      navigate('/#projects');
+      navigate('#projects');
     }}
   >
     <FaAngleDown />

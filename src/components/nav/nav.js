@@ -177,7 +177,7 @@ const NavSection = ({ siteTitle, color, navColor }) => {
 
   return (
     <>
-      <Nav navOpen={navOpen} navColor={navColor}>
+      <Nav id="nav" navOpen={navOpen} navColor={navColor}>
         <Heading onClick={() => setNavOpen(!navOpen)}>
           <Link to="/#landing">{siteTitle}</Link>
         </Heading>
