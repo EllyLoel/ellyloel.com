@@ -1,0 +1,66 @@
+import styled from 'styled-components';
+import {
+  FaEnvelope,
+  FaPhoneAlt,
+  FaHome,
+  FaDesktop,
+  FaLinkedin,
+  FaGithub,
+} from 'react-icons/fa';
+import { Link } from '../../src/components/link';
+
+export const ContactDetails = styled.div`
+  display: grid;
+  grid-template-columns: repeat(1, max-content);
+  grid-template-rows: repeat(6, max-content);
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  svg {
+    display: inline;
+    vertical-align: top;
+    font-size: 1.125rem;
+    color: var(--dark);
+    transition: color 200ms ease-out;
+  }
+  @media (min-width: 90em) {
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: repeat(3, max-content);
+  }
+`;
+
+export const P = styled.p`
+  line-height: 1.15;
+`;
+
+<ContactDetails>
+  <P>
+    <Link href="mailto:hello@ellyloel.com">
+      <FaEnvelope /> hello@ellyloel.com
+    </Link>
+  </P>
+  <P>
+    <Link href="tel:+61435900094">
+      <FaPhoneAlt /> 0435 900 094
+    </Link>
+  </P>
+  <P>
+    <FaHome /> South Yarra, Victoria
+  </P>
+  <P>
+    <Link href="https://www.ellyloel.com">
+      <FaDesktop /> www.ellyloel.com
+    </Link>
+  </P>
+  <P>
+    <Link href="http://linkedin.ellyloel.com">
+      <FaLinkedin /> linkedin.ellyloel.com
+    </Link>
+  </P>
+  <P>
+    <Link href="http://github.ellyloel.com">
+      <FaGithub /> github.ellyloel.com
+    </Link>
+  </P>
+</ContactDetails>

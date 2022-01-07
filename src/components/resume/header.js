@@ -34,7 +34,7 @@ const Heading = styled.h1`
 `;
 
 const Subheading = styled.p`
-  font-size: 4vw;
+  font-size: 3.25vw;
   text-align: right;
   margin: 0;
   margin-top: -0.75em;
@@ -44,19 +44,19 @@ const Subheading = styled.p`
   text-underline-offset: 2px;
 
   @media (min-width: 48em) {
-    font-size: 2vw;
+    font-size: 1.5vw;
   }
 
   @media (min-width: 90em) {
-    font-size: 1.2vw;
+    font-size: 1.3vw;
   }
 
-  @media (min-width: 125em) {
-    font-size: 1.2vw;
+  @media (min-width: 120em) {
+    font-size: 1vw;
   }
 
   @media (min-width: 160em) {
-    font-size: 1.2vw;
+    font-size: 1vw;
   }
 `;
 
@@ -64,7 +64,7 @@ const Header = () => {
   return (
     <HeaderStyled>
       <Heading>Elly Loel</Heading>
-      <Subheading>Frontend Developer</Subheading>
+      <Subheading>Web Developer & Designer</Subheading>
     </HeaderStyled>
   );
 };

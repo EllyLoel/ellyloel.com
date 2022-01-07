@@ -1,18 +1,13 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import styled, { keyframes } from 'styled-components';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Nav from '../components/nav/nav';
 import Header from '../components/resume/header';
-import ContactDetails from '../components/resume/contact-details';
-import Summary from '../components/resume/summary';
-import KeySkills from '../components/resume/key-skills';
-import Software from '../components/resume/software';
-import WorkHistory from '../components/resume/work-history';
-import Education from '../components/resume/education';
-import Certifications from '../components/resume/certifications';
-import Interests from '../components/resume/interests';
+import ResumeSection from '../components/resume/ResumeSection';
 
 const bgAnimation = keyframes`
 		0% { background-position:0% 13% }
@@ -76,35 +71,26 @@ const ResumeContainer = styled.div`
     grid-template-rows: repeat(6, max-content);
     grid-template-areas:
       'header contact-details'
-      'summary summary'
-      'key-skills software'
+      'summary key-skills'
+      'interests software'
       'work-history work-history'
       'education education'
-      'certifications interests';
+      'certifications certifications';
   }
 
   @media (min-width: 90em) {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, max-content);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, max-content);
     grid-template-areas:
-      'header header contact-details contact-details'
-      'summary key-skills key-skills software'
-      'work-history work-history work-history work-history'
-      'education education certifications interests';
-  }
-
-  @media (min-width: 160em) {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas:
-      'header header contact-details contact-details'
-      'summary key-skills key-skills software'
-      'work-history work-history education education'
-      'work-history work-history certifications interests';
+      'header contact-details'
+      'summary key-skills'
+      'interests software'
+      'work-history work-history'
+      'education certifications';
   }
 `;
 
-const Resume = () => {
+const Resume = ({ data }) => {
   return (
     <Layout>
       <SEO title="Resume" />
@@ -112,14 +98,13 @@ const Resume = () => {
         <Nav siteTitle="<e//y>" color="#FFDC84" />
         <ResumeContainer>
           <Header />
-          <ContactDetails />
-          <Summary />
-          <KeySkills />
-          <Software />
-          <WorkHistory />
-          <Education />
-          <Certifications />
-          <Interests />
+          {data.allMdx.nodes.map((node, index) => {
+            return (
+              <ResumeSection key={index} slug={node.slug}>
+                <MDXRenderer>{node.body}</MDXRenderer>
+              </ResumeSection>
+            );
+          })}
         </ResumeContainer>
       </ResumeBody>
     </Layout>
@@ -127,3 +112,14 @@ const Resume = () => {
 };
 
 export default Resume;
+
+export const pageQuery = graphql`
+  query {
+    allMdx(filter: { fileAbsolutePath: { regex: "/resume/" } }) {
+      nodes {
+        slug
+        body
+      }
+    }
+  }
+`;
