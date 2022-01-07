@@ -1,8 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { graphql, Link } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { MDXProvider } from '@mdx-js/react';
 import styled from 'styled-components';
 import { window } from 'browser-monads';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/animations/shift-away.css';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -214,6 +217,32 @@ const Content = styled.div`
   }
 `;
 
+const Tooltip = styled.div`
+  background-color: var(--light);
+  padding: 1em 1.5em;
+  line-height: 1.5;
+  border: 1px solid rgba(52, 61, 68, 0.05);
+  border-radius: 1rem;
+  box-shadow: 0px 5px 10px rgba(52, 61, 68, 0.1);
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  & > * {
+    margin: 0;
+  }
+
+  & h1 {
+    line-height: 1;
+    margin-bottom: 0.25em;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.015);
+    border: 1px solid var(--accent);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15);
+  }
+`;
+
 const References = styled.div`
   grid-row: 2 / 3;
   grid-column: 1 / 2;
@@ -242,7 +271,7 @@ const References = styled.div`
     line-height: 1;
   }
   ul {
-    padding-left: 2em;
+    padding-left: 1.6em;
     margin: 0;
     margin-top: 0.25em;
 
@@ -353,17 +382,95 @@ const NoteTemplate = ({
             <TimeContainer>
               {mdx.frontmatter.slug === 'now' ? null : (
                 <CreatedTime>
-                  🌱 Sprouted on {formatDate(mdx.frontmatter.date)}
+                  🌱 &nbsp; Sprouted on {formatDate(mdx.frontmatter.date)}
                 </CreatedTime>
               )}
               <ModifiedTime>
-                🌧️ Last watered on {formatDate(modifiedTime)}
+                🌧️ &nbsp; Last watered on {formatDate(modifiedTime)}
               </ModifiedTime>
             </TimeContainer>
           </Metadata>
         </Header>
         <Content>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
+          <MDXProvider
+            components={{
+              a: (props) => (
+                <Tippy
+                  interactive={true}
+                  placement="auto"
+                  animation="shift-away"
+                  inertia={true}
+                  content={
+                    <Tooltip>
+                      {mdx.inboundReferences &&
+                      mdx.inboundReferences.find(
+                        (inRef) => inRef.frontmatter.title === props.title
+                      ) ? (
+                        <>
+                          <h1>{props.title}</h1>
+                          <p>
+                            {mdx.inboundReferences
+                              .find(
+                                (inRef) =>
+                                  inRef.frontmatter.title === props.title
+                              )
+                              .excerpt.replace(/\[ /g, '')
+                              .replace(/ \]/g, '')}
+                          </p>
+                        </>
+                      ) : mdx.outboundReferences &&
+                        mdx.outboundReferences.find(
+                          (outRef) => outRef.frontmatter.title === props.title
+                        ) ? (
+                        <>
+                          <h1>{props.title}</h1>
+                          <p>
+                            {mdx.outboundReferences
+                              .find(
+                                (inRef) =>
+                                  inRef.frontmatter.title === props.title
+                              )
+                              .excerpt.replace(/\[ /g, '')
+                              .replace(/ \]/g, '')}
+                          </p>
+                        </>
+                      ) : props.href.match(
+                          /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g
+                        ) ? (
+                        <p>This is an external link 🌐</p>
+                      ) : (
+                        <>
+                          <p>
+                            <em>
+                              {/* eslint-disable-next-line react/no-unescaped-entities */}
+                              This note doesn't exist yet
+                            </em>{' '}
+                            🤯
+                          </p>
+                          <p>
+                            🐦 &nbsp;
+                            <a
+                              href={`https://twitter.com/intent/tweet?text=Hey%20%40ellyloel!%20You%20should%20write%20a%20note%20about%20${props.title}`}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              tweet
+                            </a>{' '}
+                            <em>at me to add it!</em>
+                          </p>
+                        </>
+                      )}
+                    </Tooltip>
+                  }
+                >
+                  {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
+                  <a {...props} />
+                </Tippy>
+              ),
+            }}
+          >
+            <MDXRenderer>{mdx.body}</MDXRenderer>
+          </MDXProvider>
         </Content>
         <GraphRefsContainer>
           <References ref={ref}>
@@ -373,9 +480,54 @@ const NoteTemplate = ({
                 <ul>
                   {mdx.inboundReferences.map((ref, index) => (
                     <li key={index}>
-                      <Link to={`/notes/${ref.frontmatter.slug}`}>
-                        {ref.frontmatter.title}
-                      </Link>
+                      <Tippy
+                        interactive={true}
+                        placement="auto"
+                        animation="shift-away"
+                        inertia={true}
+                        content={
+                          <Tooltip>
+                            {mdx.inboundReferences &&
+                            mdx.inboundReferences.find(
+                              (inRef) =>
+                                inRef.frontmatter.title ===
+                                ref.frontmatter.title
+                            ) ? (
+                              <>
+                                <h1>{ref.frontmatter.title}</h1>
+                                <p>
+                                  {mdx.inboundReferences
+                                    .find(
+                                      (inRef) =>
+                                        inRef.frontmatter.title ===
+                                        ref.frontmatter.title
+                                    )
+                                    .excerpt.replace(/\[ /g, '')
+                                    .replace(/ \]/g, '')}
+                                </p>
+                              </>
+                            ) : (
+                              <>
+                                <h1>{ref.frontmatter.title}</h1>
+                                <p>
+                                  {mdx.outboundReferences
+                                    .find(
+                                      (inRef) =>
+                                        inRef.frontmatter.title ===
+                                        ref.frontmatter.title
+                                    )
+                                    .excerpt.replace(/\[ /g, '')
+                                    .replace(/ \]/g, '')}
+                                </p>
+                              </>
+                            )}
+                          </Tooltip>
+                        }
+                      >
+                        <Link to={`/notes/${ref.frontmatter.slug}`}>
+                          {ref.frontmatter.title}
+                        </Link>
+                      </Tippy>
                     </li>
                   ))}
                 </ul>
@@ -416,6 +568,7 @@ export const query = graphql`
             title
             slug
           }
+          excerpt
         }
       }
       outboundReferences {
@@ -424,6 +577,7 @@ export const query = graphql`
             title
             slug
           }
+          excerpt
         }
       }
       frontmatter {
