@@ -3,11 +3,10 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-// import Graph from '../components/graph'; might look into displaying a graph on hovering over the digital garden link
-import Landing from '../components/index/landing/landing';
-import Projects from '../components/index/projects/projects';
-import About from '../components/index/about/about';
-import Contact from '../components/index/contact/contact';
+import Landing from '../components/index/landing';
+import Projects from '../components/projects/projects';
+import About from '../components/about/about';
+import Contact from '../components/contact/contact';
 
 const IndexPage = ({ data }) => {
   return (
