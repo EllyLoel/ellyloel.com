@@ -1,6 +1,6 @@
 # [Elly Loel](https://ellyloel.com/)'s Portfolio
 
-✨ The second iteration of my portfolio built with React & Gatsby and hosted on Vercel.
+> ✨ The second (*almost third*) iteration of my portfolio built with Gatsby and hosted on Vercel.
 
 ## Todo list
 
