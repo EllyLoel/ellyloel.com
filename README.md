@@ -4,11 +4,11 @@
 
 ## Todo list
 
+- [x] Page transition animation
 - [ ] Projects page
 - [ ] About page
 - [ ] Speaking page
 - [ ] Unify website style
-- [ ] Page transition animation
 - [ ] Dark mode (other themes?)
 - [ ] Spotify currently playing component
 - [ ] Giscus comment section component
