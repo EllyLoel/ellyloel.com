@@ -32,7 +32,7 @@ Traditionally the 5 most important components of a Zettelkasten system are:
 But this is not set in stone, for example I have a slightly different system:
 
 1. [[Core zettel idea notes]]
-   - These are essentially a combination of [[Fleeting notes]] & [[Permanent notes]], though they have a few different stages of development (🌱 Seedling, 🌿 Budding & 🌲 Evergreen).
+   - These are essentially a combination of [[Fleeting notes]] & [[Permanent notes]], though they have a few different stages of development (<i className="twa twa-seedling"></i> Seedling, <i className="twa twa-herb"></i> Budding & <i className="twa twa-evergreen-tree"></i> Evergreen).
 2. [[Reference notes]]
    - Which are esentially [[Literature notes]].
 3. [[Maps of Content]]

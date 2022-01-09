@@ -12,7 +12,7 @@ const underlineHoverTransition = `
     width: 95%;
     height: 2.5px;
     border-radius: 9999px;
-    background: var(--light);
+    background: var(--dark);
     top: 105%;
     left: 2.5%;
     pointer-events: none;
@@ -58,7 +58,7 @@ const FooterStyled = styled.footer`
 
       a {
         text-decoration: none;
-        color: var(--light);
+        color: var(--dark);
       }
     }
   }
@@ -70,11 +70,11 @@ const FooterStyled = styled.footer`
     left: 50%;
     transform: translateX(-50%);
 
-    color: var(--light);
+    color: var(--dark);
 
     a {
       text-decoration: none;
-      color: var(--light);
+      color: var(--dark);
 
       ${underlineHoverTransition}
     }
@@ -116,11 +116,8 @@ const Footer = () => (
       </li>
     </ul>
     <small>
-      &copy; {new Date().getFullYear()}, Made with{' '}
-      <span role="img" aria-label="love">
-        💖
-      </span>
-      {` `}by{' '}
+      &copy; 2021-{new Date().getFullYear()} All Rights Reserved, Made with{' '}
+      <i className="twa twa-sparkling-heart"></i> by{' '}
       <a href="http://twitter.ellyloel.com" target="_blank" rel="noreferrer">
         <span className="logo">&lt;e//y&gt;</span>
       </a>

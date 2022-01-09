@@ -3,7 +3,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import LandingBGWrapper from './landing-bg-wrapper';
 import Nav from '../nav/nav';
 import SVGGraphic from '../../images/svg/sitting-with-laptop.svg';
 import CTAButton from '../cta-button';
@@ -110,14 +109,12 @@ const SubHeading = styled.p`
 const Landing = () => {
   return (
     <LandingSection id="landing">
-      <LandingBGWrapper>
-        <Nav siteTitle="<e//y>" color="#393939" />
-        <Content>
-          <HeroText />
-          <SVGGraphic />
-          <CTAButton />
-        </Content>
-      </LandingBGWrapper>
+      <Nav siteTitle="<e//y>" color="#393939" />
+      <Content>
+        <HeroText />
+        <SVGGraphic />
+        <CTAButton />
+      </Content>
     </LandingSection>
   );
 };
@@ -128,10 +125,7 @@ const HeroText = () => (
   <HeroHeader>
     <Heading>
       <span className="flex-container">
-        Hello.{' '}
-        <span role="img" aria-label="sparkles" className="emoji-wrapper">
-          ✨
-        </span>
+        Hello. <i className="twa twa-sparkles"></i>
       </span>
       <span style={{ display: 'block' }}>I am Elly</span>
     </Heading>

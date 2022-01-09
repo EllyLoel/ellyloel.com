@@ -13,16 +13,18 @@ const CardStyled = styled.article`
     'img'
     'content';
 
-  background-color: var(--light);
   color: var(--dark);
+  background-color: var(--light);
+  box-shadow: var(--shadow-elevation-medium);
 
   border-radius: 1rem;
 
   transform: scale(1);
-  transition: transform 500ms cubic-bezier(0.57, 2.2, 0.26, 0.99);
+  transition: all 500ms cubic-bezier(0.57, 2.2, 0.26, 0.99);
 
   &:hover {
-    transform: scale(1.05);
+    box-shadow: var(--shadow-elevation-high);
+    transform: scale(1.0125);
   }
 
   .no-click {

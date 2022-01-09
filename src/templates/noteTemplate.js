@@ -382,11 +382,13 @@ const NoteTemplate = ({
             <TimeContainer>
               {mdx.frontmatter.slug === 'now' ? null : (
                 <CreatedTime>
-                  🌱 &nbsp; Sprouted on {formatDate(mdx.frontmatter.date)}
+                  <i className="twa twa-seedling"></i> Sprouted on{' '}
+                  {formatDate(mdx.frontmatter.date)}
                 </CreatedTime>
               )}
               <ModifiedTime>
-                🌧️ &nbsp; Last watered on {formatDate(modifiedTime)}
+                <i className="twa twa-cloud-with-rain"></i> Last watered on{' '}
+                {formatDate(modifiedTime)}
               </ModifiedTime>
             </TimeContainer>
           </Metadata>
@@ -435,9 +437,13 @@ const NoteTemplate = ({
                           </p>
                         </>
                       ) : props.href.match(
+                          // eslint-disable-next-line no-useless-escape
                           /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g
                         ) ? (
-                        <p>This is an external link 🌐</p>
+                        <p>
+                          This is an external link{' '}
+                          <i className="twa twa-globe-with-meridians"></i>
+                        </p>
                       ) : (
                         <>
                           <p>
@@ -445,10 +451,10 @@ const NoteTemplate = ({
                               {/* eslint-disable-next-line react/no-unescaped-entities */}
                               This note doesn't exist yet
                             </em>{' '}
-                            🤯
+                            <i className="twa twa-exploding-head"></i>
                           </p>
                           <p>
-                            🐦 &nbsp;
+                            <i className="twa twa-bird"></i>{' '}
                             <a
                               href={`https://twitter.com/intent/tweet?text=Hey%20%40ellyloel!%20You%20should%20write%20a%20note%20about%20${props.title}`}
                               target="_blank"

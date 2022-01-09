@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ProjectsBGWrapper from './projects-bg-wrapper';
 import Card from './card';
 
 const ProjectsSection = styled.section`
@@ -47,16 +46,14 @@ const Cards = styled.section`
 
 const Projects = ({ data }) => (
   <ProjectsSection id="projects">
-    <ProjectsBGWrapper>
-      <Content>
-        <Heading>Projects</Heading>
-        <Cards>
-          {data.projects.edges.map(({ node }) => (
-            <Card key={node.frontmatter.id} project={node} />
-          ))}
-        </Cards>
-      </Content>
-    </ProjectsBGWrapper>
+    <Content>
+      <Heading>Projects</Heading>
+      <Cards>
+        {data.projects.edges.map(({ node }) => (
+          <Card key={node.frontmatter.id} project={node} />
+        ))}
+      </Cards>
+    </Content>
   </ProjectsSection>
 );
 

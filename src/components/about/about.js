@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 import LeftSVGGraphic from '../../images/svg/standing-infront-webpage.svg';
 import RightSVGGraphic from '../../images/svg/sitting-behind-laptop.svg';
-import AboutBGWrapper from './about-bg-wrapper';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { useStaticQuery, graphql } from 'gatsby';
 
 const AboutSection = styled.section`
   position: relative;
@@ -78,31 +79,34 @@ const SubContent = styled.div`
 `;
 
 const About = () => {
+  const data = useStaticQuery(graphql`
+    {
+      allMdx(filter: { fileAbsolutePath: { regex: "/about/" } }) {
+        edges {
+          node {
+            body
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <AboutSection id="about">
-      <AboutBGWrapper>
-        <Content>
-          <Heading>About</Heading>
-          <SubContent>
-            <LeftSVGGraphic />
-            <article>
-              <p>
-                I&apos;m a junior developer who has recently started my journey
-                as a web developer.
-              </p>
-              <p>
-                I&apos;m a self-motivated learner with strong organisation, time
-                management &amp; communication skills.
-              </p>
-              <p>
-                I&apos;m able to work independently &amp; collaboratively in a
-                team with a meticulous attention to detail.
-              </p>
-            </article>
-            <RightSVGGraphic />
-          </SubContent>
-        </Content>
-      </AboutBGWrapper>
+      <Content>
+        <Heading>About</Heading>
+        <SubContent>
+          <LeftSVGGraphic />
+          <article>
+            {data.allMdx.edges.map((edge, index) => (
+              <div key={index}>
+                <MDXRenderer>{edge.node.body}</MDXRenderer>
+              </div>
+            ))}
+          </article>
+          <RightSVGGraphic />
+        </SubContent>
+      </Content>
     </AboutSection>
   );
 };

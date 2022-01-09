@@ -62,7 +62,12 @@ function Seo({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    ></Helmet>
+    >
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/SebastianAigner/twemoji-amazing@1.0.0/twemoji-amazing.css"
+      />
+    </Helmet>
   );
 }
 

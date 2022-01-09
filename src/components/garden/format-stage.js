@@ -27,13 +27,13 @@ const FormatStage = ({ stage }) => {
   let ariaLabel = '';
 
   if (stage === 'seedling') {
-    emoji = '🌱';
+    emoji = <i className="twa twa-seedling"></i>;
     ariaLabel = 'Seedling';
   } else if (stage === 'budding') {
-    emoji = '🌿';
+    emoji = <i className="twa twa-herb"></i>;
     ariaLabel = 'Herb';
   } else if (stage === 'evergreen') {
-    emoji = '🌲';
+    emoji = <i className="twa twa-evergreen-tree"></i>;
     ariaLabel = 'Evergreen tree';
   }
 

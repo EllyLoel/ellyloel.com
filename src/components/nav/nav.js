@@ -25,7 +25,7 @@ const underlineHoverTransition = `
     width: 95%;
     height: 2.5px;
     border-radius: 9999px;
-    background: var(--light);
+    background: var(--dark);
     top: 105%;
     left: 2.5%;
     pointer-events: none;
@@ -68,7 +68,7 @@ const Nav = styled.nav`
   font-size: 1.375rem;
 
   a {
-    color: var(--light);
+    color: var(--dark);
     text-decoration: none;
     font-weight: 800;
     letter-spacing: 0.5px;
@@ -127,7 +127,7 @@ const Nav = styled.nav`
 
     a {
       font-size: 1rem;
-      color: ${({ navColor }) => (navColor ? navColor : 'var(--light)')};
+      color: ${({ navColor }) => (navColor ? navColor : 'var(--dark)')};
     }
 
     .text-links-list {
@@ -150,6 +150,7 @@ const Heading = styled.h1`
   a {
     font-family: 'Nanum Pen Script', cursive;
     font-size: 3rem;
+    color: ${({ navColor }) => (navColor ? navColor : 'var(--dark)')};
 
     @media (min-width: 64em) {
       font-size: 1.6rem;
@@ -178,25 +179,22 @@ const NavSection = ({ siteTitle, color, navColor }) => {
   return (
     <>
       <Nav id="nav" navOpen={navOpen} navColor={navColor}>
-        <Heading onClick={() => setNavOpen(!navOpen)}>
+        <Heading navColor={navColor} onClick={() => setNavOpen(!navOpen)}>
           <Link to="/#landing">{siteTitle}</Link>
         </Heading>
 
         <ul className="text-links-list">
-          <NavLink link="/#projects" navOpen={navOpen} setNavOpen={setNavOpen}>
-            🛠️ Projects
+          <NavLink link="/about/" navOpen={navOpen} setNavOpen={setNavOpen}>
+            <i className="twa twa-woman-technologist-medium-light-skin-tone"></i>{' '}
+            About
           </NavLink>
 
-          <NavLink link="/#about" navOpen={navOpen} setNavOpen={setNavOpen}>
-            👩🏼 About
-          </NavLink>
-
-          <NavLink link="/#contact" navOpen={navOpen} setNavOpen={setNavOpen}>
-            📥 Contact
+          <NavLink link="/projects/" navOpen={navOpen} setNavOpen={setNavOpen}>
+            <i className="twa twa-card-file-box"></i> Projects
           </NavLink>
 
           <NavLink link="/resume/" navOpen={navOpen} setNavOpen={setNavOpen}>
-            📑 Resume
+            <i className="twa twa-bookmark-tabs"></i> Resume
           </NavLink>
 
           <NavLink
@@ -204,11 +202,15 @@ const NavSection = ({ siteTitle, color, navColor }) => {
             navOpen={navOpen}
             setNavOpen={setNavOpen}
           >
-            🌿 Digital Garden
+            <i className="twa twa-herb"></i> Digital Garden
           </NavLink>
 
-          <NavLink link="/now" navOpen={navOpen} setNavOpen={setNavOpen}>
-            ⌚️ Now
+          <NavLink link="/speaking/" navOpen={navOpen} setNavOpen={setNavOpen}>
+            <i className="twa twa-studio-microphone"></i> Speaking
+          </NavLink>
+
+          <NavLink link="/now/" navOpen={navOpen} setNavOpen={setNavOpen}>
+            <i className="twa twa-spiral-calendar"></i> Timeline
           </NavLink>
         </ul>
         <ul className="icon-links-list">
@@ -251,7 +253,7 @@ const NavSection = ({ siteTitle, color, navColor }) => {
           toggle={setNavOpen}
           rounded
           label="Show menu"
-          color={navOpen ? '#FFF' : color}
+          color={navOpen ? 'var(--dark)' : color}
         />
       </StyledHamburger>
     </>
