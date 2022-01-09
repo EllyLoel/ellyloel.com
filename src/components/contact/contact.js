@@ -4,7 +4,6 @@ import { navigate } from 'gatsby';
 import { FaAngleUp } from 'react-icons/fa';
 
 import Footer from '../footer';
-import ContactBGWrapper from './contact-bg-wrapper';
 
 const ContactSection = styled.section`
   position: relative;
@@ -71,7 +70,8 @@ const ContactForm = styled.form`
     width: max-content;
     background-color: var(--accent);
     color: var(--light);
-    font-weight: bold;
+    font-weight: 600;
+    line-height: 1;
     transform: scale(1);
     transition: transform 500ms cubic-bezier(0.57, 2.2, 0.26, 0.99);
 
@@ -160,84 +160,78 @@ const Contact = () => {
 
   return (
     <ContactSection id="contact">
-      <ContactBGWrapper>
-        <Content>
-          <Heading>Contact</Heading>
-          <FormSection>
-            {!response.type ? (
-              <ContactForm
-                name="contact"
-                action="https://api.staticforms.xyz/submit"
-                method="post"
-                onSubmit={handleSubmit}
-              >
-                <label>Name</label>
-                <input
-                  type="text"
-                  placeholder="Name"
-                  name="name"
-                  onChange={handleChange}
-                  required
-                />
-                <label>Email</label>
-                <input
-                  type="email"
-                  placeholder="Email"
-                  name="email"
-                  onChange={handleChange}
-                  required
-                />
-                <div style={{ display: 'none' }}>
-                  <label>Title</label>
-                  <div>
-                    <input
-                      type="text"
-                      name="honeypot"
-                      style={{ display: 'none' }}
-                      onChange={handleChange}
-                    />
-                    <input
-                      type="hidden"
-                      name="subject"
-                      onChange={handleChange}
-                    />
-                  </div>
+      <Content>
+        <Heading>Contact</Heading>
+        <FormSection>
+          {!response.type ? (
+            <ContactForm
+              name="contact"
+              action="https://api.staticforms.xyz/submit"
+              method="post"
+              onSubmit={handleSubmit}
+            >
+              <label>Name</label>
+              <input
+                type="text"
+                placeholder="Name"
+                name="name"
+                onChange={handleChange}
+                required
+              />
+              <label>Email</label>
+              <input
+                type="email"
+                placeholder="Email"
+                name="email"
+                onChange={handleChange}
+                required
+              />
+              <div style={{ display: 'none' }}>
+                <label>Title</label>
+                <div>
+                  <input
+                    type="text"
+                    name="honeypot"
+                    style={{ display: 'none' }}
+                    onChange={handleChange}
+                  />
+                  <input type="hidden" name="subject" onChange={handleChange} />
                 </div>
-                <label>Message</label>
-                <textarea
-                  placeholder="Message..."
-                  name="message"
-                  onChange={handleChange}
-                  required
-                />
-                <button type="submit">Send</button>
-              </ContactForm>
-            ) : (
-              <div>
-                <SubmitMessage
-                  style={
-                    response.type === 'error'
-                      ? { color: '#ff0033' }
-                      : { color: 'var(--light)' }
-                  }
-                >
-                  {response.message}
-                </SubmitMessage>
               </div>
-            )}
-          </FormSection>
+              <label>Message</label>
+              <textarea
+                placeholder="Message..."
+                name="message"
+                onChange={handleChange}
+                required
+              />
+              <button type="submit">Send</button>
+            </ContactForm>
+          ) : (
+            <div>
+              <SubmitMessage
+                style={
+                  response.type === 'error'
+                    ? { color: '#ff0033' }
+                    : { color: 'var(--dark)' }
+                }
+              >
+                {response.message}
+              </SubmitMessage>
+            </div>
+          )}
+        </FormSection>
 
-          <BTTButton
-            className="btt-btn"
-            onClick={() => {
-              navigate('#nav');
-            }}
-          >
-            <FaAngleUp />
-          </BTTButton>
-          <Footer />
-        </Content>
-      </ContactBGWrapper>
+        <BTTButton
+          className="btt-btn"
+          onClick={() => {
+            navigate('#nav');
+          }}
+        >
+          <FaAngleUp />
+        </BTTButton>
+        <Footer />
+      </Content>
     </ContactSection>
   );
 };

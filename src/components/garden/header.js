@@ -37,10 +37,7 @@ const Header = () => {
   return (
     <HeaderStyled>
       <h1>
-        My Digital Garden
-        <span role="img" aria-label="Leaf Fluttering in Wind">
-          🍃
-        </span>
+        My Digital Garden <i className="twa twa-leaf-fluttering-in-wind"></i>
       </h1>
       <p>
         A collection of my ideas that I&apos;m nurturing out in the open. The

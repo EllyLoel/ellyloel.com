@@ -1,13 +1,13 @@
 # [Elly Loel](https://ellyloel.com/)'s Portfolio
 
-> ✨ The second (*almost third*) iteration of my portfolio built with Gatsby and hosted on Vercel.
+> ✨ The second (_almost third_) iteration of my portfolio built with Gatsby and hosted on Vercel.
 
 ## Todo list
 
 - [x] Page transition animation
-- [ ] Projects page
-- [ ] About page
-- [ ] Speaking page
+- [x] Projects page
+- [x] About page
+- [x] Speaking page
 - [ ] Unify website style
 - [ ] Dark mode (other themes?)
 - [ ] Spotify currently playing component
@@ -15,3 +15,8 @@
 - [ ] AMA page
 - [ ] Tools page
 - [ ] Bookmarks page
+- [ ] Turn contact component into newsletter component
+- [ ] Create sitemap
+- [ ] Redo footer
+- [ ] Redo nav/header
+- [ ] Add Google Analytics
