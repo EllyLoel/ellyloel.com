@@ -38,8 +38,8 @@ const Content = styled.div`
     padding: 0.5em 1em;
     width: max-content;
 
-    background: var(--accent);
-    color: var(--light);
+    background: var(--color-primary);
+    color: var(--color-background);
     font-weight: 800;
     text-decoration: none;
     border-radius: 9999px;
@@ -73,7 +73,7 @@ const FooterStyled = styled.div`
   footer small,
   footer small a,
   footer ul a {
-    color: var(--dark);
+    color: var(--color-text);
   }
 
   footer small a::before,

@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-
-import LeftSVGGraphic from '../../images/svg/standing-infront-webpage.svg';
-import RightSVGGraphic from '../../images/svg/sitting-behind-laptop.svg';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { useStaticQuery, graphql } from 'gatsby';
+
+import Heading from '../heading';
+import LeftSVGGraphic from '../../images/svg/standing-infront-webpage.svg';
+import RightSVGGraphic from '../../images/svg/sitting-behind-laptop.svg';
 
 const AboutSection = styled.section`
   position: relative;
@@ -18,14 +19,6 @@ const Content = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-`;
-
-const Heading = styled.h1`
-  font-size: 4.25rem;
-
-  @media (min-width: 64em) {
-    font-size: 6rem;
-  }
 `;
 
 const SubContent = styled.div`

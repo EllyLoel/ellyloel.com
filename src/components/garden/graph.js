@@ -7,7 +7,7 @@ const ForceGraph = loadable(() => import('./forceGraph'));
 
 const primaryNodeColor = '#bcd05f';
 const secondaryNodeColor = '#8da130';
-const backgroundColor = '#FFF';
+const backgroundColor = 'var(--color-background)';
 
 const GraphStyled = styled.div`
   grid-area: graph;
@@ -20,7 +20,7 @@ const GraphStyled = styled.div`
 
     &:hover,
     &:focus {
-      border: 2px solid var(--accent);
+      border: 2px solid var(--color-primary);
       box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15);
     }
   }

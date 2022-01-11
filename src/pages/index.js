@@ -4,8 +4,9 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Landing from '../components/index/landing';
-import Projects from '../components/projects/projects';
 import About from '../components/about/about';
+import Projects from '../components/projects/projects';
+import Speaking from '../components/speaking/speaking';
 import Contact from '../components/contact/contact';
 
 const IndexPage = ({ data }) => {
@@ -13,8 +14,9 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Home" />
       <Landing />
-      <Projects data={data} />
       <About />
+      <Projects data={data} />
+      <Speaking />
       <Contact />
     </Layout>
   );

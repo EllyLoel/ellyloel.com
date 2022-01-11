@@ -39,7 +39,7 @@ const Subheading = styled.p`
   margin: 0;
   margin-top: -0.75em;
   text-decoration: underline;
-  text-decoration-color: var(--accent);
+  text-decoration-color: var(--color-primary);
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
 

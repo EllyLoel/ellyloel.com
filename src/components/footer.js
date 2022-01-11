@@ -12,7 +12,7 @@ const underlineHoverTransition = `
     width: 95%;
     height: 2.5px;
     border-radius: 9999px;
-    background: var(--dark);
+    background: var(--color-text);
     top: 105%;
     left: 2.5%;
     pointer-events: none;
@@ -34,23 +34,18 @@ const underlineHoverTransition = `
 
 const FooterStyled = styled.footer`
   ul {
-    position: absolute;
-    bottom: 2.5em;
-    left: 50%;
-    text-align: center;
-    transform: translateX(-50%);
-
     list-style-type: none;
 
     display: grid;
     grid-template-columns: repeat(4, max-content);
     grid-template-rows: auto;
+    justify-content: center;
     justify-items: center;
     align-items: center;
     grid-gap: 5vw;
 
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 1em;
     padding: 0;
 
     li {
@@ -58,23 +53,21 @@ const FooterStyled = styled.footer`
 
       a {
         text-decoration: none;
-        color: var(--dark);
+        color: var(--color-text);
       }
     }
   }
 
   small {
-    width: max-content;
-    position: absolute;
-    bottom: 0.8rem;
-    left: 50%;
-    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
 
-    color: var(--dark);
+    color: var(--color-text);
 
     a {
       text-decoration: none;
-      color: var(--dark);
+      color: var(--color-text);
 
       ${underlineHoverTransition}
     }

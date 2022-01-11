@@ -13,8 +13,8 @@ const CardStyled = styled.article`
     'img'
     'content';
 
-  color: var(--dark);
-  background-color: var(--light);
+  color: var(--color-text);
+  background-color: var(--color-background);
   box-shadow: var(--shadow-elevation-medium);
 
   border-radius: 1rem;
@@ -88,7 +88,7 @@ const Content = styled.div`
   a {
     text-decoration: underline;
     text-underline-offset: 1px;
-    color: var(--dark);
+    color: var(--color-text);
     margin: inherit;
     font-weight: 600;
   }

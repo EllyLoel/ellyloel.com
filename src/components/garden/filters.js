@@ -20,35 +20,26 @@ const FiltersStyled = styled.section`
   }
 `;
 
-const TagFilter = styled.div`
+const TagFilter = styled.ul`
   grid-area: tags;
 
+  list-style-type: none;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.25em;
 `;
 
-const FormatTagStyled = styled.div`
+const FormatTagStyled = styled.li`
   width: fit-content;
   height: fit-content;
-  padding: 0.3em 0.5em;
-
-  border-radius: 4px;
-  color: ${({ active }) => (active ? 'var(--light)' : 'rgb(101, 116, 34)')};
-  background: ${({ active }) =>
-    active ? 'rgb(181, 191, 134)' : 'rgb(221, 231, 174)'};
-  transition: all 0.3s ease-in-out;
-
-  &:hover {
-    transition: all 0.3s ease-in-out;
-    background: rgb(201, 211, 154);
-    cursor: pointer;
-  }
 `;
 
-const StageFilter = styled.div`
+const StageFilter = styled.ul`
   grid-area: stages;
+
+  list-style-type: none;
 
   display: flex;
   flex-wrap: wrap;
@@ -56,7 +47,11 @@ const StageFilter = styled.div`
   gap: 0.25em;
 `;
 
-const FormatStageStyled = styled.div`
+const FormatStageStyled = styled.button`
+  appearance: none;
+  background: none;
+  border: none;
+
   width: fit-content;
   height: fit-content;
   padding: 0.5em 1em 0.5em 0.8em;
@@ -64,11 +59,12 @@ const FormatStageStyled = styled.div`
   border: 2px solid #bcd05f;
   border-radius: 9999px;
   transition: all 0.3s ease-in-out;
-  background: ${({ active }) => (active ? '#bcd05f' : 'var(--light)')};
+  background: ${({ active }) =>
+    active ? '#bcd05f' : 'var(--color-background)'};
 
   p {
     transition: all 0.3s ease-in-out;
-    color: ${({ active }) => (active ? 'var(--light)' : '#99af33')};
+    color: ${({ active }) => (active ? 'var(--color-background)' : '#99af33')};
   }
 
   &:hover,

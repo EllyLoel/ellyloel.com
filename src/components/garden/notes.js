@@ -17,7 +17,7 @@ const NotesStyled = styled.section`
 
     display: block;
 
-    color: var(--dark);
+    color: var(--color-text);
     text-decoration: none;
   }
 
@@ -42,6 +42,7 @@ const Note = styled.article`
   flex-direction: column;
   justify-content: space-between;
 
+  background: var(--color-background);
   border: 1px solid rgba(52, 61, 68, 0.05);
   border-radius: 1rem;
   box-shadow: 0px 1px 2px rgba(52, 61, 68, 0.1);
@@ -50,7 +51,7 @@ const Note = styled.article`
   &:hover,
   &:focus {
     transform: scale(1.015);
-    border: 1px solid var(--accent);
+    border: 1px solid var(--color-primary);
     box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15);
   }
 

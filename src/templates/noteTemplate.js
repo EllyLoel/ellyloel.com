@@ -75,7 +75,7 @@ const Title = styled.h1`
 
   font-size: 2.5rem;
   line-height: 1;
-  color: var(--dark);
+  color: var(--color-text);
 
   span {
     margin-left: 3px;
@@ -95,6 +95,7 @@ const Metadata = styled.div`
   gap: 0.5em;
 
   line-height: 1.5;
+  background: var(--color-background);
   border: 1px solid rgba(52, 61, 68, 0.05);
   border-radius: 1rem;
   box-shadow: 0px 1px 2px rgba(52, 61, 68, 0.1);
@@ -131,7 +132,7 @@ const FormatStageStyled = styled.div`
   border: 2px solid #bcd05f;
   border-radius: 9999px;
   transition: all 0.3s ease-in-out;
-  background: var(--light);
+  background: var(--color-background);
 
   p {
     transition: all 0.3s ease-in-out;
@@ -218,7 +219,7 @@ const Content = styled.div`
 `;
 
 const Tooltip = styled.div`
-  background-color: var(--light);
+  background-color: var(--color-background);
   padding: 1em 1.5em;
   line-height: 1.5;
   border: 1px solid rgba(52, 61, 68, 0.05);
@@ -238,7 +239,7 @@ const Tooltip = styled.div`
   &:hover,
   &:focus {
     transform: scale(1.015);
-    border: 1px solid var(--accent);
+    border: 1px solid var(--color-primary);
     box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15);
   }
 `;
@@ -252,6 +253,7 @@ const References = styled.div`
   padding: 1.5em 2em;
 
   line-height: 1.5;
+  background: var(--color-background);
   border: 1px solid rgba(52, 61, 68, 0.05);
   border-radius: 1rem;
   box-shadow: 0px 1px 2px rgba(52, 61, 68, 0.1);
@@ -260,7 +262,7 @@ const References = styled.div`
   &:hover,
   &:focus {
     transform: scale(1.015);
-    border: 1px solid var(--accent);
+    border: 1px solid var(--color-primary);
     box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15);
   }
 
@@ -325,7 +327,7 @@ const FooterStyled = styled.div`
   footer small,
   footer small a,
   footer ul a {
-    color: var(--dark);
+    color: var(--color-text);
   }
 
   footer small a::before,

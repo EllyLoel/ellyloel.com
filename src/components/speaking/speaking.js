@@ -3,6 +3,18 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from 'styled-components';
 
+import Heading from '../heading';
+
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const Containers = styled.div`
+  width: 50%;
+`;
+
 const Container = styled.div`
   margin-bottom: 5em;
 
@@ -15,7 +27,7 @@ const Container = styled.div`
   & a {
     text-decoration: underline;
     text-underline-offset: 1px;
-    color: var(--dark);
+    color: var(--color-text);
     margin: inherit;
     font-weight: 600;
   }
@@ -35,13 +47,16 @@ const Speaking = () => {
   `);
 
   return (
-    <>
-      {data.allMdx.edges.map((edge, index) => (
-        <Container key={index}>
-          <MDXRenderer>{edge.node.body}</MDXRenderer>
-        </Container>
-      ))}
-    </>
+    <Content>
+      <Heading>Speaking</Heading>
+      <Containers>
+        {data.allMdx.edges.map((edge, index) => (
+          <Container key={index}>
+            <MDXRenderer>{edge.node.body}</MDXRenderer>
+          </Container>
+        ))}
+      </Containers>
+    </Content>
   );
 };
 

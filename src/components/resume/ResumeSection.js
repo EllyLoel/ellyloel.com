@@ -15,7 +15,7 @@ const Section = styled.section`
     & ul {
       margin-top: 1.5rem;
       & li::marker {
-        color: var(--accent);
+        color: var(--color-primary);
       }
     }
     & blockquote {
@@ -23,7 +23,7 @@ const Section = styled.section`
       margin-bottom: 2rem;
       margin-left: 0.5rem;
       padding-left: 0.75rem;
-      border-left: 2px solid var(--accent);
+      border-left: 2px solid var(--color-primary);
     }
     & span {
       font-weight: 600;
@@ -31,7 +31,7 @@ const Section = styled.section`
       text-decoration-thickness: initial;
       text-decoration-style: initial;
       text-underline-offset: 1px;
-      text-decoration-color: var(--accent);
+      text-decoration-color: var(--color-primary);
     }
   }
 
@@ -56,7 +56,8 @@ const Section = styled.section`
       margin-right: 0.5rem;
       margin-top: 0.5rem;
       border-radius: 0.5rem;
-      background: var(--accent);
+      color: var(--color-background);
+      background: var(--color-primary);
 
       &:last-child {
         margin-bottom: 0;

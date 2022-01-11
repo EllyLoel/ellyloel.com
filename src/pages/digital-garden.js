@@ -72,7 +72,7 @@ const FooterStyled = styled.div`
   footer small,
   footer small a,
   footer ul a {
-    color: var(--dark);
+    color: var(--color-text);
   }
 
   footer small a::before,
