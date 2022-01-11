@@ -9,7 +9,7 @@ const HeaderStyled = styled.header`
 
     font-size: 4rem;
     line-height: 1;
-    color: var(--dark);
+    color: var(--color-text);
     font-family: 'Nanum Pen Script', cursive;
 
     span {

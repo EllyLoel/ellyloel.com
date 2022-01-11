@@ -8,8 +8,8 @@
 - [x] Projects page
 - [x] About page
 - [x] Speaking page
-- [ ] Unify website style
-- [ ] Dark mode (other themes?)
+- [x] Unify website style
+- [x] Dark mode (other themes?)
 - [ ] Spotify currently playing component
 - [ ] Giscus comment section component
 - [ ] AMA page

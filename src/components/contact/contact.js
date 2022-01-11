@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { navigate } from 'gatsby';
 import { FaAngleUp } from 'react-icons/fa';
 
+import Heading from '../heading';
 import Footer from '../footer';
 
 const ContactSection = styled.section`
@@ -20,16 +21,8 @@ const Content = styled.div`
   flex-direction: column;
 `;
 
-const Heading = styled.h1`
-  font-size: 4.25rem;
-
-  @media (min-width: 64em) {
-    font-size: 6rem;
-  }
-`;
-
 const FormSection = styled.section`
-  margin-bottom: 10em;
+  margin-bottom: 4em;
 `;
 
 const ContactForm = styled.form`
@@ -50,7 +43,7 @@ const ContactForm = styled.form`
 
     &:focus {
       outline: none;
-      border: 2px var(--accent) solid;
+      border: 2px var(--color-primary) solid;
     }
   }
 
@@ -68,8 +61,8 @@ const ContactForm = styled.form`
     border-radius: 0.5em;
     border: none;
     width: max-content;
-    background-color: var(--accent);
-    color: var(--light);
+    background-color: var(--color-primary);
+    color: var(--color-background);
     font-weight: 600;
     line-height: 1;
     transform: scale(1);
@@ -99,10 +92,10 @@ const BTTButton = styled.button`
   width: 50px;
   padding-top: 0.2rem;
 
-  background-color: var(--accent);
+  background-color: var(--color-primary);
   border-radius: 50%;
   border: none;
-  color: var(--light);
+  color: var(--color-background);
   font-size: 1.25rem;
   cursor: pointer;
 `;
@@ -213,7 +206,7 @@ const Contact = () => {
                 style={
                   response.type === 'error'
                     ? { color: '#ff0033' }
-                    : { color: 'var(--dark)' }
+                    : { color: 'var(--color-text)' }
                 }
               >
                 {response.message}

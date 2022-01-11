@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Layout from '../components/layout';
@@ -8,21 +8,9 @@ import SEO from '../components/seo';
 import Nav from '../components/nav/nav';
 import Header from '../components/resume/header';
 import ResumeSection from '../components/resume/ResumeSection';
+import Footer from '../components/footer';
 
-const bgAnimation = keyframes`
-		0% { background-position:0% 13% }
-		50% { background-position:100% 88% }
-		100% { background-position:0% 13% }
-`;
-
-const ResumeBody = styled.div`
-  width: 100vw;
-  height: 100%;
-
-  background: linear-gradient(316deg, var(--bg-blue), var(--bg-purple));
-  background-size: 400% 400%;
-  animation: ${bgAnimation} 5s ease infinite;
-`;
+const ResumeBody = styled.div``;
 
 const ResumeContainer = styled.div`
   width: min(80%, 70rem);
@@ -45,7 +33,7 @@ const ResumeContainer = styled.div`
     'interests';
 
   & > * {
-    background-color: white;
+    background-color: var(--color-background);
     padding: 1.5em;
     border-radius: 1em;
   }
@@ -107,6 +95,7 @@ const Resume = ({ data }) => {
           })}
         </ResumeContainer>
       </ResumeBody>
+      <Footer />
     </Layout>
   );
 };

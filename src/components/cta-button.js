@@ -20,10 +20,14 @@ const Button = styled.button`
   border: none;
   border-radius: 50%;
 
-  background-color: var(--accent);
-  color: var(--light);
+  background-color: var(--color-primary);
+  color: var(--color-background);
   font-size: 1.25rem;
   cursor: pointer;
+
+  & > svg path {
+    fill: var(--color-background) !important;
+  }
 
   &::before {
     content: 'Explore!';

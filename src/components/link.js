@@ -11,7 +11,7 @@ const underlineHoverTransition = `
     width: 95%;
     height: 2.5px;
     border-radius: 9999px;
-    background: var(--accent);
+    background: var(--color-primary);
     top: 105%;
     left: 2.5%;
     pointer-events: none;
@@ -32,7 +32,7 @@ const underlineHoverTransition = `
 `;
 
 export const Link = styled.a`
-  color: var(--dark);
+  color: var(--color-text);
   text-decoration: none;
   cursor: pointer;
 
@@ -41,7 +41,7 @@ export const Link = styled.a`
   &:hover,
   &:focus {
     svg {
-      color: var(--accent);
+      color: var(--color-primary);
     }
   }
 `;

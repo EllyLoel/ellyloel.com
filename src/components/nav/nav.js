@@ -11,6 +11,7 @@ import { Spin as Hamburger } from 'hamburger-react';
 
 import NavLink from './nav-link';
 import NavIconLink from './nav-icon-link';
+import ThemeToggle from '../theme-toggle';
 
 // STYLES /////////////////////////////////////////////////////////////////////
 
@@ -25,7 +26,7 @@ const underlineHoverTransition = `
     width: 95%;
     height: 2.5px;
     border-radius: 9999px;
-    background: var(--dark);
+    background: var(--color-text);
     top: 105%;
     left: 2.5%;
     pointer-events: none;
@@ -64,11 +65,11 @@ const Nav = styled.nav`
   transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
     visibility 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 
-  background-color: var(--accent);
+  background-color: var(--color-primary);
   font-size: 1.375rem;
 
   a {
-    color: var(--dark);
+    color: var(--color-text);
     text-decoration: none;
     font-weight: 800;
     letter-spacing: 0.5px;
@@ -127,7 +128,7 @@ const Nav = styled.nav`
 
     a {
       font-size: 1rem;
-      color: ${({ navColor }) => (navColor ? navColor : 'var(--dark)')};
+      color: ${({ navColor }) => (navColor ? navColor : 'var(--color-text)')};
     }
 
     .text-links-list {
@@ -150,7 +151,7 @@ const Heading = styled.h1`
   a {
     font-family: 'Nanum Pen Script', cursive;
     font-size: 3rem;
-    color: ${({ navColor }) => (navColor ? navColor : 'var(--dark)')};
+    color: ${({ navColor }) => (navColor ? navColor : 'var(--color-text)')};
 
     @media (min-width: 64em) {
       font-size: 1.6rem;
@@ -180,7 +181,7 @@ const NavSection = ({ siteTitle, color, navColor }) => {
     <>
       <Nav id="nav" navOpen={navOpen} navColor={navColor}>
         <Heading navColor={navColor} onClick={() => setNavOpen(!navOpen)}>
-          <Link to="/#landing">{siteTitle}</Link>
+          <Link to="/">{siteTitle}</Link>
         </Heading>
 
         <ul className="text-links-list">
@@ -245,6 +246,7 @@ const NavSection = ({ siteTitle, color, navColor }) => {
           >
             <BsMailbox2 />
           </NavIconLink>
+          <ThemeToggle />
         </ul>
       </Nav>
       <StyledHamburger>
@@ -253,7 +255,7 @@ const NavSection = ({ siteTitle, color, navColor }) => {
           toggle={setNavOpen}
           rounded
           label="Show menu"
-          color={navOpen ? 'var(--dark)' : color}
+          color={navOpen ? 'var(--color-text)' : color}
         />
       </StyledHamburger>
     </>

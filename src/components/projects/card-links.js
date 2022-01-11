@@ -18,9 +18,9 @@ const Link = styled.a`
 
   text-align: center;
   text-decoration: none;
-  color: var(--light);
+  color: var(--color-background);
   font-weight: bold;
-  background-color: var(--dark);
+  background-color: var(--color-text);
   border-radius: 9999px;
 
   opacity: 1;
