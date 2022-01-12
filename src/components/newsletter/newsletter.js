@@ -1,8 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { window } from 'browser-monads';
 
+import { ThemeContext } from '../theme-context';
 import Footer from '../footer';
 import CTAButton from '../cta-button';
 
@@ -58,7 +59,8 @@ const NewsletterForm = styled.form`
     margin-right: 0.5em;
     border-radius: 0.5em;
     border: 2px solid var(--color-gray500);
-    color: var(--color-background);
+    color: ${({ colorMode }) =>
+      colorMode === 'light' ? 'var(--color-text)' : 'var(--color-background)'};
 
     transition: border 200ms ease-out;
 
@@ -98,6 +100,8 @@ const NewsletterForm = styled.form`
 `;
 
 const Newsletter = () => {
+  const { colorMode } = useContext(ThemeContext);
+
   const handleSubmit = () =>
     window.open('https://buttondown.email/ellyloel', 'popupwindow');
 
@@ -122,6 +126,7 @@ const Newsletter = () => {
             method="post"
             target="popupwindow"
             onSubmit={handleSubmit}
+            colorMode={colorMode}
           >
             <label htmlFor="bd-email">Email</label>
             <input
