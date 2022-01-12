@@ -7,7 +7,7 @@ import Landing from '../components/index/landing';
 import About from '../components/about/about';
 import Projects from '../components/projects/projects';
 import Speaking from '../components/speaking/speaking';
-import Contact from '../components/contact/contact';
+import Newsletter from '../components/newsletter/newsletter';
 
 const IndexPage = ({ data }) => {
   return (
@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => {
       <About />
       <Projects data={data} />
       <Speaking />
-      <Contact />
+      <Newsletter />
     </Layout>
   );
 };
