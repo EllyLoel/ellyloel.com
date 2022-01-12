@@ -83,7 +83,7 @@ const Resume = ({ data }) => {
     <Layout>
       <SEO title="Resume" />
       <ResumeBody>
-        <Nav siteTitle="<e//y>" color="#FFDC84" />
+        <Nav siteTitle="<e//y>" />
         <ResumeContainer>
           <Header />
           {data.allMdx.nodes.map((node, index) => {

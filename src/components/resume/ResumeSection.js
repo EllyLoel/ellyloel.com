@@ -3,7 +3,17 @@ import styled from 'styled-components';
 
 const Section = styled.section`
   line-height: 1.7;
-  grid-area: ${(props) => props.slug};
+  grid-area: ${({ slug }) => slug};
+
+  box-shadow: var(--shadow-elevation-low);
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:hover,
+  &:focus {
+    transform: scale(1.015);
+    outline: 1px solid var(--color-primary);
+    box-shadow: var(--shadow-elevation-medium);
+  }
 
   &.contact-details {
     display: flex;

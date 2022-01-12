@@ -13,15 +13,15 @@ const GraphStyled = styled.div`
   grid-area: graph;
 
   canvas {
-    border: 2px solid rgba(52, 61, 68, 0.05);
+    border: 2px solid var(--color-gray300);
     border-radius: 1rem;
-    box-shadow: 0px 1px 2px rgba(52, 61, 68, 0.1);
+    box-shadow: var(--shadow-elevation-low);
     transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 
     &:hover,
     &:focus {
       border: 2px solid var(--color-primary);
-      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15);
+      box-shadow: var(--shadow-elevation-medium);
     }
   }
 `;

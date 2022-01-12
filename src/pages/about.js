@@ -4,15 +4,15 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Nav from '../components/nav/nav';
 import About from '../components/about/about';
-import Contact from '../components/contact/contact';
+import Newsletter from '../components/newsletter/newsletter';
 
 const AboutPage = () => {
   return (
     <Layout>
       <SEO title="About" />
-      <Nav siteTitle="<e//y>" color="#393939" />
+      <Nav siteTitle="<e//y>" />
       <About />
-      <Contact />
+      <Newsletter />
     </Layout>
   );
 };

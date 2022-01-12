@@ -5,15 +5,15 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Nav from '../components/nav/nav';
 import Projects from '../components/projects/projects';
-import Contact from '../components/contact/contact';
+import Newsletter from '../components/newsletter/newsletter';
 
 const ProjectsPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Projects" />
-      <Nav siteTitle="<e//y>" color="#393939" />
+      <Nav siteTitle="<e//y>" />
       <Projects data={data} />
-      <Contact />
+      <Newsletter />
     </Layout>
   );
 };
