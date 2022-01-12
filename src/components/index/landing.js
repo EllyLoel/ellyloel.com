@@ -109,11 +109,11 @@ const SubHeading = styled.p`
 const Landing = () => {
   return (
     <LandingSection id="landing">
-      <Nav siteTitle="<e//y>" color="#393939" />
+      <Nav siteTitle="<e//y>" />
       <Content>
         <HeroText />
         <SVGGraphic />
-        <CTAButton />
+        <CTAButton link="/#projects" />
       </Content>
     </LandingSection>
   );

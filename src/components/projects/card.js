@@ -15,7 +15,7 @@ const CardStyled = styled.article`
 
   color: var(--color-text);
   background-color: var(--color-background);
-  box-shadow: var(--shadow-elevation-medium);
+  box-shadow: var(--shadow-elevation-low);
 
   border-radius: 1rem;
 
@@ -23,7 +23,7 @@ const CardStyled = styled.article`
   transition: all 500ms cubic-bezier(0.57, 2.2, 0.26, 0.99);
 
   &:hover {
-    box-shadow: var(--shadow-elevation-high);
+    box-shadow: var(--shadow-elevation-medium);
     transform: scale(1.0125);
   }
 

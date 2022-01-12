@@ -43,16 +43,17 @@ const Note = styled.article`
   justify-content: space-between;
 
   background: var(--color-background);
-  border: 1px solid rgba(52, 61, 68, 0.05);
   border-radius: 1rem;
-  box-shadow: 0px 1px 2px rgba(52, 61, 68, 0.1);
+
+  border: 1px solid var(--color-gray300);
+  box-shadow: var(--shadow-elevation-low);
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 
   &:hover,
   &:focus {
     transform: scale(1.015);
     border: 1px solid var(--color-primary);
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-elevation-medium);
   }
 
   @media (min-width: 34em) {

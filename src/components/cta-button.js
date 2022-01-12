@@ -12,7 +12,8 @@ const bgAnimation = keyframes`
 const Button = styled.button`
   position: absolute;
   z-index: 0;
-  bottom: 2.5%;
+  bottom: ${({ right }) => (right ? '1.5em' : '2.5%')};
+  right: ${({ right }) => (right ? '1.5em' : 'unset')};
   height: 50px;
   width: 50px;
   padding-top: 0.5rem;
@@ -25,13 +26,15 @@ const Button = styled.button`
   font-size: 1.25rem;
   cursor: pointer;
 
+  transform: ${({ flip }) => (flip ? 'rotate(180deg)' : 'unset')};
+
   & > svg path {
     fill: var(--color-background) !important;
   }
 
   &::before {
     content: 'Explore!';
-    display: inline-block;
+    display: ${({ nobefore }) => (nobefore ? 'none' : 'inline-block')};
     width: max-content;
     position: absolute;
     bottom: 125%;
@@ -56,12 +59,15 @@ const Button = styled.button`
   }
 `;
 
-const CTAButton = () => (
+const CTAButton = ({ link, nobefore, flip, right }) => (
   <Button
     className="cta-btn"
     onClick={() => {
-      navigate('#projects');
+      navigate(link);
     }}
+    nobefore={nobefore ? true : false}
+    flip={flip ? true : false}
+    right={right ? true : false}
   >
     <FaAngleDown />
   </Button>

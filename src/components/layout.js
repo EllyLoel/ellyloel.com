@@ -83,7 +83,7 @@ const BackgroundDots = styled.div`
         transparent 1%
       )
       center,
-    var(--color-text);
+    var(--color-gray500);
   background-size: var(--dot-space) var(--dot-space);
 `;
 

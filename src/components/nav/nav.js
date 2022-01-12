@@ -137,6 +137,7 @@ const Nav = styled.nav`
 
     .icon-links-list {
       svg {
+        fill: ${({ navColor }) => (navColor ? navColor : 'var(--color-text)')};
         font-size: 1.35rem;
       }
     }
@@ -255,7 +256,9 @@ const NavSection = ({ siteTitle, color, navColor }) => {
           toggle={setNavOpen}
           rounded
           label="Show menu"
-          color={navOpen ? 'var(--color-text)' : color}
+          color={
+            navOpen ? 'var(--color-text)' : color ? color : 'var(--color-text)'
+          }
         />
       </StyledHamburger>
     </>

@@ -12,7 +12,7 @@ const MetadataStyled = styled.div`
 
   font-size: 0.85em;
   color: #686f94;
-  border-top: 1px solid #ebecf2;
+  border: 1px solid var(--color-gray300);
   opacity: 0.8;
 `;
 

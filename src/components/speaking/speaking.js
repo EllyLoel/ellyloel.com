@@ -12,7 +12,7 @@ const Content = styled.div`
 `;
 
 const Containers = styled.div`
-  width: 50%;
+  width: min(80%, 70ch);
 `;
 
 const Container = styled.div`
