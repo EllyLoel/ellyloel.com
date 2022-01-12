@@ -10,13 +10,15 @@
 - [x] Speaking page
 - [x] Unify website style
 - [x] Dark mode (other themes?)
+- [x] Add Google Analytics
+- [x] Turn contact component into newsletter component
 - [ ] Spotify currently playing component
-- [ ] Giscus comment section component
+- [ ] [Giscus](https://giscus.app/) comment section component
 - [ ] AMA page
 - [ ] Tools page
 - [ ] Bookmarks page
-- [ ] Turn contact component into newsletter component
 - [ ] Create sitemap
 - [ ] Redo footer
 - [ ] Redo nav/header
-- [ ] Add Google Analytics
+- [ ] [Custom OG images](https://www.gatsbyjs.com/plugins/gatsby-plugin-open-graph-images/)
+- [ ] RSS Feed
