@@ -1,20 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StageStyled = styled.button`
-  appearance: none;
-  background: none;
-  border: none;
-
+const StageStyled = styled.span`
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 1ch;
 
   span {
-    margin: 0;
+    color: ${({ active }) =>
+      active ? 'var(--color-text)' : 'var(--color-green700)'};
 
-    color: #99af33;
+    margin: 0;
 
     &:first-letter {
       text-transform: capitalize;
@@ -22,20 +19,20 @@ const StageStyled = styled.button`
   }
 `;
 
-const FormatStage = ({ stage }) => {
+const FormatStage = ({ stage, active }) => {
   let emoji = '';
 
   if (stage === 'seedling') {
-    emoji = <i className="twa twa-seedling"></i>;
+    emoji = 'twa twa-seedling';
   } else if (stage === 'budding') {
-    emoji = <i className="twa twa-herb"></i>;
+    emoji = 'twa twa-herb';
   } else if (stage === 'evergreen') {
-    emoji = <i className="twa twa-evergreen-tree"></i>;
+    emoji = 'twa twa-evergreen-tree';
   }
 
   return (
-    <StageStyled>
-      {emoji}
+    <StageStyled active={active}>
+      <i className={emoji}></i>
       <span>{stage}</span>
     </StageStyled>
   );

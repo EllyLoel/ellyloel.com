@@ -11,8 +11,8 @@ const MetadataStyled = styled.div`
   justify-content: space-between;
 
   font-size: 0.85em;
-  color: #686f94;
-  border: 1px solid var(--color-gray300);
+  color: var(--color-text);
+  border-top: 1px solid var(--color-gray300);
   opacity: 0.8;
 `;
 
