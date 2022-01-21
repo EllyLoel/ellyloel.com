@@ -28,12 +28,36 @@ const TagFilter = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.25em;
+  gap: 0.75em;
 `;
 
-const FormatTagStyled = styled.li`
+const FormatTagStyled = styled.button`
+  appearance: none;
+  background: none;
+  border: none;
+  margin: 0;
+
   width: fit-content;
   height: fit-content;
+
+  padding: 0.3em 0.5em;
+
+  border-radius: 4px;
+  outline: ${({ active }) =>
+    active ? '2px solid var(--color-green500)' : '2px solid transparent'};
+  outline-offset: 2px;
+  background: ${({ active }) =>
+    active ? 'var(--color-green300)' : 'var(--color-green500)'};
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    outline: ${({ active }) =>
+      active
+        ? '2px solid var(--color-green500)'
+        : '2px solid var(--color-green300)'};
+    cursor: pointer;
+  }
 `;
 
 const StageFilter = styled.ul`
@@ -44,7 +68,7 @@ const StageFilter = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.25em;
+  gap: 0.75em;
 `;
 
 const FormatStageStyled = styled.button`
@@ -56,21 +80,16 @@ const FormatStageStyled = styled.button`
   height: fit-content;
   padding: 0.5em 1em 0.5em 0.8em;
 
-  border: 2px solid #bcd05f;
+  border: 2px solid var(--color-green500);
   border-radius: 9999px;
   transition: all 0.3s ease-in-out;
   background: ${({ active }) =>
-    active ? '#bcd05f' : 'var(--color-background)'};
-
-  p {
-    transition: all 0.3s ease-in-out;
-    color: ${({ active }) => (active ? 'var(--color-background)' : '#99af33')};
-  }
+    active ? 'var(--color-green300)' : 'var(--color-background)'};
 
   &:hover,
   &:focus {
     transition: all 0.3s ease-in-out;
-    border: 2px solid #e0eab6;
+    border: 2px solid var(--color-green300);
     cursor: pointer;
   }
 `;
@@ -115,25 +134,33 @@ const Filters = ({
       <TagFilter>
         {tags.map((tag, index) => {
           return !tag ? null : (
-            <FormatTagStyled
-              key={index}
-              onClick={() => handleTagFilterClick(tag)}
-              active={activeTagFilter.includes(tag) ? true : false}
-            >
-              <FormatTag tag={tag} />
-            </FormatTagStyled>
+            <li key={index}>
+              <FormatTagStyled
+                onClick={() => handleTagFilterClick(tag)}
+                active={activeTagFilter.includes(tag) ? true : false}
+              >
+                <FormatTag
+                  tag={tag}
+                  active={activeTagFilter.includes(tag) ? true : false}
+                />
+              </FormatTagStyled>
+            </li>
           );
         })}
       </TagFilter>
       <StageFilter>
         {stages.map((stage, index) => (
-          <FormatStageStyled
-            key={index}
-            onClick={() => handleStageFilterClick(stage)}
-            active={activeStageFilter.includes(stage) ? true : false}
-          >
-            <FormatStage stage={stage} />
-          </FormatStageStyled>
+          <li key={index}>
+            <FormatStageStyled
+              onClick={() => handleStageFilterClick(stage)}
+              active={activeStageFilter.includes(stage) ? true : false}
+            >
+              <FormatStage
+                stage={stage}
+                active={activeStageFilter.includes(stage) ? true : false}
+              />
+            </FormatStageStyled>
+          </li>
         ))}
       </StageFilter>
     </FiltersStyled>

@@ -21,7 +21,7 @@ const NavStyled = styled.div`
     nav ul li::after,
     nav h1::before,
     nav h1::after {
-      background: rgb(221, 231, 174);
+      background: var(--color-green300);
     }
   }
 `;
@@ -41,7 +41,7 @@ const Container = styled.article`
   a {
     text-decoration: underline;
     text-underline-offset: 1px;
-    color: #bcd05f;
+    color: var(--color-green500);
     font-weight: 600;
   }
 
@@ -96,7 +96,7 @@ const Metadata = styled.div`
 
   line-height: 1.5;
   background: var(--color-background);
-  border: 1px solid rgba(52, 61, 68, 0.05);
+  border: 1px solid var(--color-gray300);
   border-radius: 1rem;
   box-shadow: var(--shadow-elevation-low);
 
@@ -129,14 +129,14 @@ const FormatStageStyled = styled.div`
   height: fit-content;
   padding: 0.25em 0.7em 0.25em 0.65em;
 
-  border: 2px solid #bcd05f;
+  border: 2px solid var(--color-green500);
   border-radius: 9999px;
   transition: all 0.3s ease-in-out;
   background: var(--color-background);
 
   p {
     transition: all 0.3s ease-in-out;
-    color: #99af33;
+    color: var(--color-green300);
   }
 `;
 
@@ -152,8 +152,8 @@ const FormatTagStyled = styled.div`
   padding: 0.2em 0.4em;
 
   border-radius: 4px;
-  color: rgb(101, 116, 34);
-  background: rgb(221, 231, 174);
+  color: var(--color-background);
+  background: var(--color-green500);
 `;
 
 const TimeContainer = styled.div`
@@ -196,7 +196,6 @@ const Content = styled.div`
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 0;
-    color: #707070;
     font-style: italic;
     letter-spacing: 0.5px;
 
@@ -212,7 +211,7 @@ const Content = styled.div`
       display: block;
       width: 4px;
       height: 100%;
-      background-color: #bcd05f;
+      background-color: var(--color-green500);
       border-radius: 2px;
     }
   }
@@ -222,7 +221,7 @@ const Tooltip = styled.div`
   background-color: var(--color-background);
   padding: 1em 1.5em;
   line-height: 1.5;
-  border: 1px solid rgba(52, 61, 68, 0.05);
+  border: 1px solid var(--color-gray300);
   border-radius: 1rem;
   box-shadow: var(--shadow-elevation-medium);
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -254,7 +253,7 @@ const References = styled.div`
 
   line-height: 1.5;
   background: var(--color-background);
-  border: 1px solid rgba(52, 61, 68, 0.05);
+  border: 1px solid var(--color-gray300);
   border-radius: 1rem;
   box-shadow: var(--shadow-elevation-low);
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -334,7 +333,7 @@ const FooterStyled = styled.div`
   footer small a::after,
   footer ul li::before,
   footer ul li::after {
-    background: rgb(221, 231, 174);
+    background: var(--color-green300);
   }
 `;
 
@@ -361,7 +360,11 @@ const NoteTemplate = ({
     <Layout>
       <SEO title={mdx.frontmatter.title} />
       <NavStyled>
-        <Nav siteTitle="<e//y>" color="#99af33" navColor="#99af33" />
+        <Nav
+          siteTitle="<e//y>"
+          color="var(--color-green500)"
+          navColor="var(--color-green500)"
+        />
       </NavStyled>
       <Container>
         <Header>

@@ -2,12 +2,17 @@ import React, { useRef } from 'react';
 import { navigate } from 'gatsby';
 import loadable from '@loadable/component';
 import styled from 'styled-components';
+import { document } from 'browser-monads';
 
 const ForceGraph = loadable(() => import('./forceGraph'));
 
-const primaryNodeColor = '#bcd05f';
-const secondaryNodeColor = '#8da130';
-const backgroundColor = 'var(--color-background)';
+const primaryNodeColor = getComputedStyle(
+  document.documentElement
+).getPropertyValue('--color-green500');
+const secondaryNodeColor = getComputedStyle(
+  document.documentElement
+).getPropertyValue('--color-green300');
+const backgroundColor = 'hsla(0, 0%, 100%, 0.25)';
 
 const GraphStyled = styled.div`
   grid-area: graph;
