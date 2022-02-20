@@ -1,4 +1,5 @@
 import React from 'react';
+import { getCssText } from './stitches.config';
 
 import {
   COLOR_MODE_KEY,
@@ -78,8 +79,17 @@ const FallbackStyles = () => {
 };
 
 export const onRenderBody = ({ setPreBodyComponents, setHeadComponents }) => {
-  setHeadComponents(<FallbackStyles />);
-  setPreBodyComponents(<MagicScriptTag />);
+  setHeadComponents([
+    <FallbackStyles key={1} />,
+    <style
+      key={2}
+      id="stitches"
+      dangerouslySetInnerHTML={{
+        __html: getCssText(),
+      }}
+    />,
+  ]);
+  setPreBodyComponents([<MagicScriptTag key={1} />]);
 };
 
 export const wrapPageElement = ({ element }) => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import styled from 'styled-components';
+import { styled } from '../../stitches.config';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Layout from '../components/layout';
@@ -10,18 +10,18 @@ import Header from '../components/resume/header';
 import ResumeSection from '../components/resume/ResumeSection';
 import Footer from '../components/footer';
 
-const ResumeBody = styled.div``;
+const ResumeBody = styled('div', {});
 
-const ResumeContainer = styled.div`
-  width: min(80%, 70rem);
-  margin: 5em auto 2em auto;
+const ResumeContainer = styled('div', {
+  width: '90%',
+  margin: '5em auto 2em auto',
 
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(9, max-content);
-  gap: 2em;
-  grid-auto-flow: row;
-  grid-template-areas:
+  display: 'grid',
+  gridTemplateColumns: '1fr',
+  gridTemplateRows: 'repeat(9, max-content)',
+  gap: '2em',
+  gridAutoFlow: 'row',
+  gridTemplateAreas: `
     'header'
     'contact-details'
     'summary'
@@ -30,53 +30,53 @@ const ResumeContainer = styled.div`
     'work-history'
     'education'
     'certifications'
-    'interests';
+    'interests'`,
 
-  & > * {
-    background-color: var(--color-background);
-    padding: 1.5em;
-    border-radius: 1em;
-  }
+  '& > *': {
+    backgroundColor: 'var(--color-background)',
+    padding: '1.5em',
+    borderRadius: '1em',
+  },
 
-  h2 {
-    margin: 0;
-  }
+  h2: {
+    margin: '0',
+  },
 
-  ul {
-    padding-left: 1.5rem;
-  }
+  ul: {
+    paddingLeft: '1.5rem',
+  },
 
-  li {
-    line-height: 1.7;
-  }
+  li: {
+    lineHeight: 1.7,
+  },
 
-  @media (max-width: 20em) {
-    width: 95%;
-  }
+  '@laptopSmall': {
+    width: 'min(80%, 70rem)',
+  },
 
-  @media (min-width: 48em) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, max-content);
-    grid-template-areas:
+  '@tabletLarge': {
+    gridTemplateColumns: 'repeat(2, 1fr)',
+    gridTemplateRows: 'repeat(6, max-content)',
+    gridTemplateAreas: `
       'header contact-details'
       'summary key-skills'
       'interests software'
       'work-history work-history'
       'education education'
-      'certifications certifications';
-  }
+      'certifications certifications'`,
+  },
 
-  @media (min-width: 90em) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, max-content);
-    grid-template-areas:
+  '@desktopSmall': {
+    gridTemplateColumns: 'repeat(2, 1fr)',
+    gridTemplateRows: 'repeat(6, max-content)',
+    gridTemplateAreas: `
       'header contact-details'
       'summary key-skills'
       'interests software'
       'work-history work-history'
-      'education certifications';
-  }
-`;
+      'education certifications'`,
+  },
+});
 
 const Resume = ({ data }) => {
   return (

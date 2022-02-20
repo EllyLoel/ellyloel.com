@@ -1,70 +1,66 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import styled from 'styled-components';
+import { styled } from '../../../stitches.config';
 
 import Metadata from './metadata';
 
-const NotesStyled = styled.section`
-  grid-area: notes;
+const NotesStyled = styled('section', {
+  gridArea: 'notes',
+  display: 'grid',
+  gridTemplateColumns: '1fr',
+  gap: '1em',
 
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1em;
+  '& a': {
+    maxWidth: '100%',
+    maxHeight: '100%',
+    display: 'block',
+    color: 'var(--color-text)',
+    textDecoration: 'none',
+  },
 
-  a {
-    max-width: 100%;
-    max-height: 100%;
+  '@tabletSmall': {
+    gridTemplateColumns: 'repeat(2, 1fr)',
+  },
 
-    display: block;
+  '@tabletLarge': {
+    gridTemplateColumns: 'repeat(3, 1fr)',
+  },
 
-    color: var(--color-text);
-    text-decoration: none;
-  }
+  '@desktopSmall': {
+    gridTemplateColumns: 'repeat(2, 1fr)',
+  },
+});
 
-  @media (min-width: 34em) {
-    grid-template-columns: repeat(2, 1fr);
-  }
+const Note = styled('article', {
+  width: '100%',
+  padding: '0.5em 1em',
 
-  @media (min-width: 48em) {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
 
-  @media (min-width: 90em) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-`;
+  background: 'var(--color-background)',
+  borderRadius: '1rem',
 
-const Note = styled.article`
-  width: 100%;
-  padding: 0.5em 1em;
+  border: '1px solid var(--color-gray300)',
+  boxShadow: 'var(--shadow-elevation-low)',
+  transition: 'all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1)',
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  '&:hover, &:focus': {
+    transform: 'scale(1.015)',
+    border: '1px solid var(--color-primary)',
+    boxShadow: 'var(--shadow-elevation-medium)',
+  },
 
-  background: var(--color-background);
-  border-radius: 1rem;
+  '@tabletSmall': {
+    height: '100%',
+  },
+});
 
-  border: 1px solid var(--color-gray300);
-  box-shadow: var(--shadow-elevation-low);
-  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-
-  &:hover,
-  &:focus {
-    transform: scale(1.015);
-    border: 1px solid var(--color-primary);
-    box-shadow: var(--shadow-elevation-medium);
-  }
-
-  @media (min-width: 34em) {
-    height: 100%;
-  }
-`;
-
-const Title = styled.h2`
-  margin-top: 0.6em;
-  font-weight: 600;
-`;
+const Title = styled('h2', {
+  marginTop: '0.6em',
+  fontWeight: 600,
+});
 
 const Notes = ({ edges, activeTagFilter, activeStageFilter }) => {
   const notes = edges

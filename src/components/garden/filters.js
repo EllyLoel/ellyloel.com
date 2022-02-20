@@ -1,98 +1,110 @@
 import React from 'react';
-import styled from 'styled-components';
+import { styled } from '../../../stitches.config';
 
 import FormatTag from './format-tag';
 import FormatStage from './format-stage';
 
-const FiltersStyled = styled.section`
-  grid-area: filters;
+const FiltersStyled = styled('section', {
+  gridArea: 'filters',
 
-  display: grid;
-  grid-template-areas:
+  display: 'grid',
+  gridTemplateAreas: `
     'tags'
-    'stages';
-  gap: 1em;
-  align-items: center;
-  justify-content: center;
+    'stages'`,
+  gap: '1rem',
+  alignItems: 'center',
+  justifyContent: 'center',
 
-  @media (min-width: 48em) {
-    grid-template-areas: 'tags stages';
-  }
-`;
+  '@tabletLarge': {
+    gridTemplateAreas: "'tags stages'",
+  },
+});
 
-const TagFilter = styled.ul`
-  grid-area: tags;
+const TagFilter = styled('ul', {
+  gridArea: 'tags',
 
-  list-style-type: none;
+  padding: 0,
+  listStyleType: 'none',
 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.75em;
-`;
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'center',
+  gap: '0.75rem',
+});
 
-const FormatTagStyled = styled.button`
-  appearance: none;
-  background: none;
-  border: none;
-  margin: 0;
+const FormatTagStyled = styled('button', {
+  appearance: 'none',
+  border: 'none',
+  margin: '0',
 
-  width: fit-content;
-  height: fit-content;
+  width: 'fit-content',
+  height: 'fit-content',
 
-  padding: 0.3em 0.5em;
+  padding: '0.3em 0.5em',
 
-  border-radius: 4px;
-  outline: ${({ active }) =>
-    active ? '2px solid var(--color-green500)' : '2px solid transparent'};
-  outline-offset: 2px;
-  background: ${({ active }) =>
-    active ? 'var(--color-green300)' : 'var(--color-green500)'};
-  transition: all 0.3s ease-in-out;
+  borderRadius: '4px',
+  outline: '2px solid transparent',
+  outlineOffset: '2px',
+  background: 'var(--color-green500)',
+  transition: 'all 0.3s ease-in-out',
 
-  &:hover {
-    transition: all 0.3s ease-in-out;
-    outline: ${({ active }) =>
-      active
-        ? '2px solid var(--color-green500)'
-        : '2px solid var(--color-green300)'};
-    cursor: pointer;
-  }
-`;
+  '&:hover': {
+    transition: 'all 0.3s ease-in-out',
+    outline: '2px solid var(--color-green300)',
+    cursor: 'pointer',
+  },
 
-const StageFilter = styled.ul`
-  grid-area: stages;
+  variants: {
+    active: {
+      true: {
+        outline: '2px solid var(--color-green500)',
+        background: 'var(--color-green300)',
+        '&:hover': {
+          outline: '2px solid var(--color-green500)',
+        },
+      },
+    },
+  },
+});
 
-  list-style-type: none;
+const StageFilter = styled('ul', {
+  gridArea: 'stages',
 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.75em;
-`;
+  padding: 0,
+  listStyleType: 'none',
 
-const FormatStageStyled = styled.button`
-  appearance: none;
-  background: none;
-  border: none;
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'center',
+  gap: '0.75rem',
+});
 
-  width: fit-content;
-  height: fit-content;
-  padding: 0.5em 1em 0.5em 0.8em;
+const FormatStageStyled = styled('button', {
+  appearance: 'none',
+  border: '2px solid var(--color-green500)',
 
-  border: 2px solid var(--color-green500);
-  border-radius: 9999px;
-  transition: all 0.3s ease-in-out;
-  background: ${({ active }) =>
-    active ? 'var(--color-green300)' : 'var(--color-background)'};
+  width: 'fit-content',
+  height: 'fit-content',
+  padding: '0.5em 1em 0.5em 0.8em',
 
-  &:hover,
-  &:focus {
-    transition: all 0.3s ease-in-out;
-    border: 2px solid var(--color-green300);
-    cursor: pointer;
-  }
-`;
+  borderRadius: '9999px',
+  transition: 'all 0.3s ease-in-out',
+  background: 'var(--color-background)',
+
+  '&:hover, &:focus': {
+    transition: 'all 0.3s ease-in-out',
+    border: '2px solid var(--color-green300)',
+    cursor: 'pointer',
+  },
+
+  variants: {
+    active: {
+      true: {
+        background: 'var(--color-green300)',
+      },
+    },
+  },
+});
 
 const Filters = ({
   tags,

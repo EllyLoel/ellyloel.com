@@ -1,9 +1,12 @@
 // IMPORTS ////////////////////////////////////////////////////////////////////
 
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link as GatsbyLink } from 'gatsby';
+import { styled } from '../../../stitches.config';
 
 // COMPONENTS /////////////////////////////////////////////////////////////////
+
+const Link = styled(GatsbyLink, {});
 
 const NavLink = ({ link, navOpen, setNavOpen, children }) => {
   return (

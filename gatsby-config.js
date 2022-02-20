@@ -94,7 +94,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-catch-links`,
-    `gatsby-plugin-styled-components`,
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {

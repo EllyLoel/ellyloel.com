@@ -1,41 +1,40 @@
 import React from 'react';
-import styled from 'styled-components';
+import { styled } from '../../../stitches.config';
 import { FaAngleRight } from 'react-icons/fa';
 
-const Links = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 0.5em;
+const Links = styled('div', {
+  display: 'flex',
+  flexDirection: 'column-reverse',
+  alignItems: 'stretch',
+  gap: '0.5em',
 
-  @media (max-width: 23.4375em) {
-    flex-direction: column-reverse;
-    align-items: stretch;
-  }
-`;
+  '@mobileSmall': {
+    flexDirection: 'row',
+    alignItems: 'initial',
+  },
+});
 
-const Link = styled.a`
-  padding: 0.5rem 0.75rem 0.5rem 1rem;
+const Link = styled('a', {
+  padding: '0.5rem 0.75rem 0.5rem 1rem',
+  textAlign: 'center',
+  textDecoration: 'none',
+  color: 'var(--color-background)',
+  fontWeight: 'bold',
+  backgroundColor: 'var(--color-text)',
+  borderRadius: '9999px',
+  opacity: 1,
+  transition: 'opacity 0.3s cubic-bezier(0.075, 0.82, 0.165, 1)',
 
-  text-align: center;
-  text-decoration: none;
-  color: var(--color-background);
-  font-weight: bold;
-  background-color: var(--color-text);
-  border-radius: 9999px;
+  '& svg': {
+    display: 'inline',
+    verticalAlign: 'top',
+  },
 
-  opacity: 1;
-  transition: opacity 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-
-  svg {
-    display: inline;
-    vertical-align: top;
-  }
-
-  &:hover {
-    transition: opacity 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-    opacity: 0.85;
-  }
-`;
+  '&:hover': {
+    transition: 'opacity 0.3s cubic-bezier(0.075, 0.82, 0.165, 1)',
+    opacity: 0.85,
+  },
+});
 
 const CardLinks = ({ demo, github, comingSoon }) => {
   return (

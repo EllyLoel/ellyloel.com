@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { navigate } from 'gatsby';
 import loadable from '@loadable/component';
-import styled from 'styled-components';
+import { styled } from '../../../stitches.config';
 import { window, document } from 'browser-monads';
 
 const ForceGraph = loadable(() => import('./forceGraph'));
@@ -14,22 +14,21 @@ const secondaryNodeColor = window
   .getPropertyValue('--color-green300');
 const backgroundColor = 'hsla(0, 0%, 100%, 0.25)';
 
-const GraphStyled = styled.div`
-  grid-area: graph;
+const GraphStyled = styled('div', {
+  gridArea: 'graph',
 
-  canvas {
-    border: 2px solid var(--color-gray300);
-    border-radius: 1rem;
-    box-shadow: var(--shadow-elevation-low);
-    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  '& canvas': {
+    border: '2px solid var(--color-gray300)',
+    borderRadius: '1rem',
+    boxShadow: 'var(--shadow-elevation-low)',
+    transition: 'all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1)',
 
-    &:hover,
-    &:focus {
-      border: 2px solid var(--color-primary);
-      box-shadow: var(--shadow-elevation-medium);
-    }
-  }
-`;
+    '&:hover, &:focus': {
+      border: '2px solid var(--color-primary)',
+      boxShadow: 'var(--shadow-elevation-medium)',
+    },
+  },
+});
 
 const Graph = ({ location, data, width }) => {
   const fgRef = useRef();

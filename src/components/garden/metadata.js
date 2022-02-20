@@ -1,24 +1,24 @@
 import React from 'react';
-import styled from 'styled-components';
+import { styled } from '../../../stitches.config';
 
 import FormatStage from './format-stage';
 
-const MetadataStyled = styled.div`
-  padding: 0.75em 0 0.25em 0;
+const MetadataStyled = styled('div', {
+  padding: '0.75em 0 0.25em 0',
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'space-between',
 
-  font-size: 0.85em;
-  color: var(--color-text);
-  border-top: 1px solid var(--color-gray300);
-  opacity: 0.8;
-`;
+  fontSize: '0.85em',
+  color: 'var(--color-text)',
+  borderTop: '1px solid var(--color-gray300)',
+  opacity: 0.8,
+});
 
-const DateStyled = styled.p`
-  margin: 0;
-`;
+const DateStyled = styled('p', {
+  margin: 0,
+});
 
 const Metadata = ({ date, stage }) => {
   const formattedDate = new Date(date).toLocaleDateString('en-US', {

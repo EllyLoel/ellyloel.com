@@ -1,37 +1,34 @@
 import React from 'react';
-import styled from 'styled-components';
+import { styled } from '../../../stitches.config';
 
-const HeaderStyled = styled.header`
-  grid-area: header;
+const HeaderStyled = styled('header', {
+  gridArea: 'header',
 
-  h1 {
-    margin: 0;
+  '& h1': {
+    margin: '0',
+    fontSize: '4rem',
+    lineHeight: 1,
+    color: 'var(--color-text)',
+    fontFamily: "'Nanum Pen Script', cursive",
 
-    font-size: 4rem;
-    line-height: 1;
-    color: var(--color-text);
-    font-family: 'Nanum Pen Script', cursive;
+    '& span': {
+      marginLeft: '3px',
+      verticalAlign: 'top',
+      fontSize: '0.8em',
+    },
+  },
 
-    span {
-      margin-left: 3px;
-      vertical-align: top;
+  '& p': {
+    marginBottom: '0',
+    lineHeight: 1.7,
+  },
 
-      font-size: 0.8em;
-    }
-  }
-
-  p {
-    margin-bottom: 0;
-
-    line-height: 1.7;
-  }
-
-  @media (min-width: 64em) {
-    p {
-      max-width: 660px;
-    }
-  }
-`;
+  '@laptopSmall': {
+    '& p': {
+      maxWidth: '660px',
+    },
+  },
+});
 
 const Header = () => {
   return (

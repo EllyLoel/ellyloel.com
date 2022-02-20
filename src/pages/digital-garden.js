@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { graphql } from 'gatsby';
-import styled from 'styled-components';
+import { styled } from '../../stitches.config';
 import { window } from 'browser-monads';
 
 import Layout from '../components/layout';
@@ -12,80 +12,68 @@ import Notes from '../components/garden/notes';
 import Graph from '../components/garden/graph';
 import Footer from '../components/footer';
 
-const NavStyled = styled.div`
-  @media (min-width: 64em) {
-    nav ul li::before,
-    nav ul li::after,
-    nav h1::before,
-    nav h1::after {
-      background: rgb(221, 231, 174);
-    }
-  }
-`;
+const NavStyled = styled('div', {
+  '@laptopSmall': {
+    'nav ul li::before, nav ul li::after, nav h1::before, nav h1::after': {
+      background: 'rgb(221, 231, 174)',
+    },
+  },
+});
 
-const Container = styled.div`
-  margin: 6em 1.5em 1.5em 1.5em;
+const Container = styled('div', {
+  margin: '6em 1.5em 1.5em 1.5em',
 
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: repeat(4, auto);
-  grid-template-areas:
+  display: 'grid',
+  gridTemplateColumns: 'auto',
+  gridTemplateRows: 'repeat(4, auto)',
+  gridTemplateAreas: `
     'header'
     'filters'
     'notes'
-    'graph';
-  gap: 3em;
+    'graph'`,
+  gap: '3em',
 
-  @media (min-width: 64em) {
-    margin: 4em 1.5em 1.5em 1.5em;
+  '@laptopSmall': {
+    margin: '4em 1.5em 1.5em 1.5em',
+    gap: '5em',
+  },
 
-    gap: 5em;
-  }
-
-  @media (min-width: 75em) {
-    grid-template-columns: 1fr max-content;
-    grid-template-rows: repeat(3, max-content);
-    grid-template-areas:
+  '@laptopLarge': {
+    gridTemplateColumns: '1fr max-content',
+    gridTemplateRows: 'repeat(3, max-content)',
+    gridTemplateAreas: `
       'header header'
       'filters graph'
-      'notes graph';
-  }
+      'notes graph'`,
+  },
 
-  @media (min-width: 90em) {
-    margin: 6em auto 1.5em auto;
-    max-width: 70%;
-  }
+  '@desktopSmall': {
+    margin: '6em auto 1.5em auto',
+    maxWidth: '70%',
+  },
 
-  @media (min-width: 120em) {
-    max-width: 65%;
-  }
+  '@desktopLarge': {
+    maxWidth: '55%',
+  },
+});
 
-  @media (min-width: 120em) {
-    max-width: 55%;
-  }
-`;
+const FooterStyled = styled('div', {
+  height: '8rem',
+  position: 'relative',
 
-const FooterStyled = styled.div`
-  height: 4rem;
-  position: relative;
+  'footer small, footer small a, footer ul a': {
+    color: 'var(--color-text)',
+  },
 
-  footer small,
-  footer small a,
-  footer ul a {
-    color: var(--color-text);
-  }
+  'footer small a::before, footer small a::after, footer ul li::before, footer ul li::after':
+    {
+      background: 'rgb(221, 231, 174)',
+    },
 
-  footer small a::before,
-  footer small a::after,
-  footer ul li::before,
-  footer ul li::after {
-    background: rgb(221, 231, 174);
-  }
-
-  @media (max-width: 31.25em) {
-    height: 8rem;
-  }
-`;
+  '@mobileLarge': {
+    height: '4rem',
+  },
+});
 
 const DigitalGarden = ({
   data: {
@@ -126,7 +114,11 @@ const DigitalGarden = ({
     <Layout>
       <SEO title="Digital Garden" />
       <NavStyled>
-        <Nav siteTitle="<e//y>" color="#99af33" navColor="#99af33" />
+        <Nav
+          siteTitle="<e//y>"
+          color="hsl(71, 55%, 50%)"
+          navColor="hsl(71, 55%, 50%)"
+        />
       </NavStyled>
       <Container>
         <Header />

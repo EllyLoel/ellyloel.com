@@ -1,103 +1,110 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useContext } from 'react';
-import styled from 'styled-components';
+import { styled } from '../../../stitches.config';
 import { window } from 'browser-monads';
 
 import { ThemeContext } from '../theme-context';
 import Footer from '../footer';
 import CTAButton from '../cta-button';
 
-const NewsletterSection = styled.section`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-`;
+const NewsletterSection = styled('section', {
+  display: 'flex',
+  alignItems: 'center',
+  flexDirection: 'column',
+});
 
-const Content = styled.div`
-  width: min(80%, 70ch);
-  display: flex;
-  flex-direction: column;
-`;
+const Content = styled('div', {
+  width: 'min(80%, 70ch)',
+  display: 'flex',
+  flexDirection: 'column',
+});
 
-const Title = styled.h2`
-  font-size: 3rem;
-`;
+const Title = styled('h2', {
+  fontSize: '3rem',
+});
 
-const Paragraph = styled.p`
-  line-height: 1.5;
-`;
+const Paragraph = styled('p', {
+  lineHeight: 1.5,
+});
 
-const Link = styled.a`
-  text-decoration: underline;
-  text-underline-offset: 1px;
-  color: var(--color-text);
-  margin: inherit;
-  font-weight: 600;
-`;
+const Link = styled('a', {
+  textDecoration: 'underline',
+  textUnderlineOffset: '1px',
+  color: 'var(--color-text)',
+  margin: 'inherit',
+  fontWeight: 600,
+});
 
-const FormContainer = styled.div`
-  align-self: center;
-  margin-bottom: 5rem;
-`;
+const FormContainer = styled('div', {
+  alignSelf: 'center',
+  marginBottom: '5rem',
+});
 
-const NewsletterForm = styled.form`
-  font-size: 1.25rem;
-  position: relative;
-  margin-top: 5rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+const NewsletterForm = styled('form', {
+  fontSize: '1.25rem',
+  position: 'relative',
+  marginTop: '5rem',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
 
-  label {
-    color: var(--color-primary);
-    position: absolute;
-    top: -1.5em;
-  }
+  '& label': {
+    color: 'var(--color-primary)',
+    position: 'absolute',
+    top: '-1.5em',
+  },
 
-  input {
-    padding: 0.5em 0.75em;
-    margin-right: 0.5em;
-    border-radius: 0.5em;
-    border: 2px solid var(--color-gray500);
-    color: ${({ colorMode }) =>
-      colorMode === 'light' ? 'var(--color-text)' : 'var(--color-background)'};
+  '& input': {
+    padding: '0.5rem 0.75rem',
+    marginRight: '0',
+    marginBottom: '0.5rem',
+    borderRadius: '0.5rem',
+    border: '2px solid var(--color-gray500)',
+    transition: 'border 200ms ease-out',
 
-    transition: border 200ms ease-out;
+    '&:hover, &:focus, &:active': {
+      outline: 'none',
+      border: '2px var(--color-primary) solid',
+    },
+  },
 
-    &:hover,
-    &:focus,
-    &:active {
-      outline: none;
-      border: 2px var(--color-primary) solid;
-    }
-  }
+  '& button': {
+    padding: '0.7rem 1rem',
+    borderRadius: '0.5rem',
+    border: 'none',
+    width: 'max-content',
+    backgroundColor: 'var(--color-primary)',
+    color: 'var(--color-background)',
+    fontWeight: 600,
+    lineHeight: 1,
+    transform: 'scale(1)',
+    transition: 'transform 500ms cubic-bezier(0.57, 2.2, 0.26, 0.99)',
 
-  button {
-    padding: 0.7em 1em;
-    border-radius: 0.5em;
-    border: none;
-    width: max-content;
-    background-color: var(--color-primary);
-    color: var(--color-background);
-    font-weight: 600;
-    line-height: 1;
-    transform: scale(1);
-    transition: transform 500ms cubic-bezier(0.57, 2.2, 0.26, 0.99);
+    '&:hover': {
+      transform: 'scale(1.05)',
+    },
+  },
 
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
+  '@mobileLarge': {
+    flexDirection: 'row',
 
-  @media (max-width: 31.25em) {
-    flex-direction: column;
+    '& input': {
+      marginRight: '0.5rem',
+      marginBottom: '0',
+    },
+  },
 
-    input {
-      margin-right: 0;
-      margin-bottom: 0.5em;
-    }
-  }
-`;
+  variants: {
+    color: {
+      light: {
+        color: 'var(--color-text)',
+      },
+      dark: {
+        color: 'var(--color-background)',
+      },
+    },
+  },
+});
 
 const Newsletter = () => {
   const { colorMode } = useContext(ThemeContext);
@@ -135,12 +142,13 @@ const Newsletter = () => {
               placeholder="you@example.com"
               name="email"
               required
+              color={colorMode}
             />
             <button type="submit">Subscribe</button>
           </NewsletterForm>
         </FormContainer>
       </Content>
-      <CTAButton link="#nav" nobefore flip right />
+      <CTAButton link="#nav" noBefore flipped position="right" />
       <Footer />
     </NewsletterSection>
   );

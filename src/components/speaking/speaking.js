@@ -1,37 +1,37 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import styled from 'styled-components';
+import { styled } from '../../../stitches.config';
 
 import Heading from '../heading';
 
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
+const Content = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+});
 
-const Containers = styled.div`
-  width: min(80%, 70ch);
-`;
+const Containers = styled('div', {
+  width: 'min(80%, 70ch)',
+});
 
-const Container = styled.div`
-  margin-bottom: 5em;
+const Container = styled('div', {
+  marginBottom: '5em',
 
-  & ol {
-    line-height: 1.7;
-    padding-left: 0;
-    list-style-position: inside;
-  }
+  '& ol': {
+    lineHeight: 1.7,
+    paddingLeft: '0',
+    listStylePosition: 'inside',
+  },
 
-  & a {
-    text-decoration: underline;
-    text-underline-offset: 1px;
-    color: var(--color-text);
-    margin: inherit;
-    font-weight: 600;
-  }
-`;
+  '& a': {
+    textDecoration: 'underline',
+    textUnderlineOffset: '1px',
+    color: 'var(--color-text)',
+    margin: 'inherit',
+    fontWeight: 600,
+  },
+});
 
 const Speaking = () => {
   const data = useStaticQuery(graphql`

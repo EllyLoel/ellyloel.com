@@ -1,90 +1,84 @@
 import * as React from 'react';
-import styled from 'styled-components';
+import { styled } from '../../stitches.config';
 
-const underlineHoverTransition = `
-  transition: color 200ms ease-out;
-  position: relative;
-  white-space: nowrap;
+const underlineHoverTransition = {
+  transition: 'color 200ms ease-out',
+  position: 'relative',
+  whiteSpace: 'nowrap',
 
-  &::before,
-  &::after {
-    position: absolute;
-    width: 95%;
-    height: 2.5px;
-    border-radius: 9999px;
-    background: var(--color-text);
-    top: 105%;
-    left: 2.5%;
-    pointer-events: none;
-  }
+  '&::before, &::after': {
+    position: 'absolute',
+    width: '95%',
+    height: '2.5px',
+    borderRadius: '9999px',
+    background: 'var(--color-text)',
+    top: '105%',
+    left: '2.5%',
+    pointerEvents: 'none',
+  },
 
-  &::before {
-    content: '';
-    transform-origin: 100% 50%;
-    transform: scale3d(0, 1, 1);
-    transition: transform 0.3s;
-  }
+  '&::before': {
+    content: "''",
+    transformOrigin: '100% 50%',
+    transform: 'scale3d(0, 1, 1)',
+    transition: 'transform 0.3s',
+  },
 
-  &:hover::before,
-  &:focus::before {
-    transform-origin: 0% 50%;
-    transform: scale3d(1, 1, 1);
-  }
-`;
+  '&:hover::before, &:focus::before': {
+    transformOrigin: '0% 50%',
+    transform: 'scale3d(1, 1, 1)',
+  },
+};
 
-const FooterStyled = styled.footer`
-  ul {
-    list-style-type: none;
+const FooterStyled = styled('footer', {
+  '& ul': {
+    listStyleType: 'none',
+    display: 'grid',
+    gridTemplateColumns: 'repeat(2, max-content)',
+    gridTemplateRows: 'auto',
+    justifyContent: 'center',
+    justifyItems: 'center',
+    alignItems: 'center',
+    gridGap: '5vw',
+    marginTop: '0',
+    marginBottom: '1em',
+    padding: '0',
 
-    display: grid;
-    grid-template-columns: repeat(4, max-content);
-    grid-template-rows: auto;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    grid-gap: 5vw;
+    '& li': {
+      ...underlineHoverTransition,
 
-    margin-top: 0;
-    margin-bottom: 1em;
-    padding: 0;
+      '& a': {
+        textDecoration: 'none',
+        color: 'var(--color-text)',
+      },
+    },
+  },
 
-    li {
-      ${underlineHoverTransition}
+  '& small': {
+    display: 'flex',
+    justifyContent: 'center',
+    marginBottom: '1em',
+    color: 'var(--color-text)',
 
-      a {
-        text-decoration: none;
-        color: var(--color-text);
-      }
-    }
-  }
+    '& a': {
+      textDecoration: 'none',
+      color: 'var(--color-text)',
+      ...underlineHoverTransition,
+    },
 
-  small {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1em;
+    '& .logo': {
+      fontFamily: "'Nanum Pen Script', cursive",
+      fontSize: '1.25em',
+    },
+  },
 
-    color: var(--color-text);
-
-    a {
-      text-decoration: none;
-      color: var(--color-text);
-
-      ${underlineHoverTransition}
-    }
-
-    .logo {
-      font-family: 'Nanum Pen Script', cursive;
-      font-size: 1.25em;
-    }
-  }
-
-  @media (max-width: 31.25em) {
-    ul {
-      grid-template-columns: repeat(2, max-content);
-      grid-template-rows: auto;
-    }
-  }
-`;
+  '@mobileLarge': {
+    '& ul': {
+      gridTemplateColumns: 'repeat(4, max-content)',
+      gridTemplateRows: 'auto',
+    },
+  },
+});
 
 const Footer = () => (
   <FooterStyled>
