@@ -1,74 +1,72 @@
 import React from 'react';
-import styled from 'styled-components';
+import { styled } from '../../../stitches.config';
 
-const HeaderStyled = styled.header`
-  grid-area: header;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+const HeaderStyled = styled('header', {
+  gridArea: 'header',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  boxShadow: 'var(--shadow-elevation-low)',
+  transition: 'all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1)',
 
-  box-shadow: var(--shadow-elevation-low);
-  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  '&:hover, &:focus': {
+    transform: 'scale(1.015)',
+    outline: '1px solid var(--color-primary)',
+    boxShadow: 'var(--shadow-elevation-medium)',
+  },
+});
 
-  &:hover,
-  &:focus {
-    transform: scale(1.015);
-    outline: 1px solid var(--color-primary);
-    box-shadow: var(--shadow-elevation-medium);
-  }
-`;
+const Heading = styled('h1', {
+  fontSize: '15vw',
+  margin: '0',
 
-const Heading = styled.h1`
-  font-size: 15vw;
-  margin: 0;
+  '@tabletLarge': {
+    fontSize: '7vw',
+  },
 
-  @media (min-width: 48em) {
-    font-size: 7vw;
-  }
+  '@laptopSmall': {
+    fontSize: '8vw',
+  },
 
-  @media (min-width: 64em) {
-    font-size: 8vw;
-  }
+  '@desktopSmall': {
+    fontSize: '6vw',
+  },
 
-  @media (min-width: 90em) {
-    font-size: 6vw;
-  }
+  '@desktopLarge': {
+    fontSize: '4.5vw',
+  },
 
-  @media (min-width: 125em) {
-    font-size: 4.5vw;
-  }
+  '@desktopXLarge': {
+    fontSize: '4vw',
+  },
+});
 
-  @media (min-width: 160em) {
-    font-size: 4vw;
-  }
-`;
+const Subheading = styled('p', {
+  fontSize: '3.25vw',
+  textAlign: 'right',
+  margin: '0',
+  marginTop: '-0.75em',
+  textDecoration: 'underline',
+  textDecorationColor: 'var(--color-primary)',
+  textDecorationThickness: '2px',
+  textUnderlineOffset: '2px',
 
-const Subheading = styled.p`
-  font-size: 3.25vw;
-  text-align: right;
-  margin: 0;
-  margin-top: -0.75em;
-  text-decoration: underline;
-  text-decoration-color: var(--color-primary);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
+  '@tabletLarge': {
+    fontSize: '1.5vw',
+  },
 
-  @media (min-width: 48em) {
-    font-size: 1.5vw;
-  }
+  '@desktopSmall': {
+    fontSize: '1.3vw',
+  },
 
-  @media (min-width: 90em) {
-    font-size: 1.3vw;
-  }
+  '@desktopLarge': {
+    fontSize: '1vw',
+  },
 
-  @media (min-width: 120em) {
-    font-size: 1vw;
-  }
-
-  @media (min-width: 160em) {
-    font-size: 1vw;
-  }
-`;
+  '@desktopXLarge': {
+    fontSize: '1vw',
+  },
+});
 
 const Header = () => {
   return (

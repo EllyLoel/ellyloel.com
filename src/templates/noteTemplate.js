@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { graphql, Link } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
-import styled from 'styled-components';
+import { styled } from '../../stitches.config';
 import { window } from 'browser-monads';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/animations/shift-away.css';
@@ -15,327 +15,308 @@ import FormatTag from '../components/garden/format-tag';
 import Graph from '../components/garden/graph';
 import Footer from '../components/footer';
 
-const NavStyled = styled.div`
-  @media (min-width: 64em) {
-    nav ul li::before,
-    nav ul li::after,
-    nav h1::before,
-    nav h1::after {
-      background: var(--color-green300);
-    }
-  }
-`;
+const NavStyled = styled('div', {
+  '@laptopSmall': {
+    'nav ul li::before, nav ul li::after,  nav h1::before, nav h1::after': {
+      background: 'var(--color-green300)',
+    },
+  },
+});
 
-const Container = styled.article`
-  margin: 6em 1.5em 1.5em 1.5em;
-
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: repeat(3, max-content);
-  grid-template-areas:
+const Container = styled('article', {
+  margin: '6em 1.5em 1.5em 1.5em',
+  display: 'grid',
+  gridTemplateColumns: 'auto',
+  gridTemplateRows: 'repeat(3, max-content)',
+  gridTemplateAreas: `
     'header'
     'content'
-    'graphrefs';
-  gap: 2em;
+    'graphrefs'`,
+  gap: '2em',
 
-  a {
-    text-decoration: underline;
-    text-underline-offset: 1px;
-    color: var(--color-green500);
-    font-weight: 600;
-  }
+  '& a': {
+    textDecoration: 'underline',
+    textUnderlineOffset: '1px',
+    color: 'var(--color-green500)',
+    fontWeight: 600,
+  },
 
-  @media (min-width: 64em) {
-    margin: 4em auto;
-    width: 75%;
-
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas:
+  '@laptopSmall': {
+    margin: '4em auto',
+    width: '75%',
+    gridTemplateColumns: '2fr 1fr',
+    gridTemplateAreas: `
       'header header'
-      'content graphrefs';
-    gap: 3em;
-  }
+      'content graphrefs'`,
+    gap: '3em',
+  },
 
-  @media (min-width: 75em) {
-    grid-template-columns: 1fr max-content;
-    width: 65%;
-  }
+  '@desktopSmall': {
+    gridTemplateColumns: '1fr max-content',
+    width: '65%',
+  },
 
-  @media (min-width: 90em) {
-    width: 55%;
-  }
-`;
+  '@media (min-width: 90em)': { width: '55%' },
+});
 
-const Header = styled.header`
-  grid-area: header;
-`;
+const Header = styled('header', {
+  gridArea: 'header',
+});
 
-const Title = styled.h1`
-  margin: 0;
+const Title = styled('h1', {
+  margin: '0',
+  fontSize: '2.5rem',
+  lineHeight: 1,
+  color: 'var(--color-text)',
 
-  font-size: 2.5rem;
-  line-height: 1;
-  color: var(--color-text);
+  span: {
+    marginLeft: '3px',
+    verticalAlign: 'top',
+    fontSize: '0.8em',
+  },
+});
 
-  span {
-    margin-left: 3px;
-    vertical-align: top;
+const Metadata = styled('div', {
+  width: '100%',
+  marginTop: '1em',
+  padding: '1em',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '0.5em',
+  lineHeight: 1.5,
+  background: 'var(--color-background)',
+  border: '1px solid var(--color-gray300)',
+  borderRadius: '1rem',
+  boxShadow: 'var(--shadow-elevation-low)',
 
-    font-size: 0.8em;
-  }
-`;
+  '& > div > *': {
+    margin: '0',
+  },
 
-const Metadata = styled.div`
-  width: 100%;
-  margin-top: 1em;
-  padding: 1em;
+  '@tabletSmall': {
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+});
 
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
+const StageTagsContainer = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  gap: '0.5em',
 
-  line-height: 1.5;
-  background: var(--color-background);
-  border: 1px solid var(--color-gray300);
-  border-radius: 1rem;
-  box-shadow: var(--shadow-elevation-low);
+  '@laptopLarge': {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: '1em',
+  },
+});
 
-  & > div > * {
-    margin: 0;
-  }
+const FormatStageStyled = styled('div', {
+  width: 'fit-content',
+  height: 'fit-content',
+  padding: '0.25em 0.7em 0.25em 0.65em',
+  border: '2px solid var(--color-green500)',
+  borderRadius: '9999px',
+  transition: 'all 0.3s ease-in-out',
+  background: 'var(--color-background)',
 
-  @media (min-width: 42em) {
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-`;
+  '& p': {
+    transition: 'all 0.3s ease-in-out',
+    color: 'var(--color-green300)',
+  },
+});
 
-const StageTagsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.5em;
+const Tags = styled('div', {
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: '0.25em',
+});
 
-  @media (min-width: 80em) {
-    flex-direction: row;
-    align-items: center;
-    gap: 1em;
-  }
-`;
+const FormatTagStyled = styled('div', {
+  width: 'fit-content',
+  height: 'fit-content',
+  padding: '0.2em 0.4em',
+  borderRadius: '4px',
+  color: 'var(--color-background)',
+  background: 'var(--color-green500)',
+});
 
-const FormatStageStyled = styled.div`
-  width: fit-content;
-  height: fit-content;
-  padding: 0.25em 0.7em 0.25em 0.65em;
+const TimeContainer = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-around',
+  gap: '0.5em',
 
-  border: 2px solid var(--color-green500);
-  border-radius: 9999px;
-  transition: all 0.3s ease-in-out;
-  background: var(--color-background);
+  '@laptopLarge': {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: '1em',
+  },
+});
 
-  p {
-    transition: all 0.3s ease-in-out;
-    color: var(--color-green300);
-  }
-`;
+const CreatedTime = styled('p', {
+  '@tabletSmall': {
+    textAlign: 'right',
+  },
+});
 
-const Tags = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25em;
-`;
+const ModifiedTime = styled('p', {
+  '@tabletSmall': {
+    textAlign: 'right',
+  },
+});
 
-const FormatTagStyled = styled.div`
-  width: fit-content;
-  height: fit-content;
-  padding: 0.2em 0.4em;
+const Content = styled('div', {
+  gridArea: 'content',
+  lineHeight: 1.5,
 
-  border-radius: 4px;
-  color: var(--color-background);
-  background: var(--color-green500);
-`;
+  '& blockquote': {
+    position: 'relative',
+    width: 'fit-content',
+    marginLeft: '1em',
+    padding: '1em 2em',
+    background: '#bcd05f1a',
+    borderTopLeftRadius: '0',
+    borderTopRightRadius: '1rem',
+    borderBottomRightRadius: '1rem',
+    borderBottomLeftRadius: '0',
+    fontStyle: 'italic',
+    letterSpacing: '0.5px',
 
-const TimeContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  gap: 0.5em;
+    '& p': {
+      margin: '0',
+    },
 
-  @media (min-width: 80em) {
-    flex-direction: row;
-    align-items: center;
-    gap: 1em;
-  }
-`;
+    '&::before': {
+      position: 'absolute',
+      top: '0',
+      left: '0',
+      content: "''",
+      display: 'block',
+      width: '4px',
+      height: '100%',
+      backgroundColor: 'var(--color-green500)',
+      borderRadius: '2px',
+    },
+  },
+});
 
-const CreatedTime = styled.p`
-  @media (min-width: 42em) {
-    text-align: right;
-  }
-`;
+const Tooltip = styled('div', {
+  backgroundColor: 'var(--color-background)',
+  padding: '1em 1.5em',
+  lineHeight: 1.5,
+  border: '1px solid var(--color-gray300)',
+  borderRadius: '1rem',
+  boxShadow: 'var(--shadow-elevation-medium)',
+  transition: 'all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1)',
 
-const ModifiedTime = styled.p`
-  @media (min-width: 42em) {
-    text-align: right;
-  }
-`;
+  '& > *': {
+    margin: '0',
+  },
 
-const Content = styled.div`
-  grid-area: content;
+  '& h1': {
+    lineHeight: 1,
+    marginBottom: '0.25em',
+  },
 
-  line-height: 1.5;
+  '&:hover, &:focus': {
+    transform: 'scale(1.015)',
+    border: '1px solid var(--color-primary)',
+    boxShadow: 'var(--shadow-elevation-high)',
+  },
+});
 
-  blockquote {
-    position: relative;
-    width: fit-content;
-    margin-left: 1em;
-    padding: 1em 2em;
-    background: #bcd05f1a;
-    border-top-left-radius: 0;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    border-bottom-left-radius: 0;
-    font-style: italic;
-    letter-spacing: 0.5px;
+const References = styled('div', {
+  gridRow: '2 / 3',
+  gridColumn: '1 / 2',
 
-    p {
-      margin: 0;
-    }
+  width: '100%',
+  height: 'fit-content',
+  maxHeight: 'max-content',
+  padding: '1.5em 2em',
 
-    &::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      content: '';
-      display: block;
-      width: 4px;
-      height: 100%;
-      background-color: var(--color-green500);
-      border-radius: 2px;
-    }
-  }
-`;
+  lineHeight: 1.5,
+  background: 'var(--color-background)',
+  border: '1px solid var(--color-gray300)',
+  borderRadius: '1rem',
+  boxShadow: 'var(--shadow-elevation-low)',
+  transition: 'all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1)',
 
-const Tooltip = styled.div`
-  background-color: var(--color-background);
-  padding: 1em 1.5em;
-  line-height: 1.5;
-  border: 1px solid var(--color-gray300);
-  border-radius: 1rem;
-  box-shadow: var(--shadow-elevation-medium);
-  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  '&:hover, &:focus': {
+    transform: 'scale(1.015)',
+    border: '1px solid var(--color-primary)',
+    boxShadow: 'var(--shadow-elevation-medium)',
+  },
 
-  & > * {
-    margin: 0;
-  }
+  '& h2': {
+    margin: '0',
+    marginBottom: '0.25em',
+    fontWeight: 600,
+    lineHeight: 1,
+  },
 
-  & h1 {
-    line-height: 1;
-    margin-bottom: 0.25em;
-  }
+  '& ul': {
+    paddingLeft: '1.6em',
+    margin: '0',
+    marginTop: '0.25em',
 
-  &:hover,
-  &:focus {
-    transform: scale(1.015);
-    border: 1px solid var(--color-primary);
-    box-shadow: var(--shadow-elevation-high);
-  }
-`;
+    '& li::marker': {
+      content: "'→  '",
+    },
+  },
 
-const References = styled.div`
-  grid-row: 2 / 3;
-  grid-column: 1 / 2;
-  width: 100%;
-  height: fit-content;
-  max-height: max-content;
-  padding: 1.5em 2em;
+  '@tabletLarge': {
+    gridRow: '1 / 2',
+    gridColumn: '2 / 3',
+    height: '100%',
+  },
 
-  line-height: 1.5;
-  background: var(--color-background);
-  border: 1px solid var(--color-gray300);
-  border-radius: 1rem;
-  box-shadow: var(--shadow-elevation-low);
-  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  '@laptopSmall': {
+    gridRow: '2 / 3',
+    gridColumn: '1 / 2',
+    height: 'fit-content',
+  },
+});
 
-  &:hover,
-  &:focus {
-    transform: scale(1.015);
-    border: 1px solid var(--color-primary);
-    box-shadow: var(--shadow-elevation-medium);
-  }
+const GraphStyled = styled('div', {
+  gridRow: '1 / 2',
+  gridColumn: '1 / 2',
+});
 
-  h2 {
-    margin: 0;
-    margin-bottom: 0.25em;
-    font-weight: 600;
-    line-height: 1;
-  }
-  ul {
-    padding-left: 1.6em;
-    margin: 0;
-    margin-top: 0.25em;
+const GraphRefsContainer = styled('div', {
+  gridArea: 'graphrefs',
+  height: 'fit-content',
+  display: 'grid',
+  gridTemplateColumns: 'auto',
+  gridTemplateRows: '1fr 1fr',
+  gap: '2em',
 
-    li::marker {
-      content: '→  ';
-    }
-  }
+  '@tabletLarge': {
+    gridTemplateColumns: '1fr 1fr',
+    gridTemplateRows: 'auto',
+  },
 
-  @media (min-width: 48em) {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-    height: 100%;
-  }
+  '@laptopSmall': {
+    gridTemplateColumns: 'auto',
+    gridTemplateRows: '1fr 1fr',
+  },
+});
 
-  @media (min-width: 64em) {
-    grid-row: 2 / 3;
-    grid-column: 1 / 2;
-    height: fit-content;
-  }
-`;
+const FooterStyled = styled('div', {
+  height: '4rem',
+  position: 'relative',
 
-const GraphStyled = styled.div`
-  grid-row: 1 / 2;
-  grid-column: 1 / 2;
-`;
+  'footer small, footer small a, footer ul a': {
+    color: 'var(--color-text)',
+  },
 
-const GraphRefsContainer = styled.div`
-  grid-area: graphrefs;
-  height: fit-content;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 1fr 1fr;
-  gap: 2em;
-
-  @media (min-width: 48em) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-  }
-
-  @media (min-width: 64em) {
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr;
-    /* align-self: start; */
-  }
-`;
-
-const FooterStyled = styled.div`
-  height: 4rem;
-  position: relative;
-
-  footer small,
-  footer small a,
-  footer ul a {
-    color: var(--color-text);
-  }
-
-  footer small a::before,
-  footer small a::after,
-  footer ul li::before,
-  footer ul li::after {
-    background: var(--color-green300);
-  }
-`;
+  'footer small a::before, footer small a::after, footer ul li::before, footer ul li::after':
+    {
+      background: 'var(--color-green300)',
+    },
+});
 
 const NoteTemplate = ({
   data: {
