@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import { styled } from '../../../stitches.config';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { useStaticQuery, graphql } from 'gatsby';
 
@@ -7,69 +7,68 @@ import Heading from '../heading';
 import LeftSVGGraphic from '../../images/svg/standing-infront-webpage.svg';
 import RightSVGGraphic from '../../images/svg/sitting-behind-laptop.svg';
 
-const AboutSection = styled.section`
-  position: relative;
-  width: 100vw;
-`;
+const AboutSection = styled('section', {
+  position: 'relative',
+  width: '100vw',
+});
 
-const Content = styled.div`
-  width: 100%;
-  height: 100%;
+const Content = styled('div', {
+  width: '100%',
+  height: '100%',
 
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-`;
+  display: 'flex',
+  alignItems: 'center',
+  flexDirection: 'column',
+});
 
-const SubContent = styled.div`
-  article {
-    font-size: 1.35rem;
-    padding: 0 2em;
-    line-height: 1.6;
-  }
+const SubContent = styled('div', {
+  '& article': {
+    fontSize: '1.35rem',
+    padding: '0 2em',
+    lineHeight: 1.6,
+  },
 
-  .left-svg-graphic {
-    display: none;
-  }
+  '& .left-svg-graphic': {
+    display: 'none',
+  },
 
-  .right-svg-graphic {
-    display: none;
-  }
+  '& .right-svg-graphic': {
+    display: 'none',
+  },
 
-  @media (min-width: 48em) {
-    max-width: min(80vw, 60rem);
+  '@tabletLarge': {
+    maxWidth: 'min(80vw, 60rem)',
+    display: 'grid',
+    gridTemplateColumns: 'max-content 30vw',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '3vw',
 
-    display: grid;
-    grid-template-columns: max-content 30vw;
-    align-items: center;
-    justify-content: center;
-    gap: 3vw;
+    '& p': {
+      maxWidth: '35vw',
+      fontSize: '1.25rem',
+    },
 
-    p {
-      max-width: 35vw;
-      font-size: 1.25rem;
-    }
+    '& .right-svg-graphic': {
+      display: 'block',
+      width: '100%',
+    },
+  },
 
-    .right-svg-graphic {
-      display: block;
-      width: 100%;
-    }
-  }
+  '@laptopSmall': {
+    gridTemplateColumns: '25vw max-content 25vw',
 
-  @media (min-width: 64em) {
-    grid-template-columns: 25vw max-content 25vw;
+    '& .left-svg-graphic': {
+      display: 'block',
+      width: '100%',
+      marginBottom: '20em',
+    },
 
-    .left-svg-graphic {
-      display: block;
-      width: 100%;
-      margin-bottom: 20em;
-    }
-
-    p {
-      max-width: 30vw;
-    }
-  }
-`;
+    '& p': {
+      maxWidth: '30vw',
+    },
+  },
+});
 
 const About = () => {
   const data = useStaticQuery(graphql`

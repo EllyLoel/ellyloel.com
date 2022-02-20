@@ -1,18 +1,19 @@
 import React from 'react';
-import styled from 'styled-components';
+import { styled } from '../../stitches.config';
 import { MdLightMode, MdDarkMode } from 'react-icons/md';
 
 import { ThemeContext } from './theme-context';
 
-const Label = styled.label`
-  & svg {
-    display: block;
-  }
-`;
+const Label = styled('label', {
+  '& svg': {
+    display: 'block',
+    cursor: 'pointer',
+  },
+});
 
-const Checkbox = styled.input`
-  display: none;
-`;
+const Checkbox = styled('input', {
+  display: 'none',
+});
 
 const ThemeToggle = () => {
   const { colorMode, setColorMode } = React.useContext(ThemeContext);

@@ -1,23 +1,29 @@
 import React from 'react';
-import styled from 'styled-components';
+import { styled } from '../../../stitches.config';
 
-const StageStyled = styled.span`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1ch;
+const StageStyled = styled('span', {
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  gap: '1ch',
 
-  span {
-    color: ${({ active }) =>
-      active ? 'var(--color-text)' : 'var(--color-green700)'};
+  '& span': {
+    color: 'var(--color-green700)',
+    margin: '0',
 
-    margin: 0;
+    '&:first-letter': {
+      textTransform: 'capitalize',
+    },
+  },
 
-    &:first-letter {
-      text-transform: capitalize;
-    }
-  }
-`;
+  variants: {
+    active: {
+      true: {
+        color: 'var(--color-text)',
+      },
+    },
+  },
+});
 
 const FormatStage = ({ stage, active }) => {
   let emoji = '';

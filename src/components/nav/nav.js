@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import styled from 'styled-components';
+import { styled } from '../../../stitches.config';
 import { RiGithubFill, RiLinkedinBoxFill } from 'react-icons/ri';
 import { SiPolywork } from 'react-icons/si';
 import { BsMailbox2 } from 'react-icons/bs';
@@ -15,163 +15,161 @@ import ThemeToggle from '../theme-toggle';
 
 // STYLES /////////////////////////////////////////////////////////////////////
 
-const underlineHoverTransition = `
-  transition: color 200ms ease-out;
-  position: relative;
-  white-space: nowrap;
+const underlineHoverTransition = {
+  transition: 'color 200ms ease-out',
+  position: 'relative',
+  whiteSpace: 'nowrap',
 
-  &::before,
-  &::after {
-    position: absolute;
-    width: 95%;
-    height: 2.5px;
-    border-radius: 9999px;
-    background: var(--color-text);
-    top: 105%;
-    left: 2.5%;
-    pointer-events: none;
-  }
+  '&::before, &::after': {
+    position: 'absolute',
+    width: '95%',
+    height: '2.5px',
+    borderRadius: '9999px',
+    background: 'var(--color-text)',
+    top: '105%',
+    left: '2.5%',
+    pointerEvents: 'none',
+  },
 
-  &::before {
-    content: '';
-    transform-origin: 100% 50%;
-    transform: scale3d(0, 1, 1);
-    transition: transform 0.3s;
-  }
+  '&::before': {
+    content: "''",
+    transformOrigin: '100% 50%',
+    transform: 'scale3d(0, 1, 1)',
+    transition: 'transform 0.3s',
+  },
 
-  &:hover::before,
-  &:focus::before {
-    transform-origin: 0% 50%;
-    transform: scale3d(1, 1, 1);
-  }
-`;
+  '&:hover::before, &:focus::before': {
+    transformOrigin: '0% 50%',
+    transform: 'scale3d(1, 1, 1)',
+  },
+};
 
-const Nav = styled.nav`
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
+const Nav = styled('nav', {
+  width: '100%',
+  height: '100%',
+  position: 'fixed',
+  zIndex: 1,
+  left: '0',
+  top: '0',
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  gap: '2rem',
 
-  visibility: ${({ navOpen }) => (navOpen ? 'visible' : 'hidden')};
-  opacity: ${({ navOpen }) => (navOpen ? 1 : 0)};
-  transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-    visibility 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  visibility: 'hidden',
+  opacity: '0',
+  transition: `
+    opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    visibility 0.5s cubic-bezier(0.77, 0.2, 0.05, 1)`,
+  backgroundColor: 'var(--color-primary)',
+  fontSize: '1.375rem',
 
-  background-color: var(--color-primary);
-  font-size: 1.375rem;
+  '& a': {
+    color: 'var(--color-text)',
+    textDecoration: 'none',
+    fontWeight: 800,
+    letterSpacing: '0.5px',
+    cursor: 'pointer',
+  },
 
-  a {
-    color: var(--color-text);
-    text-decoration: none;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-  }
+  '& ul': {
+    width: 'max-content',
+    margin: '0',
+    padding: '0',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: '0.75rem',
+    listStyleType: 'none',
+    li: {
+      ...underlineHoverTransition,
+    },
+  },
 
-  ul {
-    width: max-content;
-    margin: 0;
-    padding: 0;
+  '& .text-links-list': {
+    margin: '0',
+    flexDirection: 'column',
+    transition: 'all 0.3s ease-in-out',
+    textShadow: '0px 0px 0px rgba(0, 0, 0, 0)',
+    transform: 'scale(1)',
+  },
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.75rem;
+  '& .icon-links-list': {
+    flexDirection: 'row',
+    fontSize: '1.65rem',
 
-    list-style-type: none;
+    '& a *': {
+      display: 'block',
+    },
+  },
 
-    li {
-      ${underlineHoverTransition}
-    }
-  }
+  '@laptopSmall': {
+    zIndex: 0,
+    height: 'max-content',
+    position: 'static',
+    padding: '1.5em 2em',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    visibility: 'visible',
+    opacity: 1,
+    background: 'none',
 
-  .text-links-list {
-    margin: 0;
+    '& a': {
+      fontSize: '1rem',
+      color: 'var(--color-text)',
+    },
 
-    flex-direction: column;
+    '& .text-links-list': {
+      flexDirection: 'row',
+    },
 
-    transition: all 0.3s ease-in-out;
-    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-    transform: scale(1);
-  }
+    '& .icon-links-list': {
+      '& svg': {
+        fill: 'var(--color-text)',
+        fontSize: '1.35rem',
+      },
+    },
+  },
 
-  .icon-links-list {
-    flex-direction: row;
-    font-size: 1.65rem;
+  variants: {
+    navOpen: {
+      true: {
+        visibility: 'visible',
+        opacity: 1,
+      },
+    },
+  },
+});
 
-    a * {
-      display: block;
-    }
-  }
+const Heading = styled('h1', {
+  margin: '0',
+  fontSize: '1rem',
 
-  @media (min-width: 64em) {
-    z-index: 0;
-    height: max-content;
-    position: static;
-    padding: 1.5em 2em;
+  '& a': {
+    fontFamily: "'Nanum Pen Script', cursive",
+    fontSize: '3rem',
+    color: 'var(--color-text)',
 
-    flex-direction: row;
-    justify-content: space-between;
+    '@laptopSmall': {
+      fontSize: '1.6rem',
+    },
+  },
 
-    visibility: visible;
-    opacity: 1;
+  ...underlineHoverTransition,
+});
 
-    background: none;
+const StyledHamburger = styled('div', {
+  position: 'fixed',
+  zIndex: 1,
+  top: '1rem',
+  left: '1rem',
 
-    a {
-      font-size: 1rem;
-      color: ${({ navColor }) => (navColor ? navColor : 'var(--color-text)')};
-    }
-
-    .text-links-list {
-      flex-direction: row;
-    }
-
-    .icon-links-list {
-      svg {
-        fill: ${({ navColor }) => (navColor ? navColor : 'var(--color-text)')};
-        font-size: 1.35rem;
-      }
-    }
-  }
-`;
-
-const Heading = styled.h1`
-  margin: 0;
-
-  font-size: 1rem;
-
-  a {
-    font-family: 'Nanum Pen Script', cursive;
-    font-size: 3rem;
-    color: ${({ navColor }) => (navColor ? navColor : 'var(--color-text)')};
-
-    @media (min-width: 64em) {
-      font-size: 1.6rem;
-    }
-  }
-
-  ${underlineHoverTransition}
-`;
-
-const StyledHamburger = styled.div`
-  position: fixed;
-  z-index: 1;
-  top: 1em;
-  left: 1em;
-
-  @media (min-width: 64em) {
-    display: none;
-  }
-`;
+  '@laptopSmall': {
+    display: 'none',
+  },
+});
 
 // COMPONENTS /////////////////////////////////////////////////////////////////
 
@@ -180,8 +178,8 @@ const NavSection = ({ siteTitle, color, navColor }) => {
 
   return (
     <>
-      <Nav id="nav" navOpen={navOpen} navColor={navColor}>
-        <Heading navColor={navColor} onClick={() => setNavOpen(!navOpen)}>
+      <Nav id="nav" navOpen={navOpen}>
+        <Heading onClick={() => setNavOpen(!navOpen)}>
           <Link to="/">{siteTitle}</Link>
         </Heading>
 

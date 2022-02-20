@@ -1,47 +1,40 @@
-import styled from 'styled-components';
+import { styled } from '../../stitches.config';
 
-const underlineHoverTransition = `
-  transition: color 200ms ease-out;
-  position: relative;
-  white-space: nowrap;
+export const Link = styled('a', {
+  color: 'var(--color-text)',
+  textDecoration: 'none',
+  cursor: 'pointer',
 
-  &::before,
-  &::after {
-    position: absolute;
-    width: 95%;
-    height: 2.5px;
-    border-radius: 9999px;
-    background: var(--color-primary);
-    top: 105%;
-    left: 2.5%;
-    pointer-events: none;
-  }
+  transition: 'color 200ms ease-out',
+  position: 'relative',
+  whiteSpace: 'nowrap',
 
-  &::before {
-    content: '';
-    transform-origin: 100% 50%;
-    transform: scale3d(0, 1, 1);
-    transition: transform 0.3s;
-  }
+  '&::before, &::after': {
+    position: 'absolute',
+    width: '95%',
+    height: '2.5px',
+    borderRadius: '9999px',
+    background: 'var(--color-primary)',
+    top: '105%',
+    left: '2.5%',
+    pointerEvents: 'none',
+  },
 
-  &:hover::before,
-  &:focus::before {
-    transform-origin: 0% 50%;
-    transform: scale3d(1, 1, 1);
-  }
-`;
+  '&::before': {
+    content: "''",
+    transformOrigin: '100% 50%',
+    transform: 'scale3d(0, 1, 1)',
+    transition: 'transform 0.3s',
+  },
 
-export const Link = styled.a`
-  color: var(--color-text);
-  text-decoration: none;
-  cursor: pointer;
+  '&:hover::before, &:focus::before': {
+    transformOrigin: '0% 50%',
+    transform: 'scale3d(1, 1, 1)',
+  },
 
-  ${underlineHoverTransition}
-
-  &:hover,
-  &:focus {
-    svg {
-      color: var(--color-primary);
-    }
-  }
-`;
+  '&:hover, &:focus': {
+    '& svg': {
+      color: 'var(--color-primary)',
+    },
+  },
+});
