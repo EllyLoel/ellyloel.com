@@ -5807,10 +5807,10 @@ gatsby-react-router-scroll@^5.7.0:
     "@babel/runtime" "^7.15.4"
     prop-types "^15.7.2"
 
-gatsby-remark-wiki-link@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-wiki-link/-/gatsby-remark-wiki-link-0.3.1.tgz#ad1b512c9b5c39992c63347eb780f1fa8753782b"
-  integrity sha512-H2hvoye6fTbX/OAKqZpqmUmAKhE3SYBRyfGR9Bf4agUEnQWkRHQKkCvV1VINteHmpH2nKdWJhX+ezvaCKIh8Xw==
+gatsby-remark-wiki-link@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-wiki-link/-/gatsby-remark-wiki-link-0.4.0.tgz#54bd124cd4b8079ebfe66b8eabb912597757126b"
+  integrity sha512-hQBUvt8EAygrWzUyFwB3fO7ItsRK+KQaUcn86zvoU4a4iOVYy76Jt2YAFrnGSQERm7AWkUJreOjGk8XlSiVHuA==
   dependencies:
     slugify "^1.4.6"
 
