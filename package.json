@@ -29,7 +29,7 @@
     "gatsby-plugin-image": "^2.7.0",
     "gatsby-plugin-manifest": "^4.2.0",
     "gatsby-plugin-mdx": "^3.7.1",
-    "gatsby-plugin-react-helmet": "^5.7.0",
+    "gatsby-plugin-react-helmet": "^5.8.0",
     "gatsby-plugin-react-svg": "^3.0.1",
     "gatsby-plugin-sharp": "^4.2.0",
     "gatsby-plugin-vercel": "^1.0.3",
