@@ -22,7 +22,7 @@
     "@tippyjs/react": "^4.2.6",
     "browser-monads": "^1.0.0",
     "framer-motion": "^5.5.5",
-    "gatsby": "^4.2.0",
+    "gatsby": "^4.8.1",
     "gatsby-plugin-catch-links": "^4.2.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-google-gtag": "^4.5.0",
