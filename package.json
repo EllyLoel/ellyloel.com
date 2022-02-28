@@ -21,7 +21,7 @@
     "@stitches/react": "^1.2.6",
     "@tippyjs/react": "^4.2.6",
     "browser-monads": "^1.0.0",
-    "framer-motion": "^5.5.5",
+    "framer-motion": "^6.2.8",
     "gatsby": "^4.8.1",
     "gatsby-plugin-catch-links": "^4.2.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
