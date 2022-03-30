@@ -5562,10 +5562,10 @@ gatsby-cli@^4.8.1:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^3.7.0, gatsby-core-utils@^3.8.1:
-  version "3.8.1"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.8.1.tgz#52ffe98966ca2f7f013f62fc0a67242cbfb38f6e"
-  integrity sha512-VuIRLVcgxi0leKT1fZvoNhjHn2DKIHdm8f0EqtDwIxeIVZLgtxBksVikZoAqRPhsSExC0YajGFJVBaV9fPADTg==
+gatsby-core-utils@^3.11.0, gatsby-core-utils@^3.7.0, gatsby-core-utils@^3.8.1:
+  version "3.11.0"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.11.0.tgz#cd78bf1a3fa89e201dd35a5d3a8c4029d7614a9d"
+  integrity sha512-ye8ULSmSdv27sOGu2g2qQiSXhxhlgkq/O+4p+yftDn+VeQMVRx/yWinhN/GfH7ahQq6mC0wYRehkbE4GK6Ga8g==
   dependencies:
     "@babel/runtime" "^7.15.4"
     ci-info "2.0.0"
@@ -5575,7 +5575,7 @@ gatsby-core-utils@^3.7.0, gatsby-core-utils@^3.8.1:
     fs-extra "^10.0.0"
     got "^11.8.3"
     import-from "^4.0.0"
-    lmdb "^2.1.7"
+    lmdb "^2.2.4"
     lock "^1.1.0"
     node-object-hash "^2.3.10"
     proper-lockfile "^4.1.2"
@@ -5662,16 +5662,16 @@ gatsby-plugin-image@^2.7.0:
     objectFitPolyfill "^2.3.5"
     prop-types "^15.7.2"
 
-gatsby-plugin-manifest@^4.2.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-4.7.0.tgz#8ee8fcddec51154c04ccfab1e36f78e7880e3438"
-  integrity sha512-jZsR7sqvJsxTm2J01ymPsCXlEoYw9duVQUR3oNy9VxHyuPOXctk2Cnp/vnWDZpQ6g+i7ha1RhyJEQgQEj1jhcQ==
+gatsby-plugin-manifest@^4.11.0:
+  version "4.11.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-4.11.0.tgz#d2c0f65886d4dd3d83c793c56b41f217364affd2"
+  integrity sha512-rkzq0v7bFtACW6u4/AVzyVmdDSAB6ge5IdZf29SBpHrEWD4SIWvjPzmj7UaMuhRS5MHluzUzOCzD7+He0sKHYg==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    gatsby-core-utils "^3.7.0"
-    gatsby-plugin-utils "^3.1.0"
+    gatsby-core-utils "^3.11.0"
+    gatsby-plugin-utils "^3.5.0"
     semver "^7.3.5"
-    sharp "^0.29.3"
+    sharp "^0.30.1"
 
 gatsby-plugin-mdx@^3.7.1:
   version "3.7.1"
@@ -5786,13 +5786,19 @@ gatsby-plugin-typescript@^4.8.1:
     "@babel/runtime" "^7.15.4"
     babel-plugin-remove-graphql-queries "^4.8.1"
 
-gatsby-plugin-utils@^3.1.0, gatsby-plugin-utils@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-3.2.0.tgz#2d5771ead692553c5faa2886ccb57f18cd1efa98"
-  integrity sha512-5zCd0RJnbpaYzKr8kGaGfuPj9Hygi3luiCN8bnN1zVnieaJlRsh+k7BF6ukuG+2qk7USjwQHxzKP9QqAVmOR4g==
+gatsby-plugin-utils@^3.2.0, gatsby-plugin-utils@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-3.5.0.tgz#3d470726141051fc95afeccebb9649e4916a03ca"
+  integrity sha512-049b5Gh0NazCWAtXvYbFQVS4gmlQqy5MX4/o44TRmzIFtUyPVKDmg9n2sAttHyDN61IogBXhmE4Y1y6dAE2QrA==
   dependencies:
     "@babel/runtime" "^7.15.4"
+    fs-extra "^10.0.0"
+    gatsby-core-utils "^3.11.0"
+    gatsby-sharp "^0.5.0"
+    graphql-compose "^9.0.7"
+    import-from "^4.0.0"
     joi "^17.4.2"
+    mime "^3.0.0"
 
 gatsby-plugin-vercel@^1.0.3:
   version "1.0.3"
@@ -5821,6 +5827,14 @@ gatsby-sharp@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/gatsby-sharp/-/gatsby-sharp-0.2.0.tgz#c4599cf676195edd5a75ab5ff600bf6b66818915"
   integrity sha512-JnvXcx77uT/m56sG86IDjFCsqzgB6JTcbwrKk4c1AjfEIvP0fGCsnDgIhdTri4PwnusQC8/ovUNAYaXQK5Yi9w==
+  dependencies:
+    "@types/sharp" "^0.29.5"
+    sharp "^0.30.1"
+
+gatsby-sharp@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/gatsby-sharp/-/gatsby-sharp-0.5.0.tgz#879d3c462eefa917cb3a50c6ec891951d9740f56"
+  integrity sha512-9wZS0ADZsKTCsU66sxIP/tCHgFaREyoYm53tepgtp/YSVWNrurx9/0kGf8XsFFY9OecrqIRNuk1cWe7XKCpbQA==
   dependencies:
     "@types/sharp" "^0.29.5"
     sharp "^0.30.1"
@@ -7541,10 +7555,10 @@ lmdb@2.2.1:
     ordered-binary "^1.2.4"
     weak-lru-cache "^1.2.2"
 
-lmdb@^2.1.7:
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/lmdb/-/lmdb-2.2.3.tgz#713ffa515c31e042808abf364b4aa0feaeaf6360"
-  integrity sha512-+OiHQpw22mBBxocb/9vcVNETqf0k5vgHA2r+KX7eCf8j5tSV50ZIv388iY1mnnrERIUhs2sjKQbZhPg7z4HyPQ==
+lmdb@^2.2.4:
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/lmdb/-/lmdb-2.2.6.tgz#a52ef533812b8abcbe0033fc9d74d215e7dfc0a0"
+  integrity sha512-UmQV0oZZcV3EN6rjcAjIiuWcc3MYZGWQ0GUYz46Ron5fuTa/dUow7WSQa6leFkvZIKVUdECBWVw96tckfEzUFQ==
   dependencies:
     msgpackr "^1.5.4"
     nan "^2.14.2"
@@ -8076,6 +8090,11 @@ mime@^2.4.4, mime@^2.4.6, mime@^2.5.2:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/mime/-/mime-2.6.0.tgz#a2a682a95cd4d0cb1d6257e28f83da7e35800367"
   integrity sha512-USPkMeET31rOMiarsBNIHZKLGgvKc/LrjofAnBlOttf5ajRvqiRA8QsenbcooctK6d6Ts6aqZXBA+XbkKthiQg==
+
+mime@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/mime/-/mime-3.0.0.tgz#b374550dca3a0c18443b0c950a6a58f1931cf7a7"
+  integrity sha512-jSCU7/VB1loIWBZe14aEYHU/+1UMEHoaO7qxCOVJOw9GgH72VAWppxNcjU+x9a2k3GSIBXNKxXQFqRvvZ7vr3A==
 
 mimic-fn@^2.1.0:
   version "2.1.0"
