@@ -1,13 +1,20 @@
 {
-  "globals": {
-    "__PATH_PREFIX__": true
-  },
-  "extends": ["eslint:recommended", "plugin:react/recommended", "react-app"],
-  "plugins": ["react", "prettier"],
-  "parser": "babel-eslint",
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier", "jsx-a11y", "storybook"],
+  "extends": [
+    "next",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:storybook/recommended",
+    "prettier"
+  ],
   "rules": {
+    "react/no-unescaped-entities": "off",
+    "no-console": "warn",
     "prettier/prettier": "error",
-    "no-unused-vars": "warn",
-    "react/prop-types": "off"
+    "no-unused-vars": "warn"
   }
 }
