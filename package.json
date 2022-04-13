@@ -34,7 +34,7 @@
     "gatsby-plugin-sharp": "^4.8.1",
     "gatsby-plugin-vercel": "^1.0.3",
     "gatsby-remark-wiki-link": "^0.4.0",
-    "gatsby-source-filesystem": "^4.3.0",
+    "gatsby-source-filesystem": "^4.12.1",
     "gatsby-transformer-markdown-references": "^0.1.8",
     "gatsby-transformer-sharp": "^4.2.0",
     "hamburger-react": "^2.4.1",
