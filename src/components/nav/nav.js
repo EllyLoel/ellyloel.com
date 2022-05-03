@@ -209,7 +209,7 @@ const NavSection = ({ siteTitle, color, navColor }) => {
             <i className="twa twa-studio-microphone"></i> Speaking
           </NavLink>
 
-          <NavLink link="/now/" navOpen={navOpen} setNavOpen={setNavOpen}>
+          <NavLink link="/now" navOpen={navOpen} setNavOpen={setNavOpen}>
             <i className="twa twa-spiral-calendar"></i> Timeline
           </NavLink>
         </ul>
