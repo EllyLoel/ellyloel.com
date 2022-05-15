@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { NoteMeta } from "@/src/api";
+import type { NoteMeta } from "../api";
 
 export default function Notes({ notes }: { notes: NoteMeta[] }) {
   return (
