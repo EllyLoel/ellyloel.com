@@ -2,6 +2,35 @@ import { globalCss } from "../../stitches.config";
 
 export const globalStyles = globalCss({
   /*
+    Setup custom fonts
+  */
+  "@font-face": [
+    {
+      fontFamily: "Tuppence",
+      src: 'local("Tuppence"), url("/fonts/TuppenceVariable.woff2") format("woff2 supports variations"), url("/fonts/TuppenceVariable.woff2") format("woff2-variations")',
+      fontWeight: "200 700",
+      fontDisplay: "swap",
+    },
+    {
+      fontFamily: "Pangea",
+      src: 'local("Pangea"), url("/fonts/PangeaVariable.woff2") format("woff2 supports variations"), url("/fonts/PangeaVariable.woff2") format("woff2-variations")',
+      fontWeight: "300 700",
+      fontDisplay: "swap",
+    },
+    {
+      fontFamily: "JetBrains Mono",
+      src: 'local("JetBrains Mono Regular"), url("/fonts/JetBrainsMonoRegular.woff2") format("woff2")',
+      fontWeight: "400",
+      fontDisplay: "auto",
+    },
+    {
+      fontFamily: "JetBrains Mono",
+      src: 'local("JetBrains Mono Bold"), url("/fonts/JetBrainsMonoBold.woff2") format("woff2")',
+      fontWeight: "700",
+      fontDisplay: "auto",
+    },
+  ],
+  /*
     Use a more-intuitive box-sizing model.
   */
   "*, *::before, *::after": {
@@ -24,8 +53,8 @@ export const globalStyles = globalCss({
   /*
     Allow percentage-based heights in the application
   */
-  ":where(html, body, #__next)": {
-    blockSize: "100%",
+  ":where(html, body, #__next, #root)": {
+    minBlockSize: "100%",
   },
   /*
     https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/
@@ -46,6 +75,16 @@ export const globalStyles = globalCss({
     lineHeight: "$fontLineheight3",
     WebkitFontSmoothing: "antialiased",
     fontFamily: "$body", // Set default font
+    fontVariationSettings: `
+      "wght" 400,
+      "ital" 0,
+      "XTDR" 0,
+      "APRT" 100,
+      "SPAC" 0,
+      "INKT" 0,
+      "SS01" 1,
+      "SS02" 0,
+      "SS03" 0`,
   },
   /*
     Improve media defaults
@@ -77,7 +116,7 @@ export const globalStyles = globalCss({
   },
   ":where(textarea)": { resize: "block" },
   ':where(input[type="checkbox"], input[type="radio"])': {
-    blockSize: "$size3",
+    minBlockSize: "$size3",
     inlineSize: "$size3",
   },
   /*
@@ -93,32 +132,48 @@ export const globalStyles = globalCss({
     isolation: "isolate",
   },
   /*
-    Setup custom fonts
-  */
-  "@font-face": [
-    {
-      fontFamily: "Tuppence",
-      fontStyle: "normal",
-      fontWeight: 700,
-      fontDisplay: "auto" /* or block, swap, fallback, optional */,
-      src: 'local("Tuppence"), url("/fonts/tuppence-variable.woff2") format("woff2")' /* will be preloaded */,
-      unicodeRange: "U+000-5FF" /* Latin glyphs */,
-    },
-    {
-      fontFamily: "JetBrains Mono",
-      fontStyle: "normal",
-      fontWeight: 400,
-      fontDisplay: "auto" /* or block, swap, fallback, optional */,
-      src: 'local("JetBrains Mono"), url("/fonts/JetBrainsMono-Regular.woff2") format("woff2")' /* will be preloaded */,
-    },
-  ],
-  /*
     Typography styles
   */
   ":where(h1, h2, h3, h4, h5, h6)": {
     fontFamily: "$heading",
     lineHeight: "$fontLineheight1",
     fontWeight: "$fontWeight9",
+    // https://css-tricks.com/almanac/properties/f/font-feature-settings/#aa-values
+    fontFeatureSettings: `
+      "liga" 0,
+      "aalt" 0,
+      "dlig" 0,
+      "onum" 0,
+      "lnum" 0,
+      "tnum" 0,
+      "zero" 0,
+      "frac" 0,
+      "sups" 0,
+      "subs" 0,
+      "smcp" 0,
+      "c2sc" 0,
+      "case" 0,
+      "hlig" 0,
+      "calt" 0,
+      "salt" 0,
+      "titl" 0,
+      "swsh" 0,
+      "hist" 0,
+      "ornm" 0,
+      "kern" 0,
+      "locl" 0,
+      "rlig" 0,
+      "medi" 0,
+      "init" 0,
+      "isol" 0,
+      "fina" 0,
+      "mark" 0,
+      "mkmk" 0,
+      "ss01" 0,
+      "ss02" 0,
+      "ss03" 0,
+      "ss04" 0,
+      "ss05" 0`,
   },
   ":where(h1)": {
     fontSize: "$fontSize8",
@@ -173,10 +228,10 @@ export const globalStyles = globalCss({
   */
   ":where(a)": {
     "&:where([href])": {
-      textDecorationColor: "$indigo2",
+      textDecorationColor: "$accentLine",
 
       "&:where(:visited)": {
-        textDecorationColor: "$grape2",
+        textDecorationColor: "$neutralLine",
       },
     },
 
@@ -237,13 +292,13 @@ export const globalStyles = globalCss({
   },
   ":where(:not(pre) > code)": {
     padding: "$size1 $size2",
-    background: "$surface2",
+    background: "$accentBgSubtle",
     borderRadius: "$radius2",
   },
   ":where(kbd, var)": {
     padding: "$size1 $size2",
     borderWidth: "$borderSize1",
-    backgroundColor: "$surface2",
+    backgroundColor: "$accentBgSubtle",
     borderRadius: "$radius2",
   },
   /*
@@ -277,7 +332,7 @@ export const globalStyles = globalCss({
   ":where(hr)": {
     marginBlock: "$sizeFluid5",
     height: "$borderSize2",
-    backgroundColor: "$surface3",
+    backgroundColor: "$accentLine",
   },
   /*
 		Figure styles
@@ -311,7 +366,7 @@ export const globalStyles = globalCss({
 		Details and summary styles
 	*/
   ":where(summary)": {
-    background: "$surface3",
+    background: "$accentBg",
     padding: "$size2 $size3",
     margin: "calc($size2 * -1) calc($size3 * -1)",
     borderRadius: "$radius2",
@@ -319,7 +374,7 @@ export const globalStyles = globalCss({
   ":where(details)": {
     paddingInline: "$size3",
     paddingBlock: "$size2",
-    background: "$surface2",
+    background: "$accentBgActive",
     borderRadius: "$radius2",
   },
   ":where(details[open] > summary)": {
@@ -337,20 +392,20 @@ export const globalStyles = globalCss({
 		Del (strike through) styles
 	*/
   ":where(del)": {
-    background: "$red9",
-    color: "$red2",
+    background: "$neutralBgSubtle",
+    color: "$neutralText",
   },
   /*
 		Ins (del replacement) styles
 	*/
   ":where(ins)": {
-    background: "$green9",
-    color: "$green1",
+    background: "$accentBgSubtle",
+    color: "$accentText",
   },
   /*
 		Abbreviation styles
 	*/
   ":where(abbr)": {
-    textDecorationColor: "$blue5",
+    textDecorationColor: "$accentLine",
   },
 });
