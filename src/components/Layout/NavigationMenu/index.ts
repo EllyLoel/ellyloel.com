@@ -1,9 +1,12 @@
-export { default as NavMenu } from "./NavMenu";
+export { default } from "./NavMenu";
+export { default as MobileNavMenu } from "./MobileNavMenu";
+export { default as DesktopNavMenu } from "./DesktopNavMenu";
 export { default as NavMenuContent } from "./NavMenuContent";
 export { default as NavMenuIndicator } from "./NavMenuIndicator";
 export { default as NavMenuItem } from "./NavMenuItem";
 export { default as NavMenuLink } from "./NavMenuLink";
 export { default as NavMenuList } from "./NavMenuList";
+export { default as NavMenuRoot } from "./NavMenuRoot";
 export { default as NavMenuSub } from "./NavMenuSub";
 export { default as NavMenuTrigger } from "./NavMenuTrigger";
 export { default as NavMenuViewport } from "./NavMenuViewport";

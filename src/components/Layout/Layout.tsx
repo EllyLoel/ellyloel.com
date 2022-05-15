@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 
-import { styled, darkTheme } from "../../stitches.config";
-import { globalStyles } from "./globalStyles";
-import { ThemeContext } from "./ThemeContext";
-import { NavMenu } from "./NavigationMenu";
+import { styled, darkTheme } from "../../../stitches.config";
+import { globalStyles } from "../globalStyles";
+import { ThemeContext } from "../ThemeContext";
+import NavMenu from "./NavigationMenu";
+import Footer from "./Footer";
 
 const BackgroundDots = styled("div", {
   inset: "0",
@@ -13,10 +14,10 @@ const BackgroundDots = styled("div", {
   $$dotSize: "1px",
   $$dotSpace: "22px",
   backgroundImage: `
-    linear-gradient(90deg, $surface1 calc($$dotSpace - $$dotSize), transparent 1%), 
-    linear-gradient($surface1 calc($$dotSpace - $$dotSize), transparent 1%)`,
+    linear-gradient(90deg, $accentBase calc($$dotSpace - $$dotSize), transparent 1%), 
+    linear-gradient($accentBase calc($$dotSpace - $$dotSize), transparent 1%)`,
   backgroundPosition: "center",
-  backgroundColor: "$text2",
+  backgroundColor: "$accentSolid",
   backgroundSize: "$$dotSpace $$dotSpace",
   backgroundRepeat: "repeat",
 });
@@ -27,10 +28,16 @@ const BackgroundGradients = styled("div", {
   zIndex: "-1", // Behind everything but above the background dots (DOM order)
 
   backgroundImage: `
-    radial-gradient(circle at 15% 50%, hsl($brandHsl / 25%), hsl($brandHsl / 0%) 25%),
-    radial-gradient(circle at 85% 30%, hsl($brandHsl / 25%), hsl($brandHsl / 0%) 25%)`,
+    radial-gradient(circle at 15% 50%, $tealA3, $tealA1 25%),
+    radial-gradient(circle at 85% 30%, $tealA3, $tealA1 25%)`,
   backgroundSize: "100vw 100vh",
   backgroundRepeat: "no-repeat",
+});
+
+const Header = styled("header", {
+  "@laptopAndUp": {
+    marginBlockStart: "120px",
+  },
 });
 
 const Main = styled("main", {
@@ -52,12 +59,14 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <BackgroundDots /> {/* Behind everything */}
-      <BackgroundGradients />{" "}
+      <BackgroundGradients />
       {/* Behind everything but above the background dots */}
       {/* Rest of page content */}
-      <NavMenu />
+      <Header>
+        <NavMenu />
+      </Header>
       <Main className={className}>{children}</Main>
-      {/* TODO: add footer */}
+      {/* <Footer /> */}
     </>
   );
 };

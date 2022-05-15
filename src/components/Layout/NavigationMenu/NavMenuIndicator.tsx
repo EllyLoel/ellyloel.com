@@ -1,4 +1,4 @@
-import { styled, keyframes } from "../../../stitches.config";
+import { styled, keyframes } from "../../../../stitches.config";
 import { Indicator } from "@radix-ui/react-navigation-menu";
 
 const fadeIn = keyframes({

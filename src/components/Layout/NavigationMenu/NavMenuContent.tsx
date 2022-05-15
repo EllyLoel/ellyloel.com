@@ -1,4 +1,4 @@
-import { styled, keyframes } from "../../../stitches.config";
+import { styled, keyframes } from "../../../../stitches.config";
 import { Content } from "@radix-ui/react-navigation-menu";
 
 const enterFromLeft = keyframes({
@@ -23,8 +23,9 @@ const exitToRight = keyframes({
 
 const NavMenuContent = styled(Content, {
   position: "absolute",
-  top: 0,
+  bottom: 0,
   left: 0,
+  right: 0,
 
   "@media (prefers-reduced-motion: no-preference)": {
     animationDuration: "250ms",
