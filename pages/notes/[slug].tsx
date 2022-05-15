@@ -6,8 +6,8 @@ import { serialize } from "next-mdx-remote/serialize";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeHighlight from "rehype-highlight";
-import { getNoteFromSlug, getSlugs, NoteMeta } from "@/src/api";
-import YouTube from "@/src/components/YouTube";
+import { getNoteFromSlug, getSlugs, NoteMeta } from "../../src/api";
+import YouTube from "../../src/components/YouTube";
 import "highlight.js/styles/atom-one-dark.css";
 
 interface MDXNote {

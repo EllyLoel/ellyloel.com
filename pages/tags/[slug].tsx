@@ -1,7 +1,7 @@
 import type { GetStaticProps, GetStaticPaths } from "next";
 import Head from "next/head";
-import { getAllNotes, NoteMeta } from "@/src/api";
-import Notes from "@/src/components/Notes";
+import { getAllNotes, NoteMeta } from "../../src/api";
+import Notes from "../../src/components/Notes";
 
 export default function TagPage({
   slug,
