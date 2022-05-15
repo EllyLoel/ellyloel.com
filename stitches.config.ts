@@ -1,15 +1,23 @@
 import { createStitches } from "@stitches/react";
 import type * as Stitches from "@stitches/react";
-// @ts-ignore
-import OPColors from "open-props/src/colors";
-// @ts-ignore
-import OPColorsHSL from "open-props/src/colors-hsl";
+import {
+  teal,
+  tealDark,
+  tealA,
+  tealDarkA,
+  sage,
+  sageDark,
+  sageA,
+  sageDarkA,
+} from "@radix-ui/colors";
 // @ts-ignore
 import OPFonts from "open-props/src/fonts";
 // @ts-ignore
 import OPSizes from "open-props/src/sizes";
 // @ts-ignore
 import OPShadows from "open-props/src/shadows";
+// @ts-ignore
+import OPBorders from "open-props/src/borders";
 
 import { BREAKPOINTS } from "./src/constants";
 
@@ -59,8 +67,24 @@ const splitFontVariables = (Fonts: { [key: string]: string }) => {
   };
 };
 
-const Colors = CSSVarObjToJSVarObj(OPColors);
-const ColorsHSL = CSSVarObjToJSVarObj(OPColorsHSL);
+const splitBorderVariables = (Borders: { [key: string]: string }) => {
+  const BorderSizes: { [key: string]: string } = {};
+  const BorderRadii: { [key: string]: string } = {};
+
+  for (const borderObjectKey in Borders) {
+    if (borderObjectKey.includes("BorderSize"))
+      BorderSizes[borderObjectKey] = Borders[borderObjectKey];
+
+    if (borderObjectKey.includes("radius"))
+      BorderRadii[borderObjectKey] = Borders[borderObjectKey];
+  }
+
+  return {
+    BorderSizes,
+    BorderRadii,
+  };
+};
+
 const Fonts = CSSVarObjToJSVarObj(OPFonts);
 const {
   FontSizes,
@@ -71,6 +95,8 @@ const {
 } = splitFontVariables(Fonts);
 const Sizes = CSSVarObjToJSVarObj(OPSizes);
 const Shadows = CSSVarObjToJSVarObj(OPShadows);
+const Borders = CSSVarObjToJSVarObj(OPBorders);
+const { BorderSizes, BorderRadii } = splitBorderVariables(Borders);
 
 export const {
   styled,
@@ -84,23 +110,40 @@ export const {
 } = createStitches({
   theme: {
     colors: {
-      ...Colors,
-      ...ColorsHSL,
+      ...teal,
+      ...tealA,
+      ...sage,
+      ...sageA,
 
-      brand: "$teal6",
-      brandHsl: "$teal6Hsl",
+      accentBase: "$teal1",
+      accentBgSubtle: "$teal2",
+      accentBg: "$teal3",
+      accentBgHover: "$teal4",
+      accentBgActive: "$teal5",
+      accentLine: "$teal6",
+      accentBorder: "$teal7",
+      accentBorderHover: "$teal8",
+      accentSolid: "$teal9",
+      accentSolidHover: "$teal10",
+      accentText: "$teal11",
+      accentTextContrast: "$teal12",
 
-      text1: "$gray8",
-      text2: "$gray7",
-
-      surface1: "$gray2",
-      surface2: "$gray0",
-      surface3: "$gray1",
-      surface4: "$gray3",
+      neutralBase: "$sage1",
+      neutralBgSubtle: "$sage2",
+      neutralBg: "$sage3",
+      neutralBgHover: "$sage4",
+      neutralBgActive: "$sage5",
+      neutralLine: "$sage6",
+      neutralBorder: "$sage7",
+      neutralBorderHover: "$sage8",
+      neutralSolid: "$sage9",
+      neutralSolidHover: "$sage10",
+      neutralText: "$sage11",
+      neutralTextContrast: "$sage12",
     },
     fonts: {
       heading: "Tuppence, ui-serif, serif",
-      body: '"Source Sans Pro", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif',
+      body: "Pangea, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif",
       code: '"JetBrains Mono", Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace, SF Mono, Monaco, Droid Sans Mono, Source Code Pro, monospace',
       ...FontFamilies,
     },
@@ -108,10 +151,10 @@ export const {
     fontWeights: FontWeights,
     lineHeights: FontLineheights,
     letterSpacings: FontLetterspacings,
-    radii: Sizes,
+    radii: BorderRadii,
     sizes: Sizes,
     space: Sizes,
-    borderWidths: Sizes,
+    borderWidths: BorderSizes,
     shadows: Shadows,
   },
   media: {
@@ -151,18 +194,35 @@ type CSS = Stitches.CSS<typeof config>;
 
 export const darkTheme = createTheme({
   colors: {
-    ...Colors,
-    ...ColorsHSL,
+    ...tealDark,
+    ...tealDarkA,
+    ...sageDark,
+    ...sageDarkA,
 
-    brand: "$teal3",
-    brandHsl: "$teal3Hsl",
+    accentBase: "$teal1",
+    accentBgSubtle: "$teal2",
+    accentBg: "$teal3",
+    accentBgHover: "$teal4",
+    accentBgActive: "$teal5",
+    accentLine: "$teal6",
+    accentBorder: "$teal7",
+    accentBorderHover: "$teal8",
+    accentSolid: "$teal9",
+    accentSolidHover: "$teal10",
+    accentText: "$teal11",
+    accentTextContrast: "$teal12",
 
-    text1: "$gray1",
-    text2: "$gray3",
-
-    surface1: "$gray9",
-    surface2: "$gray8",
-    surface3: "$gray7",
-    surface4: "$gray6",
+    neutralBase: "$sage1",
+    neutralBgSubtle: "$sage2",
+    neutralBg: "$sage3",
+    neutralBgHover: "$sage4",
+    neutralBgActive: "$sage5",
+    neutralLine: "$sage6",
+    neutralBorder: "$sage7",
+    neutralBorderHover: "$sage8",
+    neutralSolid: "$sage9",
+    neutralSolidHover: "$sage10",
+    neutralText: "$sage11",
+    neutralTextContrast: "$sage12",
   },
 });
