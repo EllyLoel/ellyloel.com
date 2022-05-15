@@ -1,10 +1,21 @@
-import React from "react";
+import React, { FC } from "react";
 import { styled } from "../../stitches.config";
-import itemStyles from "./NavigationMenu/ItemStyles";
 
 const StyledLink = styled("a", {
-  ...itemStyles,
+  padding: "8px 12px",
+  userSelect: "none",
+  borderRadius: 4,
+  color: "$brand",
   textDecoration: "none",
+
+  "&:focus-visible": {
+    position: "relative",
+    outline: "2px solid hsl($brandHsl / 0.6)",
+  },
+
+  "&:hover": {
+    backgroundColor: "hsl($brandHsl / 0.125)",
+  },
 
   "&[data-active], &:hover": {
     textDecoration: "underline",
@@ -20,7 +31,7 @@ type LinkProps = {
   icon: boolean;
 };
 
-const Link: React.FunctionComponent<LinkProps> = React.forwardRef(
+const Link: FC<LinkProps> = React.forwardRef(
   ({ children, href, icon, ...props }, forwardedRef) => (
     // @ts-ignore Not sure why it's saying ref should be href as there is already a href
     <StyledLink href={href} ref={forwardedRef} {...props}>
