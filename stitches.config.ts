@@ -162,6 +162,7 @@ export const {
     tabletAndUp: `(min-width: ${BREAKPOINTS.tabletMin / 16}rem)`,
     laptopAndUp: `(min-width: ${BREAKPOINTS.laptopMin / 16}rem)`,
     desktopAndUp: `(min-width: ${BREAKPOINTS.desktopMin / 16}rem)`,
+    lgDesktopAndUp: `(min-width: ${BREAKPOINTS.desktopLgMin / 16}rem)`,
 
     // Capability media queries
     touch: "(hover: none) and (pointer: coarse)",
