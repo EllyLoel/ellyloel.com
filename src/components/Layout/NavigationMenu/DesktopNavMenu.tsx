@@ -3,17 +3,7 @@ import { FaTwitter, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 import { styled } from "../../../../stitches.config";
 import Logo from "../../Logo";
-import {
-  NavMenuContent,
-  NavMenuIndicator,
-  NavMenuItem,
-  NavMenuLink,
-  NavMenuList,
-  NavMenuRoot,
-  NavMenuSub,
-  NavMenuTrigger,
-  NavMenuViewport,
-} from "./index";
+import { NavMenuItem, NavMenuLink, NavMenuList, NavMenuRoot } from "./index";
 
 const NavMask = styled("div", {
   position: "fixed",
@@ -21,7 +11,7 @@ const NavMask = styled("div", {
   top: 0,
   inlineSize: "100%",
   minBlockSize: "fit-content",
-  maskImage: "url(./images/swoosh.svg)",
+  maskImage: "url(./images/swoosh-desktop.svg)",
   maskSize: "100vw",
   maskRepeat: "no-repeat",
   WebkitMaskRepeat: "no-repeat",

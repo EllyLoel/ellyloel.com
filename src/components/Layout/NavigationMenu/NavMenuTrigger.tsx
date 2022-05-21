@@ -14,8 +14,8 @@ const NavMenuTrigger = styled(Trigger, {
   outlineOffset: 0,
 
   "&:hover, &:focus": {
-    outlineOffset: 2,
     outline: "2px solid currentColor",
+    outlineOffset: 2,
 
     "& > svg": {
       color: "inherit",
