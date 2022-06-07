@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Ref } from "react";
 import { FaTwitter, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 import { styled } from "../../../../stitches.config";
@@ -6,25 +6,34 @@ import Logo from "../../Logo";
 import { NavMenuItem, NavMenuLink, NavMenuList, NavMenuRoot } from "./index";
 
 const NavMask = styled("div", {
-  position: "fixed",
-  zIndex: 1,
-  top: 0,
-  inlineSize: "100%",
-  minBlockSize: "fit-content",
-  maskImage: "url(./images/swoosh-desktop.svg)",
-  maskSize: "100vw",
-  maskRepeat: "no-repeat",
-  WebkitMaskRepeat: "no-repeat",
-  maskPosition: "bottom",
-  WebkitMaskPosition: "bottom",
+  display: "none",
 
-  "@supports (backdrop-filter: blur(8px))": {
-    backdropFilter: "blur(8px)",
+  "@laptopAndUp": {
+    display: "revert",
+    position: "fixed",
+    zIndex: 1,
+    top: 0,
+    inlineSize: "100%",
+    minBlockSize: "fit-content",
+    maskImage: "url(./images/swoosh-desktop.svg)",
+    maskSize: "100vw",
+    maskRepeat: "no-repeat",
+    WebkitMaskRepeat: "no-repeat",
+    maskPosition: "bottom",
+    WebkitMaskPosition: "bottom",
+
+    "@supports (backdrop-filter: blur(8px))": {
+      backdropFilter: "blur(8px)",
+    },
   },
 });
 
-const DesktopNavMenu = () => (
-  <NavMask>
+const DesktopNavMenu = ({
+  navRef,
+}: {
+  navRef: React.RefObject<HTMLDivElement>;
+}) => (
+  <NavMask ref={navRef}>
     <NavMenuRoot id="nav">
       <NavMenuList>
         <NavMenuItem>

@@ -3,7 +3,7 @@ import { styled } from "../../../../stitches.config";
 
 const NavMenuRoot = styled(Root, {
   alignItems: "center",
-  backgroundColor: "$tealA9",
+  backgroundColor: "$tealA10",
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
@@ -36,7 +36,7 @@ const NavMenuRoot = styled(Root, {
   },
 
   "@supports (backdrop-filter: blur(8px))": {
-    backgroundColor: "$tealA7",
+    backgroundColor: "$tealA8",
   },
 });
 

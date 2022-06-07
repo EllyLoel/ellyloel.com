@@ -107,7 +107,7 @@ const RadixLink = styled(Link, {
 
 type NavMenuLinkProps = {
   to: string;
-  label: string;
+  label?: string;
   children: React.ReactNode;
 };
 
@@ -122,10 +122,10 @@ const NavMenuLink: FC<NavMenuLinkProps> = ({
   const isLogo = to === "/";
   const isIcon = label !== "" && to.slice(0) !== "/";
 
-  const Content = (children as string) ? (
-    children
-  ) : (
+  const Content = label ? (
     <AccessibleIcon label={label}>{children}</AccessibleIcon>
+  ) : (
+    children
   );
 
   const InternalLink = (
