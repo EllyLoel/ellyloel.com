@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useState, Ref } from "react";
 import { FaTwitter, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 import { styled } from "../../../../stitches.config";
@@ -6,7 +6,6 @@ import Logo from "../../Logo";
 import AccessibleIcon from "../../AccessibleIcon";
 import {
   NavMenuContent,
-  NavMenuIndicator,
   NavMenuItem,
   NavMenuLink,
   NavMenuList,
@@ -36,6 +35,10 @@ const NavMask = styled("div", {
   "@supports (backdrop-filter: blur(8px))": {
     backdropFilter: "blur(8px)",
   },
+
+  "@laptopAndUp": {
+    display: "none",
+  },
 });
 
 const Icon = styled("svg", {
@@ -63,7 +66,11 @@ const ViewportPosition = styled("div", {
   width: "100%",
 });
 
-const MobileNavMenu = () => {
+const MobileNavMenu = ({
+  navRef,
+}: {
+  navRef: React.RefObject<HTMLDivElement>;
+}) => {
   const triggerRef = useRef(null);
   const [open, setOpen] = useState(false);
 
@@ -77,11 +84,11 @@ const MobileNavMenu = () => {
   };
 
   return (
-    <NavMask data-open={open ? "true" : "false"}>
+    <NavMask data-open={open ? "true" : "false"} ref={navRef}>
       <NavMenuRoot id="nav">
         <NavMenuList css={{ justifyContent: "space-between" }}>
           <NavMenuItem>
-            <NavMenuLink to="/" label="Home">
+            <NavMenuLink to="/" label="Go to the homepage">
               <Logo />
             </NavMenuLink>
           </NavMenuItem>
@@ -117,14 +124,14 @@ const MobileNavMenu = () => {
                   }}
                 >
                   <NavMenuItem>
-                    <NavMenuLink to="/about" label="">
+                    <NavMenuLink to="/about">
                       <i className="twa twa-woman-technologist-medium-light-skin-tone"></i>{" "}
                       About
                     </NavMenuLink>
                   </NavMenuItem>
 
                   <NavMenuItem>
-                    <NavMenuLink to="/garden" label="">
+                    <NavMenuLink to="/garden">
                       <i className="twa twa-herb"></i> Digital garden
                     </NavMenuLink>
                   </NavMenuItem>

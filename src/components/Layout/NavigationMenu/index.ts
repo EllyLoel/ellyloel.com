@@ -1,4 +1,3 @@
-export { default } from "./NavMenu";
 export { default as MobileNavMenu } from "./MobileNavMenu";
 export { default as DesktopNavMenu } from "./DesktopNavMenu";
 export { default as NavMenuContent } from "./NavMenuContent";
