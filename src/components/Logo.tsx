@@ -9,7 +9,7 @@ const StyledLogo = styled("span", {
 });
 
 const Logo = () => {
-  return <StyledLogo>&lt;e//y&gt;</StyledLogo>;
+  return <StyledLogo aria-hidden>&lt;e//y&gt;</StyledLogo>;
 };
 
 export default Logo;
