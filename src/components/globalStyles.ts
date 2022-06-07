@@ -55,6 +55,7 @@ export const globalStyles = globalCss({
   */
   ":where(html, body, #__next, #root)": {
     minBlockSize: "100%",
+    blockSize: "100%",
   },
   /*
     https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/
@@ -72,19 +73,45 @@ export const globalStyles = globalCss({
     Improve text rendering
   */
   ":where(body)": {
-    lineHeight: "$fontLineheight3",
-    WebkitFontSmoothing: "antialiased",
     fontFamily: "$body", // Set default font
     fontVariationSettings: `
-      "wght" 400,
-      "ital" 0,
-      "XTDR" 0,
-      "APRT" 100,
-      "SPAC" 0,
-      "INKT" 0,
-      "SS01" 1,
-      "SS02" 0,
-      "SS03" 0`,
+    "wght" 400,
+    "ital" 0,
+    "XTDR" 0,
+    "APRT" 100,
+    "SPAC" 0,
+    "INKT" 0,
+    "SS01" 1,
+    "SS02" 0,
+    "SS03" 0`,
+    lineHeight: "$fontLineheight3",
+    WebkitFontSmoothing: "antialiased",
+  },
+  ":where(strong)": {
+    fontWeight: "$fontWeight7",
+    fontVariationSettings: '"wght" 700',
+  },
+  /*
+    Setup page grid layout
+  */
+  ":where(#__next)": {
+    blockSize: "unset",
+    $$breathingRoom: "16px",
+    display: "grid",
+    gridTemplateColumns: "1fr min(75ch, 100%) 1fr",
+    gridTemplateRows: "auto 1fr auto",
+    rowGap: "$size11",
+    paddingInline: "$$breathingRoom",
+
+    "& > *": {
+      gridColumn: 2,
+    },
+  },
+  ":where(.full-bleed)": {
+    gridColumn: "1 / -1",
+    marginInline: `calc(
+      $$breathingRoom * -1
+    )`,
   },
   /*
     Improve media defaults
@@ -176,21 +203,21 @@ export const globalStyles = globalCss({
       "ss05" 0`,
   },
   ":where(h1)": {
-    fontSize: "$fontSize8",
+    fontSize: "$fontSizeFluid3",
     maxInlineSize: "$sizeHeader1",
   },
   ":where(h2)": {
-    fontSize: "$fontSize6",
+    fontSize: "$fontSizeFluid2",
     maxInlineSize: "$sizeHeader2",
   },
-  ":where(h3)": { fontSize: "$fontSize5" },
-  ":where(h4)": { fontSize: "$fontSize4" },
+  ":where(h3)": { fontSize: "$fontSizeFluid1" },
+  ":where(h4)": { fontSize: "$fontSizeFluid0" },
   ":where(h5)": { fontSize: "$fontSize3" },
   ":where(h3, h4, h5, h6, dt)": {
     maxInlineSize: "$sizeHeader3",
   },
   ":where(p, ul, ol, dl, h6)": {
-    fontSize: "$fontSize2",
+    fontSize: "$fontSize3",
   },
   /*
     Global transitions

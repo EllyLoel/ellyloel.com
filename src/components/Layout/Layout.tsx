@@ -1,14 +1,16 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 
 import { styled, darkTheme } from "../../../stitches.config";
 import { globalStyles } from "../globalStyles";
 import { ThemeContext } from "../ThemeContext";
-import NavMenu from "./NavigationMenu";
+import { MobileNavMenu } from "./NavigationMenu";
+import { DesktopNavMenu } from "./NavigationMenu";
 import Footer from "./Footer";
+import useSize from "../../hooks/useSize.hook";
 
 const BackgroundDots = styled("div", {
-  inset: "0",
-  position: "absolute",
+  gridColumn: "1 / -1",
+  gridRow: "1 / -1",
   zIndex: "-1", // Behind everything
 
   $$dotSize: "1px",
@@ -23,31 +25,35 @@ const BackgroundDots = styled("div", {
 });
 
 const BackgroundGradients = styled("div", {
-  inset: "0",
-  position: "absolute",
+  gridColumn: "1 / 4",
+  gridRow: "1 / 4",
   zIndex: "-1", // Behind everything but above the background dots (DOM order)
 
   backgroundImage: `
     radial-gradient(circle at 15% 50%, $tealA3, $tealA1 25%),
     radial-gradient(circle at 85% 30%, $tealA3, $tealA1 25%)`,
-  backgroundSize: "100vw 100vh",
+  backgroundSize: "100%",
   backgroundRepeat: "no-repeat",
 });
 
 const Header = styled("header", {
-  "@laptopAndUp": {
-    marginBlockStart: "120px",
-  },
+  gridRow: "1 / 2",
 });
 
 const Main = styled("main", {
-  position: "relative",
+  gridRow: "2 / 3",
   minBlockSize: "100%",
+  position: "relative",
+  display: "grid",
+  gap: "$size12",
+  color: "$accentTextContrast",
 });
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   globalStyles();
   const { colorMode } = useContext(ThemeContext);
+  const navRef = useRef<HTMLDivElement>(null);
+  const size = useSize(navRef);
 
   const className =
     colorMode === "dark" ||
@@ -58,15 +64,19 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <>
-      <BackgroundDots /> {/* Behind everything */}
-      <BackgroundGradients />
+      <BackgroundDots className="full-bleed" /> {/* Behind everything */}
+      <BackgroundGradients className="full-bleed" />
       {/* Behind everything but above the background dots */}
       {/* Rest of page content */}
-      <Header>
-        <NavMenu />
+      <Header
+        className="full-bleed"
+        css={{ blockSize: size ? size["height"] : 0 }}
+      >
+        <MobileNavMenu navRef={navRef} />
+        <DesktopNavMenu navRef={navRef} />
       </Header>
       <Main className={className}>{children}</Main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
