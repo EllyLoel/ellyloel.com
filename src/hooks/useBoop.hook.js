@@ -6,7 +6,7 @@
 import { useEffect, useState, useCallback } from 'react';
 import { useSpring } from 'react-spring';
 
-import usePrefersReducedMotion from './use-prefers-reduced-motion.hook';
+import usePrefersReducedMotion from './usePrefersReducedMotion.hook';
 
 function useBoop({
   x = 0,
