@@ -5945,13 +5945,13 @@ gatsby-plugin-google-fonts@^1.0.1:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-fonts/-/gatsby-plugin-google-fonts-1.0.1.tgz#d71054f7bf207b9a8da227380369e18e6f4e0201"
   integrity sha512-p1NVkn27GUnDA5qHM+Z4cCcLCJIardzZXMon3640sT4xuL/AZJbsx3HEt2KY/5oZu0UXIkytkxzV2Da4rQeUIg==
 
-gatsby-plugin-google-gtag@^4.5.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-4.7.0.tgz#b6e4b24a8161ef64c9178e2de23f612d2744a787"
-  integrity sha512-h+ZZp49lEaKKB367bmgYPVhTXwwW1s5zZq4Gm1EBJSuOx3Obo17TXXedbxIAQhggiHfIRvt+J/dr5yzcDxlzZQ==
+gatsby-plugin-google-gtag@^4.16.0:
+  version "4.16.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-4.16.0.tgz#09cd2573ce5032eaf770910f6be2598ca1810a24"
+  integrity sha512-9F+rKY91FbGGi4DFYdV0F+scWoTOeQFJaS4Q0nIS4KTNPg/A2dyI/hTyFDfuwqZYbjtgFcqGfpm1cMgCkxBPeg==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    minimatch "^3.0.4"
+    minimatch "^3.1.2"
 
 gatsby-plugin-image@^2.7.0:
   version "2.7.0"
@@ -8516,7 +8516,7 @@ minimatch@3.0.4:
   dependencies:
     brace-expansion "^1.1.7"
 
-minimatch@^3.0.4:
+minimatch@^3.0.4, minimatch@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.1.2.tgz#19cd194bfd3e428f049a70817c038d89ab4be35b"
   integrity sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==
