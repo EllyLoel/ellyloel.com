@@ -2,7 +2,7 @@ export const debounce = (callback: Function, wait: number) => {
   let timeoutId: ReturnType<typeof setTimeout>;
 
   return (...args: any[]) => {
-    window.clearTimeout(timeoutId);
+    // window.clearTimeout(timeoutId);
 
     timeoutId = setTimeout(() => {
       callback.apply(null, args);

@@ -6,6 +6,11 @@ import Notes from "../src/components/Notes";
 import Logo from "../src/components/Logo";
 import AccessibleIcon from "../src/components/AccessibleIcon";
 
+const Grid = styled("div", {
+  display: "grid",
+  gap: "$size12",
+});
+
 const HeroContainer = styled("div", {
   display: "grid",
   gridTemplateColumns: "1fr 1fr",
@@ -27,7 +32,7 @@ const Small = styled("small", {
 
 export default function Home({ notes }: { notes: NoteMeta[] }) {
   return (
-    <>
+    <Grid>
       <HeroContainer>
         <h1>
           <Small>
@@ -44,7 +49,7 @@ export default function Home({ notes }: { notes: NoteMeta[] }) {
         <h2>Notes from my digital garden</h2>
         <Notes notes={notes} />
       </NotesContainer>
-    </>
+    </Grid>
   );
 }
 

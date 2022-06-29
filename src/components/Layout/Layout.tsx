@@ -7,6 +7,7 @@ import { MobileNavMenu } from "./NavigationMenu";
 import { DesktopNavMenu } from "./NavigationMenu";
 import Footer from "./Footer";
 import useSize from "../../hooks/useSize.hook";
+import useHasMounted from "../../hooks/useHasMounted.hook";
 
 const BackgroundDots = styled("div", {
   gridColumn: "1 / -1",
@@ -43,9 +44,6 @@ const Header = styled("header", {
 const Main = styled("main", {
   gridRow: "2 / 3",
   minBlockSize: "100%",
-  position: "relative",
-  display: "grid",
-  gap: "$size12",
   color: "$accentTextContrast",
 });
 
@@ -53,14 +51,26 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   globalStyles();
   const { colorMode } = useContext(ThemeContext);
   const navRef = useRef<HTMLDivElement>(null);
+  const hasMounted = useHasMounted();
   const size = useSize(navRef);
 
-  const className =
-    colorMode === "dark" ||
-    (colorMode === "system" &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ? darkTheme
-      : "";
+  let className = "";
+
+  if (hasMounted) {
+    switch (colorMode) {
+      case "light":
+        className = "";
+        break;
+      case "dark":
+        className = darkTheme;
+        break;
+      case "system":
+        className = window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? darkTheme
+          : "";
+        break;
+    }
+  }
 
   return (
     <>

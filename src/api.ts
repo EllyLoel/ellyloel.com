@@ -39,6 +39,14 @@ export interface NoteMeta {
   title: string;
   tags: string[];
   date: string;
+  outboundReferences: {
+    slug: string;
+    title: string;
+  }[];
+  inboundReferences: {
+    slug: string;
+    title: string;
+  }[];
 }
 
 export const getNoteFromSlug = (slug: string): Note => {
@@ -54,6 +62,8 @@ export const getNoteFromSlug = (slug: string): Note => {
       title: data.title ?? slug,
       tags: (data.tags ?? []).sort(),
       date: (data.date ?? new Date()).toString(),
+      outboundReferences: data.outboundReferences ?? [],
+      inboundReferences: data.outboundReferences ?? [],
     },
   };
 };

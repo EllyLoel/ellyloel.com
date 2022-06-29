@@ -62,10 +62,28 @@ export const globalStyles = globalCss({
   */
   ":where(html)": {
     WebkitTextSizeAdjust: "none",
+    scrollbarColor: "$accentLine $accentBg",
+    scrollbarWidth: "thin",
 
     "@motionOK": {
       scrollBehavior: "smooth",
     },
+  },
+  "::-webkit-scrollbar": {
+    width: "12px",
+    backgroundColor: "$accentBg",
+  },
+  "::-webkit-scrollbar-track": {
+    borderRadius: "3px",
+    backgroundColor: "transparent",
+  },
+  "::-webkit-scrollbar-thumb": {
+    borderRadius: "99999px",
+    backgroundColor: "$accentLine",
+    border: "2px solid $accentBg",
+  },
+  "::-webkit-scrollbar-thumb:hover": {
+    backgroundColor: "$accentBorder",
   },
   /*
     Typographic tweaks!
@@ -376,18 +394,30 @@ export const globalStyles = globalCss({
   /*
 		Blockquote
 	*/
-  ":where(blockquote, :not(blockquote) > cite)": {
-    borderInlineStartWidth: "$borderSize3",
-  },
   ":where(blockquote)": {
+    background: "$tealA4",
+    border: "none",
+    borderRadius: "$radius3",
+    borderInlineStartWidth: "$borderSize3",
     display: "grid",
     gap: "$size3",
-    paddingBlock: "$size3",
-    paddingInline: "$size4",
-    maxInlineSize: "$sizeContent2",
+    padding: "$size6",
+    marginBlock: "$size6",
+
+    "& > :where(p)": {
+      fontSize: "$fontSize4",
+      fontStyle: "italic",
+      fontVariationSettings: "'wght' 300",
+      lineHeight: "$fontLineheight1",
+    },
+
+    "& :where(cite)": {
+      fontStyle: "normal",
+    },
   },
-  ":where(:not(blockquote) > cite)": {
-    paddingInlineStart: "$size2",
+  ":where(figure > blockquote, figure > blockquote + figcaption)": {
+    placeSelf: "start",
+    margin: 0,
   },
   /*
 		Details and summary styles
