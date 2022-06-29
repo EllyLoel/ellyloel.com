@@ -27,28 +27,30 @@ const Sitemap = () => {
   return (
     <Container>
       <Heading>Sitemap</Heading>
-      <List>
-        <li>
-          <NextLink href="/" passHref>
-            <Link>Home</Link>
-          </NextLink>
-        </li>
-        <li>
-          <NextLink href="/about" passHref>
-            <Link>About</Link>
-          </NextLink>
-        </li>
-        <li>
-          <NextLink href="/digital-garden" passHref>
-            <Link>Digital garden</Link>
-          </NextLink>
-        </li>
-        <li>
-          <NextLink href="/sitemap-0.xml" passHref>
-            <Link>Sitemap.xml</Link>
-          </NextLink>
-        </li>
-      </List>
+      <nav>
+        <List>
+          <li>
+            <NextLink href="/" passHref>
+              <Link>Home</Link>
+            </NextLink>
+          </li>
+          <li>
+            <NextLink href="/about" passHref>
+              <Link>About</Link>
+            </NextLink>
+          </li>
+          <li>
+            <NextLink href="/garden" passHref>
+              <Link>Digital garden</Link>
+            </NextLink>
+          </li>
+          <li>
+            <NextLink href="/sitemap-0.xml" passHref>
+              <Link>Sitemap.xml</Link>
+            </NextLink>
+          </li>
+        </List>
+      </nav>
     </Container>
   );
 };
