@@ -23,3 +23,7 @@ netlify/functions/serverless/*
 !netlify/functions/serverless/index.js
 netlify/functions/dynamic/*
 !netlify/functions/dynamic/index.js
+
+# Obsidian
+.obsidian/workspace
+.obsidian/workspaces.json
