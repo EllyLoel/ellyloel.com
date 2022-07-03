@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "src/uses.md",
+            "file": "src/index.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -70,7 +70,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "src/uses.md",
+            "file": "src/index.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -87,7 +87,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "src/uses.md"
+            "file": "src/index.md"
           }
         }
       }
@@ -96,6 +96,7 @@
   },
   "active": "a52e507b6425c4fc",
   "lastOpenFiles": [
+    "src/index.md",
     "src/uses.md",
     "bookmarks/Zero to 60 in Software Development.md",
     "bookmarks/Unexplained underachievement.md",
@@ -104,7 +105,6 @@
     "bookmarks/Strong will.md",
     "bookmarks/Solidifying what you learn.md",
     "bookmarks/Restlessness & Woolgathering.md",
-    "bookmarks/Interface design patterns checklist.md",
-    "bookmarks/Intentional Career Building.md"
+    "bookmarks/Interface design patterns checklist.md"
   ]
 }
