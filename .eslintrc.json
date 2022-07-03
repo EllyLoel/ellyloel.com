@@ -1,16 +1,7 @@
 {
   "root": true,
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "prettier", "jsx-a11y", "storybook"],
-  "extends": [
-    "next",
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:jsx-a11y/recommended",
-    "plugin:storybook/recommended",
-    "prettier"
-  ],
+  "plugins": ["prettier"],
+  "extends": ["eslint:recommended", "prettier"],
   "rules": {
     "react/no-unescaped-entities": "off",
     "no-console": "warn",

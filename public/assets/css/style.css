@@ -1,0 +1,14 @@
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a;
+    color: #fff;
+  }
+
+  :visited {
+    color: hsl(300deg 59% 62%);
+  }
+
+  :link {
+    color: hsl(190deg 71% 71%);
+  }
+}
