@@ -7,152 +7,96 @@
         "id": "a52e507b6425c4fc",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "src/uses.md",
+            "mode": "source",
+            "backlinks": true,
+            "source": false
+          }
         }
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "ff37e82c86bc59f3",
-    "type": "split",
+    "id": "111b0c9b8856cfad",
+    "type": "mobile-drawer",
     "children": [
       {
-        "id": "c3c75c42513711dc",
-        "type": "tabs",
-        "dimension": 60.826032540675854,
-        "children": [
-          {
-            "id": "2c638c8d73a2f1ec",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {}
-            }
-          },
-          {
-            "id": "01d791b4b5d01f5f",
-            "type": "leaf",
-            "state": {
-              "type": "search",
-              "state": {
-                "query": "reward",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": true,
-                "extraContext": false,
-                "sortOrder": "byCreatedTime"
-              }
-            }
-          }
-        ]
+        "id": "878427da5566129e",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {}
+        }
       },
       {
-        "id": "df3d9e1e489c238b",
-        "type": "tabs",
-        "dimension": 39.17396745932415,
-        "children": [
-          {
-            "id": "0391d82ca2721aec",
-            "type": "leaf",
-            "state": {
-              "type": "localgraph",
-              "state": {
-                "options": {
-                  "collapse-filter": true,
-                  "search": "",
-                  "localJumps": 2,
-                  "localBacklinks": true,
-                  "localForelinks": true,
-                  "localInterlinks": true,
-                  "showTags": false,
-                  "showAttachments": false,
-                  "hideUnresolved": false,
-                  "collapse-color-groups": true,
-                  "colorGroups": [
-                    {
-                      "query": "path:/",
-                      "color": {
-                        "a": 1,
-                        "rgb": 14725458
-                      }
-                    }
-                  ],
-                  "collapse-display": true,
-                  "showArrow": true,
-                  "textFadeMultiplier": -1.3,
-                  "nodeSizeMultiplier": 1,
-                  "lineSizeMultiplier": 1,
-                  "collapse-forces": true,
-                  "centerStrength": 0.518713248970312,
-                  "repelStrength": 10,
-                  "linkStrength": 1,
-                  "linkDistance": 250,
-                  "scale": 0.8058084426995672,
-                  "close": true
-                }
-              }
-            }
+        "id": "7cde596ac2f8c295",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
           }
-        ]
+        }
+      },
+      {
+        "id": "df6caf1a3f2fa049",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
       }
     ],
-    "direction": "horizontal",
-    "width": 230.5
+    "currentTab": 0
   },
   "right": {
-    "id": "d9a6ca6a7ccb6297",
-    "type": "split",
+    "id": "6a432f3bc5324663",
+    "type": "mobile-drawer",
     "children": [
       {
-        "id": "1bd690b99aae4190",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "b8cb0b17eec3b106",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "byModifiedTime",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": false
-              }
-            }
-          },
-          {
-            "id": "ea1b455e4e4c377e",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              }
-            }
-          },
-          {
-            "id": "4b2828d14ec56556",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {}
-            }
+        "id": "cdfe9de0a30d8428",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "src/uses.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
           }
-        ],
-        "currentTab": 2
+        }
+      },
+      {
+        "id": "311ef6872d883734",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "src/uses.md"
+          }
+        }
       }
     ],
-    "direction": "horizontal",
-    "width": 251.83328247070312
+    "currentTab": 0
   },
   "active": "a52e507b6425c4fc",
   "lastOpenFiles": [
+    "src/uses.md",
     "bookmarks/Zero to 60 in Software Development.md",
     "bookmarks/Unexplained underachievement.md",
     "bookmarks/Trouble with time management.md",
@@ -161,7 +105,6 @@
     "bookmarks/Solidifying what you learn.md",
     "bookmarks/Restlessness & Woolgathering.md",
     "bookmarks/Interface design patterns checklist.md",
-    "bookmarks/Intentional Career Building.md",
-    "bookmarks/How to get experience as a software engineer.md"
+    "bookmarks/Intentional Career Building.md"
   ]
 }
