@@ -7,13 +7,8 @@
         "id": "a52e507b6425c4fc",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "bookmarks/Zero to 60 in Software Development.md",
-            "mode": "source",
-            "backlinks": true,
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -64,7 +59,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "bookmarks/Zero to 60 in Software Development.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -121,7 +115,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "bookmarks/Zero to 60 in Software Development.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "byModifiedTime",
@@ -148,9 +141,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "bookmarks/Zero to 60 in Software Development.md"
-              }
+              "state": {}
             }
           }
         ],
