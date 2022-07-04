@@ -1,5 +1,8 @@
 ---
 title: ADHD
+eleventyNavigation:
+	key: ADHD
+	parent: Digital garden
 ---
 
 The worst acronym in the world. <i className="twa twa-upside-down-face"></i>

@@ -1,6 +1,8 @@
 ---
 layout: base.njk
 title: Speaking
+eleventyNavigation:
+	key: Speaking
 ---
 
 ## Events
