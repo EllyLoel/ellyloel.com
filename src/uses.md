@@ -1,6 +1,8 @@
 ---
 layout: base.njk
 title: Uses
+eleventyNavigation:
+	key: Uses
 ---
 
 ## Hardware

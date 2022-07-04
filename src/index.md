@@ -1,6 +1,8 @@
 ---
 layout: base.njk
 title: Home
+eleventyNavigation:
+	key: Home
 ---
 
 Hi, I’m <e//y>

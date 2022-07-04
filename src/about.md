@@ -1,6 +1,8 @@
 ---
 layout: base.njk
 title: About
+eleventyNavigation:
+	key: About
 ---
 
 ## Me

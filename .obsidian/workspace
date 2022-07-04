@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
+            "file": "src/garden/Altruism.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -81,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md"
+                "file": "src/garden/Altruism.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
+                "file": "src/garden/Altruism.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,15 +110,15 @@
   },
   "active": "6e15c37a17d0c46d",
   "lastOpenFiles": [
-    "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
-    "src/blog/Holy shit there's so much CSS.md",
-    "src/bookmarks/Zero to 60 in Software Development.md",
-    "src/bookmarks/Unexplained underachievement.md",
-    "src/bookmarks/Trouble with time management.md",
-    "src/bookmarks/Trouble organising and planning.md",
-    "src/bookmarks/Strong will.md",
-    "src/bookmarks/Solidifying what you learn.md",
-    "src/bookmarks/Restlessness & Woolgathering.md",
-    "src/bookmarks/Interface design patterns checklist.md"
+    "src/garden/Altruism.md",
+    "src/garden/ADHD.md",
+    "src/projects/a-real-af-project.md",
+    "src/about.md",
+    "src/blog.md",
+    "src/garden.md",
+    "src/index.md",
+    "src/now.md",
+    "src/projects.md",
+    "src/speaking.md"
   ]
 }
