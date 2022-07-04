@@ -7,6 +7,13 @@
   resolved "https://registry.yarnpkg.com/@11ty/dependency-tree/-/dependency-tree-2.0.1.tgz#b3c8fa6c91c4a29257e70dd19d26cca75cde89d2"
   integrity sha512-5R+DsT9LJ9tXiSQ4y+KLFppCkQyXhzAm1AIuBWE/sbU0hSXY5pkhoqQYEcPJQFg/nglL+wD55iv2j+7O96UAvg==
 
+"@11ty/eleventy-navigation@^0.3.3":
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy-navigation/-/eleventy-navigation-0.3.3.tgz#cefc09cfad42ed62e2c098bb8ae2fc6e181d48f1"
+  integrity sha512-O5C/NbDeTBnHQvDYZDr0Va6a7mEzifPUL1XRiqyKIAQqXZJsX/2K13PFLhX7t6kQRT1w6D0TSQyiT8skXbgWKA==
+  dependencies:
+    dependency-graph "^0.11.0"
+
 "@11ty/eleventy-plugin-inclusive-language@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@11ty/eleventy-plugin-inclusive-language/-/eleventy-plugin-inclusive-language-1.0.3.tgz#0a35845eae414e577f36eaaeedcf16829371e9b1"

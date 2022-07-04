@@ -2,8 +2,6 @@
 title: Productivity system
 ---
 
-# {{ title }}
-
 ## 1. Reference/File system
 These are the processes and systems for storing both **_physical documents_** as well as **_digital documents and information_**.
 

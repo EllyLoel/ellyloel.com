@@ -2,8 +2,6 @@
 title: Holy shit there's so much CSS
 ---
 
-# {{ title }}
-
 [CSS-for-JS Devs](https://courses.joshwcomeau.com/css-for-js)
 
 # Fundamentals

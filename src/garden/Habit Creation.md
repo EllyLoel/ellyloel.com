@@ -2,8 +2,6 @@
 title: Habit Creation
 ---
 
-# {{ title }}
-
 ## The Habit loop
 
 ### 1. Decide on a cue

@@ -2,9 +2,6 @@
 title: Password managers
 ---
 
-# {{ title }}
----
-
 - Popular password managers:
 	- [Bitwarden](https://protonmail.com/support/knowledge-base/bitwarden-with-protonmail/)
 	- [1Password](https://protonmail.com/support/knowledge-base/1password-with-protonmail/)

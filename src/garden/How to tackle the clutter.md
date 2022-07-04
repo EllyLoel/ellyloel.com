@@ -2,8 +2,6 @@
 title: How to tackle the clutter
 ---
 
-# {{ title }}
-
 We might have done a lot but we haven’t actually gotten anything we wanted/needed done.
 
 1. Divide a piece of paper up into boxes, one for each room.

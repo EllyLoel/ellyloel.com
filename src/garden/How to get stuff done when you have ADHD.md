@@ -2,8 +2,6 @@
 title: How to get stuff done when you have ADHD
 ---
 
-# {{ title }}
-
 now or not now
 
 no focus or hyper focus

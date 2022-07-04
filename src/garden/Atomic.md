@@ -2,8 +2,6 @@
 title: Atomic
 ---
 
-# {{ title }}
-
 <figure>
   > A single irreducible unit or component in a larger system.
   <figcaption>

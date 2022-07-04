@@ -2,8 +2,6 @@
 title: Finding the perfect app
 ---
 
-# {{ title }}
-
 I've tried just about every productivity app under the sun, and I still haven't found "the one".
 Currently, I'm using ClickUp, but once again I'm thinking about switching 🤦🏼‍♀️
 I've put together a list of my criteria for the "perfect" app for my needs:

@@ -2,8 +2,6 @@
 title: How to give your brain the stimulation it needs
 ---
 
-# {{ title }}
-
 ADHD brains need a lot of stimulation
 
 We don’t spend hours on social media because we think it’s a great use of our time, we do it because we’re looking for the stimulation we need to function

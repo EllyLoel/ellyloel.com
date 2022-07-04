@@ -2,8 +2,6 @@
 title: Zettelkasten
 ---
 
-# {{ title }}
-
 > The zettelkasten is a method of note-taking and personal knowledge management
 
 The direct translation of zettelkasten is slip-box, a place to keep & sort your notes.
