@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- specify language: http://www.w3.org/TR/html401/struct/dirlang.html#h-8.1 -->
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- specify viewport: https://developers.google.com/speed/docs/insights/ConfigureViewport -->
+		<title>Holy shit there&#39;s so much CSS | Elly Loel</title>
+
+		<!-- Include stylesheets here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
+		<link rel="stylesheet" href="/assets/css/style.css">
+	</head>
+	<body>
+		<header role="banner" class="site-header">
+			<a class="menu-link a11y-kb-only" href="#content">Jump to content</a>
+
+			<nav role="navigation">
+				<a class="site-logo" href="/" rel="home" title="to homepage">
+					<!-- link to home: http://microformats.org/wiki/rel-home -->
+					<h1>
+						&lt;e//y&gt;
+					</h1>
+				</a>
+			</nav>
+
+			<h1>Holy shit there&#39;s so much CSS</h1>
+		</header>
+
+		<!-- tabindex fixes focus issue: https://benmyers.dev/blog/skip-links/#tldr -->
+		<main id="content" role="main" tabindex="-1">
+			<h1>Holy shit there's so much CSS</h1>
+<p><a href="https://courses.joshwcomeau.com/css-for-js">CSS-for-JS Devs</a></p>
+<h1>Fundamentals</h1>
+<h2>Pseudo-classes</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">Article</a>
+<a href="https://open.spotify.com/episode/4oQ23OfgIMUsrJ4iuV9mG5?si=6115eb8b26ea4532">Podcast</a></p>
+<h2>Color</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">Article</a>
+<a href="https://open.spotify.com/episode/5WcgqRbtXg6j6N9GEO96ve?si=164f888ac2ae466f">Podcast 1/2</a>
+<a href="https://open.spotify.com/episode/2wdKgTolHCMXS1YD24WMHH?si=4d9ccfb6b9724522">Podcast 2/2</a>
+<a href="https://player.vimeo.com/video/609861139">Video</a></p>
+<ul>
+<li>Use HSL! (or LAB YCH coming soon)</li>
+<li>Use HSL w/ slash notation not HSLA as it's legacy (unless you need IE support)</li>
+</ul>
+<h2>Units</h2>
+<h3>Which unit should I use when?</h3>
+<ul>
+<li>For typography, I generally use <code>rem</code>, because it has important accessibility benefits. For example, users who set their own default font size in their browser settings only get that font size if we use <code>rem</code>.</li>
+<li>For box model properties (<code>padding</code>, <code>border</code>, <code>margin</code>) I usually use <code>px</code> as it's more intuitive than <code>rem</code>, and there isn't a clear accessibility win if you use <code>rem</code>.</li>
+<li>For <code>color</code>, I prefer <code>hsl</code> as mentioned earlier.</li>
+<li>For <code>width</code>/<code>height</code> (<code>inline-size</code>/<code>block-size</code>) it's not as clear cut, as it depends whether you're after an absolute or relative size. - <a href="https://drafts.csswg.org/css-values/#absolute-lengths">Absolute</a>: <code>px</code> is generally preferred because everyone understands what it is***** unlike <code>pc</code>, <code>Q</code>, etc. - <a href="https://drafts.csswg.org/css-values/#relative-lengths">Relative</a>: Is tricky as it depends what your element is and you want it to be relative to (content, parent element, viewport, etc.) For example, an element that contains text the <code>width</code>, or <code>inline-size</code> for non-right-to-left languages, should usually use between 45-90<code>ch</code>.
+<a href="https://player.vimeo.com/video/526674427">Why <code>em</code> actually isn't a good choice for UX</a>
+<code>em</code> should be reserved for the very rare cases when you actually do want a property to scale directly with the font size.
+<blockquote>
+<ul>
+<li><code>1px</code> isn't actually always one physical pixel on your screen, this is for many reasons one of which being `devicePixelRatio`. If your tiny phone with a resolution of 2532×1170 mapped <code>1px</code> to one physical pixel you wouldn't be able to read anything!</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h1><strong>Rendering Logic</strong></h1>
+<h2>Logical properties/values</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties">Article</a></p>
+<h2>Border</h2>
+<p>If you don't specify a <code>border-color</code>, it'll inherit the font's <code>color</code> by default. This isn't well-known, but it can be very useful in cases where those things should be synchronised!</p>
+<h2>Stacking contexts</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">Article</a>
+<a href="https://github.com/andreadev-it/stacking-contexts-inspector">Stacking contexts inspector</a></p>
+<h1><strong>Responsive and Behavioural CSS</strong></h1>
+<h2>Pixels</h2>
+<p>The iPhone 12 has a native resolution of 2532×1170 pixels—for context, this is more than most large desktop monitors!
+So to account for this mobile devices have a <code>device pixel ratio</code>.
+The ratio between the physical LED pixels on the device, and the &quot;theoretical&quot; pixels we use in CSS. On my iPhone, this number is 3. This means that a 10px length will actually be 30px long. Each software pixel actually corresponds to 9 hardware pixels:
+<img src="https://courses.joshwcomeau.com/cfj-mats/hardware-to-software-px.png" alt="">
+(In reality, <a href="http://alvyray.com/Memos/CG/Microsoft/6_pixel.pdf">pixels aren't tiny squares</a>, but for our purposes, we can pretend they are.)</p>
+<pre><code>.box {
+  /*
+    This CSS will ACTUALLY draw a
+    150×150 box on a modern iPhone.
+  */
+  width: 50px;
+  height: 50px;
+  background: pink;
+}
+</code></pre>
+<h2>Media queries</h2>
+<p><a href="https://polypane.app/blog/the-complete-guide-to-css-media-queries/#upcoming-media-query-features">Article</a></p>
+<h1>Typography and Images</h1>
+<p>Images are inline elements &quot;magic space&quot;</p>
+<p>Variable fonts are the future</p>
+<h1><strong>CSS Grid and Flexbox</strong></h1>
+<p>Flex for 1 dimension and Grid for 2 dimensions.</p>
+<p>Gap 👏</p>
+<p>Subgrid (<em>soon™️)</em></p>
+<h1><strong>Animations</strong></h1>
+<h2>Transitions</h2>
+<p>Reach for <code>transition</code> when your CSS will change as a result of some application state or user action.</p>
+<p>I use it when I want to smooth out an otherwise harsh transition between values.</p>
+<h2>Keyframes</h2>
+<p>If an animation needs to run immediately when the page loads or the component mounts, it's easiest to use <code>@keyframes</code>.</p>
+<p>There are some things that only <code>@keyframes</code> can do:</p>
+<ul>
+<li>
+<p>Looped animations</p>
+</li>
+<li>
+<p>Multi-step animations</p>
+</li>
+<li>
+<p>pauseable animations</p>
+</li>
+</ul>
+<h2>JS libraries</h2>
+<p><a href="https://motion.dev/">Motion One</a></p>
+<p><a href="https://www.framer.com/motion/">Framer Motion</a></p>
+<p><a href="https://react-spring.io/">React Spring</a></p>
+<p><a href="https://greensock.com/gsap/">GreenSock GSAP</a></p>
+<h1><strong>Little Big Details</strong></h1>
+<h2>Increase touch targets</h2>
+<p>For users using corse pointers (a.k.a mobile users) the minimum recommended size (by Apple) for touch targets is <code>44px²</code>. So ideally you should go through and make sure that all interactive elements are at least that size, but a smart and lazy person thought &quot;no, I don't wanna do that!&quot; and decided to come up with a way to calculate it automatically using <code>calc</code> and <code>min</code>: <a href="https://codepen.io/third774/pen/XWgXZRY">https://codepen.io/third774/pen/XWgXZRY</a>.</p>
+<h1><strong>Generative art with CSS</strong></h1>
+<p><a href="https://css-doodle.com/">CSS doodle</a></p>
+<p><a href="https://tabbied.com/select-artwork">Tabbied</a></p>
+<h2><strong>Backdrop filters</strong></h2>
+<h2><strong>Layered shadows</strong></h2>
+<h2><strong>No more dull gradients</strong></h2>
+<h2><strong>Scroll snapping</strong></h2>
+<h1><strong>New CSS coming in 2022</strong></h1>
+<p><a href="https://www.smashingmagazine.com/2022/03/new-css-features-2022">Article</a></p>
+<p>Lots of amazing new CSS features coming this year, specifically:</p>
+<p>- Container queries</p>
+<ul>
+<li>
+<p><code>:has()</code></p>
+</li>
+<li>
+<p><code>@when/@else</code></p>
+</li>
+<li>
+<p><code>accent-color</code></p>
+</li>
+<li>
+<p>New CSS Color Functions</p>
+</li>
+<li>
+<p>Cascade layers</p>
+</li>
+<li>
+<p>Subgrid</p>
+</li>
+<li>
+<p><code>@scroll-timeline</code></p>
+</li>
+<li>
+<p>Nesting</p>
+</li>
+</ul>
+
+		</main>
+
+		<footer role="contentinfo" class="site-footer"></footer>
+
+		<!-- Include scripts here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
+	</body>
+</html>
