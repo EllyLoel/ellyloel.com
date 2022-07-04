@@ -1,5 +1,7 @@
 ---
 title: How to get stuff done when you have ADHD
+eleventyNavigation:
+	key: How to get stuff done when you have ADHD
 ---
 
 now or not now
@@ -19,6 +21,7 @@ boundaries are important!
 however long you think it will take you, double it
 
 ---
+
 # References
 
 1. [How to get stuff done when you have ADHD](https://www.youtube.com/watch?v=YLkOZhROvA4)

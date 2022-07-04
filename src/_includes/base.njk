@@ -22,14 +22,16 @@
 					</h1>
 				</a>
 
-				{% set navPages = collections.all | eleventyNavigation %}
+				{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+
+				{# {% set navPages = collections.all | eleventyNavigation %}
 				<ul>
 					{%- for entry in navPages %}
 						<li{% if entry.url == page.url %} class="my-active-class"{% endif %}>
 							<a href="{{ entry.url | url }}">{{ entry.title }}</a>
 						</li>
 					{%- endfor %}
-				</ul>
+				</ul> #}
 			</nav>
 
 			<h1>{{ title }}</h1>

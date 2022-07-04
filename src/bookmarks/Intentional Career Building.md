@@ -1,5 +1,7 @@
 ---
 title: Intentional Career Building
+eleventyNavigation:
+  key: Intentional Career Building
 ---
 
 1. [Intentional Career Building](https://kentcdodds.com/blog/intentional-career-building) blog
