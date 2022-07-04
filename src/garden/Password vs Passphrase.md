@@ -2,10 +2,7 @@
 title: Password vs Passphrase
 ---
 
-# {{ title }}
----
-
-![](https://protonmail.com/blog/wp-content/uploads/2019/03/passwords_blog_protonmail.png)
+![[src/_assets/img/XKCD passwords.png]]
 
 - What is a passphrase?
 	- While everybody knows what is a password, fewer people know about passphrases. A passphrase is a kind of password that uses a series of words, separated by spaces or not (it doesn’t really matter). “correcthorsebatterystaple” is the passphrase in the comic. Although passphrases often contain more characters than passwords do, passphrases contain fewer “components” (four words instead of, say, 12 random characters). This makes passphrases easier to remember, typically by using a [mnemonic device](https://en.wikipedia.org/wiki/Mnemonic).

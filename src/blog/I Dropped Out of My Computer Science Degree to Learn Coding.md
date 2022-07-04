@@ -2,8 +2,6 @@
 title: I Dropped Out of My Computer Science Degree to Learn Coding
 ---
 
-# {{ title }}
-
 Well hello there! My name is [Elly Loel](https://ellyloel.com/). I'm a developer, designer and writer, currently working as a junior developer at Portable!
 
 ![Lulu our black cat sitting behind my laptop with code open poking her eyes over looking at the camera](https://cdn.hashnode.com/res/hashnode/image/upload/v1655637610371/vKLY7GibS.png)_Lulu trying her very best to distract me._

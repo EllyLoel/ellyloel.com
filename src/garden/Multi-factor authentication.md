@@ -2,9 +2,6 @@
 title: Multi-factor authentication
 ---
 
-# {{ title }}
----
-
 - The most common types of MFA use:
 	- A one-time verification code that is sent to a phone number or email address
 	- The answer to a security question, such as the first concert you attended or the place you were born

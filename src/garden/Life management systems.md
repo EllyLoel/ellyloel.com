@@ -2,8 +2,6 @@
 title: Life management systems
 ---
 
-# {{ title }}
-
 ## Requirements
 - Searchable
 - Free form/unstructured/mind map/whiteboard

@@ -3,10 +3,22 @@ layout: base.njk
 title: What I'm Doing Now
 ---
 
-# {{ title }}
-
 An on & off log of what I'm currently doing/interested in. Slower paced than a twitter feed but less permanent then an [about](/#about) page.
 [Now pages](https://nownownow.com/about) are becoming more common, you should make one for yourself!
+
+## July , 2022
+
+## June , 2022
+
+## May , 2022
+
+## April , 2022
+
+## March , 2022
+
+## February , 2022
+
+## January, 2022
 
 ## December, 2021
 

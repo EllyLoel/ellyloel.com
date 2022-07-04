@@ -2,8 +2,6 @@
 title: Atomic Habits by James Clear
 ---
 
-# {{ title }}
-
 - 1% Increases build up.
     - If you made a 1% increase everyday for a year you'd be 37 times better by the end of the year.
     - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FEllys-Life%2FsCYH8hSydj.png?alt=media&token=6c67f0ad-a07a-4046-90cb-4c4d68edadbd)

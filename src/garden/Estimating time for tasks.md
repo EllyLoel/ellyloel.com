@@ -2,8 +2,6 @@
 title: Estimating time for tasks
 ---
 
-# {{ title }}
-
 Set an alarm to go off every 10 minutes or which ever chunk of time works best for you.
 
 Account for breaks

@@ -1,4 +1,5 @@
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = (eleventyConfig) => {
   // Copy the assets folder to the output
@@ -6,6 +7,7 @@ module.exports = (eleventyConfig) => {
 
   // Plugins
   eleventyConfig.addPlugin(inclusiveLangPlugin);
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   return {
     dir: {
