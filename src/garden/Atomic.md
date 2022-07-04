@@ -1,5 +1,7 @@
 ---
 title: Atomic
+eleventyNavigation:
+	key: Atomic
 ---
 
 <figure>

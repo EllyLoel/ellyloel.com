@@ -1,3 +1,6 @@
 {
-  "layout": "base.njk"
+  "layout": "base.njk",
+  "eleventyNavigation": {
+    "parent": "Digital garden"
+  }
 }

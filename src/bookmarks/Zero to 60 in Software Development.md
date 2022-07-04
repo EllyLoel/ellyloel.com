@@ -1,5 +1,7 @@
 ---
 title: Zero to 60 in Software Development
+eleventyNavigation:
+  key: Zero to 60 in Software Development
 ---
 
 1. [Zero to 60 in Software Development: How to Jumpstart Your Career](https://www.youtube.com/watch?v=-qPh6I2hfjw) Video

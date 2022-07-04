@@ -1,5 +1,7 @@
 ---
 title: How to tackle the clutter
+eleventyNavigation:
+	key: How to tackle the clutter
 ---
 
 We might have done a lot but we haven’t actually gotten anything we wanted/needed done.
@@ -12,6 +14,7 @@ We might have done a lot but we haven’t actually gotten anything we wanted/nee
 6. While cleaning, if you find a distraction place it aside to come back to once you’re done
 
 ---
+
 # References
 
 1. [Overwhelm Part One - How to tackle the clutter](https://www.youtube.com/watch?v=7TGWeblZ0c8)
