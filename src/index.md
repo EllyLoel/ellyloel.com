@@ -4,5 +4,3 @@ title: Home
 ---
 
 # {{ title }}
-
-test v2!
