@@ -4,14 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "a52e507b6425c4fc",
+        "id": "f6d59f7ed3a94d45",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
             "file": "YAML is strict.md",
             "mode": "source",
-            "backlinks": true,
+            "backlinks": false,
             "source": false
           }
         }
@@ -20,91 +20,105 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "111b0c9b8856cfad",
-    "type": "mobile-drawer",
+    "id": "c021613b76a2f9d9",
+    "type": "split",
     "children": [
       {
-        "id": "878427da5566129e",
-        "type": "leaf",
-        "state": {
-          "type": "file-explorer",
-          "state": {}
-        }
-      },
-      {
-        "id": "7cde596ac2f8c295",
-        "type": "leaf",
-        "state": {
-          "type": "search",
-          "state": {
-            "query": "",
-            "matchingCase": false,
-            "explainSearch": false,
-            "collapseAll": false,
-            "extraContext": false,
-            "sortOrder": "alphabetical"
+        "id": "70e732cbc5e6cf0a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0fe22ccfefd19f6a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "80e202d18d0f953b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "df6caf1a3f2fa049",
-        "type": "leaf",
-        "state": {
-          "type": "tag",
-          "state": {
-            "sortOrder": "frequency",
-            "useHierarchy": true
-          }
-        }
+        ]
       }
     ],
-    "currentTab": 0
+    "direction": "horizontal",
+    "width": 300
   },
   "right": {
-    "id": "6a432f3bc5324663",
-    "type": "mobile-drawer",
+    "id": "84b304f5dd126125",
+    "type": "split",
     "children": [
       {
-        "id": "cdfe9de0a30d8428",
-        "type": "leaf",
-        "state": {
-          "type": "backlink",
-          "state": {
-            "file": "YAML is strict.md",
-            "collapseAll": false,
-            "extraContext": false,
-            "sortOrder": "alphabetical",
-            "showSearch": false,
-            "searchQuery": "",
-            "backlinkCollapsed": false,
-            "unlinkedCollapsed": true
+        "id": "1d6099cfd0fb2889",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "406535350840703b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "185612779993f727",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "YAML is strict.md"
+              }
+            }
+          },
+          {
+            "id": "fa830d8894ba351b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "YAML is strict.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "311ef6872d883734",
-        "type": "leaf",
-        "state": {
-          "type": "outline",
-          "state": {
-            "file": "YAML is strict.md"
-          }
-        }
+        ]
       }
     ],
-    "currentTab": 0
+    "direction": "horizontal",
+    "width": 300
   },
-  "active": "a52e507b6425c4fc",
+  "active": "f6d59f7ed3a94d45",
   "lastOpenFiles": [
     "YAML is strict.md",
-    "src/index.md",
-    "src/uses.md",
-    "bookmarks/Zero to 60 in Software Development.md",
-    "bookmarks/Unexplained underachievement.md",
-    "bookmarks/Trouble with time management.md",
-    "bookmarks/Trouble organising and planning.md",
-    "bookmarks/Strong will.md",
-    "bookmarks/Solidifying what you learn.md",
-    "bookmarks/Restlessness & Woolgathering.md"
+    "src/projects/Modern CSS reset.md",
+    "src/projects.md",
+    "src/now.md",
+    "src/speaking.md",
+    "node_modules/@types/cors/README.md",
+    "node_modules/bs-recipes/recipes/gulp.ruby.sass/desc.md",
+    "node_modules/encodeurl/README.md",
+    "node_modules/fs-extra/docs/emptyDir.md",
+    "src/garden/ADHD.md"
   ]
 }
