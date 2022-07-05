@@ -14,8 +14,5 @@ module.exports = (eleventyConfig) => {
       input: "src",
       output: "public",
     },
-    dataTemplateEngine: "njk",
-    markdownTemplateEngine: "njk",
-    htmlTemplateEngine: "njk",
   };
 };

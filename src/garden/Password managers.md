@@ -1,7 +1,5 @@
 ---
 title: Password managers
-eleventyNavigation:
-	key: Password managers
 ---
 
 - Popular password managers:

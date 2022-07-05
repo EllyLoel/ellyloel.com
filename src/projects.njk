@@ -1,0 +1,17 @@
+---
+layout: base.njk
+title: Projects
+eleventyNavigation:
+  key: Projects
+  order: 5
+---
+
+{% set projects = collections.all | eleventyNavigation("Projects") %}
+
+<ul>
+  {%- for entry in projects %}
+    <li>
+      <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+    </li>
+  {%- endfor %}
+</ul>

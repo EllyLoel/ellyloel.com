@@ -1,7 +1,5 @@
 ---
 title: Life management systems
-eleventyNavigation:
-	key: Life management systems
 ---
 
 ## Requirements

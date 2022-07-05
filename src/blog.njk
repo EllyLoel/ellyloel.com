@@ -1,0 +1,17 @@
+---
+layout: base.njk
+title: Blog
+eleventyNavigation:
+  key: Blog
+  order: 4
+---
+
+{% set blogPages = collections.all | eleventyNavigation("Blog") %}
+
+<ul>
+  {%- for entry in blogPages %}
+    <li>
+      <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+    </li>
+  {%- endfor %}
+</ul>

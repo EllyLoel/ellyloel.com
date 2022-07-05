@@ -1,7 +1,5 @@
 ---
 title: Multi-factor authentication
-eleventyNavigation:
-	key: Multi-factor authentication
 ---
 
 - The most common types of MFA use:

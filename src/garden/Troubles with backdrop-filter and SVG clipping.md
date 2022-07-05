@@ -1,7 +1,5 @@
 ---
 title: Troubles with backdrop-filter and SVG clipping
-eleventyNavigation:
-	key: Troubles with backdrop-filter and SVG clipping
 ---
 
 ## Navigation menu story

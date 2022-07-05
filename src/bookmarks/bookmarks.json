@@ -1,6 +1,0 @@
-{
-  "layout": "base.njk",
-  "eleventyNavigation": {
-    "parent": "Bookmarks"
-  }
-}

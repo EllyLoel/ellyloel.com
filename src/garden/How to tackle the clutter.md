@@ -1,7 +1,5 @@
 ---
 title: How to tackle the clutter
-eleventyNavigation:
-	key: How to tackle the clutter
 ---
 
 We might have done a lot but we haven’t actually gotten anything we wanted/needed done.

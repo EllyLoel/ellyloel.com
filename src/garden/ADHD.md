@@ -1,7 +1,5 @@
 ---
 title: ADHD
-eleventyNavigation:
-	key: ADHD
 ---
 
 The worst acronym in the world. <i className="twa twa-upside-down-face"></i>

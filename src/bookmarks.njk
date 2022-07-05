@@ -1,0 +1,17 @@
+---
+layout: base.njk
+title: Blog
+eleventyNavigation:
+  key: Bookmarks
+  order: 8
+---
+
+{% set bookmarks = collections.all | eleventyNavigation("Bookmarks") %}
+
+<ul>
+  {%- for entry in bookmarks %}
+    <li>
+      <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+    </li>
+  {%- endfor %}
+</ul>

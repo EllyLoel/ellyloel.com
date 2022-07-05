@@ -1,7 +1,5 @@
 ---
 title: Interface design patterns checklist
-eleventyNavigation:
-  key: Interface design patterns checklist
 ---
 
 - [ ]

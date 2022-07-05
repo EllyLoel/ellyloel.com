@@ -1,7 +1,5 @@
 ---
 title: How to get stuff done when you have ADHD
-eleventyNavigation:
-	key: How to get stuff done when you have ADHD
 ---
 
 now or not now

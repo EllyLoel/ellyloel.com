@@ -1,7 +1,5 @@
 ---
 title: Estimating time for tasks
-eleventyNavigation:
-	key: Estimating time for tasks
 ---
 
 Set an alarm to go off every 10 minutes or which ever chunk of time works best for you.

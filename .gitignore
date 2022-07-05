@@ -10,7 +10,7 @@ yarn.lock
 
 # App-specific
 cache
-_site/
+public/
 _generated*
 node-supporters/
 src/_data/builtwith/

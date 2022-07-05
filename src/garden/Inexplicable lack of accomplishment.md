@@ -1,7 +1,5 @@
 ---
 title: Inexplicable lack of accomplishment
-eleventyNavigation:
-	key: Inexplicable lack of accomplishment
 ---
 
 Unable to meet their normal expectations for seemingly no reason. Perceived decline in ability with no apparent cause.

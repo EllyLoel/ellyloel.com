@@ -1,7 +1,5 @@
 ---
 title: Holy shit there's so much CSS
-eleventyNavigation:
-	key: Holy shit there's so much CSS
 ---
 
 [CSS-for-JS Devs](https://courses.joshwcomeau.com/css-for-js)

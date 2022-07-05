@@ -1,7 +1,5 @@
 ---
 title: How to give your brain the stimulation it needs
-eleventyNavigation:
-	key: How to give your brain the stimulation it needs
 ---
 
 ADHD brains need a lot of stimulation

@@ -1,7 +1,5 @@
 ---
 title: Atomic Habits by James Clear
-eleventyNavigation:
-  key: Atomic Habits by James Clear
 ---
 
 - 1% Increases build up.
