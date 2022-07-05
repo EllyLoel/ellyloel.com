@@ -2,7 +2,8 @@
 layout: base.njk
 title: Uses
 eleventyNavigation:
-	key: Uses
+  key: Uses
+  order: 6
 ---
 
 ## Hardware

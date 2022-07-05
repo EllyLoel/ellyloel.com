@@ -1,7 +1,5 @@
 ---
 title: Finding the perfect app
-eleventyNavigation:
-	key: Finding the perfect app
 ---
 
 I've tried just about every productivity app under the sun, and I still haven't found "the one".

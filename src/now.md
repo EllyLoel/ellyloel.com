@@ -2,7 +2,8 @@
 layout: base.njk
 title: What I'm Doing Now
 eleventyNavigation:
-	key: Now
+  key: Now
+  order: 2
 ---
 
 An on & off log of what I'm currently doing/interested in. Slower paced than a twitter feed but less permanent then an [about](/#about) page.

@@ -1,7 +1,5 @@
 ---
 title: Productivity system
-eleventyNavigation:
-	key: Productivity system
 ---
 
 ## 1. Reference/File system

@@ -1,7 +1,5 @@
 ---
 title: Zettelkasten
-eleventyNavigation:
-	key: Zettelkasten
 ---
 
 > The zettelkasten is a method of note-taking and personal knowledge management

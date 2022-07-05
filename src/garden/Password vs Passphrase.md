@@ -1,7 +1,5 @@
 ---
 title: Password vs Passphrase
-eleventyNavigation:
-	key: Password vs Passphrase
 ---
 
 ![[src/_assets/img/XKCD passwords.png]]

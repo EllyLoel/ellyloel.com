@@ -12,3 +12,8 @@
     color: hsl(190deg 71% 71%);
   }
 }
+
+.nav-active {
+  font-weight: 700;
+  text-decoration: none;
+}

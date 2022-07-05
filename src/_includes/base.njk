@@ -15,20 +15,18 @@
 			<a class="menu-link a11y-kb-only" href="#content">Jump to content</a>
 
 			<nav role="navigation">
-				<a class="site-logo" href="/" rel="home" title="to homepage">
+				<a class="site-logo{% if "/" == page.url %} nav-active{% endif %}" href="/" rel="home" title="to homepage">
 					<!-- link to home: http://microformats.org/wiki/rel-home -->
 					<h1>
 						&lt;e//y&gt;
 					</h1>
 				</a>
 
-				{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
-
 				{% set navPages = collections.all | eleventyNavigation %}
 				<ul>
 					{%- for entry in navPages %}
-						<li{% if entry.url == page.url %} class="my-active-class"{% endif %}>
-							<a href="{{ entry.url | url }}">{{ entry.title }}</a>
+						<li>
+							<a{% if entry.url == page.url %} class="nav-active"{% endif %} href="{{ entry.url | url }}">{{ entry.title }}</a>
 						</li>
 					{%- endfor %}
 				</ul>

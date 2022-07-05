@@ -1,7 +1,5 @@
 ---
 title: Habit Creation
-eleventyNavigation:
-	key: Habit Creation
 ---
 
 ## The Habit loop

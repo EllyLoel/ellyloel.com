@@ -2,7 +2,8 @@
 layout: base.njk
 title: Speaking
 eleventyNavigation:
-	key: Speaking
+  key: Speaking
+  order: 7
 ---
 
 ## Events
