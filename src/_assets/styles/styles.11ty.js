@@ -3,9 +3,7 @@ const path = require("node:path");
 const sass = require("sass");
 const parcelcss = require("@parcel/css");
 // Use sane defaults from browserslist, see: https://github.com/browserslist/browserslist#best-practices
-let targets = parcelcss.browserslistToTargets(
-  browserslist("> 0.25%, last 2 versions, not dead")
-);
+let targets = parcelcss.browserslistToTargets(browserslist("defaults"));
 
 const isProduction = process.env.ELEVENTY_ENV === "production";
 
