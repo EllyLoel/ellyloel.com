@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "src/garden/ADHD.md",
+            "file": "src/speaking.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -81,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/garden/ADHD.md"
+                "file": "src/speaking.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/garden/ADHD.md",
+                "file": "src/speaking.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,6 +110,8 @@
   },
   "active": "6e15c37a17d0c46d",
   "lastOpenFiles": [
+    "src/speaking.md",
+    "src/now.md",
     "src/garden/ADHD.md",
     "src/garden/Altruism.md",
     "src/projects/a-real-af-project.md",
@@ -117,8 +119,6 @@
     "src/blog.md",
     "src/garden.md",
     "src/index.md",
-    "src/now.md",
-    "src/projects.md",
-    "src/speaking.md"
+    "src/projects.md"
   ]
 }
