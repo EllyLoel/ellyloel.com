@@ -26,6 +26,10 @@ module.exports = class {
       minify: isProduction, // Minify in production context, otherwise don't
       sourceMap: false,
       targets: targets, // targets form browserslist
+      drafts: {
+        nesting: true,
+        customMedia: true,
+      },
     });
     return code;
   }
