@@ -1,19 +1,19 @@
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #1a1a1a;
-    color: #fff;
+    background-color: hsl(0deg 0% 7%);
+    color: hsl(0deg 0% 100%);
   }
 
   :visited {
-    color: hsl(300deg 59% 62%);
+    color: hsl(268deg 61% 80%);
   }
 
   :link {
-    color: hsl(190deg 71% 71%);
+    color: hsl(240deg 87% 80%);
   }
 }
 
-.nav[data-state="active"] {
+nav [data-state="active"] {
   font-weight: 700;
   text-decoration: none;
 }
