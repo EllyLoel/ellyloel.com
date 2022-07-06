@@ -13,11 +13,7 @@
   }
 }
 
-.nav-active {
+.nav[data-state="active"] {
   font-weight: 700;
   text-decoration: none;
-}
-
-p {
-  color: oklch(64% 0.195 140.625);
 }
