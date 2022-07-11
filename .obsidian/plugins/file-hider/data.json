@@ -1,10 +1,15 @@
 {
   "hidden": true,
   "hiddenList": [
-    "node_modules",
     "public",
     "src/_assets",
     "src/_data",
-    "src/_includes"
+    "src/_includes",
+    "_site",
+    "node_modules",
+    "utils",
+    "src/includes",
+    "src/layouts",
+    "src/assets"
   ]
 }
