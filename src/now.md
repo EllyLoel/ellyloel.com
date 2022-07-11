@@ -10,30 +10,77 @@ An on & off log of what I'm currently doing/interested in. Slower paced than a t
 [Now pages](https://nownownow.com/about) are becoming more common, you should make one for yourself!
 
 ## July , 2022
-Working on rebuilding my website using 11ty
-Completed Design for developers course by Sarah Drasner
-Completed Web components course by Dave Rupert
-Looking into Every layout by Andy Bell and Hayden Pickering
+
+I decided that I actually wanted to work on rebuilding my website using 11ty not Next.JS
+
+Completed Design for developers course by Sarah Drasner on Frontend Masters
+
+Completed Web components course by Dave Rupert on Frontend Masters
+
+Reading Every layout by Andy Bell and Hayden Pickering
 
 ## June , 2022
-Working on rebuilding my website using Next
+
+Still working on rebuilding my website using Next.JS
+
 Finished CSS-for-JS Devs by Josh W Comeau
+
+Want to share my love of CSS
+
+Want to get involved with W3C community groups
+
+Want to start using Web Components more
 
 ## May , 2022
 
-Working on rebuilding my website using Next
+Lots of people movements makes me think about moving
+
+[Helped Rachel Nabors out with AWS Amplify user research](https://twitter.com/rachelnabors/status/1523185823717281799) and because of that got access to their [Web animation essentials course](https://courses.rachelnabors.com/p/web-animation-essentials-css-animations-and-transitions)
+
+Made some Web Components × frameworks showcases:
+- [Web Components × React Experimental](https://codesandbox.io/s/web-components-x-react-experimental-068ghv?file=/src/App.js)
+- [Web Components × React](https://codesandbox.io/s/web-components-x-react-qp0gik?file=/src/App.js:1129-1196)
+- [Web Components × Vue](https://codesandbox.io/s/web-components-x-vue-tf14cd?file=/src/App.vue)
+
+Working on rebuilding my website using Next.JS
+
+Wondering how people get to be in amazing roles where they get to do things like create video and articles about the web and be members of the CSS working group and many more amazing things. 
 
 ## April , 2022
 
-Working on rebuilding my website using Next
+Blogging platform, struggling to choose whether going with a ready to go third party platform or going fully custom is better. I tried weighing up the options in order of least to most "custom" (self hosted/self designed/self coded):
+1.  **Medium/Dev.to/Hashnode `(Third party platform)`**
+	- Completely owned by a third party
+	- Ready to go right now, zero setup
+2.  **Obsidian Publish `(Personal third party platform)`**
+	- Owned by a third party but customisable to an extent
+3.  **Framer Sites `(No/low code)`**
+	- Hosted by a third party but fully customisable (as much as a wysiwyg drag and drop can be)
+4.  **Ghost `(OSS CMS)`**
+	- Self hosted option
+	- Can be setup with pre-made themes or headless with a custom frontend
+5.  **Markdown `(Custom everything)`**
+	- Fully custom, what my "old" (current) setup is (Gatsby w/ MDX)
+	- The sky is the limit, though that can be dangerous when it comes to spending more time coding the platform than actually writing
+	- Allows me to keep other aspects of my site integrated all on the same platform (AMA, Tools, Resume, etc.)
+	- If I choose this option should I stick with Gatsby or continue switching to Next or use something like Astro?
+
+Web Components are awesome!!!
+
+every-layout.dev looks really interesting
 
 ## March , 2022
 
-Working on rebuilding my website using Next
+Polypane seems awesome
 
 ## February , 2022
 
 Built Portable Justice hub
+
+Budding interest in Web Components
+
+Thinking about the unfortunate truth of stateful design often being ignored or forgotten
+[Twitter thread 🧵](https://twitter.com/ellyloel/status/1492033654264307712)
 
 ## January, 2022
 
