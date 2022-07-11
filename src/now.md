@@ -37,6 +37,11 @@ Built Portable Justice hub
 
 ## January, 2022
 
+Scrimba Podcast episode came out! 🎉
+https://scrimba.com/podcast/ep-44-elly-loel/
+
+I also made a personal link shortener using Netlify redirects, so all I have to do is run: `shorten https://twitter.com/ellyloel twitter` which automatically updates the redirects file and pushes up the changes so then we get [https://elly.to/twitter](https://elly.to/twitter)
+
 Started CSS-for-JS Devs by Josh W Comeau
 
 ## December, 2021
