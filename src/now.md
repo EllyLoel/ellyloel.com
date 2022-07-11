@@ -10,18 +10,34 @@ An on & off log of what I'm currently doing/interested in. Slower paced than a t
 [Now pages](https://nownownow.com/about) are becoming more common, you should make one for yourself!
 
 ## July , 2022
+Working on rebuilding my website using 11ty
+Completed Design for developers course by Sarah Drasner
+Completed Web components course by Dave Rupert
+Looking into Every layout by Andy Bell and Hayden Pickering
 
 ## June , 2022
+Working on rebuilding my website using Next
+Finished CSS-for-JS Devs by Josh W Comeau
 
 ## May , 2022
 
+Working on rebuilding my website using Next
+
 ## April , 2022
+
+Working on rebuilding my website using Next
 
 ## March , 2022
 
+Working on rebuilding my website using Next
+
 ## February , 2022
 
+Built Portable Justice hub
+
 ## January, 2022
+
+Started CSS-for-JS Devs by Josh W Comeau
 
 ## December, 2021
 

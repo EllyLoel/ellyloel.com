@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "src/garden/YAML is strict.md",
+            "file": "src/now.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -81,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/garden/YAML is strict.md"
+                "file": "src/now.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/garden/YAML is strict.md",
+                "file": "src/now.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,10 +110,10 @@
   },
   "active": "f6d59f7ed3a94d45",
   "lastOpenFiles": [
+    "src/now.md",
     "src/garden/YAML is strict.md",
     "src/projects/Modern CSS reset.md",
     "src/projects.md",
-    "src/now.md",
     "src/speaking.md",
     "node_modules/@types/cors/README.md",
     "node_modules/bs-recipes/recipes/gulp.ruby.sass/desc.md",
