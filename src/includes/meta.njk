@@ -1,0 +1,29 @@
+{%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(site.url) }}{%- endset -%}
+
+{# General #}
+<meta name="description" content="{{ description or site.description }}">
+<link rel="canonical" href="{{ absolutePageUrl }}">
+<meta name="author" content="{{ site.author }}">
+<meta name="generator" content="{{ eleventy.generator }}">
+
+{# Open Graph #}
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{{ title or site.title }}">
+<meta property="og:description" content="{{ description  or site.description }}">
+<meta property="og:url" content="{{ absolutePageUrl }}">
+<meta property="og:locale" content="{{ site.locale }}">
+<meta name="twitter:card" content="{% if image -%}summary_large_image{% else %}summary{% endif %}">
+{%- if image -%}
+	<meta property="og:image" content="{{ image | url | absoluteUrl(site.url) }}">
+{%- endif -%}
+
+{# Favicon #}
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/favicon/apple-touch-icon.png' | url }}">
+<link rel="icon" type="image/png" href="{{ '/assets/images/favicon/favicon-32x32.png' | url }}" sizes="32x32">
+<link rel="icon" type="image/png" href="{{ '/assets/images/favicon/favicon-16x16.png' | url }}" sizes="16x16">
+<link rel="shortcut icon" href="{{ '/assets/images/favicon/favicon.ico' | url }}">
+<link rel="manifest" href="{{ '/site.webmanifest' | url }}">
+<meta name="theme-color" content="#bd93f9">
+
+{# RSS Feed #}
+<link type="application/atom+xml" rel="alternate" href="{{ site.url }}/feed.xml" title="{{ site.title }}">

@@ -2,6 +2,10 @@
 title: How to get stuff done when you have ADHD
 ---
 
+TL;DR: Don't.
+
+---
+
 now or not now
 
 no focus or hyper focus

@@ -6,6 +6,8 @@ title: Troubles with backdrop-filter and SVG clipping
 
 While building the navigation menu for this site I had some troubles getting it to where it is now. I wanted it to have a frosted glass look as well as a wavy shape.
 
+---
+
 ## `backdrop-filter`
 
 - [Can I use CSS backdrop filter](https://caniuse.com/css-backdrop-filter)

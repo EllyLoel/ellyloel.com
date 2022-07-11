@@ -1,0 +1,11 @@
+.skip-link {
+  position: absolute;
+  inset-block-start: var(--size-3);
+  inset-inline-start: var(--size-3);
+  z-index: var(--layer-5);
+
+  // @extends should be used with care, but this is a great example of them being hella useful
+  &:not(:focus) {
+    @extend .visually-hidden;
+  }
+}

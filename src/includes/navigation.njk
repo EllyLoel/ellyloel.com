@@ -1,0 +1,19 @@
+<div class="inner">
+	<a href="/" rel="home" title="to homepage" class="text-decoration-none"{% if "/" == page.url %} data-state="active" aria-current="page"{% endif %}>
+		<!-- link to home: http://microformats.org/wiki/rel-home -->
+		<h1 class="[ logo ] [ margin-0 ]">
+			&lt;e//y&gt;
+		</h1>
+	</a>
+
+	<nav role="navigation" aria-label="Primary" class="[ nav ] [  ]">
+		{% set navPages = collections.all | eleventyNavigation %}
+		<ul class="list">
+			{%- for entry in navPages %}
+				<li>
+					<a{% if entry.url == page.url %} data-state="active" aria-current="page"{% endif %} href="{{ entry.url | url }}">{{ entry.title }}</a>
+				</li>
+			{%- endfor %}
+		</ul>
+	</nav>
+</div>

@@ -2,6 +2,10 @@
 title: Habit Creation
 ---
 
+The most impossible task for someone^[me, I am someone] with [[ADHD]] is to create a habit.
+
+---
+
 ## The Habit loop
 
 ### 1. Decide on a cue

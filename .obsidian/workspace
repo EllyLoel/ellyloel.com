@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "YAML is strict.md",
+            "file": "src/garden/YAML is strict.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -81,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "YAML is strict.md"
+                "file": "src/garden/YAML is strict.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "YAML is strict.md",
+                "file": "src/garden/YAML is strict.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
   },
   "active": "f6d59f7ed3a94d45",
   "lastOpenFiles": [
-    "YAML is strict.md",
+    "src/garden/YAML is strict.md",
     "src/projects/Modern CSS reset.md",
     "src/projects.md",
     "src/now.md",

@@ -1,0 +1,10 @@
+// Adds consitent space and padding for each full panel section
+.panel {
+  margin: var(--size-7) 0;
+  padding: var(--size-7) 0;
+
+  @media (--md-n-above) {
+    margin: var(--size-8) 0;
+    padding: var(--size-8) 0;
+  }
+}

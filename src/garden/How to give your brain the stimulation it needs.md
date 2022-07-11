@@ -6,6 +6,8 @@ ADHD brains need a lot of stimulation
 
 We don’t spend hours on social media because we think it’s a great use of our time, we do it because we’re looking for the stimulation we need to function
 
+---
+
 Most quick & easy dopamine sources we turn (youtube, tiktok, twitter, etc) to aren't actually enough to fulfill that need
 
 it’s really hard to make good dopamine choices when you’re low on dopamine

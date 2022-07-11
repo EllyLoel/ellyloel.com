@@ -1,0 +1,11 @@
+/*
+ * WRAPPER
+ * Sets a max width, adds a consisten gutter and horizontally
+ * centers the contents
+ */
+.wrapper {
+  max-width: 70rem;
+  padding-inline: var(--size-4);
+  margin-inline: auto;
+  position: relative;
+}

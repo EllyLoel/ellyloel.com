@@ -2,7 +2,9 @@
 title: Holy shit there's so much CSS
 ---
 
-[CSS-for-JS Devs](https://courses.joshwcomeau.com/css-for-js)
+[CSS-for-JS Devs](https://css-for-js.dev/)
+
+---
 
 # Fundamentals
 

@@ -1,0 +1,47 @@
+.site-head {
+  padding: var(--size-6) 0;
+
+  & .inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    // Uncomment to add current page styles to the logo
+    // & > a:is([data-state="active"], [aria-current="page"]) {
+    //   text-decoration: none;
+    //   position: relative;
+
+    //   & h1 {
+    //     color: var(--accent-bg);
+    //   }
+
+    //   &::before {
+    //     content: "";
+    //     position: absolute;
+    //     inset-block-start: var(--size-1);
+    //     inset-block-end: 0;
+    //     inset-inline: 0;
+    //     background-color: var(--accent-text);
+    //     border-radius: var(--radius-1);
+    //     z-index: -1;
+    //   }
+    // }
+  }
+
+  & .logo {
+    flex-shrink: 0;
+    font-size: var(--font-size-5);
+    margin-inline-end: var(--size-6); // Prevents nav bunching up to the logo
+  }
+
+  & .nav {
+    padding: var(--size-2) 0;
+  }
+
+  @media (--md-n-above) {
+    & .logo {
+      font-size: var(--font-size-5);
+    }
+  }
+}
