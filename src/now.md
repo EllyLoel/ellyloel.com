@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: base
 title: What I'm Doing Now
 eleventyNavigation:
   key: Now

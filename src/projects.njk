@@ -1,17 +1,19 @@
 ---
-layout: base.njk
+layout: base
 title: Projects
 eleventyNavigation:
   key: Projects
   order: 5
+navToHtmlOptions:
+  showExcerpt: true
 ---
 
-{% set projects = collections.all | eleventyNavigation("Projects") %}
-
+{% set projects = collections.projects %}
 <ul>
-  {%- for entry in projects %}
+  {%- for project in projects %}
     <li>
-      <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+      <a href="{{ project.url | url }}">{{ project.data.title }}</a>
+      <small>{{ project.data.page.excerpt }}</small>
     </li>
   {%- endfor %}
 </ul>

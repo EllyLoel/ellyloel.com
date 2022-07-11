@@ -2,7 +2,9 @@
 title: ADHD
 ---
 
-The worst acronym in the world. <i className="twa twa-upside-down-face"></i>
+The worst acronym in the world. 🙃
+
+---
 
 There is no deficit of attention, **trust me**. Have you ever seen someone with ADHD doing something they're interested in? There is no stopping them once they're in that space, they could go for hours without so much as stopping to blink. [[Hyperfocus]] is one hell of an experience.
 

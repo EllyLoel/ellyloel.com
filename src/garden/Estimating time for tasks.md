@@ -2,6 +2,10 @@
 title: Estimating time for tasks
 ---
 
+Time blindness is a common problem for people with [[ADHD]], so equally hard is estimating the time it will take to complete a task.
+
+---
+
 Set an alarm to go off every 10 minutes or which ever chunk of time works best for you.
 
 Account for breaks

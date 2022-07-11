@@ -1,8 +1,8 @@
 ---
-layout: base.njk
+layout: base
 title: Home
 ---
 
-Hi, I’m <e//y>
+Hi, I’m <span class="[ logo-inline ]"><e//y></span>
 
 I like creating delightful, magical, and accessible art with code.

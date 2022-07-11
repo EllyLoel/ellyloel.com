@@ -1,0 +1,119 @@
+/* Accent colours https://schemist.fglt.fr?preset=1@b@41250,4125a,4125x14,4125x1e,4125x28,4125x32,4125x3c,4125x46,4125x50,4125x5a,4125x64,012230123456789a@clr,,color,bd93f9,l,amount */
+/* Neutral colours https://schemist.fglt.fr?preset=1@b@41250,4125a,4125x14,4125x1e,4125x28,4125x32,4125x3c,4125x46,4125x50,4125x5a,4125x64,012230123456789a@clr,,color,a9a4b0,l,amount */
+
+:root {
+  --black: lch(0% 0 0);
+  --white: lch(100% 0 0);
+
+  // Accent colours
+  --coalmine: lch(5.834% 35.337 308.938);
+  --voldemort: lch(16.405% 54.349 309.759);
+  --wild-violet: lch(26.256% 70.287 309.703);
+  --purple-emperor: lch(35.951% 83.499 309.473);
+  --magenta-affair: lch(46.006% 88.412 308.689);
+  --illicit-purple: lch(56.956% 75.105 306.729);
+  --diva: lch(68.002% 55.309 304.53);
+  --violet-heaven: lch(78.848% 35.402 302.552);
+  --grape-taffy: lch(89.495% 16.998 300.898);
+
+  // Neutral colours
+  --piano-black: lch(7.243% 2.967 304.065);
+  --moonless-night: lch(18.826% 4.513 304.89);
+  --tuna: lch(29.382% 5.734 304.868);
+  --wonder-wine: lch(39.625% 6.711 304.828);
+  --cement-feet: lch(49.743% 7.293 304.761);
+  --hatoba-pigeon: lch(59.811% 7.221 304.65);
+  --tangled-web: lch(69.862% 6.334 304.498);
+  --herring-silver: lch(79.912% 4.663 304.318);
+  --peekaboo: lch(89.959% 2.447 304.132);
+
+  // Light colour scale
+  color-scheme: light;
+
+  --accent-0: var(--white);
+  --accent-1: var(--grape-taffy);
+  --accent-2: var(--violet-heaven);
+  --accent-3: var(--diva);
+  --accent-4: var(--illicit-purple);
+  --accent-5: var(--magenta-affair);
+  --accent-6: var(--purple-emperor);
+  --accent-7: var(--wild-violet);
+  --accent-8: var(--voldemort);
+  --accent-9: var(--coalmine);
+  --accent-10: var(--black);
+
+  --neutral-0: var(--white);
+  --neutral-1: var(--peekaboo);
+  --neutral-2: var(--herring-silver);
+  --neutral-3: var(--tangled-web);
+  --neutral-4: var(--hatoba-pigeon);
+  --neutral-5: var(--cement-feet);
+  --neutral-6: var(--wonder-wine);
+  --neutral-7: var(--tuna);
+  --neutral-8: var(--moonless-night);
+  --neutral-9: var(--piano-black);
+  --neutral-10: var(--black);
+
+  // Dark colour scale
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+
+    --accent-0: var(--black);
+    --accent-1: var(--coalmine);
+    --accent-2: var(--voldemort);
+    --accent-3: var(--wild-violet);
+    --accent-4: var(--purple-emperor);
+    --accent-5: var(--magenta-affair);
+    --accent-6: var(--illicit-purple);
+    --accent-7: var(--diva);
+    --accent-8: var(--violet-heaven);
+    --accent-9: var(--grape-taffy);
+    --accent-10: var(--white);
+
+    --neutral-0: var(--black);
+    --neutral-1: var(--piano-black);
+    --neutral-2: var(--moonless-night);
+    --neutral-3: var(--tuna);
+    --neutral-4: var(--wonder-wine);
+    --neutral-5: var(--cement-feet);
+    --neutral-6: var(--hatoba-pigeon);
+    --neutral-7: var(--tangled-web);
+    --neutral-8: var(--herring-silver);
+    --neutral-9: var(--peekaboo);
+    --neutral-10: var(--white);
+  }
+
+  // Semantic colours
+  --accent-base: var(--accent-0);
+  --accent-bg-subtle: var(--accent-1);
+  --accent-bg: var(--accent-2);
+  --accent-bg-hover: var(--accent-3);
+  --accent-bg-active: var(--accent-4);
+  --accent-border: var(--accent-5);
+  --accent-border-hover: var(--accent-6);
+  --accent-solid: var(--accent-7);
+  --accent-solid-hover: var(--accent-8);
+  --accent-text: var(--accent-9);
+  --accent-text-contrast: var(--accent-10);
+
+  --neutral-base: var(--neutral-0);
+  --neutral-bg-subtle: var(--neutral-1);
+  --neutral-bg: var(--neutral-2);
+  --neutral-bg-hover: var(--neutral-3);
+  --neutral-bg-active: var(--neutral-4);
+  --neutral-border: var(--neutral-5);
+  --neutral-border-hover: var(--neutral-6);
+  --neutral-solid: var(--neutral-7);
+  --neutral-solid-hover: var(--neutral-8);
+  --neutral-text: var(--neutral-9);
+  --neutral-text-contrast: var(--neutral-10);
+
+  --info: lch(69.928% 42.583 251.574);
+  --success: lch(72.02% 66.383 129.588);
+  --warning: lch(69.545% 65.691 63.721);
+  --error: lch(68.867% 51.731 36.633);
+
+  // Typography
+  --font-weight-body-bold: 622;
+  --font-weight-body-normal: 400;
+}

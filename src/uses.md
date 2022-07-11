@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: base
 title: Uses
 eleventyNavigation:
   key: Uses

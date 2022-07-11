@@ -1,0 +1,23 @@
+.nav {
+  line-height: 1;
+  font-weight: var(--font-weight-body-bold);
+  margin-inline-start: var(--size-3);
+
+  & .list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--size-3);
+  }
+
+  & a {
+    display: block;
+    position: relative;
+    border-radius: var(--radius-1);
+
+    &:is([data-state="active"], [aria-current="page"]) {
+      text-decoration: none;
+      background-color: var(--accent-text);
+      color: var(--accent-bg);
+    }
+  }
+}

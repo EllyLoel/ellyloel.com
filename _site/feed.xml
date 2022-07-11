@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>Elly Loel</title>
+	<subtitle>This is my own lovely little corner of the internet. Look forward to plenty of interesting ideas &amp; projects.</subtitle>
+	<link href="https://ellyloel.com//feed.xml" rel="self" type="application/atom+xml"/>
+	<link href="https://ellyloel.com/" rel="alternate" type="text/html"/>
+	<author>
+		<name>Elly Loel</name>
+	</author>
+	
+	<id>https://ellyloel.com//</id></feed>

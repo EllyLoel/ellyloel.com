@@ -1,5 +1,6 @@
 module.exports = {
-  layout: "base.njk",
+  layout: "base",
+  permalink: "/garden/{{ title | slugify }}/",
   eleventyComputed: {
     eleventyNavigation: {
       key: (data) => data.title,

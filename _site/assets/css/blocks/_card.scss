@@ -1,0 +1,8 @@
+.card {
+  font-size: var(--font-size-0);
+  color: var(--neutral-border);
+
+  & * {
+    all: revert;
+  }
+}
