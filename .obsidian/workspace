@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "f6d59f7ed3a94d45",
+        "id": "0cdbeea4f3216eb3",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "src/now.md",
+            "file": "src/garden/Obsidian Git xcrun error.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -81,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/now.md"
+                "file": "src/garden/Obsidian Git xcrun error.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/now.md",
+                "file": "src/garden/Obsidian Git xcrun error.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,17 +108,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "f6d59f7ed3a94d45",
+  "active": "0cdbeea4f3216eb3",
   "lastOpenFiles": [
+    "src/garden/Obsidian Git xcrun error.md",
+    "src/speaking.md",
+    "src/bookmarks/Atomic Habits by James Clear.md",
+    "src/projects/stylized-text.md",
+    "src/projects/Modern CSS reset.md",
+    "src/about.md",
     "src/now.md",
     "src/garden/YAML is strict.md",
-    "src/projects/Modern CSS reset.md",
     "src/projects.md",
-    "src/speaking.md",
-    "node_modules/@types/cors/README.md",
-    "node_modules/bs-recipes/recipes/gulp.ruby.sass/desc.md",
-    "node_modules/encodeurl/README.md",
-    "node_modules/fs-extra/docs/emptyDir.md",
-    "src/garden/ADHD.md"
+    "node_modules/@types/cors/README.md"
   ]
 }

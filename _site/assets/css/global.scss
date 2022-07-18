@@ -27,6 +27,10 @@ body {
   font-weight: var(--font-weight-body-normal);
 }
 
+main {
+  display: grid;
+}
+
 :is(h1, h2, h3, h4, h5, h6, dt) {
   font-family: "Fraunces", var(--font-serif);
   font-weight: var(--font-weight-7);
@@ -336,9 +340,11 @@ menu {
 }
 
 //// Utilities
+@import "utilities/detitlify";
 @import "utilities/flow";
 @import "utilities/panel";
 @import "utilities/radius";
+@import "utilities/stroke";
 @import "utilities/typography";
 @import "utilities/visually-hidden";
 @import "utilities/wrapper";
@@ -346,7 +352,9 @@ menu {
 //// Blocks
 @import "blocks/button";
 @import "blocks/card";
+@import "blocks/hero";
 @import "blocks/logo";
 @import "blocks/nav";
 @import "blocks/site-head";
 @import "blocks/skip-link";
+@import "blocks/stylized-text";

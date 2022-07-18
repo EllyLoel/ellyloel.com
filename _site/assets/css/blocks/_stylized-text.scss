@@ -1,0 +1,19 @@
+stylized-text::part(text) {
+  @extend .logo-inline;
+
+  text-decoration-color: var(--accent-solid);
+
+  &:focus-visible {
+    outline-color: var(--link);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    &:focus-visible {
+      transition: outline-offset 145ms cubic-bezier(0.25, 0, 0.4, 1);
+    }
+  }
+
+  &:focus-visible {
+    outline-offset: var(--size-1);
+  }
+}

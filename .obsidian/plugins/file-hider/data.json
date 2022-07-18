@@ -5,11 +5,12 @@
     "src/_assets",
     "src/_data",
     "src/_includes",
-    "_site",
-    "node_modules",
-    "utils",
+    "src/data",
     "src/includes",
     "src/layouts",
-    "src/assets"
+    "src/assets",
+    "node_modules",
+    "_site",
+    "utils"
   ]
 }

@@ -24,10 +24,12 @@
   },
   "dependencies": {
     "@11ty/eleventy-img": "^2.0.1",
-    "@types/markdown-it": "^12.2.3",
+    "@splinetool/runtime": "^0.9.78",
     "open-props": "^1.4.1",
     "postcss-preset-env": "^7.7.2",
     "rollup": "^2.76.0",
+    "stylized-text": "^1.0.4",
+    "tslib": "^2.4.0",
     "twemoji": "^14.0.2"
   },
   "devDependencies": {
@@ -37,6 +39,7 @@
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
     "@11ty/eleventy-plugin-vite": "^1.0.0-canary.1",
+    "@types/markdown-it": "^12.2.3",
     "browserslist": "^4.21.1",
     "cssnano": "^5.1.12",
     "cssremedy": "^0.1.0-beta.2",

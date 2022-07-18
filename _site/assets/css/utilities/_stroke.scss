@@ -1,0 +1,9 @@
+.stroke {
+  color: var(--color, var(--neutral-text-contrast));
+  -webkit-text-fill-color: var(
+    --fill,
+    var(--neutral-base)
+  ); /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: var(--thickness, 1px);
+  -webkit-text-stroke-color: var(--color, var(--neutral-text-contrast));
+}
