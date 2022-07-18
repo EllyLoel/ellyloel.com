@@ -19,6 +19,8 @@ Completed Web components course by Dave Rupert on Frontend Masters
 
 Reading Every layout by Andy Bell and Hayden Pickering
 
+Building a Web Component to make [stylized-text](/projects/stylized-text) accessible
+
 ## June , 2022
 
 Still working on rebuilding my website using Next.JS

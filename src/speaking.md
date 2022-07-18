@@ -9,7 +9,7 @@ eleventyNavigation:
 ## Events
 
 - [Portable](https://portable.com.au/): [How to land your first tech job](https://portable.com.au/events/how-to-land-your-first-tech-job)
-- [Portable](https://portable.com.au/): Exploring what neurodiversity looks like at Portable, in our projects and beyond. (Coming on 28/07/22)
+- [Portable](https://portable.com.au/): [Neurodiversity in projects and at Portable](https://portable.com.au/events/neurodiversity-in-projects-and-at-portable)
 
 ## Podcasts
 

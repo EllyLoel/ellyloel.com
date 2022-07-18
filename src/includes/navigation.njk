@@ -6,12 +6,12 @@
 		</h1>
 	</a>
 
-	<nav role="navigation" aria-label="Primary" class="[ nav ] [  ]">
+	<nav role="navigation" aria-label="Primary" class="[ nav ]">
 		{% set navPages = collections.all | eleventyNavigation %}
 		<ul class="list">
 			{%- for entry in navPages %}
 				<li>
-					<a{% if entry.url == page.url %} data-state="active" aria-current="page"{% endif %} href="{{ entry.url | url }}">{{ entry.title }}</a>
+					<a{% if entry.url === page.url %} data-state="active" aria-current="page"{% endif %} href="{{ entry.url | url }}">{{ entry.title }}</a>
 				</li>
 			{%- endfor %}
 		</ul>

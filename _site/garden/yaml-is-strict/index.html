@@ -15,7 +15,7 @@
 		
 <meta name="description" content="This is my own lovely little corner of the internet. Look forward to plenty of interesting ideas &amp; projects.">
 <link rel="canonical" href="https://ellyloel.com/garden/yaml-is-strict/">
-<meta name="author" content="[object Object]">
+<meta name="author" content="Elly Loel">
 <meta name="generator" content="Eleventy v2.0.0">
 
 
@@ -51,7 +51,7 @@
 		</h1>
 	</a>
 
-	<nav role="navigation" aria-label="Primary" class="[ nav ] [  ]">
+	<nav role="navigation" aria-label="Primary" class="[ nav ]">
 		
 		<ul class="list">
 				<li>
@@ -85,19 +85,19 @@
 </header>
 
 		<!-- tabindex fixes focus issue: https://benmyers.dev/blog/skip-links/#tldr -->
-		<main id="content" role="main" tabindex="-1" class="wrapper">
-			<header>
-				<h1>YAML is strict</h1>
-			</header>
-			<article>
-				<p>If you’ve never written YAML before, one common issue, and one that I ran into myself making this blog, is using tabs rather than spaces 🤯</p>
+		<main id="content" role="main" tabindex="-1" class="wrapper flow">
+			
+				<header>
+					<h1>YAML is strict</h1>
+				</header>
+			
+			<p>If you’ve never written YAML before, one common issue, and one that I ran into myself making this blog, is using tabs rather than spaces 🤯</p>
 <p>This doesn’t work:</p>
 <pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">foo</span><span class="token punctuation">:</span><br>	<span class="token key atrule">bar</span><span class="token punctuation">:</span> baz</code></pre>
 <p>This does work:</p>
 <pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">foo</span><span class="token punctuation">:</span><br>  <span class="token key atrule">bar</span><span class="token punctuation">:</span> baz</code></pre>
 <p>You can barely spot the difference, so it’s easy to get stuck on thinking something else is causing an issue.</p>
 
-			</article>
 		</main>
 
 		<footer role="contentinfo" class="site-footer"></footer>
