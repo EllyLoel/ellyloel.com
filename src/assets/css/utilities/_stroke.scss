@@ -1,9 +1,14 @@
 .stroke {
-  color: var(--color, var(--neutral-text-contrast));
-  -webkit-text-fill-color: var(
-    --fill,
-    var(--neutral-base)
-  ); /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: var(--thickness, 1px);
-  -webkit-text-stroke-color: var(--color, var(--neutral-text-contrast));
+  color: var(--hover-color, var(--color, var(--neutral-text-contrast)));
+  @supports (-webkit-text-stroke-width: 1px) {
+    color: var(--fill, var(--neutral-base));
+    -webkit-text-stroke-width: var(--thickness, 1px);
+    -webkit-text-stroke-color: var(--color, var(--neutral-text-contrast));
+    transition: color 500ms ease;
+
+    &:hover {
+      color: var(--hover-color, var(--color, var(--neutral-text-contrast)));
+      transition: color 250ms ease;
+    }
+  }
 }

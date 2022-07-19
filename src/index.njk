@@ -10,67 +10,59 @@ title: Home
 		<span>I like creating <span class="stroke" style="--color: var(--accent-solid);">delightful</span>, <span class="stroke" style="--color: var(--accent-solid);">magical</span>, and <span class="stroke" style="--color: var(--accent-solid);">accessible</span> art with code<span style="color: var(--accent-solid);">.</span></span>
 	</h1>
 
-	<canvas id="canvas3d">
+	<canvas id="canvas3d" class="[ lego ]">
 		<p>A lego model designed to look like myself.</p>
 	</canvas>
 </header>
 
-<section class="[ articles ] [ flow ]">
-	<h2>
-		<a href="/blog">Articles</a>
-	</h2>
-	{% set blog = collections.blog | sliceCollection(3) %}
-	<ul class="[ flow ]">
-		{%- for post in blog %}
-			<li>
-				<a href="{{ post.url | url }}">{{ post.data.title }}</a>
-				<small>{{ post.data.page.excerpt }}</small>
-			</li>
-		{%- endfor %}
-	</ul>
-</section>
+{% feedBlock
+title = "Articles",
+url = "/blog" %}
+{% set blog = collections.blog | sliceCollection(3) %}
+{%- for post in blog %}
+	{% feedItem
+	title = post.data.title,
+	url = post.url,
+	excerpt = post.data.page.excerpt
+ %}
+{%- endfor %}
+{% endfeedBlock %}
 
-<section class="[ projects ] [ flow ]">
-	<h2>
-		<a href="/projects">Projects</a>
-	</h2>
-	{% set projects = collections.projects | sliceCollection(3) %}
-	<ul class="[ flow ]">
-		{%- for project in projects %}
-			<li>
-				<a href="{{ project.url | url }}">{{ project.data.title }}</a>
-				<small>{{ project.data.page.excerpt }}</small>
-			</li>
-		{%- endfor %}
-	</ul>
-</section>
+{% feedBlock
+title = "Projects",
+url = "/projects" %}
+{% set projects = collections.projects | sliceCollection(3) %}
+{%- for project in projects %}
+	{% feedItem
+	title = project.data.title,
+	url = project.url,
+	excerpt = project.data.page.excerpt
+ %}
+{%- endfor %}
+{% endfeedBlock %}
 
-<section class="[ notes ] [ flow ]">
-	<h2>
-		<a href="/garden">Notes</a>
-	</h2>
-	{% set notes = collections.garden | sliceCollection(3) %}
-	<ul class="[ flow ]">
-		{%- for note in notes %}
-			<li>
-				<a href="{{ note.url | url }}">{{ note.data.title }}</a>
-				<article class="card">{{ note.data.page.excerpt | md | safe }}</article>
-			</li>
-		{%- endfor %}
-	</ul>
-</section>
+{% feedBlock
+title = "Notes",
+url = "/garden" %}
+{% set notes = collections.garden | sliceCollection(3) %}
+{%- for note in notes %}
+	{% feedItem
+	title = note.data.title,
+	url = note.url,
+	excerpt = note.data.page.excerpt
+ %}
+{%- endfor %}
+{% endfeedBlock %}
 
-<section class="[ bookmarks ] [ flow ]">
-	<h2>
-		<a href="/bookmarks">Bookmarks</a>
-	</h2>
-	{% set bookmarks = collections.bookmarks | sliceCollection(3) %}
-	<ul class="[ flow ]">
-		{%- for bookmark in bookmarks %}
-			<li>
-				<a href="{{ bookmark.url | url }}">{{ bookmark.data.title }}</a>
-				<small>{{ bookmark.data.page.excerpt }}</small>
-			</li>
-		{%- endfor %}
-	</ul>
-</section>
+{% feedBlock
+title = "Bookmarks",
+url = "/bookmarks" %}
+{% set bookmarks = collections.bookmarks | sliceCollection(3) %}
+{%- for bookmark in bookmarks %}
+	{% feedItem
+	title = bookmark.data.title,
+	url = bookmark.url,
+	excerpt = bookmark.data.page.excerpt
+ %}
+{%- endfor %}
+{% endfeedBlock %}

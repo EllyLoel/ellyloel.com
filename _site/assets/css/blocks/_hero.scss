@@ -2,10 +2,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 
-  & canvas {
-    object-fit: cover;
-  }
-
   & h1 {
     margin: 0;
   }

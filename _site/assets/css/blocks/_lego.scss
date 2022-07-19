@@ -1,0 +1,12 @@
+.lego {
+  object-fit: cover;
+  mask-image: radial-gradient(
+    ellipse at center,
+    hsl(0deg 0% 0% / 100%) 0%,
+    hsl(0deg 0% 0% / 100%) 35%,
+    hsl(0deg 0% 0% / 50%) 48%,
+    hsl(0deg 0% 0% / 12%) 58%,
+    hsl(0deg 0% 0% / 0%) 65%,
+    hsl(0deg 0% 0% / 0%) 100%
+  );
+}

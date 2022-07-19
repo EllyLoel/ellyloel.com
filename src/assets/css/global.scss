@@ -29,6 +29,8 @@ body {
 
 main {
   display: grid;
+  gap: var(--size-10);
+  margin-block: var(--size-10);
 }
 
 :is(h1, h2, h3, h4, h5, h6, dt) {
@@ -353,6 +355,7 @@ menu {
 @import "blocks/button";
 @import "blocks/card";
 @import "blocks/hero";
+@import "blocks/lego";
 @import "blocks/logo";
 @import "blocks/nav";
 @import "blocks/site-head";

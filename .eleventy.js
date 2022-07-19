@@ -14,7 +14,6 @@ const rollupPluginCritical = require("rollup-plugin-critical").default;
 
 const filters = require("./utils/filters.js");
 const transforms = require("./utils/transforms.js");
-const shortcodes = require("./utils/shortcodes.js");
 
 module.exports = (eleventyConfig) => {
   // Plugins
@@ -91,6 +90,28 @@ module.exports = (eleventyConfig) => {
     },
   });
 
+  // Customize Markdown library and settings:
+  let markdownLibrary = markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true,
+    typographer: true,
+  })
+    .use(markdownItWikilinks)
+    .use(markdownItEmoji)
+    .use(markdownItAnchor, {
+      permalink: markdownItAnchor.permalink.ariaHidden({
+        placement: "before",
+        class: "direct-link",
+        symbol: "#",
+        level: [1, 2, 3, 4],
+      }),
+      slugify: eleventyConfig.getFilter("slugify"),
+    });
+  markdownLibrary.renderer.rules.emoji = (token, idx) =>
+    twemoji.parse(token[idx].content);
+  eleventyConfig.setLibrary("md", markdownLibrary);
+
   // Excerpts
   eleventyConfig.setFrontMatterParsingOptions({
     excerpt: true,
@@ -121,31 +142,38 @@ module.exports = (eleventyConfig) => {
   });
 
   // Shortcodes
-  Object.keys(shortcodes).forEach((shortcodeName) => {
-    eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName]);
+  eleventyConfig.addNunjucksShortcode("year", function () {
+    return `${new Date().getFullYear()}`;
   });
-
-  // Customize Markdown library and settings:
-  let markdownLibrary = markdownIt({
-    html: true,
-    breaks: true,
-    linkify: true,
-    typographer: true,
-  })
-    .use(markdownItWikilinks)
-    .use(markdownItEmoji)
-    .use(markdownItAnchor, {
-      permalink: markdownItAnchor.permalink.ariaHidden({
-        placement: "before",
-        class: "direct-link",
-        symbol: "#",
-        level: [1, 2, 3, 4],
-      }),
-      slugify: eleventyConfig.getFilter("slugify"),
-    });
-  markdownLibrary.renderer.rules.emoji = (token, idx) =>
-    twemoji.parse(token[idx].content);
-  eleventyConfig.setLibrary("md", markdownLibrary);
+  eleventyConfig.addPairedNunjucksShortcode(
+    "feedBlock",
+    function (content, feed) {
+      return `
+        <section class="[ ${feed.title.toLowerCase()} ] [ flow ]">
+          <h2>
+            <a href="${feed.url}">${feed.title}</a>
+          </h2>
+          <ul class="[ flow ]">
+            ${content}
+          </ul>
+        </section>
+      `;
+    }
+  );
+  eleventyConfig.addNunjucksShortcode("feedItem", function (feedItem) {
+    return `
+      <li>
+        <p><a href="${feedItem.url}">${feedItem.title}</a></p>
+        ${
+          feedItem.excerpt
+            ? `<p><small>${markdownLibrary.render(
+                feedItem.excerpt
+              )}</small></p>`
+            : ""
+        }
+      </li>
+    `;
+  });
 
   // Layouts
   eleventyConfig.addLayoutAlias("base", "base.njk");
