@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: not-home
 title: Projects
 eleventyNavigation:
   key: Projects
@@ -9,11 +9,12 @@ navToHtmlOptions:
 ---
 
 {% set projects = collections.projects %}
-<ul>
+<ul class="[ flow ]">
   {%- for project in projects %}
-    <li>
-      <a href="{{ project.url | url }}">{{ project.data.title }}</a>
-      <small>{{ project.data.page.excerpt }}</small>
-    </li>
+    {% feedItem
+    title = project.data.title,
+    url = project.url,
+    excerpt = project.data.page.excerpt
+ %}
   {%- endfor %}
 </ul>

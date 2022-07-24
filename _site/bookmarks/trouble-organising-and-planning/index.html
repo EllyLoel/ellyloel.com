@@ -36,12 +36,51 @@
 <link type="application/atom+xml" rel="alternate" href="https://ellyloel.com//feed.xml" title="Elly Loel">
 
 		<!-- Include stylesheets here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
+		<link rel="stylesheet" href="/shoelace/dist/themes/light.css"/>
+		<link rel="stylesheet" href="/shoelace/dist/themes/dark.css"/>
 		<link rel="stylesheet" href="/assets/css/global.scss">
+		<script>
+			// if there's a color-scheme id in localstorage, use it, if not use auto.
+			document
+				.documentElement
+				.setAttribute('color-scheme', localStorage.getItem('color-scheme') || "auto");
+			document
+				.documentElement
+				.setAttribute(
+					"class", localStorage.getItem('color-scheme')
+					?.includes("light")
+						? "sl-theme-light"
+						: localStorage.getItem('color-scheme')
+							?.includes("dark")
+								? "sl-theme-dark"
+								: window.matchMedia("(prefers-color-scheme: light)")
+									? "sl-theme-light"
+									: "sl-theme-dark");
+		</script>
 	</head>
 	<body>
 		<a class="[ skip-link ] [ button ]" href="#content">Skip to content</a>
 
-		<header role="banner" class="site-head">
+		<sl-drawer label="Select theme" placement="top" class="[ theme-switcher ] [ wrapper ]">
+	<sl-radio-group id="theme-menu" class="[ theme-switcher-radio-group ]" label="Theme switcher">
+		<sl-radio-button name="color-scheme" value="auto">
+				Auto
+			</sl-radio-button>
+		<sl-radio-button name="color-scheme" value="light">
+				Light
+			</sl-radio-button>
+		<sl-radio-button name="color-scheme" value="dark">
+				Dark
+			</sl-radio-button>
+		<sl-radio-button name="color-scheme" value="light-moss">
+				Light moss
+			</sl-radio-button>
+		<sl-radio-button name="color-scheme" value="dark-moss">
+				Dark moss
+			</sl-radio-button>
+	</sl-radio-group>
+</sl-drawer>
+<header role="banner" class="site-head">
 	<div class="wrapper">
 		<div class="inner">
 	<a href="/" rel="home" title="to homepage" class="text-decoration-none">
@@ -50,6 +89,12 @@
 			&lt;e//y&gt;
 		</h1>
 	</a>
+
+	<sl-icon-button 
+		id="theme-switcher-open-button"
+		name="palette"
+		label="Open theme switcher"
+	></sl-icon-button>
 
 	<nav role="navigation" aria-label="Primary" class="[ nav ]">
 		
@@ -86,11 +131,6 @@
 
 		<!-- tabindex fixes focus issue: https://benmyers.dev/blog/skip-links/#tldr -->
 		<main id="content" role="main" tabindex="-1" class="wrapper flow">
-			
-				<header>
-					<h1>Trouble organising and planning</h1>
-				</header>
-			
 			<blockquote>
 <p>“Trouble organising and planning. In the clinical jargon, this is called trouble with “executive function.” The child, say, has trouble getting dressed in the morning. You can ask your daughter to go upstairs and get dressed only to find her fifteen minutes later still in her nightclothes, lying on her bed engrossed in a conversation with her doll. Or you can ask your husband to take out the trash and in the time it takes him to walk over to the trash container, he forgets what he’s supposed to be doing and slowly ambles right past it. You go ballistic, believing your husband is being blatantly provocative, passive-aggressive, oppositional, or colossally self-centered, all adjectives you’ve applied to him hundreds of times in the past. Before you get divorced, it would be marriage-saving if someone could explain to you both that walking past the trash, like hundreds of other acts of seemingly selfish disregard for others, stems not from selfishness or another character defect but from a neurological condition that renders attention inconsistent and immediate memory so porous that a task can be forgotten in a heartbeat. What compounds these problems, and makes some people doubt the validity of the diagnosis, is that these same people can hyperfocus, deliver a brilliant presentation on time, and be super-reliable when they are stimulated. But, as we’ve said, boredom is kryptonite; the ADHD mind recoils from boredom, disappearing into a fervent search for stimulation while the trash can sits forlornly unemptied.”</p>
 </blockquote>

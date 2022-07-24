@@ -3,6 +3,7 @@ const markdownItAnchor = require("markdown-it-anchor");
 const markdownItWikilinks = require("markdown-it-wikilinks");
 const markdownItEmoji = require("markdown-it-emoji");
 const twemoji = require("twemoji");
+const removeMd = require("remove-markdown");
 
 const EleventyPluginNavigation = require("@11ty/eleventy-navigation");
 const EleventyPluginRss = require("@11ty/eleventy-plugin-rss");
@@ -163,14 +164,24 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addNunjucksShortcode("feedItem", function (feedItem) {
     return `
       <li>
-        <p><a href="${feedItem.url}">${feedItem.title}</a></p>
+        <sl-card class="[ feed-item-card ]">
         ${
           feedItem.excerpt
-            ? `<p><small>${markdownLibrary.render(
-                feedItem.excerpt
-              )}</small></p>`
-            : ""
+            ? `
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="${feedItem.url}">${feedItem.title}</a></p>
+                </div>
+                <p>
+                  ${removeMd(feedItem.excerpt).replace(/\[\[|\]\]/gm, "")}
+                </p>
+              `
+            : `
+                <div class="[ feed-item-card-title ]">
+                  <p><a href="${feedItem.url}">${feedItem.title}</a></p>
+                </div>
+              `
         }
+        </sl-card>
       </li>
     `;
   });
@@ -185,6 +196,9 @@ module.exports = (eleventyConfig) => {
   // Copy/pass-through files
   eleventyConfig.addPassthroughCopy("src/assets/css");
   eleventyConfig.addPassthroughCopy("src/assets/js");
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/@shoelace-style/shoelace": "shoelace",
+  });
   // Pass-through of the public directory for static files that Vite/Rollup ignores on build (https://vitejs.dev/guide/assets.html#the-public-directory)
   eleventyConfig.addPassthroughCopy("src/public");
 

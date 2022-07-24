@@ -36,12 +36,51 @@
 <link type="application/atom+xml" rel="alternate" href="https://ellyloel.com//feed.xml" title="Elly Loel">
 
 		<!-- Include stylesheets here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
+		<link rel="stylesheet" href="/shoelace/dist/themes/light.css"/>
+		<link rel="stylesheet" href="/shoelace/dist/themes/dark.css"/>
 		<link rel="stylesheet" href="/assets/css/global.scss">
+		<script>
+			// if there's a color-scheme id in localstorage, use it, if not use auto.
+			document
+				.documentElement
+				.setAttribute('color-scheme', localStorage.getItem('color-scheme') || "auto");
+			document
+				.documentElement
+				.setAttribute(
+					"class", localStorage.getItem('color-scheme')
+					?.includes("light")
+						? "sl-theme-light"
+						: localStorage.getItem('color-scheme')
+							?.includes("dark")
+								? "sl-theme-dark"
+								: window.matchMedia("(prefers-color-scheme: light)")
+									? "sl-theme-light"
+									: "sl-theme-dark");
+		</script>
 	</head>
 	<body>
 		<a class="[ skip-link ] [ button ]" href="#content">Skip to content</a>
 
-		<header role="banner" class="site-head">
+		<sl-drawer label="Select theme" placement="top" class="[ theme-switcher ] [ wrapper ]">
+	<sl-radio-group id="theme-menu" class="[ theme-switcher-radio-group ]" label="Theme switcher">
+		<sl-radio-button name="color-scheme" value="auto">
+				Auto
+			</sl-radio-button>
+		<sl-radio-button name="color-scheme" value="light">
+				Light
+			</sl-radio-button>
+		<sl-radio-button name="color-scheme" value="dark">
+				Dark
+			</sl-radio-button>
+		<sl-radio-button name="color-scheme" value="light-moss">
+				Light moss
+			</sl-radio-button>
+		<sl-radio-button name="color-scheme" value="dark-moss">
+				Dark moss
+			</sl-radio-button>
+	</sl-radio-group>
+</sl-drawer>
+<header role="banner" class="site-head">
 	<div class="wrapper">
 		<div class="inner">
 	<a href="/" rel="home" title="to homepage" class="text-decoration-none">
@@ -50,6 +89,12 @@
 			&lt;e//y&gt;
 		</h1>
 	</a>
+
+	<sl-icon-button 
+		id="theme-switcher-open-button"
+		name="palette"
+		label="Open theme switcher"
+	></sl-icon-button>
 
 	<nav role="navigation" aria-label="Primary" class="[ nav ]">
 		
@@ -87,170 +132,498 @@
 		<!-- tabindex fixes focus issue: https://benmyers.dev/blog/skip-links/#tldr -->
 		<main id="content" role="main" tabindex="-1" class="wrapper flow">
 			
-				<header>
-					<h1>Digital garden</h1>
-				</header>
-			
-			
-A collection of my ideas that I'm nurturing out in the open. The notes range from seedlings, which are fresh out of my mind, to budding, which are developing, to evergreen, which are polished ideas.
+<header>
+	<h1>Digital garden</h1>
+</header>
+<article class="[ flow ]">
+	
+<p>A collection of my ideas that I'm nurturing out in the open. The notes range from seedlings, which are fresh out of my mind, to budding, which are developing, to evergreen, which are polished ideas.</p>
 
 
-<ul>
-    <li>
-      <a href="/garden/obsidian-git-xcrun-error/">Obsidian Git xcrun error</a>
-      <article class="card"></article>
-    </li>
-    <li>
-      <a href="/garden/yaml-is-strict/">YAML is strict</a>
-      <article class="card"><p>If you've never written YAML before, one common issue, and one that I ran into myself making this blog, is using tabs rather than spaces 🤯</p>
-</article>
-    </li>
-    <li>
-      <a href="/garden/zettelkasten/">Zettelkasten</a>
-      <article class="card"><blockquote>
-<p>The zettelkasten is a method of note-taking and personal knowledge management</p>
-</blockquote>
-<p>The direct translation of zettelkasten is slip-box, a place to keep &amp; sort your notes.</p>
-</article>
-    </li>
-    <li>
-      <a href="/garden/troubles-with-backdrop-filter-and-svg-clipping/">Troubles with backdrop-filter and SVG clipping</a>
-      <article class="card"><h2>Navigation menu story</h2>
-<p>While building the navigation menu for this site I had some troubles getting it to where it is now. I wanted it to have a frosted glass look as well as a wavy shape.</p>
-</article>
-    </li>
-    <li>
-      <a href="/garden/password-vs-passphrase/">Password vs Passphrase</a>
-      <article class="card"><p>Use a master passphrase for your [[Password managers]] account, then complex extra long random passwords for each individual account.</p>
-</article>
-    </li>
-    <li>
-      <a href="/garden/password-managers/">Password managers</a>
-      <article class="card"><h2>Why use a password manager?</h2>
-<ul>
-<li>Password managers greatly improve your online security by allowing you to create a different password for every individual account you have on the internet. This ensures that if any one password is ever compromised, all your other accounts will remain secure.</li>
-<li>Additionally, password managers allow you to create complex (and thus secure) passwords that humans would find very hard to remember.</li>
+<ul class="[ flow ]">
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div class="[ feed-item-card-title ]">
+                  <p><a href="/garden/obsidian-git-xcrun-error/">Obsidian Git xcrun error</a></p>
+                </div>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/yaml-is-strict/">YAML is strict</a></p>
+                </div>
+                <p>
+                  
+If you've never written YAML before, one common issue, and one that I ran into myself making this blog, is using tabs rather than spaces 🤯
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/zettelkasten/">Zettelkasten</a></p>
+                </div>
+                <p>
+                  The zettelkasten is a method of note-taking and personal knowledge management
+
+The direct translation of zettelkasten is slip-box, a place to keep & sort your notes.
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/troubles-with-backdrop-filter-and-svg-clipping/">Troubles with backdrop-filter and SVG clipping</a></p>
+                </div>
+                <p>
+                  
+Navigation menu story
+
+While building the navigation menu for this site I had some troubles getting it to where it is now. I wanted it to have a frosted glass look as well as a wavy shape.
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/password-vs-passphrase/">Password vs Passphrase</a></p>
+                </div>
+                <p>
+                  
+Use a master passphrase for your Password managers account, then complex extra long random passwords for each individual account.
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/password-managers/">Password managers</a></p>
+                </div>
+                <p>
+                  
+Why use a password manager?
+
+Password managers greatly improve your online security by allowing you to create a different password for every individual account you have on the internet. This ensures that if any one password is ever compromised, all your other accounts will remain secure.
+Additionally, password managers allow you to create complex (and thus secure) passwords that humans would find very hard to remember.
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/multi-factor-authentication/">Multi-factor authentication</a></p>
+                </div>
+                <p>
+                  
+An n^th^ factor of authentication is required to access a resource.
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/inexplicable-lack-of-accomplishment/">Inexplicable lack of accomplishment</a></p>
+                </div>
+                <p>
+                  
+Unable to meet their normal expectations for seemingly no reason. Perceived decline in ability with no apparent cause.
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/how-to-give-your-brain-the-stimulation-it-needs/">How to give your brain the stimulation it needs</a></p>
+                </div>
+                <p>
+                  
+ADHD brains need a lot of stimulation
+
+We don’t spend hours on social media because we think it’s a great use of our time, we do it because we’re looking for the stimulation we need to function
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/how-to-get-stuff-done-when-you-have-adhd/">How to get stuff done when you have ADHD</a></p>
+                </div>
+                <p>
+                  
+TL;DR: Don't.
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/finding-the-perfect-app/">Finding the perfect app</a></p>
+                </div>
+                <p>
+                  
+I've tried just about every productivity app under the sun, and I still haven't found "the one".
+Currently, I'm using ClickUp, but once again I'm thinking about switching 🤦🏼‍♀️
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/estimating-time-for-tasks/">Estimating time for tasks</a></p>
+                </div>
+                <p>
+                  
+Time blindness is a common problem for people with ADHD, so equally hard is estimating the time it will take to complete a task.
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/creativity-and-imagination/">Creativity and imagination</a></p>
+                </div>
+                <p>
+                  
+The disorganisation and impulsiveness of the ADHD brain is what leads to the increase in creative and imaginative thoughts. You can't plan for creative ideas, so the lack of organisation and planning leads to spontaneous creative ideas.
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/composition-over-inheritance/">Composition over Inheritance</a></p>
+                </div>
+                <p>
+                  
+Inheritance locks you into a rigid structure and forces your to predict the future. You make large overarching structural decisions at the beginning of the project which cause untold pain and suffering further down the line.
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/under-diagnosis-of-women/">Under-diagnosis of women</a></p>
+                </div>
+                <p>
+                  
+The most common type of ADHD for women is primarily inattentive ADHD, which doesn't show as many obvious traits of ADHD. This leads to the underdiagnosis of women compared to men or people with primarily hyperactive ADHD.
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/stubbornness/">Stubbornness</a></p>
+                </div>
+                <p>
+                  
+The unwillingness to change, for example, not even considering that you might be wrong or not know everything. It might not be so literally expressed but through your actions or sentiment it is shown.
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/space-to-think/">Space to think</a></p>
+                </div>
+                <p>
+                  
+We need to allow ourselves the space & time to think. With how preoccupied we keep ourselves these days it's hard for your brain to even get a word in.
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/sense-of-time/">Sense of time</a></p>
+                </div>
+                <p>
+                  
+We don't experience time in the same way the neurotypical people do, we have no internal sense of the flow of time. That is why we're constantly in situations where we're late, whether it's for a deadline or an event.
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/neurotypical/">Neurotypical</a></p>
+                </div>
+                <p>
+                  
+Short for neurologically typical, it refers to individuals of typical development, and intellectual/cognitive function.
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/neurodiversity/">Neurodiversity</a></p>
+                </div>
+                <p>
+                  
+What is neurodiversity?
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/neurodivergent/">Neurodivergent</a></p>
+                </div>
+                <p>
+                  
+Neurodivergence refers to variation in the human brain regarding sociability, learning, attention, mood and other mental functions in a non-pathological sense.
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/inattentive/">Inattentive</a></p>
+                </div>
+                <p>
+                  
+Unable to focus in classes/meetings/conversations due to the lack of stimulation. We don't dislike you or find you boring we just require more stimuli to be able to stay focused.
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/habit-creation/">Habit Creation</a></p>
+                </div>
+                <p>
+                  
+The most impossible task for someone^[me, I am someone] with ADHD is to create a habit.
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/executive-function/">Executive function</a></p>
+                </div>
+                <p>
+                  
+The mental processes people rely on to self regulate. The executive functions enable a person to control their thoughts, words, actions and emotions. They also assist them to perceive and manage time, and to direct and manage their behaviour over time.
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/digital-garden/">Digital Garden</a></p>
+                </div>
+                <p>
+                  
+Pottering around in a digital garden, tending to the notes.
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/atomic/">Atomic</a></p>
+                </div>
+                <p>
+                  
+A single irreducible unit or component in a larger system.
+
+    — Oxford dictionary
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/altruism/">Altruism</a></p>
+                </div>
+                <p>
+                  
+As lovely as it might seem, our selfless actions usually get prioritised above looking after ourselves.
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/garden/adhd/">ADHD</a></p>
+                </div>
+                <p>
+                  
+The worst acronym in the world. 🙃
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
 </ul>
 </article>
-    </li>
-    <li>
-      <a href="/garden/multi-factor-authentication/">Multi-factor authentication</a>
-      <article class="card"><p>An n^th^ factor of authentication is required to access a resource.</p>
-</article>
-    </li>
-    <li>
-      <a href="/garden/inexplicable-lack-of-accomplishment/">Inexplicable lack of accomplishment</a>
-      <article class="card"><p>Unable to meet their normal expectations for seemingly no reason. Perceived decline in ability with no apparent cause.</p>
-</article>
-    </li>
-    <li>
-      <a href="/garden/how-to-give-your-brain-the-stimulation-it-needs/">How to give your brain the stimulation it needs</a>
-      <article class="card"><p>ADHD brains need a lot of stimulation</p>
-<p>We don’t spend hours on social media because we think it’s a great use of our time, we do it because we’re looking for the stimulation we need to function</p>
-</article>
-    </li>
-    <li>
-      <a href="/garden/how-to-get-stuff-done-when-you-have-adhd/">How to get stuff done when you have ADHD</a>
-      <article class="card"><p>TL;DR: Don't.</p>
-</article>
-    </li>
-    <li>
-      <a href="/garden/finding-the-perfect-app/">Finding the perfect app</a>
-      <article class="card"><p>I've tried just about every productivity app under the sun, and I still haven't found &quot;the one&quot;.
-Currently, I'm using ClickUp, but once again I'm thinking about switching 🤦🏼‍♀️</p>
-</article>
-    </li>
-    <li>
-      <a href="/garden/estimating-time-for-tasks/">Estimating time for tasks</a>
-      <article class="card"><p>Time blindness is a common problem for people with [[ADHD]], so equally hard is estimating the time it will take to complete a task.</p>
-</article>
-    </li>
-    <li>
-      <a href="/garden/creativity-and-imagination/">Creativity and imagination</a>
-      <article class="card"><p>The disorganisation and impulsiveness of the [[ADHD]] brain is what leads to the increase in creative and imaginative thoughts. You can't plan for creative ideas, so the lack of organisation and planning leads to spontaneous creative ideas.</p>
-</article>
-    </li>
-    <li>
-      <a href="/garden/composition-over-inheritance/">Composition over Inheritance</a>
-      <article class="card"><p>Inheritance locks you into a rigid structure and forces your to predict the future. You make large overarching structural decisions at the beginning of the project which cause untold pain and suffering further down the line.</p>
-</article>
-    </li>
-    <li>
-      <a href="/garden/under-diagnosis-of-women/">Under-diagnosis of women</a>
-      <article class="card"><p>The most common type of [[ADHD]] for women is primarily [[inattentive]] [[ADHD]], which doesn't show as many obvious traits of [[ADHD]]. This leads to the underdiagnosis of women compared to men or people with primarily hyperactive [[ADHD]].</p>
-</article>
-    </li>
-    <li>
-      <a href="/garden/stubbornness/">Stubbornness</a>
-      <article class="card"><p>The unwillingness to change, for example, not even considering that you might be wrong or not know everything. It might not be so literally expressed but through your actions or sentiment it is shown.</p>
-</article>
-    </li>
-    <li>
-      <a href="/garden/space-to-think/">Space to think</a>
-      <article class="card"><p>We need to allow ourselves the space &amp; time to think. With how preoccupied we keep ourselves these days it's hard for your brain to even get a word in.</p>
-</article>
-    </li>
-    <li>
-      <a href="/garden/sense-of-time/">Sense of time</a>
-      <article class="card"><p>We don't experience time in the same way the [[neurotypical]] people do, we have no internal sense of the flow of time. That is why we're constantly in situations where we're late, whether it's for a deadline or an event.</p>
-</article>
-    </li>
-    <li>
-      <a href="/garden/neurotypical/">Neurotypical</a>
-      <article class="card"><p>Short for neurologically typical, it refers to individuals of typical development, and intellectual/cognitive function.</p>
-</article>
-    </li>
-    <li>
-      <a href="/garden/neurodiversity/">Neurodiversity</a>
-      <article class="card"><p><a href="https://www.neurodiversityhub.org/what-is-neurodiversity">What is neurodiversity?</a></p>
-</article>
-    </li>
-    <li>
-      <a href="/garden/neurodivergent/">Neurodivergent</a>
-      <article class="card"><p>Neurodivergence refers to variation in the human brain regarding sociability, learning, attention, mood and other mental functions in a non-pathological sense.</p>
-</article>
-    </li>
-    <li>
-      <a href="/garden/inattentive/">Inattentive</a>
-      <article class="card"><p>Unable to focus in classes/meetings/conversations due to the lack of stimulation. We don't dislike you or find you boring we just require more stimuli to be able to stay focused.</p>
-</article>
-    </li>
-    <li>
-      <a href="/garden/habit-creation/">Habit Creation</a>
-      <article class="card"><p>The most impossible task for someone^[me, I am someone] with [[ADHD]] is to create a habit.</p>
-</article>
-    </li>
-    <li>
-      <a href="/garden/executive-function/">Executive function</a>
-      <article class="card"><p>The mental processes people rely on to self regulate. The executive functions enable a person to control their thoughts, words, actions and emotions. They also assist them to perceive and manage time, and to direct and manage their behaviour over time.</p>
-</article>
-    </li>
-    <li>
-      <a href="/garden/digital-garden/">Digital Garden</a>
-      <article class="card"><p>Pottering around in a digital garden, tending to the notes.</p>
-</article>
-    </li>
-    <li>
-      <a href="/garden/atomic/">Atomic</a>
-      <article class="card"><figure>
-  > A single irreducible unit or component in a larger system.
-  <figcaption>
-    — <cite>Oxford dictionary</cite>
-  </figcaption>
-</figure>
-</article>
-    </li>
-    <li>
-      <a href="/garden/altruism/">Altruism</a>
-      <article class="card"><p>As lovely as it might seem, our selfless actions usually get prioritised above looking after ourselves.</p>
-</article>
-    </li>
-    <li>
-      <a href="/garden/adhd/">ADHD</a>
-      <article class="card"><p>The worst acronym in the world. 🙃</p>
-</article>
-    </li>
-</ul>
 		</main>
 
 		<footer role="contentinfo" class="site-footer"></footer>

@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: not-home
 title: Blog
 eleventyNavigation:
   key: Blog
@@ -7,11 +7,12 @@ eleventyNavigation:
 ---
 
 {% set blog = collections.blog %}
-<ul>
+<ul class="[ flow ]">
   {%- for post in blog %}
-    <li>
-      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-      <small>{{ post.data.page.excerpt }}</small>
-    </li>
+    {% feedItem
+    title = post.data.title,
+    url = post.url,
+    excerpt = post.data.page.excerpt
+ %}
   {%- endfor %}
 </ul>

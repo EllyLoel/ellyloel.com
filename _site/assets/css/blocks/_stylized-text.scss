@@ -17,3 +17,8 @@ stylized-text::part(text) {
     outline-offset: var(--size-1);
   }
 }
+
+stylized-text::part(tooltip) {
+  --sl-tooltip-color: var(--neutral-text);
+  --sl-tooltip-background-color: var(--accent-bg);
+}
