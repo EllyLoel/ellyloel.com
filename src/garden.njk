@@ -1,19 +1,20 @@
 ---
-layout: base
+layout: not-home
 title: Digital garden
 eleventyNavigation:
   key: Digital garden
   order: 3
 ---
 
-A collection of my ideas that I'm nurturing out in the open. The notes range from seedlings, which are fresh out of my mind, to budding, which are developing, to evergreen, which are polished ideas.
+<p>A collection of my ideas that I'm nurturing out in the open. The notes range from seedlings, which are fresh out of my mind, to budding, which are developing, to evergreen, which are polished ideas.</p>
 
 {% set notes = collections.garden %}
-<ul>
+<ul class="[ flow ]">
   {%- for note in notes %}
-    <li>
-      <a href="{{ note.url | url }}">{{ note.data.title }}</a>
-      <article class="card">{{ note.data.page.excerpt | md | safe }}</article>
-    </li>
+    {% feedItem
+    title = note.data.title,
+    url = note.url,
+    excerpt = note.data.page.excerpt
+ %}
   {%- endfor %}
 </ul>

@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: not-home
 title: What I'm Doing Now
 eleventyNavigation:
   key: Now
@@ -40,32 +40,34 @@ Lots of people movements makes me think about moving
 [Helped Rachel Nabors out with AWS Amplify user research](https://twitter.com/rachelnabors/status/1523185823717281799) and because of that got access to their [Web animation essentials course](https://courses.rachelnabors.com/p/web-animation-essentials-css-animations-and-transitions)
 
 Made some Web Components × frameworks showcases:
+
 - [Web Components × React Experimental](https://codesandbox.io/s/web-components-x-react-experimental-068ghv?file=/src/App.js)
 - [Web Components × React](https://codesandbox.io/s/web-components-x-react-qp0gik?file=/src/App.js:1129-1196)
 - [Web Components × Vue](https://codesandbox.io/s/web-components-x-vue-tf14cd?file=/src/App.vue)
 
 Working on rebuilding my website using Next.JS
 
-Wondering how people get to be in amazing roles where they get to do things like create video and articles about the web and be members of the CSS working group and many more amazing things. 
+Wondering how people get to be in amazing roles where they get to do things like create video and articles about the web and be members of the CSS working group and many more amazing things.
 
 ## April , 2022
 
 Blogging platform, struggling to choose whether going with a ready to go third party platform or going fully custom is better. I tried weighing up the options in order of least to most "custom" (self hosted/self designed/self coded):
+
 1.  **Medium/Dev.to/Hashnode `(Third party platform)`**
-	- Completely owned by a third party
-	- Ready to go right now, zero setup
+    - Completely owned by a third party
+    - Ready to go right now, zero setup
 2.  **Obsidian Publish `(Personal third party platform)`**
-	- Owned by a third party but customisable to an extent
+    - Owned by a third party but customisable to an extent
 3.  **Framer Sites `(No/low code)`**
-	- Hosted by a third party but fully customisable (as much as a wysiwyg drag and drop can be)
+    - Hosted by a third party but fully customisable (as much as a wysiwyg drag and drop can be)
 4.  **Ghost `(OSS CMS)`**
-	- Self hosted option
-	- Can be setup with pre-made themes or headless with a custom frontend
+    - Self hosted option
+    - Can be setup with pre-made themes or headless with a custom frontend
 5.  **Markdown `(Custom everything)`**
-	- Fully custom, what my "old" (current) setup is (Gatsby w/ MDX)
-	- The sky is the limit, though that can be dangerous when it comes to spending more time coding the platform than actually writing
-	- Allows me to keep other aspects of my site integrated all on the same platform (AMA, Tools, Resume, etc.)
-	- If I choose this option should I stick with Gatsby or continue switching to Next or use something like Astro?
+    - Fully custom, what my "old" (current) setup is (Gatsby w/ MDX)
+    - The sky is the limit, though that can be dangerous when it comes to spending more time coding the platform than actually writing
+    - Allows me to keep other aspects of my site integrated all on the same platform (AMA, Tools, Resume, etc.)
+    - If I choose this option should I stick with Gatsby or continue switching to Next or use something like Astro?
 
 Web Components are awesome!!!
 

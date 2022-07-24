@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: not-home
 title: Bookmarks
 eleventyNavigation:
   key: Bookmarks
@@ -7,11 +7,12 @@ eleventyNavigation:
 ---
 
 {% set bookmarks = collections.bookmarks %}
-<ul>
+<ul class="[ flow ]">
   {%- for bookmark in bookmarks %}
-    <li>
-      <a href="{{ bookmark.url | url }}">{{ bookmark.data.title }}</a>
-      <small>{{ bookmark.data.page.excerpt }}</small>
-    </li>
+    {% feedItem
+    title = bookmark.data.title,
+    url = bookmark.url,
+    excerpt = bookmark.data.page.excerpt
+ %}
   {%- endfor %}
 </ul>

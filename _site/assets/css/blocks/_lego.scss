@@ -1,12 +1,11 @@
 .lego {
+  inline-size: 100% !important;
+  block-size: 100% !important;
   object-fit: cover;
-  mask-image: radial-gradient(
-    ellipse at center,
-    hsl(0deg 0% 0% / 100%) 0%,
-    hsl(0deg 0% 0% / 100%) 35%,
-    hsl(0deg 0% 0% / 50%) 48%,
-    hsl(0deg 0% 0% / 12%) 58%,
-    hsl(0deg 0% 0% / 0%) 65%,
-    hsl(0deg 0% 0% / 0%) 100%
+  border-radius: var(--radius-blob-3);
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    var(--accent-bg) 0%,
+    var(--accent-solid) 90%
   );
 }

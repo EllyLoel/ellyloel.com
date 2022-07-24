@@ -4,44 +4,48 @@
   & .inner {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
+    gap: var(--size-3);
 
-    // Uncomment to add current page styles to the logo
-    // & > a:is([data-state="active"], [aria-current="page"]) {
-    //   text-decoration: none;
-    //   position: relative;
+    & > sl-icon-button {
+      inline-size: fit-content;
+      --sl-focus-ring: 2px solid var(--link);
 
-    //   & h1 {
-    //     color: var(--accent-bg);
-    //   }
+      &::part(base) {
+        color: var(--link);
+        outline-offset: 0px;
 
-    //   &::before {
-    //     content: "";
-    //     position: absolute;
-    //     inset-block-start: var(--size-1);
-    //     inset-block-end: 0;
-    //     inset-inline: 0;
-    //     background-color: var(--accent-text);
-    //     border-radius: var(--radius-1);
-    //     z-index: -1;
-    //   }
-    // }
+        &:is(:hover, :focus, :active) {
+          color: var(--link-visited);
+        }
+
+        &:focus-visible {
+          outline: 2px solid var(--link);
+          outline-offset: var(--size-1);
+        }
+
+        &:active {
+          outline-offset: 0px;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+          transition: outline-offset 145ms var(--ease-2);
+        }
+      }
+    }
   }
 
-  & .logo {
+  & a[href="/"] {
     flex-shrink: 0;
-    font-size: var(--font-size-5);
-    margin-inline-end: var(--size-6); // Prevents nav bunching up to the logo
+    margin-right: auto; // Prevents nav bunching up to the logo
+    margin-inline-end: auto; // Prevents nav bunching up to the logo
+
+    & > .logo {
+      font-size: var(--font-size-5);
+    }
   }
 
   & .nav {
     padding: var(--size-2) 0;
-  }
-
-  @media (--md-n-above) {
-    & .logo {
-      font-size: var(--font-size-5);
-    }
   }
 }

@@ -36,12 +36,51 @@
 <link type="application/atom+xml" rel="alternate" href="https://ellyloel.com//feed.xml" title="Elly Loel">
 
 		<!-- Include stylesheets here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
+		<link rel="stylesheet" href="/shoelace/dist/themes/light.css"/>
+		<link rel="stylesheet" href="/shoelace/dist/themes/dark.css"/>
 		<link rel="stylesheet" href="/assets/css/global.scss">
+		<script>
+			// if there's a color-scheme id in localstorage, use it, if not use auto.
+			document
+				.documentElement
+				.setAttribute('color-scheme', localStorage.getItem('color-scheme') || "auto");
+			document
+				.documentElement
+				.setAttribute(
+					"class", localStorage.getItem('color-scheme')
+					?.includes("light")
+						? "sl-theme-light"
+						: localStorage.getItem('color-scheme')
+							?.includes("dark")
+								? "sl-theme-dark"
+								: window.matchMedia("(prefers-color-scheme: light)")
+									? "sl-theme-light"
+									: "sl-theme-dark");
+		</script>
 	</head>
 	<body>
 		<a class="[ skip-link ] [ button ]" href="#content">Skip to content</a>
 
-		<header role="banner" class="site-head">
+		<sl-drawer label="Select theme" placement="top" class="[ theme-switcher ] [ wrapper ]">
+	<sl-radio-group id="theme-menu" class="[ theme-switcher-radio-group ]" label="Theme switcher">
+		<sl-radio-button name="color-scheme" value="auto">
+				Auto
+			</sl-radio-button>
+		<sl-radio-button name="color-scheme" value="light">
+				Light
+			</sl-radio-button>
+		<sl-radio-button name="color-scheme" value="dark">
+				Dark
+			</sl-radio-button>
+		<sl-radio-button name="color-scheme" value="light-moss">
+				Light moss
+			</sl-radio-button>
+		<sl-radio-button name="color-scheme" value="dark-moss">
+				Dark moss
+			</sl-radio-button>
+	</sl-radio-group>
+</sl-drawer>
+<header role="banner" class="site-head">
 	<div class="wrapper">
 		<div class="inner">
 	<a href="/" rel="home" title="to homepage" class="text-decoration-none">
@@ -50,6 +89,12 @@
 			&lt;e//y&gt;
 		</h1>
 	</a>
+
+	<sl-icon-button 
+		id="theme-switcher-open-button"
+		name="palette"
+		label="Open theme switcher"
+	></sl-icon-button>
 
 	<nav role="navigation" aria-label="Primary" class="[ nav ]">
 		
@@ -86,11 +131,6 @@
 
 		<!-- tabindex fixes focus issue: https://benmyers.dev/blog/skip-links/#tldr -->
 		<main id="content" role="main" tabindex="-1" class="wrapper flow">
-			
-				<header>
-					<h1>Trouble with time management</h1>
-				</header>
-			
 			<blockquote>
 <p>“Trouble with time management, and a tendency to procrastinate. This is another element of executive function, and quite an interesting one. Those of us who have ADHD experience time differently from other people. This is really hard for most people to believe, which is why people are typically unsympathetic to our problem and ascribe it to lack of effort, a bad attitude, or pure obstinacy. But the fact is that we lack an internal sense of the arc of time; we’re unaware of the unstoppable flow of seconds into minutes into hours, days, and so forth. Defying the laws of physics, we change the nature of time in our minds. In our world, we have little awareness of the seconds ticking by; few internal alerts, alarms, or cues; no judicious allocation of chunks of time for this, then that, and then the next thing. We short-circuit all such complexity by slicing time down to its barest bones. In our world, we recognize only two times: “now” and “not now.” We hear “We have to leave in a half hour” as “We don’t have to leave now.” “The paper is due in five days” becomes “It’s not due now,” and the five days might as well be five months. We hear “I’ll have to go to bed sometime” when someone has actually said “It’s time for bed now.” Our truncated sense of time leads to all manner of fights, failures, job losses, disappointed friends, and failed romances, but at the same time to an uncanny ability to work brilliantly under extreme pressure, as well as to be wonderfully, infuriatingly oblivious to the time pressures that stress most people to the max.”</p>
 </blockquote>

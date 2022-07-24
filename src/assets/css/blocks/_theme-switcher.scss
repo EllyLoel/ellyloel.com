@@ -1,0 +1,123 @@
+.theme-switcher {
+  --size: auto;
+
+  & > .theme-switcher-radio-group {
+    inline-size: fit-content;
+    justify-self: center;
+
+    &::part(base) {
+      inline-size: fit-content;
+      border-radius: 0px;
+    }
+
+    &::part(button-group__base) {
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+  }
+
+  &::part(close-button) {
+    --sl-focus-ring: 2px solid var(--link);
+  }
+
+  &::part(close-button__base) {
+    color: var(--link);
+    outline-offset: 0px;
+
+    &:is(:hover, :focus, :active) {
+      color: var(--link-visited);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--link);
+      outline-offset: var(--size-1);
+    }
+
+    &:active {
+      outline-offset: 0px;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: outline-offset 145ms var(--ease-2);
+    }
+  }
+
+  &::part(close-button__base):is(:hover, :focus, :active) {
+    color: var(--link-visited);
+  }
+
+  &::part(title) {
+    font-family: "Fraunces", var(--font-serif);
+    padding-block-end: 0;
+  }
+
+  &::part(overlay) {
+    backdrop-filter: blur(8px);
+  }
+}
+
+sl-radio-button {
+  & * {
+    pointer-events: none;
+  }
+
+  &[value="auto"] {
+    @media (prefers-color-scheme: light) {
+      --_button-bg: var(--diva);
+      --_button-text: var(--piano-black);
+    }
+    @media (prefers-color-scheme: dark) {
+      --_button-bg: var(--wild-violet);
+      --_button-text: var(--peekaboo);
+    }
+  }
+  &[value="light"] {
+    --_button-bg: var(--diva);
+    --_button-text: var(--piano-black);
+  }
+  &[value="dark"] {
+    --_button-bg: var(--wild-violet);
+    --_button-text: var(--peekaboo);
+  }
+  &[value="light-moss"] {
+    --_button-bg: var(--sereni-teal, lch(71.268% 31.45 165.123));
+    --_button-text: var(--matt-black, lch(7.435% 2.411 165.037));
+  }
+  &[value="dark-moss"] {
+    --_button-bg: var(--pine-needle, lch(30.296% 19.082 165.159));
+    --_button-text: var(--serene, lch(90.14% 2.586 165.106));
+  }
+
+  &::part(button) {
+    --sl-color-neutral-0: var(--_button-text);
+    border-radius: var(--radius-2);
+    box-shadow: inset 0 0 0px 2em var(--neutral-base);
+
+    &:is(:hover, :focus) {
+      box-shadow: none;
+      background-color: var(--_button-bg);
+      border-color: var(--_button-bg);
+    }
+
+    outline-offset: 0px;
+
+    &:focus-visible {
+      outline: 2px solid var(--link);
+      outline-offset: var(--size-1);
+    }
+
+    &:active {
+      outline-offset: 0px;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: outline-offset 145ms var(--ease-2);
+    }
+  }
+
+  &[aria-checked="true"]::part(button) {
+    box-shadow: none;
+    background-color: var(--_button-bg);
+    border-color: var(--_button-bg);
+  }
+}

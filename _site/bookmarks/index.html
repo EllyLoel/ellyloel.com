@@ -36,12 +36,51 @@
 <link type="application/atom+xml" rel="alternate" href="https://ellyloel.com//feed.xml" title="Elly Loel">
 
 		<!-- Include stylesheets here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
+		<link rel="stylesheet" href="/shoelace/dist/themes/light.css"/>
+		<link rel="stylesheet" href="/shoelace/dist/themes/dark.css"/>
 		<link rel="stylesheet" href="/assets/css/global.scss">
+		<script>
+			// if there's a color-scheme id in localstorage, use it, if not use auto.
+			document
+				.documentElement
+				.setAttribute('color-scheme', localStorage.getItem('color-scheme') || "auto");
+			document
+				.documentElement
+				.setAttribute(
+					"class", localStorage.getItem('color-scheme')
+					?.includes("light")
+						? "sl-theme-light"
+						: localStorage.getItem('color-scheme')
+							?.includes("dark")
+								? "sl-theme-dark"
+								: window.matchMedia("(prefers-color-scheme: light)")
+									? "sl-theme-light"
+									: "sl-theme-dark");
+		</script>
 	</head>
 	<body>
 		<a class="[ skip-link ] [ button ]" href="#content">Skip to content</a>
 
-		<header role="banner" class="site-head">
+		<sl-drawer label="Select theme" placement="top" class="[ theme-switcher ] [ wrapper ]">
+	<sl-radio-group id="theme-menu" class="[ theme-switcher-radio-group ]" label="Theme switcher">
+		<sl-radio-button name="color-scheme" value="auto">
+				Auto
+			</sl-radio-button>
+		<sl-radio-button name="color-scheme" value="light">
+				Light
+			</sl-radio-button>
+		<sl-radio-button name="color-scheme" value="dark">
+				Dark
+			</sl-radio-button>
+		<sl-radio-button name="color-scheme" value="light-moss">
+				Light moss
+			</sl-radio-button>
+		<sl-radio-button name="color-scheme" value="dark-moss">
+				Dark moss
+			</sl-radio-button>
+	</sl-radio-group>
+</sl-drawer>
+<header role="banner" class="site-head">
 	<div class="wrapper">
 		<div class="inner">
 	<a href="/" rel="home" title="to homepage" class="text-decoration-none">
@@ -50,6 +89,12 @@
 			&lt;e//y&gt;
 		</h1>
 	</a>
+
+	<sl-icon-button 
+		id="theme-switcher-open-button"
+		name="palette"
+		label="Open theme switcher"
+	></sl-icon-button>
 
 	<nav role="navigation" aria-label="Primary" class="[ nav ]">
 		
@@ -87,54 +132,124 @@
 		<!-- tabindex fixes focus issue: https://benmyers.dev/blog/skip-links/#tldr -->
 		<main id="content" role="main" tabindex="-1" class="wrapper flow">
 			
-				<header>
-					<h1>Bookmarks</h1>
-				</header>
-			
-			
+<header>
+	<h1>Bookmarks</h1>
+</header>
+<article class="[ flow ]">
+	
 
-<ul>
-    <li>
-      <a href="/bookmarks/zero-to-60-in-software-development/">Zero to 60 in Software Development</a>
-      <small></small>
-    </li>
-    <li>
-      <a href="/bookmarks/trouble-with-time-management/">Trouble with time management</a>
-      <small></small>
-    </li>
-    <li>
-      <a href="/bookmarks/trouble-organising-and-planning/">Trouble organising and planning</a>
-      <small></small>
-    </li>
-    <li>
-      <a href="/bookmarks/interface-design-patterns-checklist/">Interface design patterns checklist</a>
-      <small>
-</small>
-    </li>
-    <li>
-      <a href="/bookmarks/intentional-career-building/">Intentional Career Building</a>
-      <small></small>
-    </li>
-    <li>
-      <a href="/bookmarks/high-degree-of-creativity-and-imagination/">High degree of creativity and imagination</a>
-      <small></small>
-    </li>
-    <li>
-      <a href="/bookmarks/generosity/">Generosity</a>
-      <small></small>
-    </li>
-    <li>
-      <a href="/bookmarks/atomic-habits-by-james-clear/">Atomic Habits by James Clear</a>
-      <small>
-If you made a 1% increase every day for a year, you&#39;d be 37 times better by the end of the year.
+<ul class="[ flow ]">
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div class="[ feed-item-card-title ]">
+                  <p><a href="/bookmarks/zero-to-60-in-software-development/">Zero to 60 in Software Development</a></p>
+                </div>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div class="[ feed-item-card-title ]">
+                  <p><a href="/bookmarks/trouble-with-time-management/">Trouble with time management</a></p>
+                </div>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div class="[ feed-item-card-title ]">
+                  <p><a href="/bookmarks/trouble-organising-and-planning/">Trouble organising and planning</a></p>
+                </div>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/bookmarks/interface-design-patterns-checklist/">Interface design patterns checklist</a></p>
+                </div>
+                <p>
+                  
 
-</small>
-    </li>
-    <li>
-      <a href="/bookmarks/a-wandering-mind/">A wandering mind</a>
-      <small></small>
-    </li>
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div class="[ feed-item-card-title ]">
+                  <p><a href="/bookmarks/intentional-career-building/">Intentional Career Building</a></p>
+                </div>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div class="[ feed-item-card-title ]">
+                  <p><a href="/bookmarks/high-degree-of-creativity-and-imagination/">High degree of creativity and imagination</a></p>
+                </div>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div class="[ feed-item-card-title ]">
+                  <p><a href="/bookmarks/generosity/">Generosity</a></p>
+                </div>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div slot="header" class="[ feed-item-card-title ]">
+                  <p><a href="/bookmarks/atomic-habits-by-james-clear/">Atomic Habits by James Clear</a></p>
+                </div>
+                <p>
+                  
+If you made a 1% increase every day for a year, you'd be 37 times better by the end of the year.
+
+
+                </p>
+              
+        </sl-card>
+      </li>
+    
+    
+      <li>
+        <sl-card class="[ feed-item-card ]">
+        
+                <div class="[ feed-item-card-title ]">
+                  <p><a href="/bookmarks/a-wandering-mind/">A wandering mind</a></p>
+                </div>
+              
+        </sl-card>
+      </li>
+    
 </ul>
+</article>
 		</main>
 
 		<footer role="contentinfo" class="site-footer"></footer>

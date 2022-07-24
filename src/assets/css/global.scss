@@ -29,7 +29,7 @@ body {
 
 main {
   display: grid;
-  gap: var(--size-10);
+  gap: var(--size-8);
   margin-block: var(--size-10);
 }
 
@@ -111,12 +111,12 @@ var {
 
 // Links
 
-a {
+:where(a) {
   margin-inline: calc(var(--size-1) * -1);
   padding-inline: var(--size-1);
   text-decoration: underline;
 
-  &[href] {
+  &:where([href]) {
     color: var(--link);
 
     &:visited {
@@ -310,6 +310,7 @@ menu {
 
 :focus-visible {
   outline-color: var(--link);
+  outline-offset: 0px;
 }
 
 :not(:active):focus-visible {
@@ -343,6 +344,7 @@ menu {
 
 //// Utilities
 @import "utilities/detitlify";
+@import "utilities/flex";
 @import "utilities/flow";
 @import "utilities/panel";
 @import "utilities/radius";
@@ -361,3 +363,4 @@ menu {
 @import "blocks/site-head";
 @import "blocks/skip-link";
 @import "blocks/stylized-text";
+@import "blocks/theme-switcher";
