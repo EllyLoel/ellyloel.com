@@ -1,1 +1,40 @@
-<footer role="contentinfo" class="site-footer"></footer>
+<footer role="contentinfo" class="site-footer">
+	{% include "newsletter.njk" %}
+
+	<h2>Sitemap</h2>
+	<nav>
+		<ul class="[ flow ]">
+			{%- for page in collections.all -%}
+				{%- if not page.data.excludeFromSitemap and page.data.eleventyNavigation.parent === undefined and page.url -%}
+					<li>
+						<a href="{{ page.url | url }}">
+							{{ page.data.title }}
+						</a>
+					</li>
+				{%- endif -%}
+			{%- endfor -%}
+		</ul>
+	</nav>
+
+	<ul class="[ flow ]">
+		<li>
+			<stylized-text label="Elly">
+				<a href="/">
+					&lt;e//y&gt;
+			</a>
+			</stylized-text>
+		</li>
+		<li>
+			<a href="https://elly.to/twitter">Twitter</a>
+		</li>
+		<li>
+			<a href="https://elly.to/linkedin">LinkedIn</a>
+		</li>
+		<li>
+			<a href="https://elly.to/codepen">CodePen</a>
+		</li>
+		<li>
+			<a href="https://elly.to/dribbble">Dribbble</a>
+		</li>
+	</ul>
+</footer>

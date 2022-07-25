@@ -53,7 +53,7 @@
 						: localStorage.getItem('color-scheme')
 							?.includes("dark")
 								? "sl-theme-dark"
-								: window.matchMedia("(prefers-color-scheme: light)")
+								: window.matchMedia("(prefers-color-scheme: light)").matches
 									? "sl-theme-light"
 									: "sl-theme-dark");
 		</script>
@@ -132,8 +132,8 @@
 		<!-- tabindex fixes focus issue: https://benmyers.dev/blog/skip-links/#tldr -->
 		<main id="content" role="main" tabindex="-1" class="wrapper flow">
 			<p>The most impossible task for someone^[me, I am someone] with [[ADHD]] is to create a habit.</p>
-<h2 id="the-habit-loop" tabindex="-1"><a class="direct-link" href="#the-habit-loop" aria-hidden="true">#</a> The Habit loop</h2>
-<h3 id="1-decide-on-a-cue" tabindex="-1"><a class="direct-link" href="#1-decide-on-a-cue" aria-hidden="true">#</a> 1. Decide on a cue</h3>
+<h2 id="the-habit-loop" tabindex="-1">The Habit loop <a class="direct-link" href="#the-habit-loop" aria-hidden="true">🔗</a></h2>
+<h3 id="1-decide-on-a-cue" tabindex="-1">1. Decide on a cue <a class="direct-link" href="#1-decide-on-a-cue" aria-hidden="true">🔗</a></h3>
 <ul>
 <li>Pick the thing that tells you its time to do the habit (an alarm, visual reminder, another habit, etc)</li>
 <li>Ideally, a cue is:
@@ -144,7 +144,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="2-figure-out-the-habits-routine" tabindex="-1"><a class="direct-link" href="#2-figure-out-the-habits-routine" aria-hidden="true">#</a> 2. Figure out the habits routine</h3>
+<h3 id="2-figure-out-the-habits-routine" tabindex="-1">2. Figure out the habits routine <a class="direct-link" href="#2-figure-out-the-habits-routine" aria-hidden="true">🔗</a></h3>
 <ul>
 <li>break down the habit into steps. (this will help you prepare &amp; avoid obstacles once you begin)</li>
 <li>how do I know what the routine should be?
@@ -157,7 +157,7 @@
 </li>
 <li>after you’ve identified the routine, make a list of the stuff you’ll need to complete it! (then find/download/order/collect it so you’ll have it)</li>
 </ul>
-<h3 id="3-choose-your-reward" tabindex="-1"><a class="direct-link" href="#3-choose-your-reward" aria-hidden="true">#</a> 3. Choose your reward!</h3>
+<h3 id="3-choose-your-reward" tabindex="-1">3. Choose your reward! <a class="direct-link" href="#3-choose-your-reward" aria-hidden="true">🔗</a></h3>
 <ul>
 <li>choose a small reward for doing the thing (to help your brain want to do it again!)</li>
 <li>Uh… why do I need a reward?
@@ -170,7 +170,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="4-tweak-as-necessary" tabindex="-1"><a class="direct-link" href="#4-tweak-as-necessary" aria-hidden="true">#</a> 4. Tweak as necessary</h3>
+<h3 id="4-tweak-as-necessary" tabindex="-1">4. Tweak as necessary <a class="direct-link" href="#4-tweak-as-necessary" aria-hidden="true">🔗</a></h3>
 <ul>
 <li>keep playing with it til you find what works for you</li>
 <li>ideas for tweaking:
@@ -182,7 +182,7 @@
 </li>
 </ul>
 <hr>
-<h1 id="references" tabindex="-1"><a class="direct-link" href="#references" aria-hidden="true">#</a> References</h1>
+<h1 id="references" tabindex="-1">References <a class="direct-link" href="#references" aria-hidden="true">🔗</a></h1>
 <ol>
 <li>[[Atomic Habits by James Clear]]</li>
 <li><a href="https://www.youtube.com/watch?v=nxjKup00oF8">How to Create a New Habit: Note From Future Self</a> by Jessica McCabe</li>
@@ -190,7 +190,87 @@
 
 		</main>
 
-		<footer role="contentinfo" class="site-footer"></footer>
+		<footer role="contentinfo" class="site-footer">
+	<form class="[ newsletter ]">
+	<fieldset class="[ flow ]">
+		<legend>
+			<h2>Newsletter</h2>
+		</legend>
+		<div>
+			<label for="name">Name</label>
+			<input id="name" name="name" type="text" placeholder="Name"/>
+		</div>
+		<div>
+			<label for="email">Email</label>
+			<input id="email" name="email" type="email" placeholder="name@example.com"/>
+		</div>
+		<button>Subscribe</button>
+	</fieldset>
+</form>
+
+	<h2>Sitemap</h2>
+	<nav>
+		<ul class="[ flow ]"><li>
+						<a href="/now/">
+							What I&#39;m Doing Now
+						</a>
+					</li><li>
+						<a href="/about/">
+							About
+						</a>
+					</li><li>
+						<a href="/uses/">
+							Uses
+						</a>
+					</li><li>
+						<a href="/speaking/">
+							Speaking
+						</a>
+					</li><li>
+						<a href="/projects/">
+							Projects
+						</a>
+					</li><li>
+						<a href="/garden/">
+							Digital garden
+						</a>
+					</li><li>
+						<a href="/blog/">
+							Blog
+						</a>
+					</li><li>
+						<a href="/">
+							Home
+						</a>
+					</li><li>
+						<a href="/bookmarks/">
+							Bookmarks
+						</a>
+					</li></ul>
+	</nav>
+
+	<ul class="[ flow ]">
+		<li>
+			<stylized-text label="Elly">
+				<a href="/">
+					&lt;e//y&gt;
+			</a>
+			</stylized-text>
+		</li>
+		<li>
+			<a href="https://elly.to/twitter">Twitter</a>
+		</li>
+		<li>
+			<a href="https://elly.to/linkedin">LinkedIn</a>
+		</li>
+		<li>
+			<a href="https://elly.to/codepen">CodePen</a>
+		</li>
+		<li>
+			<a href="https://elly.to/dribbble">Dribbble</a>
+		</li>
+	</ul>
+</footer>
 
 		<!-- Include scripts here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
 		<script type="module" src="/assets/js/main.js"></script>

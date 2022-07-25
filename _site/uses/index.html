@@ -53,7 +53,7 @@
 						: localStorage.getItem('color-scheme')
 							?.includes("dark")
 								? "sl-theme-dark"
-								: window.matchMedia("(prefers-color-scheme: light)")
+								: window.matchMedia("(prefers-color-scheme: light)").matches
 									? "sl-theme-light"
 									: "sl-theme-dark");
 		</script>
@@ -136,7 +136,7 @@
 	<h1>Uses</h1>
 </header>
 <article class="[ flow ]">
-	<h2 id="hardware" tabindex="-1"><a class="direct-link" href="#hardware" aria-hidden="true">#</a> Hardware</h2>
+	<h2 id="hardware" tabindex="-1">Hardware <a class="direct-link" href="#hardware" aria-hidden="true">🔗</a></h2>
 <ul>
 <li>💻 M1 MacBook Pro 13 inch</li>
 <li>🖥 2x Dell G3223Q 32 inch 4k 144hz</li>
@@ -150,32 +150,32 @@
 <li>🎙 Audio-Technica AT2020</li>
 <li>🖱 Glorious Model-O wireless</li>
 </ul>
-<h3 id="keyboards" tabindex="-1"><a class="direct-link" href="#keyboards" aria-hidden="true">#</a> ⌨️ Keyboards</h3>
-<h4 id="pretty-in-pink" tabindex="-1"><a class="direct-link" href="#pretty-in-pink" aria-hidden="true">#</a> Pretty in pink</h4>
+<h3 id="keyboards" tabindex="-1">⌨️ Keyboards <a class="direct-link" href="#keyboards" aria-hidden="true">🔗</a></h3>
+<h4 id="pretty-in-pink" tabindex="-1">Pretty in pink <a class="direct-link" href="#pretty-in-pink" aria-hidden="true">🔗</a></h4>
 <ul>
 <li>Case and PCB: Ai03 Vega with the aluminium plate</li>
 <li>Switches: Alpacas lubed and filmed</li>
 <li>Key caps: SA Bliss pink alphas and modifiers</li>
 </ul>
-<h4 id="ergo-queen" tabindex="-1"><a class="direct-link" href="#ergo-queen" aria-hidden="true">#</a> Ergo queen</h4>
+<h4 id="ergo-queen" tabindex="-1">Ergo queen <a class="direct-link" href="#ergo-queen" aria-hidden="true">🔗</a></h4>
 <ul>
 <li>Case and PCB: Corne keyboard</li>
 <li>Switches: Silent Alpacas</li>
 <li>Key caps: DSA Magic Girl light</li>
 </ul>
-<h4 id="number-cruncher" tabindex="-1"><a class="direct-link" href="#number-cruncher" aria-hidden="true">#</a> Number cruncher</h4>
+<h4 id="number-cruncher" tabindex="-1">Number cruncher <a class="direct-link" href="#number-cruncher" aria-hidden="true">🔗</a></h4>
 <ul>
 <li>Case and PCB: Idyllic acrylic EXT65</li>
 <li>Switches: Banana splits lubed</li>
 <li>Key caps: IFK Comfy</li>
 </ul>
-<h4 id="nk65-milkshake-edition" tabindex="-1"><a class="direct-link" href="#nk65-milkshake-edition" aria-hidden="true">#</a> NK65 Milkshake edition</h4>
+<h4 id="nk65-milkshake-edition" tabindex="-1">NK65 Milkshake edition <a class="direct-link" href="#nk65-milkshake-edition" aria-hidden="true">🔗</a></h4>
 <ul>
 <li>Case and PCB: NK65</li>
 <li>Switches: NK_ silk yellows</li>
 <li>Key caps: Cherry Milkshake</li>
 </ul>
-<h2 id="software" tabindex="-1"><a class="direct-link" href="#software" aria-hidden="true">#</a> Software</h2>
+<h2 id="software" tabindex="-1">Software <a class="direct-link" href="#software" aria-hidden="true">🔗</a></h2>
 <ul>
 <li>VS Code</li>
 <li>iTerm 2</li>
@@ -191,7 +191,87 @@
 </article>
 		</main>
 
-		<footer role="contentinfo" class="site-footer"></footer>
+		<footer role="contentinfo" class="site-footer">
+	<form class="[ newsletter ]">
+	<fieldset class="[ flow ]">
+		<legend>
+			<h2>Newsletter</h2>
+		</legend>
+		<div>
+			<label for="name">Name</label>
+			<input id="name" name="name" type="text" placeholder="Name"/>
+		</div>
+		<div>
+			<label for="email">Email</label>
+			<input id="email" name="email" type="email" placeholder="name@example.com"/>
+		</div>
+		<button>Subscribe</button>
+	</fieldset>
+</form>
+
+	<h2>Sitemap</h2>
+	<nav>
+		<ul class="[ flow ]"><li>
+						<a href="/now/">
+							What I&#39;m Doing Now
+						</a>
+					</li><li>
+						<a href="/about/">
+							About
+						</a>
+					</li><li>
+						<a href="/uses/">
+							Uses
+						</a>
+					</li><li>
+						<a href="/speaking/">
+							Speaking
+						</a>
+					</li><li>
+						<a href="/projects/">
+							Projects
+						</a>
+					</li><li>
+						<a href="/garden/">
+							Digital garden
+						</a>
+					</li><li>
+						<a href="/blog/">
+							Blog
+						</a>
+					</li><li>
+						<a href="/">
+							Home
+						</a>
+					</li><li>
+						<a href="/bookmarks/">
+							Bookmarks
+						</a>
+					</li></ul>
+	</nav>
+
+	<ul class="[ flow ]">
+		<li>
+			<stylized-text label="Elly">
+				<a href="/">
+					&lt;e//y&gt;
+			</a>
+			</stylized-text>
+		</li>
+		<li>
+			<a href="https://elly.to/twitter">Twitter</a>
+		</li>
+		<li>
+			<a href="https://elly.to/linkedin">LinkedIn</a>
+		</li>
+		<li>
+			<a href="https://elly.to/codepen">CodePen</a>
+		</li>
+		<li>
+			<a href="https://elly.to/dribbble">Dribbble</a>
+		</li>
+	</ul>
+</footer>
 
 		<!-- Include scripts here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
 		<script type="module" src="/assets/js/main.js"></script>

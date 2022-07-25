@@ -102,9 +102,9 @@ module.exports = (eleventyConfig) => {
     .use(markdownItEmoji)
     .use(markdownItAnchor, {
       permalink: markdownItAnchor.permalink.ariaHidden({
-        placement: "before",
+        placement: "after",
         class: "direct-link",
-        symbol: "#",
+        symbol: "🔗",
         level: [1, 2, 3, 4],
       }),
       slugify: eleventyConfig.getFilter("slugify"),
@@ -150,7 +150,7 @@ module.exports = (eleventyConfig) => {
     "feedBlock",
     function (content, feed) {
       return `
-        <section class="[ ${feed.title.toLowerCase()} ] [ flow ]">
+        <section class="[ ${feed.title.toLowerCase()} ] [ feed-block flow ]">
           <h2>
             <a href="${feed.url}">${feed.title}</a>
           </h2>

@@ -1,7 +1,8 @@
 .feed-item-card {
   --shadow-offset: var(--size-1);
   inline-size: 100%;
-  box-shadow: var(--shadow-offset) var(--shadow-offset) 0px 0px var(--accent-bg);
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0px 0px
+    var(--accent-bg-hover);
   border-radius: var(--radius-3);
   transition: box-shadow 300ms var(--ease-1);
 
@@ -11,7 +12,8 @@
   }
 
   &::part(base) {
-    border-color: var(--accent-bg);
+    border-width: 2px;
+    border-color: var(--accent-bg-hover);
     border-radius: var(--radius-3);
   }
 
