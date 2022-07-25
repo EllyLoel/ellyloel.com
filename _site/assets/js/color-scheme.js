@@ -82,7 +82,7 @@ class ThemePicker {
           ? "sl-theme-light"
           : newTheme.includes("dark")
           ? "sl-theme-dark"
-          : window.matchMedia("(prefers-color-scheme: light)")
+          : window.matchMedia("(prefers-color-scheme: light)").matches
           ? "sl-theme-light"
           : "sl-theme-dark"
       }`

@@ -53,7 +53,7 @@
 						: localStorage.getItem('color-scheme')
 							?.includes("dark")
 								? "sl-theme-dark"
-								: window.matchMedia("(prefers-color-scheme: light)")
+								: window.matchMedia("(prefers-color-scheme: light)").matches
 									? "sl-theme-light"
 									: "sl-theme-dark");
 		</script>
@@ -132,7 +132,7 @@
 		<!-- tabindex fixes focus issue: https://benmyers.dev/blog/skip-links/#tldr -->
 		<main id="content" role="main" tabindex="-1" class="wrapper flow">
 			<p>An n^th^ factor of authentication is required to access a resource.</p>
-<h2 id="the-most-common-types-of-mfa-use" tabindex="-1"><a class="direct-link" href="#the-most-common-types-of-mfa-use" aria-hidden="true">#</a> The most common types of MFA use:</h2>
+<h2 id="the-most-common-types-of-mfa-use" tabindex="-1">The most common types of MFA use: <a class="direct-link" href="#the-most-common-types-of-mfa-use" aria-hidden="true">🔗</a></h2>
 <ul>
 <li>A one-time verification code that is sent to a phone number or email address</li>
 <li>The answer to a security question, such as the first concert you attended or the place you were born</li>
@@ -140,12 +140,12 @@
 <li>A physical fob, like <a href="https://www.yubico.com/">Yubikey</a>, which can be plugged into your device</li>
 <li>Biometric information, such as a fingerprint or iris scan (not common).</li>
 </ul>
-<h2 id="some-types-of-mfa-are-more-secure-than-others" tabindex="-1"><a class="direct-link" href="#some-types-of-mfa-are-more-secure-than-others" aria-hidden="true">#</a> Some types of MFA are more secure than others:</h2>
+<h2 id="some-types-of-mfa-are-more-secure-than-others" tabindex="-1">Some types of MFA are more secure than others: <a class="direct-link" href="#some-types-of-mfa-are-more-secure-than-others" aria-hidden="true">🔗</a></h2>
 <ul>
 <li>Two-factor authentication that relies on SMS is vulnerable to being compromised through a SIM swap attack, hackers persuade or bribe phone company employees to transfer your phone number to another SIM.</li>
 <li>Knowledge-based MFA tests like security questions are also more vulnerable to attacks. Your mother’s maiden name or the city in which you were born, for instance, are a matter of public record.</li>
 </ul>
-<h2 id="best-mfa-options" tabindex="-1"><a class="direct-link" href="#best-mfa-options" aria-hidden="true">#</a> Best MFA options:</h2>
+<h2 id="best-mfa-options" tabindex="-1">Best MFA options: <a class="direct-link" href="#best-mfa-options" aria-hidden="true">🔗</a></h2>
 <ul>
 <li>Hardware MFA options like Yubikey are the most secure, but currently few services support it.</li>
 <li>For the time being, the best method of MFA is an authenticator app. These apps work by generating a hash based on the time and a secret key, which only your phone and the website’s servers know. This hash is then shortened to a six-digit number for you to type in to a window following the username and password page at sign in.</li>
@@ -153,7 +153,87 @@
 
 		</main>
 
-		<footer role="contentinfo" class="site-footer"></footer>
+		<footer role="contentinfo" class="site-footer">
+	<form class="[ newsletter ]">
+	<fieldset class="[ flow ]">
+		<legend>
+			<h2>Newsletter</h2>
+		</legend>
+		<div>
+			<label for="name">Name</label>
+			<input id="name" name="name" type="text" placeholder="Name"/>
+		</div>
+		<div>
+			<label for="email">Email</label>
+			<input id="email" name="email" type="email" placeholder="name@example.com"/>
+		</div>
+		<button>Subscribe</button>
+	</fieldset>
+</form>
+
+	<h2>Sitemap</h2>
+	<nav>
+		<ul class="[ flow ]"><li>
+						<a href="/now/">
+							What I&#39;m Doing Now
+						</a>
+					</li><li>
+						<a href="/about/">
+							About
+						</a>
+					</li><li>
+						<a href="/uses/">
+							Uses
+						</a>
+					</li><li>
+						<a href="/speaking/">
+							Speaking
+						</a>
+					</li><li>
+						<a href="/projects/">
+							Projects
+						</a>
+					</li><li>
+						<a href="/garden/">
+							Digital garden
+						</a>
+					</li><li>
+						<a href="/blog/">
+							Blog
+						</a>
+					</li><li>
+						<a href="/">
+							Home
+						</a>
+					</li><li>
+						<a href="/bookmarks/">
+							Bookmarks
+						</a>
+					</li></ul>
+	</nav>
+
+	<ul class="[ flow ]">
+		<li>
+			<stylized-text label="Elly">
+				<a href="/">
+					&lt;e//y&gt;
+			</a>
+			</stylized-text>
+		</li>
+		<li>
+			<a href="https://elly.to/twitter">Twitter</a>
+		</li>
+		<li>
+			<a href="https://elly.to/linkedin">LinkedIn</a>
+		</li>
+		<li>
+			<a href="https://elly.to/codepen">CodePen</a>
+		</li>
+		<li>
+			<a href="https://elly.to/dribbble">Dribbble</a>
+		</li>
+	</ul>
+</footer>
 
 		<!-- Include scripts here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
 		<script type="module" src="/assets/js/main.js"></script>

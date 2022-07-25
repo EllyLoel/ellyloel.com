@@ -53,7 +53,7 @@
 						: localStorage.getItem('color-scheme')
 							?.includes("dark")
 								? "sl-theme-dark"
-								: window.matchMedia("(prefers-color-scheme: light)")
+								: window.matchMedia("(prefers-color-scheme: light)").matches
 									? "sl-theme-light"
 									: "sl-theme-dark");
 		</script>
@@ -136,7 +136,7 @@
 </blockquote>
 <p>The direct translation of zettelkasten is slip-box, a place to keep &amp; sort your notes.</p>
 <p>The 5 most important components of a Zettelkasten system are:</p>
-<h2 id="fleeting-notes" tabindex="-1"><a class="direct-link" href="#fleeting-notes" aria-hidden="true">#</a> Fleeting notes</h2>
+<h2 id="fleeting-notes" tabindex="-1">Fleeting notes <a class="direct-link" href="#fleeting-notes" aria-hidden="true">🔗</a></h2>
 <p><strong>Any idea that pops into your head needs to be captured.</strong></p>
 <p>Regardless of how, it needs to get out of your mind and onto something that can be seen. This then needs to be put together with other fleeting notes (captured ideas) from throughout your day into somewhat of an inbox, a place to keep track of these thoughts.</p>
 <p>Ways to capture an idea:</p>
@@ -150,12 +150,12 @@
 <li>Notebook</li>
 <li>Notes app</li>
 </ul>
-<h2 id="literature-notes" tabindex="-1"><a class="direct-link" href="#literature-notes" aria-hidden="true">#</a> Literature notes</h2>
+<h2 id="literature-notes" tabindex="-1">Literature notes <a class="direct-link" href="#literature-notes" aria-hidden="true">🔗</a></h2>
 <p>When you consume content, take notes of what you don’t want to forget or what you want to use in your own writing.</p>
 <p>Make sure your notes are [[Atomic]], in the smallest form they can possibly be. This is so you can combine your literature notes into permanent notes without their being overlap or redundancy.</p>
 <p>Be extremely selective in what you take notes on, make sure that it is relevant to things to care about or what to write about. And be even more selective with adding quotes, as you don’t want to use that as a crutch for your lack of understanding.</p>
 <p>Make sure to include the bibliographic details, author &amp; source at the very least, so you know where you got the idea from.</p>
-<h2 id="permanent-notes" tabindex="-1"><a class="direct-link" href="#permanent-notes" aria-hidden="true">#</a> Permanent notes</h2>
+<h2 id="permanent-notes" tabindex="-1">Permanent notes <a class="direct-link" href="#permanent-notes" aria-hidden="true">🔗</a></h2>
 <p>Every day, you should go through your inbox and seek to refine the fleeting &amp; literature notes that you’ve taken. Making connections and turning them into permanent notes.</p>
 <p>Ideally this should happen roughly everyday so that you don’t forget the conceptual ideas behind the notes.</p>
 <blockquote>
@@ -194,9 +194,9 @@ One note = One idea</p>
 </ul>
 </li>
 </ul>
-<h2 id="index-notes" tabindex="-1"><a class="direct-link" href="#index-notes" aria-hidden="true">#</a> Index notes</h2>
+<h2 id="index-notes" tabindex="-1">Index notes <a class="direct-link" href="#index-notes" aria-hidden="true">🔗</a></h2>
 <p>A starting point to falling down the rabbit hole, allowing you to navigate your Zettelkasten and find ideas when you need them.</p>
-<h2 id="keyword-notes" tabindex="-1"><a class="direct-link" href="#keyword-notes" aria-hidden="true">#</a> Keyword notes</h2>
+<h2 id="keyword-notes" tabindex="-1">Keyword notes <a class="direct-link" href="#keyword-notes" aria-hidden="true">🔗</a></h2>
 <p>Help readers/yourself understand an unclear word by further describing it in it’s own note and then linking to that note when you write that word.</p>
 <blockquote>
 <p>Do not brainstorm for a topic. Look into the slip-box instead to see where chains of notes have developed and ideas have been built up to clusters.</p>
@@ -212,14 +212,94 @@ Don’t just copy them, mold them to fit each other and the piece of content.</p
 </blockquote>
 <p>– Sönke Ahrens</p>
 <hr>
-<h1 id="references" tabindex="-1"><a class="direct-link" href="#references" aria-hidden="true">#</a> References</h1>
+<h1 id="references" tabindex="-1">References <a class="direct-link" href="#references" aria-hidden="true">🔗</a></h1>
 <ol>
 <li>How to Take Smart Notes by Sönke Ahrens</li>
 </ol>
 
 		</main>
 
-		<footer role="contentinfo" class="site-footer"></footer>
+		<footer role="contentinfo" class="site-footer">
+	<form class="[ newsletter ]">
+	<fieldset class="[ flow ]">
+		<legend>
+			<h2>Newsletter</h2>
+		</legend>
+		<div>
+			<label for="name">Name</label>
+			<input id="name" name="name" type="text" placeholder="Name"/>
+		</div>
+		<div>
+			<label for="email">Email</label>
+			<input id="email" name="email" type="email" placeholder="name@example.com"/>
+		</div>
+		<button>Subscribe</button>
+	</fieldset>
+</form>
+
+	<h2>Sitemap</h2>
+	<nav>
+		<ul class="[ flow ]"><li>
+						<a href="/now/">
+							What I&#39;m Doing Now
+						</a>
+					</li><li>
+						<a href="/about/">
+							About
+						</a>
+					</li><li>
+						<a href="/uses/">
+							Uses
+						</a>
+					</li><li>
+						<a href="/speaking/">
+							Speaking
+						</a>
+					</li><li>
+						<a href="/projects/">
+							Projects
+						</a>
+					</li><li>
+						<a href="/garden/">
+							Digital garden
+						</a>
+					</li><li>
+						<a href="/blog/">
+							Blog
+						</a>
+					</li><li>
+						<a href="/">
+							Home
+						</a>
+					</li><li>
+						<a href="/bookmarks/">
+							Bookmarks
+						</a>
+					</li></ul>
+	</nav>
+
+	<ul class="[ flow ]">
+		<li>
+			<stylized-text label="Elly">
+				<a href="/">
+					&lt;e//y&gt;
+			</a>
+			</stylized-text>
+		</li>
+		<li>
+			<a href="https://elly.to/twitter">Twitter</a>
+		</li>
+		<li>
+			<a href="https://elly.to/linkedin">LinkedIn</a>
+		</li>
+		<li>
+			<a href="https://elly.to/codepen">CodePen</a>
+		</li>
+		<li>
+			<a href="https://elly.to/dribbble">Dribbble</a>
+		</li>
+	</ul>
+</footer>
 
 		<!-- Include scripts here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
 		<script type="module" src="/assets/js/main.js"></script>

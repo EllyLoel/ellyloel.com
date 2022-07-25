@@ -53,7 +53,7 @@
 						: localStorage.getItem('color-scheme')
 							?.includes("dark")
 								? "sl-theme-dark"
-								: window.matchMedia("(prefers-color-scheme: light)")
+								: window.matchMedia("(prefers-color-scheme: light)").matches
 									? "sl-theme-light"
 									: "sl-theme-dark");
 		</script>
@@ -143,35 +143,11 @@
 		<p>A lego model designed to look like myself.</p>
 	</canvas>
 
-	<css-doodle>
-		@grid: 1 / 500px;
-		background: @shaders(
-			texture1 {
-				@grid: 1 / 100%;
-				background: linear-gradient(
-					45deg,
-					@stripe.@m20.@p(#FFF4E0, #F8B501, #06ACB5, #17191D, #FC3D3C)
-				);
-			}
-			fragment {
-				void main() {
-					vec2 p = gl_FragCoord.xy / u_resolution.xy;
-					vec2 c = vec2(.5, .5);
-					vec2 uv = p.xy - c;
-					float R = 3.141593;
-					float len = length(uv * vec2(u_resolution.x / u_resolution.y, 1.));
-					float angle = atan(uv.y, uv.x) + R * smoothstep(.75, 0., len);
-					float r = length(uv) + .1;
-					vec2 coords = vec2(r * cos(angle), r * sin(angle)) + c;
-					FragColor = texture(texture1, coords);
-				}
-			}
-		);
-	</css-doodle>
+	
 </header>
 
 
-        <section class="[ articles ] [ flow ]">
+        <section class="[ articles ] [ feed-block flow ]">
           <h2>
             <a href="/blog">Articles</a>
           </h2>
@@ -218,7 +194,7 @@ CSS-for-JS Devs
       
 
 
-        <section class="[ projects ] [ flow ]">
+        <section class="[ projects ] [ feed-block flow ]">
           <h2>
             <a href="/projects">Projects</a>
           </h2>
@@ -261,7 +237,7 @@ Lots of inspiration from Josh W Comeau, Andy Bell, and Adam Argyle.
       
 
 
-        <section class="[ notes ] [ flow ]">
+        <section class="[ notes ] [ feed-block flow ]">
           <h2>
             <a href="/garden">Notes</a>
           </h2>
@@ -320,7 +296,7 @@ The direct translation of zettelkasten is slip-box, a place to keep & sort your 
       
 
 
-        <section class="[ bookmarks ] [ flow ]">
+        <section class="[ bookmarks ] [ feed-block flow ]">
           <h2>
             <a href="/bookmarks">Bookmarks</a>
           </h2>
@@ -366,7 +342,87 @@ The direct translation of zettelkasten is slip-box, a place to keep & sort your 
       
 		</main>
 
-		<footer role="contentinfo" class="site-footer"></footer>
+		<footer role="contentinfo" class="site-footer">
+	<form class="[ newsletter ]">
+	<fieldset class="[ flow ]">
+		<legend>
+			<h2>Newsletter</h2>
+		</legend>
+		<div>
+			<label for="name">Name</label>
+			<input id="name" name="name" type="text" placeholder="Name"/>
+		</div>
+		<div>
+			<label for="email">Email</label>
+			<input id="email" name="email" type="email" placeholder="name@example.com"/>
+		</div>
+		<button>Subscribe</button>
+	</fieldset>
+</form>
+
+	<h2>Sitemap</h2>
+	<nav>
+		<ul class="[ flow ]"><li>
+						<a href="/now/">
+							What I&#39;m Doing Now
+						</a>
+					</li><li>
+						<a href="/about/">
+							About
+						</a>
+					</li><li>
+						<a href="/uses/">
+							Uses
+						</a>
+					</li><li>
+						<a href="/speaking/">
+							Speaking
+						</a>
+					</li><li>
+						<a href="/projects/">
+							Projects
+						</a>
+					</li><li>
+						<a href="/garden/">
+							Digital garden
+						</a>
+					</li><li>
+						<a href="/blog/">
+							Blog
+						</a>
+					</li><li>
+						<a href="/">
+							Home
+						</a>
+					</li><li>
+						<a href="/bookmarks/">
+							Bookmarks
+						</a>
+					</li></ul>
+	</nav>
+
+	<ul class="[ flow ]">
+		<li>
+			<stylized-text label="Elly">
+				<a href="/">
+					&lt;e//y&gt;
+			</a>
+			</stylized-text>
+		</li>
+		<li>
+			<a href="https://elly.to/twitter">Twitter</a>
+		</li>
+		<li>
+			<a href="https://elly.to/linkedin">LinkedIn</a>
+		</li>
+		<li>
+			<a href="https://elly.to/codepen">CodePen</a>
+		</li>
+		<li>
+			<a href="https://elly.to/dribbble">Dribbble</a>
+		</li>
+	</ul>
+</footer>
 
 		<!-- Include scripts here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
 		<script type="module" src="/assets/js/main.js"></script>

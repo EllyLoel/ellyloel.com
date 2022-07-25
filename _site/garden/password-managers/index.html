@@ -53,7 +53,7 @@
 						: localStorage.getItem('color-scheme')
 							?.includes("dark")
 								? "sl-theme-dark"
-								: window.matchMedia("(prefers-color-scheme: light)")
+								: window.matchMedia("(prefers-color-scheme: light)").matches
 									? "sl-theme-light"
 									: "sl-theme-dark");
 		</script>
@@ -131,12 +131,12 @@
 
 		<!-- tabindex fixes focus issue: https://benmyers.dev/blog/skip-links/#tldr -->
 		<main id="content" role="main" tabindex="-1" class="wrapper flow">
-			<h2 id="why-use-a-password-manager" tabindex="-1"><a class="direct-link" href="#why-use-a-password-manager" aria-hidden="true">#</a> Why use a password manager?</h2>
+			<h2 id="why-use-a-password-manager" tabindex="-1">Why use a password manager? <a class="direct-link" href="#why-use-a-password-manager" aria-hidden="true">🔗</a></h2>
 <ul>
 <li>Password managers greatly improve your online security by allowing you to create a different password for every individual account you have on the internet. This ensures that if any one password is ever compromised, all your other accounts will remain secure.</li>
 <li>Additionally, password managers allow you to create complex (and thus secure) passwords that humans would find very hard to remember.</li>
 </ul>
-<h2 id="popular-password-managers" tabindex="-1"><a class="direct-link" href="#popular-password-managers" aria-hidden="true">#</a> Popular password managers:</h2>
+<h2 id="popular-password-managers" tabindex="-1">Popular password managers: <a class="direct-link" href="#popular-password-managers" aria-hidden="true">🔗</a></h2>
 <ul>
 <li><a href="https://bitwarden.com/">Bitwarden</a></li>
 <li><a href="https://1password.com/">1Password</a></li>
@@ -144,7 +144,7 @@
 <li><a href="https://keepass.info/">KeePass</a></li>
 <li><a href="https://www.dashlane.com/">Dashlane</a></li>
 </ul>
-<h2 id="which-password-manager-should-you-use" tabindex="-1"><a class="direct-link" href="#which-password-manager-should-you-use" aria-hidden="true">#</a> Which password manager should you use?</h2>
+<h2 id="which-password-manager-should-you-use" tabindex="-1">Which password manager should you use? <a class="direct-link" href="#which-password-manager-should-you-use" aria-hidden="true">🔗</a></h2>
 <ul>
 <li>I would personally recommend [[Bitwarden]] as they are an [[Open-source]] company with known good intentions as they have been audited multiple times by third-party sources.</li>
 <li>On top of this they have an extensive free tier with many useful features.</li>
@@ -152,7 +152,87 @@
 
 		</main>
 
-		<footer role="contentinfo" class="site-footer"></footer>
+		<footer role="contentinfo" class="site-footer">
+	<form class="[ newsletter ]">
+	<fieldset class="[ flow ]">
+		<legend>
+			<h2>Newsletter</h2>
+		</legend>
+		<div>
+			<label for="name">Name</label>
+			<input id="name" name="name" type="text" placeholder="Name"/>
+		</div>
+		<div>
+			<label for="email">Email</label>
+			<input id="email" name="email" type="email" placeholder="name@example.com"/>
+		</div>
+		<button>Subscribe</button>
+	</fieldset>
+</form>
+
+	<h2>Sitemap</h2>
+	<nav>
+		<ul class="[ flow ]"><li>
+						<a href="/now/">
+							What I&#39;m Doing Now
+						</a>
+					</li><li>
+						<a href="/about/">
+							About
+						</a>
+					</li><li>
+						<a href="/uses/">
+							Uses
+						</a>
+					</li><li>
+						<a href="/speaking/">
+							Speaking
+						</a>
+					</li><li>
+						<a href="/projects/">
+							Projects
+						</a>
+					</li><li>
+						<a href="/garden/">
+							Digital garden
+						</a>
+					</li><li>
+						<a href="/blog/">
+							Blog
+						</a>
+					</li><li>
+						<a href="/">
+							Home
+						</a>
+					</li><li>
+						<a href="/bookmarks/">
+							Bookmarks
+						</a>
+					</li></ul>
+	</nav>
+
+	<ul class="[ flow ]">
+		<li>
+			<stylized-text label="Elly">
+				<a href="/">
+					&lt;e//y&gt;
+			</a>
+			</stylized-text>
+		</li>
+		<li>
+			<a href="https://elly.to/twitter">Twitter</a>
+		</li>
+		<li>
+			<a href="https://elly.to/linkedin">LinkedIn</a>
+		</li>
+		<li>
+			<a href="https://elly.to/codepen">CodePen</a>
+		</li>
+		<li>
+			<a href="https://elly.to/dribbble">Dribbble</a>
+		</li>
+	</ul>
+</footer>
 
 		<!-- Include scripts here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
 		<script type="module" src="/assets/js/main.js"></script>

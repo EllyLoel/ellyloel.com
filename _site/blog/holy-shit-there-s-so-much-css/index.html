@@ -53,7 +53,7 @@
 						: localStorage.getItem('color-scheme')
 							?.includes("dark")
 								? "sl-theme-dark"
-								: window.matchMedia("(prefers-color-scheme: light)")
+								: window.matchMedia("(prefers-color-scheme: light)").matches
 									? "sl-theme-light"
 									: "sl-theme-dark");
 		</script>
@@ -132,11 +132,11 @@
 		<!-- tabindex fixes focus issue: https://benmyers.dev/blog/skip-links/#tldr -->
 		<main id="content" role="main" tabindex="-1" class="wrapper flow">
 			<p><a href="https://css-for-js.dev/">CSS-for-JS Devs</a></p>
-<h1 id="fundamentals" tabindex="-1"><a class="direct-link" href="#fundamentals" aria-hidden="true">#</a> Fundamentals</h1>
-<h2 id="pseudo-classes" tabindex="-1"><a class="direct-link" href="#pseudo-classes" aria-hidden="true">#</a> Pseudo-classes</h2>
+<h1 id="fundamentals" tabindex="-1">Fundamentals <a class="direct-link" href="#fundamentals" aria-hidden="true">🔗</a></h1>
+<h2 id="pseudo-classes" tabindex="-1">Pseudo-classes <a class="direct-link" href="#pseudo-classes" aria-hidden="true">🔗</a></h2>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">Article</a><br>
 <a href="https://open.spotify.com/episode/4oQ23OfgIMUsrJ4iuV9mG5?si=6115eb8b26ea4532">Podcast</a></p>
-<h2 id="color" tabindex="-1"><a class="direct-link" href="#color" aria-hidden="true">#</a> Color</h2>
+<h2 id="color" tabindex="-1">Color <a class="direct-link" href="#color" aria-hidden="true">🔗</a></h2>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">Article</a><br>
 <a href="https://open.spotify.com/episode/5WcgqRbtXg6j6N9GEO96ve?si=164f888ac2ae466f">Podcast 1/2</a><br>
 <a href="https://open.spotify.com/episode/2wdKgTolHCMXS1YD24WMHH?si=4d9ccfb6b9724522">Podcast 2/2</a><br>
@@ -145,8 +145,8 @@
 <li>Use HSL! (or LAB YCH coming soon)</li>
 <li>Use HSL w/ slash notation not HSLA as it’s legacy (unless you need IE support)</li>
 </ul>
-<h2 id="units" tabindex="-1"><a class="direct-link" href="#units" aria-hidden="true">#</a> Units</h2>
-<h3 id="which-unit-should-i-use-when" tabindex="-1"><a class="direct-link" href="#which-unit-should-i-use-when" aria-hidden="true">#</a> Which unit should I use when?</h3>
+<h2 id="units" tabindex="-1">Units <a class="direct-link" href="#units" aria-hidden="true">🔗</a></h2>
+<h3 id="which-unit-should-i-use-when" tabindex="-1">Which unit should I use when? <a class="direct-link" href="#which-unit-should-i-use-when" aria-hidden="true">🔗</a></h3>
 <ul>
 <li>For typography, I generally use <code>rem</code>, because it has important accessibility benefits. For example, users who set their own default font size in their browser settings only get that font size if we use <code>rem</code>.</li>
 <li>For box model properties (<code>padding</code>, <code>border</code>, <code>margin</code>) I usually use <code>px</code> as it’s more intuitive than <code>rem</code>, and there isn’t a clear accessibility win if you use <code>rem</code>.</li>
@@ -161,16 +161,16 @@
 </blockquote>
 </li>
 </ul>
-<h1 id="rendering-logic" tabindex="-1"><a class="direct-link" href="#rendering-logic" aria-hidden="true">#</a> <strong>Rendering Logic</strong></h1>
-<h2 id="logical-properties-values" tabindex="-1"><a class="direct-link" href="#logical-properties-values" aria-hidden="true">#</a> Logical properties/values</h2>
+<h1 id="rendering-logic" tabindex="-1"><strong>Rendering Logic</strong> <a class="direct-link" href="#rendering-logic" aria-hidden="true">🔗</a></h1>
+<h2 id="logical-properties-values" tabindex="-1">Logical properties/values <a class="direct-link" href="#logical-properties-values" aria-hidden="true">🔗</a></h2>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties">Article</a></p>
-<h2 id="border" tabindex="-1"><a class="direct-link" href="#border" aria-hidden="true">#</a> Border</h2>
+<h2 id="border" tabindex="-1">Border <a class="direct-link" href="#border" aria-hidden="true">🔗</a></h2>
 <p>If you don’t specify a <code>border-color</code>, it’ll inherit the font’s <code>color</code> by default. This isn’t well-known, but it can be very useful in cases where those things should be synchronised!</p>
-<h2 id="stacking-contexts" tabindex="-1"><a class="direct-link" href="#stacking-contexts" aria-hidden="true">#</a> Stacking contexts</h2>
+<h2 id="stacking-contexts" tabindex="-1">Stacking contexts <a class="direct-link" href="#stacking-contexts" aria-hidden="true">🔗</a></h2>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">Article</a><br>
 <a href="https://github.com/andreadev-it/stacking-contexts-inspector">Stacking contexts inspector</a></p>
-<h1 id="responsive-and-behavioural-css" tabindex="-1"><a class="direct-link" href="#responsive-and-behavioural-css" aria-hidden="true">#</a> <strong>Responsive and Behavioural CSS</strong></h1>
-<h2 id="pixels" tabindex="-1"><a class="direct-link" href="#pixels" aria-hidden="true">#</a> Pixels</h2>
+<h1 id="responsive-and-behavioural-css" tabindex="-1"><strong>Responsive and Behavioural CSS</strong> <a class="direct-link" href="#responsive-and-behavioural-css" aria-hidden="true">🔗</a></h1>
+<h2 id="pixels" tabindex="-1">Pixels <a class="direct-link" href="#pixels" aria-hidden="true">🔗</a></h2>
 <p>The iPhone 12 has a native resolution of 2532×1170 pixels—for context, this is more than most large desktop monitors!<br>
 So to account for this mobile devices have a <code>device pixel ratio</code>.<br>
 The ratio between the physical LED pixels on the device, and the “theoretical” pixels we use in CSS. On my iPhone, this number is 3. This means that a 10px length will actually be 30px long. Each software pixel actually corresponds to 9 hardware pixels:<br>
@@ -186,20 +186,20 @@ The ratio between the physical LED pixels on the device, and the “theoretical�
   background: pink;
 }
 </code></pre>
-<h2 id="media-queries" tabindex="-1"><a class="direct-link" href="#media-queries" aria-hidden="true">#</a> Media queries</h2>
+<h2 id="media-queries" tabindex="-1">Media queries <a class="direct-link" href="#media-queries" aria-hidden="true">🔗</a></h2>
 <p><a href="https://polypane.app/blog/the-complete-guide-to-css-media-queries/#upcoming-media-query-features">Article</a></p>
-<h1 id="typography-and-images" tabindex="-1"><a class="direct-link" href="#typography-and-images" aria-hidden="true">#</a> Typography and Images</h1>
+<h1 id="typography-and-images" tabindex="-1">Typography and Images <a class="direct-link" href="#typography-and-images" aria-hidden="true">🔗</a></h1>
 <p>Images are inline elements “magic space”</p>
 <p>Variable fonts are the future</p>
-<h1 id="css-grid-and-flexbox" tabindex="-1"><a class="direct-link" href="#css-grid-and-flexbox" aria-hidden="true">#</a> <strong>CSS Grid and Flexbox</strong></h1>
+<h1 id="css-grid-and-flexbox" tabindex="-1"><strong>CSS Grid and Flexbox</strong> <a class="direct-link" href="#css-grid-and-flexbox" aria-hidden="true">🔗</a></h1>
 <p>Flex for 1 dimension and Grid for 2 dimensions.</p>
 <p>Gap 👏</p>
 <p>Subgrid (<em>soon™️)</em></p>
-<h1 id="animations" tabindex="-1"><a class="direct-link" href="#animations" aria-hidden="true">#</a> <strong>Animations</strong></h1>
-<h2 id="transitions" tabindex="-1"><a class="direct-link" href="#transitions" aria-hidden="true">#</a> Transitions</h2>
+<h1 id="animations" tabindex="-1"><strong>Animations</strong> <a class="direct-link" href="#animations" aria-hidden="true">🔗</a></h1>
+<h2 id="transitions" tabindex="-1">Transitions <a class="direct-link" href="#transitions" aria-hidden="true">🔗</a></h2>
 <p>Reach for <code>transition</code> when your CSS will change as a result of some application state or user action.</p>
 <p>I use it when I want to smooth out an otherwise harsh transition between values.</p>
-<h2 id="keyframes" tabindex="-1"><a class="direct-link" href="#keyframes" aria-hidden="true">#</a> Keyframes</h2>
+<h2 id="keyframes" tabindex="-1">Keyframes <a class="direct-link" href="#keyframes" aria-hidden="true">🔗</a></h2>
 <p>If an animation needs to run immediately when the page loads or the component mounts, it’s easiest to use <code>@keyframes</code>.</p>
 <p>There are some things that only <code>@keyframes</code> can do:</p>
 <ul>
@@ -213,22 +213,22 @@ The ratio between the physical LED pixels on the device, and the “theoretical�
 <p>pauseable animations</p>
 </li>
 </ul>
-<h2 id="js-libraries" tabindex="-1"><a class="direct-link" href="#js-libraries" aria-hidden="true">#</a> JS libraries</h2>
+<h2 id="js-libraries" tabindex="-1">JS libraries <a class="direct-link" href="#js-libraries" aria-hidden="true">🔗</a></h2>
 <p><a href="https://motion.dev/">Motion One</a></p>
 <p><a href="https://www.framer.com/motion/">Framer Motion</a></p>
 <p><a href="https://react-spring.io/">React Spring</a></p>
 <p><a href="https://greensock.com/gsap/">GreenSock GSAP</a></p>
-<h1 id="little-big-details" tabindex="-1"><a class="direct-link" href="#little-big-details" aria-hidden="true">#</a> <strong>Little Big Details</strong></h1>
-<h2 id="increase-touch-targets" tabindex="-1"><a class="direct-link" href="#increase-touch-targets" aria-hidden="true">#</a> Increase touch targets</h2>
+<h1 id="little-big-details" tabindex="-1"><strong>Little Big Details</strong> <a class="direct-link" href="#little-big-details" aria-hidden="true">🔗</a></h1>
+<h2 id="increase-touch-targets" tabindex="-1">Increase touch targets <a class="direct-link" href="#increase-touch-targets" aria-hidden="true">🔗</a></h2>
 <p>For users using corse pointers (a.k.a mobile users) the minimum recommended size (by Apple) for touch targets is <code>44px²</code>. So ideally you should go through and make sure that all interactive elements are at least that size, but a smart and lazy person thought “no, I don’t wanna do that!” and decided to come up with a way to calculate it automatically using <code>calc</code> and <code>min</code>: <a href="https://codepen.io/third774/pen/XWgXZRY">https://codepen.io/third774/pen/XWgXZRY</a>.</p>
-<h1 id="generative-art-with-css" tabindex="-1"><a class="direct-link" href="#generative-art-with-css" aria-hidden="true">#</a> <strong>Generative art with CSS</strong></h1>
+<h1 id="generative-art-with-css" tabindex="-1"><strong>Generative art with CSS</strong> <a class="direct-link" href="#generative-art-with-css" aria-hidden="true">🔗</a></h1>
 <p><a href="https://css-doodle.com/">CSS doodle</a></p>
 <p><a href="https://tabbied.com/select-artwork">Tabbied</a></p>
-<h2 id="backdrop-filters" tabindex="-1"><a class="direct-link" href="#backdrop-filters" aria-hidden="true">#</a> <strong>Backdrop filters</strong></h2>
-<h2 id="layered-shadows" tabindex="-1"><a class="direct-link" href="#layered-shadows" aria-hidden="true">#</a> <strong>Layered shadows</strong></h2>
-<h2 id="no-more-dull-gradients" tabindex="-1"><a class="direct-link" href="#no-more-dull-gradients" aria-hidden="true">#</a> <strong>No more dull gradients</strong></h2>
-<h2 id="scroll-snapping" tabindex="-1"><a class="direct-link" href="#scroll-snapping" aria-hidden="true">#</a> <strong>Scroll snapping</strong></h2>
-<h1 id="new-css-coming-in-2022" tabindex="-1"><a class="direct-link" href="#new-css-coming-in-2022" aria-hidden="true">#</a> <strong>New CSS coming in 2022</strong></h1>
+<h2 id="backdrop-filters" tabindex="-1"><strong>Backdrop filters</strong> <a class="direct-link" href="#backdrop-filters" aria-hidden="true">🔗</a></h2>
+<h2 id="layered-shadows" tabindex="-1"><strong>Layered shadows</strong> <a class="direct-link" href="#layered-shadows" aria-hidden="true">🔗</a></h2>
+<h2 id="no-more-dull-gradients" tabindex="-1"><strong>No more dull gradients</strong> <a class="direct-link" href="#no-more-dull-gradients" aria-hidden="true">🔗</a></h2>
+<h2 id="scroll-snapping" tabindex="-1"><strong>Scroll snapping</strong> <a class="direct-link" href="#scroll-snapping" aria-hidden="true">🔗</a></h2>
+<h1 id="new-css-coming-in-2022" tabindex="-1"><strong>New CSS coming in 2022</strong> <a class="direct-link" href="#new-css-coming-in-2022" aria-hidden="true">🔗</a></h1>
 <p><a href="https://www.smashingmagazine.com/2022/03/new-css-features-2022">Article</a></p>
 <p>Lots of amazing new CSS features coming this year, specifically:</p>
 <p>- Container queries</p>
@@ -261,7 +261,87 @@ The ratio between the physical LED pixels on the device, and the “theoretical�
 
 		</main>
 
-		<footer role="contentinfo" class="site-footer"></footer>
+		<footer role="contentinfo" class="site-footer">
+	<form class="[ newsletter ]">
+	<fieldset class="[ flow ]">
+		<legend>
+			<h2>Newsletter</h2>
+		</legend>
+		<div>
+			<label for="name">Name</label>
+			<input id="name" name="name" type="text" placeholder="Name"/>
+		</div>
+		<div>
+			<label for="email">Email</label>
+			<input id="email" name="email" type="email" placeholder="name@example.com"/>
+		</div>
+		<button>Subscribe</button>
+	</fieldset>
+</form>
+
+	<h2>Sitemap</h2>
+	<nav>
+		<ul class="[ flow ]"><li>
+						<a href="/now/">
+							What I&#39;m Doing Now
+						</a>
+					</li><li>
+						<a href="/about/">
+							About
+						</a>
+					</li><li>
+						<a href="/uses/">
+							Uses
+						</a>
+					</li><li>
+						<a href="/speaking/">
+							Speaking
+						</a>
+					</li><li>
+						<a href="/projects/">
+							Projects
+						</a>
+					</li><li>
+						<a href="/garden/">
+							Digital garden
+						</a>
+					</li><li>
+						<a href="/blog/">
+							Blog
+						</a>
+					</li><li>
+						<a href="/">
+							Home
+						</a>
+					</li><li>
+						<a href="/bookmarks/">
+							Bookmarks
+						</a>
+					</li></ul>
+	</nav>
+
+	<ul class="[ flow ]">
+		<li>
+			<stylized-text label="Elly">
+				<a href="/">
+					&lt;e//y&gt;
+			</a>
+			</stylized-text>
+		</li>
+		<li>
+			<a href="https://elly.to/twitter">Twitter</a>
+		</li>
+		<li>
+			<a href="https://elly.to/linkedin">LinkedIn</a>
+		</li>
+		<li>
+			<a href="https://elly.to/codepen">CodePen</a>
+		</li>
+		<li>
+			<a href="https://elly.to/dribbble">Dribbble</a>
+		</li>
+	</ul>
+</footer>
 
 		<!-- Include scripts here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
 		<script type="module" src="/assets/js/main.js"></script>
