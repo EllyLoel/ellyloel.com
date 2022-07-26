@@ -31,8 +31,9 @@ module.exports = (eleventyConfig) => {
       clearScreen: false,
       server: {
         mode: "development",
-        middlewareMode: "ssr",
+        middlewareMode: true,
       },
+      appType: "custom",
       assetsInclude: ["**/*.xml", "**/*.txt"],
       build: {
         mode: "production",
@@ -77,12 +78,6 @@ module.exports = (eleventyConfig) => {
                     width: 1920,
                   },
                 ],
-                penthouse: {
-                  forceInclude: [
-                    ".fonts-loaded-1 body",
-                    ".fonts-loaded-2 body",
-                  ],
-                },
               },
             }),
           ],
@@ -188,6 +183,7 @@ module.exports = (eleventyConfig) => {
 
   // Layouts
   eleventyConfig.addLayoutAlias("base", "base.njk");
+  eleventyConfig.addLayoutAlias("not-home", "not-home.njk");
   eleventyConfig.addLayoutAlias("post", "post.njk");
   eleventyConfig.addLayoutAlias("note", "note.njk");
   eleventyConfig.addLayoutAlias("bookmark", "bookmark.njk");
@@ -196,11 +192,10 @@ module.exports = (eleventyConfig) => {
   // Copy/pass-through files
   eleventyConfig.addPassthroughCopy("src/assets/css");
   eleventyConfig.addPassthroughCopy("src/assets/js");
+  eleventyConfig.addPassthroughCopy("public");
   eleventyConfig.addPassthroughCopy({
-    "node_modules/@shoelace-style/shoelace": "shoelace",
+    "/node_modules/@shoelace-style/shoelace/dist/assets": "public/shoelace",
   });
-  // Pass-through of the public directory for static files that Vite/Rollup ignores on build (https://vitejs.dev/guide/assets.html#the-public-directory)
-  eleventyConfig.addPassthroughCopy("src/public");
 
   return {
     templateFormats: ["njk", "md", "11ty.js"],

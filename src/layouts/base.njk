@@ -15,8 +15,6 @@
 		{% include "meta.njk" %}
 
 		<!-- Include stylesheets here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
-		<link rel="stylesheet" href="/shoelace/dist/themes/light.css"/>
-		<link rel="stylesheet" href="/shoelace/dist/themes/dark.css"/>
 		<link rel="stylesheet" href="/assets/css/global.scss">
 		<script>
 			// if there's a color-scheme id in localstorage, use it, if not use auto.
@@ -43,13 +41,13 @@
 		{% include "header.njk" %}
 
 		<!-- tabindex fixes focus issue: https://benmyers.dev/blog/skip-links/#tldr -->
-		<main id="content" role="main" tabindex="-1" class="wrapper flow">
+		<main id="content" role="main" tabindex="-1" class="[ wrapper flow ]">
 			{{ content | safe }}
 		</main>
 
 		{% include "footer.njk" %}
 
 		<!-- Include scripts here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
-		<script type="module" src="{{ '/assets/js/main.js' | url }}"></script>
+		<script type="module" src="/assets/js/main.js"></script>
 	</body>
 </html>
