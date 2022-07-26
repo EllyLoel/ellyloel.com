@@ -11216,16 +11216,21 @@ var SimpleGit = class extends GitManager {
       };
     });
   }
-  log(file, relativeToRepo = false) {
+  getRemoteUrl(remote) {
     return __async(this, null, function* () {
-      const path3 = relativeToRepo && this.plugin.settings.basePath ? file : file == null ? void 0 : file.substring(this.plugin.settings.basePath.length + 1);
+      return (yield this.git.remote(["get-url", remote], (err, url) => this.onError(err))) || void 0;
+    });
+  }
+  log(file, relativeToVault = true) {
+    return __async(this, null, function* () {
+      const path3 = relativeToVault && this.plugin.settings.basePath.length > 0 ? file == null ? void 0 : file.substring(this.plugin.settings.basePath.length + 1) : file;
       const res = yield this.git.log({ file: path3 }, (err) => this.onError(err));
       return res.all;
     });
   }
-  show(commitHash, file, relativeToRepo = false) {
+  show(commitHash, file, relativeToVault = true) {
     return __async(this, null, function* () {
-      const path3 = relativeToRepo && this.plugin.settings.basePath ? file : file.substring(this.plugin.settings.basePath.length + 1);
+      const path3 = relativeToVault && this.plugin.settings.basePath.length > 0 ? file.substring(this.plugin.settings.basePath.length + 1) : file;
       return this.git.show([commitHash + ":" + path3], (err) => this.onError(err));
     });
   }
@@ -11272,6 +11277,8 @@ var SimpleGit = class extends GitManager {
   getRemoteBranches(remote) {
     return __async(this, null, function* () {
       const res = yield this.git.branch(["-r", "--list", `${remote}*`], (err) => this.onError(err));
+      console.log(remote);
+      console.log(res);
       const list = [];
       for (var item in res.branches) {
         list.push(res.branches[item].name);
@@ -14170,12 +14177,18 @@ function instance4($$self, $$props, $$invalidate) {
     removeEventListener("git-view-refresh", refresh);
   });
   function commit() {
-    $$invalidate(4, loading = true);
-    plugin.gitManager.commit(commitMessage).then(() => {
-      if (commitMessage !== plugin.settings.commitMessage) {
-        $$invalidate(6, commitMessage = "");
+    return __awaiter(this, void 0, void 0, function* () {
+      $$invalidate(4, loading = true);
+      if (yield plugin.hasTooBigFiles(status.staged)) {
+        plugin.setState(PluginState.idle);
+        return false;
       }
-    }).finally(triggerRefresh);
+      plugin.gitManager.commit(commitMessage).then(() => {
+        if (commitMessage !== plugin.settings.commitMessage) {
+          $$invalidate(6, commitMessage = "");
+        }
+      }).finally(triggerRefresh);
+    });
   }
   function refresh() {
     return __awaiter(this, void 0, void 0, function* () {
@@ -14720,6 +14733,10 @@ var ObsidianGit = class extends import_obsidian15.Plugin {
       } else {
         status = yield this.gitManager.status();
       }
+      if (yield this.hasTooBigFiles([...status.staged, ...status.changed])) {
+        this.setState(PluginState.idle);
+        return false;
+      }
       const changedFiles = status.changed.length + status.staged.length;
       if (changedFiles !== 0) {
         let commitMessage = fromAutoBackup ? this.settings.autoCommitMessage : this.settings.commitMessage;
@@ -14743,6 +14760,30 @@ var ObsidianGit = class extends import_obsidian15.Plugin {
       dispatchEvent(new CustomEvent("git-refresh"));
       this.setState(PluginState.idle);
       return true;
+    });
+  }
+  hasTooBigFiles(files) {
+    return __async(this, null, function* () {
+      var _a2;
+      const branchInfo = yield this.gitManager.branchInfo();
+      const remote = (_a2 = branchInfo.tracking) == null ? void 0 : _a2.split("/")[0];
+      if (remote) {
+        const remoteUrl = yield this.gitManager.getRemoteUrl(remote);
+        if (remoteUrl.includes("github.com")) {
+          const tooBigFiles = files.filter((f) => {
+            const file = this.app.vault.getAbstractFileByPath(f.vault_path);
+            if (file instanceof import_obsidian15.TFile) {
+              return file.stat.size >= 1e8;
+            }
+            return false;
+          });
+          if (tooBigFiles.length > 0) {
+            this.displayError(`Did not commit, because following files are too big: ${tooBigFiles.map((e) => e.vault_path)}. Please remove them.`);
+            return true;
+          }
+        }
+      }
+      return false;
     });
   }
   push() {

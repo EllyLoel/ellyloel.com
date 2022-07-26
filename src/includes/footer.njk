@@ -1,8 +1,8 @@
-<footer role="contentinfo" class="site-footer">
+<footer role="contentinfo" class="[ site-footer ] [ wrapper ]">
 	{% include "newsletter.njk" %}
 
-	<h2>Sitemap</h2>
-	<nav>
+	<div>
+		<h2>Sitemap</h2>
 		<ul class="[ flow ]">
 			{%- for page in collections.all -%}
 				{%- if not page.data.excludeFromSitemap and page.data.eleventyNavigation.parent === undefined and page.url -%}
@@ -14,7 +14,7 @@
 				{%- endif -%}
 			{%- endfor -%}
 		</ul>
-	</nav>
+	</div>
 
 	<ul class="[ flow ]">
 		<li>

@@ -1,0 +1,20 @@
+{
+  "_stylized-text.a38abeb5.js": {
+    "file": "assets/js/stylized-text.a38abeb5.js",
+    "dynamicImports": [
+      "../node_modules/@splinetool/runtime/build/boolean.js"
+    ],
+    "css": [
+      "assets/css/main.14484f41.css"
+    ]
+  },
+  "../node_modules/@splinetool/runtime/build/boolean.js": {
+    "file": "assets/js/boolean.6bab5111.js",
+    "src": "../node_modules/@splinetool/runtime/build/boolean.js",
+    "isDynamicEntry": true
+  },
+  "stylized-text.css": {
+    "file": "assets/css/main.14484f41.css",
+    "src": "stylized-text.css"
+  }
+}

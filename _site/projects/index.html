@@ -36,9 +36,7 @@
 <link type="application/atom+xml" rel="alternate" href="https://ellyloel.com//feed.xml" title="Elly Loel">
 
 		<!-- Include stylesheets here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
-		<link rel="stylesheet" href="/shoelace/dist/themes/light.css"/>
-		<link rel="stylesheet" href="/shoelace/dist/themes/dark.css"/>
-		<link rel="stylesheet" href="/assets/css/global.scss">
+		
 		<script>
 			// if there's a color-scheme id in localstorage, use it, if not use auto.
 			document
@@ -57,6 +55,8 @@
 									? "sl-theme-light"
 									: "sl-theme-dark");
 		</script>
+		<script type="module" crossorigin src="/assets/js/stylized-text.a38abeb5.js"></script>
+		<link rel="stylesheet" href="/assets/css/main.14484f41.css">
 	</head>
 	<body>
 		<a class="[ skip-link ] [ button ]" href="#content">Skip to content</a>
@@ -130,7 +130,7 @@
 </header>
 
 		<!-- tabindex fixes focus issue: https://benmyers.dev/blog/skip-links/#tldr -->
-		<main id="content" role="main" tabindex="-1" class="wrapper flow">
+		<main id="content" role="main" tabindex="-1" class="[ wrapper flow ]">
 			
 <header>
 	<h1>Projects</h1>
@@ -173,7 +173,7 @@ Lots of inspiration from Josh W Comeau, Andy Bell, and Adam Argyle.
 </article>
 		</main>
 
-		<footer role="contentinfo" class="site-footer">
+		<footer role="contentinfo" class="[ site-footer ] [ wrapper ]">
 	<form class="[ newsletter ]">
 	<fieldset class="[ flow ]">
 		<legend>
@@ -191,8 +191,8 @@ Lots of inspiration from Josh W Comeau, Andy Bell, and Adam Argyle.
 	</fieldset>
 </form>
 
-	<h2>Sitemap</h2>
-	<nav>
+	<div>
+		<h2>Sitemap</h2>
 		<ul class="[ flow ]"><li>
 						<a href="/now/">
 							What I&#39;m Doing Now
@@ -230,7 +230,7 @@ Lots of inspiration from Josh W Comeau, Andy Bell, and Adam Argyle.
 							Bookmarks
 						</a>
 					</li></ul>
-	</nav>
+	</div>
 
 	<ul class="[ flow ]">
 		<li>
@@ -256,6 +256,6 @@ Lots of inspiration from Josh W Comeau, Andy Bell, and Adam Argyle.
 </footer>
 
 		<!-- Include scripts here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
-		<script type="module" src="/assets/js/main.js"></script>
+		
 	</body>
 </html>
