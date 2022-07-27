@@ -20,4 +20,12 @@ module.exports = {
   sliceCollection: function (collection, count) {
     return collection.slice(0, count || 5);
   },
+
+  sortAlphabetically: function (pages) {
+    return pages.sort(function (a, b) {
+      if (a.data.title < b.data.title) return -1;
+      if (a.data.title > b.data.title) return 1;
+      return 0;
+    });
+  },
 };

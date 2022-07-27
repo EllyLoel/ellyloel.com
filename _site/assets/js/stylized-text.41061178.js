@@ -6695,12 +6695,13 @@ color = vec4(${Sh(x/255)}, ${Sh(w/255)}, ${Sh(C/255)}, ${Sh(D)});
         href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.77/dist/themes/dark.css"
       />
       <sl-tooltip part="tooltip" content="${this.label}" hoist="true">
-        <span part="text" aria-label="${this.label}" tabindex="0">
+        <span part="text" class="text" tabindex="0">
           <slot aria-hidden="true"></slot>
         </span>
+        <span class="visually-hidden">${this.label}</span>
       </sl-tooltip>
     `}}mg.styles=NG`
-    span {
+    .text {
       display: var(--stylized-text-display, inline-block);
       text-decoration: var(--stylized-text-underline, dotted underline);
       text-decoration-color: var(
@@ -6719,7 +6720,7 @@ color = vec4(${Sh(x/255)}, ${Sh(w/255)}, ${Sh(C/255)}, ${Sh(D)});
       transition-delay: var(--stylized-text-transition-delay, 0s);
     }
 
-    span:is(:hover, :focus) {
+    .text:is(:hover, :focus) {
       text-decoration-color: var(
         --stylized-text-hover-underline-color,
         hsl(0deg 0% 0% / 0)
@@ -6740,19 +6741,29 @@ color = vec4(${Sh(x/255)}, ${Sh(w/255)}, ${Sh(C/255)}, ${Sh(D)});
     }
 
     @media (prefers-color-scheme: dark) {
-      span {
+      .text {
         text-decoration-color: var(
           --stylized-text-underline-color,
           hsl(0deg 0% 100% / 1)
         );
       }
 
-      span:is(:hover, :focus) {
+      .text:is(:hover, :focus) {
         text-decoration-color: var(
           --stylized-text-hover-underline-color,
           hsl(0deg 0% 100% / 0)
         );
       }
     }
+
+    .visually-hidden {
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
   `;BG([JG({type:String})],mg.prototype,"label",void 0);window.customElements.define("stylized-text",mg)});export default eV();
-//# sourceMappingURL=stylized-text.a38abeb5.js.map
+//# sourceMappingURL=stylized-text.41061178.js.map

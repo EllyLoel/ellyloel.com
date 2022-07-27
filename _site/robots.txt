@@ -3,4 +3,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: https://ellyloel.com//sitemap.xml
+Sitemap: https://ellyloel.com/sitemap.xml

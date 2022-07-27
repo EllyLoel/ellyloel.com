@@ -1,6 +1,4 @@
 stylized-text::part(text) {
-  @extend .logo-inline;
-
   text-decoration-color: var(--accent-solid);
 
   &:focus-visible {
@@ -15,6 +13,10 @@ stylized-text::part(text) {
 
   &:focus-visible {
     outline-offset: var(--size-1);
+  }
+
+  &.text-decoration-none {
+    text-decoration: none;
   }
 }
 

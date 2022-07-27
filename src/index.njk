@@ -4,14 +4,14 @@ title: Home
 ---
 
 <header class="[ hero ]">
-	<h1>
-		<span class="detitlify">Hi, I’m <stylized-text label="Elly">&lt;e//y&gt;</stylized-text>
+	<h1 aria-label="Hi, I'm Elly. I like creating delightful, magical, and accessible art with code.">
+		<span class="detitlify">Hi, I’m <stylized-text label="Elly" class="[ logo-inline ]">&lt;e//y&gt;</stylized-text>
 		</span>
 		<span>I like creating <span class="stroke" style="--color: var(--accent-solid);">delightful</span>, <span class="stroke" style="--color: var(--accent-solid);">magical</span>, and <span class="stroke" style="--color: var(--accent-solid);">accessible</span> art with code<span style="color: var(--accent-solid);">.</span></span>
 	</h1>
 
 	<canvas id="canvas3d" class="[ lego ]">
-		<p>A lego model designed to look like myself.</p>
+		<p>A 3D modeled Lego Minifigure designed to look like myself.</p>
 	</canvas>
 
 	{# <css-doodle>
@@ -43,7 +43,7 @@ title: Home
 
 {% feedBlock
 title = "Articles",
-url = "/blog" %}
+url = "/blog/" %}
 {% set blog = collections.blog | sliceCollection(3) %}
 {%- for post in blog %}
 	{% feedItem
@@ -56,7 +56,7 @@ url = "/blog" %}
 
 {% feedBlock
 title = "Projects",
-url = "/projects" %}
+url = "/projects/" %}
 {% set projects = collections.projects | sliceCollection(3) %}
 {%- for project in projects %}
 	{% feedItem
@@ -69,7 +69,7 @@ url = "/projects" %}
 
 {% feedBlock
 title = "Notes",
-url = "/garden" %}
+url = "/garden/" %}
 {% set notes = collections.garden | sliceCollection(3) %}
 {%- for note in notes %}
 	{% feedItem
@@ -82,7 +82,7 @@ url = "/garden" %}
 
 {% feedBlock
 title = "Bookmarks",
-url = "/bookmarks" %}
+url = "/bookmarks/" %}
 {% set bookmarks = collections.bookmarks | sliceCollection(3) %}
 {%- for bookmark in bookmarks %}
 	{% feedItem
