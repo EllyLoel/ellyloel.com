@@ -1,12 +1,12 @@
 <div class="inner">
-	<a href="/" rel="home" title="to homepage" class="text-decoration-none"{% if "/" == page.url %} data-state="active" aria-current="page"{% endif %}>
-		<!-- link to home: http://microformats.org/wiki/rel-home -->
-		<h1 class="[ logo ] [ margin-0 ]">
+	<a href="/" rel="home" class="[ text-decoration-none ]"{% if page.url === "/" %} data-state="active" aria-current="page"{% endif %}>
+		<stylized-text label="to homepage" class="[ logo ] [ text-decoration-none ]">
+			<!-- link to home: http://microformats.org/wiki/rel-home -->
 			&lt;e//y&gt;
-		</h1>
+		</stylized-text>
 	</a>
 
-	<sl-icon-button 
+	<sl-icon-button
 		id="theme-switcher-open-button"
 		name="palette"
 		label="Open theme switcher"

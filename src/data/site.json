@@ -1,13 +1,14 @@
 {
   "title": "Elly Loel",
-  "url": "https://ellyloel.com/",
-  "language": "en",
+  "url": "https://ellyloel.com",
+  "lang": "en",
+  "locale": "en_au",
   "description": "This is my own lovely little corner of the internet. Look forward to plenty of interesting ideas & projects.",
   "feed": {
     "subtitle": "This is my own lovely little corner of the internet. Look forward to plenty of interesting ideas & projects.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "id": "https://ellyloel.com/"
+    "id": "https://ellyloel.com"
   },
   "jsonfeed": {
     "path": "/feed/feed.json",

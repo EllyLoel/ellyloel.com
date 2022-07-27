@@ -5323,10 +5323,10 @@ stylehacks@^5.1.0:
     browserslist "^4.16.6"
     postcss-selector-parser "^6.0.4"
 
-stylized-text@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/stylized-text/-/stylized-text-1.0.4.tgz#72aea9efdfd765ab26486efbf83608496a373d24"
-  integrity sha512-llvsZVb0bdybinx05iJLLXI9aKxkTOZmzPA8/pcrsofWTVBQ5h392NCljzc3E/1YwwxH2GQ2XU6zIM3rbiojdg==
+stylized-text@1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/stylized-text/-/stylized-text-1.0.9.tgz#cb8cf5ca72784eebf282a15b9a3b1cfce1487e67"
+  integrity sha512-cxBhULv2sPF51JbGqG1AM0AcP1yUtz8HPks3TidZROdYJyiC1YuIxIT7Z5t92n7VUU7nixM/ZOuGQ5bJitEbgg==
   dependencies:
     "@lit-labs/react" "^1.0.6"
     lit "^2.0.2"

@@ -1,14 +1,14 @@
 <footer role="contentinfo" class="[ site-footer ] [ wrapper ]">
 	{% include "newsletter.njk" %}
 
-	<div>
+	<div class="[ flow ]">
 		<h2>Sitemap</h2>
 		<ul class="[ flow ]">
-			{%- for page in collections.all -%}
-				{%- if not page.data.excludeFromSitemap and page.data.eleventyNavigation.parent === undefined and page.url -%}
+			{%- for collectionPage in collections.all | sortAlphabetically -%}
+				{%- if not collectionPage.data.excludeFromSitemap and collectionPage.data.eleventyNavigation.parent === undefined and collectionPage.url -%}
 					<li>
-						<a href="{{ page.url | url }}">
-							{{ page.data.title }}
+						<a href="{{ collectionPage.url | url }}"{% if collectionPage.url === page.url %} aria-current="page"{% endif %}>
+							{{ collectionPage.data.title }}
 						</a>
 					</li>
 				{%- endif -%}
@@ -19,9 +19,9 @@
 	<ul class="[ flow ]">
 		<li>
 			<stylized-text label="Elly">
-				<a href="/">
+				<a href="/"{% if page.url === "/" %} aria-current="page"{% endif %}>
 					&lt;e//y&gt;
-			</a>
+				</a>
 			</stylized-text>
 		</li>
 		<li>

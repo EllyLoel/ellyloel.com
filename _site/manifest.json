@@ -1,11 +1,23 @@
 {
-  "_stylized-text.a38abeb5.js": {
-    "file": "assets/js/stylized-text.a38abeb5.js",
+  "assets/fonts/JetBrainsMonoRegular.woff2": {
+    "file": "assets/css/main.bceff071.css",
+    "src": "assets/fonts/JetBrainsMonoRegular.woff2"
+  },
+  "assets/fonts/JetBrainsMonoBold.woff2": {
+    "file": "assets/css/main.df3f86c0.css",
+    "src": "assets/fonts/JetBrainsMonoBold.woff2"
+  },
+  "_stylized-text.41061178.js": {
+    "file": "assets/js/stylized-text.41061178.js",
     "dynamicImports": [
       "../node_modules/@splinetool/runtime/build/boolean.js"
     ],
     "css": [
-      "assets/css/main.14484f41.css"
+      "assets/css/main.b0b19ce9.css"
+    ],
+    "assets": [
+      "assets/css/main.bceff071.css",
+      "assets/css/main.df3f86c0.css"
     ]
   },
   "../node_modules/@splinetool/runtime/build/boolean.js": {
@@ -14,7 +26,7 @@
     "isDynamicEntry": true
   },
   "stylized-text.css": {
-    "file": "assets/css/main.14484f41.css",
+    "file": "assets/css/main.b0b19ce9.css",
     "src": "stylized-text.css"
   }
 }
