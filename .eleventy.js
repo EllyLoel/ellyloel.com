@@ -9,6 +9,7 @@ const EleventyPluginNavigation = require("@11ty/eleventy-navigation");
 const EleventyPluginRss = require("@11ty/eleventy-plugin-rss");
 const EleventyPluginSyntaxhighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const EleventyPluginInclusiveLang = require("@11ty/eleventy-plugin-inclusive-language");
+const EleventyPluginImage = require("@11ty/eleventy-img");
 const EleventyPluginVite = require("@11ty/eleventy-plugin-vite");
 
 const rollupPluginCritical = require("rollup-plugin-critical").default;
@@ -180,6 +181,25 @@ module.exports = (eleventyConfig) => {
       </li>
     `;
   });
+  eleventyConfig.addNunjucksAsyncShortcode(
+    "image",
+    async function (src, alt, sizes) {
+      let metadata = await Image(src, {
+        widths: [300, 600],
+        formats: ["avif", "jpeg"],
+      });
+
+      let imageAttributes = {
+        alt,
+        sizes,
+        loading: "lazy",
+        decoding: "async",
+      };
+
+      // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+      return Image.generateHTML(metadata, imageAttributes);
+    }
+  );
 
   // Layouts
   eleventyConfig.addLayoutAlias("base", "base.njk");

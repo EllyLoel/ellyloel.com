@@ -1,6 +1,0 @@
-# www.robotstxt.org
-
-User-agent: *
-Disallow: 
-
-Sitemap: https://ellyloel.com/sitemap.xml
