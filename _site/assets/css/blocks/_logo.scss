@@ -1,0 +1,11 @@
+.logo {
+  font-family: "Nanum Pen Script", cursive;
+}
+
+.logo-inline {
+  @extend .logo;
+
+  display: inline-block;
+  font-size: 1.5em; // scales with the font size around it
+  transform: translateY(0.1em); // optical alignment
+}

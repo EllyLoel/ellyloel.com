@@ -1,7 +1,10 @@
 <footer role="contentinfo" class="[ site-footer ] [ wrapper ]">
 	{% include "newsletter.njk" %}
 
-	<div class="[ flow ]">
+	{% image "/assets/img/coding.jpg",
+	"A digital drawing of me, a blonde woman in a white sweater with headphones on sitting at my desk in front of a keyboard and monitor coding." %}
+
+	<div class="[ sitemap ] [ flow ]">
 		<h2>Sitemap</h2>
 		<ul class="[ flow ]">
 			{%- for collectionPage in collections.all | sortAlphabetically -%}
@@ -16,7 +19,7 @@
 		</ul>
 	</div>
 
-	<ul class="[ flow ]">
+	<ul class="[ social-links ]">
 		<li>
 			<stylized-text label="Elly">
 				<a href="/"{% if page.url === "/" %} aria-current="page"{% endif %}>
