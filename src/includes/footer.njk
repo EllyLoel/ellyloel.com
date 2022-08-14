@@ -1,43 +1,67 @@
-<footer role="contentinfo" class="[ site-footer ] [ wrapper ]">
-	{% include "newsletter.njk" %}
+<footer role="contentinfo" class="[ site-footer ]">
+	<css-doodle click-to-update aria-hidden="true">
+		:doodle {
+			@grid: 20 / 100vw 100%;
+			background: var(--neutral-base);
+			font-family: sans-serif;
+			overflow: hidden;
+		}
+		:after {
+			content: \@hex.@r(0x2500, 0x257f);
+			color: hsla(@r360, 70%, 70%, @r.2);
+			font-size: 8vmin;
+		}
+	</css-doodle>
+	<div class="[ inner ] [ wrapper ]">
 
-	{% image "/assets/img/coding.jpg",
-	"A digital drawing of me, a blonde woman in a white sweater with headphones on sitting at my desk in front of a keyboard and monitor coding." %}
+		{% include "newsletter.njk" %}
 
-	<div class="[ sitemap ] [ flow ]">
-		<h2>Sitemap</h2>
-		<ul class="[ flow ]">
-			{%- for collectionPage in collections.all | sortAlphabetically -%}
-				{%- if not collectionPage.data.excludeFromSitemap and collectionPage.data.eleventyNavigation.parent === undefined and collectionPage.url -%}
-					<li>
-						<a href="{{ collectionPage.url | url }}"{% if collectionPage.url === page.url %} aria-current="page"{% endif %}>
-							{{ collectionPage.data.title }}
-						</a>
-					</li>
-				{%- endif -%}
-			{%- endfor -%}
+		{% image
+		"./public/assets/img/coding.png",
+		"A digital drawing of me, a blonde woman in a white sweater with headphones on sitting at my desk in front of a keyboard and monitor coding."
+ %}
+
+		<div class="[ sitemap ] [ flow ]">
+			<h2>Sitemap</h2>
+			<ul class="[ flow ]">
+				{%- for collectionPage in collections.all | sortAlphabetically -%}
+					{%- if not collectionPage.data.excludeFromSitemap and collectionPage.data.eleventyNavigation.parent === undefined and collectionPage.url -%}
+						<li>
+							<a href="{{ collectionPage.url | url }}"{% if collectionPage.url === page.url %} aria-current="page"{% endif %}>
+								{{ collectionPage.data.title }}
+							</a>
+						</li>
+					{%- endif -%}
+				{%- endfor -%}
+			</ul>
+		</div>
+
+		<ul class="[ social-links ]">
+			<li>
+				<sl-tooltip content="Elly">
+					<sl-icon-button class="[ logo-link ]" src="/assets/svg/elly.svg" label="to homepage" href="/"{% if page.url === "/" %} aria-current="page"{% endif %}></sl-icon-button>
+				</sl-tooltip>
+			</li>
+			<li>
+				<sl-tooltip content="Twitter">
+					<sl-icon-button library="fa" name="fab-twitter" label="Twitter" href="https://elly.to/twitter"></sl-icon-button>
+				</sl-tooltip>
+			</li>
+			<li>
+				<sl-tooltip content="Linkedin">
+					<sl-icon-button library="fa" name="fab-linkedin" label="Linkedin" href="https://elly.to/linkedin"></sl-icon-button>
+				</sl-tooltip>
+			</li>
+			<li>
+				<sl-tooltip content="Codepen">
+					<sl-icon-button library="fa" name="fab-codepen" label="Codepen" href="https://elly.to/codepen"></sl-icon-button>
+				</sl-tooltip>
+			</li>
+			<li>
+				<sl-tooltip content="Dribbble">
+					<sl-icon-button library="fa" name="fab-dribbble" label="Dribbble" href="https://elly.to/dribbble"></sl-icon-button>
+				</sl-tooltip>
+			</li>
 		</ul>
 	</div>
-
-	<ul class="[ social-links ]">
-		<li>
-			<stylized-text label="Elly">
-				<a href="/"{% if page.url === "/" %} aria-current="page"{% endif %}>
-					&lt;e//y&gt;
-				</a>
-			</stylized-text>
-		</li>
-		<li>
-			<a href="https://elly.to/twitter">Twitter</a>
-		</li>
-		<li>
-			<a href="https://elly.to/linkedin">LinkedIn</a>
-		</li>
-		<li>
-			<a href="https://elly.to/codepen">CodePen</a>
-		</li>
-		<li>
-			<a href="https://elly.to/dribbble">Dribbble</a>
-		</li>
-	</ul>
 </footer>

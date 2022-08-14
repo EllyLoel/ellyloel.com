@@ -1,0 +1,13 @@
+.newsletter {
+  max-inline-size: var(--size-content-2);
+
+  & fieldset {
+    border: none;
+    --flow-space: 1.5em;
+
+    & input {
+      font-size: var(--font-size-3);
+      line-height: calc(0.25rem + 1em + 0.25rem);
+    }
+  }
+}

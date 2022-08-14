@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "src/garden/Obsidian Git xcrun error.md",
+            "file": "src/blog/Holy shit there's so much CSS.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -81,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/garden/Obsidian Git xcrun error.md"
+                "file": "src/blog/Holy shit there's so much CSS.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/garden/Obsidian Git xcrun error.md",
+                "file": "src/blog/Holy shit there's so much CSS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,14 +102,16 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
     "width": 300
   },
-  "active": "0cdbeea4f3216eb3",
+  "active": "185612779993f727",
   "lastOpenFiles": [
+    "src/blog/Untitled.md",
     "src/garden/Obsidian Git xcrun error.md",
     "src/speaking.md",
     "src/bookmarks/Atomic Habits by James Clear.md",
@@ -118,7 +120,6 @@
     "src/about.md",
     "src/now.md",
     "src/garden/YAML is strict.md",
-    "src/projects.md",
-    "node_modules/@types/cors/README.md"
+    "src/projects.md"
   ]
 }

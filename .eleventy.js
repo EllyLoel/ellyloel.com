@@ -1,18 +1,19 @@
+require("dotenv").config();
+const path = require("path");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
-const markdownItWikilinks = require("markdown-it-wikilinks");
 const markdownItEmoji = require("markdown-it-emoji");
-const twemoji = require("twemoji");
+const markdownItWikilinks = require("markdown-it-wikilinks");
 const removeMd = require("remove-markdown");
+const slinkity = require("slinkity");
+const twemoji = require("twemoji");
 
 const EleventyPluginNavigation = require("@11ty/eleventy-navigation");
 const EleventyPluginRss = require("@11ty/eleventy-plugin-rss");
 const EleventyPluginSyntaxhighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const EleventyPluginInclusiveLang = require("@11ty/eleventy-plugin-inclusive-language");
 const EleventyPluginImage = require("@11ty/eleventy-img");
-const EleventyPluginVite = require("@11ty/eleventy-plugin-vite");
-
-const rollupPluginCritical = require("rollup-plugin-critical").default;
+const EleventyPluginNestingToc = require("eleventy-plugin-nesting-toc");
 
 const filters = require("./utils/filters.js");
 const transforms = require("./utils/transforms.js");
@@ -23,68 +24,10 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(EleventyPluginRss);
   eleventyConfig.addPlugin(EleventyPluginSyntaxhighlight);
   eleventyConfig.addPlugin(EleventyPluginInclusiveLang);
-  eleventyConfig.addPlugin(EleventyPluginVite, {
-    tempFolderName: ".11ty-vite", // Default name of the temp folder
-
-    // Vite options (equal to vite.config.js inside project root)
-    viteOptions: {
-      publicDir: "public",
-      clearScreen: false,
-      server: {
-        mode: "development",
-        middlewareMode: true,
-      },
-      appType: "custom",
-      assetsInclude: ["**/*.xml", "**/*.txt"],
-      build: {
-        mode: "production",
-        sourcemap: "true",
-        manifest: true,
-        // This puts CSS and JS in subfolders – remove if you want all of it to be in /assets instead
-        rollupOptions: {
-          output: {
-            assetFileNames: "assets/css/main.[hash].css",
-            chunkFileNames: "assets/js/[name].[hash].js",
-            entryFileNames: "assets/js/[name].[hash].js",
-          },
-          plugins: [
-            rollupPluginCritical({
-              criticalUrl: "./_site/",
-              criticalBase: "./_site/",
-              criticalPages: [
-                { uri: "index.html", template: "index" },
-                { uri: "blog/index.html", template: "blog" },
-                { uri: "bookmarks/index.html", template: "bookmarks" },
-                { uri: "garden/index.html", template: "garden" },
-                { uri: "projects/index.html", template: "projects" },
-                { uri: "about/index.html", template: "about" },
-                { uri: "now/index.html", template: "now" },
-                { uri: "speaking/index.html", template: "speaking" },
-                { uri: "uses/index.html", template: "uses" },
-                { uri: "404.html", template: "404" },
-              ],
-              criticalConfig: {
-                inline: true,
-                dimensions: [
-                  {
-                    height: 900,
-                    width: 375,
-                  },
-                  {
-                    height: 720,
-                    width: 1280,
-                  },
-                  {
-                    height: 1080,
-                    width: 1920,
-                  },
-                ],
-              },
-            }),
-          ],
-        },
-      },
-    },
+  eleventyConfig.addPlugin(slinkity.plugin, slinkity.defineConfig({}));
+  eleventyConfig.addPlugin(EleventyPluginNestingToc, {
+    wrapper: "nav",
+    tags: ["h2", "h3", "h4", "h5", "h6"],
   });
 
   // Customize Markdown library and settings:
@@ -183,48 +126,52 @@ module.exports = (eleventyConfig) => {
   });
   eleventyConfig.addNunjucksAsyncShortcode(
     "image",
-    async function (src, alt, sizes) {
-      let metadata = await Image(src, {
-        widths: [300, 600],
+    async function (src, alt, sizes = "100vw") {
+      if (alt === undefined) {
+        // You bet we throw an error on missing alt (alt="" works okay)
+        throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
+      }
+
+      let metadata = await EleventyPluginImage(src, {
+        widths: [300, 600, 1000],
         formats: ["avif", "jpeg"],
+        outputDir: path.join("_site", "img"),
       });
 
-      let imageAttributes = {
-        alt,
-        sizes,
-        loading: "lazy",
-        decoding: "async",
-      };
+      let lowsrc = metadata.jpeg[0];
+      let highsrc = metadata.jpeg[metadata.jpeg.length - 1];
 
-      // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
-      return Image.generateHTML(metadata, imageAttributes);
+      let getSrcset = (imageFormat) =>
+        imageFormat.map((entry) => entry.srcset).join(", ");
+
+      let sources = Object.values(metadata)
+        .map((imageFormat) => {
+          let srcset = getSrcset(imageFormat);
+          return `<source type="${imageFormat[0].sourceType}" srcset="${srcset}" sizes="${sizes}">`;
+        })
+        .join("");
+
+      let img = `<img src="${lowsrc.url}" width="${highsrc.width}" height="${highsrc.height}" alt="${alt}" loading="lazy" decoding="async">`;
+
+      return `<picture class="[ image ]">${sources}${img}</picture>`;
     }
   );
 
   // Layouts
   eleventyConfig.addLayoutAlias("base", "base.njk");
   eleventyConfig.addLayoutAlias("not-home", "not-home.njk");
-  eleventyConfig.addLayoutAlias("post", "post.njk");
-  eleventyConfig.addLayoutAlias("note", "note.njk");
-  eleventyConfig.addLayoutAlias("bookmark", "bookmark.njk");
-  eleventyConfig.addLayoutAlias("project", "project.njk");
 
   // Copy/pass-through files
-  eleventyConfig.addPassthroughCopy("src/assets/css");
-  eleventyConfig.addPassthroughCopy("src/assets/js");
   eleventyConfig.addPassthroughCopy("public");
-  eleventyConfig.addPassthroughCopy({
-    "/node_modules/@shoelace-style/shoelace/dist/assets": "public/shoelace",
-  });
+
+  // eleventyConfig.setServerPassthroughCopyBehavior("copy");
 
   return {
     templateFormats: ["njk", "md", "11ty.js"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
-    passthroughFileCopy: true,
     dir: {
       input: "src",
-      // better not use "public" as the name of the output folder (see above...)
       output: "_site",
       includes: "includes",
       layouts: "layouts",
