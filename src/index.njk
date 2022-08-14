@@ -13,32 +13,6 @@ title: Home
 	<canvas id="canvas3d" class="[ lego ]">
 		<p>A 3D modeled Lego Minifigure designed to look like myself.</p>
 	</canvas>
-
-	{# <css-doodle>
-		@grid: 1 / 500px;
-		background: @shaders(
-			texture1 {
-				@grid: 1 / 100%;
-				background: linear-gradient(
-					45deg,
-					@stripe.@m20.@p(#FFF4E0, #F8B501, #06ACB5, #17191D, #FC3D3C)
-				);
-			}
-			fragment {
-				void main() {
-					vec2 p = gl_FragCoord.xy / u_resolution.xy;
-					vec2 c = vec2(.5, .5);
-					vec2 uv = p.xy - c;
-					float R = 3.141593;
-					float len = length(uv * vec2(u_resolution.x / u_resolution.y, 1.));
-					float angle = atan(uv.y, uv.x) + R * smoothstep(.75, 0., len);
-					float r = length(uv) + .1;
-					vec2 coords = vec2(r * cos(angle), r * sin(angle)) + c;
-					FragColor = texture(texture1, coords);
-				}
-			}
-		);
-	</css-doodle> #}
 </header>
 
 {% feedBlock
