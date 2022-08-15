@@ -1,62 +1,66 @@
 {
   "name": "ellyloel.com",
-  "version": "3.0.0",
-  "private": true,
   "description": "This is my own lovely little corner of the internet. Look forward to plenty of interesting ideas & projects.",
-  "author": "Elly Loel",
-  "keywords": [
-    "gatsby"
-  ],
+  "version": "3.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Elly Loel",
+    "email": "hello@ellyloel.com",
+    "url": "https://ellyloel.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ellyloel/ellyloel.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ellyloel/ellyloel.com/issues"
+  },
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby --verbose build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "start": "npm-run-all dev:*",
+    "dev:clean": "rm -rf _site",
+    "dev:eleventy": "npx @11ty/eleventy --serve --incremental --quiet",
+    "build": "npx @11ty/eleventy",
+    "debug": "DEBUG=Eleventy* npx @11ty/eleventy"
   },
   "dependencies": {
-    "@loadable/component": "^5.15.0",
-    "@mdx-js/mdx": "^1.6.22",
-    "@mdx-js/react": "^1.6.22",
-    "@stitches/react": "^1.2.8",
-    "@tippyjs/react": "^4.2.6",
-    "browser-monads": "^1.0.0",
-    "framer-motion": "^6.3.3",
-    "gatsby": "^4.8.1",
-    "gatsby-plugin-catch-links": "^4.2.0",
-    "gatsby-plugin-google-fonts": "^1.0.1",
-    "gatsby-plugin-google-gtag": "^4.5.0",
-    "gatsby-plugin-image": "^2.7.0",
-    "gatsby-plugin-manifest": "^4.14.0",
-    "gatsby-plugin-mdx": "^3.14.0",
-    "gatsby-plugin-react-helmet": "^5.8.0",
-    "gatsby-plugin-react-svg": "^3.0.1",
-    "gatsby-plugin-sharp": "^4.8.1",
-    "gatsby-plugin-vercel": "^1.0.3",
-    "gatsby-remark-wiki-link": "^0.4.0",
-    "gatsby-source-filesystem": "^4.14.0",
-    "gatsby-transformer-markdown-references": "^0.1.8",
-    "gatsby-transformer-sharp": "^4.2.0",
-    "hamburger-react": "^2.4.1",
-    "lmdb-store": "^1.6.14",
-    "normalize.css": "^8.0.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-force-graph": "^1.41.7",
-    "react-helmet": "^6.1.0",
-    "react-icons": "^4.2.0"
+    "@11ty/eleventy-img": "^2.0.1",
+    "@shoelace-style/shoelace": "^2.0.0-beta.78",
+    "@splinetool/runtime": "^0.9.94",
+    "css-doodle": "^0.28.2",
+    "dotenv": "^16.0.1",
+    "eleventy-plugin-nesting-toc": "^1.3.0",
+    "open-props": "^1.4.1",
+    "postcss-preset-env": "^7.7.2",
+    "stylized-text": "1.0.10",
+    "tslib": "^2.4.0",
+    "twemoji": "^14.0.2"
   },
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.24.0",
-    "prettier": "2.3.2"
+    "@11ty/eleventy": "2.0.0-canary.11",
+    "@11ty/eleventy-navigation": "^0.3.3",
+    "@11ty/eleventy-plugin-inclusive-language": "^1.0.3",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
+    "@types/markdown-it": "^12.2.3",
+    "browserslist": "^4.21.1",
+    "cssnano": "^5.1.12",
+    "cssremedy": "^0.1.0-beta.2",
+    "eslint": "^8.11.0",
+    "focus-visible": "^5.2.0",
+    "luxon": "^2.4.0",
+    "markdown-it": "^13.0.1",
+    "markdown-it-anchor": "^8.6.4",
+    "markdown-it-emoji": "^2.0.2",
+    "markdown-it-wikilinks": "^1.2.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.14",
+    "postcss-jit-props": "^1.0.7",
+    "prettier": "^2.6.1",
+    "remove-markdown": "^0.5.0",
+    "sass": "^1.53.0",
+    "slinkity": "^0.8.3"
   },
-  "config": {
-    "commitizen": {
-      "path": "cz-emoji"
-    }
-  }
+  "browserslist": [
+    "defaults"
+  ]
 }
