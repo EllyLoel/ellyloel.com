@@ -2,25 +2,22 @@
 title: How to get stuff done when you have ADHD
 ---
 
-TL;DR: Don't.
+TL;DR: Don't 🥲
 
 ---
 
-now or not now
+There are only two times, now and not now.
 
-no focus or hyper focus
+No focus or hyper focus
 
-pomodoro timer
+Pomodoro timer
+- While the timer is going, you cannot do anything but the chosen task
+- After the timer finished, you take a break for a set amount of time
+- Repeat
 
-while the timer is going you cannot do anything but the chosen task
+Boundaries are important!
 
-after the timer finished you take a break for a set amount of time
-
-repeat
-
-boundaries are important!
-
-however long you think it will take you, double it
+However long you think it will take you, double it, or honestly triple it. ([[Estimating time for tasks]])
 
 ---
 
