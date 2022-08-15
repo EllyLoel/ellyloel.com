@@ -9,7 +9,15 @@ eleventyNavigation:
 An on & off log of what I'm currently doing/interested in. Slower paced than a twitter feed but less permanent then an [about](/#about) page.
 [Now pages](https://nownownow.com/about) are becoming more common, you should make one for yourself!
 
-## July , 2022
+## August, 2022
+
+I'm officially an AWS certified cloud practitioner, what ever that means 😂 
+
+Looks like it's that time again, the clock has struck, and now I am 21 🤯
+
+The fourth version of my website is complete! No more Gatsby or Next, 11ty all the way!!
+
+## July 2022
 
 I decided that I actually wanted to work on rebuilding my website using 11ty not Next.JS
 
@@ -21,7 +29,9 @@ Reading Every layout by Andy Bell and Hayden Pickering
 
 Building a Web Component to make [stylized-text](/projects/stylized-text) accessible
 
-## June , 2022
+Hosted a webinar about neurodiversity ([Neurodiversity in projects and at Portable](https://portable.com.au/events/neurodiversity-in-projects-and-at-portable))
+
+## June 2022
 
 Still working on rebuilding my website using Next.JS
 
@@ -33,7 +43,7 @@ Want to get involved with W3C community groups
 
 Want to start using Web Components more
 
-## May , 2022
+## May 2022
 
 Lots of people movements makes me think about moving
 
@@ -49,7 +59,7 @@ Working on rebuilding my website using Next.JS
 
 Wondering how people get to be in amazing roles where they get to do things like create video and articles about the web and be members of the CSS working group and many more amazing things.
 
-## April , 2022
+## April 2022
 
 Blogging platform, struggling to choose whether going with a ready to go third party platform or going fully custom is better. I tried weighing up the options in order of least to most "custom" (self hosted/self designed/self coded):
 
@@ -73,11 +83,11 @@ Web Components are awesome!!!
 
 every-layout.dev looks really interesting
 
-## March , 2022
+## March 2022
 
 Polypane seems awesome
 
-## February , 2022
+## February 2022
 
 Built Portable Justice hub
 
@@ -86,7 +96,7 @@ Budding interest in Web Components
 Thinking about the unfortunate truth of stateful design often being ignored or forgotten
 [Twitter thread 🧵](https://twitter.com/ellyloel/status/1492033654264307712)
 
-## January, 2022
+## January 2022
 
 Scrimba Podcast episode came out! 🎉
 https://scrimba.com/podcast/ep-44-elly-loel/
@@ -95,13 +105,13 @@ I also made a personal link shortener using Netlify redirects, so all I have to 
 
 Started CSS-for-JS Devs by Josh W Comeau
 
-## December, 2021
+## December 2021
 
 I remixed a cool [Glitch In Bio](https://glitch.com/glitch-in-bio) on [Glitch](https://glitch.com/) for my partner [nervous ghost](https://twitter.com/nervousgh0st) (https://nervousgh0st.glitch.me/). The combination of simplicity and customisability makes it approachable for anyone. I was able to go in and make more advanced tweaks to set it up, but if my partner ever wants to add or change things they will easily be able to without having to worry about the more complex side.
 
 I finally got all of the bug fixes and small tweaks for my website shipped. Most of the changes were to do with parts of the [[digital garden]] (graph, markdown processing, link capturing, etc.) as well as some redirects 'n' stuff.
 
-## November, 2021
+## November 2021
 
 I've been working on a presentation about [[neurodiversity]] with a few colleagues, which we'll be presenting internally on the 6th of December.
 
