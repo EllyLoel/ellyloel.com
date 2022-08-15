@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "src/projects/stylized-text.md",
+            "file": "src/garden/Atomic.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -81,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/projects/stylized-text.md"
+                "file": "src/garden/Atomic.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/projects/stylized-text.md",
+                "file": "src/garden/Atomic.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,15 +111,15 @@
   },
   "active": "2ae207f631f318dc",
   "lastOpenFiles": [
-    "src/projects/Modern CSS reset.md",
+    "src/garden/Atomic.md",
+    "src/garden/Altruism.md",
+    "src/garden/ADHD.md",
     "src/projects/stylized-text.md",
+    "src/projects/Modern CSS reset.md",
     "src/about.md",
     "src/uses.md",
     "src/speaking.md",
     "src/now.md",
-    "src/blog/Holy shit there's so much CSS.md",
-    "src/blog/Untitled.md",
-    "src/garden/Obsidian Git xcrun error.md",
-    "src/bookmarks/Atomic Habits by James Clear.md"
+    "src/blog/Holy shit there's so much CSS.md"
   ]
 }
