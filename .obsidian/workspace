@@ -7,8 +7,13 @@
         "id": "2ae207f631f318dc",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "src/garden/You should be using a password manager.md",
+            "mode": "source",
+            "backlinks": false,
+            "source": false
+          }
         }
       }
     ],
@@ -75,7 +80,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "src/garden/You should be using a password manager.md"
+              }
             }
           },
           {
@@ -84,6 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "src/garden/You should be using a password manager.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,17 +109,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "0fe22ccfefd19f6a",
+  "active": "2ae207f631f318dc",
   "lastOpenFiles": [
+    "src/garden/Zettelkasten.md",
     "src/garden/You should be using a password manager.md",
-    "src/garden/Obsidian Git xcrun error.md",
-    "src/garden/Neurotypical.md",
-    "src/garden/Neurodiversity.md",
-    "src/garden/Inexplicable lack of accomplishment.md",
-    "src/garden/Neurodivergent.md",
-    "src/garden/Multi-factor authentication.md",
-    "src/garden/Inattentive.md",
-    "src/garden/How to give your brain the stimulation it needs.md",
-    "src/garden/How to get stuff done when you have ADHD.md"
+    "src/garden/YAML is strict.md",
+    "src/garden/Under-diagnosis of women.md",
+    "src/garden/Troubles with backdrop-filter and SVG clipping.md",
+    "src/garden/Stubbornness.md",
+    "src/garden/ADHD.md",
+    "src/garden/Altruism.md",
+    "src/garden/Atomic.md",
+    "src/garden/Composition over Inheritance.md"
   ]
 }

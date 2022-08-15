@@ -9,6 +9,8 @@ title: Atomic
   </figcaption>
 </figure>
 
+---
+
 For example:
 - An atomic note would be only describing a singular ideas or concept.
 - An atomic habit would be a regular practice that is small and easy to do (unless you've got [[ADHD]]).

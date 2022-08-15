@@ -6,7 +6,7 @@ TL;DR: Don't 🥲
 
 ---
 
-There are only two times, now and not now.
+There are only two times, [[Sense of time|now and not now]].
 
 No focus or hyper focus
 

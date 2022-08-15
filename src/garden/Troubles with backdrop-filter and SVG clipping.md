@@ -4,7 +4,7 @@ title: Troubles with backdrop-filter and SVG clipping
 
 ## Navigation menu story
 
-While building the navigation menu for this site I had some troubles getting it to where it is now. I wanted it to have a frosted glass look as well as a wavy shape.
+While building the navigation menu for a past version of this site I had some troubles getting it to work. I wanted it to have a frosted glass look as well as a wavy shape.
 
 ---
 
