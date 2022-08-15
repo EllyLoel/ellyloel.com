@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "src/garden/Atomic.md",
+            "file": "src/garden/Finding the perfect app.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -81,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/garden/Atomic.md"
+                "file": "src/garden/Finding the perfect app.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/garden/Atomic.md",
+                "file": "src/garden/Finding the perfect app.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,15 +111,15 @@
   },
   "active": "2ae207f631f318dc",
   "lastOpenFiles": [
+    "src/garden/Executive function.md",
+    "src/garden/Estimating time for tasks.md",
+    "src/garden/Digital Garden.md",
+    "src/garden/Creativity and imagination.md",
+    "src/garden/Composition over Inheritance.md",
     "src/garden/Atomic.md",
     "src/garden/Altruism.md",
     "src/garden/ADHD.md",
     "src/projects/stylized-text.md",
-    "src/projects/Modern CSS reset.md",
-    "src/about.md",
-    "src/uses.md",
-    "src/speaking.md",
-    "src/now.md",
-    "src/blog/Holy shit there's so much CSS.md"
+    "src/projects/Modern CSS reset.md"
   ]
 }
