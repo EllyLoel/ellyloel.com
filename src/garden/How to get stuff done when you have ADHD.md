@@ -17,7 +17,7 @@ Pomodoro timer
 
 Boundaries are important!
 
-However long you think it will take you, double it, or honestly triple it. ([[Estimating time for tasks]])
+However long you think it will take you, double it, or honestly triple it ([[Estimating time for tasks]]).
 
 ---
 
