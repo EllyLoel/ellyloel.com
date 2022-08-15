@@ -1,13 +1,11 @@
 ---
-title: Password managers
+title: You should be using a password manager
 ---
 
 ## Why use a password manager?
 
 - Password managers greatly improve your online security by allowing you to create a different password for every individual account you have on the internet. This ensures that if any one password is ever compromised, all your other accounts will remain secure.
 - Additionally, password managers allow you to create complex (and thus secure) passwords that humans would find very hard to remember.
-
----
 
 ## Popular password managers:
 

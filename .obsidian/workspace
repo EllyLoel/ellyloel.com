@@ -7,13 +7,8 @@
         "id": "2ae207f631f318dc",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "src/garden/Multi-factor authentication.md",
-            "mode": "source",
-            "backlinks": false,
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -80,9 +75,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "src/garden/Multi-factor authentication.md"
-              }
+              "state": {}
             }
           },
           {
@@ -91,7 +84,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/garden/Multi-factor authentication.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,17 +101,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "2ae207f631f318dc",
+  "active": "0fe22ccfefd19f6a",
   "lastOpenFiles": [
+    "src/garden/You should be using a password manager.md",
+    "src/garden/Obsidian Git xcrun error.md",
+    "src/garden/Neurotypical.md",
+    "src/garden/Neurodiversity.md",
     "src/garden/Inexplicable lack of accomplishment.md",
+    "src/garden/Neurodivergent.md",
+    "src/garden/Multi-factor authentication.md",
     "src/garden/Inattentive.md",
     "src/garden/How to give your brain the stimulation it needs.md",
-    "src/garden/How to get stuff done when you have ADHD.md",
-    "src/garden/Habit Creation.md",
-    "src/garden/Finding the perfect app.md",
-    "src/garden/Executive function.md",
-    "src/garden/Estimating time for tasks.md",
-    "src/garden/Digital Garden.md",
-    "src/garden/Creativity and imagination.md"
+    "src/garden/How to get stuff done when you have ADHD.md"
   ]
 }
