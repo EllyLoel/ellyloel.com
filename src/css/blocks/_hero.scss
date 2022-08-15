@@ -1,6 +1,6 @@
 .hero {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: var(--size-8);
 
   & h1 {
@@ -9,5 +9,9 @@
 
   & h1 > * {
     display: block;
+  }
+
+  @media (--md-n-above) {
+    flex-direction: row;
   }
 }
