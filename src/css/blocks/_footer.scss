@@ -1,11 +1,9 @@
 .site-footer {
-  display: grid;
-  grid-template: 1fr / 1fr;
+  position: relative;
 
   & css-doodle {
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
-    max-inline-size: 100vw;
+    position: absolute;
+    inset: 0;
 
     @media (forced-colors: active) {
       display: none;
@@ -13,8 +11,6 @@
   }
 
   & .inner {
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
     padding-block: var(--size-9);
     display: grid;
     grid-template-columns: auto 1fr;
