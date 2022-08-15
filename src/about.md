@@ -13,10 +13,11 @@ I run a [newsletter](http://newsletter.ellyloel.com/) and love [sharing interest
 
 ## Interests
 
-- Keyboards
 - CSS
 - Design
 - A11y
+- SVG
+- Keyboards
 - Anime
-- Gaming
 - Reading
+- Gaming

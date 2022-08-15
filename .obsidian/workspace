@@ -7,8 +7,13 @@
         "id": "2ae207f631f318dc",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "src/projects/stylized-text.md",
+            "mode": "source",
+            "backlinks": false,
+            "source": false
+          }
         }
       }
     ],
@@ -75,7 +80,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "src/projects/stylized-text.md"
+              }
             }
           },
           {
@@ -84,6 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "src/projects/stylized-text.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,15 +111,15 @@
   },
   "active": "2ae207f631f318dc",
   "lastOpenFiles": [
+    "src/about.md",
+    "src/uses.md",
+    "src/speaking.md",
+    "src/now.md",
     "src/blog/Holy shit there's so much CSS.md",
     "src/blog/Untitled.md",
     "src/garden/Obsidian Git xcrun error.md",
-    "src/speaking.md",
     "src/bookmarks/Atomic Habits by James Clear.md",
     "src/projects/stylized-text.md",
-    "src/projects/Modern CSS reset.md",
-    "src/about.md",
-    "src/now.md",
-    "src/garden/YAML is strict.md"
+    "src/projects/Modern CSS reset.md"
   ]
 }
