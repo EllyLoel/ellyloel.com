@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "src/garden/You should be using a password manager.md",
+            "file": "src/blog/Holy shit there's so much CSS.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -81,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/garden/You should be using a password manager.md"
+                "file": "src/blog/Holy shit there's so much CSS.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/garden/You should be using a password manager.md",
+                "file": "src/blog/Holy shit there's so much CSS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,15 +111,15 @@
   },
   "active": "2ae207f631f318dc",
   "lastOpenFiles": [
-    "src/garden/Zettelkasten.md",
-    "src/garden/You should be using a password manager.md",
-    "src/garden/YAML is strict.md",
-    "src/garden/Under-diagnosis of women.md",
-    "src/garden/Troubles with backdrop-filter and SVG clipping.md",
-    "src/garden/Stubbornness.md",
-    "src/garden/ADHD.md",
-    "src/garden/Altruism.md",
-    "src/garden/Atomic.md",
-    "src/garden/Composition over Inheritance.md"
+    "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
+    "src/bookmarks/Zero to 60 in Software Development.md",
+    "src/bookmarks/Trouble with time management.md",
+    "src/bookmarks/Trouble organising and planning.md",
+    "src/bookmarks/Interface design patterns checklist.md",
+    "src/bookmarks/Intentional Career Building.md",
+    "src/bookmarks/High degree of creativity and imagination.md",
+    "src/bookmarks/Generosity.md",
+    "src/bookmarks/Atomic Habits by James Clear.md",
+    "src/bookmarks/A wandering mind.md"
   ]
 }
