@@ -3,9 +3,9 @@ title: Atomic
 ---
 
 <figure>
-  > A single irreducible unit or component in a larger system.
+  <blockquote>A single irreducible unit or component in a larger system.</blockquote>
   <figcaption>
-    — <cite>Oxford dictionary</cite>
+    — <cite><del>Oxford dictionary</del> <ins>Your mum</ins></cite>
   </figcaption>
 </figure>
 
