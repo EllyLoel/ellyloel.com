@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "src/blog/Holy shit there's so much CSS.md",
+            "file": "src/garden/How to get stuff done when you have ADHD.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -81,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/blog/Holy shit there's so much CSS.md"
+                "file": "src/garden/How to get stuff done when you have ADHD.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/blog/Holy shit there's so much CSS.md",
+                "file": "src/garden/How to get stuff done when you have ADHD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,6 +111,7 @@
   },
   "active": "2ae207f631f318dc",
   "lastOpenFiles": [
+    "src/blog/Holy shit there's so much CSS.md",
     "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
     "src/bookmarks/Zero to 60 in Software Development.md",
     "src/bookmarks/Trouble with time management.md",
@@ -119,7 +120,6 @@
     "src/bookmarks/Intentional Career Building.md",
     "src/bookmarks/High degree of creativity and imagination.md",
     "src/bookmarks/Generosity.md",
-    "src/bookmarks/Atomic Habits by James Clear.md",
-    "src/bookmarks/A wandering mind.md"
+    "src/bookmarks/Atomic Habits by James Clear.md"
   ]
 }
