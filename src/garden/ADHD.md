@@ -2,7 +2,7 @@
 title: ADHD
 ---
 
-The worst acronym in the world. 🙃
+The worst acronym in the world. :upside_down_face:
 
 ---
 
