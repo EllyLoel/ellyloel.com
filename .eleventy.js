@@ -163,8 +163,6 @@ module.exports = (eleventyConfig) => {
   // Copy/pass-through files
   eleventyConfig.addPassthroughCopy("public");
 
-  // eleventyConfig.setServerPassthroughCopyBehavior("copy");
-
   return {
     templateFormats: ["njk", "md", "11ty.js"],
     htmlTemplateEngine: "njk",
