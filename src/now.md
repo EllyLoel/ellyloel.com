@@ -1,5 +1,5 @@
 ---
-layout: not-home
+layout: base
 title: What I'm Doing Now
 eleventyNavigation:
   key: Now
@@ -11,7 +11,7 @@ An on & off log of what I'm currently doing/interested in. Slower paced than a t
 
 ## August, 2022
 
-I'm officially an AWS certified cloud practitioner, what ever that means 😂 
+I'm officially an AWS certified cloud practitioner, what ever that means 😂
 
 Looks like it's that time again, the clock has struck, and now I am 21 🤯
 
@@ -27,7 +27,7 @@ Completed Web components course by Dave Rupert on Frontend Masters
 
 Reading Every layout by Andy Bell and Hayden Pickering
 
-Building a Web Component to make [[./projects/stylized-text/|stylized-text]] accessible
+Building a Web Component to make [[./projects/stylized-text/|stylized text]] accessible
 
 Hosted a webinar about neurodiversity ([Neurodiversity in projects and at Portable](https://portable.com.au/events/neurodiversity-in-projects-and-at-portable))
 
