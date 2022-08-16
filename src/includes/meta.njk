@@ -1,5 +1,5 @@
 {%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(site.url) }}{%- endset -%}
-{%- set image = "/public/assets/img/ClubPenguin.png" -%}
+{%- set image = "/assets/img/ClubPenguin.png" -%}
 
 {# General #}
 <meta name="description" content="{{ description or site.description }}">
@@ -20,11 +20,10 @@
 {%- endif -%}
 
 {# icons #}
-<link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/img/icons/apple-touch-icon.png' | url }}">
-<link rel="icon" type="image/png" href="{{ 'assets/img/icons/icons-32x32.png' | url }}" sizes="32x32">
-<link rel="icon" type="image/png" href="{{ 'assets/img/icons/icons-16x16.png' | url }}" sizes="16x16">
-<link rel="shortcut icon" href="{{ 'assets/img/icons/icons.ico' | url }}">
-<link rel="manifest" href="{{ 'site.webmanifest' | url }}">
+<link rel="icon" href="{{ '/assets/img/icons/favicon.ico' | url }}" sizes="any">
+<link rel="icon" href="{{ '/assets/img/icons/favicon.svg' | url }}" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{{ '/assets/img/icons/apple-touch-icon.png' | url }}">
+<link rel="manifest" href="{{ '/manifest.webmanifest' | url }}">
 <meta name="theme-color" content="#bd93f9">
 
 {# RSS Feed #}
