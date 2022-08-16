@@ -52,7 +52,10 @@ module.exports = (eleventyConfig) => {
     })
     .use(
       require("markdown-it-wikilinks")({
+        baseURL: "/",
         relativeBaseURL: "../",
+        suffix: "",
+        uriSuffix: "",
       })
     );
   markdownLibrary.renderer.rules.emoji = (token, idx) => {

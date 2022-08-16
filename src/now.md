@@ -6,7 +6,7 @@ eleventyNavigation:
   order: 2
 ---
 
-An on & off log of what I'm currently doing/interested in. Slower paced than a twitter feed but less permanent then an [about](/#about) page.
+An on & off log of what I'm currently doing/interested in. Slower paced than a twitter feed but less permanent then an [[about]] page.
 [Now pages](https://nownownow.com/about) are becoming more common, you should make one for yourself!
 
 ## August, 2022
@@ -27,7 +27,7 @@ Completed Web components course by Dave Rupert on Frontend Masters
 
 Reading Every layout by Andy Bell and Hayden Pickering
 
-Building a Web Component to make [stylized-text](/projects/stylized-text) accessible
+Building a Web Component to make [[./projects/stylized-text/|stylized-text]] accessible
 
 Hosted a webinar about neurodiversity ([Neurodiversity in projects and at Portable](https://portable.com.au/events/neurodiversity-in-projects-and-at-portable))
 
