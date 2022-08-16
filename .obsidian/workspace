@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "src/now.md",
+            "file": "src/projects/Modern CSS reset.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -81,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/now.md"
+                "file": "src/projects/Modern CSS reset.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/now.md",
+                "file": "src/projects/Modern CSS reset.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,11 +111,11 @@
   },
   "active": "5305c92190f1d9a6",
   "lastOpenFiles": [
+    "src/now.md",
     "src/projects/Modern CSS reset.md",
     "src/about.md",
     "src/speaking.md",
     "src/uses.md",
-    "src/now.md",
     "src/projects/stylized-text.md",
     "src/garden/Atomic.md",
     "src/garden/ADHD.md",
