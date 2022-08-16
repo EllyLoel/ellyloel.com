@@ -2,7 +2,7 @@
 title: Modern CSS reset
 ---
 
-I put together a CSS Reset that uses modern CSS features such as :where(), logical properties, prefers-reduced-motion, etc. ✨
+I put together a CSS Reset that uses modern CSS features such as :where(), logical properties, prefers-reduced-motion, etc. :sparkles:
 
 Lots of inspiration from Josh W Comeau, Andy Bell, and Adam Argyle.
 
