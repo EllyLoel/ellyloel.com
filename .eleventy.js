@@ -1,12 +1,8 @@
 require("dotenv").config();
 const path = require("path");
-const markdownIt = require("markdown-it");
-const markdownItAnchor = require("markdown-it-anchor");
-const markdownItEmoji = require("markdown-it-emoji");
-const markdownItWikilinks = require("markdown-it-wikilinks");
 const removeMd = require("remove-markdown");
 const slinkity = require("slinkity");
-const twemoji = require("twemoji");
+const markdownItAnchor = require("markdown-it-anchor");
 
 const EleventyPluginNavigation = require("@11ty/eleventy-navigation");
 const EleventyPluginRss = require("@11ty/eleventy-plugin-rss");
@@ -31,13 +27,14 @@ module.exports = (eleventyConfig) => {
   });
 
   // Customize Markdown library and settings:
-  let markdownLibrary = markdownIt({
+  let markdownLibrary = require("markdown-it")({
     html: true,
     breaks: true,
     linkify: true,
     typographer: true,
   })
-    .use(markdownItEmoji)
+    .use(require("markdown-it-ins"))
+    .use(require("markdown-it-emoji"))
     .use(markdownItAnchor, {
       permalink: markdownItAnchor.permalink.ariaHidden({
         placement: "after",
@@ -47,11 +44,11 @@ module.exports = (eleventyConfig) => {
       }),
       slugify: eleventyConfig.getFilter("slugify"),
     })
-    .use(markdownItWikilinks, {
+    .use(require("markdown-it-wikilinks"), {
       baseURL: "/",
     });
   markdownLibrary.renderer.rules.emoji = (token, idx) =>
-    twemoji.parse(token[idx].content);
+    require("twemoji").parse(token[idx].content);
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   // Excerpts
