@@ -35,6 +35,7 @@ module.exports = (eleventyConfig) => {
     typographer: true,
   })
     .use(require("markdown-it-ins-del"))
+    .disable("strikethrough")
     .use(require("markdown-it-sup"))
     .use(require("markdown-it-footnote"))
     .use(require("markdown-it-mark"))
