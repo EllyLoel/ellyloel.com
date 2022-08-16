@@ -3,6 +3,7 @@ const path = require("path");
 const removeMd = require("remove-markdown");
 const slinkity = require("slinkity");
 const markdownItAnchor = require("markdown-it-anchor");
+const twemoji = require("twemoji");
 
 const EleventyPluginNavigation = require("@11ty/eleventy-navigation");
 const EleventyPluginRss = require("@11ty/eleventy-plugin-rss");
@@ -47,8 +48,9 @@ module.exports = (eleventyConfig) => {
     .use(require("markdown-it-wikilinks"), {
       baseURL: "/",
     });
-  markdownLibrary.renderer.rules.emoji = (token, idx) =>
-    require("twemoji").parse(token[idx].content);
+  markdownLibrary.renderer.rules.emoji = (token, idx) => {
+    return twemoji.parse(token[idx].content);
+  };
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   // Excerpts
