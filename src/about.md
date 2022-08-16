@@ -1,5 +1,5 @@
 ---
-layout: not-home
+layout: base
 title: About
 eleventyNavigation:
   key: About
