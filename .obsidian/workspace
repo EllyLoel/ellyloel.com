@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "src/garden/Atomic.md",
+            "file": "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -81,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/garden/Atomic.md"
+                "file": "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/garden/Atomic.md",
+                "file": "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,12 +111,12 @@
   },
   "active": "c56883a46943be2c",
   "lastOpenFiles": [
+    "src/garden/Atomic.md",
     "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
     "src/garden/Estimating time for tasks.md",
     "src/garden/Digital Garden.md",
     "src/garden/Creativity and imagination.md",
     "src/garden/Composition over Inheritance.md",
-    "src/garden/Atomic.md",
     "src/garden/Altruism.md",
     "src/garden/ADHD.md",
     "src/garden/Sense of time.md",

@@ -34,6 +34,8 @@ module.exports = (eleventyConfig) => {
     linkify: true,
     typographer: true,
   })
+    .use(require("markdown-it-mark"))
+    .use(require("markdown-it-abbr"))
     .use(require("markdown-it-ins"))
     .use(require("markdown-it-emoji"))
     .use(markdownItAnchor, {
