@@ -37,7 +37,6 @@ module.exports = (eleventyConfig) => {
     linkify: true,
     typographer: true,
   })
-    .use(markdownItWikilinks)
     .use(markdownItEmoji)
     .use(markdownItAnchor, {
       permalink: markdownItAnchor.permalink.ariaHidden({
@@ -47,6 +46,9 @@ module.exports = (eleventyConfig) => {
         level: [1, 2, 3, 4],
       }),
       slugify: eleventyConfig.getFilter("slugify"),
+    })
+    .use(markdownItWikilinks, {
+      baseURL: "/",
     });
   markdownLibrary.renderer.rules.emoji = (token, idx) =>
     twemoji.parse(token[idx].content);
