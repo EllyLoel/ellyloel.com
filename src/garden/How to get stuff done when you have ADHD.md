@@ -2,7 +2,7 @@
 title: How to get stuff done when you have ADHD
 ---
 
-TL;DR: Don't 🥲
+TL;DR: Don't :smiling-face-with-tear:
 
 ---
 
