@@ -34,11 +34,11 @@ module.exports = (eleventyConfig) => {
     linkify: true,
     typographer: true,
   })
+    .use(require("markdown-it-ins-del"))
     .use(require("markdown-it-sup"))
     .use(require("markdown-it-footnote"))
     .use(require("markdown-it-mark"))
     .use(require("markdown-it-abbr"))
-    .use(require("markdown-it-ins"))
     .use(require("markdown-it-emoji"))
     .use(markdownItAnchor, {
       permalink: markdownItAnchor.permalink.ariaHidden({
@@ -49,9 +49,11 @@ module.exports = (eleventyConfig) => {
       }),
       slugify: eleventyConfig.getFilter("slugify"),
     })
-    .use(require("markdown-it-wikilinks"), {
-      baseURL: "/",
-    });
+    .use(
+      require("markdown-it-wikilinks")({
+        baseURL: "/",
+      })
+    );
   markdownLibrary.renderer.rules.emoji = (token, idx) => {
     return twemoji.parse(token[idx].content);
   };
