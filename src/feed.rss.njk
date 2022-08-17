@@ -10,7 +10,7 @@
 		<atom:link href="{{ '/feed.rss' | absoluteUrl(site.url) }}" rel="self" type="application/rss+xml"/>
 		<description>{{ site.description }}</description>
 		<language>{{ site.lang }}</language>
-		{%- for post in collections.posts | reverse %}
+		{%- for post in collections.all | reverse %}
 			{%- set absolutePostUrl = post.url | absoluteUrl(site.url) %}
 			<item>
 				<title>{{ post.data.title }}</title>

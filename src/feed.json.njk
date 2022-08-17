@@ -14,14 +14,14 @@
     "url": "{{ site.author.url }}"
   },
   "items": [
-    {%- for post in collections.posts | reverse %}
-	{%- set absolutePostUrl = post.url | absoluteUrl(site.url) %}
+    {%- for post in collections.all | reverse %}
+  {%- set absolutePostUrl = post.url | absoluteUrl(site.url) %}
     {
       "id": "{{ absolutePostUrl }}",
       "url": "{{ absolutePostUrl }}",
       "title": "{{ post.data.title }}",
       "content_html": {% if post.templateContent %}{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | dump | safe }}
-	{% else %}""{% endif %},
+  {% else %}""{% endif %},
       "date_published": "{{ post.date | dateToRfc3339 }}"
     }
     {% if not loop.last %},{% endif %}
