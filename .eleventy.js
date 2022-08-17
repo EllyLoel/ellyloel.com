@@ -11,6 +11,7 @@ const EleventyPluginSyntaxhighlight = require("@11ty/eleventy-plugin-syntaxhighl
 const EleventyPluginInclusiveLang = require("@11ty/eleventy-plugin-inclusive-language");
 const EleventyPluginImage = require("@11ty/eleventy-img");
 const EleventyPluginNestingToc = require("eleventy-plugin-nesting-toc");
+const EleventyPluginEditOnGithub = require("eleventy-plugin-edit-on-github");
 
 const filters = require("./utils/filters.js");
 const transforms = require("./utils/transforms.js");
@@ -25,6 +26,20 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(EleventyPluginNestingToc, {
     wrapper: "nav",
     tags: ["h2", "h3", "h4", "h5", "h6"],
+  });
+  eleventyConfig.addPlugin(EleventyPluginEditOnGithub, {
+    // required
+    github_edit_repo: "https://github.com/ellyloel/ellyloel.com",
+    // optional: defaults
+    github_edit_path: undefined, // non-root location in git url. root is assumed
+    github_edit_branch: "main",
+    github_edit_text: (page) => {
+      return `<sl-icon library="fa" name="fas-edit" class="[ emoji ]"></sl-icon> Edit this page`;
+    }, // html accepted, or javascript function: (page) => { return page.inputPath}
+    github_edit_class: "[ edit-on-github ]",
+    github_edit_tag: "a",
+    github_edit_attributes: "",
+    github_edit_wrapper: undefined, //ex: "<div stuff>${edit_on_github}</div>"
   });
 
   // Customize Markdown library and settings:
@@ -53,6 +68,9 @@ module.exports = (eleventyConfig) => {
     .use(
       require("markdown-it-wikilinks")({
         baseURL: "/",
+        relativeBaseURL: "../",
+        suffix: "",
+        uriSuffix: "",
       })
     );
   markdownLibrary.renderer.rules.emoji = (token, idx) => {
