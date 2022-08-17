@@ -1,19 +1,19 @@
 ---
-layout: not-home
+layout: base
 title: What I'm Doing Now
 eleventyNavigation:
   key: Now
   order: 2
 ---
 
-An on & off log of what I'm currently doing/interested in. Slower paced than a twitter feed but less permanent then an [about](/#about) page.
+An on & off log of what I'm currently doing/interested in. Slower paced than a twitter feed but less permanent then an [[about]] page.
 [Now pages](https://nownownow.com/about) are becoming more common, you should make one for yourself!
 
 ## August, 2022
 
-I'm officially an AWS certified cloud practitioner, what ever that means 😂 
+I'm officially an AWS certified cloud practitioner, what ever that means :joy: 
 
-Looks like it's that time again, the clock has struck, and now I am 21 🤯
+Looks like it's that time again, the clock has struck, and now I am 21 :exploding_head:
 
 The fourth version of my website is complete! No more Gatsby or Next, 11ty all the way!!
 
@@ -27,7 +27,7 @@ Completed Web components course by Dave Rupert on Frontend Masters
 
 Reading Every layout by Andy Bell and Hayden Pickering
 
-Building a Web Component to make [stylized-text](/projects/stylized-text) accessible
+Building a Web Component to make [[./projects/stylized-text/|stylized text]] accessible
 
 Hosted a webinar about neurodiversity ([Neurodiversity in projects and at Portable](https://portable.com.au/events/neurodiversity-in-projects-and-at-portable))
 
@@ -94,11 +94,11 @@ Built Portable Justice hub
 Budding interest in Web Components
 
 Thinking about the unfortunate truth of stateful design often being ignored or forgotten
-[Twitter thread 🧵](https://twitter.com/ellyloel/status/1492033654264307712)
+[Twitter thread :thread:](https://twitter.com/ellyloel/status/1492033654264307712)
 
 ## January 2022
 
-Scrimba Podcast episode came out! 🎉
+Scrimba Podcast episode came out! :tada:
 https://scrimba.com/podcast/ep-44-elly-loel/
 
 I also made a personal link shortener using Netlify redirects, so all I have to do is run: `shorten https://twitter.com/ellyloel twitter` which automatically updates the redirects file and pushes up the changes so then we get [https://elly.to/twitter](https://elly.to/twitter)
