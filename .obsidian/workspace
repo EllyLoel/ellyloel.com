@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
+            "file": "src/garden/Atomic.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -81,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md"
+                "file": "src/garden/Atomic.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
+                "file": "src/garden/Atomic.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,6 +112,8 @@
   },
   "active": "5305c92190f1d9a6",
   "lastOpenFiles": [
+    "src/garden/Digital Garden.md",
+    "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
     "src/blog/Holy shit there's so much CSS.md",
     "src/bookmarks/Zero to 60 in Software Development.md",
     "src/bookmarks/Trouble with time management.md",
@@ -119,8 +121,6 @@
     "src/bookmarks/Interface design patterns checklist.md",
     "src/bookmarks/Intentional Career Building.md",
     "src/bookmarks/High degree of creativity and imagination.md",
-    "src/bookmarks/Generosity.md",
-    "src/bookmarks/A wandering mind.md",
-    "src/garden/Zettelkasten.md"
+    "src/bookmarks/Generosity.md"
   ]
 }
