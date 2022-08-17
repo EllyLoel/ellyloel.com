@@ -1,12 +1,12 @@
 ---
-  permalink: /public/feed.atom
+  permalink: /public/articles.atom
   eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ site.url }}">
 	<title>{{ site.title }}</title>
 	<subtitle>{{ site.description }}</subtitle>
-	<link href="{{ '/feed.atom' | absoluteUrl(site.url) }}" rel="self"/>
+	<link href="{{ '/articles.atom' | absoluteUrl(site.url) }}" rel="self"/>
 	<link href="{{ site.url }}"/>
 	<updated>{{ collections.blog | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
 	<id>{{ site.url }}</id>

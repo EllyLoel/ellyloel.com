@@ -1,5 +1,5 @@
 ---
-  permalink: /public/feed.rss
+  permalink: /public/notes.rss
   eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
@@ -7,7 +7,7 @@
 	<channel>
 		<title>{{ site.title }}</title>
 		<link>{{ site.url }}</link>
-		<atom:link href="{{ '/feed.rss' | absoluteUrl(site.url) }}" rel="self" type="application/rss+xml"/>
+		<atom:link href="{{ '/notes.rss' | absoluteUrl(site.url) }}" rel="self" type="application/rss+xml"/>
 		<description>{{ site.description }}</description>
 		<language>{{ site.lang }}</language>
 		{%- for post in collections.garden | reverse %}

@@ -1,5 +1,5 @@
 ---
-  permalink: /public/notes.json
+  permalink: /public/projects.json
   eleventyExcludeFromCollections: true
 ---
 {
@@ -7,14 +7,14 @@
   "title": "{{ site.title }}",
   "language": "{{ site.lang }}",
   "home_page_url": "{{ site.url }}",
-  "feed_url": "{{ '/notes.json' | absoluteUrl(site.url) }}",
+  "feed_url": "{{ '/projects.json' | absoluteUrl(site.url) }}",
   "description": "{{ site.description }}",
   "author": {
     "name": "{{ site.author.name }}",
     "url": "{{ site.author.url }}"
   },
   "items": [
-    {%- for post in collections.garden | reverse %}
+    {%- for post in collections.projects | reverse %}
   {%- set absolutePostUrl = post.url | absoluteUrl(site.url) %}
     {
       "id": "{{ absolutePostUrl }}",
