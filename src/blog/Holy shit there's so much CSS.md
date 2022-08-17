@@ -86,7 +86,7 @@ Variable fonts are the future
 
 Flex for 1 dimension and Grid for 2 dimensions.
 
-Gap 👏
+Gap :clap:
 
 Subgrid (_soon™️)_
 

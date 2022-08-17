@@ -8,7 +8,7 @@ Well hello there! My name is [Elly Loel](https://ellyloel.com/). I'm a developer
 
 ![Lulu our black cat sitting behind my laptop with code open poking her eyes over looking at the camera](https://cdn.hashnode.com/res/hashnode/image/upload/v1655637610371/vKLY7GibS.png)_Lulu trying her very best to distract me._
 
-I run a [newsletter](http://newsletter.ellyloel.com/) and love [sharing interesting things](https://elly.to/twitter) to help people become better coders! In my spare time, I love building mechanical keyboards, watching cartoons and anime, and hanging out with my partner Brodie and our cat Lulu. 🐈‍⬛
+I run a [newsletter](http://newsletter.ellyloel.com/) and love [sharing interesting things](https://elly.to/twitter) to help people become better coders! In my spare time, I love building mechanical keyboards, watching cartoons and anime, and hanging out with my partner Brodie and our cat Lulu. :black_cat:
 
 You might have heard me on [the Scrimba podcast with Alex Booker](https://scrimba.com/podcast/ep-44-elly-loel/) or seen me in Portable’s [How to land your first tech job](https://youtu.be/1vix3U1P5xk) event.
 
@@ -66,7 +66,7 @@ Take the time to think about what is going to work best for you in terms of time
 
 If I'm honest, I don't know if I've really had a whole lot of concepts stick for myself. I'm not someone who's spent hours upon hours learning data structures and algorithms or how to invert a binary tree. Because honestly, I don't think I could do that.
 
-For me it was more of getting to a point where I felt like I had enough of an idea to be able to G̶o̶o̶g̶l̶e̶ DuckDuckGo solutions to my problems and figure it out on the fly. Then through lots and lots of repetition I slowly started to remember things.
+For me it was more of getting to a point where I felt like I had enough of an idea to be able to ~~Google~~ ++DuckDuckGo++ solutions to my problems and figure it out on the fly. Then through lots and lots of repetition I slowly started to remember things.
 I think it's less about making sure all the coding concepts stick and more about getting to the point where you're able to start creating things. The more you create the more you'll learn by doing.
 
 Once you have a base of practical knowledge from building things then you might want to look into specific concepts. Having a practical understanding is extremely important to learning theoretical concepts and being able to translate them into what you're building.
@@ -83,7 +83,7 @@ There's some absolutely brilliant opportunities out there at the moment - some o
 If you're a Developer or Designer, let's have a chat. Maybe you're wanting a bigger/smaller company? A bit of a bump up in your salary? An opportunity to take on more responsibility? More flexibility with WFH or Remote options? Something else?
 There's plenty of options :)
 Cheers!”
-My comment response: “Hi Andrew, I'd love to have a chat 😄”](https://cdn.hashnode.com/res/hashnode/image/upload/v1655638728707/HzZaKEEnm.png)_The post that lead me to getting in contact with the recruiter_
+My comment response: “Hi Andrew, I'd love to have a chat :smile:”](https://cdn.hashnode.com/res/hashnode/image/upload/v1655638728707/HzZaKEEnm.png)_The post that lead me to getting in contact with the recruiter_
 
 ## How you went about applying to new jobs
 
@@ -135,11 +135,11 @@ Step by step the interview process was:
 
 - They contacted and chatted to my reference.
 
-9. Offer ﻿🎉
+9. Offer :tada:
 
 ## What you know now that you wished back then
 
-I wish I knew that I didn't need to go to university. That would have saved me about $10,000 in debt 🥲. I wish I knew that you didn't need a degree to be a web developer, it's not like we're doctors or lawyers where you need to have the degree. I really wish I knew that being self taught was a completely acceptable way to get into this industry.
+I wish I knew that I didn't need to go to university. That would have saved me about $10,000 in debt :smiling_face_with_tear:. I wish I knew that you didn't need a degree to be a web developer, it's not like we're doctors or lawyers where you need to have the degree. I really wish I knew that being self taught was a completely acceptable way to get into this industry.
 
 I also wish I knew how important building projects to showcase your abilities and knowledge is. I did build a few projects while completing the Frontend Developer Career Path but I wish I had built more personal projects, as people always say, build projects that fill your own needs.
 

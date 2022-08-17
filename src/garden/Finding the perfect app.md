@@ -3,7 +3,7 @@ title: Finding the perfect app
 ---
 
 I've tried just about every productivity app under the sun, and I still haven't found "the one".
-Currently, I'm using ClickUp, but once again I'm thinking about switching 🤦🏼‍♀️
+Currently, I'm using ClickUp, but once again I'm thinking about switching :woman_facepalming:
 
 ---
 
@@ -55,38 +55,38 @@ I've put together a list of my criteria for the "perfect" app for my needs:
 
 ### [Napkin](https://napkin.one)
 
-- [x] 🧠 Whiteboard
-- [x] 📝 Notes
-- [ ] ✅ Tasks
-- [ ] 📅 Calendar
+- [x] :brain: Whiteboard
+- [x] :memo: Notes
+- [ ] :white_check_mark: Tasks
+- [ ] :calendar: Calendar
 
 ### [Amplenote](https://www.amplenote.com/)
 
-- [ ] 🧠 Whiteboard
-- [x] 📝 Notes
-- [x] ✅ Tasks
-- [x] 📅 Calendar
+- [ ] :brain: Whiteboard
+- [x] :memo: Notes
+- [x] :white_check_mark: Tasks
+- [x] :calendar: Calendar
 
 ### [NotePlan](https://noteplan.co/)
 
-- [ ] 🧠 Whiteboard
-- [x] 📝 Notes
-- [x] ✅ Tasks
-- [x] 📅 Calendar
+- [ ] :brain: Whiteboard
+- [x] :memo: Notes
+- [x] :white_check_mark: Tasks
+- [x] :calendar: Calendar
 
 ### [ClickUp](https://clickup.com/)
 
-- [x] 🧠 Whiteboard
-- [x] 📝 Notes
-- [x] ✅ Tasks
-- [x] 📅 Calendar
+- [x] :brain: Whiteboard
+- [x] :memo: Notes
+- [x] :white_check_mark: Tasks
+- [x] :calendar: Calendar
 
 ### [Organizedly](https://www.organized.ly/)
 
-- [x] 🧠 Whiteboard
-- [x] 📝 Notes
-- [x] ✅ Tasks
-- [x] 📅 Calendar
+- [x] :brain: Whiteboard
+- [x] :memo: Notes
+- [x] :white_check_mark: Tasks
+- [x] :calendar: Calendar
 
 ---
 

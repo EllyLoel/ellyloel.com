@@ -1,11 +1,8 @@
 require("dotenv").config();
 const path = require("path");
-const markdownIt = require("markdown-it");
-const markdownItAnchor = require("markdown-it-anchor");
-const markdownItEmoji = require("markdown-it-emoji");
-const markdownItWikilinks = require("markdown-it-wikilinks");
 const removeMd = require("remove-markdown");
 const slinkity = require("slinkity");
+const markdownItAnchor = require("markdown-it-anchor");
 const twemoji = require("twemoji");
 
 const EleventyPluginNavigation = require("@11ty/eleventy-navigation");
@@ -14,6 +11,7 @@ const EleventyPluginSyntaxhighlight = require("@11ty/eleventy-plugin-syntaxhighl
 const EleventyPluginInclusiveLang = require("@11ty/eleventy-plugin-inclusive-language");
 const EleventyPluginImage = require("@11ty/eleventy-img");
 const EleventyPluginNestingToc = require("eleventy-plugin-nesting-toc");
+const EleventyPluginEditOnGithub = require("eleventy-plugin-edit-on-github");
 
 const filters = require("./utils/filters.js");
 const transforms = require("./utils/transforms.js");
@@ -29,15 +27,35 @@ module.exports = (eleventyConfig) => {
     wrapper: "nav",
     tags: ["h2", "h3", "h4", "h5", "h6"],
   });
+  eleventyConfig.addPlugin(EleventyPluginEditOnGithub, {
+    // required
+    github_edit_repo: "https://github.com/ellyloel/ellyloel.com",
+    // optional: defaults
+    github_edit_path: undefined, // non-root location in git url. root is assumed
+    github_edit_branch: "main",
+    github_edit_text: (page) => {
+      return `<sl-icon library="fa" name="fas-edit" class="[ emoji ]"></sl-icon> Edit this page`;
+    }, // html accepted, or javascript function: (page) => { return page.inputPath}
+    github_edit_class: "[ edit-on-github ]",
+    github_edit_tag: "a",
+    github_edit_attributes: "",
+    github_edit_wrapper: undefined, //ex: "<div stuff>${edit_on_github}</div>"
+  });
 
   // Customize Markdown library and settings:
-  let markdownLibrary = markdownIt({
+  let markdownLibrary = require("markdown-it")({
     html: true,
     breaks: true,
     linkify: true,
     typographer: true,
   })
-    .use(markdownItEmoji)
+    .use(require("markdown-it-ins-del"))
+    .disable("strikethrough")
+    .use(require("markdown-it-sup"))
+    .use(require("markdown-it-footnote"))
+    .use(require("markdown-it-mark"))
+    .use(require("markdown-it-abbr"))
+    .use(require("markdown-it-emoji"))
     .use(markdownItAnchor, {
       permalink: markdownItAnchor.permalink.ariaHidden({
         placement: "after",
@@ -47,11 +65,17 @@ module.exports = (eleventyConfig) => {
       }),
       slugify: eleventyConfig.getFilter("slugify"),
     })
-    .use(markdownItWikilinks, {
-      baseURL: "/",
-    });
-  markdownLibrary.renderer.rules.emoji = (token, idx) =>
-    twemoji.parse(token[idx].content);
+    .use(
+      require("markdown-it-wikilinks")({
+        baseURL: "/",
+        relativeBaseURL: "../",
+        suffix: "",
+        uriSuffix: "",
+      })
+    );
+  markdownLibrary.renderer.rules.emoji = (token, idx) => {
+    return twemoji.parse(token[idx].content);
+  };
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   // Excerpts
@@ -165,8 +189,6 @@ module.exports = (eleventyConfig) => {
 
   // Copy/pass-through files
   eleventyConfig.addPassthroughCopy("public");
-
-  // eleventyConfig.setServerPassthroughCopyBehavior("copy");
 
   return {
     templateFormats: ["njk", "md", "11ty.js"],
