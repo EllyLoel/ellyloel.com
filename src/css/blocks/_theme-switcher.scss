@@ -1,6 +1,10 @@
 .theme-switcher {
   --size: auto;
 
+  &:not(:defined) {
+    display: none;
+  }
+
   & > .theme-switcher-radio-group {
     inline-size: fit-content;
     justify-self: center;
