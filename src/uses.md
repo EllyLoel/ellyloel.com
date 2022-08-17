@@ -1,5 +1,5 @@
 ---
-layout: not-home
+layout: base
 title: Uses
 eleventyNavigation:
   key: Uses
@@ -8,19 +8,19 @@ eleventyNavigation:
 
 ## Hardware
 
-- 💻 M1 MacBook Pro 13 inch
-- 🖥 2x Dell G3223Q 32 inch 4k 144hz
-- 💻 iPad Pro 2020
-- 📱 iPhone 12
-- ⌚️ Apple Watch 5
-- 🎧 AirPods 3
-- 🎧 AirPods Max
-- 🎧 Nothing Ear(1)
-- 📸 Panasonic Lumix G7
-- 🎙 Audio-Technica AT2020
-- 🖱 Glorious Model-O wireless
+- :computer: M1 MacBook Pro 13 inch
+- :desktop_computer: 2x Dell G3223Q 32 inch 4k 144hz
+- :computer: iPad Pro 2020
+- :iphone: iPhone 12
+- :watch: Apple Watch 5
+- :headphones: AirPods 3
+- :headphones: AirPods Max
+- :headphones: Nothing Ear(1)
+- :camera_flash: Panasonic Lumix G7
+- :studio_microphone: Audio-Technica AT2020
+- :computer_mouse: Glorious Model-O wireless
 
-### ⌨️ Keyboards
+### :keyboard: Keyboards
 
 #### Pretty in pink
 

@@ -342,6 +342,11 @@ menu {
   display: none !important;
 }
 
+// FOUCE https://www.abeautifulsite.net/posts/flash-of-undefined-custom-elements/
+:not(:defined) {
+  visibility: hidden;
+}
+
 //// Utilities
 @import "utilities/detitlify";
 @import "utilities/flex-col";
@@ -358,6 +363,7 @@ menu {
 //// Blocks
 @import "blocks/button";
 @import "blocks/card";
+@import "blocks/emoji";
 @import "blocks/feed-block";
 @import "blocks/footer";
 @import "blocks/hero";
