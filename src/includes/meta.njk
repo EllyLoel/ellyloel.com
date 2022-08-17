@@ -1,5 +1,13 @@
 {%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(site.url) }}{%- endset -%}
-{%- set image = "/assets/img/ClubPenguin.png" -%}
+{%- if page.fileSlug -%}
+	{% set text = page.fileSlug | sentenceCase %}
+{% else %}
+	{% set text = "Home" %}
+{% endif %}
+{% set image %}
+{% sscg overlayText = text,
+overlayTag = "Elly Loel" %}
+{% endset %}
 
 {# General #}
 <meta name="description" content="{{ description or site.description }}">
@@ -20,11 +28,12 @@
 {%- endif -%}
 
 {# icons #}
-<link rel="icon" href="{{ '/assets/img/icons/favicon.ico' | url }}" sizes="any">
-<link rel="icon" href="{{ '/assets/img/icons/favicon.svg' | url }}" type="image/svg+xml">
-<link rel="apple-touch-icon" href="{{ '/assets/img/icons/apple-touch-icon.png' | url }}">
 <link rel="manifest" href="{{ '/manifest.webmanifest' | url }}">
-<meta name="theme-color" content="#bd93f9">
+{% favicons './public/assets/img/icons/favicon.svg',
+appleIconBgColor = '#00000000',
+generateManifest = false %}
 
 {# RSS Feed #}
-<link type="application/atom+xml" rel="alternate" href="{{ site.url }}/feed.xml" title="{{ site.title }}">
+<link type="application/atom+xml" rel="alternate" href="{{ site.url }}feed.atom" title="{{ site.title }}">
+<link type="application/rss+xml" rel="alternate" href="{{ site.url }}feed.rss" title="{{ site.title }}">
+<link type="application/json" rel="alternate" href="{{ site.url }}feed.json" title="{{ site.title }}">

@@ -8,10 +8,12 @@ const twemoji = require("twemoji");
 const EleventyPluginNavigation = require("@11ty/eleventy-navigation");
 const EleventyPluginRss = require("@11ty/eleventy-plugin-rss");
 const EleventyPluginSyntaxhighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const EleventyPluginInclusiveLang = require("@11ty/eleventy-plugin-inclusive-language");
+// const EleventyPluginInclusiveLang = require("@11ty/eleventy-plugin-inclusive-language");
 const EleventyPluginImage = require("@11ty/eleventy-img");
 const EleventyPluginNestingToc = require("eleventy-plugin-nesting-toc");
-const EleventyPluginEditOnGithub = require("eleventy-plugin-edit-on-github");
+const EleventyPluginBrokenLinks = require("eleventy-plugin-broken-links");
+const EleventyPluginFaviconsPlugin = require("eleventy-plugin-gen-favicons");
+const EleventyPluginSocialShareCardGenerator = require("eleventy-plugin-social-share-card-generator/dist/lib");
 
 const filters = require("./utils/filters.js");
 const transforms = require("./utils/transforms.js");
@@ -21,26 +23,16 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(EleventyPluginNavigation);
   eleventyConfig.addPlugin(EleventyPluginRss);
   eleventyConfig.addPlugin(EleventyPluginSyntaxhighlight);
-  eleventyConfig.addPlugin(EleventyPluginInclusiveLang);
+  // eleventyConfig.addPlugin(EleventyPluginInclusiveLang);
   eleventyConfig.addPlugin(slinkity.plugin, slinkity.defineConfig({}));
   eleventyConfig.addPlugin(EleventyPluginNestingToc, {
     wrapper: "nav",
     tags: ["h2", "h3", "h4", "h5", "h6"],
   });
-  eleventyConfig.addPlugin(EleventyPluginEditOnGithub, {
-    // required
-    github_edit_repo: "https://github.com/ellyloel/ellyloel.com",
-    // optional: defaults
-    github_edit_path: undefined, // non-root location in git url. root is assumed
-    github_edit_branch: "main",
-    github_edit_text: (page) => {
-      return `<sl-icon library="fa" name="fas-edit" class="[ emoji ]"></sl-icon> Edit this page`;
-    }, // html accepted, or javascript function: (page) => { return page.inputPath}
-    github_edit_class: "[ edit-on-github ]",
-    github_edit_tag: "a",
-    github_edit_attributes: "",
-    github_edit_wrapper: undefined, //ex: "<div stuff>${edit_on_github}</div>"
+  eleventyConfig.addPlugin(EleventyPluginBrokenLinks, {
+    loggingLevel: 1,
   });
+  eleventyConfig.addPlugin(EleventyPluginFaviconsPlugin, {});
 
   // Customize Markdown library and settings:
   let markdownLibrary = require("markdown-it")({
@@ -182,10 +174,58 @@ module.exports = (eleventyConfig) => {
       return `<picture class="[ image ]">${sources}${img}</picture>`;
     }
   );
+  eleventyConfig.addNunjucksShortcode("gh_edit", function (page) {
+    const inputPath = page.inputPath.replace(/^\.\//, "").replace(/\s/g, "%20");
+    return `
+      <a href="https://github.com/ellyloel/ellyloel.com/edit/main/${inputPath}">
+        <sl-icon library="fa" name="fas-edit" class="[ emoji ]"></sl-icon> Edit this page
+      </a>
+    `;
+  });
+  eleventyConfig.addShortcode("sscg", ({ overlayText, overlayTag }) => {
+    const values = {
+      cloudName: "ellyloel",
+      publicId: "og-image_b8pgrc.avif",
+      overlayText,
+      overlayTag,
+      fontFace: "Work%20Sans",
+      fontWeight: "700",
+      fontColour: "0f0f0f",
+      fontSize: 75,
+      fontLineSpacing: -10,
+      position: "north_east",
+      x: 100,
+      y: 100,
+      tagx: 100,
+      tagy: 500,
+      width: 800,
+    };
+    const sanitiseText = escape(encodeURIComponent(values.overlayText));
+    const sanitiseTag = escape(encodeURIComponent(values.overlayTag));
+    const url = `https://res.cloudinary.com/${
+      values.cloudName
+    }/image/upload/w_1200,h_669,c_fit,q_auto,f_auto/w_${
+      values.width
+    },c_fit,co_rgb:${values.fontColour},g_${values.position},x_${values.x},y_${
+      values.y
+    },l_text:${values.fontFace}_${values.fontSize}_line_spacing_${
+      values.fontLineSpacing
+    }${values.fontWeight ? `_${values.fontWeight}` : ``}:${sanitiseText}/w_${
+      values.width
+    },c_fit,co_rgb:${values.fontColour},g_${values.position},x_${
+      values.tagx
+    },y_${values.tagy},l_text:${values.fontFace}_48:${sanitiseTag}/${
+      values.publicId
+    }`;
+    return url;
+  });
 
   // Layouts
   eleventyConfig.addLayoutAlias("base", "base.njk");
-  eleventyConfig.addLayoutAlias("not-home", "not-home.njk");
+  eleventyConfig.addLayoutAlias(
+    "base-without-header",
+    "base-without-header.njk"
+  );
 
   // Copy/pass-through files
   eleventyConfig.addPassthroughCopy("public");
