@@ -701,10 +701,10 @@
   resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz#96116f2a912e0c02817345b3c10751069920d553"
   integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
 
-"@splinetool/runtime@^0.9.78":
-  version "0.9.82"
-  resolved "https://registry.yarnpkg.com/@splinetool/runtime/-/runtime-0.9.82.tgz#1a1e539dba2da231e10ba21928ad6c692fb125a3"
-  integrity sha512-NajzpEUQSsiVjhOScM6XsTkHCcCKHAODX8+z05hU9Lk4j4eOG2skyKge5FAOyPZjMt4d6trHyyQQXMOKX1W2qw==
+"@splinetool/runtime@^0.9.95":
+  version "0.9.95"
+  resolved "https://registry.yarnpkg.com/@splinetool/runtime/-/runtime-0.9.95.tgz#66d334269fdd7d4353687d14bbd994ef793f8373"
+  integrity sha512-/ImqicLfJLDX/Tk4dUB6rFzfB5dj9Id9WlEE2A4rNq2eWEaaE37UsCgVoTHIh8D4FIzY7DCWv2sKPor9JsJMCA==
   dependencies:
     on-change "^4.0.0"
 
