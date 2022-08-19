@@ -13,7 +13,6 @@ const EleventyPluginImage = require("@11ty/eleventy-img");
 const EleventyPluginNestingToc = require("eleventy-plugin-nesting-toc");
 const EleventyPluginBrokenLinks = require("eleventy-plugin-broken-links");
 const EleventyPluginFaviconsPlugin = require("eleventy-plugin-gen-favicons");
-const EleventyPluginSocialShareCardGenerator = require("eleventy-plugin-social-share-card-generator/dist/lib");
 
 const filters = require("./utils/filters.js");
 const transforms = require("./utils/transforms.js");
@@ -71,8 +70,15 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   // Excerpts
+  const excerpt = (file, options) => {
+    const firstTwoSentences = file.content.split(".").slice(0, 2).join(". ");
+    const first160Characters = file.content.split("").slice(0, 160).join("");
+    file.excerpt = removeMd(
+      firstTwoSentences.length > 160 ? first160Characters : firstTwoSentences
+    ).replace(/\[\[|\]\]/gm, "");
+  };
   eleventyConfig.setFrontMatterParsingOptions({
-    excerpt: true,
+    excerpt: excerpt,
   });
 
   // Collections
@@ -129,7 +135,7 @@ module.exports = (eleventyConfig) => {
                   <p><a href="${feedItem.url}">${feedItem.title}</a></p>
                 </div>
                 <p>
-                  ${removeMd(feedItem.excerpt).replace(/\[\[|\]\]/gm, "")}
+                  ${feedItem.excerpt}
                 </p>
               `
             : `

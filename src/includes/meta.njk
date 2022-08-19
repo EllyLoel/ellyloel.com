@@ -1,30 +1,36 @@
 {%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(site.url) }}{%- endset -%}
-{%- if page.fileSlug -%}
-	{% set text = page.fileSlug | sentenceCase %}
+{%- if title === "Home" -%}
+	{% set text = "Creating delightful, magical, and accessible art with code." %}
+	{% set tag = "Elly Loel" %}
+	{% set desc = description %}
+	{% set ogTitle = "Elly Loel" %}
 {% else %}
-	{% set text = "Home" %}
+	{% set text = title %}
+	{% set tag = "Elly Loel" %}
+	{% set desc = page.excerpt %}
+	{% set ogTitle = title %}
 {% endif %}
 {% set image %}
 {% sscg overlayText = text,
-overlayTag = "Elly Loel" %}
+overlayTag = tag %}
 {% endset %}
 
 {# General #}
-<meta name="description" content="{{ description or site.description }}">
+<meta name="description" content="{{ desc }}">
 <link rel="canonical" href="{{ absolutePageUrl }}">
 <meta name="author" content="{{ site.author.name }}">
 <meta name="generator" content="{{ eleventy.generator }}">
 
 {# Open Graph #}
 <meta property="og:site_name" content="{{ site.title }}">
-<meta property="og:title" content="{{ title or site.title }}">
-<meta property="og:description" content="{{ description  or site.description }}">
+<meta property="og:title" content="{{ ogTitle }}">
+<meta property="og:description" content="{{ desc }}">
 <meta property="og:url" content="{{ absolutePageUrl }}">
 <meta property="og:locale" content="{{ site.locale }}">
 <meta name="twitter:card" content="{% if image -%}summary_large_image{% else %}summary{% endif %}">
 {%- if image -%}
 	<meta property="og:image" content="{{ image | url | absoluteUrl(site.url) }}">
-	<meta property="og:image:alt" content="A digital drawing of a club penguin character stylised to look like Elly.">
+	<meta property="og:image:alt" content="{{ text }}">
 {%- endif -%}
 
 {# icons #}
