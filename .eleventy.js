@@ -63,7 +63,17 @@ module.exports = (eleventyConfig) => {
         suffix: "",
         uriSuffix: "",
       })
-    );
+    )
+    .use(require("markdown-it-eleventy-img"), {
+      imgOptions: {
+        widths: [300, 600, 1000],
+        formats: ["avif", "jpeg"],
+        outputDir: path.join("_site", "img"),
+      },
+      globalAttributes: {
+        sizes: "100vw",
+      },
+    });
   markdownLibrary.renderer.rules.emoji = (token, idx) => {
     return twemoji.parse(token[idx].content);
   };
