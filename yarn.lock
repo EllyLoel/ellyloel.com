@@ -135,7 +135,7 @@
     semver "^7.3.7"
     slugify "^1.6.5"
 
-"@11ty/eleventy@^1.0.0", "@11ty/eleventy@^1.0.1":
+"@11ty/eleventy@^1.0.0":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-1.0.2.tgz#e8dace170a2dd377fb40465b337bb5f0d17ce6bd"
   integrity sha512-03ER4zukR6BgwppI5DHRE11lc+8B0fWsBrqacVWo3o49QkdEFXnEWjhyI9qd9LrPlgQHK2/MYyxuOvNwecyCLQ==
@@ -703,10 +703,10 @@
   resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz#96116f2a912e0c02817345b3c10751069920d553"
   integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
 
-"@splinetool/runtime@^0.9.78":
-  version "0.9.82"
-  resolved "https://registry.yarnpkg.com/@splinetool/runtime/-/runtime-0.9.82.tgz#1a1e539dba2da231e10ba21928ad6c692fb125a3"
-  integrity sha512-NajzpEUQSsiVjhOScM6XsTkHCcCKHAODX8+z05hU9Lk4j4eOG2skyKge5FAOyPZjMt4d6trHyyQQXMOKX1W2qw==
+"@splinetool/runtime@^0.9.95":
+  version "0.9.95"
+  resolved "https://registry.yarnpkg.com/@splinetool/runtime/-/runtime-0.9.95.tgz#66d334269fdd7d4353687d14bbd994ef793f8373"
+  integrity sha512-/ImqicLfJLDX/Tk4dUB6rFzfB5dj9Id9WlEE2A4rNq2eWEaaE37UsCgVoTHIh8D4FIzY7DCWv2sKPor9JsJMCA==
   dependencies:
     on-change "^4.0.0"
 
@@ -1269,7 +1269,7 @@ cheerio@0.22.0:
     lodash.reject "^4.4.0"
     lodash.some "^4.4.0"
 
-cheerio@^1.0.0-rc.10, cheerio@^1.0.0-rc.3:
+cheerio@^1.0.0-rc.3:
   version "1.0.0-rc.12"
   resolved "https://registry.yarnpkg.com/cheerio/-/cheerio-1.0.0-rc.12.tgz#788bf7466506b1c6bf5fae51d24a2c4d62e47683"
   integrity sha512-VqR8m68vM46BNnuZ5NtnGBKIE/DfN0cRIzg9n40EIq9NOv90ayxLBXA8fXC5gquFRGJSTRqBq25Jt2ECLR431Q==
@@ -1874,13 +1874,6 @@ eleventy-plugin-broken-links@^2.0.3:
     node-html-parser "^5.3.3"
     valid-url "^1.0.9"
 
-eleventy-plugin-edit-on-github@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/eleventy-plugin-edit-on-github/-/eleventy-plugin-edit-on-github-1.1.0.tgz#9ea34e78eb148fd3a0490e65a015e58c98646863"
-  integrity sha512-Hjp70ELdDwrmQ1hXa20bOKgtru9sCiD95Y6OnR2WZBtHZhSYi4ESP+ZUc6pvZkjqoPOiQ2LeG9rs5Mm0401KqQ==
-  dependencies:
-    "@11ty/eleventy" "^1.0.1"
-
 eleventy-plugin-gen-favicons@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/eleventy-plugin-gen-favicons/-/eleventy-plugin-gen-favicons-1.1.0.tgz#8ae6dec1bddf3fc4b903c1669e3e0c1bc2cae4ac"
@@ -1912,13 +1905,6 @@ eleventy-plugin-social-share-card-generator@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/eleventy-plugin-social-share-card-generator/-/eleventy-plugin-social-share-card-generator-1.0.6.tgz#07f30380be672459242512e92bf587057b4e8d69"
   integrity sha512-vZSvwrH4qaxoTymcB8MWja7klNufrUGGxbhFVFpQ1/nqxLT1taqOAbxwA6M72Bd4d9TH7JXwDpKvckQxdjLBjw==
-
-eleventy-plugin-toc@^1.1.5:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/eleventy-plugin-toc/-/eleventy-plugin-toc-1.1.5.tgz#68fff006ca000662303aa29a2191f327c5b38633"
-  integrity sha512-Fo5AZZSBH8CKvz0axJQA9nmnTFOflAMFrngaKER4rOz3C6oDwqxK8N+kNFepmIsieTPkrH+iREWLJ+/9j5JjUg==
-  dependencies:
-    cheerio "^1.0.0-rc.10"
 
 eleventy-plugin-unfurl@^0.0.6:
   version "0.0.6"
@@ -3465,6 +3451,13 @@ markdown-it-anchor@^8.6.4:
   version "8.6.4"
   resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-8.6.4.tgz#affb8aa0910a504c114e9fcad53ac3a5b907b0e6"
   integrity sha512-Ul4YVYZNxMJYALpKtu+ZRdrryYt/GlQ5CK+4l1bp/gWXOG2QWElt6AqF3Mih/wfUKdZbNAZVXGR73/n6U/8img==
+
+markdown-it-eleventy-img@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/markdown-it-eleventy-img/-/markdown-it-eleventy-img-0.7.1.tgz#7d2d07a44689c8f2bedc3cc840110d9bf1c5e0d5"
+  integrity sha512-+7K+Rq8os8a44fDLEDk3Rgt1cM2cBBE0BBD0wtjDl6tueBY0OhB1IYtksa3Bjd8J8bqaGQ8VL5cxP7AyyyqRhA==
+  dependencies:
+    "@11ty/eleventy-img" "^2.0.1"
 
 markdown-it-emoji@^2.0.2:
   version "2.0.2"
