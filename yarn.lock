@@ -18,7 +18,7 @@
     p-queue "^6.6.2"
     short-hash "^1.0.0"
 
-"@11ty/eleventy-dev-server@^1.0.0-canary.13":
+"@11ty/eleventy-dev-server@^1.0.0-canary.14":
   version "1.0.0-canary.14"
   resolved "https://registry.yarnpkg.com/@11ty/eleventy-dev-server/-/eleventy-dev-server-1.0.0-canary.14.tgz#f7b592748d08fc5c4b020c8e850f57abbdb1ac30"
   integrity sha512-yIPRZCEieqe7943P8h+xG60db/82yp10iOgd8IRKiobLhWw43xDJtro8QnjTF4A9gRkx7UmulwTPkGbD1Lt8xQ==
@@ -94,13 +94,13 @@
   dependencies:
     normalize-path "^3.0.0"
 
-"@11ty/eleventy@2.0.0-canary.14":
-  version "2.0.0-canary.14"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-2.0.0-canary.14.tgz#f567601381eb3d4f7a86c297cb55d737391bd55e"
-  integrity sha512-D91HKgY5TkIXT1LgbA+tJLOuzq3C2XDeW2n6XxJTL1falSX839u2hcdxLiA70557YoTpd9u0zYPLVrUbZoO1sA==
+"@11ty/eleventy@2.0.0-canary.15":
+  version "2.0.0-canary.15"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-2.0.0-canary.15.tgz#e0ae6c2fabe7300ec72db852144ad0d8c98eaf2b"
+  integrity sha512-9FghghhTzX3lkT67tAuD/m2n4fRkcQ4raM9SciqoOiZDWMx8B5g9nsxWDl/gSxaamsvANawmD5yvWPbqGA5wSg==
   dependencies:
     "@11ty/dependency-tree" "^2.0.1"
-    "@11ty/eleventy-dev-server" "^1.0.0-canary.13"
+    "@11ty/eleventy-dev-server" "^1.0.0-canary.14"
     "@11ty/eleventy-utils" "^1.0.1"
     "@iarna/toml" "^2.2.5"
     "@sindresorhus/slugify" "^1.1.2"
@@ -118,7 +118,7 @@
     is-glob "^4.0.3"
     iso-639-1 "^2.1.15"
     kleur "^4.1.5"
-    liquidjs "^9.39.2"
+    liquidjs "^9.40.0"
     lodash "^4.17.21"
     luxon "^3.0.1"
     markdown-it "^13.0.1"
@@ -130,6 +130,8 @@
     nunjucks "^3.2.3"
     path-to-regexp "^6.2.1"
     please-upgrade-node "^3.2.0"
+    posthtml "^0.16.6"
+    posthtml-urls "^1.0.0"
     pug "^3.0.2"
     recursive-copy "^2.0.14"
     semver "^7.3.7"
@@ -3264,7 +3266,7 @@ linkify-it@^4.0.1:
   dependencies:
     uc.micro "^1.0.1"
 
-liquidjs@^9.39.2, liquidjs@^9.40.0:
+liquidjs@^9.40.0:
   version "9.40.0"
   resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-9.40.0.tgz#f4a672a48674b11ce57ff260503b5fc8a0abeb4f"
   integrity sha512-SFE+HAGVBpfdhM4h7ZovlC0sd7c6b52IHbztIWNaatDPAIsKdKHXSSphHEHk/7qi6NDOZ5BcK65a2YfCOGJrDg==
