@@ -181,11 +181,11 @@ mark {
 }
 
 :is(ol, ul) {
-  padding-inline-start: var(--size-8);
+  padding-left: var(--size-6);
 }
 
 li {
-  padding-inline-start: var(--size-2);
+  padding-left: var(--size-2);
 }
 
 :is(li, dd, figcaption) {
@@ -348,6 +348,7 @@ menu {
 }
 
 //// Utilities
+@import "utilities/content-width";
 @import "utilities/detitlify";
 @import "utilities/flex-col";
 @import "utilities/flex";
