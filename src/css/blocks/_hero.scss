@@ -11,6 +11,19 @@
     display: block;
   }
 
+  & > div {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: var(--radius-blob-4);
+    background-image: radial-gradient(
+      circle farthest-corner at 10% 20%,
+      var(--accent-bg) 0%,
+      var(--accent-solid) 90%
+    );
+    transform: scale(0.75);
+  }
+
   @media (--md-n-above) {
     flex-direction: row;
   }
