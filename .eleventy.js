@@ -25,7 +25,9 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(slinkity.plugin, slinkity.defineConfig({}));
   eleventyConfig.addPlugin(EleventyPluginNestingToc, {
     wrapper: "nav",
+    wrapperClass: "[ toc ][ recursive-flow ]",
     tags: ["h2", "h3", "h4", "h5", "h6"],
+    headingText: "Table of contents",
   });
   eleventyConfig.addPlugin(EleventyPluginBrokenLinks, {
     loggingLevel: 1,
@@ -61,18 +63,14 @@ module.exports = (eleventyConfig) => {
   });
 
   // Collections
-  eleventyConfig.addCollection("blog", (collection) =>
-    [...collection.getFilteredByGlob("./src/blog/*.md")].reverse()
-  );
-  eleventyConfig.addCollection("garden", (collection) =>
-    [...collection.getFilteredByGlob("./src/garden/*.md")].reverse()
-  );
-  eleventyConfig.addCollection("bookmarks", (collection) =>
-    [...collection.getFilteredByGlob("./src/bookmarks/*.md")].reverse()
-  );
-  eleventyConfig.addCollection("projects", (collection) =>
-    [...collection.getFilteredByGlob("./src/projects/*.md")].reverse()
-  );
+  const collections = ["blog", "garden", "bookmarks", "projects"];
+  for (const collectionName of collections) {
+    eleventyConfig.addCollection(collectionName, (collection) =>
+      [
+        ...collection.getFilteredByGlob(`./src/${collectionName}/*.md`),
+      ].reverse()
+    );
+  }
 
   // Filters
   Object.keys(filters).forEach((filterName) => {
@@ -216,13 +214,6 @@ module.exports = (eleventyConfig) => {
     }`;
     return url;
   });
-
-  // Layouts
-  eleventyConfig.addLayoutAlias("base", "base.njk");
-  eleventyConfig.addLayoutAlias(
-    "base-without-header",
-    "base-without-header.njk"
-  );
 
   // Copy/pass-through files
   eleventyConfig.addPassthroughCopy("public");

@@ -1,0 +1,15 @@
+.toc {
+  --flow-space: 0.5em;
+
+  & > ol {
+    list-style-type: disc;
+
+    & ol {
+      list-style-type: circle;
+
+      & ol {
+        list-style-type: square;
+      }
+    }
+  }
+}
