@@ -3405,13 +3405,6 @@ markdown-it-anchor@^8.6.4:
   resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-8.6.4.tgz#affb8aa0910a504c114e9fcad53ac3a5b907b0e6"
   integrity sha512-Ul4YVYZNxMJYALpKtu+ZRdrryYt/GlQ5CK+4l1bp/gWXOG2QWElt6AqF3Mih/wfUKdZbNAZVXGR73/n6U/8img==
 
-markdown-it-eleventy-img@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/markdown-it-eleventy-img/-/markdown-it-eleventy-img-0.7.1.tgz#7d2d07a44689c8f2bedc3cc840110d9bf1c5e0d5"
-  integrity sha512-+7K+Rq8os8a44fDLEDk3Rgt1cM2cBBE0BBD0wtjDl6tueBY0OhB1IYtksa3Bjd8J8bqaGQ8VL5cxP7AyyyqRhA==
-  dependencies:
-    "@11ty/eleventy-img" "^2.0.1"
-
 markdown-it-emoji@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/markdown-it-emoji/-/markdown-it-emoji-2.0.2.tgz#cd42421c2fda1537d9cc12b9923f5c8aeb9029c8"

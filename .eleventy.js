@@ -2,8 +2,6 @@ require("dotenv").config();
 const path = require("path");
 const removeMd = require("remove-markdown");
 const slinkity = require("slinkity");
-const markdownItAnchor = require("markdown-it-anchor");
-const twemoji = require("twemoji");
 
 const EleventyPluginNavigation = require("@11ty/eleventy-navigation");
 const EleventyPluginRss = require("@11ty/eleventy-plugin-rss");
@@ -15,6 +13,7 @@ const EleventyPluginBrokenLinks = require("eleventy-plugin-broken-links");
 const EleventyPluginFaviconsPlugin = require("eleventy-plugin-gen-favicons");
 
 const filters = require("./utils/filters.js");
+const markdown = require("./utils/markdown.js");
 const transforms = require("./utils/transforms.js");
 
 module.exports = (eleventyConfig) => {
@@ -33,50 +32,7 @@ module.exports = (eleventyConfig) => {
   });
   eleventyConfig.addPlugin(EleventyPluginFaviconsPlugin, {});
 
-  // Customize Markdown library and settings:
-  let markdownLibrary = require("markdown-it")({
-    html: true,
-    breaks: true,
-    linkify: true,
-    typographer: true,
-  })
-    .use(require("markdown-it-ins-del"))
-    .disable("strikethrough")
-    .use(require("markdown-it-sup"))
-    .use(require("markdown-it-footnote"))
-    .use(require("markdown-it-mark"))
-    .use(require("markdown-it-abbr"))
-    .use(require("markdown-it-emoji"))
-    .use(markdownItAnchor, {
-      permalink: markdownItAnchor.permalink.ariaHidden({
-        placement: "after",
-        class: "direct-link",
-        symbol: "🔗",
-        level: [1, 2, 3, 4],
-      }),
-      slugify: eleventyConfig.getFilter("slugify"),
-    })
-    .use(
-      require("markdown-it-wikilinks")({
-        baseURL: "/",
-        relativeBaseURL: "../",
-        suffix: "",
-        uriSuffix: "",
-      })
-    )
-    .use(require("markdown-it-eleventy-img"), {
-      imgOptions: {
-        widths: [300, 600, 1000],
-        formats: ["avif", "jpeg"],
-        outputDir: path.join("_site", "img"),
-      },
-      globalAttributes: {
-        sizes: "100vw",
-      },
-    });
-  markdownLibrary.renderer.rules.emoji = (token, idx) => {
-    return twemoji.parse(token[idx].content);
-  };
+  const markdownLibrary = markdown(eleventyConfig);
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   // Excerpts
@@ -173,7 +129,7 @@ module.exports = (eleventyConfig) => {
   });
   eleventyConfig.addNunjucksAsyncShortcode(
     "image",
-    async function (src, alt, sizes = "100vw") {
+    async function (src, alt, sizes = "(max-width: 768px) 100vw, 768px") {
       if (alt === undefined) {
         // You bet we throw an error on missing alt (alt="" works okay)
         throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
@@ -181,26 +137,38 @@ module.exports = (eleventyConfig) => {
 
       let metadata = await EleventyPluginImage(src, {
         widths: [300, 600, 1000],
-        formats: ["avif", "jpeg"],
+        formats: ["avif", "webp", "jpeg"],
         outputDir: path.join("_site", "img"),
       });
 
-      let lowsrc = metadata.jpeg[0];
-      let highsrc = metadata.jpeg[metadata.jpeg.length - 1];
+      let imageAttributes = {
+        class: "[ image ]",
+        alt,
+        sizes,
+        loading: "lazy",
+        decoding: "async",
+      };
 
-      let getSrcset = (imageFormat) =>
-        imageFormat.map((entry) => entry.srcset).join(", ");
+      return EleventyPluginImage.generateHTML(metadata, imageAttributes, {
+        whiteSpace: "inline",
+      });
 
-      let sources = Object.values(metadata)
-        .map((imageFormat) => {
-          let srcset = getSrcset(imageFormat);
-          return `<source type="${imageFormat[0].sourceType}" srcset="${srcset}" sizes="${sizes}">`;
-        })
-        .join("");
+      // let lowsrc = metadata.jpeg[0];
+      // let highsrc = metadata.jpeg[metadata.jpeg.length - 1];
 
-      let img = `<img src="${lowsrc.url}" width="${highsrc.width}" height="${highsrc.height}" alt="${alt}" loading="lazy" decoding="async">`;
+      // let getSrcset = (imageFormat) =>
+      //   imageFormat.map((entry) => entry.srcset).join(", ");
 
-      return `<picture class="[ image ]">${sources}${img}</picture>`;
+      // let sources = Object.values(metadata)
+      //   .map((imageFormat) => {
+      //     let srcset = getSrcset(imageFormat);
+      //     return `<source type="${imageFormat[0].sourceType}" srcset="${srcset}" sizes="${sizes}">`;
+      //   })
+      //   .join("");
+
+      // let img = `<img src="${lowsrc.url}" width="${highsrc.width}" height="${highsrc.height}" alt="${alt}" loading="lazy" decoding="async">`;
+
+      // return `<picture class="[ image ]">${sources}${img}</picture>`;
     }
   );
   eleventyConfig.addNunjucksShortcode("gh_edit", function (page) {
