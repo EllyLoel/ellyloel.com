@@ -2,10 +2,5 @@
   height: 300px !important;
   width: 300px !important;
   object-fit: cover;
-  border-radius: var(--radius-blob-3);
-  background-image: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    var(--accent-bg) 0%,
-    var(--accent-solid) 90%
-  );
+  transform: scale(1.5);
 }
