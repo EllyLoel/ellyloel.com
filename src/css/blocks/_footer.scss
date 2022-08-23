@@ -18,7 +18,8 @@
     grid-template-areas:
       "newsletter"
       "sitemap"
-      "socials";
+      "socials"
+      "edit";
     row-gap: var(--size-9);
 
     & .newsletter {
@@ -43,17 +44,25 @@
       transform: translateX(-8px); // optical alignment
     }
 
+    & .gh-edit {
+      grid-area: edit;
+    }
+
     @media (--lg-n-above) {
       grid-template-areas:
         "newsletter image"
         "sitemap image"
-        "socials socials";
+        "socials edit";
       column-gap: var(--size-9);
 
       & .image {
         display: block;
         grid-area: image;
         block-size: fit-content;
+      }
+
+      & .gh-edit {
+        justify-self: end;
       }
     }
   }

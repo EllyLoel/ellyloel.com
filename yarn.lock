@@ -18,10 +18,10 @@
     p-queue "^6.6.2"
     short-hash "^1.0.0"
 
-"@11ty/eleventy-dev-server@^1.0.0-canary.9":
-  version "1.0.0-canary.13"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy-dev-server/-/eleventy-dev-server-1.0.0-canary.13.tgz#175f91611c38d4d39850e60a9afd55851141d234"
-  integrity sha512-IKxUdlpoFjOeaDgnkdNWRz/jQicQGHrL76m1aWpZc+6V7NpBNjdPqIui119JKlu0m//aEwhbfWAJQdP7LHHEFg==
+"@11ty/eleventy-dev-server@^1.0.0-canary.13":
+  version "1.0.0-canary.14"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy-dev-server/-/eleventy-dev-server-1.0.0-canary.14.tgz#f7b592748d08fc5c4b020c8e850f57abbdb1ac30"
+  integrity sha512-yIPRZCEieqe7943P8h+xG60db/82yp10iOgd8IRKiobLhWw43xDJtro8QnjTF4A9gRkx7UmulwTPkGbD1Lt8xQ==
   dependencies:
     "@11ty/eleventy-utils" "^1.0.0"
     chokidar "^3.5.3"
@@ -94,16 +94,17 @@
   dependencies:
     normalize-path "^3.0.0"
 
-"@11ty/eleventy@2.0.0-canary.11":
-  version "2.0.0-canary.11"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-2.0.0-canary.11.tgz#bce3c66822a33a074d36e33e77a09130016afbba"
-  integrity sha512-APWASXb+L35V9eROQLzpMWtnAmn7KGJRw9OxhUzGFIzpIcQxxLA73nOVoClnE/amd99rwRkDVCoLRmf4CyZxpQ==
+"@11ty/eleventy@2.0.0-canary.14":
+  version "2.0.0-canary.14"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-2.0.0-canary.14.tgz#f567601381eb3d4f7a86c297cb55d737391bd55e"
+  integrity sha512-D91HKgY5TkIXT1LgbA+tJLOuzq3C2XDeW2n6XxJTL1falSX839u2hcdxLiA70557YoTpd9u0zYPLVrUbZoO1sA==
   dependencies:
     "@11ty/dependency-tree" "^2.0.1"
-    "@11ty/eleventy-dev-server" "^1.0.0-canary.9"
+    "@11ty/eleventy-dev-server" "^1.0.0-canary.13"
     "@11ty/eleventy-utils" "^1.0.1"
     "@iarna/toml" "^2.2.5"
     "@sindresorhus/slugify" "^1.1.2"
+    bcp-47-normalize "^1.1.1"
     chokidar "^3.5.3"
     cross-spawn "^7.0.3"
     debug "^4.3.4"
@@ -115,10 +116,11 @@
     hamljs "^0.6.2"
     handlebars "^4.7.7"
     is-glob "^4.0.3"
-    kleur "^4.1.4 "
-    liquidjs "^9.37.0"
+    iso-639-1 "^2.1.15"
+    kleur "^4.1.5"
+    liquidjs "^9.39.2"
     lodash "^4.17.21"
-    luxon "^2.4.0"
+    luxon "^3.0.1"
     markdown-it "^13.0.1"
     minimist "^1.2.6"
     moo "^0.5.1"
@@ -133,7 +135,7 @@
     semver "^7.3.7"
     slugify "^1.6.5"
 
-"@11ty/eleventy@^1.0.0", "@11ty/eleventy@^1.0.1":
+"@11ty/eleventy@^1.0.0":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-1.0.2.tgz#e8dace170a2dd377fb40465b337bb5f0d17ce6bd"
   integrity sha512-03ER4zukR6BgwppI5DHRE11lc+8B0fWsBrqacVWo3o49QkdEFXnEWjhyI9qd9LrPlgQHK2/MYyxuOvNwecyCLQ==
@@ -990,6 +992,28 @@ batch@0.6.1:
   resolved "https://registry.yarnpkg.com/batch/-/batch-0.6.1.tgz#dc34314f4e679318093fc760272525f94bf25c16"
   integrity sha512-x+VAiMRL6UPkx+kudNvxTl6hB2XNNCG2r+7wixVfIYwu/2HKRXimwQyaumLjMveWvT2Hkd/cAJw+QBMfJ/EKVw==
 
+bcp-47-match@^1.0.0:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/bcp-47-match/-/bcp-47-match-1.0.3.tgz#cb8d03071389a10aff2062b862d6575ffd7cd7ef"
+  integrity sha512-LggQ4YTdjWQSKELZF5JwchnBa1u0pIQSZf5lSdOHEdbVP55h0qICA/FUp3+W99q0xqxYa1ZQizTUH87gecII5w==
+
+bcp-47-normalize@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/bcp-47-normalize/-/bcp-47-normalize-1.1.1.tgz#d2c76218d132f223c44e4a06a7224be3030f8ec3"
+  integrity sha512-jWZ1Jdu3cs0EZdfCkS0UE9Gg01PtxnChjEBySeB+Zo6nkqtFfnvtoQQgP1qU1Oo4qgJgxhTI6Sf9y/pZIhPs0A==
+  dependencies:
+    bcp-47 "^1.0.0"
+    bcp-47-match "^1.0.0"
+
+bcp-47@^1.0.0:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/bcp-47/-/bcp-47-1.0.8.tgz#bf63ae4269faabe7c100deac0811121a48b6a561"
+  integrity sha512-Y9y1QNBBtYtv7hcmoX0tR+tUNSFZGZ6OL6vKPObq8BbOhkCoyayF6ogfLTgAli/KuAEbsYHYUNq2AQuY6IuLag==
+  dependencies:
+    is-alphabetical "^1.0.0"
+    is-alphanumerical "^1.0.0"
+    is-decimal "^1.0.0"
+
 binary-extensions@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-2.2.0.tgz#75f502eeaf9ffde42fc98829645be4ea76bd9e2d"
@@ -1245,7 +1269,7 @@ cheerio@0.22.0:
     lodash.reject "^4.4.0"
     lodash.some "^4.4.0"
 
-cheerio@^1.0.0-rc.10, cheerio@^1.0.0-rc.3:
+cheerio@^1.0.0-rc.3:
   version "1.0.0-rc.12"
   resolved "https://registry.yarnpkg.com/cheerio/-/cheerio-1.0.0-rc.12.tgz#788bf7466506b1c6bf5fae51d24a2c4d62e47683"
   integrity sha512-VqR8m68vM46BNnuZ5NtnGBKIE/DfN0cRIzg9n40EIq9NOv90ayxLBXA8fXC5gquFRGJSTRqBq25Jt2ECLR431Q==
@@ -1850,13 +1874,6 @@ eleventy-plugin-broken-links@^2.0.3:
     node-html-parser "^5.3.3"
     valid-url "^1.0.9"
 
-eleventy-plugin-edit-on-github@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/eleventy-plugin-edit-on-github/-/eleventy-plugin-edit-on-github-1.1.0.tgz#9ea34e78eb148fd3a0490e65a015e58c98646863"
-  integrity sha512-Hjp70ELdDwrmQ1hXa20bOKgtru9sCiD95Y6OnR2WZBtHZhSYi4ESP+ZUc6pvZkjqoPOiQ2LeG9rs5Mm0401KqQ==
-  dependencies:
-    "@11ty/eleventy" "^1.0.1"
-
 eleventy-plugin-gen-favicons@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/eleventy-plugin-gen-favicons/-/eleventy-plugin-gen-favicons-1.1.0.tgz#8ae6dec1bddf3fc4b903c1669e3e0c1bc2cae4ac"
@@ -1888,13 +1905,6 @@ eleventy-plugin-social-share-card-generator@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/eleventy-plugin-social-share-card-generator/-/eleventy-plugin-social-share-card-generator-1.0.6.tgz#07f30380be672459242512e92bf587057b4e8d69"
   integrity sha512-vZSvwrH4qaxoTymcB8MWja7klNufrUGGxbhFVFpQ1/nqxLT1taqOAbxwA6M72Bd4d9TH7JXwDpKvckQxdjLBjw==
-
-eleventy-plugin-toc@^1.1.5:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/eleventy-plugin-toc/-/eleventy-plugin-toc-1.1.5.tgz#68fff006ca000662303aa29a2191f327c5b38633"
-  integrity sha512-Fo5AZZSBH8CKvz0axJQA9nmnTFOflAMFrngaKER4rOz3C6oDwqxK8N+kNFepmIsieTPkrH+iREWLJ+/9j5JjUg==
-  dependencies:
-    cheerio "^1.0.0-rc.10"
 
 eleventy-plugin-unfurl@^0.0.6:
   version "0.0.6"
@@ -2873,6 +2883,19 @@ internal-slot@^1.0.3:
     has "^1.0.3"
     side-channel "^1.0.4"
 
+is-alphabetical@^1.0.0:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/is-alphabetical/-/is-alphabetical-1.0.4.tgz#9e7d6b94916be22153745d184c298cbf986a686d"
+  integrity sha512-DwzsA04LQ10FHTZuL0/grVDk4rFoVH1pjAToYwBrHSxcrBIGQuXrQMtD5U1b0U2XVgKZCTLLP8u2Qxqhy3l2Vg==
+
+is-alphanumerical@^1.0.0:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/is-alphanumerical/-/is-alphanumerical-1.0.4.tgz#7eb9a2431f855f6b1ef1a78e326df515696c4dbf"
+  integrity sha512-UzoZUr+XfVz3t3v4KyGEniVL9BDRoQtY7tOyrRybkVNjDFWyo1yhXNGrrBTQxp3ib9BLAWs7k2YKBQsFRkZG9A==
+  dependencies:
+    is-alphabetical "^1.0.0"
+    is-decimal "^1.0.0"
+
 is-arrayish@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/is-arrayish/-/is-arrayish-0.2.1.tgz#77c99840527aa8ecb1a8ba697b80645a7a926a9d"
@@ -2928,6 +2951,11 @@ is-date-object@^1.0.1:
   integrity sha512-9YQaSxsAiSwcvS33MBk3wTCVnWK+HhF8VZR2jRxehM16QcVOdHqPn4VPHmRK4lSr38n9JriurInLcP90xsYNfQ==
   dependencies:
     has-tostringtag "^1.0.0"
+
+is-decimal@^1.0.0:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/is-decimal/-/is-decimal-1.0.4.tgz#65a3a5958a1c5b63a706e1b333d7cd9f630d3fa5"
+  integrity sha512-RGdriMmQQvZ2aqaQq3awNA6dCGtKpiDFcOzrTWrDAT2MiWrKQVPmxLGHl7Y2nNu6led0kEyoX0enY0qXYsv9zw==
 
 is-expression@^4.0.0:
   version "4.0.0"
@@ -3059,6 +3087,11 @@ isexe@^2.0.0:
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==
 
+iso-639-1@^2.1.15:
+  version "2.1.15"
+  resolved "https://registry.yarnpkg.com/iso-639-1/-/iso-639-1-2.1.15.tgz#20cf78a4f691aeb802c16f17a6bad7d99271e85d"
+  integrity sha512-7c7mBznZu2ktfvyT582E2msM+Udc1EjOyhVRE/0ZsjD9LBtWSm23h3PtiRh2a35XoUsTQQjJXaJzuLjXsOdFDg==
+
 jake@^10.8.5:
   version "10.8.5"
   resolved "https://registry.yarnpkg.com/jake/-/jake-10.8.5.tgz#f2183d2c59382cb274226034543b9c03b8164c46"
@@ -3183,7 +3216,7 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
   integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
 
-kleur@^4.1.4, "kleur@^4.1.4 ", kleur@^4.1.5:
+kleur@^4.1.4, kleur@^4.1.5:
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-4.1.5.tgz#95106101795f7050c6c650f350c683febddb1780"
   integrity sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==
@@ -3231,12 +3264,7 @@ linkify-it@^4.0.1:
   dependencies:
     uc.micro "^1.0.1"
 
-liquidjs@^9.37.0:
-  version "9.39.2"
-  resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-9.39.2.tgz#f2409f1108b91fc4f1b06e1f51f2be70f434cb92"
-  integrity sha512-7fdd8hn7U/FUANGWaBbF41LmsRS40uXj/jFldyddYqgLDGMyZSYJsajOvZIZGkAxJdUYbZksrHRU4Q8kg8sTPg==
-
-liquidjs@^9.40.0:
+liquidjs@^9.39.2, liquidjs@^9.40.0:
   version "9.40.0"
   resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-9.40.0.tgz#f4a672a48674b11ce57ff260503b5fc8a0abeb4f"
   integrity sha512-SFE+HAGVBpfdhM4h7ZovlC0sd7c6b52IHbztIWNaatDPAIsKdKHXSSphHEHk/7qi6NDOZ5BcK65a2YfCOGJrDg==
@@ -3409,6 +3437,11 @@ luxon@^2.4.0, luxon@^2.5.0:
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-2.5.0.tgz#098090f67d690b247e83c090267a60b1aa8ea96c"
   integrity sha512-IDkEPB80Rb6gCAU+FEib0t4FeJ4uVOuX1CQ9GsvU3O+JAGIgu0J7sf1OarXKaKDygTZIoJyU6YdZzTFRu+YR0A==
 
+luxon@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/luxon/-/luxon-3.0.1.tgz#6901111d10ad06fd267ad4e4128a84bef8a77299"
+  integrity sha512-hF3kv0e5gwHQZKz4wtm4c+inDtyc7elkanAsBq+fundaCdUBNJB1dHEGUZIM6SfSBUlbVFduPwEtNjFK8wLtcw==
+
 markdown-it-abbr@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/markdown-it-abbr/-/markdown-it-abbr-1.0.4.tgz#d66b5364521cbb3dd8aa59dadfba2fb6865c8fd8"
@@ -3418,6 +3451,13 @@ markdown-it-anchor@^8.6.4:
   version "8.6.4"
   resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-8.6.4.tgz#affb8aa0910a504c114e9fcad53ac3a5b907b0e6"
   integrity sha512-Ul4YVYZNxMJYALpKtu+ZRdrryYt/GlQ5CK+4l1bp/gWXOG2QWElt6AqF3Mih/wfUKdZbNAZVXGR73/n6U/8img==
+
+markdown-it-eleventy-img@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/markdown-it-eleventy-img/-/markdown-it-eleventy-img-0.7.1.tgz#7d2d07a44689c8f2bedc3cc840110d9bf1c5e0d5"
+  integrity sha512-+7K+Rq8os8a44fDLEDk3Rgt1cM2cBBE0BBD0wtjDl6tueBY0OhB1IYtksa3Bjd8J8bqaGQ8VL5cxP7AyyyqRhA==
+  dependencies:
+    "@11ty/eleventy-img" "^2.0.1"
 
 markdown-it-emoji@^2.0.2:
   version "2.0.2"

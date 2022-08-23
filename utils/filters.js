@@ -28,4 +28,8 @@ module.exports = {
       return 0;
     });
   },
+
+  sentenceCase: function (string = "") {
+    return string[0].toUpperCase() + string.substring(1);
+  },
 };
