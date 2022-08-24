@@ -11,6 +11,7 @@ const EleventyPluginImage = require("@11ty/eleventy-img");
 const EleventyPluginNestingToc = require("eleventy-plugin-nesting-toc");
 const EleventyPluginBrokenLinks = require("eleventy-plugin-broken-links");
 const EleventyPluginFaviconsPlugin = require("eleventy-plugin-gen-favicons");
+const EleventyPluginUnfurl = require("eleventy-plugin-unfurl");
 
 const filters = require("./utils/filters.js");
 const markdown = require("./utils/markdown.js");
@@ -33,6 +34,33 @@ module.exports = (eleventyConfig) => {
     loggingLevel: 1,
   });
   eleventyConfig.addPlugin(EleventyPluginFaviconsPlugin, {});
+  eleventyConfig.addPlugin(EleventyPluginUnfurl, {
+    template: (props) => {
+      return props
+        ? `<article class="unfurl">${
+            props?.url || props?.title
+              ? `<h4 class="unfurl__heading"><a class="unfurl__link" href="${props?.url}">${props?.title}</a></h4>`
+              : ``
+          }${
+            props?.image?.url
+              ? `<img class="unfurl__image" src="${props.image.url}" width="2400" height="1256" alt=""/>`
+              : ``
+          }${
+            props?.description
+              ? `<p class="unfurl__description">${props.description}</p>`
+              : ``
+          }${
+            props?.author
+              ? `<small class="unfurl__meta">${
+                  props?.author
+                    ? `<span class="unfurl__publisher">${props.author}</span>`
+                    : ``
+                }</small>`
+              : ``
+          }</article>`
+        : ``;
+    },
+  });
 
   const markdownLibrary = markdown(eleventyConfig);
   eleventyConfig.setLibrary("md", markdownLibrary);
