@@ -30,34 +30,50 @@ module.exports = (eleventyConfig) => {
     tags: ["h2", "h3", "h4", "h5", "h6"],
     headingText: "Table of contents",
   });
-  // eleventyConfig.addPlugin(EleventyPluginBrokenLinks, {
-  //   loggingLevel: 1,
-  // });
+  eleventyConfig.addPlugin(EleventyPluginBrokenLinks, {
+    loggingLevel: 1,
+  });
   eleventyConfig.addPlugin(EleventyPluginFaviconsPlugin, {});
   eleventyConfig.addPlugin(EleventyPluginUnfurl, {
-    template: (props) => {
+    template: async (props) => {
+      const imageAttributes = {
+        class: "[ image unfurl__image ]",
+        alt: "",
+        sizes: "(max-width: 768px) 100vw, 768px",
+        loading: "lazy",
+        decoding: "async",
+      };
+
+      let metadata = await EleventyPluginImage(props?.image?.url, {
+        widths: [300, 600, 1000],
+        formats: ["avif", "webp", "jpeg"],
+        outputDir: path.join("_site", "img"),
+      });
+
+      const image = EleventyPluginImage.generateHTML(
+        metadata,
+        imageAttributes,
+        { whitespaceMode: "inline" }
+      );
+
       return props
         ? `<article class="unfurl">${
-            props?.url || props?.title
-              ? `<h4 class="unfurl__heading"><a class="unfurl__link" href="${props?.url}">${props?.title}</a></h4>`
+            props?.author
+              ? `<small class="unfurl__meta"><span class="unfurl__publisher">${props.author}</span></small>`
               : ``
           }${
-            props?.image?.url
-              ? `<img class="unfurl__image" src="${props.image.url}" width="2400" height="1256" alt=""/>`
+            props?.url || props?.title
+              ? `<h4 class="unfurl__heading${
+                  !props?.author ? ` unfurl__meta` : ``
+                }"><a class="unfurl__link" href="${props?.url}">${
+                  props?.title
+                }</a></h4>`
               : ``
           }${
             props?.description
               ? `<p class="unfurl__description">${props.description}</p>`
               : ``
-          }${
-            props?.author
-              ? `<small class="unfurl__meta">${
-                  props?.author
-                    ? `<span class="unfurl__publisher">${props.author}</span>`
-                    : ``
-                }</small>`
-              : ``
-          }</article>`
+          }${props?.image?.url ? image : ``}</article>`
         : ``;
     },
   });
