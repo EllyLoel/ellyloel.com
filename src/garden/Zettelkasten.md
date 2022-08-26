@@ -6,8 +6,6 @@ title: Zettelkasten
 
 The direct translation of zettelkasten is slip-box, a place to keep & sort your notes.
 
----
-
 The 5 most important components of a Zettelkasten system are:
 
 ## Fleeting notes

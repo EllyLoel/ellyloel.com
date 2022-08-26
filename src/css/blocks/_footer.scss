@@ -27,7 +27,7 @@
       block-size: fit-content;
     }
 
-    & .image {
+    & picture {
       display: none;
     }
 
@@ -55,7 +55,7 @@
         "socials edit";
       column-gap: var(--size-9);
 
-      & .image {
+      & picture {
         display: block;
         grid-area: image;
         block-size: fit-content;
