@@ -108,13 +108,17 @@ module.exports = (eleventyConfig) => {
 
   // Collections
   const collections = ["blog", "garden", "bookmarks", "projects"];
+  const globs = [];
   for (const collectionName of collections) {
+    const glob = `./src/${collectionName}/*.md`;
     eleventyConfig.addCollection(collectionName, (collection) =>
-      [
-        ...collection.getFilteredByGlob(`./src/${collectionName}/*.md`),
-      ].reverse()
+      collection.getFilteredByGlob(glob)
     );
+    globs.push(glob);
   }
+  eleventyConfig.addCollection("allPostTypes", (collection) =>
+    collection.getFilteredByGlob(globs)
+  );
 
   // Filters
   Object.keys(filters).forEach((filterName) => {
