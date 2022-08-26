@@ -30,12 +30,51 @@ body {
 
 main {
   margin-block: var(--size-10);
+  --flow-space: var(--size-10);
+
+  & > article * {
+    --flow-space: 1em;
+  }
 }
 
 :is(h1, h2, h3, h4, h5, h6, dt) {
   font-family: "Fraunces", var(--font-serif);
   font-weight: var(--font-weight-7);
   color: var(--neutral-text-contrast);
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  inline-size: fit-content;
+
+  & a {
+    margin-inline: 0;
+    padding-inline: 0;
+    color: var(--neutral-text-contrast);
+    text-decoration: none;
+    position: relative;
+
+    &::after {
+      transition: opacity 300ms var(--ease-2);
+      opacity: 0%;
+      content: url(https://twemoji.maxcdn.com/v/14.0.2/svg/1f517.svg);
+      display: inline-block;
+      inline-size: 1.15em;
+      block-size: 1.15em;
+      padding: 0.175em;
+      position: absolute;
+      right: -1.15em;
+      transform: translateY(-0.1em);
+    }
+
+    &:is(:hover, :focus-visible) {
+      text-decoration: underline;
+      text-underline-offset: 0.1em;
+
+      &::after {
+        opacity: 100%;
+      }
+    }
+  }
 }
 
 h1 {
@@ -180,12 +219,12 @@ mark {
   padding-inline: var(--size-1);
 }
 
-:is(ol, ul) {
+:is(ol, ul):not([class], [role="list"]) {
   padding-left: var(--size-6);
-}
 
-li {
-  padding-left: var(--size-2);
+  & li {
+    padding-left: var(--size-2);
+  }
 }
 
 :is(li, dd, figcaption) {
@@ -356,6 +395,7 @@ menu {
 @import "utilities/grid";
 @import "utilities/panel";
 @import "utilities/radius";
+@import "utilities/recursive-flow";
 @import "utilities/stroke";
 @import "utilities/typography";
 @import "utilities/visually-hidden";
@@ -378,4 +418,6 @@ menu {
 @import "blocks/skip-link";
 @import "blocks/stylized-text";
 @import "blocks/theme-switcher";
+@import "blocks/toc";
 @import "blocks/tooltip";
+@import "blocks/unfurl";

@@ -11,6 +11,7 @@ const EleventyPluginImage = require("@11ty/eleventy-img");
 const EleventyPluginNestingToc = require("eleventy-plugin-nesting-toc");
 const EleventyPluginBrokenLinks = require("eleventy-plugin-broken-links");
 const EleventyPluginFaviconsPlugin = require("eleventy-plugin-gen-favicons");
+const EleventyPluginUnfurl = require("eleventy-plugin-unfurl");
 
 const filters = require("./utils/filters.js");
 const markdown = require("./utils/markdown.js");
@@ -25,12 +26,57 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(slinkity.plugin, slinkity.defineConfig({}));
   eleventyConfig.addPlugin(EleventyPluginNestingToc, {
     wrapper: "nav",
+    wrapperClass: "[ toc ][ recursive-flow ]",
     tags: ["h2", "h3", "h4", "h5", "h6"],
+    headingText: "Table of contents",
   });
   eleventyConfig.addPlugin(EleventyPluginBrokenLinks, {
     loggingLevel: 1,
   });
   eleventyConfig.addPlugin(EleventyPluginFaviconsPlugin, {});
+  eleventyConfig.addPlugin(EleventyPluginUnfurl, {
+    template: async (props) => {
+      const imageAttributes = {
+        class: "[ image unfurl__image ]",
+        alt: "",
+        sizes: "(max-width: 768px) 100vw, 768px",
+        loading: "lazy",
+        decoding: "async",
+      };
+
+      let metadata = await EleventyPluginImage(props?.image?.url, {
+        widths: [300, 600, 1000],
+        formats: ["avif", "webp", "jpeg"],
+        outputDir: path.join("_site", "img"),
+      });
+
+      const image = EleventyPluginImage.generateHTML(
+        metadata,
+        imageAttributes,
+        { whitespaceMode: "inline" }
+      );
+
+      return props
+        ? `<article class="unfurl">${
+            props?.author
+              ? `<small class="unfurl__meta"><span class="unfurl__publisher">${props.author}</span></small>`
+              : ``
+          }${
+            props?.url || props?.title
+              ? `<h4 class="unfurl__heading${
+                  !props?.author ? ` unfurl__meta` : ``
+                }"><a class="unfurl__link" href="${props?.url}">${
+                  props?.title
+                }</a></h4>`
+              : ``
+          }${
+            props?.description
+              ? `<p class="unfurl__description">${props.description}</p>`
+              : ``
+          }${props?.image?.url ? image : ``}</article>`
+        : ``;
+    },
+  });
 
   const markdownLibrary = markdown(eleventyConfig);
   eleventyConfig.setLibrary("md", markdownLibrary);
@@ -61,18 +107,14 @@ module.exports = (eleventyConfig) => {
   });
 
   // Collections
-  eleventyConfig.addCollection("blog", (collection) =>
-    [...collection.getFilteredByGlob("./src/blog/*.md")].reverse()
-  );
-  eleventyConfig.addCollection("garden", (collection) =>
-    [...collection.getFilteredByGlob("./src/garden/*.md")].reverse()
-  );
-  eleventyConfig.addCollection("bookmarks", (collection) =>
-    [...collection.getFilteredByGlob("./src/bookmarks/*.md")].reverse()
-  );
-  eleventyConfig.addCollection("projects", (collection) =>
-    [...collection.getFilteredByGlob("./src/projects/*.md")].reverse()
-  );
+  const collections = ["blog", "garden", "bookmarks", "projects"];
+  for (const collectionName of collections) {
+    eleventyConfig.addCollection(collectionName, (collection) =>
+      [
+        ...collection.getFilteredByGlob(`./src/${collectionName}/*.md`),
+      ].reverse()
+    );
+  }
 
   // Filters
   Object.keys(filters).forEach((filterName) => {
@@ -216,13 +258,6 @@ module.exports = (eleventyConfig) => {
     }`;
     return url;
   });
-
-  // Layouts
-  eleventyConfig.addLayoutAlias("base", "base.njk");
-  eleventyConfig.addLayoutAlias(
-    "base-without-header",
-    "base-without-header.njk"
-  );
 
   // Copy/pass-through files
   eleventyConfig.addPassthroughCopy("public");

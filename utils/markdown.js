@@ -19,11 +19,9 @@ module.exports = (eleventyConfig) => {
     .use(require("markdown-it-abbr"))
     .use(require("markdown-it-emoji"))
     .use(markdownItAnchor, {
-      permalink: markdownItAnchor.permalink.ariaHidden({
-        placement: "after",
-        class: "direct-link",
-        symbol: "🔗",
-        level: [1, 2, 3, 4],
+      level: 2,
+      permalink: markdownItAnchor.permalink.headerLink({
+        safariReaderFix: true,
       }),
       slugify: eleventyConfig.getFilter("slugify"),
     })

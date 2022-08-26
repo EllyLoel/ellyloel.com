@@ -5,6 +5,9 @@ layout: base-without-header.njk
 <header>
 	<h1>{{ title }}</h1>
 </header>
+<aside class="[ flow content-width ]">
+	{{ content | toc | safe }}
+</aside>
 <article class="[ flow content-width ]">
 	{{ content | safe }}
 </article>
