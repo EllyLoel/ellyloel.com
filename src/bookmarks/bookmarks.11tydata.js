@@ -1,5 +1,5 @@
 module.exports = {
-  layout: "base",
+  layout: "post",
   permalink: "/bookmarks/{{ title | slugify }}/",
   eleventyComputed: {
     eleventyNavigation: {

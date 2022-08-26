@@ -5,8 +5,6 @@ title: Finding the perfect app
 I've tried just about every productivity app under the sun, and I still haven't found "the one".
 Currently, I'm using ClickUp, but once again I'm thinking about switching :woman_facepalming:
 
----
-
 I've put together a list of my criteria for the "perfect" app for my needs:
 
 1.  Easily and quickly capture anything (task, note, link, etc.) from most devices (MacBook, iPhone, iPad, maybe even Apple Watch?)
