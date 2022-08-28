@@ -11,20 +11,23 @@ layout: base-without-header.njk
 <article class="[ flow content-width ]">
 	{{ content | safe }}
 </article>
-<aside class="[ flow content-width ]">
-	<h2>Backlinks</h2>
-	<ul class="[ flow ]">
-		{% for link in backlinks %}
-			<li>
-				<details>
-					<summary>
-						{{ link.title }}
-					</summary>
-					{{ link.excerpt }}
-					<a href="{{ link.url }}">Read more <span class="[ visually-hidden ]">about {{ link.title }}</span>
-					</a>
-				</details>
-			</li>
-		{% endfor %}
-	</ul>
-</aside>
+{% if backlinks === [] %}
+	<aside class="[ flow content-width ]">
+		<h2>Backlinks</h2>
+		<ul class="[ flow ]">
+			{% for link in backlinks %}
+				<li>
+					<details>
+						<summary>
+							{{ link.title }}
+						</summary>
+						{{ link.excerpt }} &#8230;
+					<br/>
+						<a href="{{ link.url }}">Read more <span class="[ visually-hidden ]">about {{ link.title }}</span>
+						</a>
+					</details>
+				</li>
+			{% endfor %}
+		</ul>
+	</aside>
+{% endif %}
