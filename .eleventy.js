@@ -268,6 +268,7 @@ module.exports = (eleventyConfig) => {
 
   // Copy/pass-through files
   eleventyConfig.addPassthroughCopy("public");
+  eleventyConfig.addPassthroughCopy("_redirects");
 
   return {
     templateFormats: ["njk", "md", "11ty.js"],
