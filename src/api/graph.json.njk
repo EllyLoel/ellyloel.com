@@ -1,4 +1,8 @@
 ---
 permalink: '/public/api/graph.json'
 ---
-{{ linkGraph | dump | safe }}
+{# {{ linkGraph | dump | safe }} #}
+{
+	"nodes": {{ linkGraph.nodes | dump | safe }},
+	"links": {{ linkGraph.links | dump | safe }}
+}
