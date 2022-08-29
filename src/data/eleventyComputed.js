@@ -70,7 +70,6 @@ module.exports = {
       nodes: [],
       links: [],
     };
-
     // Search all posts for links
     for (const post of posts) {
       linkGraph.nodes.push({
@@ -82,6 +81,7 @@ module.exports = {
       linkGraph.links.push(...post.data.links);
     }
 
+    console.log(linkGraph.links);
     return linkGraph;
   },
 };
