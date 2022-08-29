@@ -66,11 +66,20 @@ module.exports = {
   linkGraph: (data) => {
     const posts = data.collections.allPostTypes;
 
-    let linkGraph = [];
+    let linkGraph = {
+      nodes: [],
+      links: [],
+    };
 
     // Search all posts for links
     for (const post of posts) {
-      linkGraph.push(...post.data.links);
+      linkGraph.nodes.push({
+        id: post.url,
+        group: post.url.split("/")[1],
+        name: post.data.title,
+        val: "1",
+      });
+      linkGraph.links.push(...post.data.links);
     }
 
     return linkGraph;
