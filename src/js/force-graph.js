@@ -1,32 +1,36 @@
 import ForceGraph from "force-graph";
 
-const graphEl = document.getElementById("graph");
+const rootStyles = getComputedStyle(document.documentElement);
 
-const color = getComputedStyle(graphEl).getPropertyValue("color");
-const borderColor = getComputedStyle(graphEl).getPropertyValue("border-color");
+const accentNodeColor = rootStyles.getPropertyValue("--accent-border");
+const accentLinkColor = rootStyles.getPropertyValue("--accent-bg-hover");
+const neutralNodeColor = rootStyles.getPropertyValue("--neutral-border");
+const neutralLinkColor = rootStyles.getPropertyValue("--neutral-bg-hover");
 
 fetch("/api/graph.json")
   .then((res) => res.json())
   .then((data) => {
-    const Graph = ForceGraph()(graphEl)
+    const Graph = ForceGraph()(document.getElementById("graph"))
       .graphData(data)
       .nodeColor((node) =>
-        location.pathname.includes(node.group) ? color : "#bbb"
+        location.pathname.includes(node.group)
+          ? accentNodeColor
+          : neutralNodeColor
       )
       .linkColor((link) =>
-        location.pathname.includes(link.source.group) ? borderColor : "#ddd"
+        location.pathname.includes(link.source.group)
+          ? accentLinkColor
+          : neutralLinkColor
       )
       .width(300)
       .height(300)
-      .nodeVal(2)
       .cooldownTicks(100)
-      .linkWidth(() => 3)
-      .linkDirectionalParticles("value")
-      .linkDirectionalParticleSpeed((d) => d.value * 0.001)
-      .linkDirectionalParticleWidth(1)
       .onNodeClick((node) => {
         location.pathname = node.id;
-      });
+      })
+      .linkWidth(() => 2)
+      .linkDirectionalParticles(2)
+      .linkDirectionalParticleSpeed(0.005);
 
     Graph.d3Force("link").strength(0.075);
     Graph.d3Force("charge").strength(-1.5);

@@ -6,24 +6,28 @@
   border-radius: var(--radius-3);
   transition: box-shadow 300ms var(--ease-1);
 
-  &:hover {
+  &:is(:hover, :focus-within) {
     --shadow-offset: var(--size-2);
     transition: box-shadow 150ms var(--ease-1);
   }
 
   &::part(base) {
-    border-width: 2px;
+    border-width: var(--border-size-2);
     border-color: var(--accent-bg-hover);
     border-radius: var(--radius-3);
+    padding: var(--padding);
+    background-color: var(--accent-bg-subtle);
   }
 
   &::part(body),
   &::part(header) {
     font-size: var(--font-size-4);
+    padding: 0;
   }
 
   &::part(header) {
     border: none;
+    margin-block-end: var(--size-2);
   }
 
   & .feed-item-card-title {

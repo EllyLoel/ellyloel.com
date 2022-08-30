@@ -1,7 +1,19 @@
 #graph {
   inline-size: fit-content;
   block-size: fit-content;
-  border: var(--border-size-3) solid var(--accent-bg-hover);
-  border-radius: var(--radius-3);
-  color: var(--accent-border-hover);
+
+  & > div {
+    border: var(--border-size-2) solid var(--accent-bg-hover);
+    border-radius: var(--radius-3);
+    --shadow-offset: var(--size-1);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0px 0px
+      var(--accent-bg-hover);
+    background-color: var(--accent-bg-subtle);
+    transition: box-shadow 300ms var(--ease-1);
+
+    &:is(:hover, :focus-within) {
+      --shadow-offset: var(--size-2);
+      transition: box-shadow 150ms var(--ease-1);
+    }
+  }
 }

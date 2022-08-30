@@ -162,9 +162,7 @@ module.exports = (eleventyConfig) => {
                 <div slot="header" class="[ feed-item-card-title ]">
                   <p><a href="${feedItem.url}">${feedItem.title}</a></p>
                 </div>
-                <p>
-                  ${markdownLibrary.render(feedItem.excerpt)}
-                </p>
+                ${markdownLibrary.render(`${feedItem.excerpt} &#8230;`)}
               `
             : `
                 <div class="[ feed-item-card-title ]">
