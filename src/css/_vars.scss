@@ -1,6 +1,6 @@
 :root {
   --black: lch(5.243% 2.967 304.065);
-  --white: lch(95.959% 2.447 304.132);
+  --white: lch(97.959% 2.447 304.132);
 
   // Accent colours https://schemist.fglt.fr?preset=1@b@41250,4125a,4125x14,4125x1e,4125x28,4125x32,4125x3c,4125x46,4125x50,4125x5a,4125x64,012230123456789a@clr,,color,bd93f9,l,amount
   --coalmine: lch(5.834% 35.337 308.938);
@@ -11,7 +11,7 @@
   --illicit-purple: lch(56.956% 75.105 306.729);
   --diva: lch(68.002% 55.309 304.53);
   --violet-heaven: lch(78.848% 35.402 302.552);
-  --grape-taffy: lch(89.495% 16.998 300.898);
+  --grape-taffy: lch(95.495% 5.998 300.898);
 
   // Neutral colours https://schemist.fglt.fr?preset=1@b@41250,4125a,4125x14,4125x1e,4125x28,4125x32,4125x3c,4125x46,4125x50,4125x5a,4125x64,012230123456789a@clr,,color,a9a4b0,l,amount
   --piano-black: lch(7.243% 2.967 304.065);
@@ -22,7 +22,7 @@
   --hatoba-pigeon: lch(59.811% 7.221 304.65);
   --tangled-web: lch(69.862% 6.334 304.498);
   --herring-silver: lch(79.912% 4.663 304.318);
-  --peekaboo: lch(89.959% 2.447 304.132);
+  --peekaboo: lch(92.959% 2.447 304.132);
 
   // Light colour scale
   color-scheme: light;
@@ -173,7 +173,7 @@
 
 [color-scheme$="moss"] {
   --black: lch(5.435% 2.411 165.037);
-  --white: lch(97.14% 2.586 165.106);
+  --white: lch(98.14% 2.586 165.106);
 
   // Accent colours https://schemist.fglt.fr?preset=1@f@41250,4125a,4125x14,4125x1e,4125x28,4125x32,4125x3c,4125x46,4125x50,4125x5a,4125x64,670,890,ab0,cd0,012230123456789abcde@clr,,color,549a7e,l,amount,inf,Info,pos,Success,wrn,Warning,neg,Error
   --nightmare: lch(7.697% 8.752 164.697);
@@ -184,7 +184,7 @@
   --martian-cerulean: lch(61.182% 29.824 165.141);
   --sereni-teal: lch(71.268% 31.45 165.123);
   --cabbage: lch(81.21% 29.959 165.087);
-  --fresh-breeze: lch(90.79% 19.395 165.005);
+  --fresh-breeze: lch(96.79% 4.395 165.005);
 
   // Neutral colours https://schemist.fglt.fr?preset=1@f@41250,4125a,4125x14,4125x1e,4125x28,4125x32,4125x3c,4125x46,4125x50,4125x5a,4125x64,670,890,ab0,cd0,012230123456789abcde@clr,,color,818f88,l,amount,inf,Info,pos,Success,wrn,Warning,neg,Error
   --matt-black: lch(7.435% 2.411 165.037);
@@ -195,7 +195,7 @@
   --mother-earth: lch(60.305% 6.546 165.142);
   --pigeon: lch(70.307% 6.045 165.133);
   --foil: lch(80.249% 4.725 165.121);
-  --serene: lch(90.14% 2.586 165.106);
+  --serene: lch(92.14% 2.586 165.106);
 
   --info: lch(57.208% 31.234 249.436);
   --success: lch(58.456% 32.938 148.189);
