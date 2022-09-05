@@ -60,7 +60,7 @@ module.exports = (eleventyConfig) => {
         tokens[i].hidden = true;
       }
       if (tokens[i].type === "link_open") {
-        caption += `<a href="${tokens[i].attrs[0]}">`;
+        caption += `<a href="${tokens[i].attrs[0][1]}">`;
         tokens[i].hidden = true;
       }
       if (tokens[i].type === "link_close") {
