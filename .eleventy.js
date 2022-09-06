@@ -110,7 +110,7 @@ module.exports = (eleventyConfig) => {
   });
 
   // Collections
-  const collections = ["blog", "garden", "bookmarks", "projects"];
+  const collections = ["blog", "garden", "bookmarks", "projects", "til"];
   const globs = [];
   for (const collectionName of collections) {
     const glob = `./src/${collectionName}/*.md`;
