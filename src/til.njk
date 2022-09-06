@@ -1,0 +1,20 @@
+---
+layout: base
+title: TIL
+eleventyNavigation:
+  key: TIL
+  order: 9
+---
+
+<div id="graph"></div>
+
+{% set til = collections.til %}
+<ul class="[ flow ]">
+  {%- for post in til %}
+    {% feedItem
+    title = post.data.title,
+    url = post.url,
+    excerpt = post.data.page.excerpt
+ %}
+  {%- endfor %}
+</ul>
