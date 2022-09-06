@@ -2,7 +2,7 @@
   inline-size: fit-content;
   block-size: fit-content;
 
-  & > div {
+  & > svg {
     border: var(--border-size-2) solid var(--accent-bg-hover);
     border-radius: var(--radius-3);
     --shadow-offset: var(--size-1);
