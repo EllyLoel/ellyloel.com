@@ -9,6 +9,10 @@ eleventyNavigation:
 An on & off log of what I'm currently doing/interested in. Slower paced than a twitter feed but less permanent then an [[about]] page.
 [Now pages](https://nownownow.com/about) are becoming more common, you should make one for yourself!
 
+## September, 2022
+
+Been learning a lot about accessibility lately and how sadly a lot of the more complex accessibility focused native HTML elements aren't yet very accessible.
+
 ## August, 2022
 
 I'm officially an AWS certified cloud practitioner, what ever that means :joy: 
