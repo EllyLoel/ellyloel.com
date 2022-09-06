@@ -5376,10 +5376,10 @@ stylehacks@^5.1.0:
     browserslist "^4.16.6"
     postcss-selector-parser "^6.0.4"
 
-stylized-text@1.0.10:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/stylized-text/-/stylized-text-1.0.10.tgz#b4d64a8c13be37d9925fac5cb339babf119d2597"
-  integrity sha512-N9fmPUvuL8yahQRF+lDBJsDlshT+XNzhwSQIBjyBzYu+DlgY6KnVCjdtOwtxTrXfQUmcEGsbJnPkAwi+zb4gIw==
+stylized-text@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/stylized-text/-/stylized-text-4.1.0.tgz#0c1097d99c1fa4af30d2caad2d5edadd7a2875cd"
+  integrity sha512-Vs/74ombLaXxnkRFK/iFiGKTifT530a8v8pmTc1+L6jRrHW2QNTOipNBcuXOlv1fjUqmy/E4eg8xOYoGRu0thQ==
   dependencies:
     "@lit-labs/react" "^1.0.6"
     lit "^2.0.2"

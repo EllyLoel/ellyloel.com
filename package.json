@@ -32,7 +32,7 @@
     "force-graph": "^1.42.13",
     "open-props": "^1.4.1",
     "postcss-preset-env": "^7.7.2",
-    "stylized-text": "1.0.10",
+    "stylized-text": "4.1.0",
     "tslib": "^2.4.0",
     "twemoji": "^14.0.2"
   },
