@@ -4,9 +4,19 @@ layout: base-without-header.njk
 
 <header>
 	<h1>{{ title }}</h1>
+	<p>
+		<sl-icon library="fa" name="far-calendar-plus" label="Last modified"></sl-icon>
+		<time class="[ date ]" datetime="{{ page.date | dateToISO }}">{{ page.date | dateToLocaleDateFull }}</time>
+	</p>
 </header>
-<aside class="[ flow content-width ]">
-	{{ content | toc | safe }}
+<aside class="[ toc-container ][ flow content-width ]">
+	<details>
+		<summary class="[ flex ]">
+			<sl-icon library="fa" name="fas-play" label=""></sl-icon>
+			<h2>Table of contents</h2>
+		</summary>
+		{{ content | toc | safe }}
+	</details>
 </aside>
 <article class="[ flow content-width ]">
 	{{ content | safe }}
@@ -22,7 +32,7 @@ layout: base-without-header.njk
 							{{ link.title }}
 						</summary>
 						{{ link.excerpt }} &#8230;
-					<br/>
+				<br/>
 						<a href="{{ link.url }}">Read more <span class="[ visually-hidden ]">about {{ link.title }}</span>
 						</a>
 					</details>

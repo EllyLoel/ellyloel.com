@@ -1,5 +1,6 @@
 module.exports = {
   layout: "post",
+  date: "git Last Modified",
   permalink: "/til/{{ title | slugify }}/",
   eleventyComputed: {
     eleventyNavigation: {

@@ -393,6 +393,7 @@ menu {
 @import "utilities/flex";
 @import "utilities/flow";
 @import "utilities/grid";
+@import "utilities/inline";
 @import "utilities/panel";
 @import "utilities/radius";
 @import "utilities/recursive-flow";
@@ -404,6 +405,7 @@ menu {
 //// Blocks
 @import "blocks/button";
 @import "blocks/card";
+@import "blocks/date";
 @import "blocks/emoji";
 @import "blocks/feed-block";
 @import "blocks/footer";

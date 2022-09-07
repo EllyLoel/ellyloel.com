@@ -6,6 +6,12 @@ const slugify = require("slugify");
 const wikilinkRegEx = /\[\[\s*([^\[\]\|\n\r]+)(\|[^\[\]\|\n\r]+)?\s*\]\]/g;
 
 module.exports = {
+  dateToLocaleDateFull: function (date) {
+    return DateTime.fromJSDate(date, { zone: "utc" }).toLocaleString(
+      DateTime.DATE_FULL
+    );
+  },
+
   dateToFormat: function (date, format) {
     return DateTime.fromJSDate(date, { zone: "utc" }).toFormat(String(format));
   },

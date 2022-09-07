@@ -28,7 +28,6 @@ module.exports = (eleventyConfig) => {
     wrapper: "nav",
     wrapperClass: "[ toc ][ recursive-flow ]",
     tags: ["h2", "h3", "h4", "h5", "h6"],
-    headingText: "Table of contents",
   });
   eleventyConfig.addPlugin(EleventyPluginBrokenLinks, {
     loggingLevel: 1,
