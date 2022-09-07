@@ -41,3 +41,7 @@ layout: base-without-header.njk
 		</ul>
 	</aside>
 {% endif %}
+<footer>
+	{%- set absolutePostUrl = post.url | absoluteUrl(site.url) %}
+	<a href="https://twitter.com/intent/tweet?url={{ absolutePostUrl }}&text={{ title }} by @ellyloel">Twitter</a>
+</footer>
