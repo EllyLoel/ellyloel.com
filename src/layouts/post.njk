@@ -69,3 +69,5 @@ layout: base-without-header.njk
 		{%- endif -%}
 	</div>
 {%- endif -%}
+{%- set currentPostMentionCount = webmentions | webmentionCountForPage -%}
+{%- set currentPostMentions = webmentions | webmentionsForPage -%}
