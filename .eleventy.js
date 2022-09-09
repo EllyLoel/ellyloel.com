@@ -79,7 +79,7 @@ module.exports = (eleventyConfig) => {
   });
   eleventyConfig.addPlugin(EleventyPluginWebmentions, {
     domain: "ellyloel.com",
-    token: "ABC123XYZ987",
+    token: process.env.WEBMENTION_IO_API_KEY,
   });
 
   const markdownLibrary = markdown(eleventyConfig);
