@@ -21,6 +21,10 @@ overlayTag = tag %}
 <meta name="author" content="{{ site.author.name }}">
 <meta name="generator" content="{{ eleventy.generator }}">
 
+{# Style #}
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="hsl(269deg 75% 58%)">
+
 {# Open Graph #}
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:title" content="{{ ogTitle }}">
@@ -33,7 +37,7 @@ overlayTag = tag %}
 	<meta property="og:image:alt" content="{{ text }}">
 {%- endif -%}
 
-{# icons #}
+{# Icons #}
 <link rel="manifest" href="{{ '/manifest.webmanifest' | url }}">
 {% favicons './public/assets/img/icons/favicon.svg',
 appleIconBgColor = '#00000000',
@@ -46,5 +50,5 @@ generateManifest = false %}
 
 {# Webmentions #}
 <link href="https://github.com/ellyloel" rel="me">
-<link rel="webmention" href="https://webmention.io/www.ellyloel.com/webmention"/>
-<link rel="pingback" href="https://webmention.io/www.ellyloel.com/xmlrpc"/>
+<link rel="webmention" href="https://webmention.io/{{ site.url }}webmention"/>
+<link rel="pingback" href="https://webmention.io/{{ site.url }}xmlrpc"/>
