@@ -9,9 +9,10 @@ const EleventyPluginSyntaxhighlight = require("@11ty/eleventy-plugin-syntaxhighl
 // const EleventyPluginInclusiveLang = require("@11ty/eleventy-plugin-inclusive-language");
 const EleventyPluginImage = require("@11ty/eleventy-img");
 const EleventyPluginNestingToc = require("eleventy-plugin-nesting-toc");
-const EleventyPluginBrokenLinks = require("eleventy-plugin-broken-links");
+// const EleventyPluginBrokenLinks = require("eleventy-plugin-broken-links");
 const EleventyPluginFaviconsPlugin = require("eleventy-plugin-gen-favicons");
 const EleventyPluginUnfurl = require("eleventy-plugin-unfurl");
+const EleventyPluginWebmentions = require("eleventy-plugin-webmentions");
 
 const filters = require("./utils/filters.js");
 const markdown = require("./utils/markdown.js");
@@ -29,9 +30,9 @@ module.exports = (eleventyConfig) => {
     wrapperClass: "[ toc ][ recursive-flow ]",
     tags: ["h2", "h3", "h4", "h5", "h6"],
   });
-  eleventyConfig.addPlugin(EleventyPluginBrokenLinks, {
-    loggingLevel: 1,
-  });
+  // eleventyConfig.addPlugin(EleventyPluginBrokenLinks, {
+  //   loggingLevel: 1,
+  // });
   eleventyConfig.addPlugin(EleventyPluginFaviconsPlugin, {});
   eleventyConfig.addPlugin(EleventyPluginUnfurl, {
     template: async (props) => {
@@ -75,6 +76,10 @@ module.exports = (eleventyConfig) => {
           }${props?.image?.url ? image : ``}</article>`
         : ``;
     },
+  });
+  eleventyConfig.addPlugin(EleventyPluginWebmentions, {
+    domain: "ellyloel.com",
+    token: "ABC123XYZ987",
   });
 
   const markdownLibrary = markdown(eleventyConfig);
