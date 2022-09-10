@@ -8,7 +8,7 @@ eleventyNavigation:
 
 <div id="graph"></div>
 
-{% set blog = collections.blog %}
+{% set blog = collections.blog | reverse %}
 <ul class="[ flow ]">
   {%- for post in blog %}
     {% feedItem

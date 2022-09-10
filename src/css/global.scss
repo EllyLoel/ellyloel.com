@@ -384,7 +384,13 @@ menu {
 
 // FOUCE https://www.abeautifulsite.net/posts/flash-of-undefined-custom-elements/
 :not(:defined) {
-  visibility: hidden;
+  opacity: 0;
+  transition: opacity 500ms var(--ease-2);
+}
+
+:defined {
+  opacity: 1;
+  transition: opacity 500ms var(--ease-2);
 }
 
 //// Utilities
@@ -422,3 +428,4 @@ menu {
 @import "blocks/toc";
 @import "blocks/tooltip";
 @import "blocks/unfurl";
+@import "blocks/webmentions";

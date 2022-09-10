@@ -12,17 +12,18 @@ description: Hi, I’m Elly. I like creating delightful, magical, and accessible
 			<span>I like creating <span class="stroke" style="--color: var(--accent-solid);">delightful</span>, <span class="stroke" style="--color: var(--accent-solid);">magical</span>, and <span class="stroke" style="--color: var(--accent-solid);">accessible</span> art with code<span style="color: var(--accent-solid);">.</span></span>
 		</h1>
 
-		<div>
-			<canvas id="canvas3d" class="[ lego ]">
-				<p>A 3D modeled Lego Minifigure designed to look like myself.</p>
-			</canvas>
+		<div id="lego" class="[ lego-container ]">
+			{%- image
+		"./public/assets/img/LegoModel.png",
+		"A 3D modeled Lego Minifigure designed to look like myself."
+ 		-%}
 		</div>
 	</header>
 
 	{% feedBlock
 	title = "Articles",
 	url = "/blog/" %}
-	{% set blog = collections.blog | sliceCollection(3) %}
+	{% set blog = collections.blog | reverse | sliceCollection(3) %}
 	{%- for post in blog %}
 		{% feedItem
 		title = post.data.title,
@@ -35,7 +36,7 @@ description: Hi, I’m Elly. I like creating delightful, magical, and accessible
 	{% feedBlock
 	title = "Projects",
 	url = "/projects/" %}
-	{% set projects = collections.projects | sliceCollection(3) %}
+	{% set projects = collections.projects | reverse | sliceCollection(3) %}
 	{%- for project in projects %}
 		{% feedItem
 		title = project.data.title,
@@ -48,7 +49,7 @@ description: Hi, I’m Elly. I like creating delightful, magical, and accessible
 	{% feedBlock
 	title = "Notes",
 	url = "/garden/" %}
-	{% set notes = collections.garden | sliceCollection(3) %}
+	{% set notes = collections.garden | reverse | sliceCollection(3) %}
 	{%- for note in notes %}
 		{% feedItem
 		title = note.data.title,
@@ -61,7 +62,7 @@ description: Hi, I’m Elly. I like creating delightful, magical, and accessible
 	{% feedBlock
 	title = "Bookmarks",
 	url = "/bookmarks/" %}
-	{% set bookmarks = collections.bookmarks | sliceCollection(3) %}
+	{% set bookmarks = collections.bookmarks | reverse | sliceCollection(3) %}
 	{%- for bookmark in bookmarks %}
 		{% feedItem
 		title = bookmark.data.title,

@@ -10,7 +10,7 @@ eleventyNavigation:
 
 <div id="graph"></div>
 
-{% set til = collections.til %}
+{% set til = collections.til | reverse %}
 <ul class="[ flow ]">
   {%- for post in til %}
     {% feedItem
