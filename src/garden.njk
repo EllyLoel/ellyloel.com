@@ -10,7 +10,7 @@ eleventyNavigation:
 
 <div id="graph"></div>
 
-{% set notes = collections.garden %}
+{% set notes = collections.garden | reverse %}
 <ul class="[ flow ]">
   {%- for note in notes %}
     {% feedItem
