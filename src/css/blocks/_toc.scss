@@ -1,7 +1,10 @@
 .toc {
   --flow-space: 0.5em;
+  margin-block-start: var(--size-3);
+  margin-block-end: var(--size-2);
 
   & > ol {
+    padding-left: var(--size-5);
     list-style-type: disc;
 
     & ol {

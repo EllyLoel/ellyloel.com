@@ -129,7 +129,7 @@ pre {
 }
 
 :not(pre) > code {
-  background: var(--neutral-bg-subtle);
+  background-color: var(--neutral-bg-subtle);
   border-radius: var(--radius-2);
   padding: var(--size-1) var(--size-2);
 }
@@ -283,14 +283,14 @@ blockquote {
 // Details
 
 summary {
-  background: var(--neutral-bg);
+  background-color: var(--neutral-bg);
   border-radius: var(--radius-2);
   margin: calc(var(--size-2) * -1) calc(var(--size-3) * -1);
   padding: var(--size-2) var(--size-3);
 }
 
 details {
-  background: var(--neutral-bg-subtle);
+  background-color: var(--neutral-bg-subtle);
   border-radius: var(--radius-2);
   padding-block: var(--size-2);
   padding-inline: var(--size-3);
@@ -309,12 +309,13 @@ fieldset {
   border-radius: var(--radius-2);
 }
 
-del {
-  background: var(--error);
+del,
+s {
+  color: var(--error);
 }
 
 ins {
-  background: var(--success);
+  color: var(--success);
 }
 
 abbr {
@@ -373,7 +374,7 @@ menu {
 // High contrast selection style
 ::selection {
   color: var(--accent-bg);
-  background: var(--accent-text);
+  background-color: var(--accent-text);
 }
 
 // If an element is [hidden] it needs to be max priority
