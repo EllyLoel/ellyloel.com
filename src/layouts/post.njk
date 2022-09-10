@@ -70,8 +70,5 @@ layout: base-without-header.njk
 			{%- endif -%}
 		</div>
 	{%- endif -%}
-	{%- set currentPostMentionCount = webmentions | webmentionCountForPage -%}
-	{%- set currentPostMentions = webmentions | webmentionsForPage -%}
-	<h2>{{ currentPostMentionCount }} Responses</h2>
-	{{ currentPostMentions | safe }}
+	
 </footer>
