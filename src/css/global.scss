@@ -32,7 +32,7 @@ main {
   margin-block: var(--size-10);
   --flow-space: var(--size-10);
 
-  & > * * {
+  & > * :where(*) {
     --flow-space: 1em;
   }
 }

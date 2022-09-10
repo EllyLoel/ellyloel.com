@@ -42,32 +42,32 @@ layout: base-without-header.njk
 		</ul>
 	</aside>
 {%- endif -%}
-<footer>
+<footer class="[ flow flow-space-setter ]" style="--flow-space-setter: var(--size-8);">
 	<p>
 		Share on <a href='https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url.substring(1) }}&text="{{ title }}" by @ellyloel'>Twitter</a> or <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url.substring(1) }}">LinkedIn</a>.
 	</p>
+	{%- set previousPost = collections.allPostTypes | getPreviousCollectionItem -%}
+	{%- set nextPost = collections.allPostTypes | getNextCollectionItem -%}
+	{%- if previousPost or nextPost -%}
+		<div class="[ flex gap-5 ]">
+			{%- if previousPost -%}
+				<sl-tooltip content="{{ previousPost.data.title }}">
+					<a href="{{ previousPost.url }}" class="[ text-decoration-none move-link-styling-to-child flex align-center gap-1 ]">
+						<sl-icon class="[ emoji ]" library="fa" name="fas-angle-left" label=""></sl-icon>
+						<span>Previous Post</span>
+					</a>
+				</sl-tooltip>
+			{%- endif -%}
+			{%- if nextPost -%}
+				<sl-tooltip content="{{ nextPost.data.title }}">
+					<a href="{{ nextPost.url }}" class="[ text-decoration-none move-link-styling-to-child flex align-center gap-1 ]">
+						<span>Next Post</span>
+						<sl-icon class="[ emoji ]" library="fa" name="fas-angle-right" label=""></sl-icon>
+					</a>
+				</sl-tooltip>
+			{%- endif -%}
+		</div>
+	{%- endif -%}
+	{%- set currentPostMentionCount = webmentions | webmentionCountForPage -%}
+	{%- set currentPostMentions = webmentions | webmentionsForPage -%}
 </footer>
-{%- set previousPost = collections.allPostTypes | getPreviousCollectionItem -%}
-{%- set nextPost = collections.allPostTypes | getNextCollectionItem -%}
-{%- if previousPost or nextPost -%}
-	<div class="[ flex gap-5 ]">
-		{%- if previousPost -%}
-			<sl-tooltip content="{{ previousPost.data.title }}">
-				<a href="{{ previousPost.url }}" class="[ text-decoration-none move-link-styling-to-child flex align-center gap-1 ]">
-					<sl-icon class="[ emoji ]" library="fa" name="fas-angle-left" label=""></sl-icon>
-					<span>Previous Post</span>
-				</a>
-			</sl-tooltip>
-		{%- endif -%}
-		{%- if nextPost -%}
-			<sl-tooltip content="{{ nextPost.data.title }}">
-				<a href="{{ nextPost.url }}" class="[ text-decoration-none move-link-styling-to-child flex align-center gap-1 ]">
-					<span>Next Post</span>
-					<sl-icon class="[ emoji ]" library="fa" name="fas-angle-right" label=""></sl-icon>
-				</a>
-			</sl-tooltip>
-		{%- endif -%}
-	</div>
-{%- endif -%}
-{%- set currentPostMentionCount = webmentions | webmentionCountForPage -%}
-{%- set currentPostMentions = webmentions | webmentionsForPage -%}
