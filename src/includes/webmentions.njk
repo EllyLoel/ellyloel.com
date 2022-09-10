@@ -2,7 +2,7 @@
 <article id="webmentions" class="webmentions">
 	<header class="webmentions__header">
 		<h2>
-			{{ postMentions.total }} Response{%- if (postMentions.total !== 1) %}s{% endif %}
+			{{ postMentions.total }} Response{%- if (postMentions.total !== 1) -%}s{%- endif -%}
 		</h2>
 		<p>
 			<form action="https://webmention.io/{{ site.domain }}/webmention" method="post" class="form-webmention">
@@ -30,37 +30,40 @@
 			<a href="https://brid.gy" target="_blank" rel="external noopener noreferrer">Bridgy</a>
 		</p>
 	</header>
-	{% ifAsync postMentions.likes.length %}
+	{%- ifAsync postMentions.likes.length -%}
 	<h3>
-		{% if postMentions.likes.length === 1 %}
+		{%- if postMentions.likes.length === 1 -%}
 			{{ postMentions.likes.length }} Like
-          {% elif (postMentions.likes.length > 1) -%}
-			{{ postMentions.likes.length }} Likes{% endif -%}
+		{%- elif (postMentions.likes.length > 1) -%}
+			{{ postMentions.likes.length }} Likes
+		{%- endif -%}
 	</h3>
-	{% set facepileMentions = postMentions.likes %}
-	{% include "webmentions-facepile.njk" %}
-{% endif %}
-{% ifAsync postMentions.reposts.length %}
+	{%- set facepileMentions = postMentions.likes -%}
+	{%- include "webmentions-facepile.njk" -%}
+{%- endif -%}
+{%- ifAsync postMentions.reposts.length -%}
 <h3>
-	{% if postMentions.reposts.length === 1 %}
+	{%- if postMentions.reposts.length === 1 -%}
 		{{ postMentions.reposts.length }} Repost
-        {% elif (postMentions.reposts.length > 1) -%}
-		{{ postMentions.reposts.length }} Reposts{% endif -%}
+			{%- elif (postMentions.reposts.length > 1) -%}
+		{{ postMentions.reposts.length }} Reposts
+			{%- endif -%}
 </h3>
-{% set facepileMentions = postMentions.reposts %}
-{% include "webmentions-facepile.njk" %}
-{% endif %}
-{% if postMentions.comments.length %}
+{%- set facepileMentions = postMentions.reposts -%}
+{%- include "webmentions-facepile.njk" -%}
+{%- endif -%}
+{%- if postMentions.comments.length -%}
 <h3>
-	{% if postMentions.comments.length === 1 %}
+	{%- if postMentions.comments.length === 1 -%}
 		{{ postMentions.comments.length }} Comment
-        {% elif (postMentions.comments.length > 1) -%}
-		{{ postMentions.comments.length }} Comments{% endif -%}
+			{%- elif (postMentions.comments.length > 1) -%}
+		{{ postMentions.comments.length }} Comments
+			{%- endif -%}
 </h3>
 <ol class="webmentions__list">
-	{% asyncEach mention in postMentions.comments %}
-	{% include "webmention.njk" %}
-	{% endeach %}
+	{%- asyncEach mention in postMentions.comments -%}
+	{%- include "webmention.njk" -%}
+	{%- endeach -%}
 </ol>
-{% endif %}
+{%- endif -%}
 </article>
