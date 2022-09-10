@@ -1,0 +1,66 @@
+{%- set postMentions = webmentions | webmentionsForPage -%}
+<article id="webmentions" class="webmentions">
+	<header class="webmentions__header">
+		<h2>
+			{{ postMentions.total }} Response{%- if (postMentions.total !== 1) %}s{% endif %}
+		</h2>
+		<p>
+			<form action="https://webmention.io/{{ site.domain }}/webmention" method="post" class="form-webmention">
+				<label for="form-webmention-source" class="webmentions__form-label">
+					Have you published your own post mentioning this one? Let me know the URL:
+				</label>
+				<div class="webmentions__field-wrapper">
+					<input
+						id="form-webmention-source"
+						type="url"
+						name="source"
+						placeholder="https://example.com"
+						required="required"
+						class="webmentions__form-field">
+					<input type="hidden" name="target" value="{{ site.url }}{{ page.url }}">
+					<input type="submit" value="Send" class="webmentions__form-submit"></div>
+			</form>
+		</p>
+		<p>
+			Powered by
+			<a href="https://indieweb.org/Webmention" target="_blank" rel="external noopener noreferrer">Webmentions</a>
+			via
+			<a href="https://webmention.io" target="_blank" rel="external noopener noreferrer">Webmention.io</a>
+			and
+			<a href="https://brid.gy" target="_blank" rel="external noopener noreferrer">Bridgy</a>
+		</p>
+	</header>
+	{% ifAsync postMentions.likes.length %}
+	<h3>
+		{% if postMentions.likes.length === 1 %}
+			{{ postMentions.likes.length }} Like
+          {% elif (postMentions.likes.length > 1) -%}
+			{{ postMentions.likes.length }} Likes{% endif -%}
+	</h3>
+	{% set facepileMentions = postMentions.likes %}
+	{% include "webmentions-facepile.njk" %}
+{% endif %}
+{% ifAsync postMentions.reposts.length %}
+<h3>
+	{% if postMentions.reposts.length === 1 %}
+		{{ postMentions.reposts.length }} Repost
+        {% elif (postMentions.reposts.length > 1) -%}
+		{{ postMentions.reposts.length }} Reposts{% endif -%}
+</h3>
+{% set facepileMentions = postMentions.reposts %}
+{% include "webmentions-facepile.njk" %}
+{% endif %}
+{% if postMentions.comments.length %}
+<h3>
+	{% if postMentions.comments.length === 1 %}
+		{{ postMentions.comments.length }} Comment
+        {% elif (postMentions.comments.length > 1) -%}
+		{{ postMentions.comments.length }} Comments{% endif -%}
+</h3>
+<ol class="webmentions__list">
+	{% asyncEach mention in postMentions.comments %}
+	{% include "webmention.njk" %}
+	{% endeach %}
+</ol>
+{% endif %}
+</article>
