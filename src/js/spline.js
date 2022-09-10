@@ -6,4 +6,7 @@ spline
   .load("https://prod.spline.design/uA4Ruk690NPZEunt/scene.splinecode")
   .then(() => {
     spline.setZoom(0.6);
+    setTimeout(() => {
+      canvas.style.opacity = 1;
+    }, 1000);
   });

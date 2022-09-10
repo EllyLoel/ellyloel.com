@@ -3,4 +3,6 @@
   width: 300px !important;
   object-fit: cover;
   transform: scale(1.5);
+  opacity: 0;
+  transition: opacity 1s var(--ease-1);
 }
