@@ -10,15 +10,17 @@ layout: base-without-header.njk
 		<time class="[ date ]" datetime="{{ page.date | dateToISO }}">{{ page.date | dateToLocaleDateFull }}</time>
 	</p>
 </header>
-<aside class="[ toc-container ][ flow content-width ]">
-	<details>
-		<summary class="[ flex ]">
-			<sl-icon class="[ emoji ]" library="fa" name="fas-play" label=""></sl-icon>
-			<h2>Table of contents</h2>
-		</summary>
-		{{ content | toc | safe }}
-	</details>
-</aside>
+{%- if content | toc !== "" -%}
+	<aside class="[ toc-container ][ flow content-width ]">
+		<details>
+			<summary class="[ flex ]">
+				<sl-icon class="[ emoji ]" library="fa" name="fas-play" label=""></sl-icon>
+				<h2>Table of contents</h2>
+			</summary>
+			{{ content | toc | safe }}
+		</details>
+	</aside>
+{%- endif -%}
 <article class="[ flow content-width ]">
 	{{ content | safe }}
 </article>
