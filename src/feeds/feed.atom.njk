@@ -8,13 +8,13 @@
 	<subtitle>{{ site.description }}</subtitle>
 	<link href="{{ '/feed.atom' | absoluteUrl(site.url) }}" rel="self"/>
 	<link href="{{ site.url }}"/>
-	<updated>{{ collections.all | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+	<updated>{{ collections.allPostTypes | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
 	<id>{{ site.url }}</id>
 	<author>
 		<name>{{ site.author.name }}</name>
 		<email>{{ site.author.email }}</email>
 	</author>
-	{%- for post in collections.all | reverse %}
+	{%- for post in collections.allPostTypes | reverse %}
 		{%- set absolutePostUrl = post.url | absoluteUrl(site.url) %}
 		<entry>
 			<title>{{ post.data.title }}</title>
