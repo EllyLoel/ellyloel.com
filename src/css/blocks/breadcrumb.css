@@ -1,0 +1,35 @@
+sl-breadcrumb-item {
+  &::part(label) {
+    color: var(--link);
+    outline-offset: 0px;
+    transition-property: color;
+    transition-duration: 145ms;
+    transition-timing-function: var(--ease-2);
+
+    &:hover {
+      color: var(--link-visited);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--link);
+      outline-offset: var(--size-1);
+    }
+
+    @media (--motionOK) {
+      transition-property: color, outline-offset;
+    }
+  }
+
+  &:not([data-state="active"])::part(label):not(:hover, :focus-visible) {
+    text-decoration: underline;
+  }
+
+  &[data-state="active"]::part(label) {
+    font-weight: var(--font-weight-bold, 622);
+  }
+
+  &::part(prefix),
+  &::part(separator) {
+    color: var(--accent-text);
+  }
+}

@@ -37,8 +37,8 @@
 
   & a[href="/"] {
     flex-shrink: 0;
-    margin-right: auto; // Prevents nav bunching up to the logo
-    margin-inline-end: auto; // Prevents nav bunching up to the logo
+    margin-right: auto; /* Prevents nav bunching up to the logo */
+    margin-inline-end: auto; /* Prevents nav bunching up to the logo */
 
     & > .logo {
       font-size: var(--font-size-5);

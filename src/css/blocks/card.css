@@ -37,11 +37,4 @@
       font-size: inherit;
     }
   }
-  // Rip all this shit shitty shit code when `:has()` is well supported
-  // Wait I don't think this even works:
-  // @supports selector(a:has(> b)) {
-  //   &:is(::part(header), ::part(body)):has(> .feed-item-card-title) {
-  //     font-size: var(--font-size-5);
-  //   }
-  // }
 }
