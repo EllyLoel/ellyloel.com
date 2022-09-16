@@ -41,7 +41,7 @@
       display: flex;
       gap: var(--size-3);
       block-size: fit-content;
-      transform: translateX(-8px); // optical alignment
+      transform: translateX(-8px); /* optical alignment */
     }
 
     & .gh-edit {

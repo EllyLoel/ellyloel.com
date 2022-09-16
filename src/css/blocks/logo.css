@@ -1,6 +1,6 @@
 :is(.logo, .logo-inline) {
   font-family: "Nanum Pen Script", cursive;
-  font-size: 1.5em; // scales with the font size around it
+  font-size: 1.5em; /* scales with the font size around it */
 }
 
 .logo {
@@ -9,7 +9,7 @@
 
 .logo-inline {
   display: inline-block;
-  transform: translateY(0.1em); // optical alignment
+  transform: translateY(0.1em); /* optical alignment */
 }
 
 .logo-link {
@@ -18,6 +18,6 @@
   &::part(base) {
     height: calc(1em / 2.8181818182);
     box-sizing: content-box;
-    transform: translateY(0.025em); // optical alignment
+    transform: translateY(0.025em); /* optical alignment */
   }
 }

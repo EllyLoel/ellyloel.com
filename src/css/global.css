@@ -1,15 +1,3 @@
-//// Reset
-@use "/@root/node_modules/cssremedy/css/remedy.css";
-@use "./reset.scss";
-
-//// Fonts
-@use "./fonts.scss";
-
-//// Variables
-@use "./vars.scss";
-@import "open-props/media";
-
-//// Global styles
 html {
   --link: var(--accent-solid);
   --link-visited: var(--accent-text);
@@ -56,7 +44,7 @@ main {
     &::after {
       transition: opacity 300ms var(--ease-2);
       opacity: 0%;
-      content: url(https://twemoji.maxcdn.com/v/14.0.2/svg/1f517.svg);
+      content: url("https://twemoji.maxcdn.com/v/14.0.2/svg/1f517.svg");
       display: inline-block;
       inline-size: 1.15em;
       block-size: 1.15em;
@@ -113,7 +101,7 @@ em {
   color: var(--accent-text);
 }
 
-// Code
+/* Code
 
 code,
 kbd,
@@ -142,7 +130,7 @@ var {
   padding: var(--size-1) var(--size-2);
 }
 
-// Links
+/* Links */
 
 :where(a) {
   margin-inline: calc(var(--size-1) * -1);
@@ -184,7 +172,7 @@ abbr {
   text-underline-offset: 1px;
 }
 
-// Form inputs
+/* Form inputs */
 
 :is(input, textarea) {
   padding-block: var(--size-1);
@@ -212,7 +200,7 @@ select {
   inline-size: var(--size-3);
 }
 
-// Typography
+/* Typography */
 
 mark {
   border-radius: var(--radius-2);
@@ -250,7 +238,7 @@ hr {
   margin-block: var(--size-fluid-5);
 }
 
-// Figures
+/* Figures */
 
 figure {
   display: grid;
@@ -262,7 +250,7 @@ figure > figcaption {
   font-size: var(--font-size-1);
 }
 
-// Blockquote
+/* Blockquote */
 
 :is(blockquote, :not(blockquote) > cite) {
   border-inline-start-width: var(--border-size-3);
@@ -280,7 +268,7 @@ blockquote {
   padding-inline-start: var(--size-2);
 }
 
-// Details
+/* Details */
 
 summary {
   background-color: var(--neutral-bg);
@@ -302,7 +290,7 @@ details[open] > summary {
   margin-bottom: var(--size-2);
 }
 
-// Misc
+/* Misc */
 
 fieldset {
   border: var(--border-size-1) solid var(--neutral-bg-hover);
@@ -322,7 +310,7 @@ abbr {
   text-decoration-color: var(--info);
 }
 
-// Dialog
+/* Dialog */
 
 dialog {
   background-color: var(--neutral-base);
@@ -346,7 +334,7 @@ menu {
   padding-inline-start: 0;
 }
 
-// General interactive states
+/* General interactive states */
 
 :focus-visible {
   outline-color: var(--link);
@@ -371,18 +359,18 @@ menu {
   scroll-margin-top: 2ex;
 }
 
-// High contrast selection style
+/* High contrast selection style */
 ::selection {
   color: var(--accent-bg);
   background-color: var(--accent-text);
 }
 
-// If an element is [hidden] it needs to be max priority
+/* If an element is [hidden] it needs to be max priority */
 [hidden] {
   display: none !important;
 }
 
-// FOUCE https://www.abeautifulsite.net/posts/flash-of-undefined-custom-elements/
+/* FOUCE https:/*www.abeautifulsite.net/posts/flash-of-undefined-custom-elements/ */
 :not(:defined) {
   opacity: 0;
   transition: opacity 500ms var(--ease-2);
@@ -392,40 +380,3 @@ menu {
   opacity: 1;
   transition: opacity 500ms var(--ease-2);
 }
-
-//// Utilities
-@import "utilities/content-width";
-@import "utilities/detitlify";
-@import "utilities/layout";
-@import "utilities/flow";
-@import "utilities/panel";
-@import "utilities/radius";
-@import "utilities/recursive-flow";
-@import "utilities/stroke";
-@import "utilities/typography";
-@import "utilities/visually-hidden";
-@import "utilities/wrapper";
-
-//// Blocks
-@import "blocks/button";
-@import "blocks/card";
-@import "blocks/date";
-@import "blocks/emoji";
-@import "blocks/feed-block";
-@import "blocks/footer";
-@import "blocks/graph";
-@import "blocks/hero";
-@import "blocks/home";
-@import "blocks/icon-button";
-@import "blocks/lego";
-@import "blocks/logo";
-@import "blocks/nav";
-@import "blocks/newsletter";
-@import "blocks/site-head";
-@import "blocks/skip-link";
-@import "blocks/stylized-text";
-@import "blocks/theme-switcher";
-@import "blocks/toc";
-@import "blocks/tooltip";
-@import "blocks/unfurl";
-@import "blocks/webmentions";

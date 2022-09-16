@@ -2,7 +2,7 @@
   --black: lch(5.243% 2.967 304.065);
   --white: lch(97.959% 2.447 304.132);
 
-  // Accent colours https://schemist.fglt.fr?preset=1@b@41250,4125a,4125x14,4125x1e,4125x28,4125x32,4125x3c,4125x46,4125x50,4125x5a,4125x64,012230123456789a@clr,,color,bd93f9,l,amount
+  /* Accent colours https://schemist.fglt.fr?preset=1@b@41250,4125a,4125x14,4125x1e,4125x28,4125x32,4125x3c,4125x46,4125x50,4125x5a,4125x64,012230123456789a@clr,,color,bd93f9,l,amount */
   --coalmine: lch(5.834% 35.337 308.938);
   --voldemort: lch(16.405% 54.349 309.759);
   --wild-violet: lch(26.256% 70.287 309.703);
@@ -13,7 +13,7 @@
   --violet-heaven: lch(78.848% 35.402 302.552);
   --grape-taffy: lch(95.495% 5.998 300.898);
 
-  // Neutral colours https://schemist.fglt.fr?preset=1@b@41250,4125a,4125x14,4125x1e,4125x28,4125x32,4125x3c,4125x46,4125x50,4125x5a,4125x64,012230123456789a@clr,,color,a9a4b0,l,amount
+  /* Neutral colours https://schemist.fglt.fr?preset=1@b@41250,4125a,4125x14,4125x1e,4125x28,4125x32,4125x3c,4125x46,4125x50,4125x5a,4125x64,012230123456789a@clr,,color,a9a4b0,l,amount */
   --piano-black: lch(7.243% 2.967 304.065);
   --moonless-night: lch(18.826% 4.513 304.89);
   --tuna: lch(29.382% 5.734 304.868);
@@ -24,7 +24,7 @@
   --herring-silver: lch(79.912% 4.663 304.318);
   --peekaboo: lch(92.959% 2.447 304.132);
 
-  // Light colour scale
+  /* Light colour scale */
   color-scheme: light;
 
   --accent-0: var(--white);
@@ -51,7 +51,7 @@
   --neutral-9: var(--piano-black);
   --neutral-10: var(--black);
 
-  // Dark colour scale
+  /* Dark colour scale */
   @media (--OSdark) {
     color-scheme: dark;
 
@@ -80,7 +80,7 @@
     --neutral-10: var(--white);
   }
 
-  // Semantic colours
+  /* Semantic colours */
   --accent-base: var(--accent-0);
   --accent-bg-subtle: var(--accent-1);
   --accent-bg: var(--accent-2);
@@ -110,7 +110,7 @@
   --warning: lch(69.545% 65.691 63.721);
   --error: lch(68.867% 51.731 36.633);
 
-  // Typography
+  /* Typography */
   --font-weight-body-bold: 622;
   --font-weight-body-normal: 400;
 }
@@ -175,7 +175,7 @@
   --black: lch(5.435% 2.411 165.037);
   --white: lch(98.14% 2.586 165.106);
 
-  // Accent colours https://schemist.fglt.fr?preset=1@f@41250,4125a,4125x14,4125x1e,4125x28,4125x32,4125x3c,4125x46,4125x50,4125x5a,4125x64,670,890,ab0,cd0,012230123456789abcde@clr,,color,549a7e,l,amount,inf,Info,pos,Success,wrn,Warning,neg,Error
+  /* Accent colours https://schemist.fglt.fr?preset=1@f@41250,4125a,4125x14,4125x1e,4125x28,4125x32,4125x3c,4125x46,4125x50,4125x5a,4125x64,670,890,ab0,cd0,012230123456789abcde@clr,,color,549a7e,l,amount,inf,Info,pos,Success,wrn,Warning,neg,Error */
   --nightmare: lch(7.697% 8.752 164.697);
   --eight-ball: lch(19.534% 14.73 165.16);
   --pine-needle: lch(30.296% 19.082 165.159);
@@ -186,7 +186,7 @@
   --cabbage: lch(81.21% 29.959 165.087);
   --fresh-breeze: lch(96.79% 4.395 165.005);
 
-  // Neutral colours https://schemist.fglt.fr?preset=1@f@41250,4125a,4125x14,4125x1e,4125x28,4125x32,4125x3c,4125x46,4125x50,4125x5a,4125x64,670,890,ab0,cd0,012230123456789abcde@clr,,color,818f88,l,amount,inf,Info,pos,Success,wrn,Warning,neg,Error
+  /* Neutral colours https://schemist.fglt.fr?preset=1@f@41250,4125a,4125x14,4125x1e,4125x28,4125x32,4125x3c,4125x46,4125x50,4125x5a,4125x64,670,890,ab0,cd0,012230123456789abcde@clr,,color,818f88,l,amount,inf,Info,pos,Success,wrn,Warning,neg,Error */
   --matt-black: lch(7.435% 2.411 165.037);
   --carbon-fiber: lch(19.127% 3.845 165.156);
   --vulcanized: lch(29.764% 4.904 165.155);

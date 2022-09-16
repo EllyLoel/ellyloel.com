@@ -2,6 +2,7 @@
 layout: base-without-header.njk
 ---
 <header>
+	{%- include "breadcrumb.njk" -%}
 	<h1>{{ title }}</h1>
 	<p>
 		<sl-tooltip content="Last modified">
@@ -46,7 +47,7 @@ layout: base-without-header.njk
 {%- endif -%}
 <footer class="[ flow flow-space-setter ]" style="--flow-space-setter: var(--size-8);">
 	<p>
-		Share on <a href='https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url.substring(1) }}&text="{{ title }}" by @ellyloel'>Twitter</a> or <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url.substring(1) }}">LinkedIn</a>.
+		Share on <a href='https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text="{{ title }}" by @ellyloel'>Twitter</a> or <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}">LinkedIn</a>.
 	</p>
 	{%- set previousPost = collections.allPostTypes | getPreviousCollectionItem -%}
 	{%- set nextPost = collections.allPostTypes | getNextCollectionItem -%}
