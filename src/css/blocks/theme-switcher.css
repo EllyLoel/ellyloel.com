@@ -52,7 +52,10 @@
 
   &::part(title) {
     font-family: "Fraunces", var(--font-serif);
-    padding-block-end: 0;
+  }
+
+  &::part(body) {
+    padding-block-start: 0;
   }
 
   &::part(overlay) {
