@@ -122,7 +122,7 @@ sl-radio-button {
     }
   }
 
-  &[aria-checked="true"]::part(button) {
+  &[data-checked="true"]::part(button) {
     box-shadow: none;
     background-color: var(--_button-bg);
     border-color: var(--_button-bg);
