@@ -32,11 +32,7 @@ module.exports = (eleventyConfig) => {
         relativeBaseURL: "../",
         suffix: "",
         uriSuffix: "",
-        generatePageNameFromLabel: (label) => {
-          return label
-            .split("/")
-            .map((pathSegment) => slugify(pathSegment.toLowerCase()));
-        },
+        generatePageNameFromLabel: (label) => slugify(label).toLowerCase(),
       })
     );
 
