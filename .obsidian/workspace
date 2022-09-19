@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "src/garden/Astro.md",
+            "file": "src/garden/Design engineering.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -81,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/garden/Astro.md"
+                "file": "src/garden/Design engineering.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/garden/Astro.md",
+                "file": "src/garden/Design engineering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,8 +112,8 @@
   },
   "active": "5305c92190f1d9a6",
   "lastOpenFiles": [
-    "src/garden/Enhance.md",
     "src/garden/Astro.md",
+    "src/garden/Enhance.md",
     "src/garden/My website is my only project.md",
     "src/garden/Atomic.md",
     "src/garden/Stop using active classes.md",
