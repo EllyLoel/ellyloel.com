@@ -2,6 +2,7 @@ const markdownItAnchor = require("markdown-it-anchor");
 const twemoji = require("twemoji");
 const EleventyPluginImage = require("@11ty/eleventy-img");
 const path = require("path");
+const slugify = require("slugify");
 
 // Customize Markdown library and settings:
 module.exports = (eleventyConfig) => {
@@ -31,6 +32,11 @@ module.exports = (eleventyConfig) => {
         relativeBaseURL: "../",
         suffix: "",
         uriSuffix: "",
+        generatePageNameFromLabel: (label) => {
+          return label
+            .split("/")
+            .map((pathSegment) => slugify(pathSegment.toLowerCase()));
+        },
       })
     );
 
