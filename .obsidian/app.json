@@ -234,7 +234,8 @@
     "IFK",
     "PTX",
     "dopamenu",
-    "Astro"
+    "Astro",
+    "reusability"
   ],
   "vimMode": true,
   "promptDelete": false,
