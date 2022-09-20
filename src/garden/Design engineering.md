@@ -10,4 +10,4 @@ But I'm not a designer who knows how to code, I am an engineer. My brain very mu
 ## References
 - [Design Engineering Handbook by Natalya Shelburne, Adekunle Oduye, Caren Litherland, Kim Williams & Eddie Lou](https://books.apple.com/au/audiobook/design-engineering-handbook/id1527368573)
 - [Front-of-the-front-end and back-of-the-front-end web development by Brad Frost](https://bradfrost.com/blog/post/front-of-the-front-end-and-back-of-the-front-end-web-development/)
-- [The great divide](https://css-tricks.com/the-great-divide/)
+- [The great divide by Chris Coyier](https://css-tricks.com/the-great-divide/)
