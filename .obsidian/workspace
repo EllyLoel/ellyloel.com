@@ -54,7 +54,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 179.5,
     "collapsed": true
   },
   "right": {
@@ -113,15 +113,15 @@
   },
   "active": "5305c92190f1d9a6",
   "lastOpenFiles": [
+    "public/assets/svg/workflow.svg",
+    "src/garden/Design systems in an agency.md",
+    "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
     "src/garden/Design engineering.md",
     "src/garden/Atomic.md",
     "src/garden/Astro.md",
     "src/garden/Enhance.md",
     "src/garden/My website is my only project.md",
     "src/garden/Stop using active classes.md",
-    "src/now.md",
-    "src/404.md",
-    "src/garden/Digital Garden.md",
-    "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md"
+    "src/now.md"
   ]
 }
