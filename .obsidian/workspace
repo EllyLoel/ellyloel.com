@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "src/garden/Design systems.md",
+            "file": "src/garden/Design systems in an agency.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -54,7 +54,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "84b304f5dd126125",
@@ -81,7 +82,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/garden/Design systems.md"
+                "file": "src/garden/Design systems in an agency.md"
               }
             }
           },
@@ -91,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/garden/Design systems.md",
+                "file": "src/garden/Design systems in an agency.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
