@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1000"
+   height="150"
+   viewBox="0 0 264.58332 39.6875"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="Arrow3"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="2.207"
+       markerHeight="3.6721199"
+       viewBox="0 0 4.2071068 7"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:round"
+         d="M 3,-3 0,0 3,3"
+         id="arrow3"
+         transform="rotate(180,0.125,0)" />
+    </marker>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(15.80301,-134.62944)">
+    <g
+       id="g1203"
+       transform="translate(110.9925,114.40259)"
+       style="stroke-width:0.529167;stroke-dasharray:none">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:3.175px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono, Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         x="92.582603"
+         y="40.948841"
+         id="text1184"><tspan
+           id="tspan1182"
+           style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:3.175px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono, Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:0;stroke-dasharray:none"
+           x="92.582603"
+           y="40.948841">Design system</tspan></text>
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1194"
+         width="52.916668"
+         height="26.458334"
+         x="78.541664"
+         y="26.841434"
+         ry="2.1166666" />
+    </g>
+    <g
+       id="g1212"
+       transform="translate(95.913368,110.84861)"
+       style="stroke-width:0.529167;stroke-dasharray:none">
+      <text
+         xml:space="preserve"
+         style="font-size:3.175px;text-align:center;text-anchor:middle;white-space:pre;inline-size:37.217;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         x="46.502384"
+         y="44.597717"
+         id="text1180"
+         transform="translate(7.6289604,-2.107568)"><tspan
+           x="46.502384"
+           y="44.597717"
+           id="tspan3731"><tspan
+             style="font-weight:800;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono, Ultra-Bold'"
+             id="tspan3729">Unbranded component</tspan><tspan
+             y="44.597717"
+             id="tspan3733"> </tspan></tspan><tspan
+           x="46.502384"
+           y="48.612831"
+           id="tspan3737"><tspan
+             style="font-weight:800;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono, Ultra-Bold'"
+             id="tspan3735">library</tspan></tspan></text>
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1196"
+         width="52.916668"
+         height="26.458334"
+         x="27.768806"
+         y="30.395414"
+         ry="2.1166666" />
+    </g>
+    <g
+       id="g1217"
+       transform="translate(31.459815,114.40259)"
+       style="stroke-width:0.529167;stroke-dasharray:none">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1191"
+         width="52.916668"
+         height="26.458334"
+         x="25.402561"
+         y="26.841434"
+         ry="2.1166666" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         x="39.457787"
+         y="41.043739"
+         id="text1176"><tspan
+           id="tspan1174"
+           style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:3.175px;font-family:'JetBrainsMono Nerd Font';-inkscape-font-specification:'JetBrainsMono Nerd Font, Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-dasharray:none"
+           x="39.457787"
+           y="41.043739">Design tokens</tspan></text>
+    </g>
+    <g
+       id="g1189"
+       transform="translate(-28.214295,114.40259)"
+       style="stroke-width:0.529167;stroke-dasharray:none">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         id="rect221"
+         width="52.916668"
+         height="26.458334"
+         x="18.740778"
+         y="26.841434"
+         ry="2.1166666" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         x="25.131573"
+         y="41.043739"
+         id="text1122"><tspan
+           id="tspan1120"
+           style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:3.175px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono, Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-dasharray:none"
+           x="25.131573"
+           y="41.043739">Client brand identity</tspan></text>
+    </g>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.532445;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow3)"
+       d="m 109.77363,154.47319 h 13.58601"
+       id="path1331" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.523622;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow3)"
+       d="M 43.443151,154.47319 H 56.582609"
+       id="path1333" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.523757;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow3)"
+       d="m 176.11494,154.47319 h 13.14623"
+       id="path1335" />
+  </g>
+</svg>
