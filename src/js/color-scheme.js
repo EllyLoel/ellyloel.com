@@ -24,6 +24,7 @@ class ThemePicker {
     this.openButton = document.querySelector(SELECTORS.openButton);
 
     this.mutationObserver = new MutationObserver((entries) => {
+      console.log(entries[0].target.children?.[1]?.nodeName);
       if (entries[0].target.children?.[1]?.nodeName === "SL-BUTTON-GROUP")
         entries[0].target.children[1].setAttribute(
           "exportparts",
