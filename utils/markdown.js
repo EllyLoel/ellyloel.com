@@ -18,13 +18,13 @@ module.exports = (eleventyConfig) => {
     .use(require("markdown-it-footnote"))
     .use(require("markdown-it-mark"))
     .use(require("markdown-it-abbr"))
-    .use(require("markdown-it-container"), "note", {
+    .use(require("markdown-it-container"), "callout", {
       render: (tokens, idx) => {
-        const title = tokens[idx].info.trim().match(/^spoiler\s+(.*)$/);
+        const title = tokens[idx].info.trim().match(/^callout\s+(.*)$/);
         if (tokens[idx].nesting === 1) {
           // opening tag
           return `<aside class="callout">
-              <sl-icon library="fa" name="fas-circle-info"></sl-icon>
+              <sl-icon name="info-circle"></sl-icon>
               <strong>${markdownLibrary.utils.escapeHtml(title?.[1])}</strong>
               <div>
             `;
