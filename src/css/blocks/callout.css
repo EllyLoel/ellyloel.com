@@ -1,0 +1,10 @@
+.note {
+  background-color: var(--accent-bg-subtle);
+  border: var(--border-size-2) solid var(--accent-border);
+  border-radius: var(--radius-3);
+  padding: var(--size-3);
+
+  & * {
+    line-height: 1;
+  }
+}
