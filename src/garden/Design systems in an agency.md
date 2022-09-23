@@ -4,15 +4,6 @@ title: Design systems in an agency
 
 Multi layered design system
 Different levels of abstraction
-
-
-> [!NOTE] Title
-> Contents
-
-
-> [!NOTE]- Title
-> Contents
-
 <figure>
 	{% svg "./public/assets/svg/workflow.svg" %}
 	<figcaption>
