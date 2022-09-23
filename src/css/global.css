@@ -265,6 +265,8 @@ blockquote {
   padding-inline: var(--size-5);
   background-color: var(--neutral-bg-subtle);
   border-left: var(--border-size-3) solid var(--accent-border);
+  border-top-right-radius: var(--radius-3);
+  border-bottom-right-radius: var(--radius-3);
   font-size: var(--font-size-3);
   font-style: italic;
   font-family: "Fraunces", var(--font-serif);
