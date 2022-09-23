@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "src/garden/The right number of design tokens.md",
+            "file": "src/garden/Design systems in an agency.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -81,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/garden/The right number of design tokens.md"
+                "file": "src/garden/Design systems in an agency.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/garden/The right number of design tokens.md",
+                "file": "src/garden/Design systems in an agency.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,6 +112,7 @@
   },
   "active": "5305c92190f1d9a6",
   "lastOpenFiles": [
+    "src/garden/The right number of design tokens.md",
     "src/garden/Design systems in an agency.md",
     "public/assets/svg/workflow.svg",
     "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
@@ -120,7 +121,6 @@
     "src/garden/Astro.md",
     "src/garden/Enhance.md",
     "src/garden/My website is my only project.md",
-    "src/garden/Stop using active classes.md",
-    "src/now.md"
+    "src/garden/Stop using active classes.md"
   ]
 }
