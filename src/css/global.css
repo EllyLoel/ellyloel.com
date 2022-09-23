@@ -215,7 +215,7 @@ mark {
   }
 }
 
-:is(li, dd, figcaption) {
+:is(li, dd) {
   max-inline-size: var(--size-content-2);
 }
 
@@ -257,25 +257,18 @@ figure > figcaption {
 blockquote {
   display: grid;
   gap: var(--size-3);
-  max-inline-size: var(--size-content-2);
   padding-block: var(--size-3);
   padding-inline: var(--size-5);
-  background-color: var(--accent-bg-subtle);
-  border-left: var(--border-size-2) solid var(--accent-border);
+  background-color: var(--neutral-bg-subtle);
+  border-left: var(--border-size-3) solid var(--accent-border);
+  font-size: var(--font-size-3);
+  font-style: italic;
+  font-family: "Fraunces", var(--font-serif);
+  font-weight: 400;
 }
 
 blockquote + figcaption {
   padding-inline: var(--size-5);
-}
-
-@supports selector(a:has(b)) {
-  :is(blockquote, figcaption) {
-    padding-inline: 0;
-  }
-
-  figure:has(blockquote) {
-    padding-inline: var(--size-5);
-  }
 }
 
 /* Details */
