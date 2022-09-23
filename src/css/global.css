@@ -243,31 +243,39 @@ hr {
 figure {
   display: grid;
   gap: var(--size-2);
-  place-items: center;
+  /* place-items: center; */
 }
 
 figure > figcaption {
   font-size: var(--font-size-1);
-  text-align: center;
+  text-align: right;
   font-style: italic;
 }
 
 /* Blockquote */
-
-:is(blockquote, :not(blockquote) > cite) {
-  border-inline-start-width: var(--border-size-3);
-}
 
 blockquote {
   display: grid;
   gap: var(--size-3);
   max-inline-size: var(--size-content-2);
   padding-block: var(--size-3);
-  padding-inline: var(--size-4);
+  padding-inline: var(--size-5);
+  background-color: var(--accent-bg-subtle);
+  border-left: var(--border-size-2) solid var(--accent-border);
 }
 
-:not(blockquote) > cite {
-  padding-inline-start: var(--size-2);
+blockquote + figcaption {
+  padding-inline: var(--size-5);
+}
+
+@supports selector(a:has(b)) {
+  :is(blockquote, figcaption) {
+    padding-inline: 0;
+  }
+
+  figure:has(blockquote) {
+    padding-inline: var(--size-5);
+  }
 }
 
 /* Details */
