@@ -23,9 +23,9 @@ module.exports = (eleventyConfig) => {
         const title = tokens[idx].info.trim().match(/^spoiler\s+(.*)$/);
         if (tokens[idx].nesting === 1) {
           // opening tag
-          return `<aside>
-              <sl-icon library="fa" name="far-circle-info"></sl-icon>
-              <strong>${title}</strong>
+          return `<aside class="callout">
+              <sl-icon library="fa" name="fas-circle-info"></sl-icon>
+              <strong>${markdownLibrary.utils.escapeHtml(title?.[1])}</strong>
               <div>
             `;
         } else {
