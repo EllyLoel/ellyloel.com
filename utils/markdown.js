@@ -123,5 +123,7 @@ module.exports = (eleventyConfig) => {
     return generated;
   };
 
+  console.log(markdownLibrary.renderer.fence);
+
   return markdownLibrary;
 };
