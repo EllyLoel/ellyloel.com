@@ -1,0 +1,5 @@
+.markdown-container {
+  & > :is(figure, picture) {
+    margin-inline: calc(var(--size-5) * -1);
+  }
+}

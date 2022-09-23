@@ -2,9 +2,10 @@
   background-color: var(--accent-bg-subtle);
   border: var(--border-size-2) solid var(--accent-border);
   border-radius: var(--radius-3);
-  padding-block: var(--size-3);
-  padding-inline: var(--size-4);
-  margin-inline: calc(var(--size-4) * -1);
+  padding-block-start: var(--size-7);
+  padding-block-end: var(--size-6);
+  padding-inline: var(--size-5);
+  margin-inline: calc(var(--size-5) * -1);
   position: relative;
 
   & > sl-icon {
@@ -21,7 +22,7 @@
     font-size: var(--font-size-3);
   }
 
-  & > div {
+  & > div > *:first-child {
     margin-block-start: var(--size-3);
   }
 }

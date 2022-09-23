@@ -22,7 +22,7 @@ layout: base-without-header.njk
 		</details>
 	</aside>
 {%- endif -%}
-<article class="[ flow flow-space-setter content-width ]" style="--flow-space-setter: 2em;">
+<article class="[ markdown-container ][ flow flow-space-setter content-width ]" style="--flow-space-setter: 2em;">
 	{{ content | safe }}
 </article>
 {%- if backlinks === [] -%}
