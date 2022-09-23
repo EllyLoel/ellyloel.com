@@ -18,6 +18,24 @@ module.exports = (eleventyConfig) => {
     .use(require("markdown-it-footnote"))
     .use(require("markdown-it-mark"))
     .use(require("markdown-it-abbr"))
+    .use(require("markdown-it-container"), "note", {
+      render: (tokens, idx) => {
+        const title = tokens[idx].info.trim().match(/^spoiler\s+(.*)$/);
+        if (tokens[idx].nesting === 1) {
+          // opening tag
+          return `<aside>
+              <sl-icon library="fa" name="far-circle-info"></sl-icon>
+              <strong>${title}</strong>
+              <div>
+            `;
+        } else {
+          // closing tag
+          return ` </div>
+            </aside>
+            `;
+        }
+      },
+    })
     .use(require("markdown-it-emoji"))
     .use(markdownItAnchor, {
       level: 2,
@@ -122,8 +140,6 @@ module.exports = (eleventyConfig) => {
     }
     return generated;
   };
-
-  console.log(markdownLibrary.renderer.fence);
 
   return markdownLibrary;
 };
