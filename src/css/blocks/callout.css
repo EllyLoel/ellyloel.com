@@ -2,9 +2,26 @@
   background-color: var(--accent-bg-subtle);
   border: var(--border-size-2) solid var(--accent-border);
   border-radius: var(--radius-3);
-  padding: var(--size-3);
+  padding-block: var(--size-3);
+  padding-inline: var(--size-4);
+  margin-inline: calc(var(--size-4) * -1);
+  position: relative;
 
-  & * {
+  & > sl-icon {
+    position: absolute;
+    left: -14px;
+    top: -14px;
+    font-size: 2rem;
+    color: var(--accent-border);
+    background-color: var(--accent-bg-subtle);
+  }
+
+  & > strong {
     line-height: 1;
+    font-size: var(--font-size-3);
+  }
+
+  & > div {
+    margin-block-start: var(--size-3);
   }
 }
