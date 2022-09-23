@@ -1,6 +1,6 @@
 require("dotenv").config();
 const path = require("path");
-const fs = require("node:fs");
+const fs = require("node:fs/promises");
 const removeMd = require("remove-markdown");
 const slinkity = require("slinkity");
 
