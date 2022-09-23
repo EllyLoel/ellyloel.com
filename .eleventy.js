@@ -268,6 +268,9 @@ module.exports = (eleventyConfig) => {
     }`;
     return url;
   });
+  eleventyConfig.addShortcode("svg", (path) => {
+    console.log(path);
+  });
 
   // Copy/pass-through files
   eleventyConfig.addPassthroughCopy("public");
