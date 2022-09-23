@@ -270,12 +270,11 @@ module.exports = (eleventyConfig) => {
     return url;
   });
   eleventyConfig.addShortcode("svg", (path) => {
-    fs.readFile(path, "utf8", (err, data) => {
+    return fs.readFile(path, "utf8", (err, data) => {
       if (err) {
         console.error(err);
         return;
       }
-      console.log(typeof data);
       return data;
     });
   });
