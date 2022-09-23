@@ -242,21 +242,17 @@ hr {
 
 figure {
   display: grid;
-  gap: var(--size-2);
-  /* place-items: center; */
+  gap: var(--size-3);
 }
 
 figure > figcaption {
   font-size: var(--font-size-1);
   text-align: right;
   font-style: italic;
-}
-
-figure > blockquote + figcaption {
   padding-inline: var(--size-5);
 }
 
-figure > picture + figcaption {
+figure > :is(picture, svg) + figcaption {
   text-align: center;
 }
 
