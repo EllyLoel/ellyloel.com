@@ -252,6 +252,14 @@ figure > figcaption {
   font-style: italic;
 }
 
+figure > blockquote + figcaption {
+  padding-inline: var(--size-5);
+}
+
+figure > picture + figcaption {
+  text-align: center;
+}
+
 /* Blockquote */
 
 blockquote {
@@ -264,11 +272,7 @@ blockquote {
   font-size: var(--font-size-3);
   font-style: italic;
   font-family: "Fraunces", var(--font-serif);
-  font-weight: 400;
-}
-
-blockquote + figcaption {
-  padding-inline: var(--size-5);
+  font-weight: 420;
 }
 
 /* Details */
