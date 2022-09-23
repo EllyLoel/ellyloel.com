@@ -2,9 +2,13 @@
 title: Design systems in an agency
 ---
 
-> [!NOTE] Multi layered design system
+::: note
+Multi layered design system
+:::
 
-> [!NOTE] Different levels of abstraction
+::: note
+Different levels of abstraction
+:::
 
 {% svg "./public/assets/svg/workflow.svg", "The client's brand identity is used to create design tokens which get passed into an unbranded component library to create the basis of their design system." %}
 
