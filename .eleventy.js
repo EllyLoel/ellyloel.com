@@ -269,10 +269,10 @@ module.exports = (eleventyConfig) => {
     }`;
     return url;
   });
-  eleventyConfig.addAsyncShortcode("svg", async (path) => {
+  eleventyConfig.addAsyncShortcode("svg", async (path, alt) => {
     try {
       const data = await fs.readFile(path, { encoding: "utf8" });
-      return data;
+      return `<figure>${data}<figcaption>${alt}</figcaption></figure>`;
     } catch (err) {
       console.error(err);
       return;
