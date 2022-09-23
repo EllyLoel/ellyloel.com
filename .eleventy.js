@@ -1,5 +1,6 @@
 require("dotenv").config();
 const path = require("path");
+const fs = require("node:fs");
 const removeMd = require("remove-markdown");
 const slinkity = require("slinkity");
 
@@ -269,7 +270,14 @@ module.exports = (eleventyConfig) => {
     return url;
   });
   eleventyConfig.addShortcode("svg", (path) => {
-    console.log(path);
+    fs.readFile(path, "utf8", (err, data) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      console.log(typeof data);
+      return data;
+    });
   });
 
   // Copy/pass-through files
