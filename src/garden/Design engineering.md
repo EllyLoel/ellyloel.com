@@ -10,7 +10,7 @@ But I'm not a designer who knows how to code, I am an engineer. My brain very mu
 ## Some great ways of thinking about it
 
 <figure>
-  <blockquote>a front-of-the-front-end developer determines the look and feel of a `button`, while a back-of-the-front-end developer determines what happens when that `button` is clicked.</blockquote>
+  <blockquote>A front-of-the-front-end developer determines the look and feel of a `button`, while a back-of-the-front-end developer determines what happens when that `button` is clicked.</blockquote>
   <figcaption>
     — <cite>Brad Frost</cite>
   </figcaption>
@@ -34,6 +34,7 @@ The same separation applies to the backend:
 </figure>
 
 ## References
+
 - [Design Engineering Handbook by Natalya Shelburne, Adekunle Oduye, Caren Litherland, Kim Williams & Eddie Lou](https://books.apple.com/au/audiobook/design-engineering-handbook/id1527368573)
 - [Front-of-the-front-end and back-of-the-front-end web development by Brad Frost](https://bradfrost.com/blog/post/front-of-the-front-end-and-back-of-the-front-end-web-development/)
 - [The great divide by Chris Coyier](https://css-tricks.com/the-great-divide/)
