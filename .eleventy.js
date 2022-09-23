@@ -269,14 +269,14 @@ module.exports = (eleventyConfig) => {
     }`;
     return url;
   });
-  eleventyConfig.addShortcode("svg", (path) => {
-    return fs.readFile(path, "utf8", (err, data) => {
-      if (err) {
-        console.error(err);
-        return;
-      }
+  eleventyConfig.addAsyncShortcode("svg", async (path) => {
+    try {
+      const data = await fs.readFile(path, { encoding: "utf8" });
       return data;
-    });
+    } catch (err) {
+      console.error(err);
+      return;
+    }
   });
 
   // Copy/pass-through files
