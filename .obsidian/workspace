@@ -4,16 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "5305c92190f1d9a6",
+        "id": "c5eef59506f4fdcd",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "src/garden/Design systems in an agency.md",
-            "mode": "source",
-            "backlinks": false,
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -80,9 +75,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "src/garden/Design systems in an agency.md"
-              }
+              "state": {}
             }
           },
           {
@@ -91,7 +84,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/garden/Design systems in an agency.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,13 +102,13 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "5305c92190f1d9a6",
+  "active": "c5eef59506f4fdcd",
   "lastOpenFiles": [
-    "src/garden/The right number of design tokens.md",
+    "src/garden/Design engineering.md",
     "src/garden/Design systems in an agency.md",
+    "src/garden/The right number of design tokens.md",
     "public/assets/svg/workflow.svg",
     "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
-    "src/garden/Design engineering.md",
     "src/garden/Atomic.md",
     "src/garden/Astro.md",
     "src/garden/Enhance.md",
