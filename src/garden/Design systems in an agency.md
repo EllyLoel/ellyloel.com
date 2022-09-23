@@ -2,8 +2,9 @@
 title: Design systems in an agency
 ---
 
-Multi layered design system
-Different levels of abstraction
+> [!NOTE] Multi layered design system
+
+> [!NOTE] Different levels of abstraction
 <figure>
 	{% svg "./public/assets/svg/workflow.svg" %}
 	<figcaption>
