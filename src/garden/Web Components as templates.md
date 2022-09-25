@@ -1,5 +1,5 @@
 ---
-title: Enhance
+title: Web Components as templates
 ---
 
 I need a way of being able to use web components as just plain HTML templates/components without JavaScript.
