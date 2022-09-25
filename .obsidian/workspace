@@ -7,8 +7,13 @@
         "id": "c5eef59506f4fdcd",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "src/garden/Web Components as templates.md",
+            "mode": "source",
+            "backlinks": false,
+            "source": false
+          }
         }
       }
     ],
@@ -75,7 +80,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "src/garden/Web Components as templates.md"
+              }
             }
           },
           {
@@ -84,6 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "src/garden/Web Components as templates.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +119,7 @@
     "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
     "src/garden/Atomic.md",
     "src/garden/Astro.md",
-    "src/garden/Enhance.md",
+    "src/garden/Web Components as templates.md",
     "src/garden/My website is my only project.md",
     "src/garden/Stop using active classes.md"
   ]
