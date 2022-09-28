@@ -51,6 +51,7 @@ module.exports = (eleventyConfig) => {
         suffix: "",
         uriSuffix: "",
         generatePageNameFromLabel: (label) => slugify(label, { lower: true }),
+        postProcessPageName: (label) => slugify(label, { lower: true }),
       })
     );
 
