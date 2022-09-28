@@ -25,7 +25,7 @@ module.exports = (eleventyConfig) => {
           // opening tag
           return `<aside class="callout">
               <sl-icon name="info-circle"></sl-icon>
-              <strong>${markdownLibrary.utils.escapeHtml(title[1])}</strong>
+              <strong>${markdownLibrary.render(title[1])}</strong>
               <div>
             `;
         } else {
