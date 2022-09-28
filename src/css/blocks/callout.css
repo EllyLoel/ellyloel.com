@@ -15,6 +15,7 @@
     font-size: 2rem;
     color: var(--accent-border);
     background-color: var(--accent-bg-subtle);
+    border-radius: var(--radius-round);
   }
 
   & > strong {
