@@ -102,37 +102,21 @@ I remember I was really anxious so I kept emailing them, double and triple check
 Step by step the interview process was:
 
 1. Initial interview
-
-- Get to know me, what I'm about and why I'm applying to the company.
-
+	- Get to know me, what I'm about and why I'm applying to the company.
 2. Technical chat
-
-- No coding, just a chat to gauge my knowledge. I remember one of the questions the interviewer asked was about responsive design and what you might add on a smaller screen rather than take away? I answered saying that you might add a navigation menu button on a smaller screen but not on a bigger screen.
-
+	- No coding, just a chat to gauge my knowledge. I remember one of the questions the interviewer asked was about responsive design and what you might add on a smaller screen rather than take away? I answered saying that you might add a navigation menu button on a smaller screen but not on a bigger screen.
 3. Work sample solo coding
-
-- Spend one hour adding features to a partially functioning project.
-
+	- Spend one hour adding features to a partially functioning project.
 4. Work sample pair coding
-
-- Spend another hour with one of the developers adding another feature to the project.
-
+	- Spend another hour with one of the developers adding another feature to the project.
 5. Psychometric assessment
-
-- A look at your preferred ways of working.
-
+	- A look at your preferred ways of working.
 6. Salary chat
-
-- Talk about salary expectations.
-
+	- Talk about salary expectations.
 7. Senior Leadership interview
-
-- I got to chat and ask lots of questions to the CEO and the head of the tech team.
-
+	- I got to chat and ask lots of questions to the CEO and the head of the tech team.
 8. Reference check
-
-- They contacted and chatted to my reference.
-
+	- They contacted and chatted to my reference.
 9. Offer :tada:
 
 ## What you know now that you wished back then
