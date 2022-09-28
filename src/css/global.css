@@ -378,10 +378,14 @@ menu {
 /* FOUCE https:/*www.abeautifulsite.net/posts/flash-of-undefined-custom-elements/ */
 :not(:defined) {
   opacity: 0;
-  transition: opacity 500ms var(--ease-2);
+  transition-property: opacity;
+  transition-duration: 500ms;
+  transition-timing-function: var(--ease-2);
 }
 
 :defined {
   opacity: 1;
-  transition: opacity 500ms var(--ease-2);
+  transition-property: opacity;
+  transition-duration: 500ms;
+  transition-timing-function: var(--ease-2);
 }
