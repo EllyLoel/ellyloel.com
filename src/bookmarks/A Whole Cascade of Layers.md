@@ -6,8 +6,7 @@ title: A Whole Cascade of Layers
 
 Great article by [Miriam Suzanne](https://twitter.com/TerribleMia)
 
-## Highlights
-* Dave’s ‘SBRDFLT’ acronym is based on the ‘layers’ I expose in the layer-selection settings below. Roughly, they imply: 
-```css
-@layer spec, browser, reset, default, features, layout, theme;
-```
+> Dave’s ‘SBRDFLT’ acronym is based on the ‘layers’ I expose in the layer-selection settings below. Roughly, they imply: 
+> ```css
+> @layer spec, browser, reset, default, features, layout, theme;
+> ```

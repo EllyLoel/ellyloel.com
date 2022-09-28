@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "src/bookmarks/A Whole Cascade of Layers.md",
+            "file": "src/bookmarks/Intentional Career Building.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -81,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/bookmarks/A Whole Cascade of Layers.md"
+                "file": "src/bookmarks/Intentional Career Building.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/bookmarks/A Whole Cascade of Layers.md",
+                "file": "src/bookmarks/Intentional Career Building.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,15 +112,15 @@
   },
   "active": "c5eef59506f4fdcd",
   "lastOpenFiles": [
-    "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
     "src/bookmarks/A Whole Cascade of Layers.md",
-    "src/garden/Composition over Inheritance.md",
-    "src/garden/Web Components as templates.md",
-    "src/garden/Design engineering.md",
-    "src/garden/Design systems in an agency.md",
-    "src/garden/The right number of design tokens.md",
-    "public/assets/svg/workflow.svg",
-    "src/garden/Atomic.md",
-    "src/garden/Astro.md"
+    "src/bookmarks/Zero to 60 in Software Development.md",
+    "src/bookmarks/Intentional Career Building.md",
+    "src/bookmarks/Trouble with time management.md",
+    "src/bookmarks/Trouble organising and planning.md",
+    "src/bookmarks/Interface design patterns checklist.md",
+    "src/bookmarks/High degree of creativity and imagination.md",
+    "src/bookmarks/Generosity.md",
+    "src/bookmarks/A wandering mind.md",
+    "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md"
   ]
 }
