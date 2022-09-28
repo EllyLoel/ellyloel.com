@@ -12,8 +12,9 @@ layout: base-without-header.njk
 	</p>
 </header>
 {%- set tableOfContent = content | toc -%}
-{{ tableOfContent.match(/<li>/gm) | dump }}
-{%- if tableOfContent !== "" -%}
+{{ tableOfContent | dump }}
+{{ r/<li>/g.exec(tableOfContent) | dump }}
+{%- if r/<li>/gm.exec(tableOfContent).length > 2 -%}
 	<aside class="[ toc-container ][ flow content-width ]">
 		<details>
 			<summary class="[ flex ]">
