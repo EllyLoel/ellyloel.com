@@ -11,16 +11,15 @@ layout: base-without-header.njk
 		<time class="[ date ]" datetime="{{ page.date | dateToISO }}">{{ page.date | dateToLocaleDateFull }}</time>
 	</p>
 </header>
-{%- set tableOfContent = content | toc -%}
-{{ page | dump }}
-{%- if tableOfContent.match(r/<li>/g).length > 2 and content.length > 3000 -%}
+{%- set contentWithoutHtml = content.replace(r/<\/?[a-z0-9]+\b[^>]*>/g, "") -%}
+{%- if contentWithoutHtml.length > 3000 -%}
 	<aside class="[ toc-container ][ flow content-width ]">
 		<details>
 			<summary class="[ flex ]">
 				<sl-icon class="[ emoji ]" library="fa" name="fas-play" label=""></sl-icon>
 				<h2>Table of contents</h2>
 			</summary>
-			{{ tableOfContent | safe }}
+			{{ content | toc | safe }}
 		</details>
 	</aside>
 {%- endif -%}
