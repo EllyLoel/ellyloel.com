@@ -29,6 +29,5 @@ If the things you once found enjoyable are no longer enjoyable, then it could be
 
 ---
 
-# References
-
+## References
 1. [How to give your brain the stimulation it needs](https://www.youtube.com/watch?v=-6WCkTwW6xg)
