@@ -1,55 +1,58 @@
+/* Layers */
+@layer reset, vars, base, blocks, utilities;
+
 /* Reset */
-@import "/@root/node_modules/cssremedy/css/remedy.css";
-@import "./reset.css";
+@import "/@root/node_modules/cssremedy/css/remedy.css" layer(reset);
+@import "./reset.css" layer(reset);
 
 /* Fonts */
-@import "./fonts.css";
+@import "./fonts.css" layer(base);
 
 /* Variables */
-@import "./vars.css";
-@import "/@root/node_modules/open-props/media.min.css";
+@import "./vars.css" layer(vars);
+@import "/@root/node_modules/open-props/media.min.css" layer(vars);
 
 /* Global styles */
-@import "./global.css";
+@import "./global.css" layer(base);
 
 /* Utilities */
-@import "./utilities/content-width.css";
-@import "./utilities/detitlify.css";
-@import "./utilities/layout.css";
-@import "./utilities/no-width.css";
-@import "./utilities/flow.css";
-@import "./utilities/panel.css";
-@import "./utilities/radius.css";
-@import "./utilities/recursive-flow.css";
-@import "./utilities/sl-scroll-lock.css";
-@import "./utilities/stroke.css";
-@import "./utilities/typography.css";
-@import "./utilities/visually-hidden.css";
-@import "./utilities/wrapper.css";
+@import "./utilities/content-width.css" layer(utilities);
+@import "./utilities/detitlify.css" layer(utilities);
+@import "./utilities/layout.css" layer(utilities);
+@import "./utilities/no-width.css" layer(utilities);
+@import "./utilities/flow.css" layer(utilities);
+@import "./utilities/panel.css" layer(utilities);
+@import "./utilities/radius.css" layer(utilities);
+@import "./utilities/recursive-flow.css" layer(utilities);
+@import "./utilities/sl-scroll-lock.css" layer(utilities);
+@import "./utilities/stroke.css" layer(utilities);
+@import "./utilities/typography.css" layer(utilities);
+@import "./utilities/visually-hidden.css" layer(utilities);
+@import "./utilities/wrapper.css" layer(utilities);
 
 /* Blocks */
-@import "./blocks/breadcrumb.css";
-@import "./blocks/button.css";
-@import "./blocks/callout.css";
-@import "./blocks/card.css";
-@import "./blocks/date.css";
-@import "./blocks/emoji.css";
-@import "./blocks/feed-block.css";
-@import "./blocks/footer.css";
-@import "./blocks/graph.css";
-@import "./blocks/hero.css";
-@import "./blocks/home.css";
-@import "./blocks/icon-button.css";
-@import "./blocks/lego.css";
-@import "./blocks/logo.css";
-@import "./blocks/markdown-container.css";
-@import "./blocks/nav.css";
-@import "./blocks/newsletter.css";
-@import "./blocks/site-head.css";
-@import "./blocks/skip-link.css";
-@import "./blocks/stylized-text.css";
-@import "./blocks/theme-switcher.css";
-@import "./blocks/toc.css";
-@import "./blocks/tooltip.css";
-@import "./blocks/unfurl.css";
-@import "./blocks/webmentions.css";
+@import "./blocks/breadcrumb.css" layer(blocks);
+@import "./blocks/button.css" layer(blocks);
+@import "./blocks/callout.css" layer(blocks);
+@import "./blocks/card.css" layer(blocks);
+@import "./blocks/date.css" layer(blocks);
+@import "./blocks/emoji.css" layer(blocks);
+@import "./blocks/feed-block.css" layer(blocks);
+@import "./blocks/footer.css" layer(blocks);
+@import "./blocks/graph.css" layer(blocks);
+@import "./blocks/hero.css" layer(blocks);
+@import "./blocks/home.css" layer(blocks);
+@import "./blocks/icon-button.css" layer(blocks);
+@import "./blocks/lego.css" layer(blocks);
+@import "./blocks/logo.css" layer(blocks);
+@import "./blocks/markdown-container.css" layer(blocks);
+@import "./blocks/nav.css" layer(blocks);
+@import "./blocks/newsletter.css" layer(blocks);
+@import "./blocks/site-head.css" layer(blocks);
+@import "./blocks/skip-link.css" layer(blocks);
+@import "./blocks/stylized-text.css" layer(blocks);
+@import "./blocks/theme-switcher.css" layer(blocks);
+@import "./blocks/toc.css" layer(blocks);
+@import "./blocks/tooltip.css" layer(blocks);
+@import "./blocks/unfurl.css" layer(blocks);
+@import "./blocks/webmentions.css" layer(blocks);

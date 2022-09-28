@@ -276,14 +276,14 @@ blockquote {
 /* Details */
 
 summary {
-  background-color: var(--neutral-bg);
+  background-color: var(--accent-bg);
   border-radius: var(--radius-2);
   margin: calc(var(--size-2) * -1) calc(var(--size-3) * -1);
   padding: var(--size-2) var(--size-3);
 }
 
 details {
-  background-color: var(--neutral-bg-subtle);
+  background-color: var(--accent-bg-subtle);
   border-radius: var(--radius-2);
   padding-block: var(--size-2);
   padding-inline: var(--size-3);
