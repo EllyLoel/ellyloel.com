@@ -6,6 +6,11 @@ title: Cascade layers
 Heads up! This post is under construction, so take it with a grain of salt.
 :::
 
+My current layer setup:
+```css
+@layer reset, vars, base, blocks, utilities;
+```
+
 ## References
 - https://youtu.be/vK8vj1l_oRk
 - https://youtu.be/NDNRGW-_1EE
