@@ -119,7 +119,6 @@ module.exports = (eleventyConfig) => {
         .slice(0, -1)
         .join(" ");
       file.excerpt = exceprt;
-      if (exceprt.length > 160) console.log("\n\n\nexceprt", exceprt);
     },
   });
 
