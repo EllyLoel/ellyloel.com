@@ -1,7 +1,8 @@
 {
-  "baseFontSize": 16,
+  "baseFontSize": 20,
   "cssTheme": "Things",
   "translucency": true,
   "theme": "system",
-  "baseFontSizeAction": true
+  "baseFontSizeAction": false,
+  "monospaceFontFamily": "JetBrains Mono"
 }

@@ -1,0 +1,14 @@
+{
+  "accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY1MDM3MzYzLCJqdGkiOiIyMDlmZWNlYTQ3MmM0NGJjODkwODlkZTlhNTk1MDUwMSIsInVzZXJfaWQiOjUyMzA1LCJjbGllbnRfdHlwZSI6ImludGVncmF0aW9uIiwibG9naW5fc2Vzc2lvbl9pZCI6IjQ5YzVlMDI0LTQ2ZDItNDc5MC1iZjBhLTRmYjNlYzEyYTlkMiJ9.Gy236Cg8zam4w1GHaVXKiv1FSR4Ctya0e5qEekRRYfM",
+  "refreshToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3MjEyMjE2MywianRpIjoiMjFjODRjOGUzZGY0NGNhNmI0YmJjYTczZDZhNThiMTEiLCJ1c2VyX2lkIjo1MjMwNSwiY2xpZW50X3R5cGUiOiJpbnRlZ3JhdGlvbiIsImxvZ2luX3Nlc3Npb25faWQiOiI0OWM1ZTAyNC00NmQyLTQ3OTAtYmYwYS00ZmIzZWMxMmE5ZDIifQ.cJx2le5VvwhztDcAuf-C_iaxqdRR7tKkk9BUoIfVAWU",
+  "qrSessionToken": "9c0b9ac8999a591a0db2c041ff9af55e9286b823e45d5fd8a6a47aa27c47828b",
+  "dataDir": "src/bookmarks",
+  "syncInterval": 60,
+  "hasCompletedInitialSetup": true,
+  "lastSync": "2022-09-28T06:28:21.547Z",
+  "isSyncing": false,
+  "contentMap": {
+    "A Whole Cascade of Layers.md": "4_12455205"
+  },
+  "recreateIfMissing": true
+}
