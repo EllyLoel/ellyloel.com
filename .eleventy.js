@@ -115,7 +115,7 @@ module.exports = (eleventyConfig) => {
         .replace(/\[|\]/gm, "")
         .replace(/:::.+:?:?:?/gm, "")
         .replace(/{%.+%?}?/gm, "")
-        .split(" ")
+        .split(/\.\s/gm)
         .slice(0, -1)
         .join(" ");
       file.excerpt = exceprt;
