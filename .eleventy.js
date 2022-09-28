@@ -89,7 +89,10 @@ module.exports = (eleventyConfig) => {
   // Excerpts
   eleventyConfig.setFrontMatterParsingOptions({
     excerpt: (file, options) => {
-      const firstTwoSentences = file.content.split(". ").slice(0, 2).join(". ");
+      const firstTwoSentences = file.content
+        .split(/\.\s/gm)
+        .slice(0, 2)
+        .join(". ");
       const first160Characters = file.content.split("").slice(0, 160).join("");
       const contentBeforeHTML = file.content.split("<").slice(0, 1).join("");
       const exceprt = file.content.includes("<")
@@ -97,23 +100,24 @@ module.exports = (eleventyConfig) => {
         : firstTwoSentences.length > 160
         ? first160Characters
         : firstTwoSentences;
-      file.excerpt = removeMd(exceprt, { gfm: true })
-        .replace(/\[\[|\]\]/gm, "")
-        .replace(/(\^\[)[^\[\]]+(\])/gm, (match) =>
-          match === "^[" ? " (" : ")"
-        )
-        .replace(/(\()[^\(\)+]+(\)){1}/gm, "")
-        .replace(/(\[])[^\[\]+]+(\]){1}/gm, "")
-        .replace(
-          /https?:\/\/(?:www\.)?([-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b)*(\/[\/\d\w\.-]*)*(?:[\?])*(.+)*/gm,
-          ""
-        )
-        .replace(/\[|\]/gm, "")
-        .replace(/:::.+:?:?:?/gm, "")
-        .replace(/{%.+%?}?/gm, "")
-        .split(" ")
-        .slice(0, -1)
-        .join(" ");
+      file.excerpt = removeMd(exceprt, { gfm: true });
+      // .replace(/\[\[|\]\]/gm, "")
+      // .replace(/(\^\[)[^\[\]]+(\])/gm, (match) =>
+      //   match === "^[" ? " (" : ")"
+      // )
+      // .replace(/(\()[^\(\)+]+(\)){1}/gm, "")
+      // .replace(/(\[])[^\[\]+]+(\]){1}/gm, "")
+      // .replace(
+      //   /https?:\/\/(?:www\.)?([-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b)*(\/[\/\d\w\.-]*)*(?:[\?])*(.+)*/gm,
+      //   ""
+      // )
+      // .replace(/\[|\]/gm, "")
+      // .replace(/:::.+:?:?:?/gm, "")
+      // .replace(/{%.+%?}?/gm, "")
+      // .split(" ")
+      // .slice(0, -1)
+      // .join(" ");
+      console.log(file.exceprt);
     },
   });
 
