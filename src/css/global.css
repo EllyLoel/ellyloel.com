@@ -339,6 +339,16 @@ menu {
   padding-inline-start: 0;
 }
 
+/* FOUCE https:/*www.abeautifulsite.net/posts/flash-of-undefined-custom-elements/ */
+:not(:defined) {
+  opacity: 0;
+}
+
+:defined {
+  opacity: 1;
+  transition: opacity 500ms var(--ease-2);
+}
+
 /* General interactive states */
 
 :focus-visible {
@@ -353,6 +363,10 @@ menu {
 @media (--motionOK) {
   :focus-visible {
     transition: outline-offset 145ms var(--ease-2);
+  }
+
+  :defined:focus-visible {
+    transition: outline-offset 145ms var(--ease-2), opacity 500ms var(--ease-2);
   }
 
   :not(:active):focus-visible {
@@ -373,15 +387,4 @@ menu {
 /* If an element is [hidden] it needs to be max priority */
 [hidden] {
   display: none !important;
-}
-
-/* FOUCE https:/*www.abeautifulsite.net/posts/flash-of-undefined-custom-elements/ */
-:not(:defined) {
-  opacity: 0;
-  transition: opacity 500ms var(--ease-2);
-}
-
-:defined {
-  opacity: 1;
-  transition: opacity 500ms var(--ease-2);
 }
