@@ -11,14 +11,16 @@ layout: base-without-header.njk
 		<time class="[ date ]" datetime="{{ page.date | dateToISO }}">{{ page.date | dateToLocaleDateFull }}</time>
 	</p>
 </header>
-{%- if content | toc !== "" -%}
+{%- set tableOfContent = content | toc -%}
+{{ tableOfContent.match(/<li>/gm) | dump }}
+{%- if tableOfContent !== "" -%}
 	<aside class="[ toc-container ][ flow content-width ]">
 		<details>
 			<summary class="[ flex ]">
 				<sl-icon class="[ emoji ]" library="fa" name="fas-play" label=""></sl-icon>
 				<h2>Table of contents</h2>
 			</summary>
-			{{ content | toc | dump }}
+			{{ tableOfContent | safe }}
 		</details>
 	</aside>
 {%- endif -%}
