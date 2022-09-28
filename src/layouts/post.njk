@@ -18,7 +18,7 @@ layout: base-without-header.njk
 				<sl-icon class="[ emoji ]" library="fa" name="fas-play" label=""></sl-icon>
 				<h2>Table of contents</h2>
 			</summary>
-			{{ content | toc | safe }}
+			{{ content | toc | dump }}
 		</details>
 	</aside>
 {%- endif -%}
