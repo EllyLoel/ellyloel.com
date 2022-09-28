@@ -1,2 +1,6 @@
 .webmentions {
+  & .webmentions__field-wrapper {
+    display: flex;
+    gap: var(--size-3);
+  }
 }

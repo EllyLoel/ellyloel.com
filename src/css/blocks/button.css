@@ -28,6 +28,7 @@
   text-align: center;
   transition: border-color 0.5s var(--ease-3) 3s;
   user-select: none;
+  line-height: 1;
 
   @media (--motionOK) {
     transition: border-color 0.5s var(--ease-3) 3s,

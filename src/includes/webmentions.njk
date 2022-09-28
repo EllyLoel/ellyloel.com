@@ -6,8 +6,8 @@
 		</h2>
 		<form action="https://webmention.io/{{ site.url }}/webmention" method="post" class="[ form-webmention ][ flow ]">
 			<label for="form-webmention-source" class="webmentions__form-label">
-					Have you published your own post mentioning this one? Let me know the URL:
-				</label>
+				Have you published your own post mentioning this one? Let me know the URL:
+			</label>
 			<div class="webmentions__field-wrapper">
 				<input
 						id="form-webmention-source"
@@ -17,7 +17,8 @@
 						required="required"
 						class="webmentions__form-field">
 				<input type="hidden" name="target" value="{{ site.url }}{{ page.url }}">
-				<input type="submit" value="Send" class="webmentions__form-submit"></div>
+				<input type="submit" value="Send" class="webmentions__form-submit">
+			</div>
 		</form>
 		<small>
 			Powered by
