@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "src/garden/Neurodiversity.md",
+            "file": "src/garden/Troubles with backdrop-filter and SVG clipping.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -81,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/garden/Neurodiversity.md"
+                "file": "src/garden/Troubles with backdrop-filter and SVG clipping.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/garden/Neurodiversity.md",
+                "file": "src/garden/Troubles with backdrop-filter and SVG clipping.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,8 +112,8 @@
   },
   "active": "b26ee9fe68ce9a6b",
   "lastOpenFiles": [
-    "src/speaking.md",
     "src/garden/Neurodiversity.md",
+    "src/speaking.md",
     "src/garden/Inexplicable lack of accomplishment.md",
     "src/garden/How to give your brain the stimulation it needs.md",
     "src/garden/How to get stuff done when you have ADHD.md",
