@@ -50,7 +50,10 @@ module.exports = (eleventyConfig) => {
         relativeBaseURL: "../",
         suffix: "",
         uriSuffix: "",
-        generatePageNameFromLabel: (label) => slugify(label).toLowerCase(),
+        generatePageNameFromLabel: (label) => {
+          console.log("label", slugify(label, { lower: true }));
+          return slugify(label, { lower: true });
+        },
       })
     );
 

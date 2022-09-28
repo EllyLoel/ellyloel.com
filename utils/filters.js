@@ -64,7 +64,7 @@ module.exports = {
       const outboundLinks = (
         [...new Set(postContent.match(wikilinkRegEx))] || []
       ).map((wikilink) => {
-        return slugify(wikilink.slice(2, -2).split("|")[0]).toLowerCase();
+        return slugify(wikilink.slice(2, -2).split("|")[0], { lower: true });
       });
 
       for (const link of outboundLinks) {
