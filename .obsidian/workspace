@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "c5eef59506f4fdcd",
+        "id": "b26ee9fe68ce9a6b",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "src/bookmarks/Intentional Career Building.md",
+            "file": "src/garden/Finding the perfect app.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -81,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/bookmarks/Intentional Career Building.md"
+                "file": "src/garden/Finding the perfect app.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/bookmarks/Intentional Career Building.md",
+                "file": "src/garden/Finding the perfect app.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,17 +110,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "c5eef59506f4fdcd",
+  "active": "b26ee9fe68ce9a6b",
   "lastOpenFiles": [
-    "src/bookmarks/A Whole Cascade of Layers.md",
-    "src/bookmarks/Zero to 60 in Software Development.md",
-    "src/bookmarks/Intentional Career Building.md",
-    "src/bookmarks/Trouble with time management.md",
-    "src/bookmarks/Trouble organising and planning.md",
-    "src/bookmarks/Interface design patterns checklist.md",
-    "src/bookmarks/High degree of creativity and imagination.md",
-    "src/bookmarks/Generosity.md",
-    "src/bookmarks/A wandering mind.md",
-    "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md"
+    "src/garden/Estimating time for tasks.md",
+    "src/garden/Executive function.md",
+    "src/garden/Atomic.md",
+    "src/garden/Creativity and imagination.md",
+    "src/garden/Cascade layers.md",
+    "src/garden/Zettelkasten.md",
+    "src/garden/YAML is strict.md",
+    "src/garden/You should be using a password manager.md",
+    "src/garden/Web Components as templates.md",
+    "src/garden/Troubles with backdrop-filter and SVG clipping.md"
   ]
 }
