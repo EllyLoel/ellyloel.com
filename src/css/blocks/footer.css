@@ -4,6 +4,7 @@
   & css-doodle {
     position: absolute;
     inset: 0;
+    filter: blur(8px);
 
     @media (forced-colors: active) {
       display: none;
