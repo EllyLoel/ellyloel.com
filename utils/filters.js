@@ -27,6 +27,10 @@ module.exports = {
     return markdownIt({ html: true }).render(content);
   },
 
+  removeHtml: function (content = "") {
+    return markdownIt({ html: true }).render(content);
+  },
+
   sliceCollection: function (collection, count) {
     return collection.slice(0, count || 5);
   },
