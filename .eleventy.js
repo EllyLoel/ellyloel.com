@@ -95,29 +95,31 @@ module.exports = (eleventyConfig) => {
         .join(". ");
       const first160Characters = file.content.split("").slice(0, 160).join("");
       const contentBeforeHTML = file.content.split("<").slice(0, 1).join("");
-      const exceprt = file.content.includes("<")
-        ? contentBeforeHTML
-        : firstTwoSentences.length > 160
-        ? first160Characters
-        : firstTwoSentences;
-      file.excerpt = removeMd(exceprt, { gfm: true });
-      // .replace(/\[\[|\]\]/gm, "")
-      // .replace(/(\^\[)[^\[\]]+(\])/gm, (match) =>
-      //   match === "^[" ? " (" : ")"
-      // )
-      // .replace(/(\()[^\(\)+]+(\)){1}/gm, "")
-      // .replace(/(\[])[^\[\]+]+(\]){1}/gm, "")
-      // .replace(
-      //   /https?:\/\/(?:www\.)?([-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b)*(\/[\/\d\w\.-]*)*(?:[\?])*(.+)*/gm,
-      //   ""
-      // )
-      // .replace(/\[|\]/gm, "")
-      // .replace(/:::.+:?:?:?/gm, "")
-      // .replace(/{%.+%?}?/gm, "")
-      // .split(" ")
-      // .slice(0, -1)
-      // .join(" ");
-      console.log(file.exceprt);
+      let exceprt =
+        file.content.includes("<") && contentBeforeHTML.length < 160
+          ? contentBeforeHTML
+          : firstTwoSentences.length > 160
+          ? first160Characters
+          : firstTwoSentences;
+      exceprt = removeMd(exceprt, { gfm: true })
+        .replace(/\[\[|\]\]/gm, "")
+        .replace(/(\^\[)[^\[\]]+(\])/gm, (match) =>
+          match === "^[" ? " (" : ")"
+        )
+        .replace(/(\()[^\(\)+]+(\)){1}/gm, "")
+        .replace(/(\[])[^\[\]+]+(\]){1}/gm, "")
+        .replace(
+          /https?:\/\/(?:www\.)?([-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b)*(\/[\/\d\w\.-]*)*(?:[\?])*(.+)*/gm,
+          ""
+        )
+        .replace(/\[|\]/gm, "")
+        .replace(/:::.+:?:?:?/gm, "")
+        .replace(/{%.+%?}?/gm, "")
+        .split(" ")
+        .slice(0, -1)
+        .join(" ");
+      file.excerpt = exceprt;
+      if (exceprt.length > 160) console.log("\n\n\nexceprt", exceprt);
     },
   });
 
