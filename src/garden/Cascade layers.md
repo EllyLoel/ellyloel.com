@@ -15,11 +15,7 @@ My current layer setup:
 
 ## Ways to create or put styles into layers
 ### Formal syntax
-```
-@layer [ <layer-name># | <layer-name>?  {
-  <stylesheet>
-} ]
-```
+{% svg "./public/assets/svg/cascade layer formal syntax.svg" %}
 
 
 
