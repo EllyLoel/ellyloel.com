@@ -6,12 +6,31 @@ title: Cascade layers
 Heads up! This post is under construction, so take it with a grain of salt.
 :::
 
+## Coming up with a layer stack
+
 My current layer setup:
 ```css
 @layer reset, vars, base, blocks, utilities;
 ```
 
+## Ways to create or put styles into layers
+```css
+@layer layer-name {
+	.foo {
+		baz: bar;
+	}
+}
 
+@layer layer-name, layer-name, layer-name;
+
+@layer {
+	.foo {
+		baz: bar;
+	}
+}
+
+@import "foo.css" layer(layer-name);
+```
 
 ## References
 - https://youtu.be/vK8vj1l_oRk
