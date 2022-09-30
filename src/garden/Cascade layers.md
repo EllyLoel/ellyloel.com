@@ -7,19 +7,34 @@ Heads up! This post is under construction, so take it with a grain of salt.
 :::
 
 ## Coming up with a layer stack
-
 My current layer setup:
 ```css
 @layer reset, vars, base, blocks, utilities;
 ```
 
+
+```css
+@layer reset, defaults, patterns, components, utilities, overrides;
+```
+
 ## Ways to create or put styles into layers
 ### Formal syntax
-{% svg "./public/assets/svg/cascade layer formal syntax.svg" %}
+```css
+@layer [ <layer-name># | <layer-name>? { <stylesheet> } ]
+```
 WTF does that mean though??
 
 Okay, let's break it down
-{% svg "./public/assets/svg/cascade layer formal syntax explained.svg" %}
+```css
+@layer [
+  /* 1 or more layer names */
+  <layer-name>#
+  /* OR */
+  |
+  /* 0 or 1 layer names with styles */
+  <layer-name>? { <stylesheet> }
+]
+```
 
 Basically, these are the ways you can use `@layer`:
 
@@ -51,9 +66,9 @@ Don't forget about importing styles into a layer
 @import "foo.css" layer(layer-name);
 ```
 
-Or linking to a stylesheet and 
-```css
-
+There's even been [talk](https://github.com/w3c/csswg-drafts/issues/5853) of being able to set a layer when linking to a stylesheet
+```html
+<link rel="stylesheet" href="foo.css" layer="layer-name">
 ```
 
 ## References
