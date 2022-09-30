@@ -45,9 +45,13 @@ Basically, these are the ways you can use `@layer`:
 }
 ```
 
+### But wait, there's more
+Don't forget about importing styles into a layer
 ```css
 @import "foo.css" layer(layer-name);
 ```
+
+Or linking to a stylesheet and 
 
 ## References
 - https://youtu.be/vK8vj1l_oRk
