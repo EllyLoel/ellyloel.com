@@ -16,24 +16,36 @@ My current layer setup:
 ## Ways to create or put styles into layers
 ### Formal syntax
 {% svg "./public/assets/svg/cascade layer formal syntax.svg" %}
+WTF does that mean though??
 
+Okay, let's break it down
+{% svg "./public/assets/svg/cascade layer formal syntax explained.svg" %}
 
+Basically, these are the ways you can use `@layer`:
 
 ```css
-@layer layer-name {
-	.foo {
-		baz: bar;
-	}
-}
+/* 1 layer name */
+@layer layer-name;
 
+/* More than 1 layer name */
 @layer layer-name, layer-name, layer-name;
 
+/* No layer name with styles */
 @layer {
 	.foo {
 		baz: bar;
 	}
 }
 
+/* 1 layer name with styles */
+@layer layer-name {
+	.foo {
+		baz: bar;
+	}
+}
+```
+
+```css
 @import "foo.css" layer(layer-name);
 ```
 
