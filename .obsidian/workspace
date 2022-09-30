@@ -112,6 +112,8 @@
   },
   "active": "b26ee9fe68ce9a6b",
   "lastOpenFiles": [
+    "src/garden/Design systems in an agency.md",
+    "src/garden/Cascade layers.md",
     "src/garden/Atomic.md",
     "src/garden/YAML is strict.md",
     "src/garden/Troubles with backdrop-filter and SVG clipping.md",
@@ -119,8 +121,6 @@
     "src/speaking.md",
     "src/garden/Inexplicable lack of accomplishment.md",
     "src/garden/How to give your brain the stimulation it needs.md",
-    "src/garden/How to get stuff done when you have ADHD.md",
-    "src/garden/Habit Creation.md",
-    "src/garden/Finding the perfect app.md"
+    "src/garden/How to get stuff done when you have ADHD.md"
   ]
 }
