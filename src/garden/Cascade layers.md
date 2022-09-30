@@ -21,10 +21,10 @@ And this one in her article "A Whole Cascade of Layers":
 ```css
 @layer spec, browser, reset, default, features, layout, theme;
 ```
-Though as she mentions, `spec` and `browser` aren't actual layers she's creating, they're fundamental to the web.
+Though, as she mentions, `spec` and `browser` aren't actual layers she's creating, they're fundamental to the web.
 So it's something more like this:
 ```css
-@layer spec, browser, reset, default, features, layout, theme;
+@layer reset, default, features, layout, theme;
 ```
 
 ## Ways to create or put styles into layers
