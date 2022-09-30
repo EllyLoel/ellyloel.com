@@ -12,9 +12,19 @@ My current layer setup:
 @layer reset, vars, base, blocks, utilities;
 ```
 
-
+Miriam Suzanne shared this one in her CSS-Tricks article:
 ```css
 @layer reset, default, themes, patterns, layouts, components, utilities;
+```
+
+And this one in her article "A Whole Cascade of Layers":
+```css
+@layer spec, browser, reset, default, features, layout, theme;
+```
+Though as she mentions, `spec` and `browser` aren't actual layers she's creating, they're fundamental to the web.
+So it's something more like this:
+```css
+@layer spec, browser, reset, default, features, layout, theme;
 ```
 
 ## Ways to create or put styles into layers
