@@ -14,7 +14,7 @@ My current layer setup:
 
 
 ```css
-@layer reset, defaults, patterns, components, utilities, overrides;
+@layer reset, default, themes, patterns, layouts, components, utilities;
 ```
 
 ## Ways to create or put styles into layers
