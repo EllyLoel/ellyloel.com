@@ -1,21 +1,25 @@
 ---
 layout: base-without-header.njk
 ---
-<header>
+<header style="border-block-end: var(--border-size-1) solid var(--neutral-border); padding-block-end: var(--size-3);">
 	{%- include "breadcrumb.njk" -%}
 	<h1>{{ title }}</h1>
-	<p>
-		<sl-tooltip content="Last modified">
-			<sl-icon class="[ emoji ]" library="fa" name="far-calendar-plus" label="Last modified"></sl-icon>
-		</sl-tooltip>
-		<time class="[ date ]" datetime="{{ page.date | dateToISO }}">{{ page.date | dateToLocaleDateFull }}</time>
-		{%- if stage -%}
-			<sl-tooltip content="Stage">
-				<sl-icon class="[ emoji ]" library="fa" name="fas-seedling" label="Last modified"></sl-icon>
+	<div class="[ flex gap-3 flex-wrap ]">
+		<span>
+			<sl-tooltip content="Last modified">
+				<sl-icon class="[ emoji ]" library="fa" name="far-calendar-plus" label="Last modified"></sl-icon>
 			</sl-tooltip>
-			<span>{{ stage }}</span>
+			<time class="[ date ]" datetime="{{ page.date | dateToISO }}">{{ page.date | dateToLocaleDateFull }}</time>
+		</span>
+		{%- if stage -%}
+			<span>
+				<sl-tooltip content="Stage">
+					<sl-icon class="[ emoji ]" library="fa" name="fas-{%- if stage === "seedling" -%}seedling{%- elif stage === "budding" -%}spa{%- else -%}tree{%- endif -%}" label="stage"></sl-icon>
+				</sl-tooltip>
+				<span>{{ stage | sentenceCase }}</span>
+			</span>
 		{%- endif -%}
-	</p>
+	</div>
 </header>
 {%- set contentWithoutHtml = content.replace(r/<\/?[a-z0-9]+\b[^>]*>/g, "") -%}
 {%- if contentWithoutHtml.length > 3000 -%}
