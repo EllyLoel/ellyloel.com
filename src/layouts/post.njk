@@ -14,7 +14,7 @@ layout: base-without-header.njk
 		{%- if stage -%}
 			<span>
 				<sl-tooltip content="Stage">
-					<sl-icon class="[ emoji ]" library="fa" name="fas-{%- if stage === "seedling" -%}seedling{%- elif stage === "budding" -%}spa{%- else -%}tree{%- endif -%}" label="stage"></sl-icon>
+					<sl-icon class="[ emoji ]" library="fa" name="fas-{%- if stage === "seedling" -%}seedling{%- elif stage === "budding" -%}spa{%- elif stage === "evergreen" -%}tree{%- elif stage === "draft" -%}file-pen{%- elif stage === "complete" -%}circle-check{%- endif -%}" label="stage"></sl-icon>
 				</sl-tooltip>
 				<span>{{ stage | sentenceCase }}</span>
 			</span>
