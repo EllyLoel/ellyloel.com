@@ -9,6 +9,12 @@ layout: base-without-header.njk
 			<sl-icon class="[ emoji ]" library="fa" name="far-calendar-plus" label="Last modified"></sl-icon>
 		</sl-tooltip>
 		<time class="[ date ]" datetime="{{ page.date | dateToISO }}">{{ page.date | dateToLocaleDateFull }}</time>
+		{%- if stage -%}
+			<sl-tooltip content="Stage">
+				<sl-icon class="[ emoji ]" library="fa" name="fas-seedling" label="Last modified"></sl-icon>
+			</sl-tooltip>
+			<span>{{ stage }}</span>
+		{%- endif -%}
 	</p>
 </header>
 {%- set contentWithoutHtml = content.replace(r/<\/?[a-z0-9]+\b[^>]*>/g, "") -%}

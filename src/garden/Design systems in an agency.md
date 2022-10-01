@@ -1,5 +1,6 @@
 ---
 title: Design systems in an agency
+stage: seedling
 ---
 
 ::: callout Multi layered design system

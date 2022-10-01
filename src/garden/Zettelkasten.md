@@ -1,5 +1,6 @@
 ---
 title: Zettelkasten
+stage: evergreen
 ---
 
 > The zettelkasten is a method of note-taking and personal knowledge management

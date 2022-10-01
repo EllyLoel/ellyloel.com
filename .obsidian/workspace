@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "src/garden/Cascade layers.md",
+            "file": "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -81,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/garden/Cascade layers.md"
+                "file": "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/garden/Cascade layers.md",
+                "file": "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,15 +112,15 @@
   },
   "active": "b26ee9fe68ce9a6b",
   "lastOpenFiles": [
-    "src/garden/Design systems in an agency.md",
-    "src/garden/Cascade layers.md",
+    "src/blog/Holy shit there's so much CSS.md",
+    "src/garden/Altruism.md",
+    "src/garden/ADHD.md",
+    "src/garden/Astro.md",
     "src/garden/Atomic.md",
-    "src/garden/YAML is strict.md",
-    "src/garden/Troubles with backdrop-filter and SVG clipping.md",
-    "src/garden/Neurodiversity.md",
-    "src/speaking.md",
-    "src/garden/Inexplicable lack of accomplishment.md",
-    "src/garden/How to give your brain the stimulation it needs.md",
-    "src/garden/How to get stuff done when you have ADHD.md"
+    "src/garden/Autism.md",
+    "src/garden/Cascade layers.md",
+    "src/garden/Composition over Inheritance.md",
+    "src/garden/Zettelkasten.md",
+    "src/garden/You should be using a password manager.md"
   ]
 }

@@ -1,5 +1,6 @@
 ---
 title: Web Components as templates
+stage: seedling
 ---
 
 I need a way of being able to use web components as just plain HTML templates/components without JavaScript.
