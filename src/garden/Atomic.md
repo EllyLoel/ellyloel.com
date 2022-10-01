@@ -1,5 +1,6 @@
 ---
 title: Atomic
+stage: seedling
 ---
 
 > A single irreducible unit or component in a larger system.
