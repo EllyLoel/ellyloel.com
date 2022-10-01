@@ -14,7 +14,8 @@ eleventyNavigation:
     {% feedItem
     title = bookmark.data.title,
     url = bookmark.url,
-    excerpt = bookmark.data.page.excerpt
+    excerpt = bookmark.data.page.excerpt,
+    stage = ""
  %}
   {%- endfor %}
 </ul>
