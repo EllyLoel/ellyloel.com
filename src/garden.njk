@@ -16,7 +16,8 @@ eleventyNavigation:
     {% feedItem
     title = note.data.title,
     url = note.url,
-    excerpt = note.data.page.excerpt
+    excerpt = note.data.page.excerpt,
+    stage = note.data.stage
  %}
   {%- endfor %}
 </ul>
