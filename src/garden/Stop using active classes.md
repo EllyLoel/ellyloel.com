@@ -1,5 +1,6 @@
 ---
 title: Stop using active classes
+stage: seedling
 ---
 
 Semantic/stateful/accessible selectors are really important!

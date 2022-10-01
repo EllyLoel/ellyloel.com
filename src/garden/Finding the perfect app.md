@@ -1,5 +1,6 @@
 ---
 title: Finding the perfect app
+stage: budding
 ---
 
 I've tried just about every productivity app under the sun, and I still haven't found "the one".

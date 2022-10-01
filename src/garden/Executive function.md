@@ -1,5 +1,6 @@
 ---
 title: Executive function
+stage: budding
 ---
 
 The mental processes people rely on to self regulate. The executive functions enable a person to control their thoughts, words, actions and emotions. They also assist them to perceive and manage time, and to direct and manage their behaviour over time.

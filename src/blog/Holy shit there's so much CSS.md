@@ -1,5 +1,6 @@
 ---
 title: Holy shit there's so much CSS
+stage: draft
 ---
 
 ## Fundamentals

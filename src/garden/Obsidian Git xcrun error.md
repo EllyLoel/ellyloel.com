@@ -1,5 +1,6 @@
 ---
 title: Obsidian Git xcrun error
+stage: seedling
 ---
 
 This is for my future self.

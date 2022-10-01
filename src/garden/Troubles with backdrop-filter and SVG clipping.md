@@ -1,5 +1,6 @@
 ---
 title: Troubles with backdrop-filter and SVG clipping
+stage: seedling
 ---
 
 ## Navigation menu story
