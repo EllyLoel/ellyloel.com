@@ -174,6 +174,13 @@ module.exports = (eleventyConfig) => {
             ? `
                 <div slot="header" class="[ feed-item-card-title ]">
                   <p><a href="${feedItem.url}">${feedItem.title}</a></p>
+                  {%- if stage -%}
+                    <span>
+                      <sl-tooltip content="{{ stage | sentenceCase }}">
+                        <sl-icon class="[ emoji ]" library="fa" name="fas-{%- if stage === "seedling" -%}seedling{%- elif stage === "budding" -%}spa{%- elif stage === "evergreen" -%}tree{%- elif stage === "draft" -%}file-pen{%- elif stage === "complete" -%}circle-check{%- endif -%}" label="stage"></sl-icon>
+                      </sl-tooltip>
+                    </span>
+                  {%- endif -%}
                 </div>
                 ${markdownLibrary.render(`${feedItem.excerpt} &#8230;`)}
               `
