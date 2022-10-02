@@ -38,6 +38,7 @@
 @import "./blocks/date.css" layer(blocks);
 @import "./blocks/emoji.css" layer(blocks);
 @import "./blocks/feed-block.css" layer(blocks);
+@import "./blocks/feed.css" layer(blocks);
 @import "./blocks/footer.css" layer(blocks);
 @import "./blocks/graph.css" layer(blocks);
 @import "./blocks/hero.css" layer(blocks);
@@ -50,6 +51,7 @@
 @import "./blocks/newsletter.css" layer(blocks);
 @import "./blocks/site-head.css" layer(blocks);
 @import "./blocks/skip-link.css" layer(blocks);
+@import "./blocks/stage.css" layer(blocks);
 @import "./blocks/stylized-text.css" layer(blocks);
 @import "./blocks/theme-switcher.css" layer(blocks);
 @import "./blocks/toc.css" layer(blocks);

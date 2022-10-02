@@ -185,7 +185,7 @@ module.exports = (eleventyConfig) => {
       : ``;
 
     return `
-      <li>
+      <li class="${feedItem?.stage || ""}">
         <sl-card class="[ feed-item-card ]">
         ${
           feedItem.excerpt
