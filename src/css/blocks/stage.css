@@ -1,0 +1,15 @@
+sl-select.stage {
+  display: none;
+
+  @supports selector(a:has(b)) {
+    display: block;
+  }
+
+  max-inline-size: var(--size-content-2);
+
+  & sl-menu-item {
+    &::part(base) {
+      gap: var(--size-1);
+    }
+  }
+}
