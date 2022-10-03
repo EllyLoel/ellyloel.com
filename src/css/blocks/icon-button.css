@@ -19,7 +19,7 @@ sl-icon-button {
       outline-offset: 0px;
     }
 
-    @media (--motionOK) {
+    @media (prefers-reduced-motion: no-preference) {
       transition-property: color, outline-offset;
     }
   }

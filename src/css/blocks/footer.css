@@ -17,16 +17,10 @@
     grid-template-columns: auto 1fr;
     grid-auto-rows: max-content;
     grid-template-areas:
-      "newsletter"
       "sitemap"
       "socials"
       "edit";
     row-gap: var(--size-9);
-
-    & .newsletter {
-      grid-area: newsletter;
-      block-size: fit-content;
-    }
 
     & picture {
       display: none;
@@ -35,6 +29,10 @@
     & .sitemap {
       grid-area: sitemap;
       block-size: fit-content;
+
+      & > ul {
+        column-count: 2;
+      }
     }
 
     & .social-links {
@@ -49,21 +47,17 @@
       grid-area: edit;
     }
 
-    @media (--lg-n-above) {
+    @media (width >= 1024px) {
       grid-template-areas:
-        "newsletter image"
         "sitemap image"
-        "socials edit";
+        "socials image"
+        "edit image";
       column-gap: var(--size-9);
 
       & picture {
         display: block;
         grid-area: image;
         block-size: fit-content;
-      }
-
-      & .gh-edit {
-        justify-self: end;
       }
     }
   }

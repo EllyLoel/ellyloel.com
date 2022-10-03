@@ -10,7 +10,6 @@
 
 /* Variables */
 @import "./vars.css" layer(vars);
-@import "/@root/node_modules/open-props/media.min.css" layer(vars);
 
 /* Global styles */
 @import "./global.css" layer(base);

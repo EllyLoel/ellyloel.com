@@ -10,7 +10,7 @@ stylized-text::part(text) {
     outline-color: var(--link);
   }
 
-  @media (--motionOK) {
+  @media (prefers-reduced-motion: no-preference) {
     &:focus-visible {
       transition: outline-offset 145ms cubic-bezier(0.25, 0, 0.4, 1);
     }

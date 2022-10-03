@@ -4,7 +4,7 @@
  * centers the contents
  */
 .wrapper {
-  max-width: 70rem;
+  max-inline-size: var(--wrapper-size, 72ch);
   padding-inline: var(--size-4);
   margin-inline: auto;
   position: relative;

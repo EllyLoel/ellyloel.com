@@ -3,7 +3,7 @@
   margin: var(--size-7) 0;
   padding: var(--size-7) 0;
 
-  @media (--md-n-above) {
+  @media (width >= 768px) {
     margin: var(--size-8) 0;
     padding: var(--size-8) 0;
   }

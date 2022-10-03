@@ -11,7 +11,7 @@
     display: block;
   }
 
-  @media (--md-n-above) {
+  @media (width >= 768px) {
     flex-direction: row;
   }
 }
