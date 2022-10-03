@@ -30,3 +30,23 @@ sl-select:has(sl-menu-item[value="evergreen"][checked]) ~ .feed {
     display: none;
   }
 }
+
+sl-select:has(sl-menu-item[value="draft"][checked]) ~ .feed {
+  & .draft {
+    display: list-item;
+  }
+
+  & :where(li:not(.draft)) {
+    display: none;
+  }
+}
+
+sl-select:has(sl-menu-item[value="complete"][checked]) ~ .feed {
+  & .complete {
+    display: list-item;
+  }
+
+  & :where(li:not(.complete)) {
+    display: none;
+  }
+}
