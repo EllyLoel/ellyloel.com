@@ -5,7 +5,6 @@
   padding-block-start: var(--size-7);
   padding-block-end: var(--size-6);
   padding-inline: var(--size-5);
-  margin-inline: calc(var(--size-5) * -1);
   position: relative;
 
   & > sl-icon {

@@ -1,3 +1,7 @@
+.nav-wrapper {
+  padding-inline: var(--size-8);
+}
+
 .nav {
   line-height: 1;
   font-weight: var(--font-weight-body-bold);

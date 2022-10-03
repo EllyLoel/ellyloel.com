@@ -41,7 +41,7 @@
       outline-offset: 0px;
     }
 
-    @media (--motionOK) {
+    @media (prefers-reduced-motion: no-preference) {
       transition: outline-offset 145ms var(--ease-2);
     }
   }
@@ -69,11 +69,11 @@ sl-radio-button {
   }
 
   &[value="auto"] {
-    @media (--OSlight) {
+    @media (prefers-color-scheme: light) {
       --_button-bg: var(--diva);
       --_button-text: var(--piano-black);
     }
-    @media (--OSdark) {
+    @media (prefers-color-scheme: dark) {
       --_button-bg: var(--wild-violet);
       --_button-text: var(--peekaboo);
     }

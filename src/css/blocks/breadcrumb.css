@@ -15,7 +15,7 @@ sl-breadcrumb-item {
       outline-offset: var(--size-1);
     }
 
-    @media (--motionOK) {
+    @media (prefers-reduced-motion: no-preference) {
       transition-property: color, outline-offset;
     }
   }

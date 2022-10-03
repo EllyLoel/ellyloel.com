@@ -33,7 +33,7 @@ layout: base-without-header.njk
 		</details>
 	</aside>
 {%- endif -%}
-<article class="[ markdown-container ][ flow flow-space-setter content-width ]" style="--flow-space-setter: 2em;">
+<article class="[ markdown-container ][ flow flow-space-setter ]" style="--flow-space-setter: 2em;">
 	{{ content | safe }}
 </article>
 {%- if backlinks === [] -%}
@@ -56,19 +56,23 @@ layout: base-without-header.njk
 		</ul>
 	</aside>
 {%- endif -%}
-<footer class="[ flow flow-space-setter ]" style="--flow-space-setter: var(--size-8);">
-	<p>
-		Share on <a href='https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text="{{ title }}" by @ellyloel'>Twitter</a> or <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}">LinkedIn</a>.
-	</p>
+<footer class="[ content-footer ][ flow flow-space-setter ]" style="--flow-space-setter: var(--size-8);">
+	<div class="[ share ]">
+		<p>
+			<sl-icon class="[ emoji ]" library="fa" name="fas-share-from-square" label=""></sl-icon> Share on <a href='https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text="{{ title }}" by @ellyloel' class="[ text-decoration-none move-link-styling-to-child ]">
+				<sl-icon class="[ emoji ]" style="vertical-align: -0.15em;" library="fa" name="fab-twitter" label=""></sl-icon> Twitter</a> or <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}" class="[ text-decoration-none move-link-styling-to-child ]">
+				<sl-icon class="[ emoji ]" style="vertical-align: -0.15em;" library="fa" name="fab-linkedin" label=""></sl-icon> LinkedIn</a>.
+		</p>
+	</div>
 	{%- set previousPost = collections.allPostTypes | getPreviousCollectionItem -%}
 	{%- set nextPost = collections.allPostTypes | getNextCollectionItem -%}
 	{%- if previousPost or nextPost -%}
-		<div class="[ flex gap-5 ]">
+		<div class="[ postPagination ][ flex gap-5 ]">
 			{%- if previousPost -%}
 				<sl-tooltip content="{{ previousPost.data.title }}">
 					<a href="{{ previousPost.url }}" class="[ text-decoration-none move-link-styling-to-child flex align-center gap-1 ]">
 						<sl-icon class="[ emoji ]" library="fa" name="fas-angle-left" label=""></sl-icon>
-						<span>Previous Post</span>
+						<span>Prev Post</span>
 					</a>
 				</sl-tooltip>
 			{%- endif -%}

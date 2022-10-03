@@ -52,7 +52,7 @@
   --neutral-10: var(--black);
 
   /* Dark colour scale */
-  @media (--OSdark) {
+  @media (prefers-color-scheme: dark) {
     color-scheme: dark;
 
     --accent-0: var(--black);

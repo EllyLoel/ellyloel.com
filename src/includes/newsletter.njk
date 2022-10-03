@@ -16,14 +16,16 @@
 				</em>
 			</small>
 		</legend>
-		<div class="[ flex flex-col ]">
-			<label for="member_first_name">Name</label>
-			<input name="member[first_name]" id="member_first_name" type="text" placeholder="Name"/>
+		<div>
+			<div class="[ flex flex-col ]">
+				<label for="member_first_name">Name</label>
+				<input name="member[first_name]" id="member_first_name" type="text">
+			</div>
+			<div class="[ flex flex-col ]">
+				<label for="member_email">Email</label>
+				<input name="member[email]" id="member_email" type="email">
+			</div>
+			<button name="member[subscribe]" id="member_submit">Subscribe</button>
 		</div>
-		<div class="[ flex flex-col ]">
-			<label for="member_email">Email</label>
-			<input name="member[email]" id="member_email" type="email" placeholder="name@example.com"/>
-		</div>
-		<button name="member[subscribe]" id="member_submit">Subscribe</button>
 	</fieldset>
 </form>

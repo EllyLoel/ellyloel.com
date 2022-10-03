@@ -213,7 +213,7 @@
   --sl-z-index-tooltip: 1000;
 
   /* Dark colour scale */
-  @media (--OSdark) {
+  @media (prefers-color-scheme: dark) {
     color-scheme: dark;
 
     --sl-color-primary-50: var(--black);

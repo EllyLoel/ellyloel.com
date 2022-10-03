@@ -28,7 +28,7 @@
           outline-offset: 0px;
         }
 
-        @media (--motionOK) {
+        @media (prefers-reduced-motion: no-preference) {
           transition: outline-offset 145ms var(--ease-2);
         }
       }
