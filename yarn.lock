@@ -1224,6 +1224,11 @@ canvas-color-tracker@1:
   dependencies:
     tinycolor2 "^1.4.2"
 
+canvas-confetti@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/canvas-confetti/-/canvas-confetti-1.5.1.tgz#bf5b8622ef3bcd347378a972fc4194a89cfe0c9b"
+  integrity sha512-Ncz+oZJP6OvY7ti4E1slxVlyAV/3g7H7oQtcCDXgwGgARxPnwYY9PW5Oe+I8uvspYNtuHviAdgA0LfcKFWJfpg==
+
 chalk@4.1.2, chalk@^4.0.0, chalk@^4.0.2, chalk@^4.1.0:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.2.tgz#aac4e2b7734a740867aeb16bf02aad556a1e7a01"
@@ -2942,6 +2947,11 @@ he@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
+
+howler@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/howler/-/howler-2.2.3.tgz#a2eff9b08b586798e7a2ee17a602a90df28715da"
+  integrity sha512-QM0FFkw0LRX1PR8pNzJVAY25JhIWvbKMBFM4gqk+QdV+kPXOhleWGCB6AiAF/goGjIHK2e/nIElplvjQwhr0jg==
 
 html-entities@^2.3.3:
   version "2.3.3"

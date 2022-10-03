@@ -23,7 +23,6 @@
 @import "./utilities/panel.css" layer(utilities);
 @import "./utilities/radius.css" layer(utilities);
 @import "./utilities/recursive-flow.css" layer(utilities);
-@import "./utilities/sl-scroll-lock.css" layer(utilities);
 @import "./utilities/stroke.css" layer(utilities);
 @import "./utilities/typography.css" layer(utilities);
 @import "./utilities/visually-hidden.css" layer(utilities);

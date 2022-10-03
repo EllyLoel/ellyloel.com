@@ -9,6 +9,17 @@
 
   & h1 > * {
     display: block;
+
+    & .stroke {
+      user-select: none;
+      cursor: url(https://cdn.custom-cursor.com/db/7648/32/meme-pop-cat-cursor.png),
+        default;
+
+      &:active {
+        cursor: url(https://cdn.custom-cursor.com/db/7647/32/meme-pop-cat-pointer.png),
+          pointer;
+      }
+    }
   }
 
   @media (width >= 768px) {
