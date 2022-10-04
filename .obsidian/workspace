@@ -7,8 +7,13 @@
         "id": "b26ee9fe68ce9a6b",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "src/blog/Should I use Flex or Grid?.md",
+            "mode": "source",
+            "backlinks": false,
+            "source": false
+          }
         }
       }
     ],
@@ -75,7 +80,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "src/blog/Should I use Flex or Grid?.md"
+              }
             }
           },
           {
@@ -84,6 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "src/blog/Should I use Flex or Grid?.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,10 +112,10 @@
   },
   "active": "b26ee9fe68ce9a6b",
   "lastOpenFiles": [
+    "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
+    "src/blog/Should I use Flex or Grid?.md",
     "Pasted image 20221001195359.png",
     "Pasted image 20221004110858.png",
-    "src/blog/Should I use Flex or Grid?.md",
-    "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
     "src/blog/Holy shit there's so much CSS.md",
     "src/garden/Altruism.md",
     "src/garden/ADHD.md",
