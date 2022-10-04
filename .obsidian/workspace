@@ -7,13 +7,8 @@
         "id": "b26ee9fe68ce9a6b",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
-            "mode": "source",
-            "backlinks": false,
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -80,9 +75,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md"
-              }
+              "state": {}
             }
           },
           {
@@ -91,7 +84,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,17 +102,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "b26ee9fe68ce9a6b",
+  "active": "0fe22ccfefd19f6a",
   "lastOpenFiles": [
+    "Pasted image 20221004110858.png",
+    "src/blog/Should I use Flex or Grid?.md",
+    "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
     "src/blog/Holy shit there's so much CSS.md",
     "src/garden/Altruism.md",
     "src/garden/ADHD.md",
     "src/garden/Astro.md",
     "src/garden/Atomic.md",
     "src/garden/Autism.md",
-    "src/garden/Cascade layers.md",
-    "src/garden/Composition over Inheritance.md",
-    "src/garden/Zettelkasten.md",
-    "src/garden/You should be using a password manager.md"
+    "src/garden/Cascade layers.md"
   ]
 }
