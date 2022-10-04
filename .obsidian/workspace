@@ -102,8 +102,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "0fe22ccfefd19f6a",
+  "active": "b26ee9fe68ce9a6b",
   "lastOpenFiles": [
+    "Pasted image 20221001195359.png",
     "Pasted image 20221004110858.png",
     "src/blog/Should I use Flex or Grid?.md",
     "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
@@ -112,7 +113,6 @@
     "src/garden/ADHD.md",
     "src/garden/Astro.md",
     "src/garden/Atomic.md",
-    "src/garden/Autism.md",
-    "src/garden/Cascade layers.md"
+    "src/garden/Autism.md"
   ]
 }

@@ -1,12 +1,12 @@
 .newsletter {
   margin-block-end: var(--size-10);
-  max-inline-size: 70ch;
+  max-inline-size: min(var(--size-content-3), 95%);
   margin-inline: auto;
   background-color: var(--accent-bg-subtle);
   border-color: var(--accent-bg-hover);
   border-width: var(--border-size-2);
-  padding-inline: var(--size-8);
-  padding-block: var(--size-8);
+  padding-inline: var(--size-fluid-3);
+  padding-block: var(--size-fluid-3);
   border-radius: var(--radius-3);
   --shadow-offset: var(--size-1);
   border-radius: var(--radius-3);
@@ -19,23 +19,23 @@
     transition: box-shadow 0.15s var(--ease-1);
   }
 
-  & fieldset {
-    border: none;
+  & > div {
     --flow-space: 1.5em;
 
-    & > legend > h2 {
+    & > div > h2 {
       font-size: var(--font-size-fluid-2);
     }
 
-    & > div {
+    & > div:last-child {
       display: flex;
       flex-wrap: wrap;
       align-items: flex-end;
       justify-content: space-between;
-      gap: var(--size-6);
+      gap: var(--size-fluid-1);
       font-size: 1.5em;
 
       & > * {
+        max-inline-size: 100%;
         inline-size: 100%;
       }
 

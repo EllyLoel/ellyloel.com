@@ -64,7 +64,10 @@ module.exports = (eleventyConfig) => {
     // this overrides the default image renderer
 
     function figure(html, caption) {
-      return `<figure>${html}<figcaption>${caption}</figcaption></figure>`;
+      if (caption) {
+        return `<figure>${html}<figcaption>${caption}</figcaption></figure>`;
+      }
+      return `<figure>${html}</figure>`;
     }
 
     const token = tokens[idx];
@@ -111,10 +114,7 @@ module.exports = (eleventyConfig) => {
         { whitespaceMode: "inline" }
       );
 
-      if (caption) {
-        return figure(generated, caption);
-      }
-      return generated;
+      return figure(generated, caption);
     }
 
     const widths = [250, 316, 426, 460, 580, 768];
@@ -136,10 +136,7 @@ module.exports = (eleventyConfig) => {
       { whitespaceMode: "inline" }
     );
 
-    if (caption) {
-      return figure(generated, caption);
-    }
-    return generated;
+    return figure(generated, caption);
   };
 
   return markdownLibrary;
