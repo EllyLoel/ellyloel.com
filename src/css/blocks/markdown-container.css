@@ -1,12 +1,12 @@
 .markdown-container {
   display: grid;
-  grid-template-columns: 1fr min(72ch, 100%) 1fr;
+  grid-template-columns: 1fr min(var(--size-content-3), 100%) 1fr;
 
   & > * {
     grid-column: 2 / auto;
   }
 
-  & > :is(figure, picture) {
+  & > :is(figure, picture, .table-container, .iframe-container) {
     max-inline-size: 100%;
     margin-inline: auto;
     text-align: center;
@@ -15,7 +15,6 @@
 
   & + .content-footer {
     & > :is(.share, .postPagination) {
-      /* inline-size: min(72ch, 100%); */
       inline-size: fit-content;
       margin-inline: auto;
       display: flex;

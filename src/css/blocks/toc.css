@@ -18,6 +18,7 @@
 }
 
 .toc-container {
+  margin-inline: auto;
   & > details {
     & > summary {
       align-items: center;
@@ -26,6 +27,10 @@
       & > sl-icon::part(base) {
         transition: transform 300ms var(--ease-out-4);
         color: var(--accent-solid);
+      }
+
+      & > h2 {
+        font-size: var(--font-size-fluid-1);
       }
 
       &:is(:hover, :focus-visible) {
