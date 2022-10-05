@@ -60,8 +60,10 @@ layout: base-without-header.njk
 	<div class="[ share ]">
 		<p>
 			<sl-icon class="[ emoji ]" library="fa" name="fas-share-from-square" label=""></sl-icon> Share on <a href='https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text="{{ title }}" by @ellyloel' class="[ text-decoration-none move-link-styling-to-child ]">
-				<sl-icon class="[ emoji ]" style="vertical-align: -0.15em;" library="fa" name="fab-twitter" label=""></sl-icon> Twitter</a> or <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}" class="[ text-decoration-none move-link-styling-to-child ]">
-				<sl-icon class="[ emoji ]" style="vertical-align: -0.15em;" library="fa" name="fab-linkedin" label=""></sl-icon> LinkedIn</a>.
+				<sl-icon class="[ emoji ]" style="vertical-align: -0.15em;" library="fa" name="fab-twitter" label=""></sl-icon>
+				<span>Twitter</span></a> or <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}" class="[ text-decoration-none move-link-styling-to-child ]">
+				<sl-icon class="[ emoji ]" style="vertical-align: -0.15em;" library="fa" name="fab-linkedin" label=""></sl-icon>
+				<span>LinkedIn</span></a>.
 		</p>
 	</div>
 	{%- set previousPost = collections.allPostTypes | getPreviousCollectionItem -%}
