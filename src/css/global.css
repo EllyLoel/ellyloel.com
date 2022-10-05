@@ -28,6 +28,11 @@ main {
 :is(h1, h2, h3, h4, h5, h6, dt) {
   font-family: "Fraunces", var(--font-serif);
   font-weight: var(--font-weight-7);
+  font-optical-sizing: auto;
+  --font-wonkiness: 1;
+  --font-softness: 100;
+  font-variation-settings: "SOFT" var(--font-softness),
+    "WONK" var(--font-wonkiness);
   color: var(--neutral-text-contrast);
 }
 
@@ -416,7 +421,8 @@ details[open] > summary {
       text-align: left;
     }
 
-    & :is(tbody tr:not(:last-child), thead tr) :is(th, td) {
+    & tbody tr:not(:last-child) :is(th, td),
+    & thead tr :is(th, td) {
       border-bottom: var(--_border);
     }
 
