@@ -15,7 +15,7 @@ Been learning a lot about accessibility lately and how sadly a lot of the more c
 
 ## August, 2022
 
-I'm officially an AWS certified cloud practitioner, what ever that means :joy: 
+I'm officially an AWS certified cloud practitioner, what ever that means :joy:
 
 Looks like it's that time again, the clock has struck, and now I am 21 :exploding_head:
 
