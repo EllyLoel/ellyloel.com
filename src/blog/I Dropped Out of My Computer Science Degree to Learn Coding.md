@@ -82,7 +82,7 @@ There's some absolutely brilliant opportunities out there at the moment - some o
 If you're a Developer or Designer, let's have a chat. Maybe you're wanting a bigger/smaller company? A bit of a bump up in your salary? An opportunity to take on more responsibility? More flexibility with WFH or Remote options? Something else?
 There's plenty of options :)
 Cheers!”
-My comment response: “Hi Andrew, I'd love to have a chat :smile:”](./public/assets/img/RecruiterPost.png)_The post that lead me to getting in contact with the recruiter_
+My comment response: “Hi Andrew, I'd love to have a chat 😄”](./public/assets/img/RecruiterPost.png)_The post that lead me to getting in contact with the recruiter_
 
 ## How you went about applying to new jobs
 

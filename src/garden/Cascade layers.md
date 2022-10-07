@@ -83,10 +83,10 @@ There's even been [talk](https://github.com/w3c/csswg-drafts/issues/5853) of bei
 ```
 
 ## References
-- https://youtu.be/vK8vj1l_oRk
-- https://youtu.be/NDNRGW-_1EE
-- https://youtu.be/ilrPpSQJb3U
-- https://youtu.be/_yC24JH71r4
-- https://www.smashingmagazine.com/2022/01/introduction-css-cascade-layers/
-- https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/
-- https://youtu.be/zEPXyqj7pEA
+- [Improving CSS Architecture with Cascade Layers, Container Queries, Scope, by Miriam Suzanne](https://youtu.be/vK8vj1l_oRk)
+- [No more specificity issues?! (or all new ones 🤔) - A look at CSS Cascade Layers by Kevin Powell](https://youtu.be/NDNRGW-_1EE)
+- [CSS Cascade Layers: An overview of the new @layer and layer() CSS primitives by Una Kravets](https://youtu.be/ilrPpSQJb3U)
+- [Cascade layers on the CSS Podcast](https://youtu.be/_yC24JH71r4)
+- [Getting Started With CSS Cascade Layers by Stephanie Eckles](https://www.smashingmagazine.com/2022/01/introduction-css-cascade-layers/)
+- [The Future of CSS: Cascade Layers (CSS `@layer`) by Bramus Van Damme](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/)
+- [The CSS Cascade, a deep dive by Bramus Van Damme](https://youtu.be/zEPXyqj7pEA)

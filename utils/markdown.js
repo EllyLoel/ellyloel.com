@@ -1,5 +1,4 @@
 const markdownItAnchor = require("markdown-it-anchor");
-const twemoji = require("twemoji");
 const EleventyPluginImage = require("@11ty/eleventy-img");
 const path = require("path");
 const slugify = require("slugify");
@@ -36,7 +35,6 @@ module.exports = (eleventyConfig) => {
         }
       },
     })
-    .use(require("markdown-it-emoji"))
     .use(markdownItAnchor, {
       level: 2,
       permalink: markdownItAnchor.permalink.headerLink({
@@ -44,6 +42,7 @@ module.exports = (eleventyConfig) => {
       }),
       slugify: eleventyConfig.getFilter("slugify"),
     })
+    .use(require("markdown-it-emoji"))
     .use(
       require("markdown-it-wikilinks")({
         baseURL: "/",
@@ -55,9 +54,8 @@ module.exports = (eleventyConfig) => {
       })
     );
 
-  markdownLibrary.renderer.rules.emoji = (token, idx) => {
-    return twemoji.parse(token[idx].content);
-  };
+  markdownLibrary.renderer.rules.emoji = (token, idx) =>
+    `<span class="[ emoji ]">${token[idx].content}</span>`;
 
   markdownLibrary.renderer.rules.image = function (tokens, idx) {
     // responsive images with 11ty image
