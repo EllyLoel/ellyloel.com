@@ -171,7 +171,7 @@ module.exports = (eleventyConfig) => {
           <sl-tooltip content="${
             feedItem.stage[0].toUpperCase() + feedItem.stage.substring(1)
           }">
-            <sl-icon class="[ emoji ]" library="fa" name="fas-${
+            <sl-icon class="[ icon ]" library="fa" name="fas-${
               feedItem.stage === "seedling" ? "seedling" : ""
             }${feedItem.stage === "budding" ? "spa" : ""}${
           feedItem.stage === "evergreen" ? "tree" : ""
@@ -184,32 +184,26 @@ module.exports = (eleventyConfig) => {
         </span>`
       : ``;
 
-    return `
-      <li class="${feedItem?.stage || ""}">
+    const unread = `<sl-badge variant="neutral" pill class="[ unread ]" aria-hidden="true">Unread!</sl-badge>`;
+
+    return `<li class="${feedItem?.stage || ""}">
         <sl-card class="[ feed-item-card ]">
-        ${
-          feedItem.excerpt
-            ? `
-                <div slot="header" class="[ feed-item-card-title ]">
-                  <p>
-                    ${stage}
-                    <a href="${feedItem.url}">${feedItem.title}</a>
-                  </p>
-                </div>
-                ${markdownLibrary.render(`${feedItem.excerpt} &#8230;`)}
-              `
-            : `
-                <div class="[ feed-item-card-title ]">
-                  <p>
-                    ${stage}
-                    <a href="${feedItem.url}">${feedItem.title}</a>
-                  </p>
-                </div>
-              `
-        }
+          <div ${
+            feedItem.excerpt ? `slot="header"` : ``
+          } class="[ feed-item-card-title ]">
+            <p>
+              ${stage}
+              <a href="${feedItem.url}">${feedItem.title}</a>
+              ${unread}
+            </p>
+          </div>
+          ${
+            feedItem.excerpt
+              ? markdownLibrary.render(`${feedItem.excerpt} &#8230;`)
+              : ``
+          }
         </sl-card>
-      </li>
-    `;
+      </li>`;
   });
   eleventyConfig.addNunjucksAsyncShortcode(
     "image",
@@ -236,30 +230,13 @@ module.exports = (eleventyConfig) => {
       return EleventyPluginImage.generateHTML(metadata, imageAttributes, {
         whiteSpace: "inline",
       });
-
-      // let lowsrc = metadata.jpeg[0];
-      // let highsrc = metadata.jpeg[metadata.jpeg.length - 1];
-
-      // let getSrcset = (imageFormat) =>
-      //   imageFormat.map((entry) => entry.srcset).join(", ");
-
-      // let sources = Object.values(metadata)
-      //   .map((imageFormat) => {
-      //     let srcset = getSrcset(imageFormat);
-      //     return `<source type="${imageFormat[0].sourceType}" srcset="${srcset}" sizes="${sizes}">`;
-      //   })
-      //   .join("");
-
-      // let img = `<img src="${lowsrc.url}" width="${highsrc.width}" height="${highsrc.height}" alt="${alt}" loading="lazy" decoding="async">`;
-
-      // return `<picture class="[ image ]">${sources}${img}</picture>`;
     }
   );
   eleventyConfig.addNunjucksShortcode("gh_edit", function (page) {
     const inputPath = page.inputPath.replace(/^\.\//, "").replace(/\s/g, "%20");
     return `
       <a href="https://github.com/ellyloel/ellyloel.com/edit/main/${inputPath}">
-        <sl-icon library="fa" name="fas-pen-to-square" class="[ emoji ]"></sl-icon> Edit this page
+        <sl-icon library="fa" name="fas-pen-to-square" class="[ icon ]"></sl-icon> Edit this page
       </a>
     `;
   });

@@ -1,5 +1,9 @@
 .nav-wrapper {
-  padding-inline: var(--size-8);
+  padding-inline: var(--size-4);
+
+  @media (width >= 1100px) {
+    padding-inline: var(--size-8);
+  }
 }
 
 .nav {

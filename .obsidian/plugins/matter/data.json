@@ -1,11 +1,11 @@
 {
-  "accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY1MDM3MzYzLCJqdGkiOiIyMDlmZWNlYTQ3MmM0NGJjODkwODlkZTlhNTk1MDUwMSIsInVzZXJfaWQiOjUyMzA1LCJjbGllbnRfdHlwZSI6ImludGVncmF0aW9uIiwibG9naW5fc2Vzc2lvbl9pZCI6IjQ5YzVlMDI0LTQ2ZDItNDc5MC1iZjBhLTRmYjNlYzEyYTlkMiJ9.Gy236Cg8zam4w1GHaVXKiv1FSR4Ctya0e5qEekRRYfM",
-  "refreshToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3MjEyMjE2MywianRpIjoiMjFjODRjOGUzZGY0NGNhNmI0YmJjYTczZDZhNThiMTEiLCJ1c2VyX2lkIjo1MjMwNSwiY2xpZW50X3R5cGUiOiJpbnRlZ3JhdGlvbiIsImxvZ2luX3Nlc3Npb25faWQiOiI0OWM1ZTAyNC00NmQyLTQ3OTAtYmYwYS00ZmIzZWMxMmE5ZDIifQ.cJx2le5VvwhztDcAuf-C_iaxqdRR7tKkk9BUoIfVAWU",
+  "accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY1ODMzMTIzLCJqdGkiOiI0YWNmZTVmYWUwODQ0ODAzYWUzOTFmMTE3ZTdhZGM0MyIsInVzZXJfaWQiOjUyMzA1LCJjbGllbnRfdHlwZSI6ImludGVncmF0aW9uIiwibG9naW5fc2Vzc2lvbl9pZCI6IjQ5YzVlMDI0LTQ2ZDItNDc5MC1iZjBhLTRmYjNlYzEyYTlkMiJ9._DCzAYfjW3lDafJl7zHWIwblq5ikJVyUl5VR7KxBptQ",
+  "refreshToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3MjkxNzkyMywianRpIjoiNzc5Y2QzMTQxZTE5NDA4YzgwZTk5OTcxM2FiNzI3MGQiLCJ1c2VyX2lkIjo1MjMwNSwiY2xpZW50X3R5cGUiOiJpbnRlZ3JhdGlvbiIsImxvZ2luX3Nlc3Npb25faWQiOiI0OWM1ZTAyNC00NmQyLTQ3OTAtYmYwYS00ZmIzZWMxMmE5ZDIifQ.Iszhzhx-mbdNGAurA-7jhDzCEQeTt4JpRo14spfFKzU",
   "qrSessionToken": "9c0b9ac8999a591a0db2c041ff9af55e9286b823e45d5fd8a6a47aa27c47828b",
   "dataDir": "src/bookmarks",
   "syncInterval": 60,
   "hasCompletedInitialSetup": true,
-  "lastSync": "2022-10-05T14:26:34.255Z",
+  "lastSync": "2022-10-07T11:25:24.864Z",
   "isSyncing": false,
   "contentMap": {
     "A Whole Cascade of Layers.md": "4_12455205"

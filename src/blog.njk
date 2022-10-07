@@ -22,12 +22,12 @@ eleventyNavigation:
 
 <sl-select class="[ stage ]" placeholder="All stages" label="Filter by stage" size="large" multiple clearable>
   <sl-menu-item value="draft">
-    <sl-icon slot="prefix" class="[ emoji ]" library="fa" name="fas-file-pen"></sl-icon>
+    <sl-icon slot="prefix" class="[ icon ]" library="fa" name="fas-file-pen"></sl-icon>
     Draft
     <sl-badge slot="suffix" variant="neutral" pill>{{ draftCount }}</sl-badge>
   </sl-menu-item>
   <sl-menu-item value="complete">
-    <sl-icon slot="prefix" class="[ emoji ]" library="fa" name="fas-circle-check"></sl-icon>
+    <sl-icon slot="prefix" class="[ icon ]" library="fa" name="fas-circle-check"></sl-icon>
     Complete
     <sl-badge slot="suffix" variant="neutral" pill>{{ completeCount }}</sl-badge>
   </sl-menu-item>

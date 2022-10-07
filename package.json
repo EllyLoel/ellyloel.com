@@ -35,8 +35,7 @@
     "open-props": "^1.4.1",
     "postcss-preset-env": "^7.7.2",
     "stylized-text": "^4.2.1",
-    "tslib": "^2.4.0",
-    "twemoji": "^14.0.2"
+    "tslib": "^2.4.0"
   },
   "devDependencies": {
     "@11ty/eleventy": "2.0.0-canary.14",

@@ -1,12 +1,22 @@
 html {
   --link: var(--accent-solid);
-  --link-visited: var(--accent-text);
+  --link-visited: var(--accent-solid-hover);
   --scrollthumb-color: var(--neutral-border);
   accent-color: var(--link);
   background-color: var(--neutral-base);
   caret-color: var(--link);
   color: var(--neutral-text);
   scrollbar-color: var(--scrollthumb-color) transparent;
+}
+
+/* FOUCE https:/*www.abeautifulsite.net/posts/flash-of-undefined-custom-elements/ */
+:where(:not(:defined)) {
+  opacity: 0;
+}
+
+:where(:defined) {
+  opacity: 1;
+  transition: opacity 500ms var(--ease-2);
 }
 
 body {
@@ -49,19 +59,17 @@ main {
     &::after {
       transition: opacity 300ms var(--ease-2);
       opacity: 0%;
-      content: url("https://twemoji.maxcdn.com/v/14.0.2/svg/1f517.svg");
+      content: "🔗";
+      font-family: "Noto Color Emoji", sans-serif;
       display: inline-block;
-      inline-size: 1.15em;
-      block-size: 1.15em;
+      font-size: 0.75em;
       padding: 0.175em;
       position: absolute;
-      right: -1.15em;
       transform: translateY(-0.1em);
     }
 
     &:is(:hover, :focus-visible) {
-      text-decoration: underline;
-      text-underline-offset: 0.1em;
+      background-color: transparent;
 
       &::after {
         opacity: 100%;
@@ -141,6 +149,12 @@ var {
   margin-inline: calc(var(--size-1) * -1);
   padding-inline: var(--size-1);
   text-decoration: underline;
+  text-decoration-color: currentColor;
+  background-color: transparent;
+  border-radius: var(--radius-2);
+  transition-property: background-color, text-decoration-color;
+  transition-duration: 200ms;
+  transition-timing-function: var(--ease-2);
 
   &:where([href]) {
     color: var(--link);
@@ -150,23 +164,17 @@ var {
     }
 
     &:hover {
-      filter: brightness(0.9);
-      text-decoration: none;
+      text-decoration-color: transparent;
+      background-color: var(--accent-bg);
     }
 
     &:active {
-      filter: brightness(0.8);
+      background-color: var(--accent-bg-hover);
     }
+  }
 
-    @media (prefers-color-scheme: dark) {
-      &:hover {
-        filter: brightness(1.1);
-      }
-
-      &:active {
-        filter: brightness(1.2);
-      }
-    }
+  @nest span:has(+ &) sl-icon {
+    color: var(--link);
   }
 }
 
@@ -233,7 +241,7 @@ p {
 }
 
 small {
-  font-size: max(0.5em, var(--font-size-0));
+  font-size: var(--font-size-0);
   max-inline-size: var(--size-content-1);
 }
 
@@ -477,16 +485,6 @@ menu {
   display: flex;
   gap: var(--size-3);
   padding-inline-start: 0;
-}
-
-/* FOUCE https:/*www.abeautifulsite.net/posts/flash-of-undefined-custom-elements/ */
-:not(:defined) {
-  opacity: 0;
-}
-
-:defined {
-  opacity: 1;
-  transition: opacity 500ms var(--ease-2);
 }
 
 /* General interactive states */
