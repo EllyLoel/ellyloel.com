@@ -40,6 +40,10 @@
     margin-right: auto; /* Prevents nav bunching up to the logo */
     margin-inline-end: auto; /* Prevents nav bunching up to the logo */
 
+    &:hover {
+      background-color: transparent;
+    }
+
     & > .logo {
       font-size: var(--font-size-5);
     }

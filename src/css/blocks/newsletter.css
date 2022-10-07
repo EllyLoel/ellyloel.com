@@ -45,7 +45,7 @@
       }
 
       & label {
-        color: var(--neutral-5);
+        color: var(--neutral-6);
         font-size: 0.75em;
         font-weight: var(--font-weight-body-bold);
         text-transform: uppercase;

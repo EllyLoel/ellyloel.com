@@ -1,4 +1,10 @@
 .feed {
+  & > li a + .unread {
+    display: none;
+  }
+  & > li a:not(:visited) + .unread {
+    display: revert;
+  }
 }
 
 sl-select:has(sl-menu-item[value="seedling"][checked]) ~ .feed {

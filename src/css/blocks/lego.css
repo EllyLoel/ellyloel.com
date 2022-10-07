@@ -14,7 +14,7 @@
   & > picture > img {
     height: 300px !important;
     width: 300px !important;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   & > canvas {
@@ -23,7 +23,7 @@
   }
   & > picture > img {
     display: block;
-    transform: scale(1.2);
+    transform: scale(1.485);
   }
 
   @media (width >= 768px) {

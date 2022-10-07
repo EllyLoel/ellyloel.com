@@ -1,6 +1,7 @@
 .hero {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: var(--size-8);
 
   & h1 {
