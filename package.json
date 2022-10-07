@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@11ty/eleventy-img": "^2.0.1",
-    "@shoelace-style/shoelace": "^2.0.0-beta.78",
+    "@shoelace-style/shoelace": "^2.0.0-beta.83",
     "@splinetool/runtime": "^0.9.102",
     "canvas-confetti": "^1.5.1",
     "css-doodle": "^0.29.0",
