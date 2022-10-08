@@ -158,43 +158,63 @@ module.exports = (eleventyConfig) => {
           <h2>
             <a href="${feed.url}">${feed.title}</a>
           </h2>
-          <ul class="[ flow ]">
+          <ul class="[ feed ][ flow ]">
             ${content}
           </ul>
         </section>
       `;
     }
   );
-  eleventyConfig.addNunjucksShortcode("feedItem", function (feedItem) {
-    const stage = feedItem?.stage
-      ? `<span>
+  eleventyConfig.addNunjucksAsyncShortcode(
+    "feedItem",
+    async function (feedItem) {
+      const image = feedItem?.image
+        ? `<div slot="image">${EleventyPluginImage.generateHTML(
+            await EleventyPluginImage(feedItem.image, {
+              widths: [300, 600, 1000],
+              formats: ["avif", "webp", "jpeg"],
+              outputDir: path.join("_site", "img"),
+            }),
+            {
+              class: "[ image ]",
+              alt: "",
+              sizes: "450px",
+              loading: "lazy",
+              decoding: "async",
+            },
+            {
+              whiteSpace: "inline",
+            }
+          )}</div>`
+        : ``;
+
+      const stage = feedItem?.stage
+        ? `<span>
           <sl-tooltip content="${
             feedItem.stage[0].toUpperCase() + feedItem.stage.substring(1)
           }">
             <sl-icon class="[ icon ]" library="fa" name="fas-${
               feedItem.stage === "seedling" ? "seedling" : ""
             }${feedItem.stage === "budding" ? "spa" : ""}${
-          feedItem.stage === "evergreen" ? "tree" : ""
-        }${feedItem.stage === "draft" ? "file-pen" : ""}${
-          feedItem.stage === "complete" ? "circle-check" : ""
-        }" label="${
-          feedItem.stage[0].toUpperCase() + feedItem.stage.substring(1)
-        }"></sl-icon>
+            feedItem.stage === "evergreen" ? "tree" : ""
+          }${feedItem.stage === "draft" ? "file-pen" : ""}${
+            feedItem.stage === "complete" ? "circle-check" : ""
+          }" label="${
+            feedItem.stage[0].toUpperCase() + feedItem.stage.substring(1)
+          }"></sl-icon>
           </sl-tooltip>
         </span>`
-      : ``;
+        : ``;
 
-    const unread = `<sl-badge variant="neutral" pill class="[ unread ]" aria-hidden="true">Unread!</sl-badge>`;
-
-    return `<li class="${feedItem?.stage || ""}">
+      return `<li class="${feedItem?.stage || ""}">
         <sl-card class="[ feed-item-card ]">
+          ${image}
           <div ${
             feedItem.excerpt ? `slot="header"` : ``
           } class="[ feed-item-card-title ]">
             <p>
               ${stage}
               <a href="${feedItem.url}">${feedItem.title}</a>
-              ${unread}
             </p>
           </div>
           ${
@@ -204,7 +224,8 @@ module.exports = (eleventyConfig) => {
           }
         </sl-card>
       </li>`;
-  });
+    }
+  );
   eleventyConfig.addNunjucksAsyncShortcode(
     "image",
     async function (src, alt, sizes = "(max-width: 768px) 100vw, 768px") {

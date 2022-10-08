@@ -8,13 +8,12 @@
     var(--accent-bg) 0%,
     var(--accent-solid) 90%
   );
-  transform: scale(0.75);
 
   & > canvas,
   & > picture > img {
     height: 300px !important;
     width: 300px !important;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   & > canvas {
@@ -23,7 +22,7 @@
   }
   & > picture > img {
     display: block;
-    transform: scale(1.485);
+    transform: scale(1.2);
   }
 
   @media (width >= 768px) {
