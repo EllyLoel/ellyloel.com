@@ -11,6 +11,10 @@
     transition: box-shadow 150ms var(--ease-1);
   }
 
+  &::part(image) {
+    margin-bottom: var(--size-3);
+  }
+
   &::part(base) {
     border-width: var(--border-size-2);
     border-color: var(--accent-bg-hover);

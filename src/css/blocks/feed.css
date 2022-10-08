@@ -1,9 +1,6 @@
 .feed {
-  & > li a + .unread {
-    display: none;
-  }
-  & > li a:not(:visited) + .unread {
-    display: revert;
+  & > li a + sl-badge.unread {
+    vertical-align: middle;
   }
 }
 

@@ -1,14 +1,22 @@
 .stroke {
-  color: var(--hover-color, var(--color, var(--neutral-text-contrast)));
-  @supports (-webkit-text-stroke-width: 1px) {
-    color: var(--fill, var(--neutral-base));
-    -webkit-text-stroke-width: var(--thickness, 1px);
-    -webkit-text-stroke-color: var(--color, var(--neutral-text-contrast));
-    transition: color 500ms ease;
+  --thickness: 1px;
+  --stroke-color: var(--color, var(--neutral-text-contrast));
+  --fill-color: var(--neutral-base);
+  color: var(--fill-color);
+  text-shadow: calc(var(--thickness) * -1) calc(var(--thickness) * -1) 0
+      var(--stroke-color),
+    var(--thickness) calc(var(--thickness) * -1) 0 var(--stroke-color),
+    calc(var(--thickness) * -1) var(--thickness) 0 var(--stroke-color),
+    var(--thickness) var(--thickness) 0 var(--stroke-color);
+  transition-property: color, text-shadow;
+  transition-duration: 500ms;
+  transition-timing-function: ease;
 
-    &:hover {
-      color: var(--hover-color, var(--color, var(--neutral-text-contrast)));
-      transition: color 250ms ease;
-    }
+  &:hover {
+    color: var(--hover-color, var(--color));
+    --stroke-color: var(--fill-color);
+    transition-property: color, text-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: ease;
   }
 }

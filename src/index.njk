@@ -9,7 +9,7 @@ description: Hi, I’m Elly. I like creating delightful, magical, and accessible
 		<h1 aria-label="Hi, I'm Elly. I like creating delightful, magical, and accessible art with code.">
 			<span class="detitlify">Hi, I’m <stylized-text label="Elly" class="[ logo-inline ]">&lt;e//y&gt;</stylized-text>
 			</span>
-			<span>I like creating <span class="stroke" style="--color: var(--accent-solid);">delightful</span>, <span class="stroke" style="--color: var(--accent-solid);">magical</span>, and <span class="stroke" style="--color: var(--accent-solid);">accessible</span> art with code<span style="color: var(--accent-solid);">.</span></span>
+			<span>I like creating <span class="stroke" style="--color: var(--accent-solid); --thickness: 1.5px;">delightful</span>, <span class="stroke" style="--color: var(--accent-solid); --thickness: 1.5px;">magical</span>, and <span class="stroke" style="--color: var(--accent-solid); --thickness: 1.5px;">accessible</span> art with code<span style="color: var(--accent-solid);">.</span></span>
 		</h1>
 
 		<div id="lego" class="[ lego-container ]">
@@ -28,7 +28,9 @@ description: Hi, I’m Elly. I like creating delightful, magical, and accessible
 		{% feedItem
 		title = post.data.title,
 		url = post.url,
-		excerpt = post.data.page.excerpt
+		excerpt = post.data.page.excerpt,
+		stage = post.data.stage,
+		image = post.data.image
  %}
 	{%- endfor %}
 	{% endfeedBlock %}
@@ -41,7 +43,8 @@ description: Hi, I’m Elly. I like creating delightful, magical, and accessible
 		{% feedItem
 		title = project.data.title,
 		url = project.url,
-		excerpt = project.data.page.excerpt
+		excerpt = project.data.page.excerpt,
+		image = project.data.image
  %}
 	{%- endfor %}
 	{% endfeedBlock %}
@@ -54,7 +57,9 @@ description: Hi, I’m Elly. I like creating delightful, magical, and accessible
 		{% feedItem
 		title = note.data.title,
 		url = note.url,
-		excerpt = note.data.page.excerpt
+		excerpt = note.data.page.excerpt,
+		stage = note.data.stage,
+		image = note.data.image
  %}
 	{%- endfor %}
 	{% endfeedBlock %}
@@ -67,7 +72,22 @@ description: Hi, I’m Elly. I like creating delightful, magical, and accessible
 		{% feedItem
 		title = bookmark.data.title,
 		url = bookmark.url,
-		excerpt = bookmark.data.page.excerpt
+		excerpt = bookmark.data.page.excerpt,
+		image = bookmark.data.image
+ %}
+	{%- endfor %}
+	{% endfeedBlock %}
+
+	{% feedBlock
+	title = "TIL",
+	url = "/til/" %}
+	{% set tils = collections.til | reverse | sliceCollection(3) %}
+	{%- for til in tils %}
+		{% feedItem
+		title = til.data.title,
+		url = til.url,
+		excerpt = til.data.page.excerpt,
+		image = til.data.image
  %}
 	{%- endfor %}
 	{% endfeedBlock %}

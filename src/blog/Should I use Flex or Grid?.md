@@ -1,6 +1,7 @@
 ---
 title: Should I use Flex or Grid?
 stage: complete
+image: "./public/assets/img/Should-I-use-Flexbox-or-Grid.png"
 ---
 
 ![](./public/assets/img/Should-I-use-Flexbox-or-Grid.png)
