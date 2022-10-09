@@ -23,7 +23,7 @@ description: Hi, I’m Elly. I like creating delightful, magical, and accessible
 	{% feedBlock
 	title = "Articles",
 	url = "/blog/" %}
-	{% set blog = collections.blog | reverse | sliceCollection(3) %}
+	{% set blog = collections.blog | reverse | sliceCollection(4) %}
 	{%- for post in blog %}
 		{% feedItem
 		title = post.data.title,
@@ -38,7 +38,7 @@ description: Hi, I’m Elly. I like creating delightful, magical, and accessible
 	{% feedBlock
 	title = "Projects",
 	url = "/projects/" %}
-	{% set projects = collections.projects | reverse | sliceCollection(3) %}
+	{% set projects = collections.projects | reverse | sliceCollection(4) %}
 	{%- for project in projects %}
 		{% feedItem
 		title = project.data.title,
@@ -52,7 +52,7 @@ description: Hi, I’m Elly. I like creating delightful, magical, and accessible
 	{% feedBlock
 	title = "Notes",
 	url = "/garden/" %}
-	{% set notes = collections.garden | reverse | sliceCollection(3) %}
+	{% set notes = collections.garden | reverse | sliceCollection(4) %}
 	{%- for note in notes %}
 		{% feedItem
 		title = note.data.title,
@@ -67,7 +67,7 @@ description: Hi, I’m Elly. I like creating delightful, magical, and accessible
 	{% feedBlock
 	title = "Bookmarks",
 	url = "/bookmarks/" %}
-	{% set bookmarks = collections.bookmarks | reverse | sliceCollection(3) %}
+	{% set bookmarks = collections.bookmarks | reverse | sliceCollection(4) %}
 	{%- for bookmark in bookmarks %}
 		{% feedItem
 		title = bookmark.data.title,
@@ -81,7 +81,7 @@ description: Hi, I’m Elly. I like creating delightful, magical, and accessible
 	{% feedBlock
 	title = "TIL",
 	url = "/til/" %}
-	{% set tils = collections.til | reverse | sliceCollection(3) %}
+	{% set tils = collections.til | reverse | sliceCollection(4) %}
 	{%- for til in tils %}
 		{% feedItem
 		title = til.data.title,

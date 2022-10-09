@@ -1,6 +1,8 @@
 ---
 title: Design systems in an agency
 stage: seedling
+created: 2022-09-19
+modified: 2022-09-23
 ---
 
 ::: callout Multi layered design system

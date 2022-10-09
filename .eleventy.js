@@ -158,7 +158,7 @@ module.exports = (eleventyConfig) => {
           <h2>
             <a href="${feed.url}">${feed.title}</a>
           </h2>
-          <ul class="[ feed ][ flow ]">
+          <ul class="[ feed ][ grid ]">
             ${content}
           </ul>
         </section>
