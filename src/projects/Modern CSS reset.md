@@ -1,5 +1,7 @@
 ---
 title: Modern CSS reset
+created: 2022-06-20
+modified: 2022-08-17
 ---
 
 I put together a CSS Reset that uses modern CSS features such as :where(), logical properties, prefers-reduced-motion, etc. :sparkles:

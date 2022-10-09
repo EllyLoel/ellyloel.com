@@ -5,12 +5,30 @@ layout: base-without-header.njk
 	{%- include "breadcrumb.njk" -%}
 	<h1>{{ title }}</h1>
 	<div class="[ flex gap-3 flex-wrap ]">
-		<span>
-			<sl-tooltip content="Last modified">
-				<sl-icon class="[ icon ]" library="fa" name="far-calendar-plus" label="Last modified"></sl-icon>
-			</sl-tooltip>
-			<time class="[ date ]" datetime="{{ page.date | dateToISO }}">{{ page.date | dateToLocaleDateFull }}</time>
-		</span>
+		{%- if created -%}
+			<span>
+				<sl-tooltip content="Created">
+					<sl-icon class="[ icon ]" library="fa" name="far-calendar" label="Last modified"></sl-icon>
+				</sl-tooltip>
+				<time class="[ date ]" datetime="{{ created | dateToISO }}">{{ created | dateToLocaleDateFull }}</time>
+			</span>
+		{%- endif -%}
+		{%- if modified -%}
+			<span>
+				<sl-tooltip content="Last modified">
+					<sl-icon class="[ icon ]" library="fa" name="far-calendar-plus" label="Last modified"></sl-icon>
+				</sl-tooltip>
+				<time class="[ date ]" datetime="{{ modified | dateToISO }}">{{ modified | dateToLocaleDateFull }}</time>
+			</span>
+		{%- endif -%}
+		{%- if not created and not modified -%}
+			<span>
+				<sl-tooltip content="Last modified">
+					<sl-icon class="[ icon ]" library="fa" name="far-calendar-plus" label="Last modified"></sl-icon>
+				</sl-tooltip>
+				<time class="[ date ]" datetime="{{ page.date | dateToISO }}">{{ page.date | dateToLocaleDateFull }}</time>
+			</span>
+		{%- endif -%}
 		{%- if stage -%}
 			<span>
 				<sl-tooltip content="Stage">

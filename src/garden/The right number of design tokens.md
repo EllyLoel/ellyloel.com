@@ -1,6 +1,8 @@
 ---
 title: The right number of design tokens
 stage: seedling
+created: 2022-09-21
+modified: 2022-09-21
 ---
 
 Something I've been thinking about for a while now is, how many design tokens is the right amount?

@@ -2,6 +2,8 @@
 title: Should I use Flex or Grid?
 stage: complete
 image: "./public/assets/img/Should-I-use-Flexbox-or-Grid.png"
+created: 2022-10-04
+modified: 2022-10-06
 ---
 
 ![](./public/assets/img/Should-I-use-Flexbox-or-Grid.png)

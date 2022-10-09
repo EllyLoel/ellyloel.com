@@ -8,6 +8,7 @@
     var(--accent-bg) 0%,
     var(--accent-solid) 90%
   );
+  transform: scale(0.75);
 
   & > canvas,
   & > picture > img {
@@ -18,17 +19,26 @@
 
   & > canvas {
     display: none;
-    transform: scale(1.36);
   }
   & > picture > img {
     display: block;
-    transform: scale(1.2);
+    transform: scale(1.5);
   }
 
   @media (width >= 768px) {
     & > canvas {
       display: block;
       visibility: hidden;
+      transform: scale(1.5);
+      cursor: grab;
+
+      &:active {
+        cursor: grabbing;
+      }
+    }
+
+    & > picture > img {
+      transform: scale(1.31);
     }
   }
 }

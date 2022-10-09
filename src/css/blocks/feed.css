@@ -1,6 +1,31 @@
 .feed {
-  & > li a + sl-badge.unread {
-    vertical-align: middle;
+  grid-template-columns: 1fr 1fr;
+  --gap: var(--size-6);
+
+  & > li > sl-card {
+    &,
+    &::part(base),
+    &::part(image),
+    & > [slot="image"],
+    & > [slot="image"] img {
+      block-size: 100%;
+    }
+
+    & > [slot="image"] img {
+      object-fit: cover;
+    }
+  }
+
+  &:has(> li:nth-child(2)) > li:first-child {
+    grid-row: 1 / 2;
+  }
+
+  &:has(> li:nth-child(3)) > li:first-child {
+    grid-row: 1 / 3;
+  }
+
+  &:has(> li:nth-child(4)) > li:first-child {
+    grid-row: 1 / 4;
   }
 }
 

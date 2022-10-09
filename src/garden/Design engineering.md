@@ -1,6 +1,8 @@
 ---
 title: Design engineering
 stage: seedling
+created: 2022-09-19
+modified: 2022-09-20
 ---
 
 There really is a different between being able to evaluate and implement designs and being able to build and connect functionality to the backend.
