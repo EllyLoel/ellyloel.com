@@ -7,9 +7,9 @@ modified: 2022-10-10
 {% unfurl "https://storybook.js.org/blog/why-most-design-systems-implode/" %}
 
 <figure>
-	<sl-animated-image src="/assets/img/steve-ballmer-developers-developers-developers.webp" alt="Steve Ballmer screaming Developers, Developers, Developers" ></sl-animated-image>
+	<sl-animated-image src="/assets/img/steve-ballmer-developers-developers-developers.webp" alt="Steve Ballmer screaming Developers, Developers, Developers"></sl-animated-image>
 	<figcaption>
-		<strong>Documentation Documentation Documentation</strong>
+		<strong><del>Developers, Developers, Developers</del><br><ins>Documentation, Documentation, Documentation</ins></strong>
 	</figcaption>
 </figure>
 
