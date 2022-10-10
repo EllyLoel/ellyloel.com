@@ -291,6 +291,7 @@ iframe {
 
 figure {
   display: grid;
+  justify-items: center;
   gap: var(--size-3);
 }
 
@@ -301,7 +302,7 @@ figure > figcaption {
   padding-inline: var(--size-5);
 }
 
-figure > :is(picture, svg) + figcaption {
+figure > :is(picture, svg, sl-animated-image) + figcaption {
   text-align: center;
 }
 
