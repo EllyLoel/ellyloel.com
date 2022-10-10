@@ -5,13 +5,14 @@
   "dataDir": "src/bookmarks",
   "syncInterval": 60,
   "hasCompletedInitialSetup": true,
-  "lastSync": "2022-10-10T04:35:00.637Z",
+  "lastSync": "2022-10-10T11:02:34.522Z",
   "isSyncing": false,
   "contentMap": {
     "A Whole Cascade of Layers.md": "4_12455205",
     "The Patchability of the Open Web.md": "4_13744651",
     "Why most design systems implode.md": "4_5341074",
-    "My therapist suggested I talk to my inner child. I thought she was joking - but it changed everything.md": "4_14553259"
+    "My therapist suggested I talk to my inner child. I thought she was joking - but it changed everything.md": "4_14553259",
+    "I Can’t Breathe- HeydonWorks.md": "4_14632990"
   },
   "recreateIfMissing": true
 }
