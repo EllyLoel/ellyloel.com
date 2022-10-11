@@ -1,5 +1,6 @@
 .unfurl {
   display: grid;
+  grid-template-columns: auto 1fr;
   gap: var(--size-2) var(--size-3);
   align-content: start;
   max-width: 35rem;
