@@ -9,6 +9,8 @@
     "border desc"
     "border image";
 
+    
+
   &::before {
     content: "";
     grid-area: border;
@@ -34,6 +36,7 @@
     -webkit-box-orient: vertical;
     overflow: hidden; /* truncating */
   }
+
   & picture,
   & .unfurl__image {
     object-fit: cover;
