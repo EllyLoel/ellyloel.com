@@ -45,17 +45,19 @@ module.exports = (eleventyConfig) => {
         decoding: "async",
       };
 
-      let metadata = await EleventyPluginImage(props?.image?.url, {
-        widths: [300, 600, 1000],
-        formats: ["avif", "webp", "jpeg"],
-        outputDir: path.join("_site", "img"),
-      });
+      const metadata = props?.image?.url
+        ? await EleventyPluginImage(props?.image?.url, {
+            widths: [300, 600, 1000],
+            formats: ["avif", "webp", "jpeg"],
+            outputDir: path.join("_site", "img"),
+          })
+        : {};
 
-      const image = EleventyPluginImage.generateHTML(
-        metadata,
-        imageAttributes,
-        { whitespaceMode: "inline" }
-      );
+      const image = props?.image?.url
+        ? EleventyPluginImage.generateHTML(metadata, imageAttributes, {
+            whitespaceMode: "inline",
+          })
+        : "";
 
       return props
         ? `<article class="unfurl">${
@@ -74,7 +76,7 @@ module.exports = (eleventyConfig) => {
             props?.description
               ? `<p class="unfurl__description">${props.description}</p>`
               : ``
-          }${props?.image?.url ? image : ``}</article>`
+          }${image}</article>`
         : ``;
     },
   });
