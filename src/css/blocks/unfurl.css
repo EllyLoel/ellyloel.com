@@ -9,7 +9,12 @@
     "border desc"
     "border image";
 
-    
+  &:not(:has(picture)) {
+    grid-template-areas:
+      "border meta"
+      "border title"
+      "border desc";
+  }
 
   &::before {
     content: "";
