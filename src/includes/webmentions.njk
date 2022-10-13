@@ -1,23 +1,23 @@
 {%- set postMentions = webmentions | webmentionsForPage -%}
-<article id="webmentions" class="webmentions">
-	<header class="[ webmentions__header ][ flow ]">
+<article id="webmentions" class="[ webmentions ]">
+	<header class="[ webmentions-header ][ flow ]">
 		<h2>
 			{{ postMentions.total }} Response{%- if (postMentions.total !== 1) -%}s{%- endif -%}
 		</h2>
-		<form action="https://webmention.io/{{ site.url }}/webmention" method="post" class="[ form-webmention ][ flow ]">
-			<label for="form-webmention-source" class="webmentions__form-label">
+		<form action="https://webmention.io/{{ site.url }}/webmention" method="post" class="[ webmentions-form ][ flow ]">
+			<label for="form-webmention-source">
 				Have you published your own post mentioning this one? Let me know the URL:
 			</label>
-			<div class="webmentions__field-wrapper">
+			<div class="[ input-wrapper ]">
 				<input
 						id="form-webmention-source"
 						type="url"
 						name="source"
 						placeholder="https://example.com"
 						required="required"
-						class="webmentions__form-field">
+						class="[ input ]">
 				<input type="hidden" name="target" value="{{ site.url }}{{ page.url }}">
-				<input type="submit" value="Send" class="webmentions__form-submit">
+				<button>Send</button>
 			</div>
 		</form>
 		<small>
@@ -59,7 +59,7 @@
 		{{ postMentions.comments.length }} Comments
 			{%- endif -%}
 </h3>
-<ol class="webmentions__list">
+<ol>
 	{%- asyncEach mention in postMentions.comments -%}
 	{%- include "webmention.njk" -%}
 	{%- endeach -%}

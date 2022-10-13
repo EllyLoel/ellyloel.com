@@ -20,75 +20,43 @@ description: Hi, I’m Elly. I like creating delightful, magical, and accessible
 		</div>
 	</header>
 
-	{% feedBlock
-	title = "Articles",
-	url = "/blog/" %}
-	{% set blog = collections.blog | reverse | sliceCollection(4) %}
-	{%- for post in blog %}
-		{% feedItem
-		title = post.data.title,
-		url = post.url,
-		excerpt = post.data.page.excerpt,
-		stage = post.data.stage,
-		image = post.data.image
+	{% feedBlock title = "Recent posts" %}
+	{% set recentPostTitles = [] %}
+	{% set recentPosts = collections.allPostTypes | sortByCreated | reverse | sliceCollection(8) %}
+	{%- for post in recentPosts %}
+		{%- if post.data.created -%}
+			{%- set recentPostTitles = (recentPostTitles.push(post.data.title), recentPostTitles) -%}
+			{% feedItem
+			title = post.data.title,
+			url = post.url,
+			excerpt = post.data.page.excerpt,
+			stage = post.data.stage,
+			image = post.data.image,
+			created = post.data.created,
+			collection = post.data.eleventyNavigation.parent,
+			collectionUrl = post.data.page.url
  %}
+		{%- endif -%}
 	{%- endfor %}
 	{% endfeedBlock %}
 
-	{% feedBlock
-	title = "Projects",
-	url = "/projects/" %}
-	{% set projects = collections.projects | reverse | sliceCollection(4) %}
-	{%- for project in projects %}
-		{% feedItem
-		title = project.data.title,
-		url = project.url,
-		excerpt = project.data.page.excerpt,
-		image = project.data.image
+	{% feedBlock title = "Recently updated posts" %}
+	{% set updatedPosts = collections.allPostTypes | sortByModified | reverse %}
+	{% set index = 0 %}
+	{%- for post in updatedPosts %}
+		{%- if post.data.modified and not recentPostTitles.includes(post.data.title) and index < 8 -%}
+			{% set index = index + 1 %}
+			{% feedItem
+			title = post.data.title,
+			url = post.url,
+			excerpt = post.data.page.excerpt,
+			stage = post.data.stage,
+			image = post.data.image,
+			modified = post.data.modified,
+			collection = post.data.eleventyNavigation.parent,
+			collectionUrl = post.data.page.url
  %}
-	{%- endfor %}
-	{% endfeedBlock %}
-
-	{% feedBlock
-	title = "Notes",
-	url = "/garden/" %}
-	{% set notes = collections.garden | reverse | sliceCollection(4) %}
-	{%- for note in notes %}
-		{% feedItem
-		title = note.data.title,
-		url = note.url,
-		excerpt = note.data.page.excerpt,
-		stage = note.data.stage,
-		image = note.data.image
- %}
-	{%- endfor %}
-	{% endfeedBlock %}
-
-	{% feedBlock
-	title = "Bookmarks",
-	url = "/bookmarks/" %}
-	{% set bookmarks = collections.bookmarks | reverse | sliceCollection(4) %}
-	{%- for bookmark in bookmarks %}
-		{% feedItem
-		title = bookmark.data.title,
-		url = bookmark.url,
-		excerpt = bookmark.data.page.excerpt,
-		image = bookmark.data.image
- %}
-	{%- endfor %}
-	{% endfeedBlock %}
-
-	{% feedBlock
-	title = "TIL",
-	url = "/til/" %}
-	{% set tils = collections.til | reverse | sliceCollection(4) %}
-	{%- for til in tils %}
-		{% feedItem
-		title = til.data.title,
-		url = til.url,
-		excerpt = til.data.page.excerpt,
-		image = til.data.image
- %}
+		{%- endif -%}
 	{%- endfor %}
 	{% endfeedBlock %}
 </div>

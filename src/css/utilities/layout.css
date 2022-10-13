@@ -18,6 +18,10 @@
   align-items: center;
 }
 
+.align-baseline {
+  align-items: baseline;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -29,6 +33,10 @@
 .grid {
   display: grid;
   gap: var(--gap, var(--size-3));
+}
+
+.gap-1ch {
+  gap: 1ch;
 }
 
 .gap-1 {

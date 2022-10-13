@@ -3,6 +3,7 @@ const path = require("path");
 const fs = require("node:fs/promises");
 const removeMd = require("remove-markdown");
 const slinkity = require("slinkity");
+const { DateTime } = require("luxon");
 
 const EleventyPluginNavigation = require("@11ty/eleventy-navigation");
 const EleventyPluginRss = require("@11ty/eleventy-plugin-rss");
@@ -156,11 +157,15 @@ module.exports = (eleventyConfig) => {
     "feedBlock",
     function (content, feed) {
       return `
-        <section class="[ ${feed.title.toLowerCase()} ] [ feed-block flow ]">
+        <section class="[ ${feed.title
+          .replace(/\s/gm, "-")
+          .toLowerCase()} ] [ feed-block flow ]">
           <h2>
-            <a href="${feed.url}">${feed.title}</a>
+            ${
+              feed?.url ? `<a href="${feed.url}">${feed.title}</a>` : feed.title
+            }
           </h2>
-          <ul class="[ feed ][ grid ]">
+          <ul class="[ feed ]">
             ${content}
           </ul>
         </section>
@@ -189,6 +194,23 @@ module.exports = (eleventyConfig) => {
             }
           )}</div>`
         : ``;
+
+      const date = feedItem?.created ? feedItem.created : feedItem?.modified;
+
+      const isoDate = date
+        ? DateTime.fromJSDate(date, { zone: "utc" }).toISO({
+            includeOffset: false,
+            suppressMilliseconds: true,
+          })
+        : ``;
+
+      const fullDate = date
+        ? DateTime.fromJSDate(date, { zone: "utc" }).toLocaleString(
+            DateTime.DATE_FULL
+          )
+        : ``;
+
+      const label = feedItem?.created ? `Created` : `Last modified`;
 
       const stage = feedItem?.stage
         ? `<span>
@@ -222,6 +244,35 @@ module.exports = (eleventyConfig) => {
           ${
             feedItem.excerpt
               ? markdownLibrary.render(`${feedItem.excerpt} &#8230;`)
+              : ``
+          }
+          ${
+            date || feedItem?.collection
+              ? `<div slot="footer" class="[ flex align-center ]">
+                  ${
+                    date
+                      ? `
+                          <sl-tooltip content="${label} ${fullDate}">
+                            <span class="[ flex align-center gap-1ch ]">
+                              <sl-icon class="[ icon ]" library="fa" name="far-calendar${
+                                feedItem?.created ? `` : `-plus`
+                              }" label="${label}"></sl-icon>
+                              <sl-relative-time class="[ date ]" date="${isoDate}" style="line-height: 1;"></sl-relative-time>
+                            </span>
+                          </sl-tooltip>
+                        `
+                      : ``
+                  }
+                  ${
+                    feedItem?.collection
+                      ? `<a href="/${feedItem.collectionUrl.split("/")[1]}/">
+                      <sl-badge variant="neutral" pill>
+                        ${feedItem.collection}
+                      </sl-badge>
+                    </a>`
+                      : ``
+                  }
+                </div>`
               : ``
           }
         </sl-card>

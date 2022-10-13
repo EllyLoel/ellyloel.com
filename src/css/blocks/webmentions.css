@@ -1,5 +1,5 @@
 .webmentions {
-  & .webmentions__field-wrapper {
+  & .input-wrapper {
     display: flex;
     gap: var(--size-3);
     flex-wrap: wrap;

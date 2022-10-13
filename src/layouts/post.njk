@@ -10,7 +10,7 @@ layout: base-without-header.njk
 				<sl-tooltip content="Created">
 					<sl-icon class="[ icon ]" library="fa" name="far-calendar" label="Last modified"></sl-icon>
 				</sl-tooltip>
-				<time class="[ date ]" datetime="{{ created | dateToISO }}">{{ created | dateToLocaleDateFull }}</time>
+				<sl-relative-time class="[ date ]" date="{{ created | dateToISO }}"></sl-relative-time>
 			</span>
 		{%- endif -%}
 		{%- if modified -%}
@@ -18,7 +18,7 @@ layout: base-without-header.njk
 				<sl-tooltip content="Last modified">
 					<sl-icon class="[ icon ]" library="fa" name="far-calendar-plus" label="Last modified"></sl-icon>
 				</sl-tooltip>
-				<time class="[ date ]" datetime="{{ modified | dateToISO }}">{{ modified | dateToLocaleDateFull }}</time>
+				<sl-relative-time class="[ date ]" date="{{ modified | dateToISO }}"></sl-relative-time>
 			</span>
 		{%- endif -%}
 		{%- if not created and not modified -%}
@@ -26,7 +26,7 @@ layout: base-without-header.njk
 				<sl-tooltip content="Last modified">
 					<sl-icon class="[ icon ]" library="fa" name="far-calendar-plus" label="Last modified"></sl-icon>
 				</sl-tooltip>
-				<time class="[ date ]" datetime="{{ page.date | dateToISO }}">{{ page.date | dateToLocaleDateFull }}</time>
+				<sl-relative-time class="[ date ]" date="{{ page.date | dateToISO }}"></sl-relative-time>
 			</span>
 		{%- endif -%}
 		{%- if stage -%}

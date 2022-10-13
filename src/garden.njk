@@ -10,7 +10,7 @@ eleventyNavigation:
 
 <div id="graph"></div>
 
-{%- set notes = collections.garden | reverse -%}
+{%- set notes = collections.garden | sortByCreated | reverse -%}
 {%- set seedlingCount = 0 -%}
 {%- set buddingCount = 0 -%}
 {%- set evergreenCount = 0 -%}
@@ -43,13 +43,15 @@ eleventyNavigation:
   </sl-menu-item>
 </sl-select>
 
-<ul class="[ feed ][ flow ]">
+<ul class="[ feed ]">
   {%- for note in notes -%}
     {%- feedItem
     title = note.data.title,
     url = note.url,
     excerpt = note.data.page.excerpt,
-    stage = note.data.stage
+    stage = note.data.stage,
+    image = note.data.image,
+    created = note.data.created
     -%}
   {%- endfor -%}
 </ul>
