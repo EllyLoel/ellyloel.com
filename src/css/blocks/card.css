@@ -21,17 +21,52 @@
     border-radius: var(--radius-3);
     padding: var(--padding);
     background-color: var(--accent-bg-subtle);
+    gap: var(--size-3);
   }
 
-  &::part(body),
-  &::part(header) {
+  &::part(header),
+  &::part(body) {
     font-size: var(--font-size-4);
+  }
+
+  &::part(header),
+  &::part(body),
+  &::part(footer) {
     padding: 0;
   }
 
   &::part(header) {
     border: none;
-    margin-block-end: var(--size-2);
+  }
+
+  &::part(footer) {
+    border: none;
+  }
+
+  & div[slot="footer"] {
+    justify-content: space-between;
+
+    & > sl-tooltip > span {
+      max-width: fit-content;
+      font-size: 0.85em;
+    }
+
+    & > a {
+      background: none;
+      padding: unset;
+      margin-inline: unset;
+      line-height: 1;
+      text-decoration: none;
+
+      &,
+      & > sl-badge {
+        border-radius: var(--sl-border-radius-pill);
+      }
+
+      & > sl-badge::part(base) {
+        font-weight: var(--font-weight-body-bold);
+      }
+    }
   }
 
   & .feed-item-card-title {

@@ -8,13 +8,15 @@ eleventyNavigation:
 
 <div id="graph"></div>
 
-{% set bookmarks = collections.bookmarks | reverse %}
-<ul class="[ flow ]">
+{% set bookmarks = collections.bookmarks | sortByCreated | reverse %}
+<ul class="[ feed ]">
   {%- for bookmark in bookmarks %}
     {% feedItem
     title = bookmark.data.title,
     url = bookmark.url,
-    excerpt = bookmark.data.page.excerpt
+    excerpt = bookmark.data.page.excerpt,
+    image = bookmark.data.image,
+    created = bookmark.data.created
  %}
   {%- endfor %}
 </ul>

@@ -33,14 +33,16 @@ eleventyNavigation:
   </sl-menu-item>
 </sl-select>
 
-{% set blog = collections.blog | reverse %}
-<ul class="[ feed ][ flow ]">
+{% set blog = collections.blog | sortByCreated | reverse %}
+<ul class="[ feed ]">
   {%- for post in blog %}
     {% feedItem
     title = post.data.title,
     url = post.url,
     excerpt = post.data.page.excerpt,
-    stage = post.data.stage
+    stage = post.data.stage,
+    image = post.data.image,
+    created = post.data.created
  %}
   {%- endfor %}
 </ul>

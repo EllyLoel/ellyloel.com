@@ -43,6 +43,22 @@ module.exports = {
     return string[0].toUpperCase() + string.substring(1);
   },
 
+  sortByCreated: function (posts) {
+    return [...posts].sort(function (a, b) {
+      if (a.data.created < b.data.created) return -1;
+      if (a.data.created > b.data.created) return 1;
+      return 0;
+    });
+  },
+
+  sortByModified: function (posts) {
+    return [...posts].sort(function (a, b) {
+      if (a.data.modified < b.data.modified) return -1;
+      if (a.data.modified > b.data.modified) return 1;
+      return 0;
+    });
+  },
+
   linkGraph: function (posts) {
     const linkGraph = {
       nodes: [],

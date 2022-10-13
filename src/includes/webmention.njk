@@ -1,24 +1,24 @@
-<li class="webmentions__item">
-	<div class="webmention__meta">
+<li class="[ webmention ]">
+	<div class="[ meta ]">
 		{% if mention.author %}
-			<div class="webmention__author-photo-wrapper">
-				<img src="{{ mention.author.photo or '/static/images/webmention-avatar-default.svg' }}" alt="{{ mention.author.name }}" class="webmention__author-photo-image" loading="lazy" decoding="async" width="48" height="48">
+			<div class="[ author-photo-wrapper ]">
+				<img src="{{ mention.author.photo or '/static/images/webmention-avatar-default.svg' }}" alt="{{ mention.author.name }}" class="[ author-photo-image ]" loading="lazy" decoding="async" width="48" height="48">
 			</div>
-			<a href="{{ mention.author.url }}" target="_blank" rel="external noopener noreferrer">
-				<span class="webmention__author-name">{{ mention.author.name }}</span>
+			<a href="{{ mention.author.url }}">
+				<span class="[ author-name ]">{{ mention.author.name }}</span>
 			</a>
 		{% else %}
-			<div class="webmention__author-photo-wrapper">
-				<img src="/static/images/webmention-avatar-default.svg" alt="Anonymous" class="webmention__author-photo" loading="lazy" decoding="async" width="48" height="48">
+			<div class="[ author-photo-wrapper ]">
+				<img src="/static/images/webmention-avatar-default.svg" alt="Anonymous" class="[ author-photo ]" loading="lazy" decoding="async" width="48" height="48">
 			</div>
-			<span class="webmention__author-name">Anonymous</span>
+			<span class="[ author-name ]">Anonymous</span>
 		{% endif %}
-		<time class="webmention__pubdate dt-published" datetime="{{ mention.published }}">{{ mention.published  | date("YYYY-MM-DD") }}</time>
+		<sl-relative-time class="[ date ]" date="{{ mention.published }}"></sl-relative-time>
 	</div>
 
 	<p>{{ mention.content.value | safe }}</p>
 
 	<p>
-		<a href="{{ mention.url }}" target="_blank" rel="external noopener noreferrer">View original post</a>
+		<a href="{{ mention.url }}">View original post</a>
 	</p>
 </li>
