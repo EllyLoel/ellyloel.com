@@ -16,7 +16,7 @@ html {
 
 :where(:defined) {
   opacity: 1;
-  transition: opacity 500ms var(--ease-2);
+  transition: opacity 500ms var(--ease-3);
 }
 
 body {
@@ -24,6 +24,11 @@ body {
   font-family: "Work Sans", var(--font-sans);
   font-size: var(--font-size-2);
   font-weight: var(--font-weight-body-normal);
+
+  & > *:nth-child(n + 3) {
+    opacity: 0%;
+    animation: var(--animation-fade-in) forwards;
+  }
 }
 
 main {
@@ -504,7 +509,7 @@ menu {
   }
 
   :defined:focus-visible {
-    transition: outline-offset 145ms var(--ease-2), opacity 500ms var(--ease-2);
+    transition: outline-offset 145ms var(--ease-2), opacity 500ms var(--ease-3);
   }
 
   :not(:active):focus-visible {
