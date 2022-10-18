@@ -20,13 +20,13 @@ description: Hi, I’m Elly. I like creating delightful, magical, and accessible
 		</div>
 	</header>
 
-	{% feedBlock title = "Recent posts" %}
-	{% set recentPostTitles = [] %}
-	{% set recentPosts = collections.allPostTypes | sortByCreated | reverse | sliceCollection(8) %}
-	{%- for post in recentPosts %}
+	{%- feedBlock title = "Recent posts" -%}
+	{%- set recentPostTitles = [] -%}
+	{%- set recentPosts = collections.allPostTypes | sortByCreated | sliceCollection -%}
+	{%- for post in recentPosts -%}
 		{%- if post.data.created -%}
 			{%- set recentPostTitles = (recentPostTitles.push(post.data.title), recentPostTitles) -%}
-			{% feedItem
+			{%- feedItem
 			title = post.data.title,
 			url = post.url,
 			excerpt = post.data.page.excerpt,
@@ -35,13 +35,13 @@ description: Hi, I’m Elly. I like creating delightful, magical, and accessible
 			created = post.data.created,
 			collection = post.data.eleventyNavigation.parent,
 			collectionUrl = post.data.page.url
- %}
+ -%}
 		{%- endif -%}
-	{%- endfor %}
-	{% endfeedBlock %}
+	{%- endfor -%}
+	{%- endfeedBlock -%}
 
 	{% feedBlock title = "Recently updated posts" %}
-	{% set updatedPosts = collections.allPostTypes | sortByModified | reverse %}
+	{% set updatedPosts = collections.allPostTypes | sortByModified %}
 	{% set index = 0 %}
 	{%- for post in updatedPosts %}
 		{%- if post.data.modified and not recentPostTitles.includes(post.data.title) and index < 8 -%}

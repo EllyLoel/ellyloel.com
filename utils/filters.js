@@ -24,8 +24,8 @@ module.exports = {
     return markdownIt({ html: true }).render(content);
   },
 
-  sliceCollection: function (collection, count) {
-    return collection.slice(0, count || 5);
+  sliceCollection: function (collection) {
+    return collection.slice(0, 8);
   },
 
   sortAlphabetically: function (pages) {
@@ -42,16 +42,16 @@ module.exports = {
 
   sortByCreated: function (posts) {
     return [...posts].sort(function (a, b) {
-      if (a.data.created < b.data.created) return -1;
-      if (a.data.created > b.data.created) return 1;
+      if (a.data.created > b.data.created) return -1;
+      if (a.data.created < b.data.created) return 1;
       return 0;
     });
   },
 
   sortByModified: function (posts) {
     return [...posts].sort(function (a, b) {
-      if (a.data.modified < b.data.modified) return -1;
-      if (a.data.modified > b.data.modified) return 1;
+      if (a.data.modified > b.data.modified) return -1;
+      if (a.data.modified < b.data.modified) return 1;
       return 0;
     });
   },

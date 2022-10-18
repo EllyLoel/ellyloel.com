@@ -7,26 +7,32 @@ layout: base-without-header.njk
 	<div class="[ flex gap-3 flex-wrap ]">
 		{%- if created -%}
 			<span>
-				<sl-tooltip content="Created">
-					<sl-icon class="[ icon ]" library="fa" name="far-calendar" label="Last modified"></sl-icon>
+				<sl-tooltip content="Created {{ created | dateToLocaleDateFull }}">
+					<span class="[ flex align-center gap-1ch ]">
+						<sl-icon class="[ icon ]" library="fa" name="far-calendar" label="Last modified"></sl-icon>
+						<sl-relative-time class="[ date ]" date="{{ created | dateToISO }}"></sl-relative-time>
+					</span>
 				</sl-tooltip>
-				<sl-relative-time class="[ date ]" date="{{ created | dateToISO }}"></sl-relative-time>
 			</span>
 		{%- endif -%}
 		{%- if modified -%}
 			<span>
-				<sl-tooltip content="Last modified">
-					<sl-icon class="[ icon ]" library="fa" name="far-calendar-plus" label="Last modified"></sl-icon>
+				<sl-tooltip content="Last modified {{ modified | dateToLocaleDateFull }}">
+					<span class="[ flex align-center gap-1ch ]">
+						<sl-icon class="[ icon ]" library="fa" name="far-calendar-plus" label="Last modified"></sl-icon>
+						<sl-relative-time class="[ date ]" date="{{ modified | dateToISO }}"></sl-relative-time>
+					</span>
 				</sl-tooltip>
-				<sl-relative-time class="[ date ]" date="{{ modified | dateToISO }}"></sl-relative-time>
 			</span>
 		{%- endif -%}
 		{%- if not created and not modified -%}
 			<span>
-				<sl-tooltip content="Last modified">
-					<sl-icon class="[ icon ]" library="fa" name="far-calendar-plus" label="Last modified"></sl-icon>
+				<sl-tooltip content="Last modified {{ page.date | dateToLocaleDateFull }}">
+					<span class="[ flex align-center gap-1ch ]">
+						<sl-icon class="[ icon ]" library="fa" name="far-calendar-plus" label="Last modified"></sl-icon>
+						<sl-relative-time class="[ date ]" date="{{ page.date | dateToISO }}"></sl-relative-time>
+					</span>
 				</sl-tooltip>
-				<sl-relative-time class="[ date ]" date="{{ page.date | dateToISO }}"></sl-relative-time>
 			</span>
 		{%- endif -%}
 		{%- if stage -%}
