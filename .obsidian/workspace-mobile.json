@@ -11,8 +11,13 @@
             "id": "4d1fa63dd8f5f70a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "src/garden/Harder than being disabled.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -73,6 +78,7 @@
         "state": {
           "type": "backlink",
           "state": {
+            "file": "src/garden/Harder than being disabled.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -88,7 +94,9 @@
         "type": "leaf",
         "state": {
           "type": "outline",
-          "state": {}
+          "state": {
+            "file": "src/garden/Harder than being disabled.md"
+          }
         }
       }
     ],
