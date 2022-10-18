@@ -1,7 +1,7 @@
 ---
 title: Into the Personal-Website-Verse
-created: 2021-10-18
-modified: 2021-10-18
+created: 2022-10-18
+modified: 2022-10-18
 ---
 
 {% unfurl "https://matthiasott.com/articles/into-the-personal-website-verse" %}
