@@ -1,0 +1,16 @@
+---
+layout: base-without-header.njk
+---
+<header>
+	{%- include "breadcrumb.njk" -%}
+	<h1>{{ title }}</h1>
+</header>
+{%- if page.url === "/garden/" or page.url === "/blog/" or page.url === "/projects/" or page.url === "/bookmarks/" or page.url === "/til/" -%}
+	<article class="[ markdown-container ][ flow flow-space-setter ]" style="--flow-space-setter: 3em;">
+		{{ content | safe }}
+	</article>
+{%- else -%}
+	<article class="[ markdown-container ][ flow ]">
+		{{ content | safe }}
+	</article>
+{%- endif -%}

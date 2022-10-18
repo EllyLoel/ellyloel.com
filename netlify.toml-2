@@ -1,0 +1,20 @@
+[build]
+  command = "yarn build"
+  publish = "_site"
+
+[[redirects]]
+  from = "*"
+  to = "/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/404"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/404/"
+  to = "/404.html"
+  status = 404
+  force = true

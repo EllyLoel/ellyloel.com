@@ -1,0 +1,24 @@
+---
+layout: base
+title: Projects
+eleventyNavigation:
+  key: Projects
+  order: 5
+navToHtmlOptions:
+  showExcerpt: true
+---
+
+<div id="graph"></div>
+
+{% set projects = collections.projects | sortByCreated | reverse %}
+<ul class="[ feed ]">
+  {%- for project in projects %}
+    {% feedItem
+    title = project.data.title,
+    url = project.url,
+    excerpt = project.data.page.excerpt,
+    image = project.data.image,
+    created = project.data.created
+ %}
+  {%- endfor %}
+</ul>

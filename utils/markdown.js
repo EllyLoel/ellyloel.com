@@ -1,7 +1,7 @@
 const markdownItAnchor = require("markdown-it-anchor");
+const twemoji = require("twemoji");
 const EleventyPluginImage = require("@11ty/eleventy-img");
 const path = require("path");
-const slugify = require("slugify");
 
 // Customize Markdown library and settings:
 module.exports = (eleventyConfig) => {
@@ -17,24 +17,7 @@ module.exports = (eleventyConfig) => {
     .use(require("markdown-it-footnote"))
     .use(require("markdown-it-mark"))
     .use(require("markdown-it-abbr"))
-    .use(require("markdown-it-container"), "callout", {
-      render: (tokens, idx) => {
-        const title = tokens[idx].info.trim().match(/^callout\s+(.*)$/);
-        if (tokens[idx].nesting === 1) {
-          // opening tag
-          return `<aside class="callout">
-              <sl-icon name="info-circle"></sl-icon>
-              <strong>${markdownLibrary.render(title[1])}</strong>
-              <div>
-            `;
-        } else {
-          // closing tag
-          return ` </div>
-            </aside>
-            `;
-        }
-      },
-    })
+    .use(require("markdown-it-emoji"))
     .use(markdownItAnchor, {
       level: 2,
       permalink: markdownItAnchor.permalink.headerLink({
@@ -42,30 +25,25 @@ module.exports = (eleventyConfig) => {
       }),
       slugify: eleventyConfig.getFilter("slugify"),
     })
-    .use(require("markdown-it-emoji"))
     .use(
       require("markdown-it-wikilinks")({
         baseURL: "/",
         relativeBaseURL: "../",
         suffix: "",
         uriSuffix: "",
-        generatePageNameFromLabel: (label) => slugify(label, { lower: true }),
-        postProcessPageName: (label) => slugify(label, { lower: true }),
       })
     );
 
-  markdownLibrary.renderer.rules.emoji = (token, idx) =>
-    `<span class="[ emoji ]">${token[idx].content}</span>`;
+  markdownLibrary.renderer.rules.emoji = (token, idx) => {
+    return twemoji.parse(token[idx].content);
+  };
 
   markdownLibrary.renderer.rules.image = function (tokens, idx) {
     // responsive images with 11ty image
     // this overrides the default image renderer
 
     function figure(html, caption) {
-      if (caption) {
-        return `<figure>${html}<figcaption>${caption}</figcaption></figure>`;
-      }
-      return `<figure>${html}</figure>`;
+      return `<figure>${html}<figcaption>${caption}</figcaption></figure>`;
     }
 
     const token = tokens[idx];
@@ -82,7 +60,7 @@ module.exports = (eleventyConfig) => {
         tokens[i].hidden = true;
       }
       if (tokens[i].type === "link_open") {
-        caption += `<a href="${tokens[i].attrs[0][1]}">`;
+        caption += `<a href="${tokens[i].attrs[0]}">`;
         tokens[i].hidden = true;
       }
       if (tokens[i].type === "link_close") {
@@ -112,7 +90,10 @@ module.exports = (eleventyConfig) => {
         { whitespaceMode: "inline" }
       );
 
-      return figure(generated, caption);
+      if (caption) {
+        return figure(generated, caption);
+      }
+      return generated;
     }
 
     const widths = [250, 316, 426, 460, 580, 768];
@@ -134,7 +115,10 @@ module.exports = (eleventyConfig) => {
       { whitespaceMode: "inline" }
     );
 
-    return figure(generated, caption);
+    if (caption) {
+      return figure(generated, caption);
+    }
+    return generated;
   };
 
   return markdownLibrary;

@@ -10,7 +10,7 @@
   "short_name": "ellyloel",
   "description": "This is my own lovely little corner of the internet. Look forward to plenty of interesting ideas & projects.",
   "icons": [
-    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
-    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" }
+    { "src": "assets/img/icons/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "assets/img/icons/icon-512.png", "type": "image/png", "sizes": "512x512" }
   ]
 }

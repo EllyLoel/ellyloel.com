@@ -1,0 +1,9 @@
+---
+layout: base-without-header
+permalink: 404.html
+eleventyExcludeFromCollections: true
+---
+
+![A digital drawing of me, a blonde woman in a white sweater asleep with z's above my head and drool coming out of my mouth.](./public/assets/img/sleepy.png)
+
+# Whoops! Looks like this page doesn't exist :cry:

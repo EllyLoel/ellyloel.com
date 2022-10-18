@@ -1,0 +1,43 @@
+.feed-item-card {
+  --shadow-offset: var(--size-1);
+  inline-size: 100%;
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0px 0px
+    var(--accent-bg-hover);
+  border-radius: var(--radius-3);
+  transition: box-shadow 300ms var(--ease-1);
+
+  &:hover {
+    --shadow-offset: var(--size-2);
+    transition: box-shadow 150ms var(--ease-1);
+  }
+
+  &::part(base) {
+    border-width: 2px;
+    border-color: var(--accent-bg-hover);
+    border-radius: var(--radius-3);
+  }
+
+  &::part(body),
+  &::part(header) {
+    font-size: var(--font-size-4);
+  }
+
+  &::part(header) {
+    border: none;
+  }
+
+  & .feed-item-card-title {
+    font-size: inherit;
+
+    & * {
+      font-size: inherit;
+    }
+  }
+  // Rip all this shit shitty shit code when `:has()` is well supported
+  // Wait I don't think this even works:
+  // @supports selector(a:has(> b)) {
+  //   &:is(::part(header), ::part(body)):has(> .feed-item-card-title) {
+  //     font-size: var(--font-size-5);
+  //   }
+  // }
+}
