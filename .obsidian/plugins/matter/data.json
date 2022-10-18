@@ -5,7 +5,7 @@
   "dataDir": "src/bookmarks",
   "syncInterval": 60,
   "hasCompletedInitialSetup": true,
-  "lastSync": "2022-10-18T10:25:48.616Z",
+  "lastSync": "2022-10-18T12:43:50.148Z",
   "isSyncing": false,
   "contentMap": {
     "A Whole Cascade of Layers.md": "4_12455205",
@@ -16,5 +16,7 @@
     "On Using Web Component Libraries.md": "4_6896915",
     "Into the Personal-Website-Verse.md": "4_415771"
   },
-  "recreateIfMissing": true
+  "recreateIfMissing": false,
+  "metadataTemplate": null,
+  "highlightTemplate": null
 }
