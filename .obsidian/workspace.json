@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d7c56f1d4f7660f6",
+            "id": "4a984bd2669d9560",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/bookmarks/I Can’t Breathe- HeydonWorks.md",
+                "file": "src/garden/Shadow DOM-less Web Component library.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/bookmarks/I Can’t Breathe- HeydonWorks.md"
+                "file": "src/garden/Shadow DOM-less Web Component library.md"
               }
             }
           },
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/bookmarks/I Can’t Breathe- HeydonWorks.md",
+                "file": "src/garden/Shadow DOM-less Web Component library.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,12 +122,12 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "d7c56f1d4f7660f6",
+  "active": "4a984bd2669d9560",
   "lastOpenFiles": [
     "src/bookmarks/I Can’t Breathe- HeydonWorks.md",
+    "src/garden/Shadow DOM-less Web Component library.md",
     "src/bookmarks/Components are pure overhead.md",
     "src/bookmarks/State of Web Components August 2022.md",
-    "src/bookmarks/I Can’t Breathe- HeydonWorks.md",
     "src/bookmarks/Zero to 60 in Software Development.md",
     "src/bookmarks/Why most design systems implode.md",
     "src/bookmarks/The Patchability of the Open Web.md",
