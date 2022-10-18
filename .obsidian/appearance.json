@@ -4,5 +4,6 @@
   "translucency": true,
   "theme": "system",
   "baseFontSizeAction": false,
-  "monospaceFontFamily": "JetBrains Mono"
+  "monospaceFontFamily": "JetBrains Mono",
+  "accentColor": ""
 }

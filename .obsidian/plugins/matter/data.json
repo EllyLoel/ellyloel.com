@@ -5,14 +5,16 @@
   "dataDir": "src/bookmarks",
   "syncInterval": 60,
   "hasCompletedInitialSetup": true,
-  "lastSync": "2022-10-16T06:27:34.906Z",
+  "lastSync": "2022-10-18T05:01:11.444Z",
   "isSyncing": false,
   "contentMap": {
     "A Whole Cascade of Layers.md": "4_12455205",
     "The Patchability of the Open Web.md": "4_13744651",
     "Why most design systems implode.md": "4_5341074",
     "My therapist suggested I talk to my inner child. I thought she was joking - but it changed everything.md": "4_14553259",
-    "I Can’t Breathe- HeydonWorks.md": "4_14632990"
+    "I Can’t Breathe- HeydonWorks.md": "4_14632990",
+    "On Using Web Component Libraries.md": "4_6896915",
+    "Into the Personal-Website-Verse.md": "4_415771"
   },
   "recreateIfMissing": true
 }
