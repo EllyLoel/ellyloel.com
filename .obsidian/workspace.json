@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7d6e869ef7936fdd",
+            "id": "475b806d507f4410",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/bookmarks/Zero to 60 in Software Development.md",
+                "file": "src/bookmarks/State of Web Components August 2022.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -63,7 +63,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 320.5
+    "width": 231.5
   },
   "right": {
     "id": "84b304f5dd126125",
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/bookmarks/Zero to 60 in Software Development.md"
+                "file": "src/bookmarks/State of Web Components August 2022.md"
               }
             }
           },
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/bookmarks/Zero to 60 in Software Development.md",
+                "file": "src/bookmarks/State of Web Components August 2022.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,17 +122,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "7d6e869ef7936fdd",
+  "active": "475b806d507f4410",
   "lastOpenFiles": [
+    "src/bookmarks/I Can’t Breathe.md",
+    "src/bookmarks/State of Web Components August 2022.md",
+    "src/bookmarks/Zero to 60 in Software Development.md",
     "src/bookmarks/Why most design systems implode.md",
     "src/bookmarks/The Patchability of the Open Web.md",
     "src/bookmarks/On Using Web Component Libraries.md",
     "src/bookmarks/My therapist suggested I talk to my inner child. I thought she was joking - but it changed everything.md",
     "src/bookmarks/Into the Personal-Website-Verse.md",
     "src/bookmarks/Intentional Career Building.md",
-    "src/bookmarks/I Can’t Breathe.md",
-    "src/bookmarks/How to fight fascism.md",
-    "src/bookmarks/ADHD factsheet for people with a lived experience.md",
-    "src/bookmarks/A Whole Cascade of Layers.md"
+    "src/bookmarks/How to fight fascism.md"
   ]
 }
