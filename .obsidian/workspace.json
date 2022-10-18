@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "f6d0e7dd08f3a9fd",
+        "id": "7f3691fc23694afe",
         "type": "tabs",
         "children": [
           {
-            "id": "4a984bd2669d9560",
+            "id": "b9607ee2df10696a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/garden/Shadow DOM-less Web Component library.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ],
@@ -89,9 +84,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "src/garden/Shadow DOM-less Web Component library.md"
-              }
+              "state": {}
             }
           },
           {
@@ -100,7 +93,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/garden/Shadow DOM-less Web Component library.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,17 +114,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "4a984bd2669d9560",
+  "active": "b9607ee2df10696a",
   "lastOpenFiles": [
-    "src/bookmarks/I Can’t Breathe- HeydonWorks.md",
-    "src/garden/Shadow DOM-less Web Component library.md",
-    "src/bookmarks/Components are pure overhead.md",
-    "src/bookmarks/State of Web Components August 2022.md",
     "src/bookmarks/Zero to 60 in Software Development.md",
     "src/bookmarks/Why most design systems implode.md",
     "src/bookmarks/The Patchability of the Open Web.md",
+    "src/bookmarks/State of Web Components August 2022.md",
     "src/bookmarks/On Using Web Component Libraries.md",
     "src/bookmarks/My therapist suggested I talk to my inner child. I thought she was joking - but it changed everything.md",
-    "src/bookmarks/Into the Personal-Website-Verse.md"
+    "src/bookmarks/Into the Personal-Website-Verse.md",
+    "src/bookmarks/Intentional Career Building.md",
+    "src/bookmarks/I Can’t Breathe- HeydonWorks.md",
+    "src/bookmarks/How to fight fascism.md"
   ]
 }
