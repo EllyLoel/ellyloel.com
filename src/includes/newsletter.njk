@@ -1,6 +1,6 @@
 <form class="[ newsletter ]" action="http://newsletter.ellyloel.com/add_subscriber" method="post" id="revue-form" name="revue-form">
-	<div class="[ flow ]">
-		<div>
+	<fieldset class="[ flow ]">
+		<legend>
 			<h2>Newsletter</h2>
 			<span>
 				Keep up to date with my <a href="/garden/">digital garden</a>, my <a href="/blog/">blog</a> posts, and anything else I'm working on, as well as gain access to newsletter exclusive content.
@@ -15,17 +15,15 @@
 					By subscribing, you agree with Revue’s <a href="https://www.getrevue.co/terms">Terms of Service</a> and <a href="https://www.getrevue.co/privacy">Privacy Policy</a>.
 				</em>
 			</small>
+		</legend>
+		<div class="[ flex flex-col ]">
+			<label for="member_first_name">Name</label>
+			<input name="member[first_name]" id="member_first_name" type="text" placeholder="Name"/>
 		</div>
-		<div>
-			<div class="[ flex flex-col ]">
-				<label for="member_first_name">Name</label>
-				<input name="member[first_name]" id="member_first_name" type="text">
-			</div>
-			<div class="[ flex flex-col ]">
-				<label for="member_email">Email</label>
-				<input name="member[email]" id="member_email" type="email">
-			</div>
-			<button name="member[subscribe]" id="member_submit">Subscribe</button>
+		<div class="[ flex flex-col ]">
+			<label for="member_email">Email</label>
+			<input name="member[email]" id="member_email" type="email" placeholder="name@example.com"/>
 		</div>
-	</div>
+		<button name="member[subscribe]" id="member_submit">Subscribe</button>
+	</fieldset>
 </form>

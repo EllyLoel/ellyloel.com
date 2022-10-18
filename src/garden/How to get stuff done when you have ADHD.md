@@ -1,9 +1,8 @@
 ---
 title: How to get stuff done when you have ADHD
-stage: seedling
 ---
 
-**TL;DR**: Don't :smiling_face_with_tear:
+TL;DR: Don't :smiling_face_with_tear:
 
 There are only two times, [[Sense of time|now and not now]].
 
@@ -21,5 +20,6 @@ However long you think it will take you, double it, or honestly triple it ([[Est
 
 ---
 
-## References
+# References
+
 1. [How to get stuff done when you have ADHD](https://www.youtube.com/watch?v=YLkOZhROvA4)

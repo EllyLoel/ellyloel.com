@@ -1,0 +1,40 @@
+---json
+{
+  "permalink": "/public/notes.atom",
+  "eleventyExcludeFromCollections": true,
+  "site": {
+    "title": "Elly Loel",
+    "description": "This is my own lovely little corner of the internet. Look forward to plenty of interesting ideas & projects.",
+    "lang": "en",
+    "url": "https://ellyloel.com/",
+    "author": {
+      "name": "Elly Loel",
+      "email": "hello@ellyloel.com",
+    	"url": "https://ellyloel.com/about/"
+    }
+  }
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ site.url }}">
+	<title>{{ site.title }}</title>
+	<subtitle>{{ site.description }}</subtitle>
+	<link href="{{ '/notes.atom' | absoluteUrl(site.url) }}" rel="self"/>
+	<link href="{{ site.url }}"/>
+	<updated>{{ collections.garden | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+	<id>{{ site.url }}</id>
+	<author>
+		<name>{{ site.author.name }}</name>
+		<email>{{ site.author.email }}</email>
+	</author>
+	{%- for post in collections.garden | reverse %}
+		{%- set absolutePostUrl = post.url | absoluteUrl(site.url) %}
+		<entry>
+			<title>{{ post.data.title }}</title>
+			<link href="{{ absolutePostUrl }}"/>
+			<updated>{{ post.date | dateToRfc3339 }}</updated>
+			<id>{{ absolutePostUrl }}</id>
+			<content xml:lang="{{ site.lang }}" type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+		</entry>
+	{%- endfor %}
+</feed>

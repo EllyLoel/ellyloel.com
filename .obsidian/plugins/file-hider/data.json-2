@@ -1,0 +1,18 @@
+{
+  "hidden": true,
+  "hiddenList": [
+    "public",
+    "src/_assets",
+    "src/_data",
+    "src/_includes",
+    "src/data",
+    "src/includes",
+    "src/layouts",
+    "src/assets",
+    "utils",
+    "_site",
+    "_webmentioncache",
+    "img",
+    "node_modules"
+  ]
+}

@@ -1,6 +1,5 @@
 ---
 title: Neurodivergent
-stage: seedling
 ---
 
 Neurodivergence refers to variation in the human brain regarding sociability, learning, attention, mood and other mental functions in a non-pathological sense.

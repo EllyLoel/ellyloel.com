@@ -1,6 +1,5 @@
 ---
 title: Neurodiversity
-stage: seedling
 ---
 
-{% unfurl "https://portable.com.au/events/neurodiversity-in-projects-and-at-portable" %}
+[What is neurodiversity?](https://www.neurodiversityhub.org/what-is-neurodiversity)

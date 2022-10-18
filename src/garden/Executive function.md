@@ -1,6 +1,5 @@
 ---
 title: Executive function
-stage: budding
 ---
 
 The mental processes people rely on to self regulate. The executive functions enable a person to control their thoughts, words, actions and emotions. They also assist them to perceive and manage time, and to direct and manage their behaviour over time.
@@ -28,11 +27,6 @@ In [[ADHD]] brains the prefrontal cortex, the part of the brain that controls ex
 
 - Helps us to sustain or shift attention in response to different demands or to apply different rules in different settings.
 
-<figure>
-	<blockquote>
-		Is this actually about effort or an executive function issue?
-	</blockquote>
-	<figcaption>
-		— Jessica McCabe in <cite><a href="https://www.youtube.com/watch?v=H4YIHrEu-TU">What is Executive Function and Why Do We Need it?</a></cite>
-	</figcaption>
-</figure>
+> Is this actually about effort or an executive function issue?
+
+— Jessica McCabe in [What is Executive Function and Why Do We Need it?](https://www.youtube.com/watch?v=H4YIHrEu-TU)

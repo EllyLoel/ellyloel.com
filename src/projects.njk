@@ -8,17 +8,13 @@ navToHtmlOptions:
   showExcerpt: true
 ---
 
-<div id="graph"></div>
-
-{% set projects = collections.projects | sortByCreated | reverse %}
-<ul class="[ feed ]">
+{% set projects = collections.projects %}
+<ul class="[ flow ]">
   {%- for project in projects %}
     {% feedItem
     title = project.data.title,
     url = project.url,
-    excerpt = project.data.page.excerpt,
-    image = project.data.image,
-    created = project.data.created
+    excerpt = project.data.page.excerpt
  %}
   {%- endfor %}
 </ul>

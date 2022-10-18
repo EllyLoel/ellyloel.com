@@ -1,0 +1,48 @@
+---
+layout: base
+title: Blog
+eleventyNavigation:
+  key: Blog
+  order: 4
+---
+
+<div id="graph"></div>
+
+{%- set blog = collections.blog | reverse -%}
+{%- set draftCount = 0 -%}
+{%- set completeCount = 0 -%}
+
+{%- for post in blog -%}
+  {%- if post.data.stage === "draft" -%}
+    {%- set draftCount = draftCount + 1 -%}
+  {%- elif post.data.stage === "complete" -%}
+    {%- set completeCount = completeCount + 1 -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<sl-select class="[ stage ]" placeholder="All stages" label="Filter by stage" size="large" multiple clearable>
+  <sl-menu-item value="draft">
+    <sl-icon slot="prefix" class="[ icon ]" library="fa" name="fas-file-pen"></sl-icon>
+    Draft
+    <sl-badge slot="suffix" variant="neutral" pill>{{ draftCount }}</sl-badge>
+  </sl-menu-item>
+  <sl-menu-item value="complete">
+    <sl-icon slot="prefix" class="[ icon ]" library="fa" name="fas-circle-check"></sl-icon>
+    Complete
+    <sl-badge slot="suffix" variant="neutral" pill>{{ completeCount }}</sl-badge>
+  </sl-menu-item>
+</sl-select>
+
+{% set blog = collections.blog | sortByCreated | reverse %}
+<ul class="[ feed ]">
+  {%- for post in blog %}
+    {% feedItem
+    title = post.data.title,
+    url = post.url,
+    excerpt = post.data.page.excerpt,
+    stage = post.data.stage,
+    image = post.data.image,
+    created = post.data.created
+ %}
+  {%- endfor %}
+</ul>

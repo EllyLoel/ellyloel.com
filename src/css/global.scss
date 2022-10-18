@@ -1,0 +1,423 @@
+//// Reset
+@use "/@root/node_modules/cssremedy/css/remedy.css";
+@use "./reset.scss";
+
+//// Fonts
+@use "./fonts.scss";
+
+//// Variables
+@use "./vars.scss";
+@import "open-props/media";
+
+//// Global styles
+html {
+  --link: var(--accent-solid);
+  --link-visited: var(--accent-text);
+  --scrollthumb-color: var(--neutral-border);
+  accent-color: var(--link);
+  background-color: var(--neutral-base);
+  caret-color: var(--link);
+  color: var(--neutral-text);
+  scrollbar-color: var(--scrollthumb-color) transparent;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Work Sans", var(--font-sans);
+  font-size: var(--font-size-2);
+  font-weight: var(--font-weight-body-normal);
+}
+
+main {
+  margin-block: var(--size-10);
+  --flow-space: var(--size-10);
+
+  & > article * {
+    --flow-space: 1em;
+  }
+}
+
+:is(h1, h2, h3, h4, h5, h6, dt) {
+  font-family: "Fraunces", var(--font-serif);
+  font-weight: var(--font-weight-7);
+  color: var(--neutral-text-contrast);
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  inline-size: fit-content;
+
+  & a {
+    margin-inline: 0;
+    padding-inline: 0;
+    color: var(--neutral-text-contrast);
+    text-decoration: none;
+    position: relative;
+
+    &::after {
+      transition: opacity 300ms var(--ease-2);
+      opacity: 0%;
+      content: url(https://twemoji.maxcdn.com/v/14.0.2/svg/1f517.svg);
+      display: inline-block;
+      inline-size: 1.15em;
+      block-size: 1.15em;
+      padding: 0.175em;
+      position: absolute;
+      right: -1.15em;
+      transform: translateY(-0.1em);
+    }
+
+    &:is(:hover, :focus-visible) {
+      text-decoration: underline;
+      text-underline-offset: 0.1em;
+
+      &::after {
+        opacity: 100%;
+      }
+    }
+  }
+}
+
+h1 {
+  font-size: var(--font-size-fluid-3);
+  max-inline-size: var(--size-header-1);
+}
+
+h2 {
+  font-size: var(--font-size-fluid-2);
+  max-inline-size: var(--size-header-2);
+}
+
+h3 {
+  font-size: var(--font-size-fluid-1);
+}
+
+:is(h3, h4, h5, h6, dt) {
+  max-inline-size: var(--size-header-3);
+}
+
+:is(h4, h5, h6) {
+  font-size: var(--font-size-3);
+}
+
+:is(p, ul, ol, dl, h6) {
+  font-size: var(--font-size-2);
+}
+
+strong:not(h1, h2, h3, h4, h5, h6, pre, code, kbd, var, samp) {
+  font-weight: var(--font-weight-body-bold);
+  color: var(--accent-text);
+}
+
+em {
+  font-style: italic;
+  color: var(--accent-text);
+}
+
+// Code
+
+code,
+kbd,
+samp,
+pre {
+  font-family: "JetBrains Mono", var(--font-mono);
+}
+
+pre {
+  max-inline-size: max-content;
+  min-inline-size: 0;
+  white-space: pre;
+}
+
+:not(pre) > code {
+  background: var(--neutral-bg-subtle);
+  border-radius: var(--radius-2);
+  padding: var(--size-1) var(--size-2);
+}
+
+kbd,
+var {
+  border-color: var(--neutral-bg-hover);
+  border-radius: var(--radius-2);
+  border-width: var(--border-size-1);
+  padding: var(--size-1) var(--size-2);
+}
+
+// Links
+
+:where(a) {
+  margin-inline: calc(var(--size-1) * -1);
+  padding-inline: var(--size-1);
+  text-decoration: underline;
+
+  &:where([href]) {
+    color: var(--link);
+
+    &:visited {
+      color: var(--link-visited);
+    }
+
+    &:hover {
+      filter: brightness(0.9);
+      text-decoration: none;
+    }
+
+    &:active {
+      filter: brightness(0.8);
+    }
+
+    @media (--OSdark) {
+      &:hover {
+        filter: brightness(1.1);
+      }
+
+      &:active {
+        filter: brightness(1.2);
+      }
+    }
+  }
+}
+
+a,
+u,
+ins,
+abbr {
+  text-underline-offset: 1px;
+}
+
+// Form inputs
+
+:is(input, textarea) {
+  padding-block: var(--size-1);
+  padding-inline: var(--size-2);
+}
+
+select {
+  padding-block: 0.75ch;
+  padding-inline: 1.25ch 0;
+}
+
+:is(textarea, select, input:not(button, button[type], input[type="button"], input[type="submit"], input[type="reset"])) {
+  background-color: var(--neutral-base);
+  border-color: var(--neutral-bg);
+  border-width: var(--border-size-1);
+  border-radius: var(--radius-2);
+
+  &:focus-visible {
+    border-color: transparent;
+  }
+}
+
+:is(input[type="checkbox"], input[type="radio"]) {
+  block-size: var(--size-3);
+  inline-size: var(--size-3);
+}
+
+// Typography
+
+mark {
+  border-radius: var(--radius-2);
+  padding-inline: var(--size-1);
+}
+
+:is(ol, ul):not([class], [role="list"]) {
+  padding-left: var(--size-6);
+
+  & li {
+    padding-left: var(--size-2);
+  }
+}
+
+:is(li, dd, figcaption) {
+  max-inline-size: var(--size-content-2);
+}
+
+p {
+  max-inline-size: var(--size-content-3);
+}
+
+:is(dt, summary) {
+  font-weight: var(--font-weight-body-bold);
+}
+
+small {
+  font-size: max(0.5em, var(--font-size-0));
+  max-inline-size: var(--size-content-1);
+}
+
+hr {
+  background-color: var(--neutral-bg);
+  height: var(--border-size-2);
+  margin-block: var(--size-fluid-5);
+}
+
+// Figures
+
+figure {
+  display: grid;
+  gap: var(--size-2);
+  place-items: center;
+}
+
+figure > figcaption {
+  font-size: var(--font-size-1);
+}
+
+// Blockquote
+
+:is(blockquote, :not(blockquote) > cite) {
+  border-inline-start-width: var(--border-size-3);
+}
+
+blockquote {
+  display: grid;
+  gap: var(--size-3);
+  max-inline-size: var(--size-content-2);
+  padding-block: var(--size-3);
+  padding-inline: var(--size-4);
+}
+
+:not(blockquote) > cite {
+  padding-inline-start: var(--size-2);
+}
+
+// Details
+
+summary {
+  background: var(--neutral-bg);
+  border-radius: var(--radius-2);
+  margin: calc(var(--size-2) * -1) calc(var(--size-3) * -1);
+  padding: var(--size-2) var(--size-3);
+}
+
+details {
+  background: var(--neutral-bg-subtle);
+  border-radius: var(--radius-2);
+  padding-block: var(--size-2);
+  padding-inline: var(--size-3);
+}
+
+details[open] > summary {
+  border-end-end-radius: 0;
+  border-end-start-radius: 0;
+  margin-bottom: var(--size-2);
+}
+
+// Misc
+
+fieldset {
+  border: var(--border-size-1) solid var(--neutral-bg-hover);
+  border-radius: var(--radius-2);
+}
+
+del {
+  background: var(--error);
+}
+
+ins {
+  background: var(--success);
+}
+
+abbr {
+  text-decoration-color: var(--info);
+}
+
+// Dialog
+
+dialog {
+  background-color: var(--neutral-base);
+  border-radius: var(--radius-3);
+  box-shadow: var(--shadow-6);
+  color: inherit;
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(25px);
+}
+
+html[\:has\(dialog\[open\]\)],
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
+menu {
+  display: flex;
+  gap: var(--size-3);
+  padding-inline-start: 0;
+}
+
+// General interactive states
+
+:focus-visible {
+  outline-color: var(--link);
+  outline-offset: 0px;
+}
+
+:not(:active):focus-visible {
+  outline-offset: var(--size-1);
+}
+
+@media (--motionOK) {
+  :focus-visible {
+    transition: outline-offset 145ms var(--ease-2);
+  }
+
+  :not(:active):focus-visible {
+    transition-duration: 0.25s;
+  }
+}
+
+:target {
+  scroll-margin-top: 2ex;
+}
+
+// High contrast selection style
+::selection {
+  color: var(--accent-bg);
+  background: var(--accent-text);
+}
+
+// If an element is [hidden] it needs to be max priority
+[hidden] {
+  display: none !important;
+}
+
+// FOUCE https://www.abeautifulsite.net/posts/flash-of-undefined-custom-elements/
+:not(:defined) {
+  visibility: hidden;
+}
+
+//// Utilities
+@import "utilities/content-width";
+@import "utilities/detitlify";
+@import "utilities/flex-col";
+@import "utilities/flex";
+@import "utilities/flow";
+@import "utilities/grid";
+@import "utilities/panel";
+@import "utilities/radius";
+@import "utilities/recursive-flow";
+@import "utilities/stroke";
+@import "utilities/typography";
+@import "utilities/visually-hidden";
+@import "utilities/wrapper";
+
+//// Blocks
+@import "blocks/button";
+@import "blocks/card";
+@import "blocks/emoji";
+@import "blocks/feed-block";
+@import "blocks/footer";
+@import "blocks/hero";
+@import "blocks/home";
+@import "blocks/icon-button";
+@import "blocks/lego";
+@import "blocks/logo";
+@import "blocks/nav";
+@import "blocks/newsletter";
+@import "blocks/site-head";
+@import "blocks/skip-link";
+@import "blocks/stylized-text";
+@import "blocks/theme-switcher";
+@import "blocks/toc";
+@import "blocks/tooltip";
+@import "blocks/unfurl";

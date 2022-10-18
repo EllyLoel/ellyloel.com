@@ -10,16 +10,15 @@
 		<!-- Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,100..900,0..100,0;0,9..144,100..900,0..100,1;1,9..144,100..900,0..100,0;1,9..144,100..900,0..100,1&family=Nanum+Pen+Script&family=Noto+Color+Emoji&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap">
+		<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,WONK@0,9..144,700,0;0,9..144,700,1;1,9..144,700,0;1,9..144,700,1&family=Nanum+Pen+Script&family=Work+Sans:ital,wght@0,400;0,622;1,400;1,622&display=swap" rel="stylesheet">
 
-		{%- include "meta.njk" -%}
+		{% include "meta.njk" %}
 
 		<!-- Include stylesheets here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
-		<link rel="stylesheet" href="/@input/css/style.css">
+		<link rel="stylesheet" href="/@input/css/global.scss">
 		<link rel="stylesheet" href="https://unpkg.com/dracula-prism/dist/css/dracula-prism.min.css">
-
-		{{ __slinkity.head | safe }}
-
+		{# <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="https://unpkg.com/prism-theme-night-owl@1.4.0/build/style.css">
+		<link rel="stylesheet" media="(prefers-color-scheme: light)" href="https://unpkg.com/prism-theme-night-owl@1.4.0/build/light.css"> #}
 		<script>
 			// if there's a color-scheme id in localstorage, use it, if not use auto.
 			document
@@ -38,26 +37,20 @@
 									? "sl-theme-light"
 									: "sl-theme-dark");
 		</script>
-
-		<!-- Include scripts here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
-		<script type="module" src="/@input/js/main.js" defer></script>
-		{%- if page.url === "/" -%}
-			<script type="module" src="/@input/js/spline.js" defer></script>
-		{%- endif -%}
-		{%- if page.url === "/garden/" or page.url === "/blog/" or page.url === "/projects/" or page.url === "/bookmarks/" or page.url === "/til/" or page.url === "/til/d3/" -%}
-			<script type="module" src="/@input/js/graph.js" defer></script>
-		{%- endif -%}
 	</head>
 	<body>
 		<a class="[ skip-link ] [ button ]" href="#content">Skip to content</a>
 
-		{%- include "header.njk" -%}
+		{% include "header.njk" %}
 
 		<!-- tabindex fixes focus issue: https://benmyers.dev/blog/skip-links/#tldr -->
-		<main id="content" role="main" tabindex="-1" class="[ wrapper flow ]" style="--wrapper-size: 100ch;">
+		<main id="content" role="main" tabindex="-1" class="[ wrapper flow ]">
 			{{ content | safe }}
 		</main>
 
-		{%- include "footer.njk" -%}
+		{% include "footer.njk" %}
+
+		<!-- Include scripts here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
+		<script type="module" src="/@input/js/main.js"></script>
 	</body>
 </html>

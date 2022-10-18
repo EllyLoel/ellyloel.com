@@ -6,23 +6,11 @@
 		</stylized-text>
 	</a>
 
-	<sl-tooltip content="Disable sounds">
-		<sl-icon-button
-			id="sound-button"
-			library="fa"
-			name="fas-volume-high"
-			label="Disable sounds"
-		></sl-icon-button>
-	</sl-tooltip>
-
-	<sl-tooltip content="Switch theme">
-		<sl-icon-button
-			id="theme-switcher-open-button"
-			library="fa"
-			name="fas-palette"
-			label="Open theme switcher"
-		></sl-icon-button>
-	</sl-tooltip>
+	<sl-icon-button
+		id="theme-switcher-open-button"
+		name="palette"
+		label="Open theme switcher"
+	></sl-icon-button>
 
 	<nav role="navigation" aria-label="Primary" class="[ nav ]">
 		{% set navPages = collections.all | eleventyNavigation %}

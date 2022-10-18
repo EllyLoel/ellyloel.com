@@ -9,10 +9,8 @@
     "src/includes",
     "src/layouts",
     "src/assets",
-    "utils",
+    "node_modules",
     "_site",
-    "_webmentioncache",
-    "img",
-    "node_modules"
+    "utils"
   ]
 }
