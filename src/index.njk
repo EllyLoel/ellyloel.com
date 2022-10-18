@@ -9,65 +9,54 @@ description: Hi, I’m Elly. I like creating delightful, magical, and accessible
 		<h1 aria-label="Hi, I'm Elly. I like creating delightful, magical, and accessible art with code.">
 			<span class="detitlify">Hi, I’m <stylized-text label="Elly" class="[ logo-inline ]">&lt;e//y&gt;</stylized-text>
 			</span>
-			<span>I like creating <span class="stroke" style="--color: var(--accent-solid);">delightful</span>, <span class="stroke" style="--color: var(--accent-solid);">magical</span>, and <span class="stroke" style="--color: var(--accent-solid);">accessible</span> art with code<span style="color: var(--accent-solid);">.</span></span>
+			<span>I like creating <span class="stroke" style="--color: var(--accent-solid); --thickness: 1.5px;">delightful</span>, <span class="stroke" style="--color: var(--accent-solid); --thickness: 1.5px;">magical</span>, and <span class="stroke" style="--color: var(--accent-solid); --thickness: 1.5px;">accessible</span> art with code<span style="color: var(--accent-solid);">.</span></span>
 		</h1>
 
-		<div>
-			<canvas id="canvas3d" class="[ lego ]">
-				<p>A 3D modeled Lego Minifigure designed to look like myself.</p>
-			</canvas>
+		<div id="lego" class="[ lego-container ]">
+			{%- image
+		"./public/assets/img/LegoModel.png",
+		"A 3D modeled Lego Minifigure designed to look like myself."
+ 		-%}
 		</div>
 	</header>
 
-	{% feedBlock
-	title = "Articles",
-	url = "/blog/" %}
-	{% set blog = collections.blog | sliceCollection(3) %}
-	{%- for post in blog %}
-		{% feedItem
-		title = post.data.title,
-		url = post.url,
-		excerpt = post.data.page.excerpt
+	{% feedBlock title = "Recent posts" %}
+	{% set recentPostTitles = [] %}
+	{% set recentPosts = collections.allPostTypes | sortByCreated | reverse | sliceCollection(8) %}
+	{%- for post in recentPosts %}
+		{%- if post.data.created -%}
+			{%- set recentPostTitles = (recentPostTitles.push(post.data.title), recentPostTitles) -%}
+			{% feedItem
+			title = post.data.title,
+			url = post.url,
+			excerpt = post.data.page.excerpt,
+			stage = post.data.stage,
+			image = post.data.image,
+			created = post.data.created,
+			collection = post.data.eleventyNavigation.parent,
+			collectionUrl = post.data.page.url
  %}
+		{%- endif -%}
 	{%- endfor %}
 	{% endfeedBlock %}
 
-	{% feedBlock
-	title = "Projects",
-	url = "/projects/" %}
-	{% set projects = collections.projects | sliceCollection(3) %}
-	{%- for project in projects %}
-		{% feedItem
-		title = project.data.title,
-		url = project.url,
-		excerpt = project.data.page.excerpt
+	{% feedBlock title = "Recently updated posts" %}
+	{% set updatedPosts = collections.allPostTypes | sortByModified | reverse %}
+	{% set index = 0 %}
+	{%- for post in updatedPosts %}
+		{%- if post.data.modified and not recentPostTitles.includes(post.data.title) and index < 8 -%}
+			{% set index = index + 1 %}
+			{% feedItem
+			title = post.data.title,
+			url = post.url,
+			excerpt = post.data.page.excerpt,
+			stage = post.data.stage,
+			image = post.data.image,
+			modified = post.data.modified,
+			collection = post.data.eleventyNavigation.parent,
+			collectionUrl = post.data.page.url
  %}
-	{%- endfor %}
-	{% endfeedBlock %}
-
-	{% feedBlock
-	title = "Notes",
-	url = "/garden/" %}
-	{% set notes = collections.garden | sliceCollection(3) %}
-	{%- for note in notes %}
-		{% feedItem
-		title = note.data.title,
-		url = note.url,
-		excerpt = note.data.page.excerpt
- %}
-	{%- endfor %}
-	{% endfeedBlock %}
-
-	{% feedBlock
-	title = "Bookmarks",
-	url = "/bookmarks/" %}
-	{% set bookmarks = collections.bookmarks | sliceCollection(3) %}
-	{%- for bookmark in bookmarks %}
-		{% feedItem
-		title = bookmark.data.title,
-		url = bookmark.url,
-		excerpt = bookmark.data.page.excerpt
- %}
+		{%- endif -%}
 	{%- endfor %}
 	{% endfeedBlock %}
 </div>
