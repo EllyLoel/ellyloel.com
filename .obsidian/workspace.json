@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "cb5f1a05f134bf91",
+        "id": "ba8cc7b495748894",
         "type": "tabs",
         "children": [
           {
-            "id": "4d1fa63dd8f5f70a",
+            "id": "e3e8192820f927cf",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -21,12 +21,15 @@
             }
           },
           {
-            "id": "00edaf3e7d8e7b8a",
+            "id": "07c1351b9d78aace",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.0.0"
+                "file": "src/bookmarks/How to fight fascism.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
               }
             }
           }
@@ -100,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/bookmarks/I Can’t Breathe.md"
+                "file": "src/bookmarks/How to fight fascism.md"
               }
             }
           },
@@ -110,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/bookmarks/I Can’t Breathe.md",
+                "file": "src/bookmarks/How to fight fascism.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,17 +135,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "00edaf3e7d8e7b8a",
+  "active": "0fe22ccfefd19f6a",
   "lastOpenFiles": [
-    "src/bookmarks/A Whole Cascade of Layers.md",
+    "src/bookmarks/I Can’t Breathe.md",
     "src/bookmarks/ADHD factsheet for people with a lived experience.md",
-    "src/bookmarks/Intentional Career Building.md",
-    "src/bookmarks/My therapist suggested I talk to my inner child. I thought she was joking - but it changed everything.md",
-    "src/bookmarks/The Patchability of the Open Web.md",
+    "src/bookmarks/A Whole Cascade of Layers.md",
     "src/bookmarks/Why most design systems implode.md",
     "src/bookmarks/Zero to 60 in Software Development.md",
-    "public/assets/img/Split-navigation.webp",
-    "Dave Rupert.md",
-    "src/blog/Should I use Flex or Grid?.md"
+    "src/bookmarks/The Patchability of the Open Web.md",
+    "src/bookmarks/On Using Web Component Libraries.md",
+    "src/bookmarks/Into the Personal-Website-Verse.md",
+    "src/bookmarks/My therapist suggested I talk to my inner child. I thought she was joking - but it changed everything.md",
+    "src/bookmarks/Intentional Career Building.md"
   ]
 }

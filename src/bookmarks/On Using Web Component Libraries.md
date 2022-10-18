@@ -1,7 +1,9 @@
-## Metadata
-* URL: [https://dev.to/claviska/on-using-web-component-libraries-fmb](https://dev.to/claviska/on-using-web-component-libraries-fmb)
-* Publisher: [[dev.to]]
-* Published Date: 2021-09-20
+---
+title: On Using Web Component Libraries
+created: 2021-10-18
+modified: 2021-10-18
+---
 
-## Highlights
-* With web components, the platform is the framework.
+{% unfurl "https://dev.to/claviska/on-using-web-component-libraries-fmb" %}
+
+> With web components, the platform is the framework.
