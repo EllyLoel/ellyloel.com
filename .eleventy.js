@@ -198,14 +198,13 @@ module.exports = (eleventyConfig) => {
       const date = feedItem?.created ? feedItem.created : feedItem?.modified;
 
       const isoDate = date
-        ? DateTime.fromJSDate(date).toISO({
-            includeOffset: false,
-            suppressMilliseconds: true,
-          })
+        ? DateTime.fromJSDate(date, { zone: "utc" }).toISODate()
         : ``;
 
       const fullDate = date
-        ? DateTime.fromJSDate(date).toLocaleString(DateTime.DATE_FULL)
+        ? DateTime.fromJSDate(date, { zone: "utc" }).toLocaleString(
+            DateTime.DATE_FULL
+          )
         : ``;
 
       const label = feedItem?.created ? `Created` : `Last modified`;
