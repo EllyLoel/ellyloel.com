@@ -17,10 +17,7 @@ module.exports = {
   },
 
   dateToISO: function (date) {
-    return DateTime.fromJSDate(date, { zone: "utc" }).toISO({
-      includeOffset: false,
-      suppressMilliseconds: true,
-    });
+    return DateTime.fromJSDate(date, { zone: "utc" }).toISODate();
   },
 
   md: function (content = "") {
