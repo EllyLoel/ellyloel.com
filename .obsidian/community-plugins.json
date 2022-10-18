@@ -7,6 +7,8 @@
   "obsidian-languagetool-plugin",
   "obsidian-tts",
   "image-window",
+  "obsidian-git",
   "OA-file-hider",
-  "emoji-shortcodes"
+  "emoji-shortcodes",
+  "matter"
 ]

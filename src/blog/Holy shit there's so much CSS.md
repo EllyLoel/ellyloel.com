@@ -1,5 +1,8 @@
 ---
 title: Holy shit there's so much CSS
+stage: draft
+created: 2022-06-08
+modified: 2022-08-24
 ---
 
 ## Fundamentals
@@ -142,7 +145,7 @@ For users using corse pointers (a.k.a mobile users) the minimum recommended size
 
 Lots of amazing new CSS features coming this year, specifically:
 
-\- Container queries
+- Container queries
 
 - `:has()`
 

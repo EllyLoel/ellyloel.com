@@ -1,5 +1,6 @@
 ---
 title: Zettelkasten
+stage: evergreen
 ---
 
 > The zettelkasten is a method of note-taking and personal knowledge management
@@ -94,6 +95,6 @@ Don't just copy them, mold them to fit each other and the piece of content.
 
 ---
 
-# References
+## References
 
 1. How to Take Smart Notes by Sönke Ahrens

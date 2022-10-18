@@ -1,17 +1,28 @@
 /* lists */
 .outliner-plugin-better-lists .cm-s-obsidian .HyperMD-list-line {
-  padding-top: 0.4em;
+  padding-top: 8px;
 }
 
 /* bullets */
-.outliner-plugin-better-bullets .cm-formatting-list-ul {
-  margin-right: 0.3em;
+.outliner-plugin-better-bullets
+  .cm-s-obsidian:not(.is-live-preview)
+  .cm-formatting-list-ul:before,
+.outliner-plugin-better-bullets
+  .cm-s-obsidian.is-live-preview
+  .list-bullet:before {
+  visibility: visible;
+  content: "•";
+  font-size: 150%;
+  position: absolute;
+  margin-top: -6px;
+  margin-left: -3px;
+  color: var(--text-muted);
 }
 
-.outliner-plugin-better-bullets .list-bullet::after {
-  width: 0.4em;
-  height: 0.4em;
-  background-color: var(--text-muted);
+.outliner-plugin-better-bullets
+  .cm-s-obsidian.is-live-preview
+  .list-bullet::after {
+  content: none;
 }
 
 /* lines */
@@ -21,7 +32,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  padding: var(--file-margins);
+  padding: 20px;
   padding-left: 0;
   pointer-events: none;
   overflow: hidden;
@@ -36,7 +47,7 @@
   position: absolute;
   width: 5px;
   margin-left: 0.5ch;
-  margin-top: 1em;
+  margin-top: 1.8em;
   z-index: 1;
   cursor: pointer;
   background: transparent;
@@ -50,13 +61,23 @@
 }
 
 .outliner-plugin-better-bullets .outliner-plugin-list-line {
-  margin-top: 1.4em;
+  margin-top: 2em;
 }
 
 .markdown-source-view.mod-cm6.is-readable-line-width
   .outliner-plugin-list-lines-content-container {
   max-width: 700px;
   margin: auto;
+}
+
+.markdown-source-view.mod-cm6.is-folding .outliner-plugin-list-line {
+  margin-left: 14px;
+}
+
+.outliner-plugin-better-bullets
+  .markdown-source-view.mod-cm6.is-folding
+  .outliner-plugin-list-line {
+  margin-left: 15px;
 }
 
 .outliner-plugin-list-line:hover {

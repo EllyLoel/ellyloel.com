@@ -24,8 +24,8 @@ class ThemePicker {
     this.openButton = document.querySelector(SELECTORS.openButton);
 
     this.mutationObserver = new MutationObserver((entries) => {
-      if (entries[0].target.children?.[1]?.nodeName === "SL-BUTTON-GROUP")
-        entries[0].target.children[1].setAttribute(
+      if (entries[0].target.children?.[2]?.nodeName === "SL-BUTTON-GROUP")
+        entries[0].target.children[2].setAttribute(
           "exportparts",
           "base: button-group__base"
         );
@@ -55,7 +55,8 @@ class ThemePicker {
 
     this.radioButtons.forEach((radioButton) => {
       radioButton.addEventListener("click", (e) => {
-        if (e.target.checked) this.setTheme(e.target.value);
+        if (this.radioGroup.value !== e.target.value)
+          this.setTheme(e.target.value);
       });
     });
   }
@@ -69,7 +70,14 @@ class ThemePicker {
 
   setActiveItem() {
     // Set the theme switchers value to the documents theme
-    this.radioGroup.querySelector(`[value=${this.activeTheme}]`).checked = true;
+    const prevChecked = this.radioGroup.querySelector(`[data-checked=true]`);
+    if (prevChecked) prevChecked.dataset.checked = false;
+
+    this.radioGroup.querySelector(
+      `[value=${this.activeTheme}]`
+    ).dataset.checked = true;
+
+    this.radioGroup.value = this.activeTheme;
   }
 
   setTheme(newTheme) {
