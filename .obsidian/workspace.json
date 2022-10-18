@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "475b806d507f4410",
+            "id": "d7c56f1d4f7660f6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/bookmarks/State of Web Components August 2022.md",
+                "file": "src/bookmarks/I Can’t Breathe- HeydonWorks.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/bookmarks/State of Web Components August 2022.md"
+                "file": "src/bookmarks/I Can’t Breathe- HeydonWorks.md"
               }
             }
           },
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/bookmarks/State of Web Components August 2022.md",
+                "file": "src/bookmarks/I Can’t Breathe- HeydonWorks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,17 +122,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "475b806d507f4410",
+  "active": "d7c56f1d4f7660f6",
   "lastOpenFiles": [
-    "src/bookmarks/I Can’t Breathe.md",
+    "src/bookmarks/I Can’t Breathe- HeydonWorks.md",
+    "src/bookmarks/Components are pure overhead.md",
     "src/bookmarks/State of Web Components August 2022.md",
+    "src/bookmarks/I Can’t Breathe- HeydonWorks.md",
     "src/bookmarks/Zero to 60 in Software Development.md",
     "src/bookmarks/Why most design systems implode.md",
     "src/bookmarks/The Patchability of the Open Web.md",
     "src/bookmarks/On Using Web Component Libraries.md",
     "src/bookmarks/My therapist suggested I talk to my inner child. I thought she was joking - but it changed everything.md",
-    "src/bookmarks/Into the Personal-Website-Verse.md",
-    "src/bookmarks/Intentional Career Building.md",
-    "src/bookmarks/How to fight fascism.md"
+    "src/bookmarks/Into the Personal-Website-Verse.md"
   ]
 }
