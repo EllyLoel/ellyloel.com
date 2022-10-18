@@ -1,0 +1,113 @@
+{
+  "main": {
+    "id": "4e712fefb4b9229a",
+    "type": "split",
+    "children": [
+      {
+        "id": "44f73f35f6534a70",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4d1fa63dd8f5f70a",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a25834d4c2b7ef5e",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "e14ea7f9991dfa15",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "ff7d3e89d8270f8b",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "b0044adcef7d27e6",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "cfccea5a84f23de2",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "216ce3fbf17512fb",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "0bd0139b1ff9cdf7",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "4d1fa63dd8f5f70a",
+  "lastOpenFiles": [
+    "src/bookmarks/A Whole Cascade of Layers.md",
+    "src/bookmarks/ADHD factsheet for people with a lived experience.md",
+    "src/bookmarks/Intentional Career Building.md",
+    "src/bookmarks/My therapist suggested I talk to my inner child. I thought she was joking - but it changed everything.md",
+    "src/bookmarks/The Patchability of the Open Web.md",
+    "src/bookmarks/Why most design systems implode.md",
+    "src/bookmarks/Zero to 60 in Software Development.md",
+    "public/assets/img/Split-navigation.webp",
+    "Dave Rupert.md",
+    "src/blog/Should I use Flex or Grid?.md"
+  ]
+}
