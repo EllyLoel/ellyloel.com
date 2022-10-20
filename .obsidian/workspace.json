@@ -11,8 +11,13 @@
             "id": "b9607ee2df10696a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "src/blog/Should I use Flex or Grid?.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ],
@@ -58,8 +63,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 231.5,
-    "collapsed": true
+    "width": 231.5
   },
   "right": {
     "id": "84b304f5dd126125",
@@ -85,7 +89,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "src/blog/Should I use Flex or Grid?.md"
+              }
             }
           },
           {
@@ -94,6 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "src/blog/Should I use Flex or Grid?.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
