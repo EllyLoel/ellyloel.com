@@ -2,6 +2,7 @@
 const wikilinkRegEx = /\[\[\s*([^\[\]\|\n\r]+)(\|[^\[\]\|\n\r]+)?\s*\]\]/g;
 
 module.exports = {
+  canonical: (data) => new URL(data.page.url, data.site.url).href,
   backlinks: (data) => {
     const posts = data.collections.allPostTypes;
 
