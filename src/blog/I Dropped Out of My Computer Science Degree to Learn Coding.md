@@ -1,9 +1,14 @@
----
-title: I Dropped Out of My Computer Science Degree to Learn Coding
-stage: complete
-image: "./public/assets/img/I-Dropped-Out-of-My-Computer-Science-Degree-to-Learn-Coding-on-Scrimba.png"
-created: 2022-05-01
-modified: 2022-05-19
+---js
+{
+	title: "I Dropped Out of My Computer Science Degree to Learn Coding",
+	stage: "complete",
+	image: "./public/assets/img/I-Dropped-Out-of-My-Computer-Science-Degree-to-Learn-Coding-on-Scrimba.png",
+	created: new Date("2022-05-01"),
+	modified: new Date("2022-05-19"),
+	eleventyComputed: {
+		canonical: () => "https://scrimba.com/articles/dropped-out-of-compsci-to-learn-coding-with-adhd/",
+	},
+}
 ---
 
 Well hello there! My name is [Elly Loel](https://ellyloel.com/about). I'm a developer, designer and writer, currently working as a junior developer at Portable!
