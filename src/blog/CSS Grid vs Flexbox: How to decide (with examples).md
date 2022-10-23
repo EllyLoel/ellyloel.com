@@ -1,10 +1,11 @@
 ---js
 {
-	title: "Should I use Flex or Grid?",
+	title: "CSS Grid vs Flexbox: How to decide (with examples)",
+	permalink: "/blog/css-grid-vs-flexbox",
 	stage: "complete",
 	image: "./public/assets/img/Should-I-use-Flexbox-or-Grid.png",
 	created: new Date("2022-10-04"),
-	modified: new Date("2022-10-06"),
+	modified: new Date("2022-10-24"),
 	eleventyComputed: {
 		canonical: () => "https://scrimba.com/articles/should-i-use-flex-or-grid/",
 	},
@@ -15,13 +16,11 @@
 
 Should you use a hammer or a screwdriver? Of course that would depend on the job!
 
-The same is true when comparing CSS Grid and Flexbox.  No one layout mode is better than the other. It depends on your task at hand!
+The same is true when comparing CSS Grid vs Flexbox. No one layout mode is better than the other. It depends on the task at hand!
 
-While there is some overlap between what Flex and Grid can do, they are fundamentally designed to solve different layout problems.
+**This post shows you [examples of when to use CSS Grid](#when-to-use-css-grid) and [examples of when to use Flex](#when-to-use-flexbox) before explaining the differences in detail so you can confidently reason about which tool to reach for no matter the scenario.**
 
-As with any tool, you must reach for the right tool for the job and in this post you will learn how.
-
-Thanks to the comprehensive examples in this post you will leave feeling a lot more confident about picking the best one for your task! We have also included a cheat sheet for you to reference quickly in the future.
+There is some overlap in what Grid and Flex can do, and that can be super confusing! By the end of this tutorial, you will understand the key differences and know how to pick the most suitable tool for your task.
 
 ## Flexbox
 
@@ -83,7 +82,7 @@ You might think there's no need to learn Grid when you know Flex because they ar
 
 Ehhh, no, not really. It's important to remember that there will never be one layout mode to rule them all. They all exist for a reason.
 
-### When to use Flexbox
+### When to use Flexbox?
 
 In this section let's look at some common uses for Flexbox:
 
@@ -135,7 +134,7 @@ Web browser developers wrote the specifications for Flex and Grid around the sam
 
 Grid makes so many layouts that used to be near impossible a lot simpler.
 
-### When to use CSS Grid
+### When to use CSS Grid?
 
 In this section let's look at some common uses for CSS Grid:
 
@@ -183,7 +182,7 @@ Grid gives you great control over element placement, including layering elements
 
 ![A screenshot of a search for 'cats' on Pinterest showcasing their iconic masonry layout.](./public/assets/img/masonry-layout.webp)_We're focusing on the layout, right? Totally not the cats..._
 
-## How to choose CSS Grid or Flexbox
+## How to choose CSS Grid or Flexbox?
 
 Now you've seen some examples I hope you'll have a better idea about which tool to reach for and when. Still, it's not always obvious which tool to reach for when you're building a custom UI so let's look at some of the ways you can think about when to use Grid and when to use Flexbox.
 
