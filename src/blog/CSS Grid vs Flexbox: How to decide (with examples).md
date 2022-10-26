@@ -7,7 +7,7 @@
 	created: new Date("2022-10-04"),
 	modified: new Date("2022-10-24"),
 	eleventyComputed: {
-		canonical: () => "https://scrimba.com/articles/should-i-use-flex-or-grid/",
+		canonical: () => "https://scrimba.com/articles/css-grid-vs-flexbox/",
 	},
 }
 ---
