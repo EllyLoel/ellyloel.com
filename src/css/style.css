@@ -43,6 +43,7 @@
 @import "./blocks/home.css" layer(blocks);
 @import "./blocks/icon-button.css" layer(blocks);
 @import "./blocks/icon.css" layer(blocks);
+@import "./blocks/key-skills.css" layer(blocks);
 @import "./blocks/lego.css" layer(blocks);
 @import "./blocks/logo.css" layer(blocks);
 @import "./blocks/markdown-container.css" layer(blocks);
