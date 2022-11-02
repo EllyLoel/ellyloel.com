@@ -11,17 +11,25 @@
             "id": "b9607ee2df10696a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "src/til/d3.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           },
           {
-            "id": "d8c58a8b90885dea",
+            "id": "633f8bb84eb217c2",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.0.3"
+                "file": "src/til/Element.closest().md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
               }
             }
           }
@@ -95,7 +103,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "src/til/Element.closest().md"
+              }
             }
           },
           {
@@ -104,6 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "src/til/Element.closest().md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,8 +133,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "d8c58a8b90885dea",
+  "active": "633f8bb84eb217c2",
   "lastOpenFiles": [
+    "src/til/d3.md",
+    "src/til/Element.closest().md",
     "src/bookmarks/Zero to 60 in Software Development.md",
     "src/bookmarks/Why most design systems implode.md",
     "src/bookmarks/The Patchability of the Open Web.md",
@@ -131,8 +144,6 @@
     "src/bookmarks/On Using Web Component Libraries.md",
     "src/bookmarks/My therapist suggested I talk to my inner child. I thought she was joking - but it changed everything.md",
     "src/bookmarks/Into the Personal-Website-Verse.md",
-    "src/bookmarks/Intentional Career Building.md",
-    "src/bookmarks/I Can’t Breathe- HeydonWorks.md",
-    "src/bookmarks/How to fight fascism.md"
+    "src/bookmarks/Intentional Career Building.md"
   ]
 }
