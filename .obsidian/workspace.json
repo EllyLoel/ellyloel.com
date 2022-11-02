@@ -14,8 +14,19 @@
               "type": "empty",
               "state": {}
             }
+          },
+          {
+            "id": "d8c58a8b90885dea",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.0.3"
+              }
+            }
           }
         ],
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -111,10 +122,7 @@
     "width": 300,
     "collapsed": true
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "b9607ee2df10696a",
+  "active": "d8c58a8b90885dea",
   "lastOpenFiles": [
     "src/bookmarks/Zero to 60 in Software Development.md",
     "src/bookmarks/Why most design systems implode.md",
