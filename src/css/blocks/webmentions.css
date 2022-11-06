@@ -15,12 +15,32 @@
   }
 
   & .webmention {
+    --_offset: calc(2em + var(--size-2));
+    padding-left: var(--_offset);
     & .meta {
       display: flex;
-    }
+      align-items: center;
+      gap: var(--size-2);
 
-    & .author-photo-image {
-      border-radius: var(--radius-round);
+      & .author-wrapper {
+        display: flex;
+        align-items: center;
+        gap: var(--size-2);
+      }
+
+      & .author-photo-wrapper {
+        width: 2em;
+        height: auto;
+        margin-left: calc(var(--_offset) * -1);
+      }
+
+      & .author-photo-image {
+        border-radius: var(--radius-round);
+      }
+
+      & .date {
+        margin-left: auto;
+      }
     }
   }
 }
