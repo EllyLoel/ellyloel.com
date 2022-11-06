@@ -7,10 +7,19 @@
 
   & ol {
     padding-left: 0;
-    list-style-type: none;
+    /* list-style-type: none; */
+    padding-block: var(--size-2);
 
     & li {
       padding-left: 0;
+
+      &::marker {
+        content: url(https://webmention.io/avatar/pbs.twimg.com/c2c8dfc64df0e49669c4493f074e0311c7081b9ab09fadb44172afa4ca9beca4.jpg);
+        display: block;
+        border-radius: var(--radius-round);
+        width: 2em;
+        height: auto;
+      }
     }
   }
 
