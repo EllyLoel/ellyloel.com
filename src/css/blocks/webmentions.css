@@ -4,4 +4,23 @@
     gap: var(--size-3);
     flex-wrap: wrap;
   }
+
+  & > ol {
+    padding-left: 0;
+    list-style-type: none;
+
+    & > li {
+      padding-left: 0;
+    }
+  }
+
+  & .webmention {
+    & .meta {
+      display: flex;
+    }
+
+    & .author-photo-image {
+      border-radius: var(--radius-round);
+    }
+  }
 }
