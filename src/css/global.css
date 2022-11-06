@@ -439,11 +439,23 @@ details[open] > summary {
       border-bottom: var(--_border);
     }
 
-    & tr:first-child td:last-child {
+    &:not(:has(thead)) tr:first-child td:last-child {
       border-top-right-radius: var(--radius-3);
+    }
+    &:not(:has(thead)) tr:first-child td:first-child {
+      border-top-left-radius: var(--radius-3);
+    }
+    & thead tr:first-child td:last-child {
+      border-top-right-radius: var(--radius-3);
+    }
+    & thead tr:first-child td:first-child {
+      border-top-left-radius: var(--radius-3);
     }
     & tr:last-child td:last-child {
       border-bottom-right-radius: var(--radius-3);
+    }
+    & tr:last-child td:first-child {
+      border-bottom-left-radius: var(--radius-3);
     }
   }
 }
