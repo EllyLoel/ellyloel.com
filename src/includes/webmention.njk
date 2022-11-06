@@ -1,11 +1,11 @@
 <li class="[ webmention ]">
 	<div class="[ meta ]">
 		{% if mention.author %}
-			<div class="[ author-photo-wrapper ]">
-				<img src="{{ mention.author.photo or '/static/images/webmention-avatar-default.svg' }}" alt="{{ mention.author.name }}" class="[ author-photo-image ]" loading="lazy" decoding="async" width="48" height="48">
-			</div>
-			<a href="{{ mention.author.url }}">
-				<span class="[ author-name ]">{{ mention.author.name }}</span>
+			<a href="{{ mention.author.url }}" class="[ author-wrapper ]">
+				<div class="[ author-photo-wrapper ]">
+					<img src="{{ mention.author.photo or '/static/images/webmention-avatar-default.svg' }}" alt="{{ mention.author.name }}" class="[ author-photo-image ]" loading="lazy" decoding="async" width="48" height="48">
+				</div>
+				<strong class="[ author-name ]">{{ mention.author.name }}</strong>
 			</a>
 		{% else %}
 			<div class="[ author-photo-wrapper ]">
@@ -13,14 +13,12 @@
 			</div>
 			<span class="[ author-name ]">Anonymous</span>
 		{% endif %}
-		<small>
-			<sl-relative-time class="[ date ]" date="{{ mention.published }}"></sl-relative-time>
+		<small class="[ date ]">
+			<a href="{{ mention.url }}">
+				<sl-relative-time date="{{ mention.published }}"></sl-relative-time>
+			</a>
 		</small>
 	</div>
 
-	<blockquote>{{ mention.content.value | safe }}</blockquote>
-
-	<p>
-		<a href="{{ mention.url }}">View original post</a>
-	</p>
+	<p>{{ mention.content.value | safe }}</p>
 </li>
