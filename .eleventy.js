@@ -82,7 +82,7 @@ module.exports = (eleventyConfig) => {
     },
   });
   eleventyConfig.addPlugin(EleventyPluginWebmentions, {
-    domain: "ellyloel.com",
+    domain: "www.ellyloel.com",
     token: process.env.WEBMENTION_IO_API_KEY,
   });
 
