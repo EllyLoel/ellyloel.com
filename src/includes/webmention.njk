@@ -13,10 +13,12 @@
 			</div>
 			<span class="[ author-name ]">Anonymous</span>
 		{% endif %}
-		<sl-relative-time class="[ date ]" date="{{ mention.published }}"></sl-relative-time>
+		<small>
+			<sl-relative-time class="[ date ]" date="{{ mention.published }}"></sl-relative-time>
+		</small>
 	</div>
 
-	<p>{{ mention.content.value | safe }}</p>
+	<blockquote>{{ mention.content.value | safe }}</blockquote>
 
 	<p>
 		<a href="{{ mention.url }}">View original post</a>
