@@ -11,8 +11,13 @@
             "id": "408d90d70dcc5934",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "src/bookmarks/A Whole Cascade of Layers.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ],
@@ -84,7 +89,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "src/bookmarks/A Whole Cascade of Layers.md"
+              }
             }
           },
           {
@@ -93,6 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "src/bookmarks/A Whole Cascade of Layers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,15 +121,15 @@
   },
   "active": "408d90d70dcc5934",
   "lastOpenFiles": [
-    "src/til/Element.closest().md",
-    "src/til/d3.md",
-    "src/bookmarks/Zero to 60 in Software Development.md",
-    "src/bookmarks/Why most design systems implode.md",
-    "src/bookmarks/The Patchability of the Open Web.md",
-    "src/bookmarks/State of Web Components August 2022.md",
-    "src/bookmarks/On Using Web Component Libraries.md",
-    "src/bookmarks/My therapist suggested I talk to my inner child. I thought she was joking - but it changed everything.md",
+    "src/bookmarks/ADHD factsheet for people with a lived experience.md",
+    "src/bookmarks/Components are pure overhead.md",
+    "src/bookmarks/How to fight fascism.md",
+    "src/bookmarks/I Can’t Breathe- HeydonWorks.md",
+    "src/bookmarks/Intentional Career Building.md",
     "src/bookmarks/Into the Personal-Website-Verse.md",
-    "src/bookmarks/Intentional Career Building.md"
+    "src/bookmarks/My therapist suggested I talk to my inner child. I thought she was joking - but it changed everything.md",
+    "src/bookmarks/On Using Web Component Libraries.md",
+    "src/bookmarks/State of Web Components August 2022.md",
+    "src/bookmarks/The Patchability of the Open Web.md"
   ]
 }
