@@ -5,11 +5,11 @@
     flex-wrap: wrap;
   }
 
-  & > ol {
+  & ol {
     padding-left: 0;
     list-style-type: none;
 
-    & > li {
+    & li {
       padding-left: 0;
     }
   }
@@ -17,6 +17,11 @@
   & .webmention {
     --_offset: calc(2em + var(--size-2));
     padding-left: var(--_offset);
+
+    & > * {
+      --flow-space: 0.5em;
+    }
+
     & .meta {
       display: flex;
       align-items: center;
@@ -26,6 +31,16 @@
         display: flex;
         align-items: center;
         gap: var(--size-2);
+        text-decoration: none;
+
+        &:hover {
+          background-color: transparent;
+        }
+
+        & strong {
+          height: fit-content;
+          line-height: 1;
+        }
       }
 
       & .author-photo-wrapper {

@@ -1,17 +1,17 @@
-<li class="[ webmention ]">
+<li class="[ webmention ][ flow ]">
 	<div class="[ meta ]">
 		{% if mention.author %}
 			<a href="{{ mention.author.url }}" class="[ author-wrapper ]">
 				<div class="[ author-photo-wrapper ]">
-					<img src="{{ mention.author.photo or '/static/images/webmention-avatar-default.svg' }}" alt="{{ mention.author.name }}" class="[ author-photo-image ]" loading="lazy" decoding="async" width="48" height="48">
+					<img src="{{ mention.author.photo or '/static/images/webmention-avatar-default.svg' }}" alt="" class="[ author-photo-image ]" loading="lazy" decoding="async" width="48" height="48">
 				</div>
 				<strong class="[ author-name ]">{{ mention.author.name }}</strong>
 			</a>
 		{% else %}
 			<div class="[ author-photo-wrapper ]">
-				<img src="/static/images/webmention-avatar-default.svg" alt="Anonymous" class="[ author-photo ]" loading="lazy" decoding="async" width="48" height="48">
+				<img src="/static/images/webmention-avatar-default.svg" alt="" class="[ author-photo-image ]" loading="lazy" decoding="async" width="48" height="48">
 			</div>
-			<span class="[ author-name ]">Anonymous</span>
+			<strong class="[ author-name ]">Anonymous</strong>
 		{% endif %}
 		<small class="[ date ]">
 			<a href="{{ mention.url }}">
