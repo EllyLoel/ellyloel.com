@@ -2,9 +2,11 @@
 	<div class="[ meta ]">
 		{% if mention.author %}
 			<a href="{{ mention.author.url }}" class="[ author-wrapper ]">
-				<div class="[ author-photo-wrapper ]">
-					<img src="{{ mention.author.photo or '/static/images/webmention-avatar-default.svg' }}" alt="" class="[ author-photo-image ]" loading="lazy" decoding="async" width="48" height="48">
-				</div>
+				<sl-avatar
+					class="[ author-photo-image ]"
+					image="{{ mention.author.photo }}"
+					initials="{{ mention.author.name[0] }}"
+					label="{{ mention.author.name }}"></sl-avatar>
 				<strong class="[ author-name ]">{{ mention.author.name }}</strong>
 			</a>
 		{% else %}
