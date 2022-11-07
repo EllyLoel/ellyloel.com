@@ -20,7 +20,7 @@
   & a {
     display: block;
     position: relative;
-    border-radius: var(--radius-1);
+    border-radius: var(--radius-2);
 
     &:is([data-state="active"], [aria-current="page"]) {
       text-decoration: none;

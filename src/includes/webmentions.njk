@@ -1,4 +1,4 @@
-{%- set postMentions = webmentions | webmentionsForPage -%}
+{%- set postMentions = webmentions | webmentionsForPage("https://ellyloel.com/guestbook/") -%}
 <article id="webmentions" class="[ webmentions ][ flow ]">
 	{%- ifAsync postMentions.likes.length -%}
 	<h3>
@@ -23,7 +23,7 @@
 {%- include "webmentions-facepile.njk" -%}
 {%- endif -%}
 {%- if postMentions.comments.length -%}
-<details>
+<details open>
 	<summary>
 		{%- if postMentions.comments.length === 1 -%}
 			{{ postMentions.comments.length }} Comment
