@@ -1854,11 +1854,6 @@ eleventy-plugin-nesting-toc@^1.3.0:
   dependencies:
     cheerio "^1.0.0-rc.3"
 
-eleventy-plugin-social-share-card-generator@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/eleventy-plugin-social-share-card-generator/-/eleventy-plugin-social-share-card-generator-1.0.6.tgz#07f30380be672459242512e92bf587057b4e8d69"
-  integrity sha512-vZSvwrH4qaxoTymcB8MWja7klNufrUGGxbhFVFpQ1/nqxLT1taqOAbxwA6M72Bd4d9TH7JXwDpKvckQxdjLBjw==
-
 eleventy-plugin-unfurl@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/eleventy-plugin-unfurl/-/eleventy-plugin-unfurl-0.0.6.tgz#a1838a748bcfd7385b462d303fc2823de02508df"
