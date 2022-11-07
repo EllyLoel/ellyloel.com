@@ -1,6 +1,134 @@
 {
-  "lastFetched": "2022-11-06T23:26:17.827Z",
+  "lastFetched": "2022-11-07T22:07:44.744Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Eleventy 🎈is @JamstackConf Nov 7–8",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/761cab6131337cc6c2ca3c4d237f1ee5516b3237dbd29ec63c211a9fb54687f4.jpg",
+        "url": "https://twitter.com/eleven_ty"
+      },
+      "url": "https://twitter.com/eleven_ty/status/1589621361009659906",
+      "published": "2022-11-07T14:10:40+00:00",
+      "wm-received": "2022-11-07T20:43:48Z",
+      "wm-id": 1552739,
+      "wm-source": "https://brid.gy/post/twitter/ellyloel/1589717099274207232",
+      "wm-target": "https://www.ellyloel.com/",
+      "content": {
+        "html": "An epic “how I built it” thread from <a href=\"https://twitter.com/EllyJoel\">@ellyjoel</a> on their new-ish <a href=\"https://twitter.com/search?q=%23BuiltWithEleventy\">#BuiltWithEleventy</a> site: <a href=\"https://www.ellyloel.com\">ellyloel.com</a>\n<a class=\"u-mention\" href=\"https://www.ellyloel.com/\"></a>",
+        "text": "An epic “how I built it” thread from @ellyjoel on their new-ish #BuiltWithEleventy site: ellyloel.com"
+      },
+      "mention-of": "https://www.ellyloel.com/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Eleventy 🎈is @JamstackConf Nov 7–8",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/761cab6131337cc6c2ca3c4d237f1ee5516b3237dbd29ec63c211a9fb54687f4.jpg",
+        "url": "https://twitter.com/eleven_ty"
+      },
+      "url": "https://twitter.com/eleven_ty/status/1589621361009659906",
+      "published": "2022-11-07T14:10:40+00:00",
+      "wm-received": "2022-11-07T15:33:13Z",
+      "wm-id": 1552539,
+      "wm-source": "https://brid.gy/post/twitter/ellyloel/1589621361009659906",
+      "wm-target": "https://www.ellyloel.com/",
+      "content": {
+        "html": "An epic “how I built it” thread from <a href=\"https://twitter.com/EllyJoel\">@ellyjoel</a> on their new-ish <a href=\"https://twitter.com/search?q=%23BuiltWithEleventy\">#BuiltWithEleventy</a> site: <a href=\"https://www.ellyloel.com\">ellyloel.com</a>\n<a class=\"u-mention\" href=\"https://www.ellyloel.com/\"></a>",
+        "text": "An epic “how I built it” thread from @ellyjoel on their new-ish #BuiltWithEleventy site: ellyloel.com"
+      },
+      "mention-of": "https://www.ellyloel.com/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Dave 🧱",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/d5bccfce0da3ccaaf57c7627e3734679f0d778f5ae093b461145388ab5f00ccb.jpg",
+        "url": "https://twitter.com/DavidDarnes"
+      },
+      "url": "https://twitter.com/DavidDarnes/status/1589525997619417089",
+      "published": "2022-11-07T07:51:44+00:00",
+      "wm-received": "2022-11-07T09:49:49Z",
+      "wm-id": 1552397,
+      "wm-source": "https://brid.gy/post/twitter/ellyloel/1589525997619417089",
+      "wm-target": "https://www.ellyloel.com/",
+      "content": {
+        "html": "Epic thread showing what Elly used to build her new site <a href=\"https://ellyloel.com/\">ellyloel.com</a>\n<a class=\"u-mention\" href=\"https://www.ellyloel.com/\"></a>",
+        "text": "Epic thread showing what Elly used to build her new site ellyloel.com"
+      },
+      "mention-of": "https://www.ellyloel.com/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Dave 🧱",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/d5bccfce0da3ccaaf57c7627e3734679f0d778f5ae093b461145388ab5f00ccb.jpg",
+        "url": "https://twitter.com/DavidDarnes"
+      },
+      "url": "https://twitter.com/DavidDarnes/status/1589525997619417089",
+      "published": "2022-11-07T07:51:44+00:00",
+      "wm-received": "2022-11-07T09:49:41Z",
+      "wm-id": 1552385,
+      "wm-source": "https://brid.gy/post/twitter/ellyloel/1589542258474647552",
+      "wm-target": "https://www.ellyloel.com/",
+      "content": {
+        "html": "Epic thread showing what Elly used to build her new site <a href=\"https://ellyloel.com/\">ellyloel.com</a>\n<a class=\"u-mention\" href=\"https://www.ellyloel.com/\"></a>",
+        "text": "Epic thread showing what Elly used to build her new site ellyloel.com"
+      },
+      "mention-of": "https://www.ellyloel.com/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Andy Bell",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/fff5a9335e30fcd0e9def7bb0cc71d108fc5ae0c5638c3f3357f14da610cb171.jpg",
+        "url": "https://twitter.com/piccalilli_"
+      },
+      "url": "https://twitter.com/ellyloel/status/1589514012890656770#favorited-by-98734097",
+      "published": null,
+      "wm-received": "2022-11-07T07:50:29Z",
+      "wm-id": 1552348,
+      "wm-source": "https://brid.gy/like/twitter/ellyloel/1589514012890656770/98734097",
+      "wm-target": "https://www.ellyloel.com/",
+      "like-of": "https://www.ellyloel.com/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Elly ✨🌱",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/9982a36ecec7f012eca9e50a0b229a6fc6a61ba3b1aaa78143f96c09035bdd25.png",
+        "url": "https://twitter.com/ellyloel"
+      },
+      "url": "https://twitter.com/ellyloel/status/1589514012890656770",
+      "published": "2022-11-07T07:04:07+00:00",
+      "wm-received": "2022-11-07T07:50:28Z",
+      "wm-id": 1552347,
+      "wm-source": "https://brid.gy/comment/twitter/ellyloel/1589514012890656770/1589514012890656770",
+      "wm-target": "https://www.ellyloel.com/",
+      "content": {
+        "html": "omg I forgot to add the link in the tweet 🤦🏼‍♀️\n\n🔗 <a href=\"http://www.ellyloel.com\">ellyloel.com</a>",
+        "text": "omg I forgot to add the link in the tweet 🤦🏼‍♀️\n\n🔗 ellyloel.com"
+      },
+      "in-reply-to": "https://www.ellyloel.com/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
     {
       "type": "entry",
       "author": {

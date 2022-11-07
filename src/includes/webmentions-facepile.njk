@@ -1,9 +1,11 @@
 <div class="[ facepile ]">
 	{% for facepileMention in facepileMentions %}
 		<a href="{{ facepileMention.author.url }}" class="[ face-link ]">
-			<div class="[ author-photo-wrapper ]">
-				<img src="{{ facepileMention.author.photo or '/static/images/webmention-avatar-default.svg' }}" alt="{{ facepileMention.author.name }}" class="[ author-photo-image ]" loading="lazy" decoding="async" width="48" height="48">
-			</div>
+			<sl-avatar
+				class="[ author-photo-image ]"
+				image="{{ facepileMention.author.photo }}"
+				initials="{{ mention.author.name[0] }}"
+				label="{{ facepileMention.author.name }}"></sl-avatar>
 		</a>
 	{% endfor %}
 </div>

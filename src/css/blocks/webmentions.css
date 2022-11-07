@@ -31,6 +31,34 @@
     }
   }
 
+  & .facepile {
+    display: flex;
+    margin-left: calc(var(--border-size-3) * -1);
+
+    & .face-link {
+      padding: 0;
+      margin: 0;
+      text-decoration: none;
+
+      &:not(:first-of-type) {
+        margin-left: calc(var(--size-3) * -1);
+      }
+
+      &:hover {
+        background-color: transparent;
+        z-index: 1;
+      }
+
+      & sl-avatar {
+        --size: 4rem;
+
+        &::part(base) {
+          border: var(--border-size-3) solid var(--neutral-base);
+        }
+      }
+    }
+  }
+
   & .webmention {
     --flow-space: 1.5em;
     --_offset: calc(2em + var(--size-2));
@@ -66,14 +94,9 @@
         }
       }
 
-      & .author-photo-wrapper {
-        width: 2em;
-        height: auto;
-        margin-left: calc(var(--_offset) * -1);
-      }
-
       & .author-photo-image {
-        border-radius: var(--radius-round);
+        --size: 2em;
+        margin-left: calc(var(--_offset) * -1);
       }
 
       & .date {
