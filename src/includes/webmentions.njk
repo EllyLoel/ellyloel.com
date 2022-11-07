@@ -1,4 +1,4 @@
-{%- set postMentions = webmentions | webmentionsForPage("https://ellyloel.com/guestbook/") -%}
+{%- set postMentions = webmentions | webmentionsForPage -%}
 <article id="webmentions" class="[ webmentions ][ flow ]">
 	{%- ifAsync postMentions.likes.length -%}
 	<h3>
@@ -39,7 +39,7 @@
 </details>
 {%- endif -%}
 <footer class="[ webmentions-header ][ flow ]">
-<form action="https://webmention.io/{{ site.url }}/webmention" method="post" class="[ webmentions-form ][ flow ]">
+<form action="https://webmention.io/www.ellyloel.com/webmention" method="post" class="[ webmentions-form ][ flow ]">
 	<label for="form-webmention-source">
 					Have you published your own post mentioning this one? Let me know the URL:
 				</label>
