@@ -3,6 +3,12 @@ title: Thoughts on Web Components
 stage: seedling
 ---
 
+::: callout Currently this is a bunch of snippets from other articles
+[Lets talk about web components from Brad Frost](https://bradfrost.com/blog/post/lets-talk-about-web-components/)
+:::
+
+---
+
 Web Components
 front-of-the-front-end
 markup, CSS, presentational JS
