@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "408d90d70dcc5934",
+            "id": "61e8303047d00c16",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/bookmarks/A Whole Cascade of Layers.md",
+                "file": "src/garden/Thoughts on Web Components.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/bookmarks/A Whole Cascade of Layers.md"
+                "file": "src/garden/Thoughts on Web Components.md"
               }
             }
           },
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/bookmarks/A Whole Cascade of Layers.md",
+                "file": "src/garden/Thoughts on Web Components.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,8 +119,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "408d90d70dcc5934",
+  "active": "61e8303047d00c16",
   "lastOpenFiles": [
+    "src/garden/ADHD.md",
+    "src/bookmarks/A Whole Cascade of Layers.md",
     "src/bookmarks/ADHD factsheet for people with a lived experience.md",
     "src/bookmarks/Components are pure overhead.md",
     "src/bookmarks/How to fight fascism.md",
@@ -128,8 +130,6 @@
     "src/bookmarks/Intentional Career Building.md",
     "src/bookmarks/Into the Personal-Website-Verse.md",
     "src/bookmarks/My therapist suggested I talk to my inner child. I thought she was joking - but it changed everything.md",
-    "src/bookmarks/On Using Web Component Libraries.md",
-    "src/bookmarks/State of Web Components August 2022.md",
-    "src/bookmarks/The Patchability of the Open Web.md"
+    "src/bookmarks/On Using Web Component Libraries.md"
   ]
 }
