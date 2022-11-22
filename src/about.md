@@ -6,18 +6,29 @@ eleventyNavigation:
   order: 1
 ---
 
-## Me
+## Who am I?
 
 Well hello there! My name is [Elly Loel](https://ellyloel.com/). I'm a developer, designer and writer, currently working as a junior developer at Portable!
-I run a [newsletter](http://newsletter.ellyloel.com/) and love [sharing interesting things](https://elly.to/twitter) to help people become better coders! In my spare time, I love building mechanical keyboards, watching cartoons and anime, and hanging out with my partner Brodie and our cat Lulu. :black_cat:
+I love sharing interesting things so check out my socials or my newsletter! In my spare time, I love building mechanical keyboards, watching cartoons and anime, and hanging out with my partner [Brodie](https://nervousghost.com) and our cat Lulu. :black_cat:
 
-## Interests
+For more up to date details check out the [[now]] page.
 
+## Web Interests
+
+- Design engineering
 - CSS
-- Design
 - A11y
 - SVG
+- Web standards
+- Design tokens
+- Design systems
+- Web components
+
+## Non-web Interests
+
+- Cats
 - Keyboards
 - Anime
+- Cartoons
 - Reading
 - Gaming
