@@ -9,9 +9,25 @@ eleventyNavigation:
 An on & off log of what I'm currently doing/interested in. Slower paced than a twitter feed but less permanent then an [[about]] page.
 [Now pages](https://nownownow.com/about) are becoming more common, you should make one for yourself!
 
+## November, 2022
+
+So Twitter is a shit show lmao, I'm on Mastodon now [@ellyloel@tech.lgbt](https://tech.lgbt/@ellyloel)
+
+I did a presentation on [Solid JS](https://www.solidjs.com/), going from 0 knowledge to trying to give a presentation in 2 days is harrrdddddd. Note to self for next time, make slides, you will forget what you want to talk about otherwise :joy:.
+
+I also did a presentation on the future of CSS, covering what new things are usable now and what will be usable soon™.
+
+I'm looking into building a component library with [WebC](https://github.com/11ty/webc), though one of the key useage situation will be in WordPress so I need to figure out how/when to run the compile step.
+
+## October, 2022
+
+I got to take part in Portable's [Ethical Human-Centred Design Foundations](https://portable.com.au/hcd-training) training session.
+
+Working on matching our [figma2theme](https://portable.com.au/hcd-training) tool to the [Design Tokens Format](https://tr.designtokens.org/format/) so that we can use more tools with our tokens, like [Style Dictionary](https://amzn.github.io/style-dictionary/#/).
+
 ## September, 2022
 
-Been learning a lot about accessibility lately and how sadly a lot of the more complex accessibility focused native HTML elements aren't yet very accessible.
+Been learning a lot about accessibility lately and how sadly a lot of the more complex accessibility focused native HTML elements aren't yet very accessible (details & dialog).
 
 ## August, 2022
 
