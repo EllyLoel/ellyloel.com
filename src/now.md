@@ -13,7 +13,7 @@ An on & off log of what I'm currently doing/interested in. Slower paced than a t
 
 So Twitter is a shit show lmao, I'm on Mastodon now [@ellyloel@tech.lgbt](https://tech.lgbt/@ellyloel)
 
-I did a presentation on [Solid JS](https://www.solidjs.com/), going from 0 knowledge to trying to give a presentation in 2 days is harrrdddddd. Note to self for next time, make slides, you will forget what you want to talk about otherwise :joy:.
+I did a presentation on [Solid JS](https://www.solidjs.com/), going from zero knowledge to trying to give a presentation in 2 days is harrrdddddd. Note to self for next time, make slides, you will forget what you want to talk about otherwise :joy:.
 
 I also did a presentation on the future of CSS, covering what new things are usable now and what will be usable soon™.
 
