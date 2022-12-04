@@ -23,8 +23,8 @@
   },
   "dependencies": {
     "@11ty/eleventy-img": "^2.0.1",
+    "@google/model-viewer": "^2.1.1",
     "@shoelace-style/shoelace": "^2.0.0-beta.78",
-    "@splinetool/runtime": "^0.9.149",
     "canvas-confetti": "^1.5.1",
     "css-doodle": "^0.29.0",
     "d3": "^7.6.1",
@@ -50,6 +50,7 @@
     "eleventy-plugin-broken-links": "^2.0.3",
     "eleventy-plugin-gen-favicons": "^1.1.0",
     "eleventy-plugin-json-feed": "^0.0.7",
+    "eleventy-plugin-og-image": "^1.1.0",
     "eleventy-plugin-unfurl": "^0.0.6",
     "eleventy-plugin-webmentions": "^1.1.0",
     "eslint": "^8.11.0",
