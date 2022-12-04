@@ -1,0 +1,48 @@
+.hero {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 100%;
+
+  & h1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin: 0;
+    z-index: 1;
+  }
+
+  & .lego-container {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    max-inline-size: 100%;
+  }
+
+  & h1 > * {
+    display: block;
+
+    & .stroke {
+      user-select: none;
+      cursor: url(https://cdn.custom-cursor.com/db/7648/32/meme-pop-cat-cursor.png),
+        default;
+
+      &:active {
+        cursor: url(https://cdn.custom-cursor.com/db/7647/32/meme-pop-cat-pointer.png),
+          pointer;
+      }
+    }
+  }
+
+  @media (width >= 768px) {
+    grid-template-columns: auto var(--size-8) 1fr;
+
+    & h1 {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+    }
+
+    & .lego-container {
+      grid-column: 2 / 4;
+      grid-row: 1 / 2;
+    }
+  }
+}

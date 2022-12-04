@@ -1,0 +1,16 @@
+{%- set navPages = collections.all | eleventyNavigationBreadcrumb(title, {
+	allowMissing: true,
+	includeSelf: true
+}) -%}
+<sl-breadcrumb>
+	<sl-icon slot="separator" library="fa" name="fas-caret-right"></sl-icon>
+	<sl-breadcrumb-item href="/">
+		<sl-icon slot="prefix" library="fa" name="fas-house"></sl-icon>
+		Home
+	</sl-breadcrumb-item>
+	{%- for entry in navPages -%}
+		<sl-breadcrumb-item href="{{ entry.url | url }}" {%- if entry.url === page.url %} data-state="active" aria-current="page" {%- endif -%}>
+			{{ entry.title }}
+		</sl-breadcrumb-item>
+	{%- endfor -%}
+</sl-breadcrumb>

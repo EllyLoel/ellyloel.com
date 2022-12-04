@@ -1,0 +1,24 @@
+---
+layout: base
+title: TIL
+eleventyNavigation:
+  key: TIL
+  order: 9
+---
+
+<dfn>Today I Learned</dfn>
+
+<div id="graph"></div>
+
+{% set til = collections.til | sortByCreated | reverse %}
+<ul class="[ feed ]">
+  {%- for post in til %}
+    {% feedItem
+    title = post.data.title,
+    url = post.url,
+    excerpt = post.data.page.excerpt,
+    image = post.data.image,
+    created = post.data.created
+ %}
+  {%- endfor %}
+</ul>

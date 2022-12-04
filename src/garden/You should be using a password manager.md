@@ -1,5 +1,6 @@
 ---
 title: You should be using a password manager
+stage: budding
 ---
 
 ## Why use a password manager?
