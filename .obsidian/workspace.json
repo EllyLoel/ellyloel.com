@@ -19,8 +19,17 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "6e798df417fa19d6",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
         ],
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -89,9 +98,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "src/bookmarks/I Can’t Breathe- HeydonWorks.md"
-              }
+              "state": {}
             }
           },
           {
@@ -100,7 +107,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/bookmarks/I Can’t Breathe- HeydonWorks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,8 +125,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "61e8303047d00c16",
+  "active": "6e798df417fa19d6",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "src/bookmarks/I Can’t Breathe- HeydonWorks.md",
     "src/garden/Design systems in an agency.md",
     "src/garden/Thoughts on Web Components.md",
     "src/garden/ADHD.md",
@@ -128,8 +136,6 @@
     "src/bookmarks/ADHD factsheet for people with a lived experience.md",
     "src/bookmarks/Components are pure overhead.md",
     "src/bookmarks/How to fight fascism.md",
-    "src/bookmarks/I Can’t Breathe- HeydonWorks.md",
-    "src/bookmarks/Intentional Career Building.md",
-    "src/bookmarks/Into the Personal-Website-Verse.md"
+    "src/bookmarks/Intentional Career Building.md"
   ]
 }
