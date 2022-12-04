@@ -1,0 +1,31 @@
+.nav-wrapper {
+  padding-inline: var(--size-4);
+
+  @media (width >= 1100px) {
+    padding-inline: var(--size-8);
+  }
+}
+
+.nav {
+  line-height: 1;
+  font-weight: var(--font-weight-body-bold);
+  margin-inline-start: var(--size-3);
+
+  & .list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--size-3);
+  }
+
+  & a {
+    display: block;
+    position: relative;
+    border-radius: var(--radius-2);
+
+    &:is([data-state="active"], [aria-current="page"]) {
+      text-decoration: none;
+      background-color: var(--accent-text);
+      color: var(--accent-bg);
+    }
+  }
+}

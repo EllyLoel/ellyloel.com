@@ -1,0 +1,31 @@
+.margin-0 {
+  margin: 0;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.move-link-styling-to-child {
+  & > span {
+    text-decoration: underline;
+    text-decoration-skip-ink: auto;
+    text-decoration-color: currentColor;
+    transition-property: background-color, text-decoration-color;
+    transition-duration: 200ms;
+    transition-timing-function: var(--ease-2);
+  }
+
+  &:hover {
+    & > span {
+      text-decoration-color: transparent;
+      background-color: var(--accent-bg);
+    }
+  }
+
+  &:active {
+    & > span {
+      background-color: var(--accent-bg-hover);
+    }
+  }
+}

@@ -9,9 +9,35 @@ eleventyNavigation:
 An on & off log of what I'm currently doing/interested in. Slower paced than a twitter feed but less permanent then an [[about]] page.
 [Now pages](https://nownownow.com/about) are becoming more common, you should make one for yourself!
 
+## December, 2022
+
+Oop, I've moved onto a new Mastodon instance [@elly@front-end.social](https://front-end.social/@elly) :wave:
+
+I've also set up a [tweetback](https://www.zachleat.com/web/tweetback/) Twitter archive at [twitter.ellyloel.com](https://twitter.ellyloel.com)
+
+## November, 2022
+
+So Twitter is a shit show lmao, I'm on Mastodon now [@ellyloel@tech.lgbt](https://tech.lgbt/@ellyloel)
+
+I did a presentation on [Solid JS](https://www.solidjs.com/), going from zero knowledge to trying to give a presentation in 2 days is harrrdddddd. Note to self for next time, make slides, you will forget what you want to talk about otherwise :joy:.
+
+I also did a presentation on the future of CSS, covering what new things are usable now and what will be usable soon™.
+
+I'm looking into building a component library with [WebC](https://github.com/11ty/webc), though one of the key useage situation will be in WordPress so I need to figure out how/when to run the compile step.
+
+## October, 2022
+
+I got to take part in Portable's [Ethical Human-Centred Design Foundations](https://portable.com.au/hcd-training) training session.
+
+Working on matching our [figma2theme](https://portable.com.au/hcd-training) tool to the [Design Tokens Format](https://tr.designtokens.org/format/) so that we can use more tools with our tokens, like [Style Dictionary](https://amzn.github.io/style-dictionary/#/).
+
+## September, 2022
+
+Been learning a lot about accessibility lately and how sadly a lot of the more complex accessibility focused native HTML elements aren't yet very accessible (details & dialog).
+
 ## August, 2022
 
-I'm officially an AWS certified cloud practitioner, what ever that means :joy: 
+I'm officially an AWS certified cloud practitioner, what ever that means :joy:
 
 Looks like it's that time again, the clock has struck, and now I am 21 :exploding_head:
 
@@ -94,7 +120,7 @@ Built Portable Justice hub
 Budding interest in Web Components
 
 Thinking about the unfortunate truth of stateful design often being ignored or forgotten
-[Twitter thread :thread:](https://twitter.com/ellyloel/status/1492033654264307712)
+[Twitter thread :thread:](https://twitter.ellyloel.com/1492033654264307712)
 
 ## January 2022
 

@@ -1,79 +1,58 @@
 {
   "collapse-filter": true,
-  "search": "",
+  "search": "path:src",
   "showTags": false,
   "showAttachments": false,
-  "hideUnresolved": false,
+  "hideUnresolved": true,
   "showOrphans": true,
   "collapse-color-groups": true,
   "colorGroups": [
     {
-      "query": "path:\"000 Zettelkasten\"",
+      "query": "path:src/blog",
       "color": {
         "a": 1,
         "rgb": 14048348
       }
     },
     {
-      "query": "path:\"100 Reference notes\"",
+      "query": "path:src/bookmarks",
       "color": {
         "a": 1,
         "rgb": 14069084
       }
     },
     {
-      "query": "path:\"200 Blog\"",
+      "query": "path:src/garden",
       "color": {
         "a": 1,
         "rgb": 11392604
       }
     },
     {
-      "query": "path:\"400 Dungeons & Dragons\"",
+      "query": "path:src/projects",
       "color": {
         "a": 1,
         "rgb": 6084188
       }
     },
     {
-      "query": "path:Assests",
+      "query": "path:src/til",
       "color": {
         "a": 1,
         "rgb": 6084269
-      }
-    },
-    {
-      "query": "path:Templates",
-      "color": {
-        "a": 1,
-        "rgb": 6073814
-      }
-    },
-    {
-      "query": "path:\"300 Personal\"",
-      "color": {
-        "a": 1,
-        "rgb": 6053078
-      }
-    },
-    {
-      "query": "path:\"500 Work\"",
-      "color": {
-        "a": 1,
-        "rgb": 11361494
       }
     }
   ],
   "collapse-display": true,
   "showArrow": true,
-  "textFadeMultiplier": -0.3,
-  "nodeSizeMultiplier": 1.02121433796635,
-  "lineSizeMultiplier": 1.60769230769231,
+  "textFadeMultiplier": 1,
+  "nodeSizeMultiplier": 1.49886067708333,
+  "lineSizeMultiplier": 4.01625162760417,
   "collapse-forces": true,
   "centerStrength": 0.749817117776152,
   "repelStrength": 13.4981711777615,
   "linkStrength": 1,
   "linkDistance": 96,
-  "scale": 0.31161189857443783,
+  "scale": 0.515535231747876,
   "close": true
 }

@@ -1,0 +1,135 @@
+{
+  "main": {
+    "id": "4e712fefb4b9229a",
+    "type": "split",
+    "children": [
+      {
+        "id": "a252bd6c170b7b6e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "61e8303047d00c16",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "src/bookmarks/I Can’t Breathe- HeydonWorks.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          }
+        ],
+        "stacked": true
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c021613b76a2f9d9",
+    "type": "split",
+    "children": [
+      {
+        "id": "70e732cbc5e6cf0a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0fe22ccfefd19f6a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "80e202d18d0f953b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 231.5
+  },
+  "right": {
+    "id": "84b304f5dd126125",
+    "type": "split",
+    "children": [
+      {
+        "id": "1d6099cfd0fb2889",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "406535350840703b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "185612779993f727",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "src/bookmarks/I Can’t Breathe- HeydonWorks.md"
+              }
+            }
+          },
+          {
+            "id": "fa830d8894ba351b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "src/bookmarks/I Can’t Breathe- HeydonWorks.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "61e8303047d00c16",
+  "lastOpenFiles": [
+    "src/garden/Design systems in an agency.md",
+    "src/garden/Thoughts on Web Components.md",
+    "src/garden/ADHD.md",
+    "src/bookmarks/A Whole Cascade of Layers.md",
+    "src/bookmarks/ADHD factsheet for people with a lived experience.md",
+    "src/bookmarks/Components are pure overhead.md",
+    "src/bookmarks/How to fight fascism.md",
+    "src/bookmarks/I Can’t Breathe- HeydonWorks.md",
+    "src/bookmarks/Intentional Career Building.md",
+    "src/bookmarks/Into the Personal-Website-Verse.md"
+  ]
+}

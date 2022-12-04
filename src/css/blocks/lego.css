@@ -1,0 +1,44 @@
+.lego-container {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: var(--radius-blob-4);
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    var(--accent-bg) 0%,
+    var(--accent-solid) 90%
+  );
+  transform: scale(0.75);
+
+  & > canvas,
+  & > picture > img {
+    height: 300px !important;
+    width: 300px !important;
+    object-fit: cover;
+  }
+
+  & > canvas {
+    display: none;
+  }
+  & > picture > img {
+    display: block;
+    transform: scale(1.5);
+  }
+
+  @media (width >= 768px) {
+    & > canvas {
+      display: block;
+      visibility: hidden;
+      transform: scale(1.5);
+      cursor: grab;
+
+      &:active {
+        cursor: grabbing;
+      }
+    }
+
+    & > picture > img {
+      transform: scale(1.31);
+    }
+  }
+}

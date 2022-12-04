@@ -17,9 +17,13 @@ overlayTag = tag %}
 
 {# General #}
 <meta name="description" content="{{ desc }}">
-<link rel="canonical" href="{{ absolutePageUrl }}">
+<link rel="canonical" href="{{ canonical }}">
 <meta name="author" content="{{ site.author.name }}">
 <meta name="generator" content="{{ eleventy.generator }}">
+
+{# Style #}
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="hsl(269, 75, 58)">
 
 {# Open Graph #}
 <meta property="og:site_name" content="{{ site.title }}">
@@ -33,13 +37,20 @@ overlayTag = tag %}
 	<meta property="og:image:alt" content="{{ text }}">
 {%- endif -%}
 
-{# icons #}
+{# Icons #}
 <link rel="manifest" href="{{ '/manifest.webmanifest' | url }}">
 {% favicons './public/assets/img/icons/favicon.svg',
 appleIconBgColor = '#00000000',
 generateManifest = false %}
 
 {# RSS Feed #}
-<link type="application/atom+xml" rel="alternate" href="{{ site.url }}feed.atom" title="{{ site.title }}">
-<link type="application/rss+xml" rel="alternate" href="{{ site.url }}feed.rss" title="{{ site.title }}">
-<link type="application/json" rel="alternate" href="{{ site.url }}feed.json" title="{{ site.title }}">
+<link type="application/atom+xml" rel="alternate" href="{{ site.url }}/feed.atom" title="{{ site.title }}">
+<link type="application/rss+xml" rel="alternate" href="{{ site.url }}/feed.rss" title="{{ site.title }}">
+<link type="application/json" rel="alternate" href="{{ site.url }}/feed.json" title="{{ site.title }}">
+
+{# Webmentions #}
+<link href="https://github.com/ellyloel" rel="me">
+<link href="https://tech.lgbt/@ellyloel" rel="me">
+<link href="https://front-end.social/@elly" rel="me">
+<link rel="webmention" href="https://webmention.io/www.ellyloel.com/webmention"/>
+<link rel="pingback" href="https://webmention.io/www.ellyloel.com/xmlrpc"/>

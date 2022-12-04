@@ -1,0 +1,22 @@
+{
+  "accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcwNzE4NzE3LCJqdGkiOiIzYjRkMzYzNjUwNmQ0Zjk4YmRjNDRjODhhZTRlMGZhNCIsInVzZXJfaWQiOjUyMzA1LCJjbGllbnRfdHlwZSI6ImludGVncmF0aW9uIiwibG9naW5fc2Vzc2lvbl9pZCI6IjQ5YzVlMDI0LTQ2ZDItNDc5MC1iZjBhLTRmYjNlYzEyYTlkMiJ9.DeceOvQla6GzobNMwonDYCXiXydC9AYWomHnpSVuwBE",
+  "refreshToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3NzgwMzUxNywianRpIjoiY2Q5ZjEwZjMzZjY3NGNmYTk5NThkNzAxOWZhYmY0ZjkiLCJ1c2VyX2lkIjo1MjMwNSwiY2xpZW50X3R5cGUiOiJpbnRlZ3JhdGlvbiIsImxvZ2luX3Nlc3Npb25faWQiOiI0OWM1ZTAyNC00NmQyLTQ3OTAtYmYwYS00ZmIzZWMxMmE5ZDIifQ.baUufXCfJ1_5lChQ6zoDLVexQN2i43UsEKvrmGdBq9g",
+  "qrSessionToken": "9c0b9ac8999a591a0db2c041ff9af55e9286b823e45d5fd8a6a47aa27c47828b",
+  "dataDir": "src/bookmarks",
+  "syncInterval": 60,
+  "hasCompletedInitialSetup": true,
+  "lastSync": "2022-12-04T02:08:55.727Z",
+  "isSyncing": false,
+  "contentMap": {
+    "A Whole Cascade of Layers.md": "4_12455205",
+    "The Patchability of the Open Web.md": "4_13744651",
+    "Why most design systems implode.md": "4_5341074",
+    "My therapist suggested I talk to my inner child. I thought she was joking - but it changed everything.md": "4_14553259",
+    "I Can’t Breathe- HeydonWorks.md": "4_14632990",
+    "On Using Web Component Libraries.md": "4_6896915",
+    "Into the Personal-Website-Verse.md": "4_415771"
+  },
+  "recreateIfMissing": false,
+  "metadataTemplate": null,
+  "highlightTemplate": null
+}

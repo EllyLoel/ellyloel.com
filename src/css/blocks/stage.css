@@ -1,0 +1,39 @@
+sl-select.stage {
+  display: none;
+
+  @supports selector(a:has(b)) {
+    display: block;
+  }
+
+  &::part(control) {
+    border-color: var(--accent-bg-hover);
+    border-radius: var(--radius-3);
+    border-width: var(--border-size-2);
+    --shadow-offset: var(--size-1);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 0
+      var(--accent-bg-hover);
+    min-height: calc(var(--sl-input-height-large) + 2px);
+
+    &:is(:hover, :focus-visible) {
+      --shadow-offset: var(--size-2);
+      transition: box-shadow 0.15s var(--ease-1);
+    }
+
+    &:focus-visible {
+      outline: var(--sl-focus-ring);
+      outline-offset: -3px;
+    }
+  }
+
+  &::part(tag__base) {
+    border-radius: calc(var(--radius-3) - 4px);
+  }
+
+  max-inline-size: var(--size-content-2);
+
+  & sl-menu-item {
+    &::part(base) {
+      gap: var(--size-1);
+    }
+  }
+}
