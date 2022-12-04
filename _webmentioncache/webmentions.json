@@ -1,6 +1,96 @@
 {
-  "lastFetched": "2022-11-07T22:07:44.744Z",
+  "lastFetched": "2022-12-03T01:15:42.937Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Mike",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/bde5d4c3605d90eaac3e37fabbfc96a82e74d9371676216f464de4a344eabe00.jpg",
+        "url": "https://twitter.com/MagariMike"
+      },
+      "url": "https://twitter.com/ellyloel/status/1593505830347100160#favorited-by-851773035996733443",
+      "published": null,
+      "wm-received": "2022-11-19T13:28:01Z",
+      "wm-id": 1563345,
+      "wm-source": "https://brid.gy/like/twitter/ellyloel/1593505830347100160/851773035996733443",
+      "wm-target": "https://www.ellyloel.com/",
+      "like-of": "https://www.ellyloel.com/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "rubyquail.design has links to all my socials",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/eac08887b799a1fa2a4b70022ebe115b2a8db05fb291e01d7893fdcd2cbf0b82.jpg",
+        "url": "https://twitter.com/RubyQuailDesign"
+      },
+      "url": "https://twitter.com/ellyloel/status/1593505830347100160#favorited-by-16848374",
+      "published": null,
+      "wm-received": "2022-11-19T02:28:31Z",
+      "wm-id": 1562891,
+      "wm-source": "https://brid.gy/like/twitter/ellyloel/1593505830347100160/16848374",
+      "wm-target": "https://www.ellyloel.com/",
+      "like-of": "https://www.ellyloel.com/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Belderchal 🐀",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/e9b22bd46ec6d22e9a3da4f4ab75d00f1095535f3709c92cad03b431e644a442.png",
+        "url": "https://twitter.com/Belderchal"
+      },
+      "url": "https://twitter.com/ellyloel/status/1593505830347100160#favorited-by-1557170104588152833",
+      "published": null,
+      "wm-received": "2022-11-18T20:23:49Z",
+      "wm-id": 1562308,
+      "wm-source": "https://brid.gy/like/twitter/ellyloel/1593505830347100160/1557170104588152833",
+      "wm-target": "https://www.ellyloel.com/",
+      "like-of": "https://www.ellyloel.com/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Eric ",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/91b0880b34af269e35a6c534d6d558cef927c96363a95d173fdbc2e43c061bcd.jpg",
+        "url": "https://twitter.com/EricBVC"
+      },
+      "url": "https://twitter.com/ellyloel/status/1593505830347100160#favorited-by-1268957668582068224",
+      "published": null,
+      "wm-received": "2022-11-18T20:23:21Z",
+      "wm-id": 1562307,
+      "wm-source": "https://brid.gy/like/twitter/ellyloel/1593505830347100160/1268957668582068224",
+      "wm-target": "https://www.ellyloel.com/",
+      "like-of": "https://www.ellyloel.com/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "B o o ﾟ+..｡*ﾟ+",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/c2c8dfc64df0e49669c4493f074e0311c7081b9ab09fadb44172afa4ca9beca4.jpg",
+        "url": "https://twitter.com/nervousgh0st"
+      },
+      "url": "https://twitter.com/ellyloel/status/1589514012890656770#favorited-by-1016940783012679680",
+      "published": null,
+      "wm-received": "2022-11-07T23:40:32Z",
+      "wm-id": 1552856,
+      "wm-source": "https://brid.gy/like/twitter/ellyloel/1589514012890656770/1016940783012679680",
+      "wm-target": "https://www.ellyloel.com/",
+      "like-of": "https://www.ellyloel.com/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
     {
       "type": "entry",
       "author": {
