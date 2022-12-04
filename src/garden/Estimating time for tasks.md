@@ -1,5 +1,6 @@
 ---
 title: Estimating time for tasks
+stage: budding
 ---
 
 Time blindness is a common problem for people with [[ADHD]], so equally hard is estimating the time it will take to complete a task.

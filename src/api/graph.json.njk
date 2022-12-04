@@ -1,0 +1,5 @@
+---
+eleventyExcludeFromCollections: true
+permalink: '/public/api/graph.json'
+---
+{{ collections.allPostTypes | linkGraph | dump | safe }}

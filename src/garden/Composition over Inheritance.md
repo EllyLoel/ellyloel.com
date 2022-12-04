@@ -1,5 +1,6 @@
 ---
 title: Composition over Inheritance
+stage: seedling
 ---
 
 Inheritance locks you into a rigid structure and forces your to predict the future. You make large overarching structural decisions at the beginning of the project which cause untold pain and suffering further down the line.

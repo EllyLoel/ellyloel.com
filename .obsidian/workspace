@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "5305c92190f1d9a6",
+        "id": "4d1fa63dd8f5f70a",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "src/404.md",
+            "file": "src/bookmarks/I Can’t Breathe.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -54,7 +54,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 320.5
   },
   "right": {
     "id": "84b304f5dd126125",
@@ -81,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/404.md"
+                "file": "src/bookmarks/I Can’t Breathe.md"
               }
             }
           },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/404.md",
+                "file": "src/bookmarks/I Can’t Breathe.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,17 +110,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "5305c92190f1d9a6",
+  "active": "4d1fa63dd8f5f70a",
   "lastOpenFiles": [
-    "src/garden/Atomic.md",
-    "src/garden/Digital Garden.md",
-    "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
-    "src/blog/Holy shit there's so much CSS.md",
-    "src/bookmarks/Zero to 60 in Software Development.md",
-    "src/bookmarks/Trouble with time management.md",
-    "src/bookmarks/Trouble organising and planning.md",
-    "src/bookmarks/Interface design patterns checklist.md",
+    "src/bookmarks/A Whole Cascade of Layers.md",
+    "src/bookmarks/ADHD factsheet for people with a lived experience.md",
     "src/bookmarks/Intentional Career Building.md",
-    "src/bookmarks/High degree of creativity and imagination.md"
+    "src/bookmarks/My therapist suggested I talk to my inner child. I thought she was joking - but it changed everything.md",
+    "src/bookmarks/The Patchability of the Open Web.md",
+    "src/bookmarks/Why most design systems implode.md",
+    "src/bookmarks/Zero to 60 in Software Development.md",
+    "public/assets/img/Split-navigation.webp",
+    "Dave Rupert.md",
+    "src/blog/Should I use Flex or Grid?.md"
   ]
 }

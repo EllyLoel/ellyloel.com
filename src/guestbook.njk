@@ -1,0 +1,21 @@
+---
+layout: base
+title: Guestbook
+eleventyNavigation:
+  key: Guestbook
+  order: 12
+---
+
+<aside class="callout">
+  <sl-icon name="info-circle" library="default"></sl-icon>
+  <strong>
+    <p>This page displays entries sent via Webmention!</p>
+  </strong>
+  <div>
+    <p>If you want to sign the guestbook send through a Webmention, either from your website or you can tweet at me <span class="[ emoji ]">😊</span></p>
+  </div>
+</aside>
+
+<p>This page was inspired by <a href="https://ohhelloana.blog/guestbook/">Ana Rodrigues’ guestbook</a>.</p>
+
+{%- include "webmentions.njk" -%}

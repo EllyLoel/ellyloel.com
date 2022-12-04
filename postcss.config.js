@@ -4,7 +4,7 @@ const postcssPresetEnv = require("postcss-preset-env");
 const cssnano = require("cssnano");
 
 module.exports = {
-  // only vars used are in build output
+  // only variables that are used are in the build output (treeshaking)
   plugins: [
     postcssJitProps(OpenProps),
     postcssPresetEnv({ stage: 0 }),
