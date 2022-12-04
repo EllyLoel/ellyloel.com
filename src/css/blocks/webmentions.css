@@ -1,5 +1,5 @@
 .webmentions {
-  inline-size: fit-content;
+  inline-size: min(var(--size-content-3), 95%);
   margin-inline: auto;
 
   & .input-wrapper {
@@ -10,6 +10,10 @@
 
   & details {
     block-size: fit-content;
+    background-color: transparent;
+    padding: 0;
+    padding-bottom: var(--size-1);
+    padding-right: var(--size-1);
 
     & > summary {
       font-size: var(--font-size-fluid-1);
@@ -23,11 +27,28 @@
   & ol {
     padding-left: 0;
     list-style-type: none;
-    padding-block: var(--size-4);
+    inline-size: 100%;
 
     & li {
-      padding-left: 0;
+      padding: var(--size-4);
+      inline-size: 100%;
       max-inline-size: unset;
+
+      background-color: var(--accent-bg-subtle);
+      --shadow-offset: var(--size-1);
+      box-shadow: var(--shadow-offset) var(--shadow-offset) 0px 0px
+        var(--accent-bg-hover);
+
+      border-radius: var(--radius-3);
+      border-width: var(--border-size-2);
+      border-color: var(--accent-bg-hover);
+
+      transition: box-shadow 300ms var(--ease-1), opacity 0.5s var(--ease-2);
+
+      &:is(:hover, :focus-within) {
+        --shadow-offset: var(--size-2);
+        transition: box-shadow 150ms var(--ease-1);
+      }
     }
   }
 
@@ -62,12 +83,7 @@
   & .webmention {
     --flow-space: 1.5em;
     --_offset: calc(2em + var(--size-2));
-    padding-left: var(--_offset);
-
-    &:not(:first-child) {
-      border-top: 1px solid var(--neutral-2);
-      padding-top: var(--flow-space);
-    }
+    padding-left: calc(var(--_offset) + var(--size-4));
 
     & > * {
       --flow-space: 0.5em;
