@@ -13,10 +13,10 @@ description: Hi, I’m Elly. I like creating delightful, magical, and accessible
 		</h1>
 
 		<div id="lego" class="[ lego-container ]">
-			{%- image
-		"./public/assets/img/LegoModel.png",
-		"A 3D modeled Lego Minifigure designed to look like myself."
- 		-%}
+			<model-viewer loading="lazy" alt="A 3D modeled Lego Minifigure designed to look like myself." src="/assets/3d/me.gltf" camera-controls disable-pan disable-zoom shadow-intensity="0" exposure="0.75" shadow-softness="1" camera-orbit="31.49deg 78.9deg 98.24m" field-of-view="30deg">
+				<img id="poster" src="/assets/img/poster.webp" alt="">
+				<div class="progress-bar" slot="progress-bar"></div>
+			</model-viewer>
 		</div>
 	</header>
 

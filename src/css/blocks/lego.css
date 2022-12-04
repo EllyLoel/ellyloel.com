@@ -10,35 +10,21 @@
   );
   transform: scale(0.75);
 
-  & > canvas,
-  & > picture > img {
-    height: 300px !important;
-    width: 300px !important;
-    object-fit: cover;
-  }
-
-  & > canvas {
-    display: none;
-  }
-  & > picture > img {
-    display: block;
+  & model-viewer {
+    width: 100%;
+    height: 100%;
     transform: scale(1.5);
-  }
 
-  @media (width >= 768px) {
-    & > canvas {
-      display: block;
-      visibility: hidden;
-      transform: scale(1.5);
-      cursor: grab;
-
-      &:active {
-        cursor: grabbing;
-      }
+    & #poster {
+      height: 100%;
+      margin-inline: auto;
+      object-fit: contain;
+      pointer-events: none;
     }
 
-    & > picture > img {
-      transform: scale(1.31);
+    & .progress-bar {
+      display: none;
+      visibility: hidden;
     }
   }
 }
