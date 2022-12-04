@@ -9,6 +9,12 @@ eleventyNavigation:
 An on & off log of what I'm currently doing/interested in. Slower paced than a twitter feed but less permanent then an [[about]] page.
 [Now pages](https://nownownow.com/about) are becoming more common, you should make one for yourself!
 
+## December, 2022
+
+Oop, I've moved onto a new Mastodon instance [@elly@front-end.social](https://front-end.social/@elly) :wave:
+
+I've also set up a [tweetback](https://www.zachleat.com/web/tweetback/) Twitter archive at [twitter.ellyloel.com](https://twitter.ellyloel.com)
+
 ## November, 2022
 
 So Twitter is a shit show lmao, I'm on Mastodon now [@ellyloel@tech.lgbt](https://tech.lgbt/@ellyloel)
@@ -114,7 +120,7 @@ Built Portable Justice hub
 Budding interest in Web Components
 
 Thinking about the unfortunate truth of stateful design often being ignored or forgotten
-[Twitter thread :thread:](https://twitter.com/ellyloel/status/1492033654264307712)
+[Twitter thread :thread:](https://twitter.ellyloel.com/1492033654264307712)
 
 ## January 2022
 
