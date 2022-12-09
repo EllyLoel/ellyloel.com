@@ -1952,10 +1952,10 @@ eleventy-plugin-unfurl@^0.0.6:
     "@11ty/eleventy" "^1.0.0"
     "@11ty/eleventy-cache-assets" "^2.3.0"
 
-eleventy-plugin-webmentions@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/eleventy-plugin-webmentions/-/eleventy-plugin-webmentions-1.1.0.tgz#e23e3e8839af77911615f3ea7eda597853880f7c"
-  integrity sha512-kGB/GDZXAzVuUyMxB9OwZsofpXZXIIBxeqCV4s4NQscDiyfpx+xkcBg55oSBVPTyS3G3YfTaOroYvz3lv4X2kw==
+eleventy-plugin-webmentions@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/eleventy-plugin-webmentions/-/eleventy-plugin-webmentions-1.2.0.tgz#4ae13f08039e9d219d8c80ab115fdb7231dca29e"
+  integrity sha512-oQA4Hn3N2hy0tAXt5kgFt3w0rc3s9+hUzQAYKKCFJX4xwAt8ZIEeFIm+N13wStVf8d1DmePAxz/1yv7MaRfdhg==
   dependencies:
     html-entities "^2.3.3"
     node-fetch "^2.6.6"
