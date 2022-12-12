@@ -9,8 +9,10 @@
 		Home
 	</sl-breadcrumb-item>
 	{%- for entry in navPages -%}
-		<sl-breadcrumb-item href="{{ entry.url | url }}" {%- if entry.url === page.url %} data-state="active" aria-current="page" {%- endif -%}>
-			{{ entry.title }}
-		</sl-breadcrumb-item>
+		{%- if entry.url !== "/me/" and entry.url !== "/writing/" -%}
+			<sl-breadcrumb-item href="{{ entry.url | url }}" {%- if entry.url === page.url %} data-state="active" aria-current="page" {%- endif -%}>
+				{{ entry.title }}
+			</sl-breadcrumb-item>
+		{%- endif -%}
 	{%- endfor -%}
 </sl-breadcrumb>

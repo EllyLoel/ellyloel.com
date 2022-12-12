@@ -26,11 +26,31 @@
 
 	<nav role="navigation" aria-label="Primary" class="[ nav ]">
 		{% set navPages = collections.all | eleventyNavigation %}
-		<ul class="list">
+		<ul role="list" class="list">
 			{%- for entry in navPages %}
-				<li>
-					<a{% if entry.url === page.url %} data-state="active" aria-current="page"{% endif %} href="{{ entry.url | url }}">{{ entry.title }}</a>
-				</li>
+				{%- if entry.url === "/me/" or entry.url === "/writing/" -%}
+					<li>
+						<details-utils close-esc close-click-outside>
+							<details>
+								<summary>
+									<sl-icon class="[ icon ]" library="fa" name="fas-play" label=""></sl-icon>
+									{{ entry.title }}
+								</summary>
+								<ul role="list">
+									{%- for child in entry.children %}
+										<li>
+											<a{% if child.url === page.url %} data-state="active" aria-current="page"{% endif %} href="{{ child.url | url }}">{{ child.title }}</a>
+										</li>
+									{% endfor -%}
+								</ul>
+							</details>
+						</details-utils>
+					</li>
+				{%- else -%}
+					<li>
+						<a{% if entry.url === page.url %} data-state="active" aria-current="page"{% endif %} href="{{ entry.url | url }}">{{ entry.title }}</a>
+					</li>
+				{%- endif -%}
 			{%- endfor %}
 		</ul>
 	</nav>

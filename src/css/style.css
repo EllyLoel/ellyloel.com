@@ -46,6 +46,7 @@
 @import "./blocks/key-skills.css" layer(blocks);
 @import "./blocks/lego.css" layer(blocks);
 @import "./blocks/logo.css" layer(blocks);
+@import "./blocks/main-header.css" layer(blocks);
 @import "./blocks/markdown-container.css" layer(blocks);
 @import "./blocks/nav.css" layer(blocks);
 @import "./blocks/newsletter.css" layer(blocks);

@@ -3,6 +3,7 @@ layout: base
 title: Salary history
 eleventyNavigation:
   key: Salary history
+  parent: Me
   order: 11
 ---
 

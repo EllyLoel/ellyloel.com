@@ -3,6 +3,7 @@ layout: base
 title: Resume
 eleventyNavigation:
   key: Resume
+  parent: Me
   order: 10
 ---
 
