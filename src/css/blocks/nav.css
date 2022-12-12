@@ -9,7 +9,6 @@
 .nav {
   line-height: 1;
   font-weight: var(--font-weight-body-bold);
-  margin-inline-start: var(--size-3);
 
   & .list {
     display: flex;
@@ -26,6 +25,90 @@
       text-decoration: none;
       background-color: var(--accent-text);
       color: var(--accent-bg);
+    }
+  }
+
+  & details-utils {
+    & details {
+      color: var(--link);
+      background-color: transparent;
+      padding: 0;
+
+      & summary {
+        all: unset;
+        cursor: pointer;
+        display: block;
+        padding-block: 0;
+        background-color: transparent;
+        border-radius: var(--radius-2);
+        margin-left: calc(var(--size-1) * -1);
+        margin-right: calc(var(--size-1) * -1);
+        padding-left: var(--size-1);
+        padding-right: var(--size-1);
+
+        transition: background-color 200ms var(--ease-2);
+
+        &:hover {
+          text-decoration-color: transparent;
+          background-color: var(--accent-bg);
+        }
+
+        &:active {
+          background-color: var(--accent-bg-hover);
+        }
+
+        &:focus-visible {
+          outline: 1px auto;
+          outline-color: var(--link);
+          outline-offset: 0px;
+        }
+
+        &:not(:active):focus-visible {
+          outline-offset: var(--size-1);
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+          &:focus-visible {
+            transition: outline-offset 145ms var(--ease-2);
+          }
+
+          &:not(:active):focus-visible {
+            transition-duration: 0.25s;
+          }
+        }
+
+        & sl-icon {
+          color: var(--accent-solid);
+          font-size: 0.8em;
+          vertical-align: revert;
+          transition: transform 300ms var(--ease-out-4);
+        }
+      }
+
+      &[open] summary {
+        margin-block-end: 0;
+        background-color: var(--accent-bg);
+
+        & sl-icon {
+          transform: rotate(90deg);
+        }
+      }
+
+      & ul {
+        position: absolute;
+        z-index: 1;
+        transform: translate(-4px, var(--size-1));
+        display: flex;
+        gap: var(--size-1);
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: var(--accent-bg-subtle);
+        border-color: var(--accent-bg-hover);
+        border-radius: var(--radius-2);
+        border-width: var(--border-size-1);
+        padding: var(--size-2) var(--size-3);
+        box-shadow: var(--shadow-4);
+      }
     }
   }
 }

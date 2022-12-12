@@ -25,14 +25,15 @@ body {
   font-size: var(--font-size-2);
   font-weight: var(--font-weight-body-normal);
 
-  & > *:nth-child(n + 3) {
+  & > :is(header, main, footer) {
+    isolation: isolate;
     opacity: 0%;
     animation: var(--animation-fade-in) forwards;
   }
 }
 
 main {
-  margin-block: var(--size-10);
+  margin-block: var(--size-12);
   --flow-space: var(--size-10);
 
   & > * :where(*) {
@@ -201,7 +202,17 @@ select {
   padding-inline: 1.25ch 0;
 }
 
-:is(textarea, select, input:not(button, button[type], input[type="button"], input[type="submit"], input[type="reset"])) {
+:is(
+    textarea,
+    select,
+    input:not(
+        button,
+        button[type],
+        input[type="button"],
+        input[type="submit"],
+        input[type="reset"]
+      )
+  ) {
   background-color: var(--neutral-base);
   border-color: var(--neutral-bg);
   border-width: var(--border-size-1);

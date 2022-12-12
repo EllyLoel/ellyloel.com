@@ -3,6 +3,7 @@ layout: base
 title: What I'm Doing Now
 eleventyNavigation:
   key: Now
+  parent: Me
   order: 2
 ---
 

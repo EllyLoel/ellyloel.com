@@ -1,0 +1,12 @@
+diff --git a/node_modules/@shoelace-style/shoelace/dist/chunks/chunk.WTAZSG32.js b/node_modules/@shoelace-style/shoelace/dist/chunks/chunk.WTAZSG32.js
+index 1d32e88..f009874 100644
+--- a/node_modules/@shoelace-style/shoelace/dist/chunks/chunk.WTAZSG32.js
++++ b/node_modules/@shoelace-style/shoelace/dist/chunks/chunk.WTAZSG32.js
+@@ -13,7 +13,6 @@ var icon_styles_default = i`
+     display: inline-block;
+     width: 1em;
+     height: 1em;
+-    contain: strict;
+     box-sizing: content-box !important;
+   }
+ 
