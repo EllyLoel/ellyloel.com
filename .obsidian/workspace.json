@@ -123,9 +123,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "e1dc6673e36c94af",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "src/bookmarks/Be Gay, Do Design.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 8
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -194,7 +207,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/bookmarks/The JS-industrial-complex.md"
+                "file": "src/bookmarks/Be Gay, Do Design.md"
               }
             }
           },
@@ -204,7 +217,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/bookmarks/The JS-industrial-complex.md",
+                "file": "src/bookmarks/Be Gay, Do Design.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -223,8 +236,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "c0548dce1b3bc1eb",
+  "active": "e1dc6673e36c94af",
   "lastOpenFiles": [
+    "src/bookmarks/The JS-industrial-complex.md",
     "src/bookmarks/Design Systems for Figma.md",
     "src/bookmarks/Practical Accessibility.md",
     "src/bookmarks/Should design systems include problematic components and patterns?.md",
@@ -233,7 +247,6 @@
     "src/garden/Autism.md",
     "src/bookmarks/Spacing in design systems.md",
     "src/bookmarks/genders.wtf.md",
-    "src/bookmarks/I Can’t Breathe- HeydonWorks.md",
-    "src/bookmarks/Design systems handbook.md"
+    "src/bookmarks/I Can’t Breathe- HeydonWorks.md"
   ]
 }
