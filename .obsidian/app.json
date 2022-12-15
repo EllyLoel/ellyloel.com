@@ -239,7 +239,8 @@
     "Coyier",
     "Bramus",
     "Allistic",
-    "tweetback"
+    "tweetback",
+    "contentinfo"
   ],
   "vimMode": true,
   "promptDelete": false,
