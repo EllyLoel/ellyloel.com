@@ -10,7 +10,7 @@ navToHtmlOptions:
 
 <div id="graph"></div>
 
-{% set projects = collections.projects | sortByCreated | reverse %}
+{% set projects = collections.projects | sortByCreated %}
 <ul class="[ feed ]">
   {%- for project in projects %}
     {% feedItem

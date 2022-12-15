@@ -40,13 +40,13 @@ description: Hi, I’m Elly. I like creating delightful, magical, and accessible
 	{%- endfor -%}
 	{%- endfeedBlock -%}
 
-	{% feedBlock title = "Recently updated posts" %}
-	{% set updatedPosts = collections.allPostTypes | sortByModified %}
-	{% set index = 0 %}
-	{%- for post in updatedPosts %}
+	{%- feedBlock title = "Recently updated posts" -%}
+	{%- set updatedPosts = collections.allPostTypes | sortByModified -%}
+	{%- set index = 0 -%}
+	{%- for post in updatedPosts -%}
 		{%- if post.data.modified and not recentPostTitles.includes(post.data.title) and index < 8 -%}
-			{% set index = index + 1 %}
-			{% feedItem
+			{%- set index = index + 1 -%}
+			{%- feedItem
 			title = post.data.title,
 			url = post.url,
 			excerpt = post.data.page.excerpt,
@@ -55,10 +55,10 @@ description: Hi, I’m Elly. I like creating delightful, magical, and accessible
 			modified = post.data.modified,
 			collection = post.data.eleventyNavigation.parent,
 			collectionUrl = post.data.page.url
- %}
+ -%}
 		{%- endif -%}
-	{%- endfor %}
-	{% endfeedBlock %}
+	{%- endfor -%}
+	{%- endfeedBlock -%}
 </div>
 
 {%- include "webmentions.njk" -%}

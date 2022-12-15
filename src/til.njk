@@ -11,7 +11,7 @@ eleventyNavigation:
 
 <div id="graph"></div>
 
-{% set til = collections.til | sortByCreated | reverse %}
+{% set til = collections.til | sortByCreated %}
 <ul class="[ feed ]">
   {%- for post in til %}
     {% feedItem

@@ -11,7 +11,7 @@ eleventyNavigation:
 
 <div id="graph"></div>
 
-{%- set notes = collections.garden | sortByCreated | reverse -%}
+{%- set notes = collections.garden | sortByCreated -%}
 {%- set seedlingCount = 0 -%}
 {%- set buddingCount = 0 -%}
 {%- set evergreenCount = 0 -%}
