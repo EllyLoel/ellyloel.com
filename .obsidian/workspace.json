@@ -45,9 +45,74 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "d03ab47f31c282ca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "src/garden/tweetback.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "68fd0d74ca6c0e0f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "src/bookmarks/Design Systems at Scale.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ea0c65f2b1f8a424",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "src/bookmarks/Should design systems include problematic components and patterns?.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f2b0691abf28079c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "src/bookmarks/Practical Accessibility.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f2bfa5d80282e253",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "src/bookmarks/Design Systems for Figma.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -116,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/bookmarks/Spacing in design systems.md"
+                "file": "src/bookmarks/Design Systems for Figma.md"
               }
             }
           },
@@ -126,7 +191,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/bookmarks/Spacing in design systems.md",
+                "file": "src/bookmarks/Design Systems for Figma.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -145,17 +210,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "f1c4af183f980ac5",
+  "active": "f2bfa5d80282e253",
   "lastOpenFiles": [
+    "src/bookmarks/Practical Accessibility.md",
+    "src/bookmarks/Should design systems include problematic components and patterns?.md",
+    "src/bookmarks/Design Systems at Scale.md",
+    "src/garden/tweetback.md",
+    "src/garden/Autism.md",
+    "src/bookmarks/Spacing in design systems.md",
     "src/bookmarks/genders.wtf.md",
     "src/bookmarks/I Can’t Breathe- HeydonWorks.md",
     "src/bookmarks/Design systems handbook.md",
-    "src/bookmarks/On Using Web Component Libraries.md",
-    "src/bookmarks/My therapist suggested I talk to my inner child. I thought she was joking - but it changed everything.md",
-    "src/bookmarks/Spacing in design systems.md",
-    "conflict-files-obsidian-git.md",
-    "src/garden/Design systems in an agency.md",
-    "src/garden/Thoughts on Web Components.md",
-    "src/garden/ADHD.md"
+    "src/bookmarks/On Using Web Component Libraries.md"
   ]
 }

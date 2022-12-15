@@ -3,7 +3,7 @@
   "foldHeading": true,
   "foldIndent": true,
   "showLineNumber": true,
-  "attachmentFolderPath": "misc/Assests",
+  "attachmentFolderPath": "public/assets/img",
   "alwaysUpdateLinks": true,
   "mobileToolbarCommands": [
     "editor:toggle-keyboard",
@@ -238,7 +238,8 @@
     "reusability",
     "Coyier",
     "Bramus",
-    "Allistic"
+    "Allistic",
+    "tweetback"
   ],
   "vimMode": true,
   "promptDelete": false,
@@ -252,5 +253,22 @@
   },
   "tabSize": 2,
   "showFrontmatter": true,
-  "strictLineBreaks": false
+  "strictLineBreaks": false,
+  "showInlineTitle": true,
+  "userIgnoreFilters": [
+    "_site/",
+    "_webmentioncache/",
+    "img/",
+    "node_modules/",
+    "patches/",
+    "utils/",
+    "src/api/",
+    "src/css/",
+    "src/js/",
+    "src/data/",
+    "src/feeds/",
+    "src/includes/",
+    "src/layouts/"
+  ],
+  "newFileLocation": "current"
 }
