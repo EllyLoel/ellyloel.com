@@ -9,7 +9,7 @@ eleventyNavigation:
 
 <div id="graph"></div>
 
-{%- set blog = collections.blog | reverse -%}
+{%- set blog = collections.blog | sortByCreated -%}
 {%- set draftCount = 0 -%}
 {%- set completeCount = 0 -%}
 
@@ -34,7 +34,6 @@ eleventyNavigation:
   </sl-menu-item>
 </sl-select>
 
-{% set blog = collections.blog | sortByCreated | reverse %}
 <ul class="[ feed ]">
   {%- for post in blog %}
     {% feedItem
