@@ -8385,7 +8385,7 @@ var LAYOUT_TEMPLATE = `
 `;
 var METADATA_TEMPLATE = `
 ## Metadata
-* URL: [{{url}}](url)
+* URL: [{{url}}]({{url}})
 {% if author %}
 * Author: {{author}}
 {% endif %}
@@ -8422,12 +8422,20 @@ var toFilename = (s) => {
 };
 
 // src/settings.ts
+var SyncNotificationPreference;
+(function(SyncNotificationPreference2) {
+  SyncNotificationPreference2["NEVER"] = "never";
+  SyncNotificationPreference2["ERROR"] = "error";
+  SyncNotificationPreference2["ALWAYS"] = "always";
+})(SyncNotificationPreference || (SyncNotificationPreference = {}));
 var DEFAULT_SETTINGS = {
   accessToken: null,
   refreshToken: null,
   qrSessionToken: null,
   dataDir: "Matter",
   syncInterval: 60,
+  syncOnLaunch: true,
+  notifyOnSync: SyncNotificationPreference.ALWAYS,
   hasCompletedInitialSetup: false,
   lastSync: null,
   isSyncing: false,
@@ -8557,8 +8565,16 @@ var MatterSettingsTab = class extends import_obsidian.PluginSettingTab {
         button.setButtonText("Apply");
         button.setDisabled(false);
       })));
-      new import_obsidian.Setting(containerEl).setName("Sync Frequency").setDesc("How often should Obsidian sync with Matter?").addDropdown((dropdown) => dropdown.addOption("30", "Every half hour").addOption("60", "Every hour").addOption("720", "Every 12 hours").addOption("1440", "Every 24 hours").setValue(this.plugin.settings.syncInterval.toString()).onChange((val) => __async(this, null, function* () {
+      new import_obsidian.Setting(containerEl).setName("Sync Frequency").setDesc("How often should Obsidian sync with Matter?").addDropdown((dropdown) => dropdown.addOption("0", "Manual").addOption("30", "Every half hour").addOption("60", "Every hour").addOption("720", "Every 12 hours").addOption("1440", "Every 24 hours").setValue(this.plugin.settings.syncInterval.toString()).onChange((val) => __async(this, null, function* () {
         this.plugin.settings.syncInterval = parseInt(val, 10);
+        yield this.plugin.saveSettings();
+      })));
+      new import_obsidian.Setting(containerEl).setName("Sync on launch").setDesc("If enabled, a sync will begin when Obsidian launches").addToggle((toggle) => toggle.setValue(this.plugin.settings.syncOnLaunch).onChange((val) => __async(this, null, function* () {
+        this.plugin.settings.syncOnLaunch = val;
+        yield this.plugin.saveSettings();
+      })));
+      new import_obsidian.Setting(containerEl).setName("Notify on sync").setDesc("When do you want to see sync notifications?").addDropdown((dropdown) => dropdown.addOption(SyncNotificationPreference.ALWAYS, "Always").addOption(SyncNotificationPreference.ERROR, "On error").addOption(SyncNotificationPreference.NEVER, "Never").setValue(this.plugin.settings.notifyOnSync).onChange((val) => __async(this, null, function* () {
+        this.plugin.settings.notifyOnSync = val;
         yield this.plugin.saveSettings();
       })));
       new import_obsidian.Setting(containerEl).setName("Always Recreate Missing Files").setDesc("If enabled, a sync will re-create missing entries in your vault").addToggle((toggle) => toggle.setValue(this.plugin.settings.recreateIfMissing).onChange((val) => __async(this, null, function* () {
@@ -8631,7 +8647,9 @@ var MatterPlugin = class extends import_obsidian2.Plugin {
     return __async(this, null, function* () {
       yield this.loadSettings();
       this.addSettingTab(new MatterSettingsTab(this.app, this));
-      this.initialSync();
+      if (this.settings.syncOnLaunch) {
+        this.initialSync();
+      }
       this.registerInterval(window.setInterval(() => __async(this, null, function* () {
         yield this.loopSync();
       }), LOOP_SYNC_INTERVAL));
@@ -8671,7 +8689,7 @@ var MatterPlugin = class extends import_obsidian2.Plugin {
     return __async(this, null, function* () {
       const msSinceLastSync = new Date().valueOf() - new Date(this.settings.lastSync).valueOf();
       const mssyncInterval = this.settings.syncInterval * 60 * 1e3;
-      if (this.settings.accessToken && this.settings.hasCompletedInitialSetup && msSinceLastSync >= mssyncInterval) {
+      if (this.settings.accessToken && this.settings.hasCompletedInitialSetup && mssyncInterval > 0 && msSinceLastSync >= mssyncInterval) {
         this.sync();
       }
     });
@@ -8686,13 +8704,19 @@ var MatterPlugin = class extends import_obsidian2.Plugin {
       this.settings.isSyncing = true;
       yield this.saveSettings();
       try {
-        new import_obsidian2.Notice("Syncing with Matter");
+        if (this.settings.notifyOnSync === SyncNotificationPreference.ALWAYS) {
+          new import_obsidian2.Notice("Syncing with Matter");
+        }
         yield this._pageAnnotations(initialSyncState);
         this.settings.lastSync = new Date();
-        new import_obsidian2.Notice("Finished syncing with Matter");
+        if (this.settings.notifyOnSync === SyncNotificationPreference.ALWAYS) {
+          new import_obsidian2.Notice("Finished syncing with Matter");
+        }
       } catch (error) {
         console.error(error);
-        new import_obsidian2.Notice("There was a problem syncing with Matter, try again later.");
+        if (this.settings.notifyOnSync !== SyncNotificationPreference.NEVER) {
+          new import_obsidian2.Notice("There was a problem syncing with Matter, try again later.");
+        }
       }
       this.settings.isSyncing = false;
       yield this.saveSettings();
