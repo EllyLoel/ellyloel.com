@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "61e8303047d00c16",
+            "id": "008e03d358c034d0",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,9 +19,35 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "63301f08b7e963a6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "src/bookmarks/genders.wtf.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f1c4af183f980ac5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "src/bookmarks/Spacing in design systems.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
-        "stacked": true
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -90,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/bookmarks/I Can’t Breathe- HeydonWorks.md"
+                "file": "src/bookmarks/Spacing in design systems.md"
               }
             }
           },
@@ -100,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/bookmarks/I Can’t Breathe- HeydonWorks.md",
+                "file": "src/bookmarks/Spacing in design systems.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,17 +145,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "61e8303047d00c16",
+  "active": "f1c4af183f980ac5",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
+    "src/bookmarks/genders.wtf.md",
     "src/bookmarks/I Can’t Breathe- HeydonWorks.md",
+    "src/bookmarks/Design systems handbook.md",
+    "src/bookmarks/On Using Web Component Libraries.md",
+    "src/bookmarks/My therapist suggested I talk to my inner child. I thought she was joking - but it changed everything.md",
+    "src/bookmarks/Spacing in design systems.md",
+    "conflict-files-obsidian-git.md",
     "src/garden/Design systems in an agency.md",
     "src/garden/Thoughts on Web Components.md",
-    "src/garden/ADHD.md",
-    "src/bookmarks/A Whole Cascade of Layers.md",
-    "src/bookmarks/ADHD factsheet for people with a lived experience.md",
-    "src/bookmarks/Components are pure overhead.md",
-    "src/bookmarks/How to fight fascism.md",
-    "src/bookmarks/Intentional Career Building.md"
+    "src/garden/ADHD.md"
   ]
 }
