@@ -4,141 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "a252bd6c170b7b6e",
+        "id": "a2166b85cd89bbc6",
         "type": "tabs",
         "children": [
           {
-            "id": "008e03d358c034d0",
+            "id": "fbaef8ea7eb94ca4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/bookmarks/I Can’t Breathe- HeydonWorks.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "63301f08b7e963a6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/bookmarks/genders.wtf.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f1c4af183f980ac5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/bookmarks/Spacing in design systems.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d03ab47f31c282ca",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/garden/tweetback.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "68fd0d74ca6c0e0f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/bookmarks/Design Systems at Scale.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ea0c65f2b1f8a424",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/bookmarks/Should design systems include problematic components and patterns?.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f2b0691abf28079c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/bookmarks/Practical Accessibility.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f2bfa5d80282e253",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/bookmarks/Design Systems for Figma.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c0548dce1b3bc1eb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/bookmarks/The JS-industrial-complex.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e1dc6673e36c94af",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/bookmarks/Be Gay, Do Design.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 9
+        ]
       }
     ],
     "direction": "vertical"
@@ -180,7 +57,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 231.5
+    "width": 402.5
   },
   "right": {
     "id": "84b304f5dd126125",
@@ -206,9 +83,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "src/bookmarks/Be Gay, Do Design.md"
-              }
+              "state": {}
             }
           },
           {
@@ -217,7 +92,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/bookmarks/Be Gay, Do Design.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -236,17 +110,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "e1dc6673e36c94af",
+  "active": "fbaef8ea7eb94ca4",
   "lastOpenFiles": [
-    "src/bookmarks/The JS-industrial-complex.md",
-    "src/bookmarks/Design Systems for Figma.md",
-    "src/bookmarks/Practical Accessibility.md",
-    "src/bookmarks/Should design systems include problematic components and patterns?.md",
-    "src/bookmarks/Design Systems at Scale.md",
-    "src/garden/tweetback.md",
-    "src/garden/Autism.md",
-    "src/bookmarks/Spacing in design systems.md",
+    "src/bookmarks/I Can’t Breathe- HeydonWorks.md",
     "src/bookmarks/genders.wtf.md",
-    "src/bookmarks/I Can’t Breathe- HeydonWorks.md"
+    "src/bookmarks/Spacing in design systems.md",
+    "src/garden/tweetback.md",
+    "src/bookmarks/Design Systems at Scale.md",
+    "src/bookmarks/Should design systems include problematic components and patterns?.md",
+    "src/bookmarks/Practical Accessibility.md",
+    "src/bookmarks/Design Systems for Figma.md",
+    "src/bookmarks/The JS-industrial-complex.md",
+    "src/bookmarks/Landmarks and where to put them.md"
   ]
 }
