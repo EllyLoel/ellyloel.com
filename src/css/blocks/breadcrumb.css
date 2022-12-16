@@ -4,6 +4,10 @@ sl-breadcrumb {
   }
 
   & sl-breadcrumb-item {
+    &::part(base) {
+      white-space: revert;
+    }
+
     &::part(label) {
       color: var(--link);
       outline-offset: 0px;
