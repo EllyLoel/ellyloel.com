@@ -35,7 +35,7 @@ a[href="#skip-graph"] {
   transition: opacity var(--opacity-duration) var(--ease-1) !important;
   @media (prefers-reduced-motion: no-preference) {
     transition: opacity var(--opacity-duration) var(--ease-1),
-      transform calc(var(--transform-duration) * 2) var(--ease-1) !important;
+      transform calc(var(--transform-duration) * 2) var(--ease-out-3) !important;
   }
 
   &:focus-visible {
@@ -47,7 +47,7 @@ a[href="#skip-graph"] {
     @media (prefers-reduced-motion: no-preference) {
       transition: opacity var(--opacity-duration) var(--ease-1)
           calc(var(--transform-duration) - var(--opacity-duration)),
-        transform var(--transform-duration) var(--ease-1),
+        transform var(--transform-duration) var(--ease-in-3),
         outline-offset 145ms var(--ease-2) !important;
     }
   }
