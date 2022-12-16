@@ -38,6 +38,10 @@
           color: var(--accent-solid-hover);
         }
       }
+
+      &::-webkit-details-marker {
+        display: none;
+      }
     }
     &[open] > summary > sl-icon::part(base) {
       transform: rotate(90deg);
