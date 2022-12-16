@@ -242,7 +242,14 @@
     "tweetback",
     "contentinfo",
     " favo",
-    "favor"
+    "favor",
+    "lil",
+    "Raycast",
+    "Cleanshot",
+    "Quicklinks",
+    "quicklinks",
+    "iTerm",
+    "Cron"
   ],
   "vimMode": true,
   "promptDelete": false,

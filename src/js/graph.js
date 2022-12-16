@@ -23,5 +23,17 @@ fetch("/api/graph.json")
       width: 300,
       height: 300,
     });
-    document.querySelector("#graph").append(graph);
+    const skipLink = document.createElement("a");
+    const skipLinkText = document.createTextNode(
+      "Skip force directed graph of posts"
+    );
+    skipLink.appendChild(skipLinkText);
+    skipLink.setAttribute("href", "#skip-graph");
+
+    const skipLinkAnchor = document.createElement("a");
+    skipLinkAnchor.setAttribute("id", "skip-graph");
+
+    const graphEl = document.querySelector("#graph");
+
+    graphEl.append(skipLink, graph, skipLinkAnchor);
   });
