@@ -83,6 +83,10 @@
           vertical-align: revert;
           transition: transform 300ms var(--ease-out-4);
         }
+
+        &::-webkit-details-marker {
+          display: none;
+        }
       }
 
       &[open] summary {
