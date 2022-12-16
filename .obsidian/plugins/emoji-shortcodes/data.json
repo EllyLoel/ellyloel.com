@@ -1,4 +1,9 @@
 {
   "immediateReplace": false,
-  "suggester": true
+  "suggester": true,
+  "historyPriority": true,
+  "historyLimit": 100,
+  "history": [
+    ":tada:"
+  ]
 }
