@@ -19,31 +19,30 @@
 
 .toc-container {
   margin-inline: auto;
-  & > details {
-    & > summary {
+  & details {
+    & summary {
       align-items: center;
       gap: var(--size-3);
 
-      & > sl-icon::part(base) {
+      & sl-icon {
         transition: transform 300ms var(--ease-out-4);
         color: var(--accent-solid);
       }
 
-      & > h2 {
+      & h2 {
         font-size: var(--font-size-fluid-1);
       }
 
-      &:is(:hover, :focus-visible) {
-        & > sl-icon::part(base) {
-          color: var(--accent-solid-hover);
-        }
+      &:is(:hover, :focus-visible) sl-icon {
+        color: var(--accent-solid-hover);
       }
 
       &::-webkit-details-marker {
         display: none;
       }
     }
-    &[open] > summary > sl-icon::part(base) {
+
+    &[open] summary sl-icon {
       transform: rotate(90deg);
     }
   }
