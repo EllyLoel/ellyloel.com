@@ -49,14 +49,11 @@ modified: 2022-12-16
 }
 ```
 
-### [Option 1 won with 87% of the vote :tada:](https://developer.chrome.com/blog/help-css-nesting-results/)
+### [Option 1 won the survey with 87% of the vote :tada:](https://developer.chrome.com/blog/help-css-nesting-results/) but [Option 3 won out in the *extensive* debate the CSS Working Group](https://front-end.social/@jensimmons/109521266937294554)
 
 ## Second nesting syntax survey
 
 {% unfurl "https://webkit.org/blog/13607/help-choose-from-options-for-css-nesting-syntax/" %}
-
-::: callout What's referred to as option 3 seems more like option 1 from the first survey, [I think this might be a mistake](https://front-end.social/@elly/109521154959924577).
-:::
 
 > - **Option 3:** Non-letter start: Nested style rules can be added directly into a declaration block, but cannot start with a letter.
 > - **Option 4:** Postfix block: Style rules allow for an optional, second block after the declaration block that contains only style rules.
@@ -98,8 +95,14 @@ article {
 }
 ```
 
-### [Results aren't finalised yet (I don't think), but at the time of writing, option 3 (aka option 1) has 76% of the vote.](https://webkit.org/blog/13607/help-choose-from-options-for-css-nesting-syntax/#:~:text=Which%20option%20is%20best%20for%20the%20future%20of%20CSS%3F)
+### [Results aren't finalised yet (*I don't think*), but at the time of writing, option 3 has 76% of the vote.](https://webkit.org/blog/13607/help-choose-from-options-for-css-nesting-syntax/#:~:text=Which%20option%20is%20best%20for%20the%20future%20of%20CSS%3F)
 
-## My opinion, the only correct one :wink:
+## My opinion, *the only correct one* :wink:
 
-I think ~~option 3/option 1~~ ++the `&` one++ is the best, as do most other people going by the survey results. But with a caveat, I think the `&` should be required.
+I think option 3 is the best, as do most other people going by the survey results. But with a caveat, I think the `&` should be required. This is both for parsing and for mental model consistency. Obviously, I'm no CSS spec author, but I think having the `&` be required would make things much easier for the parser. And on the side of user's mental models, not having the ambiguity around the `&` is a good idea. Though as mentioned in the first Chrome Developers post you could use a linter to enforce `&` usage.
+
+---
+
+::: callout What do you think?
+Let me know on [this post on Mastodon]().
+:::
