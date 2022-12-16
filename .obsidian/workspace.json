@@ -46,8 +46,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -116,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/til/Raycast wrapped.md"
+                "file": "src/garden/CSS Nesting.md"
               }
             }
           },
@@ -126,7 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/til/Raycast wrapped.md",
+                "file": "src/garden/CSS Nesting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -145,11 +144,11 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "c733ad6871e64050",
+  "active": "fbaef8ea7eb94ca4",
   "lastOpenFiles": [
-    "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
-    "src/til/Raycast wrapped.md",
     "src/til/Details summary marker.md",
+    "src/til/Raycast wrapped.md",
+    "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
     "src/til/My ADHD medication contains gluten.md",
     "src/til/Element.closest().md",
     "src/garden/CSS Nesting.md",
