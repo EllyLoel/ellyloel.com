@@ -98,4 +98,8 @@ article {
 }
 ```
 
-### 
+### [Results aren't finalised yet (I don't think), but at the time of writing, option 3 (aka option 1) has 76% of the vote.](https://webkit.org/blog/13607/help-choose-from-options-for-css-nesting-syntax/#:~:text=Which%20option%20is%20best%20for%20the%20future%20of%20CSS%3F)
+
+## My opinion, the only correct one :wink:
+
+I think ~~option 3/option 1~~ ++the `&` one++ is the best, as do most other people going by the survey results. But with a caveat, I think the `&` should be required.
