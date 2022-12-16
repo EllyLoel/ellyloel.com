@@ -37,6 +37,7 @@ module.exports = (eleventyConfig) => {
   // });
   eleventyConfig.addPlugin(EleventyPluginFaviconsPlugin, {});
   eleventyConfig.addPlugin(EleventyPluginUnfurl, {
+    duration: "4w",
     template: async (props) => {
       const imageAttributes = {
         class: "[ image unfurl__image ]",

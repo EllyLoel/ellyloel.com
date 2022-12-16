@@ -1,4 +1,6 @@
 #graph {
+  position: relative;
+
   inline-size: fit-content;
   block-size: fit-content;
 
@@ -14,6 +16,39 @@
     &:is(:hover, :focus-within) {
       --shadow-offset: var(--size-2);
       transition: box-shadow 150ms var(--ease-1);
+    }
+  }
+}
+
+a[href="#skip-graph"] {
+  pointer-events: none;
+  left: 0;
+  right: 0;
+  transform: translateX(0%) translateY(-50%);
+  opacity: 0%;
+  position: absolute;
+  z-index: -1;
+
+  --opacity-duration: 100ms;
+  --transform-duration: 250ms;
+
+  transition: opacity var(--opacity-duration) var(--ease-1) !important;
+  @media (prefers-reduced-motion: no-preference) {
+    transition: opacity var(--opacity-duration) var(--ease-1),
+      transform calc(var(--transform-duration) * 2) var(--ease-1) !important;
+  }
+
+  &:focus-visible {
+    pointer-events: all;
+    transform: translateY(calc(-100% - var(--size-2)));
+    opacity: 100%;
+
+    transition: opacity var(--opacity-duration) var(--ease-1) !important;
+    @media (prefers-reduced-motion: no-preference) {
+      transition: opacity var(--opacity-duration) var(--ease-1)
+          calc(var(--transform-duration) - var(--opacity-duration)),
+        transform var(--transform-duration) var(--ease-1),
+        outline-offset 145ms var(--ease-2) !important;
     }
   }
 }
