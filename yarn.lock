@@ -134,10 +134,10 @@
     semver "^7.3.7"
     slugify "^1.6.5"
 
-"@11ty/eleventy@^2.0.0-canary.16", "@11ty/eleventy@^2.0.0-canary.18":
-  version "2.0.0-canary.18"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-2.0.0-canary.18.tgz#da3d6af2467806073010752370e774227589533f"
-  integrity sha512-kolnvYrxYYu1Qgt40MDCImx2o1fVcOJq0plH9urFi+P+Xw+uedJ5gauBrjIG7aBP8RD8CMN6zFz19Bn4o4oG+w==
+"@11ty/eleventy@^2.0.0-canary.16", "@11ty/eleventy@^2.0.0-canary.20":
+  version "2.0.0-canary.20"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-2.0.0-canary.20.tgz#5dc765c7443c8427847ea4b65b80cb1a7e72ad5c"
+  integrity sha512-uSqXk2Aw6E62bjwr26sBaHev0YcWce9PPEfLureOPI6vaacV3PJQLf1aKgNm/xXTSDDn6gdIzmSNPNhGi07xEA==
   dependencies:
     "@11ty/dependency-tree" "^2.0.1"
     "@11ty/eleventy-dev-server" "^1.0.0-canary.14"
@@ -158,9 +158,11 @@
     is-glob "^4.0.3"
     iso-639-1 "^2.1.15"
     kleur "^4.1.5"
-    liquidjs "9.41.0"
-    lodash "^4.17.21"
-    luxon "^3.1.0"
+    liquidjs "^10.3.2"
+    lodash.chunk "^4.2.0"
+    lodash.get "^4.4.2"
+    lodash.set "^4.3.2"
+    luxon "^3.1.1"
     markdown-it "^13.0.1"
     minimist "^1.2.7"
     moo "^0.5.2"
@@ -2503,18 +2505,7 @@ fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
   integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
 
-fast-glob@^3.2.11:
-  version "3.2.11"
-  resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-3.2.11.tgz#a1172ad95ceb8a16e20caa5c5e56480e5129c1d9"
-  integrity sha512-xrO3+1bxSo3ZVHAnqzyuewYT6aMFHRAd4Kcs92MAonjwQZLsK9d0SF1IyQ3k5PoirxTW0Oe/RqFgMQ6TcNE5Ew==
-  dependencies:
-    "@nodelib/fs.stat" "^2.0.2"
-    "@nodelib/fs.walk" "^1.2.3"
-    glob-parent "^5.1.2"
-    merge2 "^1.3.0"
-    micromatch "^4.0.4"
-
-fast-glob@^3.2.12:
+fast-glob@^3.2.11, fast-glob@^3.2.12:
   version "3.2.12"
   resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-3.2.12.tgz#7f39ec99c2e6ab030337142da9e0c18f37afae80"
   integrity sha512-DVj4CQIYYow0BlaelwK1pHl5n5cRSJfM60UA0zK891sVInoPri2Ekj7+e1CT3/3qxXenpI+nBBmQAcJPJgaj4w==
@@ -3315,15 +3306,15 @@ linkify-it@^4.0.1:
   dependencies:
     uc.micro "^1.0.1"
 
-liquidjs@9.41.0:
+liquidjs@^10.3.2:
+  version "10.3.3"
+  resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-10.3.3.tgz#4105d764130e6eedc9bb14d98dd8313330336648"
+  integrity sha512-o6s4rOn81x0FlF9SJEQEx3f/j3iL0Iq3zqOsbFEcsoi7Ivn6jEXBEi2Xl5k0oYc7KqYS54uGOa9XC4Ahk7zdFA==
+
+liquidjs@^9.40.0:
   version "9.41.0"
   resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-9.41.0.tgz#b6cf6bc3ee3457d14ff5e3cbf134d15f523c6989"
   integrity sha512-Q1EfRoVYSFmbaTzEHoz39/dMNjPec8uJGHvQiHyzeMp14M9E40a6pOpmDHW009a6qHcjisZyOH96O6No2+1bBQ==
-
-liquidjs@^9.40.0:
-  version "9.40.0"
-  resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-9.40.0.tgz#f4a672a48674b11ce57ff260503b5fc8a0abeb4f"
-  integrity sha512-SFE+HAGVBpfdhM4h7ZovlC0sd7c6b52IHbztIWNaatDPAIsKdKHXSSphHEHk/7qi6NDOZ5BcK65a2YfCOGJrDg==
 
 list-to-array@^1.1.0:
   version "1.1.0"
@@ -3399,6 +3390,11 @@ lodash.bind@^4.1.4:
   resolved "https://registry.yarnpkg.com/lodash.bind/-/lodash.bind-4.2.1.tgz#7ae3017e939622ac31b7d7d7dcb1b34db1690d35"
   integrity sha512-lxdsn7xxlCymgLYo1gGvVrfHmkjDiyqVv62FAeF2i5ta72BipE1SLxw8hPEPLhD4/247Ijw07UQH7Hq/chT5LA==
 
+lodash.chunk@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/lodash.chunk/-/lodash.chunk-4.2.0.tgz#66e5ce1f76ed27b4303d8c6512e8d1216e8106bc"
+  integrity sha512-ZzydJKfUHJwHa+hF5X66zLFCBrWn5GeF28OHEr4WVWtNDXlQ/IjWKPBiikqKo2ne0+v6JgCgJ0GzJp8k8bHC7w==
+
 lodash.deburr@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/lodash.deburr/-/lodash.deburr-4.1.0.tgz#ddb1bbb3ef07458c0177ba07de14422cb033ff9b"
@@ -3423,6 +3419,11 @@ lodash.foreach@^4.3.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.foreach/-/lodash.foreach-4.5.0.tgz#1a6a35eace401280c7f06dddec35165ab27e3e53"
   integrity sha512-aEXTF4d+m05rVOAUG3z4vZZ4xVexLKZGF0lIxuHZ1Hplpk/3B6Z1+/ICICYRLm7c41Z2xiejbkCkJoTlypoXhQ==
+
+lodash.get@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
+  integrity sha512-z+Uw/vLuy6gQe8cfaFWD7p0wVv8fJl3mbzXh33RS+0oW2wvUqiRXiQ69gLWSLpgB5/6sU+r6BlQR0MBILadqTQ==
 
 lodash.isfinite@^3.3.2:
   version "3.3.2"
@@ -3459,6 +3460,11 @@ lodash.reject@^4.4.0:
   resolved "https://registry.yarnpkg.com/lodash.reject/-/lodash.reject-4.6.0.tgz#80d6492dc1470864bbf583533b651f42a9f52415"
   integrity sha512-qkTuvgEzYdyhiJBx42YPzPo71R1aEr0z79kAv7Ixg8wPFEjgRgJdUsGMG3Hf3OYSF/kHI79XhNlt+5Ar6OzwxQ==
 
+lodash.set@^4.3.2:
+  version "4.3.2"
+  resolved "https://registry.yarnpkg.com/lodash.set/-/lodash.set-4.3.2.tgz#d8757b1da807dde24816b0d6a84bea1a76230b23"
+  integrity sha512-4hNPN5jlm/N/HLMCO43v8BXKq9Z7QdAGc/VGrRD61w8gN9g/6jF9A4L1pbUgBLCffi0w9VsXfTOij5x8iTyFvg==
+
 lodash.some@^4.4.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.some/-/lodash.some-4.6.0.tgz#1bb9f314ef6b8baded13b549169b2a945eb68e4d"
@@ -3494,7 +3500,7 @@ luxon@^2.5.0:
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-2.5.0.tgz#098090f67d690b247e83c090267a60b1aa8ea96c"
   integrity sha512-IDkEPB80Rb6gCAU+FEib0t4FeJ4uVOuX1CQ9GsvU3O+JAGIgu0J7sf1OarXKaKDygTZIoJyU6YdZzTFRu+YR0A==
 
-luxon@^3.1.0, luxon@^3.1.1:
+luxon@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-3.1.1.tgz#b492c645b2474fb86f3bd3283213846b99c32c1e"
   integrity sha512-Ah6DloGmvseB/pX1cAmjbFvyU/pKuwQMQqz7d0yvuDlVYLTs2WeDHQMpC8tGjm1da+BriHROW/OEIT/KfYg6xw==
@@ -3649,15 +3655,10 @@ minimatch@^5.0.1:
   dependencies:
     brace-expansion "^2.0.1"
 
-minimist@^1.2.0, minimist@^1.2.3, minimist@^1.2.6, minimist@^1.2.7:
+minimist@^1.2.0, minimist@^1.2.3, minimist@^1.2.5, minimist@^1.2.6, minimist@^1.2.7:
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.7.tgz#daa1c4d91f507390437c6a8bc01078e7000c4d18"
   integrity sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==
-
-minimist@^1.2.5:
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.6.tgz#8637a5b759ea0d6e98702cfb3a9283323c93af44"
-  integrity sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==
 
 minipass@^3.1.1:
   version "3.3.4"
@@ -3683,12 +3684,7 @@ mkdirp@^0.5.1:
   dependencies:
     minimist "^1.2.6"
 
-moo@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/moo/-/moo-0.5.1.tgz#7aae7f384b9b09f620b6abf6f74ebbcd1b65dbc4"
-  integrity sha512-I1mnb5xn4fO80BH9BLcF0yLypy2UKl+Cb01Fu0hJRkJjlCRtxZMWkTdAtDd5ZqCOxtCkhmRwyI57vWT+1iZ67w==
-
-moo@^0.5.2:
+moo@^0.5.1, moo@^0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/moo/-/moo-0.5.2.tgz#f9fe82473bc7c184b0d32e2215d3f6e67278733c"
   integrity sha512-iSAJLHYKnX41mKcJKjqvnAN9sf0LMDTXDEvFv+ffuRR9a1MIuXLjMNL6EsnDHSkKLTWNqQQ5uo61P4EbU4NU+Q==
