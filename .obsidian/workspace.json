@@ -110,17 +110,28 @@
     "width": 300,
     "collapsed": true
   },
+  "left-ribbon": {
+    "hiddenItems": {
+      "templater-obsidian:Templater": false,
+      "obsidian-tts:Text to Speech": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "command-palette:Open command palette": false,
+      "random-note:Open random note": false
+    }
+  },
   "active": "99939a41a05c3658",
   "lastOpenFiles": [
+    "src/bookmarks/Pointer Events - 12 Days of Web.md",
+    "src/bookmarks/Practical Accessibility.md",
+    "src/bookmarks/On Using Web Component Libraries.md",
+    "src/bookmarks/Design Systems for Figma.md",
+    "src/bookmarks/Design Systems at Scale.md",
+    "src/bookmarks/ADHD factsheet for people with a lived experience.md",
+    "src/bookmarks/A Whole Cascade of Layers.md",
     "src/garden/CSS Nesting.md",
     "src/til/Details summary marker.md",
-    "src/til/Raycast wrapped.md",
-    "public/assets/img/raycast-wrapped-1.png",
-    "public/assets/img/raycast-wrapped-5.png",
-    "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
-    "src/til/My ADHD medication contains gluten.md",
-    "src/til/Element.closest().md",
-    "src/garden/Creativity and imagination.md",
-    "src/garden/Atomic.md"
+    "src/til/Raycast wrapped.md"
   ]
 }

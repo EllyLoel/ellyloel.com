@@ -7,7 +7,7 @@
   "syncOnLaunch": true,
   "notifyOnSync": "always",
   "hasCompletedInitialSetup": true,
-  "lastSync": "2022-12-21T07:48:30.235Z",
+  "lastSync": "2022-12-21T11:47:16.851Z",
   "isSyncing": false,
   "contentMap": {
     "A Whole Cascade of Layers.md": "4_12455205",
@@ -18,9 +18,10 @@
     "On Using Web Component Libraries.md": "4_6896915",
     "Into the Personal-Website-Verse.md": "4_415771",
     "Setting up a screen reader testing environment on your computer.md": "4_17626443",
-    "Landmarks and where to put them.md": "4_18089928"
+    "Landmarks and where to put them.md": "4_18089928",
+    "Pointer Events - 12 Days of Web.md": "4_19236372"
   },
-  "recreateIfMissing": false,
-  "metadataTemplate": null,
-  "highlightTemplate": null
+  "recreateIfMissing": true,
+  "metadataTemplate": "---\ntitle: {{ title }}\ncreated: {{ dateNow | date(\"YYYY-MM-DD\") }}\nmodified: {{ dateNow | date(\"YYYY-MM-DD\") }}\n---\n\n{% set one = \"{% unfurl\" %}\n{% set two =  \"%}\" %}\n{{ one | safe }} \"{{ url }}\" {{ two | safe }}\n",
+  "highlightTemplate": "> \"{{text}}\""
 }

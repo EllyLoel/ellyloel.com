@@ -5,5 +5,7 @@
   "theme": "system",
   "baseFontSizeAction": false,
   "monospaceFontFamily": "JetBrains Mono",
-  "accentColor": ""
+  "accentColor": "",
+  "interfaceFontFamily": "SF Pro",
+  "textFontFamily": "SF Pro"
 }

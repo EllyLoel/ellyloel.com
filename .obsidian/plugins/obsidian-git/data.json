@@ -2,9 +2,9 @@
   "commitMessage": "📝 content: obsidian commit",
   "autoCommitMessage": "📝 content: obsidian commit",
   "commitDateFormat": "YYYY-MM-DD HH:mm:ss",
-  "autoSaveInterval": 2,
+  "autoSaveInterval": 0,
   "autoPushInterval": 0,
-  "autoPullInterval": 10,
+  "autoPullInterval": 0,
   "autoPullOnBoot": true,
   "disablePush": false,
   "pullBeforePush": true,
@@ -22,6 +22,6 @@
   "changedFilesInStatusBar": true,
   "showedMobileNotice": true,
   "refreshSourceControlTimer": 7000,
-  "showBranchStatusBar": true,
+  "showBranchStatusBar": false,
   "setLastSaveToLastCommit": false
 }
