@@ -21,7 +21,7 @@ html {
 
 body {
   overflow-x: hidden;
-  font-family: "Work Sans", var(--font-sans);
+  font-family: "Work Sans", "Noto Color Emoji", var(--font-sans);
   font-size: var(--font-size-2);
   font-weight: var(--font-weight-body-normal);
 
@@ -42,7 +42,7 @@ main {
 }
 
 :is(h1, h2, h3, h4, h5, h6, dt) {
-  font-family: "Fraunces", var(--font-serif);
+  font-family: "Fraunces", "Noto Color Emoji", var(--font-serif);
   font-weight: var(--font-weight-7);
   font-optical-sizing: auto;
   --font-wonkiness: 1;
@@ -66,7 +66,6 @@ main {
       transition: opacity 300ms var(--ease-2);
       opacity: 0%;
       content: "🔗";
-      font-family: "Noto Color Emoji", sans-serif;
       display: inline-block;
       font-size: 0.75em;
       padding: 0.175em;

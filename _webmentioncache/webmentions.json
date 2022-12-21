@@ -1,6 +1,463 @@
 {
-  "lastFetched": "2022-12-16T08:23:28.331Z",
+  "lastFetched": "2022-12-21T08:49:25.245Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Mayank",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/e3a2d8c1795a2b30e0e56aca6eff2963ebb01c7bce1d4db277cf433f60d995d9.jpg",
+        "url": "https://hachyderm.io/@hi_mayank"
+      },
+      "url": "https://front-end.social/@elly/109531897374817928#favorited-by-109537819913761258",
+      "published": null,
+      "wm-received": "2022-12-19T17:12:12Z",
+      "wm-id": 1583994,
+      "wm-source": "https://brid.gy/like/mastodon/@elly@front-end.social/109531897374817928/109537819913761258",
+      "wm-target": "https://www.ellyloel.com/garden/css-nesting/",
+      "like-of": "https://www.ellyloel.com/garden/css-nesting/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Tyler Sticka",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/ecfc5765a49387efd278a21fc94a9266e787e0e8a755ea8f58ee9778d9361b3c.png",
+        "url": "https://mastodon.social/@tylersticka"
+      },
+      "url": "https://front-end.social/@elly/109531897374817928#favorited-by-109288800682422989",
+      "published": null,
+      "wm-received": "2022-12-18T16:35:10Z",
+      "wm-id": 1583334,
+      "wm-source": "https://brid.gy/like/mastodon/@elly@front-end.social/109531897374817928/109288800682422989",
+      "wm-target": "https://www.ellyloel.com/garden/css-nesting/",
+      "like-of": "https://www.ellyloel.com/garden/css-nesting/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Tyler Sticka",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/ecfc5765a49387efd278a21fc94a9266e787e0e8a755ea8f58ee9778d9361b3c.png",
+        "url": "https://mastodon.social/@tylersticka"
+      },
+      "url": "https://front-end.social/@elly/109531897374817928#reblogged-by-109288800682422989",
+      "published": null,
+      "wm-received": "2022-12-18T16:35:10Z",
+      "wm-id": 1583335,
+      "wm-source": "https://brid.gy/repost/mastodon/@elly@front-end.social/109531897374817928/109288800682422989",
+      "wm-target": "https://www.ellyloel.com/garden/css-nesting/",
+      "repost-of": "https://www.ellyloel.com/garden/css-nesting/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Amelia Bellamy-Royds",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/28c3647c2db4806feca362be35e12a8cb93dfeac759fe1785dc6e65927e94463.jpg",
+        "url": "https://front-end.social/@AmeliaBR"
+      },
+      "url": "https://front-end.social/@AmeliaBR/109532581754283388",
+      "published": "2022-12-18T03:36:00",
+      "wm-received": "2022-12-18T04:46:26Z",
+      "wm-id": 1583116,
+      "wm-source": "https://brid.gy/comment/mastodon/@elly@front-end.social/109531897374817928/109532581754283388",
+      "wm-target": "https://www.ellyloel.com/garden/css-nesting/",
+      "content": {
+        "html": "<p><span class=\"h-card\"><a href=\"https://front-end.social/@elly\" class=\"u-url\">@<span>elly</span></a></span> (boosting for the nice summary, not for the fact that I agree with you about mandatory &amp;)</p><p>(Ok, ok, boosting because both)</p>",
+        "text": "@elly (boosting for the nice summary, not for the fact that I agree with you about mandatory &)(Ok, ok, boosting because both)"
+      },
+      "in-reply-to": "https://www.ellyloel.com/garden/css-nesting/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Amelia Bellamy-Royds",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/28c3647c2db4806feca362be35e12a8cb93dfeac759fe1785dc6e65927e94463.jpg",
+        "url": "https://front-end.social/@AmeliaBR"
+      },
+      "url": "https://front-end.social/@elly/109531897374817928#reblogged-by-109288745031397981",
+      "published": null,
+      "wm-received": "2022-12-18T04:46:03Z",
+      "wm-id": 1583115,
+      "wm-source": "https://brid.gy/repost/mastodon/@elly@front-end.social/109531897374817928/109288745031397981",
+      "wm-target": "https://www.ellyloel.com/garden/css-nesting/",
+      "repost-of": "https://www.ellyloel.com/garden/css-nesting/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Miriam Suzanne",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/28109e840cb957b8aee92cbc11fe79e4f3be77cd77ac098c6f050ba76061f70b.jpg",
+        "url": "https://front-end.social/@mia"
+      },
+      "url": "https://front-end.social/@elly/109531897374817928#favorited-by-109287575127245522",
+      "published": null,
+      "wm-received": "2022-12-18T04:46:02Z",
+      "wm-id": 1583114,
+      "wm-source": "https://brid.gy/like/mastodon/@elly@front-end.social/109531897374817928/109287575127245522",
+      "wm-target": "https://www.ellyloel.com/garden/css-nesting/",
+      "like-of": "https://www.ellyloel.com/garden/css-nesting/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Elly Loel ✨🌱",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/2906f05fbc1fff47b76e9bd51804d1618a81be8f3062fc8c5a2e0f18d02f8559.png",
+        "url": "https://front-end.social/@elly"
+      },
+      "url": "https://front-end.social/@elly/109532606090115639",
+      "published": "2022-12-18T03:42:11",
+      "wm-received": "2022-12-18T04:45:59Z",
+      "wm-id": 1583112,
+      "wm-source": "https://brid.gy/comment/mastodon/@elly@front-end.social/109531897374817928/109532606090115639",
+      "wm-target": "https://www.ellyloel.com/garden/css-nesting/",
+      "content": {
+        "html": "<p><span class=\"h-card\"><a href=\"https://front-end.social/@AmeliaBR\" class=\"u-url\">@<span>AmeliaBR</span></a></span> 🤭❤️ hahah great minds think alike</p>",
+        "text": "@AmeliaBR 🤭❤️ hahah great minds think alike"
+      },
+      "in-reply-to": "https://www.ellyloel.com/garden/css-nesting/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Miriam Suzanne",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/28109e840cb957b8aee92cbc11fe79e4f3be77cd77ac098c6f050ba76061f70b.jpg",
+        "url": "https://front-end.social/@mia"
+      },
+      "url": "https://front-end.social/@mia/109532852024112919",
+      "published": "2022-12-18T04:44:44",
+      "wm-received": "2022-12-18T04:45:59Z",
+      "wm-id": 1583113,
+      "wm-source": "https://brid.gy/comment/mastodon/@elly@front-end.social/109531897374817928/109532852024112919",
+      "wm-target": "https://www.ellyloel.com/garden/css-nesting/",
+      "content": {
+        "html": "<p><span class=\"h-card\"><a href=\"https://front-end.social/@elly\" class=\"u-url\">@<span>elly</span></a></span> Great overview! The counter-arguments on required `&amp;`: </p><p>1. It doesn't fix all the edge-cases - you still need :is() sometimes - so not a huge technical win. Otherwise this would have sold it.</p><p>2. When copy/pasting complex selectors, it's easy to miss an `&amp;` that needs added or removed. But we know what you meant. Why break parsing over it?</p><p>3. When we poll author preferences, they're 50/50. Those who want it can lint. Everyone wins?</p><p>But you're not alone, it's a common request.</p>",
+        "text": "@elly Great overview! The counter-arguments on required `&`: 1. It doesn't fix all the edge-cases - you still need :is() sometimes - so not a huge technical win. Otherwise this would have sold it.2. When copy/pasting complex selectors, it's easy to miss an `&` that needs added or removed. But we know what you meant. Why break parsing over it?3. When we poll author preferences, they're 50/50. Those who want it can lint. Everyone wins?But you're not alone, it's a common request."
+      },
+      "in-reply-to": "https://www.ellyloel.com/garden/css-nesting/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Zach Leatherman :11ty:",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/f4e48698b4079b12cff61448419d6cf2a13293b27bdaa0a551de22a70e402f70.png",
+        "url": "https://fediverse.zachleat.com/@zachleat"
+      },
+      "url": "https://front-end.social/@elly/109525532885547461#favorited-by-109287923857668672",
+      "published": null,
+      "wm-received": "2022-12-17T00:12:59Z",
+      "wm-id": 1582510,
+      "wm-source": "https://brid.gy/like/mastodon/@elly@front-end.social/109525532885547461/109287923857668672",
+      "wm-target": "https://www.ellyloel.com/",
+      "like-of": "https://www.ellyloel.com/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Zach Leatherman :11ty:",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/f4e48698b4079b12cff61448419d6cf2a13293b27bdaa0a551de22a70e402f70.png",
+        "url": "https://fediverse.zachleat.com/@zachleat"
+      },
+      "url": "https://fediverse.zachleat.com/@zachleat/109526008795619535",
+      "published": "2022-12-16T23:44:25",
+      "wm-received": "2022-12-17T00:12:30Z",
+      "wm-id": 1582508,
+      "wm-source": "https://brid.gy/comment/mastodon/@elly@front-end.social/109525532885547461/109526008817111584",
+      "wm-target": "https://www.ellyloel.com/",
+      "content": {
+        "html": "<p><span class=\"h-card\"><a href=\"https://front-end.social/@elly\" class=\"u-url\">@<span>elly</span></a></span> oh dang you got a whole spread of domains</p>\n<a class=\"u-mention\" href=\"https://elly.to/\"></a>\n<a class=\"u-mention\" href=\"https://www.ellyloel.com/\"></a>",
+        "text": "@elly oh dang you got a whole spread of domains"
+      },
+      "in-reply-to": "https://www.ellyloel.com/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "gingerchew",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/436420cd97bad9222d8935a202cb312371a3a1d1484b35538d2d66ec1f488097.jpg",
+        "url": "https://queer.party/@gingerchew"
+      },
+      "url": "https://queer.party/@gingerchew/109525639273183030",
+      "published": "2022-12-16T22:10:26",
+      "wm-received": "2022-12-16T23:05:52Z",
+      "wm-id": 1582470,
+      "wm-source": "https://brid.gy/comment/mastodon/@elly@front-end.social/109525532885547461/109525639336948107",
+      "wm-target": "https://www.ellyloel.com/",
+      "content": {
+        "html": "<p><span class=\"h-card\"><a href=\"https://front-end.social/@elly\" class=\"u-url\">@<span>elly</span></a></span> I‘ve reached my “just code it” era. goofy TLDS are perfect for that like 20xx.day,  bitesize.land (broken don’t look). but i have like 10 others that either make no sense or i need to think up a project for.</p>\n<a class=\"u-mention\" href=\"https://elly.to/\"></a>\n<a class=\"u-mention\" href=\"https://www.ellyloel.com/\"></a>",
+        "text": "@elly I‘ve reached my “just code it” era. goofy TLDS are perfect for that like 20xx.day,  bitesize.land (broken don’t look). but i have like 10 others that either make no sense or i need to think up a project for."
+      },
+      "in-reply-to": "https://www.ellyloel.com/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Elly Loel ✨🌱",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/2906f05fbc1fff47b76e9bd51804d1618a81be8f3062fc8c5a2e0f18d02f8559.png",
+        "url": "https://front-end.social/@elly"
+      },
+      "url": "https://front-end.social/@elly/109525572906548273",
+      "published": "2022-12-16T21:53:33",
+      "wm-received": "2022-12-16T23:05:29Z",
+      "wm-id": 1582469,
+      "wm-source": "https://brid.gy/comment/mastodon/@elly@front-end.social/109525532885547461/109525572906548273",
+      "wm-target": "https://www.ellyloel.com/",
+      "content": {
+        "html": "<p><span class=\"h-card\"><a href=\"https://queer.party/@gingerchew\" class=\"u-url\">@<span>gingerchew</span></a></span> the eternal domain name struggle, is it too silly. I love silly domains but I always worry that less tech literate people might get confused if I use an obscure TLD, but maybe I'm just overthinking it.</p>\n<a class=\"u-mention\" href=\"https://elly.to/\"></a>\n<a class=\"u-mention\" href=\"https://www.ellyloel.com/\"></a>",
+        "text": "@gingerchew the eternal domain name struggle, is it too silly. I love silly domains but I always worry that less tech literate people might get confused if I use an obscure TLD, but maybe I'm just overthinking it."
+      },
+      "in-reply-to": "https://www.ellyloel.com/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Elly Loel ✨🌱",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/2906f05fbc1fff47b76e9bd51804d1618a81be8f3062fc8c5a2e0f18d02f8559.png",
+        "url": "https://front-end.social/@elly"
+      },
+      "url": "https://front-end.social/@elly/109525718020530065",
+      "published": "2022-12-16T22:30:28",
+      "wm-received": "2022-12-16T23:05:24Z",
+      "wm-id": 1582467,
+      "wm-source": "https://brid.gy/comment/mastodon/@elly@front-end.social/109525532885547461/109525718020530065",
+      "wm-target": "https://www.ellyloel.com/",
+      "content": {
+        "html": "<p><span class=\"h-card\"><a href=\"https://queer.party/@gingerchew\" class=\"u-url\">@<span>gingerchew</span></a></span> omg I love it 👏🏻</p>\n<a class=\"u-mention\" href=\"https://elly.to/\"></a>\n<a class=\"u-mention\" href=\"https://www.ellyloel.com/\"></a>",
+        "text": "@gingerchew omg I love it 👏🏻"
+      },
+      "in-reply-to": "https://www.ellyloel.com/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "gingerchew",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/436420cd97bad9222d8935a202cb312371a3a1d1484b35538d2d66ec1f488097.jpg",
+        "url": "https://queer.party/@gingerchew"
+      },
+      "url": "https://queer.party/@gingerchew/109525560732280766",
+      "published": "2022-12-16T21:50:28",
+      "wm-received": "2022-12-16T23:05:24Z",
+      "wm-id": 1582468,
+      "wm-source": "https://brid.gy/comment/mastodon/@elly@front-end.social/109525532885547461/109525560770178585",
+      "wm-target": "https://www.ellyloel.com/",
+      "content": {
+        "html": "<p><span class=\"h-card\"><a href=\"https://front-end.social/@elly\" class=\"u-url\">@<span>elly</span></a></span> .lol is so good even if it’s not exactly your name. I somehow managed to grab ginger.wtf and have been contemplating it’s “professional-ness” ever since</p>\n<a class=\"u-mention\" href=\"https://elly.to/\"></a>\n<a class=\"u-mention\" href=\"https://www.ellyloel.com/\"></a>",
+        "text": "@elly .lol is so good even if it’s not exactly your name. I somehow managed to grab ginger.wtf and have been contemplating it’s “professional-ness” ever since"
+      },
+      "in-reply-to": "https://www.ellyloel.com/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Liam Levesque",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/30453317ac5accfca6ebd10da2183fbadd3a201352611bfc761c69b6684e043f.png",
+        "url": "https://mastodon.world/@liamlevesque"
+      },
+      "url": "https://front-end.social/@elly/109522327053560246#reblogged-by-109304820702598438",
+      "published": null,
+      "wm-received": "2022-12-16T20:02:51Z",
+      "wm-id": 1582380,
+      "wm-source": "https://brid.gy/repost/mastodon/@elly@front-end.social/109522327053560246/109304820702598438",
+      "wm-target": "https://www.ellyloel.com/til/raycast-wrapped/",
+      "repost-of": "https://www.ellyloel.com/til/raycast-wrapped/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Ashley Kolodziej 🐰",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/d09cdb25dd39c7604198c4f262ff0e5e9d41db48a776dd379996c868c138f923.jpg",
+        "url": "https://fosstodon.org/@ashleykolodziej"
+      },
+      "url": "https://front-end.social/@elly/109522190096953962#reblogged-by-109458607035346759",
+      "published": null,
+      "wm-received": "2022-12-16T16:13:10Z",
+      "wm-id": 1582294,
+      "wm-source": "https://brid.gy/repost/mastodon/@elly@front-end.social/109522190096953962/109458607035346759",
+      "wm-target": "https://www.ellyloel.com/garden/css-nesting/",
+      "repost-of": "https://www.ellyloel.com/garden/css-nesting/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "rriver🍀",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/956839244e7f078656b98d59b2b76c45ae6eac15f0c702cc36da67570ed1fff8.png",
+        "url": "https://social.vivaldi.net/@rriver"
+      },
+      "url": "https://front-end.social/@elly/109522190096953962#favorited-by-109376681683214861",
+      "published": null,
+      "wm-received": "2022-12-16T09:36:48Z",
+      "wm-id": 1582042,
+      "wm-source": "https://brid.gy/like/mastodon/@elly@front-end.social/109522190096953962/109376681683214861",
+      "wm-target": "https://www.ellyloel.com/garden/css-nesting/",
+      "like-of": "https://www.ellyloel.com/garden/css-nesting/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Rach Smith",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/82b86202bc8041faadfc86a665f4f92545027be3edbb26cda226a58ab2b033a5.jpg",
+        "url": "https://front-end.social/@rachsmith"
+      },
+      "url": "https://front-end.social/@rachsmith/109522412966991442",
+      "published": "2022-12-16T08:29:57",
+      "wm-received": "2022-12-16T09:36:47Z",
+      "wm-id": 1582041,
+      "wm-source": "https://brid.gy/comment/mastodon/@elly@front-end.social/109522327053560246/109522412966991442",
+      "wm-target": "https://www.ellyloel.com/til/raycast-wrapped/",
+      "content": {
+        "html": "<p><span class=\"h-card\"><a href=\"https://front-end.social/@elly\" class=\"u-url\">@<span>elly</span></a></span> ooohh. I need to check mine out</p>",
+        "text": "@elly ooohh. I need to check mine out"
+      },
+      "in-reply-to": "https://www.ellyloel.com/til/raycast-wrapped/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Elly ✨🌱",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/2906f05fbc1fff47b76e9bd51804d1618a81be8f3062fc8c5a2e0f18d02f8559.png",
+        "url": "https://front-end.social/@elly"
+      },
+      "url": "https://front-end.social/@elly/109522345064548350",
+      "published": "2022-12-16T08:12:40",
+      "wm-received": "2022-12-16T08:26:34Z",
+      "wm-id": 1582027,
+      "wm-source": "https://brid.gy/comment/mastodon/@elly@front-end.social/109522327053560246/109522345064548350",
+      "wm-target": "https://www.ellyloel.com/til/raycast-wrapped/",
+      "photo": [
+        "https://cdn.masto.host/frontendsocial/media_attachments/files/109/522/328/763/164/407/original/7b34083252458f1d.png"
+      ],
+      "content": {
+        "html": "<p>Also, all the \"Wrapped\"s having a personality section is wack. Like, uhh yeah okay, I guess I'm a \"Rayeti\" ??</p><p>\"An unmatched productivity that is hard to find in real life.\"<br />Oh, you mean my <a href=\"https://front-end.social/tags/AuDHD\">#<span>AuDHD</span></a> hyper focus? </p>\n<a class=\"p-category\" href=\"https://front-end.social/tags/audhd\">audhd</a>",
+        "text": "Also, all the \"Wrapped\"s having a personality section is wack. Like, uhh yeah okay, I guess I'm a \"Rayeti\" ??\"An unmatched productivity that is hard to find in real life.\"\nOh, you mean my #AuDHD hyper focus? \naudhd"
+      },
+      "in-reply-to": "https://www.ellyloel.com/til/raycast-wrapped/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "GENKI",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/e014fa2d4364c5d2adfc9c795d5c57d23e3b28176988a5ea038bbca48ec0ee76.png",
+        "url": "https://social.vivaldi.net/@nibushibu"
+      },
+      "url": "https://front-end.social/@elly/109522190096953962#reblogged-by-109379142068921170",
+      "published": null,
+      "wm-received": "2022-12-16T08:26:14Z",
+      "wm-id": 1582026,
+      "wm-source": "https://brid.gy/repost/mastodon/@elly@front-end.social/109522190096953962/109379142068921170",
+      "wm-target": "https://www.ellyloel.com/garden/css-nesting/",
+      "repost-of": "https://www.ellyloel.com/garden/css-nesting/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Zachary Yaro",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/cfb9a68753e41eae038400bb173939d643db502555905ddeaab1c608dd57ff62.jpg",
+        "url": "https://mastodon.social/@ZMYaro"
+      },
+      "url": "https://front-end.social/@elly/109522190096953962#favorited-by-109326449528526562",
+      "published": null,
+      "wm-received": "2022-12-16T08:26:11Z",
+      "wm-id": 1582025,
+      "wm-source": "https://brid.gy/like/mastodon/@elly@front-end.social/109522190096953962/109326449528526562",
+      "wm-target": "https://www.ellyloel.com/garden/css-nesting/",
+      "like-of": "https://www.ellyloel.com/garden/css-nesting/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "GENKI",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/e014fa2d4364c5d2adfc9c795d5c57d23e3b28176988a5ea038bbca48ec0ee76.png",
+        "url": "https://social.vivaldi.net/@nibushibu"
+      },
+      "url": "https://front-end.social/@elly/109522190096953962#favorited-by-109379142068921170",
+      "published": null,
+      "wm-received": "2022-12-16T08:26:09Z",
+      "wm-id": 1582023,
+      "wm-source": "https://brid.gy/like/mastodon/@elly@front-end.social/109522190096953962/109379142068921170",
+      "wm-target": "https://www.ellyloel.com/garden/css-nesting/",
+      "like-of": "https://www.ellyloel.com/garden/css-nesting/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "hary :vivaldi_blue:",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/57c2d5becc8a98c22f03aeb6317a6910f2b74010f10832703dc7cee7c44c4ddf.png",
+        "url": "https://social.vivaldi.net/@hary"
+      },
+      "url": "https://front-end.social/@elly/109522190096953962#favorited-by-109522366043229244",
+      "published": null,
+      "wm-received": "2022-12-16T08:26:09Z",
+      "wm-id": 1582024,
+      "wm-source": "https://brid.gy/like/mastodon/@elly@front-end.social/109522190096953962/109522366043229244",
+      "wm-target": "https://www.ellyloel.com/garden/css-nesting/",
+      "like-of": "https://www.ellyloel.com/garden/css-nesting/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
     {
       "type": "entry",
       "author": {
