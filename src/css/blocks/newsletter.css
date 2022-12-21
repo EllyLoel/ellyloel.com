@@ -22,8 +22,12 @@
   & > div {
     --flow-space: 1.5em;
 
-    & > div > h2 {
+    & h2 {
       font-size: var(--font-size-fluid-2);
+    }
+
+    & summary {
+      padding: 0;
     }
 
     & > div:last-child {
