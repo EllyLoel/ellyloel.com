@@ -4,11 +4,33 @@ title: Digital garden
 eleventyNavigation:
   key: Digital garden
   parent: Writing
-  order: 3
+  order: 1
 ---
 
 <p>A collection of my ideas that I'm nurturing out in the open. The notes range from seedlings, which are fresh out of my mind, to budding, which are developing, to evergreen, which are polished ideas.</p>
 
+<h2>
+  Feeds
+</h2>
+<ul>
+  <li>
+    <a href="/notes.rss">
+      <abbr title="Really Simple Syndication">RSS</abbr>
+    </a>
+  </li>
+  <li>
+    <a href="/notes.atom">Atom</a>
+  </li>
+  <li>
+    <a href="/notes.json">
+      <abbr title="JavaScript Object Notation">JSON</abbr>
+    </a>
+  </li>
+</ul>
+
+<h2>
+  Linked posts graph
+</h2>
 <div id="graph"></div>
 
 {%- set notes = collections.garden | sortByCreated -%}

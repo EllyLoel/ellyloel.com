@@ -372,6 +372,31 @@ details[open] > summary {
   border: var(--_border);
   background-color: var(--accent-bg);
   position: relative;
+  overflow-x: auto;
+
+  @media (any-pointer: fine) and (width <= 735px) {
+    &,
+    & * {
+      border-bottom-right-radius: 0px !important;
+      border-bottom-left-radius: 0px !important;
+    }
+
+    /* Firefox */
+    scrollbar-width: auto; /* "auto" or "thin" */
+    scrollbar-color: var(--accent-bg) var(--accent-4); /* scroll thumb and track */
+    /* Chrome, Edge, and Safari */
+    &::-webkit-scrollbar {
+      width: auto; /* width of the entire scrollbar */
+    }
+    &::-webkit-scrollbar-track {
+      background: var(--accent-4); /* color of the tracking area */
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--accent-bg); /* color of the scroll thumb */
+      border-radius: 20px; /* roundness of the scroll thumb */
+      border: 3px solid var(--accent-4); /* creates padding around scroll thumb */
+    }
+  }
 
   & table {
     display: table;

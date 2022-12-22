@@ -4,7 +4,7 @@ title: Salary history
 eleventyNavigation:
   key: Salary history
   parent: Me
-  order: 11
+  order: 5
 ---
 
 This page was inspired by [Carolina Gilabert's salary page](https://carol.gg/salary/).

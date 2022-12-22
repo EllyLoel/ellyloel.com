@@ -4,7 +4,7 @@ title: Uses
 eleventyNavigation:
   key: Uses
   parent: Me
-  order: 6
+  order: 3
 ---
 
 ## Hardware
