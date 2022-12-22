@@ -3,7 +3,7 @@ layout: base
 title: Speaking
 eleventyNavigation:
   key: Speaking
-  order: 7
+  order: 6
 ---
 
 ## Events

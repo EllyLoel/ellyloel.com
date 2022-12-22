@@ -4,9 +4,31 @@ title: Blog
 eleventyNavigation:
   key: Blog
   parent: Writing
-  order: 4
+  order: 2
 ---
 
+<h2>
+  Feeds
+</h2>
+<ul>
+  <li>
+    <a href="/articles.rss">
+      <abbr title="Really Simple Syndication">RSS</abbr>
+    </a>
+  </li>
+  <li>
+    <a href="/articles.atom">Atom</a>
+  </li>
+  <li>
+    <a href="/articles.json">
+      <abbr title="JavaScript Object Notation">JSON</abbr>
+    </a>
+  </li>
+</ul>
+
+<h2>
+  Linked posts graph
+</h2>
 <div id="graph"></div>
 
 {%- set blog = collections.blog | sortByCreated -%}

@@ -3,9 +3,31 @@ layout: base
 title: Bookmarks
 eleventyNavigation:
   key: Bookmarks
-  order: 8
+  order: 4
 ---
 
+<h2>
+  Feeds
+</h2>
+<ul>
+  <li>
+    <a href="/bookmarks.rss">
+      <abbr title="Really Simple Syndication">RSS</abbr>
+    </a>
+  </li>
+  <li>
+    <a href="/bookmarks.atom">Atom</a>
+  </li>
+  <li>
+    <a href="/bookmarks.json">
+      <abbr title="JavaScript Object Notation">JSON</abbr>
+    </a>
+  </li>
+</ul>
+
+<h2>
+  Linked posts graph
+</h2>
 <div id="graph"></div>
 
 {% set bookmarks = collections.bookmarks | sortByCreated %}
