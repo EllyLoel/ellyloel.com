@@ -1,6 +1,12 @@
+[dev]
+    command = 'yarn start'
+    publish = '_site'
+    functions = 'netlify/functions'
+
 [build]
   command = "yarn build"
   publish = "_site"
+  functions = 'netlify/functions'
 
 [[redirects]]
   from = "*"
