@@ -279,7 +279,13 @@ module.exports = (eleventyConfig) => {
   );
   eleventyConfig.addNunjucksAsyncShortcode(
     "image",
-    async function (src, alt, sizes = "(max-width: 768px) 100vw, 768px") {
+    async function (
+      src,
+      alt,
+      caption,
+      noItalics,
+      sizes = "(max-width: 768px) 100vw, 768px"
+    ) {
       if (alt === undefined) {
         // You bet we throw an error on missing alt (alt="" works okay)
         throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
@@ -298,6 +304,18 @@ module.exports = (eleventyConfig) => {
         loading: "lazy",
         decoding: "async",
       };
+
+      if (caption) {
+        return `<figure>${EleventyPluginImage.generateHTML(
+          metadata,
+          imageAttributes,
+          {
+            whiteSpace: "inline",
+          }
+        )}<figcaption ${
+          noItalics ? `class="no-italics"` : ``
+        }>${caption}</figcaption></figure>`;
+      }
 
       return EleventyPluginImage.generateHTML(metadata, imageAttributes, {
         whiteSpace: "inline",

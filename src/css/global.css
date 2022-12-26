@@ -307,17 +307,21 @@ figure {
   display: grid;
   justify-items: center;
   gap: var(--size-3);
-}
 
-figure > figcaption {
-  font-size: var(--font-size-1);
-  text-align: right;
-  font-style: italic;
-  padding-inline: var(--size-5);
-}
+  & > figcaption {
+    font-size: var(--font-size-1);
+    text-align: right;
+    font-style: italic;
+    padding-inline: var(--size-5);
 
-figure > :is(picture, svg, sl-animated-image) + figcaption {
-  text-align: center;
+    &.no-italics {
+      font-style: normal;
+    }
+  }
+
+  & > :is(picture, svg, sl-animated-image) + figcaption {
+    text-align: center;
+  }
 }
 
 /* Picture */
@@ -502,17 +506,89 @@ fieldset {
   border-radius: var(--radius-2);
 }
 
+mark::before,
+mark::after,
+del::before,
+del::after,
+ins::before,
+ins::after,
+s::before,
+s::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+mark::before {
+  content: " [highlight start] ";
+}
+
+mark::after {
+  content: " [highlight end] ";
+}
+
+@media screen and (-ms-high-contrast: active) {
+  mark {
+    color: HighlightText;
+    background-color: Highlight;
+  }
+}
+
 del,
 s {
   color: var(--error);
+}
+
+del::before {
+  content: " [deletion start] ";
+}
+
+del::after {
+  content: " [deletion end] ";
+}
+
+s::before {
+  content: " [start of stricken text] ";
+}
+
+s::after {
+  content: " [end stricken text] ";
+}
+
+@media screen and (-ms-high-contrast: active) {
+  s {
+    text-decoration-color: Highlight;
+  }
 }
 
 ins {
   color: var(--success);
 }
 
+ins::before {
+  content: " [insertion start] ";
+}
+
+ins::after {
+  content: " [insertion end] ";
+}
+
+@media screen and (-ms-high-contrast: active) {
+  ins {
+    border-bottom-color: Highlight;
+  }
+}
+
 abbr {
   text-decoration-color: var(--info);
+
+  &[title] {
+    cursor: help;
+  }
 }
 
 /* Dialog */
