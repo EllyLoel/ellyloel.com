@@ -1393,10 +1393,10 @@ css-declaration-sorter@^6.3.1:
   resolved "https://registry.yarnpkg.com/css-declaration-sorter/-/css-declaration-sorter-6.3.1.tgz#be5e1d71b7a992433fb1c542c7a1b835e45682ec"
   integrity sha512-fBffmak0bPAnyqc/HO8C3n2sHrp9wcqQz6ES9koRF2/mLOVAx9zIQ3Y7R29sYCteTPqMCwns4WYQoCX91Xl3+w==
 
-css-doodle@^0.30.10:
-  version "0.30.10"
-  resolved "https://registry.yarnpkg.com/css-doodle/-/css-doodle-0.30.10.tgz#ab3dc4560a8ce8ebcef666cdc8f27fd6dea2bdad"
-  integrity sha512-Dh0Z6rKWKdUyVC3XOBVforxv1kqcLjm9x1p8B6Az+obnbAi58wVOg2xBdJxcJzMn0kYVYJxsBO54iODDEvcsrg==
+css-doodle@^0.32.0:
+  version "0.32.0"
+  resolved "https://registry.yarnpkg.com/css-doodle/-/css-doodle-0.32.0.tgz#e3a873aecd162268ca5d33af3743ab600743165c"
+  integrity sha512-VsZST5IQ7mfQmx5Q8MVjgI8yKj5BFi+k05t+9FfHz/UOUPxpO9FUC3wtEb+/hG0jvChFdg/YDrcYVFeLStLXMA==
 
 css-has-pseudo@^3.0.4:
   version "3.0.4"
