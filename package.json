@@ -51,7 +51,7 @@
     "cssremedy": "^0.1.0-beta.2",
     "eleventy-plugin-backlinks": "^0.2.0",
     "eleventy-plugin-broken-links": "^2.0.3",
-    "eleventy-plugin-gen-favicons": "^1.1.0",
+    "eleventy-plugin-gen-favicons": "^1.1.2",
     "eleventy-plugin-json-feed": "^0.0.7",
     "eleventy-plugin-unfurl": "^1.0.0",
     "eleventy-plugin-webmentions": "^1.1.0",

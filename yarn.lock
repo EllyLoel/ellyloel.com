@@ -1838,14 +1838,14 @@ eleventy-plugin-broken-links@^2.0.3:
     node-html-parser "^5.3.3"
     valid-url "^1.0.9"
 
-eleventy-plugin-gen-favicons@^1.1.0:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/eleventy-plugin-gen-favicons/-/eleventy-plugin-gen-favicons-1.1.1.tgz#c33c12720f6f9b2cc1142b05dbae232292a5fe4e"
-  integrity sha512-02ZpUtJ2mHEp/sQ4JQmWqUSsyDJ77BZD8kgUBoUtN5S+jwK9Mu36tjhaz+bh1BQiC9ih85YCFtn1Mai1f076pg==
+eleventy-plugin-gen-favicons@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/eleventy-plugin-gen-favicons/-/eleventy-plugin-gen-favicons-1.1.2.tgz#93ed3817f31a4afdeb6ce5f37906a4f89015ec92"
+  integrity sha512-DtxS3J+ujDVZ9oP5RTOTxwET2K7S7WEvQ7XE/S3TwM7uQR/NOqHibuZXyftutK22EU1UInQc2yP1JZ7mtnWJUQ==
   dependencies:
     fast-deep-equal "^3.1.3"
     png-to-ico "^2.1.8"
-    sharp "^0.31.0"
+    sharp "^0.31.3"
 
 eleventy-plugin-json-feed@^0.0.7:
   version "0.0.7"
@@ -4921,16 +4921,16 @@ sharp@^0.30.3:
     tar-fs "^2.1.1"
     tunnel-agent "^0.6.0"
 
-sharp@^0.31.0:
-  version "0.31.1"
-  resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.31.1.tgz#b2f7076d381a120761aa93700cadefcf90a22458"
-  integrity sha512-GR8M1wBwOiFKLkm9JPun27OQnNRZdHfSf9VwcdZX6UrRmM1/XnOrLFTF0GAil+y/YK4E6qcM/ugxs80QirsHxg==
+sharp@^0.31.3:
+  version "0.31.3"
+  resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.31.3.tgz#60227edc5c2be90e7378a210466c99aefcf32688"
+  integrity sha512-XcR4+FCLBFKw1bdB+GEhnUNXNXvnt0tDo4WsBsraKymuo/IAuPuCBVAL2wIkUw2r/dwFW5Q5+g66Kwl2dgDFVg==
   dependencies:
     color "^4.2.3"
     detect-libc "^2.0.1"
     node-addon-api "^5.0.0"
     prebuild-install "^7.1.1"
-    semver "^7.3.7"
+    semver "^7.3.8"
     simple-get "^4.0.1"
     tar-fs "^2.1.1"
     tunnel-agent "^0.6.0"
