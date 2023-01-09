@@ -19,7 +19,8 @@
     "start": "npx @11ty/eleventy --serve --incremental --quiet",
     "clean": "rm -rf _site",
     "build": "npx @11ty/eleventy",
-    "debug": "DEBUG=Eleventy* npx @11ty/eleventy"
+    "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@11ty/eleventy-img": "^2.0.1",
@@ -52,8 +53,7 @@
     "eleventy-plugin-broken-links": "^2.0.3",
     "eleventy-plugin-gen-favicons": "^1.1.0",
     "eleventy-plugin-json-feed": "^0.0.7",
-    "eleventy-plugin-og-image": "^1.1.0",
-    "eleventy-plugin-unfurl": "^0.0.6",
+    "eleventy-plugin-unfurl": "^1.0.0",
     "eleventy-plugin-webmentions": "^1.1.0",
     "eslint": "^8.11.0",
     "focus-visible": "^5.2.0",
@@ -73,6 +73,7 @@
     "postcss-jit-props": "^1.0.7",
     "postinstall-postinstall": "^2.1.0",
     "prettier": "^2.6.1",
+    "puppeteer-core": "^19.4.1",
     "remove-markdown": "^0.5.0",
     "slinkity": "^0.8.3",
     "slugify": "^1.6.5"

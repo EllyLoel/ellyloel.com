@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "ab459a3b81b981f6",
+        "id": "d5c0d0e439ff2ab8",
         "type": "tabs",
         "children": [
           {
-            "id": "99939a41a05c3658",
+            "id": "dba5f730208547e2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "src/garden/Google fonts hate her, speed up your website with this one weird trick.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -83,7 +88,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "src/garden/Google fonts hate her, speed up your website with this one weird trick.md"
+              }
             }
           },
           {
@@ -92,6 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "src/garden/Google fonts hate her, speed up your website with this one weird trick.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,17 +129,17 @@
       "random-note:Open random note": false
     }
   },
-  "active": "99939a41a05c3658",
+  "active": "dba5f730208547e2",
   "lastOpenFiles": [
-    "src/bookmarks/Pointer Events - 12 Days of Web.md",
-    "src/bookmarks/Practical Accessibility.md",
-    "src/bookmarks/On Using Web Component Libraries.md",
+    "src/bookmarks/Designing for people with dyscalculia and low numeracy.md",
     "src/bookmarks/Design Systems for Figma.md",
-    "src/bookmarks/Design Systems at Scale.md",
-    "src/bookmarks/ADHD factsheet for people with a lived experience.md",
-    "src/bookmarks/A Whole Cascade of Layers.md",
-    "src/garden/CSS Nesting.md",
-    "src/til/Details summary marker.md",
-    "src/til/Raycast wrapped.md"
+    "src/bookmarks/Why most design systems implode.md",
+    "src/bookmarks/Where Web Components Went Wrong (And How We Can Turn It Around).md",
+    "src/bookmarks/The Patchability of the Open Web.md",
+    "src/bookmarks/The JS-industrial-complex.md",
+    "src/bookmarks/State of Web Components August 2022.md",
+    "src/bookmarks/Spacing in design systems.md",
+    "src/bookmarks/Should design systems include problematic components and patterns?.md",
+    "src/bookmarks/Setting up a screen reader testing environment on your computer.md"
   ]
 }
