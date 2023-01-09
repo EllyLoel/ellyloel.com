@@ -55,7 +55,7 @@
     "eleventy-plugin-json-feed": "^0.0.7",
     "eleventy-plugin-unfurl": "^1.0.0",
     "eleventy-plugin-webmentions": "^1.1.0",
-    "eslint": "^8.11.0",
+    "eslint": "^8.31.0",
     "focus-visible": "^5.2.0",
     "luxon": "^3.1.1",
     "markdown-it": "^13.0.1",
