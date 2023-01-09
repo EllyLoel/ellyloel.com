@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Open Graph Image</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        overflow: hidden;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      css-doodle {
+        position: absolute;
+      }
+
+      h1, h2 {
+        border-radius: 1rem;
+      }
+
+      h1 {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        translate: 0% -50%;
+        margin: 0 2rem;
+        padding: 1rem 2rem;
+        max-width: calc(100vw - 4rem);
+
+        color: white;
+        font-size: 5rem;
+        font-family: 'Fraunces';
+        font-optical-sizing: auto;
+        font-variation-settings: "SOFT" 100, "WONK" 1;
+
+        -webkit-backdrop-filter: blur(2rem);
+        backdrop-filter: blur(2rem);
+        --shadow-color: 265deg 52% 61%;
+        box-shadow: 0px 0.6px 0.9px hsl(var(--shadow-color) / 0),
+          0px 1.8px 2.7px hsl(var(--shadow-color) / 0.06),
+          0px 3px 4.5px hsl(var(--shadow-color) / 0.11),
+          0px 5px 7.5px hsl(var(--shadow-color) / 0.17),
+          0px 8.4px 12.6px hsl(var(--shadow-color) / 0.22);
+      }
+
+      h2 {
+        position: absolute;
+        right: 2rem;
+        bottom: 2rem;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin-left: auto;
+        padding: 5px 10px 10px 10px;
+
+        color: black;
+        font-size: 3rem;
+        font-family: 'Nanum Pen Script', cursive;
+        line-height: 1;
+        
+        background-color: white;
+        mix-blend-mode: lighten;
+      }
+    </style>
+    <link rel="stylesheet" href="/@input/css/fonts.css">
+    <script type="module" src="/@input/js/css-doodle.js"></script>
+  </head>
+  <body>
+    <css-doodle>
+      :doodle {
+        @grid: 100x1 / 99vmax;
+      }
+    
+      :container {
+        @size: 125%;
+        transform:
+        scale(8)
+        translateY(17.5%) translateX(-20%)
+        rotate(315deg);
+      }
+    
+      @place-cell: center;
+      border-radius: 50%;
+      transform: rotate(@rand(-.5deg, .5deg, .1));
+    
+      height: 20%;
+      width: calc(
+        100% - @calc(@index() -1) * 100% / @size()
+      );
+    
+      background: @pick(
+        #1f0538, #3d0f66, #5a1c93, #772bbf, #9244e4, #a96bf4, #bd93f9, #d2b8fb, #e8dcfd
+      );
+    </css-doodle>
+    {{ content | safe }}
+    <h2>&lt;e//y&gt;</h2>
+  </body>
+</html>

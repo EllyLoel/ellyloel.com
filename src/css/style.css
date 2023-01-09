@@ -51,6 +51,7 @@
 @import "./blocks/nav.css" layer(blocks);
 @import "./blocks/newsletter.css" layer(blocks);
 @import "./blocks/photos.css" layer(blocks);
+@import "./blocks/prism.css" layer(blocks);
 @import "./blocks/site-head.css" layer(blocks);
 @import "./blocks/skip-link.css" layer(blocks);
 @import "./blocks/stage.css" layer(blocks);

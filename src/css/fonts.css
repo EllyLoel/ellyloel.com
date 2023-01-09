@@ -1,35 +1,93 @@
+/*
+ * Fraunces
+ */
 @font-face {
-  font-family: "JetBrains Mono";
+  font-family: "Fraunces";
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("/assets/fonts/Fraunces--latin_basic.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Fraunces";
+  font-display: swap;
+  font-weight: 100 900;
+  font-style: italic;
+  src: url("/assets/fonts/Fraunces-Italic--latin_basic.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+/*
+ * Work Sans
+ */
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/assets/fonts/Work_Sans--latin_basic.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Work Sans";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/assets/fonts/Work_Sans-Italic--latin_basic.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+/*
+ * Nanum Pen Script
+ */
+@font-face {
+  font-family: "Nanum Pen Script";
   font-style: normal;
   font-weight: 400;
-  font-display: optional;
-  src: local("JetBrains Mono Regular"), local("JetBrainsMonoRegular"),
-    url("/assets/fonts/JetBrainsMonoRegular.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
+  font-display: swap;
+  src: url("/assets/fonts/Nanum_Pen_Script--logo_subset.woff2") format("woff2");
+  unicode-range: U+2F, U+3C, U+3E, U+65, U+79;
 }
 
+/*
+ * Noto Color Emoji
+ */
+@font-face {
+  font-family: "Noto Color Emoji";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Noto_Color_Emoji-Regular.woff2") format("woff2");
+}
+
+/*
+ * JetBrains Mono
+ */
 @font-face {
   font-family: "JetBrains Mono";
   font-style: normal;
-  font-weight: 700;
-  font-display: optional;
-  src: local("JetBrains Mono Bold"), local("JetBrainsMonoBold"),
-    url("/assets/fonts/JetBrainsMonoBold.woff2") format("woff2");
+  font-weight: 100 800;
+  font-display: swap;
+  src: url("/assets/fonts/JetBrains_Mono--latin_basic.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
     U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
     U+FEFF, U+FFFD;
 }
-
 @font-face {
   font-family: "JetBrains Mono";
   font-style: italic;
-  font-weight: 800;
-  font-display: optional;
-  src: local("JetBrains Mono ExtraBold Italic"),
-    local("JetBrainsMonoExtraBoldItalic"),
-    url("/assets/fonts/JetBrainsMono-ExtraBoldItalic.woff2") format("woff2");
+  font-weight: 100 800;
+  font-display: swap;
+  src: url("/assets/fonts/JetBrains_Mono-Italic--latin_basic.woff2")
+    format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
     U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
     U+FEFF, U+FFFD;

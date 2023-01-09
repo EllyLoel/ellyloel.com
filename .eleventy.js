@@ -1,6 +1,6 @@
 require("dotenv").config();
 const path = require("path");
-const fs = require("node:fs/promises");
+const fsp = require("node:fs/promises");
 const removeMd = require("remove-markdown");
 const slinkity = require("slinkity");
 const { DateTime } = require("luxon");
@@ -369,7 +369,7 @@ module.exports = (eleventyConfig) => {
   });
   eleventyConfig.addAsyncShortcode("svg", async (path, alt = "") => {
     try {
-      const data = await fs.readFile(path, { encoding: "utf8" });
+      const data = await fsp.readFile(path, { encoding: "utf8" });
       if (alt) {
         return `<figure>${data}<figcaption>${alt}</figcaption></figure>`;
       }

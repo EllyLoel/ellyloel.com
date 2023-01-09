@@ -10,6 +10,10 @@ eleventyNavigation:
 An on & off log of what I'm currently doing/interested in. Slower paced than a twitter feed but less permanent then an [[about]] page.
 [Now pages](https://nownownow.com/about) are becoming more common, you should make one for yourself!
 
+## January, 2023
+
+I want to learn about generative art, specifically with SVG.
+
 ## December, 2022
 
 Oop, I've moved onto a new Mastodon instance [@elly@front-end.social](https://front-end.social/@elly) :wave:

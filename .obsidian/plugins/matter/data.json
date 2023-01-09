@@ -1,13 +1,13 @@
 {
-  "accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcyMzAwMTA1LCJqdGkiOiI2YjYyNWFmZDFlY2Q0Mjk1OGEwYjJmMDAxMGIyNDUyMSIsInVzZXJfaWQiOjUyMzA1LCJjbGllbnRfdHlwZSI6ImludGVncmF0aW9uIiwibG9naW5fc2Vzc2lvbl9pZCI6IjQ5YzVlMDI0LTQ2ZDItNDc5MC1iZjBhLTRmYjNlYzEyYTlkMiJ9.Y0D7-8vS0XasjNvrJEjK1PlT8iZ-85l_iMZyh6C8_N4",
-  "refreshToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3OTM4NDkwNSwianRpIjoiNWY3NzVkOWM4OGY2NDkyMjk1YTRhMGQ0ZDFmZmQ2NTMiLCJ1c2VyX2lkIjo1MjMwNSwiY2xpZW50X3R5cGUiOiJpbnRlZ3JhdGlvbiIsImxvZ2luX3Nlc3Npb25faWQiOiI0OWM1ZTAyNC00NmQyLTQ3OTAtYmYwYS00ZmIzZWMxMmE5ZDIifQ.EDWWV5-r7nIBcr1kYwe4PmlIC58SAD7WHbIQ1XDpuyw",
+  "accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczOTAzOTUzLCJqdGkiOiJiODlkZmQ2ZjJkNTQ0ZDY4YjlhZTFkNWYxYzMxMDNiOCIsInVzZXJfaWQiOjUyMzA1LCJjbGllbnRfdHlwZSI6ImludGVncmF0aW9uIiwibG9naW5fc2Vzc2lvbl9pZCI6IjQ5YzVlMDI0LTQ2ZDItNDc5MC1iZjBhLTRmYjNlYzEyYTlkMiJ9.mE48gfEjGsJBKuQubhJFrMapyweNPOR4JYyrJ_B2fOg",
+  "refreshToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY4MDk4ODc1MywianRpIjoiMjkwNTlhZDVlYWI0NGZiMTllNWZjMWMxZDIwNzBmN2UiLCJ1c2VyX2lkIjo1MjMwNSwiY2xpZW50X3R5cGUiOiJpbnRlZ3JhdGlvbiIsImxvZ2luX3Nlc3Npb25faWQiOiI0OWM1ZTAyNC00NmQyLTQ3OTAtYmYwYS00ZmIzZWMxMmE5ZDIifQ.rdE9aSyNDePILPDi7-zIn2Qp3PS6_UHM4-PeXNWIo_Y",
   "qrSessionToken": "9c0b9ac8999a591a0db2c041ff9af55e9286b823e45d5fd8a6a47aa27c47828b",
   "dataDir": "src/bookmarks",
   "syncInterval": 60,
   "syncOnLaunch": true,
   "notifyOnSync": "always",
   "hasCompletedInitialSetup": true,
-  "lastSync": "2022-12-21T11:47:16.851Z",
+  "lastSync": "2023-01-09T04:24:30.721Z",
   "isSyncing": false,
   "contentMap": {
     "A Whole Cascade of Layers.md": "4_12455205",
@@ -19,7 +19,12 @@
     "Into the Personal-Website-Verse.md": "4_415771",
     "Setting up a screen reader testing environment on your computer.md": "4_17626443",
     "Landmarks and where to put them.md": "4_18089928",
-    "Pointer Events - 12 Days of Web.md": "4_19236372"
+    "Pointer Events - 12 Days of Web.md": "4_19236372",
+    "Projects to skill up with modern CSS - ModernCSS Newsletter -49.md": "4_19202133",
+    "Where Web Components Went Wrong (And How We Can Turn It Around).md": "4_14194206",
+    "How should you name your colors in a Design System-.md": "4_4341347",
+    "Mastodon and federation.md": "4_16762946",
+    "Designing for people with dyscalculia and low numeracy.md": "4_17753028"
   },
   "recreateIfMissing": true,
   "metadataTemplate": "---\ntitle: {{ title }}\ncreated: {{ dateNow | date(\"YYYY-MM-DD\") }}\nmodified: {{ dateNow | date(\"YYYY-MM-DD\") }}\n---\n\n{% set one = \"{% unfurl\" %}\n{% set two =  \"%}\" %}\n{{ one | safe }} \"{{ url }}\" {{ two | safe }}\n",
