@@ -8,10 +8,8 @@ const { DateTime } = require("luxon");
 const EleventyPluginNavigation = require("@11ty/eleventy-navigation");
 const EleventyPluginRss = require("@11ty/eleventy-plugin-rss");
 const EleventyPluginSyntaxhighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-// const EleventyPluginInclusiveLang = require("@11ty/eleventy-plugin-inclusive-language");
 const EleventyPluginImage = require("@11ty/eleventy-img");
 const EleventyPluginNestingToc = require("eleventy-plugin-nesting-toc");
-// const EleventyPluginBrokenLinks = require("eleventy-plugin-broken-links");
 const EleventyPluginFaviconsPlugin = require("eleventy-plugin-gen-favicons");
 const EleventyPluginUnfurl = require("eleventy-plugin-unfurl");
 const EleventyPluginWebmentions = require("eleventy-plugin-webmentions");
@@ -25,16 +23,12 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(EleventyPluginNavigation);
   eleventyConfig.addPlugin(EleventyPluginRss);
   eleventyConfig.addPlugin(EleventyPluginSyntaxhighlight);
-  // eleventyConfig.addPlugin(EleventyPluginInclusiveLang);
   eleventyConfig.addPlugin(slinkity.plugin, slinkity.defineConfig({}));
   eleventyConfig.addPlugin(EleventyPluginNestingToc, {
     wrapper: "nav",
     wrapperClass: "[ toc ][ recursive-flow ]",
     tags: ["h2", "h3", "h4", "h5", "h6"],
   });
-  // eleventyConfig.addPlugin(EleventyPluginBrokenLinks, {
-  //   loggingLevel: 1,
-  // });
   eleventyConfig.addPlugin(EleventyPluginFaviconsPlugin, {});
   eleventyConfig.addPlugin(EleventyPluginUnfurl, {
     duration: "4w",
@@ -329,43 +323,6 @@ module.exports = (eleventyConfig) => {
         <sl-icon library="fa" name="fas-pen-to-square" class="[ icon ]"></sl-icon> Edit this page
       </a>
     `;
-  });
-  eleventyConfig.addShortcode("sscg", ({ overlayText, overlayTag }) => {
-    const values = {
-      cloudName: "ellyloel",
-      publicId: "og-image_b8pgrc.avif",
-      overlayText,
-      overlayTag,
-      fontFace: "Work%20Sans",
-      fontWeight: "700",
-      fontColour: "0f0f0f",
-      fontSize: 75,
-      fontLineSpacing: -10,
-      position: "north_east",
-      x: 100,
-      y: 100,
-      tagx: 100,
-      tagy: 500,
-      width: 800,
-    };
-    const sanitiseText = escape(encodeURIComponent(values.overlayText));
-    const sanitiseTag = escape(encodeURIComponent(values.overlayTag));
-    const url = `https://res.cloudinary.com/${
-      values.cloudName
-    }/image/upload/w_1200,h_669,c_fit,q_auto,f_auto/w_${
-      values.width
-    },c_fit,co_rgb:${values.fontColour},g_${values.position},x_${values.x},y_${
-      values.y
-    },l_text:${values.fontFace}_${values.fontSize}_line_spacing_${
-      values.fontLineSpacing
-    }${values.fontWeight ? `_${values.fontWeight}` : ``}:${sanitiseText}/w_${
-      values.width
-    },c_fit,co_rgb:${values.fontColour},g_${values.position},x_${
-      values.tagx
-    },y_${values.tagy},l_text:${values.fontFace}_48:${sanitiseTag}/${
-      values.publicId
-    }`;
-    return url;
   });
   eleventyConfig.addAsyncShortcode("svg", async (path, alt = "") => {
     try {
