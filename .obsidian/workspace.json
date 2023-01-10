@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "69f6f8208f312d50",
+        "id": "c40abf1d1d741fad",
         "type": "tabs",
         "children": [
           {
-            "id": "7de2c219cc9eb2b4",
+            "id": "461e4ade84b7c5d2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/garden/Google fonts hate her, speed up your website with this one weird trick.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -88,9 +83,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "src/garden/Google fonts hate her, speed up your website with this one weird trick.md"
-              }
+              "state": {}
             }
           },
           {
@@ -99,7 +92,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/garden/Google fonts hate her, speed up your website with this one weird trick.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,9 +121,10 @@
       "random-note:Open random note": false
     }
   },
-  "active": "7de2c219cc9eb2b4",
+  "active": "461e4ade84b7c5d2",
   "lastOpenFiles": [
     "src/blog/Colour.md",
+    "src/garden/Google fonts hate her, speed up your website with this one weird trick.md",
     "src/garden/Custom Open Graph Images, yet another way.md",
     "src/garden/Design engineering.md",
     "public/assets/img/I-Dropped-Out-of-My-Computer-Science-Degree-to-Learn-Coding-on-Scrimba.png",
@@ -139,7 +132,6 @@
     "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
     "src/garden/Astro.md",
     "src/garden/Altruism.md",
-    "src/garden/Autism.md",
-    "src/garden/Cascade layers.md"
+    "src/garden/Autism.md"
   ]
 }

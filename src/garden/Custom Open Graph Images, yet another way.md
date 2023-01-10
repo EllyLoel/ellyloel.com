@@ -50,7 +50,7 @@ https://v1.screenshot.11ty.dev/https%3A%2F%2Fellyloel.com%2Fog{{ ogUrl | urlenco
 ```
 
 As you can see, we're encoding `ogUrl` which is the current page's URL. Here's an example of what that looks like for this page:
-```
+```txt
 https://v1.screenshot.11ty.dev/https%3A%2F%2Fellyloel.com%2Fog%2Fgarden%2Fcustom-open-graph-images-yet-another-way%2F/opengraph/
 ```
 
@@ -60,12 +60,14 @@ The 11ty Screenshot API URL format is: `https://v1.screenshot.11ty.dev/:url/:siz
 The size I'm using is `opengraph`, this just means that the screenshot will always be 1200×630, the best(?) size for Open Graph images.
 
 As I mentioned earlier and as stated in the docs, the URL "must be URI encoded." This is what it looks like decoded:
-```
+```txt
 https://ellyloel.com/og/garden/custom-open-graph-images-yet-another-way/
 ```
 
 Feel free to go to that URL if you want, as I've explained, it is literally the HTML version of the Open Graph image for this page. I think Ideally I wouldn't actually want to have this be an accessible page, but it wouldn't work if it wasn't as the 11ty Screenshot API needs to be able to go to it. Soooo.... :woman_shrugging: 
 
 One other idea I did have was creating a new site that scraped the pages on this site and created the Open Graph HTML pages, but that feels overly complex and kinda stupid? Idk, that could be another option if you don't like the extra pages on your site.
+
+Another idea I might actually try is caching the images on build with Eleventy fetch and img, not today though.
 
 Thanks for reading if you got this far, and let me know if you end up doing this on your own site! I'm [@elly@front-end.social](https://front-end.social/@elly) on Mastodon, and I've got webmentions hooked up on here too.
