@@ -253,7 +253,11 @@
     "sRGB",
     "homies",
     "Eleventy",
-    "webmentions"
+    "webmentions",
+    "subsetted",
+    "Fraunces",
+    "Nanum",
+    "Noto"
   ],
   "vimMode": true,
   "promptDelete": false,
