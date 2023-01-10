@@ -18,10 +18,10 @@ pagination:
   data: collections.all
   size: 1
   alias: ogPost
-permalink: "og/{{ ogPost.data.page.url }}/"
+permalink: "og/\{\{ ogPost.data.page.url \}\}/"
 ---
 
-{{ ogPost.data.title }}
+\{\{ ogPost.data.title \}\}
 ```
 
 What I'm doing is using Eleventy's [pagination](https://www.11ty.dev/docs/pagination/) to paginate over `collections.all`, aka every page (I think?). Then I'm saying that the size of the paginated pages should be 1, aka one paginated page for each piece of data. Finally, I'm setting the permalink to be the same as the actual page's URL, with a prefix of `og/`.
