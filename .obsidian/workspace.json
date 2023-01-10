@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d5c0d0e439ff2ab8",
+        "id": "69f6f8208f312d50",
         "type": "tabs",
         "children": [
           {
-            "id": "dba5f730208547e2",
+            "id": "7de2c219cc9eb2b4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/garden/Google fonts hate her, speed up your website with this one weird trick.md",
+                "file": "src/blog/Colour.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -89,7 +89,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/garden/Google fonts hate her, speed up your website with this one weird trick.md"
+                "file": "src/blog/Colour.md"
               }
             }
           },
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/garden/Google fonts hate her, speed up your website with this one weird trick.md",
+                "file": "src/blog/Colour.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,17 +129,17 @@
       "random-note:Open random note": false
     }
   },
-  "active": "dba5f730208547e2",
+  "active": "7de2c219cc9eb2b4",
   "lastOpenFiles": [
-    "src/bookmarks/Designing for people with dyscalculia and low numeracy.md",
-    "src/bookmarks/Design Systems for Figma.md",
-    "src/bookmarks/Why most design systems implode.md",
-    "src/bookmarks/Where Web Components Went Wrong (And How We Can Turn It Around).md",
-    "src/bookmarks/The Patchability of the Open Web.md",
-    "src/bookmarks/The JS-industrial-complex.md",
-    "src/bookmarks/State of Web Components August 2022.md",
-    "src/bookmarks/Spacing in design systems.md",
-    "src/bookmarks/Should design systems include problematic components and patterns?.md",
-    "src/bookmarks/Setting up a screen reader testing environment on your computer.md"
+    "src/blog/Colour.md",
+    "src/garden/Custom Open Graph Images, yet another way.md",
+    "src/garden/Design engineering.md",
+    "public/assets/img/I-Dropped-Out-of-My-Computer-Science-Degree-to-Learn-Coding-on-Scrimba.png",
+    "src/blog/CSS Grid vs Flexbox: How to decide (with examples).md",
+    "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
+    "src/garden/Astro.md",
+    "src/garden/Altruism.md",
+    "src/garden/Autism.md",
+    "src/garden/Cascade layers.md"
   ]
 }
