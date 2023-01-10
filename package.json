@@ -18,7 +18,7 @@
   "scripts": {
     "start": "npx @11ty/eleventy --serve --incremental --quiet",
     "clean": "rm -rf _site",
-    "build": "npx @11ty/eleventy",
+    "build": "npx @11ty/eleventy --quiet",
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
     "postinstall": "patch-package"
   },

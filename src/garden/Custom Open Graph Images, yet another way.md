@@ -18,10 +18,10 @@ pagination:
   data: collections.all
   size: 1
   alias: ogPost
-permalink: "og/\{\{ ogPost.data.page.url \}\}/"
+permalink: "og/{{ "{{ ogPost.data.page.url }}" }}/"
 ---
 
-\{\{ ogPost.data.title \}\}
+{{ "{{ ogPost.data.title }}" }}
 ```
 
 What I'm doing is using Eleventy's [pagination](https://www.11ty.dev/docs/pagination/) to paginate over `collections.all`, aka every page (I think?). Then I'm saying that the size of the paginated pages should be 1, aka one paginated page for each piece of data. Finally, I'm setting the permalink to be the same as the actual page's URL, with a prefix of `og/`.
@@ -37,16 +37,16 @@ Luckily, unlike most other custom Open Graph image posts, we don't have to do th
 Here's the meta tags:
 ```jinja2
 <meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:image" content="https://v1.screenshot.11ty.dev/https%3A%2F%2Fellyloel.com%2Fog{{ ogUrl | urlencode }}/opengraph/">
-<meta property="og:image" content="https://v1.screenshot.11ty.dev/https%3A%2F%2Fellyloel.com%2Fog{{ ogUrl | urlencode }}/opengraph/">
-<meta name="og:image" content="https://v1.screenshot.11ty.dev/https%3A%2F%2Fellyloel.com%2Fog{{ ogUrl | urlencode }}/opengraph/">
-<meta name="og:image:secure_url" content="https://v1.screenshot.11ty.dev/https%3A%2F%2Fellyloel.com%2Fog{{ ogUrl | urlencode }}/opengraph/">
-<meta property="og:image:alt" content="A background of curved purple lines with the text “{{ text }}” ontop, Elly's logo is in the bottom right corner.">
+<meta property="twitter:image" content="https://v1.screenshot.11ty.dev/https%3A%2F%2Fellyloel.com%2Fog{{ "{{ ogUrl | urlencode }}" }}/opengraph/">
+<meta property="og:image" content="https://v1.screenshot.11ty.dev/https%3A%2F%2Fellyloel.com%2Fog{{ "{{ ogUrl | urlencode }}" }}/opengraph/">
+<meta name="og:image" content="https://v1.screenshot.11ty.dev/https%3A%2F%2Fellyloel.com%2Fog{{ "{{ ogUrl | urlencode }}" }}/opengraph/">
+<meta name="og:image:secure_url" content="https://v1.screenshot.11ty.dev/https%3A%2F%2Fellyloel.com%2Fog{{ "{{ ogUrl | urlencode }}" }}/opengraph/">
+<meta property="og:image:alt" content="A background of curved purple lines with the text “{{ "{{ text }}" }}” ontop, Elly's logo is in the bottom right corner.">
 ```
 
 This is the link:
 ```jinja2
-https://v1.screenshot.11ty.dev/https%3A%2F%2Fellyloel.com%2Fog{{ ogUrl | urlencode }}/opengraph/
+https://v1.screenshot.11ty.dev/https%3A%2F%2Fellyloel.com%2Fog{{ "{{ ogUrl | urlencode }}" }}/opengraph/
 ```
 
 As you can see, we're encoding `ogUrl` which is the current page's URL. Here's an example of what that looks like for this page:
