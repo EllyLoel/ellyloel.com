@@ -18,8 +18,5 @@ Like many others, my "font setup" consisted of these three lines:
 
 After far too long, I finally thought I ought to spend a bit more time and effort to turn my "font setup" into an actual font setup.
 
-Tools used:
-- glyphhanger
-- woff2
-- fonttools
-- fontforge
+::: callout To be continued…
+:::

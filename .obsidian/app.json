@@ -249,7 +249,11 @@
     "Quicklinks",
     "quicklinks",
     "iTerm",
-    "Cron"
+    "Cron",
+    "sRGB",
+    "homies",
+    "Eleventy",
+    "webmentions"
   ],
   "vimMode": true,
   "promptDelete": false,
