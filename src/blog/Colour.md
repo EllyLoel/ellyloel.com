@@ -9,12 +9,12 @@ modified: 2023-01-10
 ::: callout :warning: This post is not complete, be wary.
 :::
 
-## ++Colour++ ~~Color~~
+## ~~Color~~ ++Colour++
 Let's get the elephant out of the room.
-I'm Australian, so I spell it like this, colour, not like this, color. *Except when I'm writing any kind of code haha… :smiling_face_with_tear:*
+I'm Australian, so I spell it like this, colour, not like this, color. *Except when I'm writing any kind of code haha…* :smiling_face_with_tear:
 
 ## Fuck sRGB, all my homies hate sRGB
-![](all-my-homies-hate-srgb.png)
+![A meme with the text “Fuck sRGB, all my homies hate sRGB”](./public/assets/img/all-my-homies-hate-srgb.png)
 - [ ] Explain why current colours (sRGB) are shit
 
 ## WTF is a colour space?

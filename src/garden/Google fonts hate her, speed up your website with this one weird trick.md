@@ -1,8 +1,8 @@
 ---
 title: Google fonts hate her, speed up your website with this one weird trick!
-stage: seedling
+stage: budding
 created: 2022-12-30
-modified: 2022-01-10
+modified: 2023-01-10
 ---
 
 ![Parody of an old school clickbait web ad with the text “GOOGLE FONTS HATE HER! Speed up your website With this one weird trick! LEARN THE TRUTH NOW”](./public/assets/img/one-weird-trick.png)
@@ -21,7 +21,7 @@ After far too long, I finally thought I ought to spend a bit more time and effor
 ## What I did
 
 I went to the URL from the link tag above:
-```
+```txt
 https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,100..900,0..100,0;0,9..144,100..900,0..100,1;1,9..144,100..900,0..100,0;1,9..144,100..900,0..100,1&family=Nanum+Pen+Script&family=Noto+Color+Emoji&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap
 ```
 
@@ -39,7 +39,7 @@ It's a CSS file with a bunch of `@font-face` declarations, here's an example:
 ```
 
 I then went to the `src` URL to download the font:
-```
+```txt
 https://fonts.gstatic.com/s/fraunces/v26/6NUT8FyLNQOQZAnv9ZwNpOskzP9Ddt0.woff2
 ```
 
@@ -67,7 +67,7 @@ Then I repeated that for the rest of the fonts I'm using:
 
 ## The other one
 
-Except for Nanum Pen Script, because I only use 5 characters (`<`, `e`, `/`, `y`, `>`) from it Google Fonts' subset was still going to be far too big for my needs. 
+Except for Nanum Pen Script, because I only use 5 characters (`<`, `e`, `/`, `y`, `>`) from it's Google Fonts' subset was still going to be far too big for my needs. 
 
 So I had to pull out the big guns:
 -   glyphhanger
