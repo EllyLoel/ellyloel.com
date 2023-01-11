@@ -123,10 +123,10 @@
     semver "^7.3.7"
     slugify "^1.6.5"
 
-"@11ty/eleventy@^2.0.0-canary.18":
-  version "2.0.0-canary.27"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-2.0.0-canary.27.tgz#109aaac82b78291c034b817367c57e13b0bc12cb"
-  integrity sha512-S98XBlN/0eaebqDQPxjAhlPb2NFX1ZzcT2aFuDTbAXED/cek1RmIgJclg8wDsLA1t+Zb5yF1twR4PLXZKtgXgA==
+"@11ty/eleventy@^2.0.0-canary.29":
+  version "2.0.0-canary.29"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-2.0.0-canary.29.tgz#3b861e4c38b81b08a478d88558ef8bd99abeaf69"
+  integrity sha512-BmD1ibjk6qx+wHLLbv/EMQL2gCn3LOae5SZ1YtRN7U89c6hfEHvsbQ2rdW0rN7RqINe/8xvnTRn0APpuifnvOg==
   dependencies:
     "@11ty/dependency-tree" "^2.0.1"
     "@11ty/eleventy-dev-server" "^1.0.0-canary.14"
