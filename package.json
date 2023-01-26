@@ -35,7 +35,7 @@
     "netlify-plugin-cache": "^1.0.3"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0-canary.18",
+    "@11ty/eleventy": "^2.0.0-canary.33",
     "@11ty/eleventy-navigation": "^0.3.3",
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.3",
     "@11ty/eleventy-plugin-rss": "^1.2.0",

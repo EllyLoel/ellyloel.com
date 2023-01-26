@@ -7,22 +7,22 @@
   resolved "https://registry.yarnpkg.com/@11ty/dependency-tree/-/dependency-tree-2.0.1.tgz#b3c8fa6c91c4a29257e70dd19d26cca75cde89d2"
   integrity sha512-5R+DsT9LJ9tXiSQ4y+KLFppCkQyXhzAm1AIuBWE/sbU0hSXY5pkhoqQYEcPJQFg/nglL+wD55iv2j+7O96UAvg==
 
-"@11ty/eleventy-dev-server@^1.0.0-canary.14":
-  version "1.0.0-canary.14"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy-dev-server/-/eleventy-dev-server-1.0.0-canary.14.tgz#f7b592748d08fc5c4b020c8e850f57abbdb1ac30"
-  integrity sha512-yIPRZCEieqe7943P8h+xG60db/82yp10iOgd8IRKiobLhWw43xDJtro8QnjTF4A9gRkx7UmulwTPkGbD1Lt8xQ==
+"@11ty/eleventy-dev-server@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy-dev-server/-/eleventy-dev-server-1.0.1.tgz#a2465d6244d1c117f4262a595cdce5cced7a597a"
+  integrity sha512-lTj9uAvXeArmdoEF1qpBbSq6h4ZgCe7DPhYrl1XcZxe10kpH/e9noajBT9EBzNOzKBcYvVAIin/IbhUMyyUy/g==
   dependencies:
-    "@11ty/eleventy-utils" "^1.0.0"
+    "@11ty/eleventy-utils" "^1.0.1"
     chokidar "^3.5.3"
-    debug "^4.3.3"
+    debug "^4.3.4"
     dev-ip "^1.0.1"
-    finalhandler "^1.1.2"
+    finalhandler "^1.2.0"
     mime "^3.0.0"
-    minimist "^1.2.6"
+    minimist "^1.2.7"
     morphdom "^2.6.1"
     please-upgrade-node "^3.2.0"
     ssri "^8.0.1"
-    ws "^8.5.0"
+    ws "^8.12.0"
 
 "@11ty/eleventy-fetch@^3.0.0":
   version "3.0.0"
@@ -76,7 +76,7 @@
     linkedom "^0.14.19"
     prismjs "^1.29.0"
 
-"@11ty/eleventy-utils@^1.0.0", "@11ty/eleventy-utils@^1.0.1":
+"@11ty/eleventy-utils@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@11ty/eleventy-utils/-/eleventy-utils-1.0.1.tgz#e89dc94b475284e5003525db5078663c5087db82"
   integrity sha512-HPpCTz4PzudcQU+i+x6GSNHVqgnvRhnVYg5dLKaAoRWLN966odAGsBxKSyhF8i1MdlOPtsytYb2AGWP7jISC5w==
@@ -123,13 +123,13 @@
     semver "^7.3.7"
     slugify "^1.6.5"
 
-"@11ty/eleventy@^2.0.0-canary.18":
-  version "2.0.0-canary.27"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-2.0.0-canary.27.tgz#109aaac82b78291c034b817367c57e13b0bc12cb"
-  integrity sha512-S98XBlN/0eaebqDQPxjAhlPb2NFX1ZzcT2aFuDTbAXED/cek1RmIgJclg8wDsLA1t+Zb5yF1twR4PLXZKtgXgA==
+"@11ty/eleventy@^2.0.0-canary.33":
+  version "2.0.0-canary.33"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-2.0.0-canary.33.tgz#deaf017b1da679d5b198ff8db8f515af2d21e9c5"
+  integrity sha512-dILdQ7+cKPqC7SUd51h50APEomcnI4fetFCYISNcFpkSLLxX8/E+Hv6wzFml5PU8PgUmaIpF/0BJrC3n1ZhsOQ==
   dependencies:
     "@11ty/dependency-tree" "^2.0.1"
-    "@11ty/eleventy-dev-server" "^1.0.0-canary.14"
+    "@11ty/eleventy-dev-server" "^1.0.1"
     "@11ty/eleventy-utils" "^1.0.1"
     "@iarna/toml" "^2.2.5"
     "@sindresorhus/slugify" "^1.1.2"
@@ -2282,7 +2282,7 @@ finalhandler@1.1.0:
     statuses "~1.3.1"
     unpipe "~1.0.0"
 
-finalhandler@^1.1.2:
+finalhandler@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/finalhandler/-/finalhandler-1.2.0.tgz#7d23fe5731b207b4640e4fcd00aec1f9207a7b32"
   integrity sha512-5uXcUVftlQMFnWC9qu/svkWv3GTd2PfUhK/3PLkYNAe7FbqJMt3515HaxE6eRL74GdsriiwujiawdaB1BpEISg==
@@ -5346,7 +5346,7 @@ wrappy@1:
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==
 
-ws@^8.5.0:
+ws@^8.12.0:
   version "8.12.0"
   resolved "https://registry.yarnpkg.com/ws/-/ws-8.12.0.tgz#485074cc392689da78e1828a9ff23585e06cddd8"
   integrity sha512-kU62emKIdKVeEIOIKVegvqpXMSTAMLJozpHZaJNDYqBjzlSYXQGviYwN1osDLJ9av68qHd4a2oSjd7yD4pacig==
