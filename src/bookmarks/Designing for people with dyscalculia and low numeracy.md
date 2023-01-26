@@ -1,5 +1,7 @@
 ---
 title: Designing for people with dyscalculia and low numeracy
+tags: articles
+image: "https://v1.opengraph.11ty.dev/https%3A%2F%2Fdesignnotes.blog.gov.uk%2F2022%2F11%2F28%2Fdesigning-for-people-with-dyscalculia-and-low-numeracy%2F/onerror/"
 created: 2022-12-30
 modified: 2022-12-30
 ---

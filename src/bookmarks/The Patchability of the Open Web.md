@@ -1,5 +1,7 @@
 ---
 title: The Patchability of the Open Web
+tags: articles
+image: "https://v1.opengraph.11ty.dev/https%3A%2F%2Fdaverupert.com%2F2022%2F09%2Fpatchability-of-the-open-web%2F/onerror/"
 created: 2022-10-10
 modified: 2022-10-10
 ---

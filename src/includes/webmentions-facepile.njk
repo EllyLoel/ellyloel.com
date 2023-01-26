@@ -3,9 +3,10 @@
 		<a href="{{ facepileMention.author.url }}" class="[ face-link ]">
 			<sl-avatar
 				class="[ author-photo-image ]"
-				image="{{ facepileMention.author.photo }}"
+				image="{{ facepileMention.author.photo | imageLink }}"
 				initials="{{ mention.author.name[0] }}"
-				label="{{ facepileMention.author.name }}"></sl-avatar>
+				label="{{ facepileMention.author.name }}"
+			></sl-avatar>
 		</a>
 	{% endfor %}
 </div>

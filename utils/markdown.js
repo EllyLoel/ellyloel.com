@@ -122,6 +122,9 @@ module.exports = (eleventyConfig) => {
         .filter((v, i, s) => s.indexOf(v) === i), // dedupe
       formats: ["avif", "webp", "jpeg"],
       outputDir: path.join("_site", "img"),
+      cacheOptions: {
+        duration: "4w",
+      },
     };
 
     EleventyPluginImage(src, options);

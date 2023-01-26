@@ -1,5 +1,7 @@
 ---
 title: How should you name your colors in a Design System?
+tags: articles
+image: "https://v1.opengraph.11ty.dev/https%3A%2F%2Fuxdesign.cc%2Fhow-should-you-name-your-colors-in-a-design-system-3086513476df/onerror/"
 created: 2022-12-30
 modified: 2022-12-30
 ---

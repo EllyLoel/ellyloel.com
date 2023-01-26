@@ -1,5 +1,7 @@
 ---
 title: Where Web Components Went Wrong (And How We Can Turn It Around)
+tags: articles
+image: "https://v1.opengraph.11ty.dev/https%3A%2F%2Fspace.matthewphillips.info%2Fposts%2Fwhere-web-components-went-wrong%2F/onerror/"
 created: 2022-12-30
 modified: 2022-12-30
 ---

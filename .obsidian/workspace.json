@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "c40abf1d1d741fad",
+        "id": "cc410db7243529f3",
         "type": "tabs",
         "children": [
           {
-            "id": "461e4ade84b7c5d2",
+            "id": "0459a517ca6b8ea1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "src/bookmarks/A Whole Cascade of Layers.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -57,7 +62,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 250.5
+    "width": 726.5
   },
   "right": {
     "id": "84b304f5dd126125",
@@ -83,7 +88,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "src/bookmarks/A Whole Cascade of Layers.md"
+              }
             }
           },
           {
@@ -92,6 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "src/bookmarks/A Whole Cascade of Layers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,17 +129,17 @@
       "random-note:Open random note": false
     }
   },
-  "active": "461e4ade84b7c5d2",
+  "active": "0459a517ca6b8ea1",
   "lastOpenFiles": [
-    "src/blog/Colour.md",
-    "src/garden/Google fonts hate her, speed up your website with this one weird trick.md",
-    "src/garden/Custom Open Graph Images, yet another way.md",
-    "src/garden/Design engineering.md",
-    "public/assets/img/I-Dropped-Out-of-My-Computer-Science-Degree-to-Learn-Coding-on-Scrimba.png",
-    "src/blog/CSS Grid vs Flexbox: How to decide (with examples).md",
-    "src/blog/I Dropped Out of My Computer Science Degree to Learn Coding.md",
-    "src/garden/Astro.md",
-    "src/garden/Altruism.md",
-    "src/garden/Autism.md"
+    "src/bookmarks/ADHD factsheet for people with a lived experience.md",
+    "src/bookmarks/Be Gay, Do Design.md",
+    "src/bookmarks/Components are pure overhead.md",
+    "src/bookmarks/Design Systems at Scale.md",
+    "src/bookmarks/Design Systems for Figma.md",
+    "src/bookmarks/Design systems handbook.md",
+    "src/bookmarks/Designing for people with dyscalculia and low numeracy.md",
+    "src/bookmarks/genders.wtf.md",
+    "src/bookmarks/How Should You Name Your Colors in a Design System.md",
+    "src/bookmarks/How to fight fascism.md"
   ]
 }

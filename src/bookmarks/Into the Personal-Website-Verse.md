@@ -1,5 +1,7 @@
 ---
 title: Into the Personal-Website-Verse
+tags: articles
+image: "https://v1.opengraph.11ty.dev/https%3A%2F%2Fmatthiasott.com%2Farticles%2Finto-the-personal-website-verse/onerror/"
 created: 2022-10-18
 modified: 2022-10-18
 ---

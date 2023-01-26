@@ -1,5 +1,7 @@
 ---
 title: I can’t breathe
+tags: articles
+image: "https://v1.opengraph.11ty.dev/https%3A%2F%2Fheydonworks.com%2Farticle%2Fi-cant-breathe%2F/onerror/"
 created: 2022-10-09
 modified: 2022-10-11
 ---

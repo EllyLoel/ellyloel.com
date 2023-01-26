@@ -1,5 +1,7 @@
 ---
 title: A Whole Cascade of Layers
+tags: articles
+image: "https://v1.opengraph.11ty.dev/https%3A%2F%2Fwww.miriamsuzanne.com%2F2022%2F09%2F06%2Flayers%2F/onerror/"
 created: 2022-09-28
 modified: 2022-09-28
 ---

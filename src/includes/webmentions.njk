@@ -23,7 +23,7 @@
 	{%- include "webmentions-facepile.njk" -%}
 	{%- endif -%}
 	{%- if postMentions.comments.length -%}
-	<details open>
+	<details {% if page.url !== "/" %}open{% endif %}>
 		<summary>
 			{%- if postMentions.comments.length === 1 -%}
 				{{ postMentions.comments.length }} Comment
