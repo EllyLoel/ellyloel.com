@@ -5,7 +5,7 @@
  * Ported by Sara vieria [@SaraVieira] https://github.com/SaraVieira/prism-theme-night-owl
  */
 
-[color-scheme|="light"] {
+[class*="light"] {
   & :is(code, pre)[class*="language-"] {
     color: #403f53;
     font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
@@ -124,7 +124,7 @@
   }
 }
 
-[color-scheme|="dark"] {
+[class*="dark"] {
   & :is(code, pre)[class*="language-"] {
     color: #d6deeb;
     font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
