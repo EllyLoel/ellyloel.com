@@ -1,6 +1,8 @@
 const { DateTime } = require("luxon");
 const markdownIt = require("markdown-it");
 const slugify = require("slugify");
+const EleventyPluginImage = require("@11ty/eleventy-img");
+const path = require("path");
 
 // This regex finds all wikilinks in a string
 const wikilinkRegEx = /\[\[\s*([^\[\]\|\n\r]+)(\|[^\[\]\|\n\r]+)?\s*\]\]/g;
@@ -93,5 +95,24 @@ module.exports = {
     }
 
     return linkGraph;
+  },
+
+  imageLink: async (src) => {
+    const imageExtension = src.split(".").at(-1);
+    const allowedImageExtensions = ["avif", "jpeg", "jpg", "png", "svg", "webp"];
+
+    if (!allowedImageExtensions.includes(imageExtension)) return src;
+
+    const options = {
+      widths: [54],
+      formats: ["webp"],
+      outputDir: path.join("_site", "img"),
+      cacheOptions: {
+        duration: "4w",
+      },
+    };
+    const image = await EleventyPluginImage(src, options);
+
+    return image?.webp?.[0]?.url;
   },
 };

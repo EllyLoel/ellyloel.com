@@ -1,5 +1,7 @@
 ---
 title: My therapist suggested I talk to my inner child. I thought she was joking - but it changed everything
+tags: articles
+image: "https://v1.opengraph.11ty.dev/https%3A%2F%2Fwww.theguardian.com%2Fsociety%2F2022%2Foct%2F09%2Fmy-therapist-told-me-to-speak-to-my-inner-child-about-adhd-i-thought-she-was-joking-but-it-changed-everything/onerror/"
 created: 2022-10-10
 modified: 2022-10-10
 ---

@@ -368,7 +368,7 @@
   resolved "https://registry.yarnpkg.com/@iarna/toml/-/toml-2.2.5.tgz#b32366c89b43c6f8cefbdefac778b9c828e3ba8c"
   integrity sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==
 
-"@lit-labs/react@^1.0.6", "@lit-labs/react@^1.1.0":
+"@lit-labs/react@^1.1.0":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@lit-labs/react/-/react-1.1.1.tgz#88a4320d357dcdfd7c7e276f809e3453a124cbbc"
   integrity sha512-9TC+/ZWb6BJlWCyUr14FKFlaGnyKpeEDorufXozQgke/VoVrslUQNaL7nBmrAWdNrmzx5jWgi8lFmWwrxMjnlA==
@@ -3029,7 +3029,7 @@ lit-html@^2.2.0, lit-html@^2.6.0:
   dependencies:
     "@types/trusted-types" "^2.0.2"
 
-lit@^2.0.2, lit@^2.2.3, lit@^2.4.1:
+lit@^2.2.3, lit@^2.4.1:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/lit/-/lit-2.6.0.tgz#d72a1d3901d443510e9fdc45a3c5eb944464737f"
   integrity sha512-GUKVozhomdYlFVuB4UNipbPB5RcXNX4ns43uDA1gSTZN1oHe7mnj05fpYbESxXfxg/Gn905HTIzymCFrr/cn3A==
@@ -5025,15 +5025,6 @@ stylehacks@^5.1.1:
     browserslist "^4.21.4"
     postcss-selector-parser "^6.0.4"
 
-stylized-text@^4.2.1:
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/stylized-text/-/stylized-text-4.2.1.tgz#674eba99b942dd34ea2beaf2209a32942b9d18a5"
-  integrity sha512-nFDFLB+DJQ7Jar9KNqSozgMvmNY15GD9jJRXDDDtb+Fm4xkEchYMqJIDvWNFKve5gWoasn4pt9BpuzPQS7PFFQ==
-  dependencies:
-    "@lit-labs/react" "^1.0.6"
-    lit "^2.0.2"
-    tslib "^2.3.1"
-
 supports-color@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
@@ -5164,11 +5155,6 @@ truncate-utf8-bytes@^1.0.0:
   integrity sha512-95Pu1QXQvruGEhv62XCMO3Mm90GscOCClvrIUwCM0PYOXK3kaF3l3sIHxx71ThJfcbM2O5Au6SO3AWCSEfW4mQ==
   dependencies:
     utf8-byte-length "^1.0.1"
-
-tslib@^2.3.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.1.tgz#0d0bfbaac2880b91e22df0768e55be9753a5b17e"
-  integrity sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==
 
 tunnel-agent@^0.6.0:
   version "0.6.0"

@@ -13,6 +13,7 @@ const EleventyPluginNestingToc = require("eleventy-plugin-nesting-toc");
 const EleventyPluginFaviconsPlugin = require("eleventy-plugin-gen-favicons");
 const EleventyPluginUnfurl = require("eleventy-plugin-unfurl");
 const EleventyPluginWebmentions = require("eleventy-plugin-webmentions");
+const EleventyPluginFetch = require("@11ty/eleventy-fetch");
 
 const filters = require("./utils/filters.js");
 const markdown = require("./utils/markdown.js");
@@ -46,6 +47,9 @@ module.exports = (eleventyConfig) => {
             widths: [300, 600, 1000],
             formats: ["avif", "webp", "jpeg"],
             outputDir: path.join("_site", "img"),
+            cacheOptions: {
+              duration: "4w",
+            },
           })
         : {};
 
@@ -170,25 +174,34 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addNunjucksAsyncShortcode(
     "feedItem",
     async function (feedItem) {
-      const image = feedItem?.image
-        ? `<div slot="image">${EleventyPluginImage.generateHTML(
-            await EleventyPluginImage(feedItem.image, {
-              widths: [300, 600, 1000],
-              formats: ["avif", "webp", "jpeg"],
-              outputDir: path.join("_site", "img"),
-            }),
-            {
-              class: "[ image ]",
-              alt: "",
-              sizes: "450px",
-              loading: "lazy",
-              decoding: "async",
+      let image = ``;
+      if (
+        (feedItem?.image &&
+          !feedItem?.image?.includes("v1.opengraph.11ty.dev")) ||
+        (feedItem?.image?.includes("v1.opengraph.11ty.dev") &&
+          Buffer.byteLength(await EleventyPluginFetch(feedItem.image)) !== 0)
+      ) {
+        image = `<div slot="image">${EleventyPluginImage.generateHTML(
+          await EleventyPluginImage(feedItem.image, {
+            widths: [300, 600, 1000],
+            formats: ["avif", "webp", "jpeg"],
+            outputDir: path.join("_site", "img"),
+            cacheOptions: {
+              duration: "4w",
             },
-            {
-              whiteSpace: "inline",
-            }
-          )}</div>`
-        : ``;
+          }),
+          {
+            class: "[ image ]",
+            alt: "",
+            sizes: "450px",
+            loading: "lazy",
+            decoding: "async",
+          },
+          {
+            whiteSpace: "inline",
+          }
+        )}</div>`;
+      }
 
       const date = feedItem?.created ? feedItem.created : feedItem?.modified;
 
@@ -289,6 +302,9 @@ module.exports = (eleventyConfig) => {
         widths: [300, 600, 1000],
         formats: ["avif", "webp", "jpeg"],
         outputDir: path.join("_site", "img"),
+        cacheOptions: {
+          duration: "4w",
+        },
       });
 
       let imageAttributes = {

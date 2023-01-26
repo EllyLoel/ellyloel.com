@@ -1,5 +1,7 @@
 ---
 title: Why most design systems implode
+tags: articles
+image: "https://v1.opengraph.11ty.dev/https%3A%2F%2Fstorybook.js.org%2Fblog%2Fwhy-most-design-systems-implode%2F/onerror/"
 created: 2022-10-10
 modified: 2022-10-10
 ---

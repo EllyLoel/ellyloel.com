@@ -7,30 +7,26 @@
 		<!-- specify viewport: https://developers.google.com/speed/docs/insights/ConfigureViewport -->
 		<title>{{ title }} | Elly Loel</title>
 
-		{%- include "meta.njk" -%}
-
 		<!-- Include stylesheets here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
 		<link rel="stylesheet" href="/@input/css/style.css">
 
 		{{ __slinkity.head | safe }}
 
 		<script>
+			const localStorageColorScheme = localStorage.getItem("color-scheme");
+			const body = document.documentElement;
 			// if there's a color-scheme id in localstorage, use it, if not use auto.
-			document
-				.documentElement
-				.setAttribute('color-scheme', localStorage.getItem('color-scheme') || "auto");
-			document
-				.documentElement
-				.setAttribute(
-					"class", localStorage.getItem('color-scheme')
-					?.includes("light")
-						? "sl-theme-light"
-						: localStorage.getItem('color-scheme')
-							?.includes("dark")
-								? "sl-theme-dark"
-								: window.matchMedia("(prefers-color-scheme: light)").matches
-									? "sl-theme-light"
-									: "sl-theme-dark");
+			body.setAttribute("color-scheme", localStorageColorScheme || "auto");
+			body.setAttribute(
+				"class", localStorageColorScheme
+				?.includes("light")
+					? "sl-theme-light"
+					: localStorageColorScheme
+						?.includes("dark")
+							? "sl-theme-dark"
+							: window.matchMedia("(prefers-color-scheme: light)").matches
+								? "sl-theme-light"
+								: "sl-theme-dark");
 		</script>
 
 		<!-- Include scripts here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
@@ -42,6 +38,8 @@
 		{%- if page.url === "/garden/" or page.url === "/blog/" or page.url === "/projects/" or page.url === "/bookmarks/" or page.url === "/til/" or page.url === "/til/d3/" -%}
 			<script type="module" src="/@input/js/graph.js" defer></script>
 		{%- endif -%}
+
+		{%- include "meta.njk" -%}
 	</head>
 	<body>
 		<a class="[ skip-link ] [ button ]" href="#content">Skip to content</a>

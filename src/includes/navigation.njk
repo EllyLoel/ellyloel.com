@@ -1,9 +1,12 @@
 <div class="inner">
+	<!-- link to home: http://microformats.org/wiki/rel-home -->
 	<a href="/" rel="home" class="[ text-decoration-none ]"{% if page.url === "/" %} data-state="active" aria-current="page"{% endif %}>
-		<stylized-text label="to homepage" class="[ logo ]">
-			<!-- link to home: http://microformats.org/wiki/rel-home -->
+		<span class="[ logo ]" aria-hidden="true" title="Elly">
 			&lt;e//y&gt;
-		</stylized-text>
+		</span>
+		<span class="[ visually-hidden ]">
+			Elly
+		</span>
 	</a>
 
 	<sl-tooltip content="Disable sounds">

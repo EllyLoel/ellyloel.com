@@ -1,5 +1,7 @@
 ---
 title: Landmarks and where to put them
+tags: articles
+image: "https://v1.opengraph.11ty.dev/https%3A%2F%2Fwww.htmhell.dev%2Fadventcalendar%2F2022%2F4%2F/onerror/"
 created: 2022-12-15
 modified: 2022-12-15
 ---

@@ -55,7 +55,6 @@
 @import "./blocks/site-head.css" layer(blocks);
 @import "./blocks/skip-link.css" layer(blocks);
 @import "./blocks/stage.css" layer(blocks);
-@import "./blocks/stylized-text.css" layer(blocks);
 @import "./blocks/theme-switcher.css" layer(blocks);
 @import "./blocks/toc.css" layer(blocks);
 @import "./blocks/tooltip.css" layer(blocks);

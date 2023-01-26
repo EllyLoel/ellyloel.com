@@ -22,12 +22,10 @@
 
     & .stroke {
       user-select: none;
-      cursor: url(https://cdn.custom-cursor.com/db/7648/32/meme-pop-cat-cursor.png),
-        default;
+      cursor: url(/assets/img/meme-pop-cat-cursor.webp), default;
 
       &:active {
-        cursor: url(https://cdn.custom-cursor.com/db/7647/32/meme-pop-cat-pointer.png),
-          pointer;
+        cursor: url(/assets/img/meme-pop-cat-pointer.webp), pointer;
       }
     }
   }

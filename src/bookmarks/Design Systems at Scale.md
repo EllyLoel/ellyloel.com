@@ -1,5 +1,7 @@
 ---
 title: Design Systems at Scale
+tags: videos
+image: "https://v1.opengraph.11ty.dev/https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D-5h05poX9CA/onerror/"
 created: 2022-12-05
 modified: 2022-12-05
 ---

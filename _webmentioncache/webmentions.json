@@ -1,6 +1,32 @@
 {
-  "lastFetched": "2023-01-10T12:13:43.447Z",
+  "lastFetched": "2023-01-26T05:59:41.056Z",
   "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "David Mead",
+        "photo": "https://davidjohnmead.com/img/davidmead-social-sml.jp2",
+        "url": "https://davidjohnmead.com"
+      },
+      "url": "https://davidjohnmead.com/posts/2023-01-09-unable-to-find-css-reset-post/",
+      "published": "2023-01-09T05:00:01",
+      "wm-received": "2023-01-15T18:40:49Z",
+      "wm-id": 1599887,
+      "wm-source": "https://davidjohnmead.com/posts/2023-01-09-unable-to-find-css-reset-post/",
+      "wm-target": "https://www.ellyloel.com/projects/modern-css-reset/",
+      "name": "Unable to find a post about a CSS reset",
+      "content": {
+        "html": "<p>I have searched my browsers (both home &amp; work) bookmarks and history—Nothing.</p>\n<p>Evernote. My blog. My email. My code repo. Still nothing.</p>\n<p>I read a post concerning a new CSS reset/baseline. I liked it's approach and cribbed some of it for this blog.</p>\n<p>It contained adding the default system fonts to the <code>body</code> tag.</p>\n<pre>\n<code>\nfont-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;\n/* Only supported on Chromium-based browsers and Safari */\nfont-family: system-ui;\"\n</code>\n</pre>\n<p>Also had adding <code>word-wrap</code>, etc., to the <code>p</code> element...</p>\n<pre>\n\t<code>\nword-wrap: break-word;\noverflow-wrap: break-word;\nhyphens: auto;\nmax-width: 80ch;\n\t</code>\n</pre>\n<p>...as well as adding <code>color-scheme</code> to the root</p>\n<pre>\n\t<code>\n:root {\n\t\tcolor-scheme: light dark;\n\t}\n\t</code>\n</pre>\n<p>By the end of Saturday I had so many tabs open, but none of them were it.</p>\n<p>It is <strong>not</strong> <a href=\"https://zellwk.com/blog/css-reset/\" title=\"\">Zell Liew's CSS reset</a>, <a href=\"https://piccalil.li/blog/a-modern-css-reset/\" title=\"\">Andy Bell's modern CSS reset</a>, or <a href=\"https://www.joshwcomeau.com/css/custom-css-reset/\" title=\"\">Josh Comeau's custom CSS reset</a>.</p>\n<p><a href=\"https://www.ellyloel.com/projects/modern-css-reset/\" title=\"\">Elly Loel's modern CSS reset</a> came close, but no cigar.</p>\n<p>All the above have elements of it, and due to the collaborative nature of the web, build on each other, so I don't know if I'm mis-remembering and making a composite in my brain or what.</p>\n<p>I do know the post was about creating something \"mobile-first\", light, and user-centric.</p>\n<p>Until I find it (if ever) these are all good resources that I have now bookmarked, and posted here.</p>",
+        "text": "I have searched my browsers (both home & work) bookmarks and history—Nothing.\nEvernote. My blog. My email. My code repo. Still nothing.\nI read a post concerning a new CSS reset/baseline. I liked it's approach and cribbed some of it for this blog.\nIt contained adding the default system fonts to the body tag.\n\n\nfont-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;\n/* Only supported on Chromium-based browsers and Safari */\nfont-family: system-ui;\"\n\n\nAlso had adding word-wrap, etc., to the p element...\n\n\t\nword-wrap: break-word;\noverflow-wrap: break-word;\nhyphens: auto;\nmax-width: 80ch;\n\t\n\n...as well as adding color-scheme to the root\n\n\t\n:root {\n\t\tcolor-scheme: light dark;\n\t}\n\t\n\nBy the end of Saturday I had so many tabs open, but none of them were it.\nIt is not Zell Liew's CSS reset, Andy Bell's modern CSS reset, or Josh Comeau's custom CSS reset.\nElly Loel's modern CSS reset came close, but no cigar.\nAll the above have elements of it, and due to the collaborative nature of the web, build on each other, so I don't know if I'm mis-remembering and making a composite in my brain or what.\nI do know the post was about creating something \"mobile-first\", light, and user-centric.\nUntil I find it (if ever) these are all good resources that I have now bookmarked, and posted here."
+      },
+      "mention-of": "https://www.ellyloel.com/projects/modern-css-reset/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://davidjohnmead.com/posts/2023-01-09-unable-to-find-css-reset-post/"
+      }
+    },
     {
       "type": "entry",
       "author": {
