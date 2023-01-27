@@ -123,9 +123,8 @@ module.exports = {
     return image?.webp?.[0]?.url;
   },
 
-  removeRandomLink: (markup) => {
-    return markup
+  removeRandomLink: (markup) =>
+    markup
       .replace(`<a href="https://www.ellyloel.com/"></a>`, ``)
-      .replace(`<a href="https://elly.to/"></a>`, ``);
-  },
+      .replace(`<a href="https://elly.to/"></a>`, ``),
 };
