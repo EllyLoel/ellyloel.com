@@ -21,7 +21,9 @@ html {
 
 body {
   overflow-x: hidden;
-  font-family: "Work Sans", "Noto Color Emoji", var(--font-sans);
+  font-family: "Work Sans", var(--font-sans), "Noto Color Emoji",
+    "Apple Color Emoji", "Twemoji Mozilla", "Segoe UI Emoji", "Segoe UI Symbol",
+    "EmojiOne Color", "Android Emoji";
   font-size: var(--font-size-2);
   font-weight: var(--font-weight-body-normal);
 
@@ -36,13 +38,20 @@ main {
   margin-block: var(--size-12);
   --flow-space: var(--size-10);
 
+  /* only doing this as it has a tabindex of -1 for the skip link */
+  &:focus-visible {
+    outline: none;
+  }
+
   & > * :where(*) {
     --flow-space: 1em;
   }
 }
 
 :is(h1, h2, h3, h4, h5, h6, dt) {
-  font-family: "Fraunces", "Noto Color Emoji", var(--font-serif);
+  font-family: "Fraunces", var(--font-serif), "Noto Color Emoji",
+    "Apple Color Emoji", "Twemoji Mozilla", "Segoe UI Emoji", "Segoe UI Symbol",
+    "EmojiOne Color", "Android Emoji";
   font-weight: var(--font-weight-7);
   font-optical-sizing: auto;
   --font-wonkiness: 1;
@@ -125,7 +134,9 @@ code,
 kbd,
 samp,
 pre {
-  font-family: "JetBrains Mono", var(--font-mono);
+  font-family: "JetBrains Mono", var(--font-mono), "Noto Color Emoji",
+    "Apple Color Emoji", "Twemoji Mozilla", "Segoe UI Emoji", "Segoe UI Symbol",
+    "EmojiOne Color", "Android Emoji";
 }
 
 pre {
@@ -343,7 +354,9 @@ blockquote {
   border-bottom-right-radius: var(--radius-3);
   font-size: var(--font-size-3);
   font-style: italic;
-  font-family: "Fraunces", var(--font-serif);
+  font-family: "Fraunces", var(--font-serif), "Noto Color Emoji",
+    "Apple Color Emoji", "Twemoji Mozilla", "Segoe UI Emoji", "Segoe UI Symbol",
+    "EmojiOne Color", "Android Emoji";
   font-weight: 420;
 }
 
