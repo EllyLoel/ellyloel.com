@@ -1,5 +1,5 @@
 :is(.logo, .logo-inline) {
-  font-family: "Nanum Pen Script", cursive;
+  font-family: "Nanum Pen Script", sans-serif;
   font-size: 1.5em; /* scales with the font size around it */
 }
 
