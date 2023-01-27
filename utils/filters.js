@@ -99,7 +99,14 @@ module.exports = {
 
   imageLink: async (src) => {
     const imageExtension = src.split(".").at(-1);
-    const allowedImageExtensions = ["avif", "jpeg", "jpg", "png", "svg", "webp"];
+    const allowedImageExtensions = [
+      "avif",
+      "jpeg",
+      "jpg",
+      "png",
+      "svg",
+      "webp",
+    ];
 
     if (!allowedImageExtensions.includes(imageExtension)) return src;
 
@@ -114,5 +121,11 @@ module.exports = {
     const image = await EleventyPluginImage(src, options);
 
     return image?.webp?.[0]?.url;
+  },
+
+  removeRandomLink: (markup) => {
+    return markup
+      .replace(`<a href="https://www.ellyloel.com/"></a>`, ``)
+      .replace(`<a href="https://elly.to/"></a>`, ``);
   },
 };

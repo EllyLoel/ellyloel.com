@@ -26,5 +26,5 @@
 		</small>
 	</div>
 
-	<p>{{ mention.content.value | safe }}</p>
+	<p>{{ mention.content.value | removeRandomLink | safe }}</p>
 </li>
