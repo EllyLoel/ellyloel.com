@@ -8,7 +8,7 @@
 		<title>{{ title }} | Elly Loel</title>
 
 		<!-- Include stylesheets here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
-		<link rel="stylesheet" href="/@input/css/style.css">
+		<link rel="stylesheet" href="/css/style.css">
 
 		{{ __slinkity.head | safe }}
 
@@ -30,13 +30,13 @@
 		</script>
 
 		<!-- Include scripts here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
-		<script type="module" src="/@input/js/main.js" defer></script>
+		<script type="module" src="/js/main.js" defer></script>
 		{%- if page.url === "/" -%}
-			<script type="module" src="/@input/js/model-viewer.js" defer></script>
-			<script type="module" src="/@input/js/spotify.js" defer></script>
+			<script type="module" src="/js/model-viewer.js" defer></script>
+			<script type="module" src="/js/spotify.js" defer></script>
 		{%- endif -%}
 		{%- if page.url === "/garden/" or page.url === "/blog/" or page.url === "/projects/" or page.url === "/bookmarks/" or page.url === "/til/" or page.url === "/til/d3/" -%}
-			<script type="module" src="/@input/js/graph.js" defer></script>
+			<script type="module" src="/js/graph.js" defer></script>
 		{%- endif -%}
 
 		{%- include "meta.njk" -%}

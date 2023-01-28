@@ -2,7 +2,6 @@ require("dotenv").config();
 const path = require("path");
 const fsp = require("node:fs/promises");
 const removeMd = require("remove-markdown");
-const slinkity = require("slinkity");
 const { DateTime } = require("luxon");
 
 const EleventyPluginNavigation = require("@11ty/eleventy-navigation");
@@ -24,7 +23,6 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(EleventyPluginNavigation);
   eleventyConfig.addPlugin(EleventyPluginRss);
   eleventyConfig.addPlugin(EleventyPluginSyntaxhighlight);
-  eleventyConfig.addPlugin(slinkity.plugin, slinkity.defineConfig({}));
   eleventyConfig.addPlugin(EleventyPluginNestingToc, {
     wrapper: "nav",
     wrapperClass: "[ toc ][ recursive-flow ]",
@@ -359,7 +357,9 @@ module.exports = (eleventyConfig) => {
   });
 
   // Copy/pass-through files
-  eleventyConfig.addPassthroughCopy("public");
+  eleventyConfig.addPassthroughCopy({ public: "/" });
+  eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/js");
 
   return {
     templateFormats: ["njk", "md", "11ty.js"],
