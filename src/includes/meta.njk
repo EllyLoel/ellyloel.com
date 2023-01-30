@@ -19,7 +19,8 @@
 
 {# Style #}
 <meta name="color-scheme" content="dark light">
-<meta name="theme-color" content="#bd93f9">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#bd93f9">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#5a1c93">
 
 {# Open Graph #}
 <meta property="og:site_name" content="{{ site.title }}">
@@ -35,10 +36,10 @@
 <meta property="og:image:alt" content="A background of curved purple lines with the text “{{ text }}” ontop, Elly's logo is in the bottom right corner.">
 
 {# Icons #}
-<link rel="manifest" href="{{ '/manifest.webmanifest' | url }}">
-{% favicons './public/assets/img/icons/favicon.svg',
-appleIconBgColor = '#00000000',
-generateManifest = false %}
+<link rel="icon" href="/assets/img/icons/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/img/icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png">
+<link rel="manifest" href="/assets/manifest.webmanifest">
 
 {# RSS Feed #}
 <link type="application/atom+xml" rel="alternate" href="{{ site.url }}/feed.atom" title="{{ site.title }}">

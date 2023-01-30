@@ -1,0 +1,20 @@
+{
+	"name": "Elly Loel",
+	"short_name": "ellyloel",
+	"start_url": ".",
+	"display": "standalone",
+	"background_color": "#bd93f9",
+	"description": "This is my own lovely little corner of the internet. Look forward to plenty of interesting ideas & projects.",
+	"icons": [
+		{
+			"src": "/img/icons/icon-192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "/img/icons/icon-512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	]
+}
