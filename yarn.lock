@@ -83,10 +83,10 @@
   dependencies:
     normalize-path "^3.0.0"
 
-"@11ty/eleventy@2.0.0-beta.2":
-  version "2.0.0-beta.2"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-2.0.0-beta.2.tgz#7f385842864c7f30b28e71559ab9cdceebf7c9e2"
-  integrity sha512-nH9uxixBqvgT7eCT2PcVvbWPlisv/fc2Me4jpAiiu96HsNF1IK/kSRpDhWUXV9HjXfCN5Hi+wcI/ZXm+5bYF6g==
+"@11ty/eleventy@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-2.0.0.tgz#933ec7789cb343c5a48bf1a2877c6fdd6c60434e"
+  integrity sha512-heNLjt1FD2nx7fvidIgA4zrIvxuslgBK0w5/Ckr5iape1CoLzmDx1uIxPa66Atr1M6YzwG9hcOxoZUYV7PfLXw==
   dependencies:
     "@11ty/dependency-tree" "^2.0.1"
     "@11ty/eleventy-dev-server" "^1.0.3"
