@@ -1,7 +1,7 @@
 {
   "root": true,
   "plugins": ["prettier"],
-  "extends": ["eslint:recommended", "prettier"],
+  "extends": ["eslint:recommended"],
   "rules": {
     "react/no-unescaped-entities": "off",
     "no-console": "warn",

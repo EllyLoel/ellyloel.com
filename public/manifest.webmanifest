@@ -7,12 +7,12 @@
 	"description": "This is my own lovely little corner of the internet. Look forward to plenty of interesting ideas & projects.",
 	"icons": [
 		{
-			"src": "/img/icons/icon-192.png",
+			"src": "/assets/img/icons/icon-192.png",
 			"type": "image/png",
 			"sizes": "192x192"
 		},
 		{
-			"src": "/img/icons/icon-512.png",
+			"src": "/assets/img/icons/icon-512.png",
 			"type": "image/png",
 			"sizes": "512x512"
 		}

@@ -10,14 +10,14 @@ html {
 }
 
 /* FOUCE https:/*www.abeautifulsite.net/posts/flash-of-undefined-custom-elements/ */
-/* :where(:not(:defined)) {
+:where(:not(:defined)) {
   opacity: 0;
 }
 
 :where(:defined) {
   opacity: 1;
   transition: opacity 500ms var(--ease-3);
-} */
+}
 
 body {
   overflow-x: hidden;
@@ -189,7 +189,7 @@ var {
     }
   }
 
-  @nest span:has(+ &) sl-icon {
+  :is(span):has(+ &) sl-icon {
     color: var(--link);
   }
 }
