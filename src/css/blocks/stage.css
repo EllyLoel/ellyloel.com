@@ -31,7 +31,7 @@ sl-select.stage {
 
   max-inline-size: var(--size-content-2);
 
-  & sl-menu-item {
+  & sl-option {
     &::part(base) {
       gap: var(--size-1);
     }
