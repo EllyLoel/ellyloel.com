@@ -23,7 +23,7 @@
       padding-inline: var(--size-8);
       padding-block: var(--size-8);
 
-      @nest :is(&, &.share > p) {
+      :is(&, &.share > p) {
         max-inline-size: unset;
         font-size: var(--font-size-fluid-1);
       }
