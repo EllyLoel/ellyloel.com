@@ -28,7 +28,7 @@
     "@shoelace-style/shoelace": "^2.0.0",
     "@zachleat/details-utils": "^2.0.2",
     "canvas-confetti": "^1.5.1",
-    "css-doodle": "0.30.10",
+    "css-doodle": "0.34.3",
     "d3": "^7.6.1",
     "howler": "^2.2.3",
     "netlify-plugin-cache": "^1.0.3"
