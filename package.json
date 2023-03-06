@@ -29,7 +29,7 @@
     "@zachleat/details-utils": "^2.0.2",
     "canvas-confetti": "^1.5.1",
     "css-doodle": "0.30.10",
-    "d3": "^7.6.1",
+    "d3": "^7.8.2",
     "howler": "^2.2.3",
     "netlify-plugin-cache": "^1.0.3"
   },
