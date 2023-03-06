@@ -49,7 +49,7 @@
     "eleventy-plugin-json-feed": "^0.0.7",
     "eleventy-plugin-nesting-toc": "^1.3.0",
     "eleventy-plugin-unfurl": "^1.0.0",
-    "eleventy-plugin-webmentions": "^1.1.0",
+    "eleventy-plugin-webmentions": "^2.0.0",
     "eslint": "^8.11.0",
     "luxon": "^3.2.1",
     "markdown-it": "^13.0.1",

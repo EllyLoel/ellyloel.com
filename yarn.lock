@@ -461,6 +461,11 @@
   resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.2.0.tgz#cccaab758af56761eb7bf37af6f03f326dd798ad"
   integrity sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==
 
+"@tweetback/canonical@^2.0.27":
+  version "2.0.29"
+  resolved "https://registry.yarnpkg.com/@tweetback/canonical/-/canonical-2.0.29.tgz#ee1a5e20aeb70da79edbe8e6fd6a4da059ea95f6"
+  integrity sha512-j8BzzNG0ajpCiMJJ1WAs4yckMikiUp0ia05Se+AeSuZj2LVBlSE/38CbvEh+jNDZ3tQPzHtiEUK9Y4fyJV/0ew==
+
 "@types/cheerio@^0.22.8":
   version "0.22.31"
   resolved "https://registry.yarnpkg.com/@types/cheerio/-/cheerio-0.22.31.tgz#b8538100653d6bb1b08a1e46dec75b4f2a5d5eb6"
@@ -1822,11 +1827,12 @@ eleventy-plugin-unfurl@^1.0.0:
     "@11ty/eleventy" "^1.0.0"
     "@11ty/eleventy-fetch" "^3.0.0"
 
-eleventy-plugin-webmentions@^1.1.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/eleventy-plugin-webmentions/-/eleventy-plugin-webmentions-1.2.0.tgz#4ae13f08039e9d219d8c80ab115fdb7231dca29e"
-  integrity sha512-oQA4Hn3N2hy0tAXt5kgFt3w0rc3s9+hUzQAYKKCFJX4xwAt8ZIEeFIm+N13wStVf8d1DmePAxz/1yv7MaRfdhg==
+eleventy-plugin-webmentions@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/eleventy-plugin-webmentions/-/eleventy-plugin-webmentions-2.0.0.tgz#0ee09a82c7287748ee9e59cf5a462317c6ae6f69"
+  integrity sha512-kcAL5PUmFJQH4uVMoV4n1AoK+rWhXxxc4AhsbdoZq7IDRalgOptvJtzzpSxsCZDmjeeAVOe87AFfX+MA/XtLHw==
   dependencies:
+    "@tweetback/canonical" "^2.0.27"
     html-entities "^2.3.3"
     node-fetch "^2.6.6"
     sanitize-html "^2.7.0"
