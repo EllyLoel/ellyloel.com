@@ -5,7 +5,7 @@ sl-select.stage {
     display: block;
   }
 
-  &::part(control) {
+  &::part(combobox) {
     border-color: var(--accent-bg-hover);
     border-radius: var(--radius-3);
     border-width: var(--border-size-2);
@@ -25,8 +25,8 @@ sl-select.stage {
     }
   }
 
-  &::part(tag__base) {
-    border-radius: calc(var(--radius-3) - 4px);
+  &::part(tag) {
+    --sl-input-border-radius-large: calc(var(--radius-3) - 4px);
   }
 
   max-inline-size: var(--size-content-2);
