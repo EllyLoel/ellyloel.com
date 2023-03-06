@@ -19,14 +19,13 @@
     "start": "npx @11ty/eleventy --serve --incremental --quiet",
     "clean": "rm -rf _site",
     "build": "npx @11ty/eleventy --quiet",
-    "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
-    "postinstall": "patch-package"
+    "debug": "DEBUG=Eleventy* npx @11ty/eleventy"
   },
   "dependencies": {
     "@11ty/eleventy-fetch": "^3.0.0",
     "@11ty/eleventy-img": "^2.0.1",
     "@google/model-viewer": "^2.1.1",
-    "@shoelace-style/shoelace": "2.0.0-beta.87",
+    "@shoelace-style/shoelace": "^2.0.0",
     "@zachleat/details-utils": "^2.0.2",
     "canvas-confetti": "^1.5.1",
     "css-doodle": "0.30.10",
@@ -35,7 +34,7 @@
     "netlify-plugin-cache": "^1.0.3"
   },
   "devDependencies": {
-    "@11ty/eleventy": "2.0.0-beta.2",
+    "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-navigation": "^0.3.3",
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.3",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
@@ -64,11 +63,9 @@
     "markdown-it-sup": "^1.0.0",
     "markdown-it-wikilinks": "^1.2.0",
     "open-props": "^1.5.3",
-    "patch-package": "^6.5.0",
     "postcss": "^8.4.14",
     "postcss-jit-props": "^1.0.7",
     "postcss-preset-env": "^7.8.3",
-    "postinstall-postinstall": "^2.1.0",
     "prettier": "^2.6.1",
     "remove-markdown": "^0.5.0",
     "slinkity": "1.0.0-canary.0",
