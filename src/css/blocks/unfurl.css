@@ -1,73 +1,74 @@
+/* stylelint-disable selector-class-pattern */
 .unfurl {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: var(--size-2) var(--size-3);
-  align-content: start;
-  max-width: 35rem;
-  grid-template-areas:
-    "border meta"
-    "border title"
-    "border desc"
-    "border image";
+	align-content: start;
+	display: grid;
+	gap: var(--size-2) var(--size-3);
+	grid-template-areas:
+		"border meta"
+		"border title"
+		"border desc"
+		"border image";
+	grid-template-columns: auto 1fr;
+	max-width: 35rem;
 
-  &:not(:has(picture)) {
-    grid-template-areas:
-      "border meta"
-      "border title"
-      "border desc";
-  }
+	&:not(:has(picture)) {
+		grid-template-areas:
+			"border meta"
+			"border title"
+			"border desc";
+	}
 
-  &::before {
-    content: "";
-    grid-area: border;
-    inline-size: 0.25rem;
-    block-size: 100%;
-    background-color: var(--accent-border);
-    border-radius: var(--radius-2);
-  }
+	&::before {
+		background-color: var(--accent-border);
+		block-size: 100%;
+		border-radius: var(--radius-2);
+		content: "";
+		grid-area: border;
+		inline-size: 0.25rem;
+	}
 
-  & .unfurl__heading,
-  & .unfurl__description {
-    margin: 0;
-  }
+	& .unfurl__heading,
+	& .unfurl__description {
+		margin: 0;
+	}
 
-  & .unfurl__heading {
-    grid-area: title;
-  }
+	& .unfurl__heading {
+		grid-area: title;
+	}
 
-  & .unfurl__description {
-    grid-area: desc;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden; /* truncating */
-  }
+	& .unfurl__description {
+		-webkit-box-orient: vertical;
+		display: -webkit-box;
+		grid-area: desc;
+		-webkit-line-clamp: 3;
+		overflow: hidden; /* truncating */
+	}
 
-  & picture,
-  & .unfurl__image {
-    object-fit: cover;
-    align-self: center;
-    aspect-ratio: 2 / 1;
-  }
+	& picture,
+	& .unfurl__image {
+		align-self: center;
+		aspect-ratio: 2 / 1;
+		object-fit: cover;
+	}
 
-  & picture {
-    grid-area: image;
-    inline-size: 90%;
-  }
+	& picture {
+		grid-area: image;
+		inline-size: 90%;
+	}
 
-  & .unfurl__image {
-    inline-size: 100%;
-    border-radius: var(--radius-3);
-    border-top-left-radius: 0;
-  }
+	& .unfurl__image {
+		border-radius: var(--radius-3);
+		border-top-left-radius: 0;
+		inline-size: 100%;
+	}
 
-  & .unfurl__meta {
-    grid-area: meta;
-    color: var(--neutral-text);
-    font-weight: bold;
-  }
+	& .unfurl__meta {
+		color: var(--neutral-text);
+		font-weight: bold;
+		grid-area: meta;
+	}
 }
 
 .unfurl + .unfurl {
-  margin-block-start: 2rem;
+	margin-block-start: 2rem;
 }

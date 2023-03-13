@@ -1,77 +1,74 @@
 .feed {
-  column-count: auto;
-  column-width: var(--size-content-2);
-  column-fill: auto;
+	column-fill: auto;
+	columns: var(--size-content-2) auto;
 
-  & > li + li {
-    margin-block-start: var(--size-7);
-  }
+	& > li + li {
+		margin-block-start: var(--size-7);
+	}
 
-  @media (width >= 768px) {
-    column-count: 2;
-    column-width: auto;
+	@media (width >= 768px) {
+		columns: auto 2;
 
-    & > li + li {
-      margin-block-start: var(--size-4);
-    }
-  }
+		& > li + li {
+			margin-block-start: var(--size-4);
+		}
+	}
 }
 
 .home .feed {
-  column-count: auto;
-  column-width: var(--size-content-2);
+	columns: var(--size-content-2) auto;
 
-  & > li + li {
-    margin-block-start: var(--size-7);
-  }
+	& > li + li {
+		margin-block-start: var(--size-7);
+	}
 }
 
 sl-select:has(sl-option[value="seedling"][aria-selected="true"]) ~ .feed {
-  & .seedling {
-    display: list-item;
-  }
+	& .seedling {
+		display: list-item;
+	}
 
-  & :where(li:not(.seedling)) {
-    display: none;
-  }
+	& :where(li:not(.seedling)) {
+		display: none;
+	}
 }
 
 sl-select:has(sl-option[value="budding"][aria-selected="true"]) ~ .feed {
-  & .budding {
-    display: list-item;
-  }
+	& .budding {
+		display: list-item;
+	}
 
-  & :where(li:not(.budding)) {
-    display: none;
-  }
+	& :where(li:not(.budding)) {
+		display: none;
+	}
 }
 
 sl-select:has(sl-option[value="evergreen"][aria-selected="true"]) ~ .feed {
-  & .evergreen {
-    display: list-item;
-  }
+	& .evergreen {
+		display: list-item;
+	}
 
-  & :where(li:not(.evergreen)) {
-    display: none;
-  }
+	& :where(li:not(.evergreen)) {
+		display: none;
+	}
 }
 
 sl-select:has(sl-option[value="draft"][aria-selected="true"]) ~ .feed {
-  & .draft {
-    display: list-item;
-  }
+	& .draft {
+		display: list-item;
+	}
 
-  & :where(li:not(.draft)) {
-    display: none;
-  }
+	& :where(li:not(.draft)) {
+		display: none;
+	}
 }
 
 sl-select:has(sl-option[value="complete"][aria-selected="true"]) ~ .feed {
-  & .complete {
-    display: list-item;
-  }
+	& .complete {
+		display: list-item;
+	}
 
-  & :where(li:not(.complete)) {
-    display: none;
-  }
+	& :where(li:not(.complete)) {
+		display: none;
+	}
 }

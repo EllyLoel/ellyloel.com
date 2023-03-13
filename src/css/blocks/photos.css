@@ -1,19 +1,18 @@
 .photos {
-  & img {
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    inline-size: 100%;
-  }
+	& img {
+		aspect-ratio: 1 / 1;
+		inline-size: 100%;
+		object-fit: cover;
+	}
 
-  @media (width >= 768px) {
-    grid-template-columns: 2fr 1fr;
-    row-gap: var(--size-8);
+	@media (width >= 768px) {
+		grid-column: 1 / 3;
+		grid-template-columns: 2fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
+		row-gap: var(--size-8);
 
-    grid-column: 1 / 3;
-    grid-template-columns: 1fr 1fr 1fr;
-
-    & img {
-      aspect-ratio: 2 / 3;
-    }
-  }
+		& img {
+			aspect-ratio: 2 / 3;
+		}
+	}
 }

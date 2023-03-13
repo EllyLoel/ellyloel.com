@@ -30,7 +30,7 @@ logic, data, routing, etc.
 
 ```
 <ds-badge
-  variant="success" 
+  variant="success"
   text="99 Luftballons"
 >
 </ds-badge>

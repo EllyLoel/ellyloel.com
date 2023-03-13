@@ -1,26 +1,26 @@
 sl-icon-button {
-  &::part(base) {
-    color: var(--link);
-    outline-offset: 0px;
-    transition-property: color;
-    transition-duration: 145ms;
-    transition-timing-function: var(--ease-2);
+	&::part(base) {
+		color: var(--link);
+		outline-offset: 0;
+		transition-duration: 145ms;
+		transition-property: color;
+		transition-timing-function: var(--ease-2);
 
-    &:is(:hover, :focus, :active) {
-      color: var(--link-visited);
-    }
+		&:is(:hover, :focus, :active) {
+			color: var(--link-visited);
+		}
 
-    &:focus-visible {
-      outline: 2px solid var(--link);
-      outline-offset: var(--size-1);
-    }
+		&:focus-visible {
+			outline: 2px solid var(--link);
+			outline-offset: var(--size-1);
+		}
 
-    &:active {
-      outline-offset: 0px;
-    }
+		&:active {
+			outline-offset: 0;
+		}
 
-    @media (prefers-reduced-motion: no-preference) {
-      transition-property: color, outline-offset;
-    }
-  }
+		@media (prefers-reduced-motion: no-preference) {
+			transition-property: color, outline-offset;
+		}
+	}
 }

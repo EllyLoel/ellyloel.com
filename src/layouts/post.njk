@@ -95,7 +95,7 @@ layout: base-without-header.njk
 	{%- set previousPost = collections.allPostTypes | getPreviousCollectionItem -%}
 	{%- set nextPost = collections.allPostTypes | getNextCollectionItem -%}
 	{%- if previousPost or nextPost -%}
-		<div class="[ postPagination ][ flex gap-5 ]">
+		<div class="[ post-pagination ][ flex gap-5 ]">
 			{%- if previousPost -%}
 				<sl-tooltip content="{{ previousPost.data.title }}">
 					<a href="{{ previousPost.url }}" class="[ text-decoration-none move-link-styling-to-child flex align-center gap-1 ]">

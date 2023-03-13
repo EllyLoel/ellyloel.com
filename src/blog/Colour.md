@@ -10,14 +10,18 @@ modified: 2023-01-10
 :::
 
 ## ~~Color~~ ++Colour++
+
 Let's get the elephant out of the room.
-I'm Australian, so I spell it like this, colour, not like this, color. *Except when I'm writing any kind of code haha…* :smiling_face_with_tear:
+I'm Australian, so I spell it like this, colour, not like this, color. _Except when I'm writing any kind of code haha…_ :smiling_face_with_tear:
 
 ## Fuck sRGB, all my homies hate sRGB
+
 ![A meme with the text “Fuck sRGB, all my homies hate sRGB”](./public/assets/img/all-my-homies-hate-srgb.png)
+
 - [ ] Explain why current colours (sRGB) are shit
 
 ## WTF is a colour space?
+
 - [ ] Explain what a colour space is
 
 - [ ] Visualise different colour spaces
@@ -27,7 +31,8 @@ I'm Australian, so I spell it like this, colour, not like this, color. *Except w
 - [ ] Visualise different colour gamuts
 
 ## Is it all worth it?
-"But I like hex codes!" :woman_facepalming: 
+
+"But I like hex codes!" :woman_facepalming:
 
 - [ ] Compare sRGB and P3?
 

@@ -1,3 +1,6 @@
+_webmentioncache/
+_site/
 node_modules/
 .cache/
-public
+.obsidian/
+public/

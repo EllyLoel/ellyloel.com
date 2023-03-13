@@ -30,16 +30,16 @@ In 2021, we launched the Raycast Store and Developer API. Here is how you adopte
 - Supercharged access, 5 hotkeys, 1 aliases.
 - 2 quicklinks.
 - Top extensions:
-	1. Clipboard History, 562 opens.
-	2. Emoji, 510 opens.
-	3. Cleanshot X, 427 opens.
-	4. Spotify Controls, 245 opens.
-	5. Bitwarden Vault, 208 opens.
-	6. Window Management, 95 opens.
-	7. Script Commands, 70 opens.
-	8. System, 64 opens.
-	9. Dictionary, 54 opens.
-	10. Kill Process, 47 opens.
+  1.  Clipboard History, 562 opens.
+  2.  Emoji, 510 opens.
+  3.  Cleanshot X, 427 opens.
+  4.  Spotify Controls, 245 opens.
+  5.  Bitwarden Vault, 208 opens.
+  6.  Window Management, 95 opens.
+  7.  Script Commands, 70 opens.
+  8.  System, 64 opens.
+  9.  Dictionary, 54 opens.
+  10. Kill Process, 47 opens.
 
 ![](./public/assets/img/raycast-wrapped-2.png)
 
@@ -53,16 +53,16 @@ Raycast became the launchpad for your tools. We're proud to be part of your next
 - 110 applications used.
 - App trends, Early Adopter, It's clear to see that you like shiny, new apps, and exploring the weird, wonderful world of software. You are amongst the first ones who give new apps a spin.
 - Top applications:
-	1. iTerm, 279 opens.
-	2. Slack, 244 opens.
-	3. Cron, 182 opens.
-	4. Visual Studio Code, 177 opens.
-	5. Telegram, 170 opens.
-	6. Notion, 170 opens.
-	7. Obsidian, 158 opens.
-	8. zoom.us, 144 opens.
-	9. Spotify, 144 opens.
-	10. Arc, 135 opens.
+  1.  iTerm, 279 opens.
+  2.  Slack, 244 opens.
+  3.  Cron, 182 opens.
+  4.  Visual Studio Code, 177 opens.
+  5.  Telegram, 170 opens.
+  6.  Notion, 170 opens.
+  7.  Obsidian, 158 opens.
+  8.  zoom.us, 144 opens.
+  9.  Spotify, 144 opens.
+  10. Arc, 135 opens.
 
 ![](./public/assets/img/raycast-wrapped-3.png)
 
@@ -84,13 +84,13 @@ Take a look at an overview of your meetings, and how you spent time on video cal
 ### Raycast Wrapped 2022
 
 - Top 3 apps:
-	1. iTerm
-	2. Slack
-	3. Cron
+  1.  iTerm
+  2.  Slack
+  3.  Cron
 - Top 3 extensions:
-	1. Clipboard History
-	2. Emoji
-	3. Cleanshot X
+  1.  Clipboard History
+  2.  Emoji
+  3.  Cleanshot X
 - 3205 total application launches.
 - 30 extensions installed.
 - Personality, Rayeti. An unmatched productivity that is hard to find in real life.

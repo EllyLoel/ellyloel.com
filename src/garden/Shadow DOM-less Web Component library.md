@@ -10,6 +10,6 @@ Maybe it's best for non-[[atomic]] components, like layout components or templat
 
 ---
 
-[Shoelace](https://shoelace.style/) is amazing, but it's not SSR-able (currently) so components that don't *really* need JavaScript are still forced to have it.
+[Shoelace](https://shoelace.style/) is amazing, but it's not SSR-able (currently) so components that don't _really_ need JavaScript are still forced to have it.
 
 {% unfurl "https://shoelace.style/" %}
