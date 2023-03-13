@@ -2,7 +2,7 @@
 title: Input types a11y
 stage: seedling
 created: 2023-03-07
-modified: 2023-03-07
+modified: 2023-03-13
 ---
 
 ## TL;DR
@@ -50,7 +50,7 @@ If you have any info/knowledge on whether these inputs are good or bad let me kn
 - `reset`
 - `submit`
 
-As far as I can tell they're not inherently terrible but you're just better off using the `<button>` version of them:
+As far as I can tell they're not inherently terrible but you're probably just better off using the `<button>` version of them:
 
 - `<button type="button">`
 - `<button type="reset">`
