@@ -30,5 +30,5 @@ module.exports = {
 
 		return backlinks;
 	},
-	canonical: (data) => new URL(data.page.url, data.site.url).href,
+	canonical: (data) => new URL(data.page.url, data.metadata.url).href,
 };

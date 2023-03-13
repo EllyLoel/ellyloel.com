@@ -476,7 +476,7 @@
     lit "^2.6.1"
     qr-creator "^1.0.0"
 
-"@sindresorhus/slugify@^1.1.2":
+"@sindresorhus/slugify@^1.1.0", "@sindresorhus/slugify@^1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@sindresorhus/slugify/-/slugify-1.1.2.tgz#c2c0129298b8caace2d9156176fe244d0e83156c"
   integrity sha512-V9nR/W0Xd9TSGXpZ4iFUcFGhuOJtZX82Fzxj1YISlbSgKvIiNa7eLEZrT0vAraPOt++KHauIVNYgGRgjc13dXA==

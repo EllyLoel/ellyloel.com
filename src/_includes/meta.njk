@@ -1,4 +1,4 @@
-{%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(site.url) }}{%- endset -%}
+{%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(metadata.url) }}{%- endset -%}
 {%- if title === "Home" -%}
 	{% set text = "Creating delightful, magical, and accessible art with code." %}
 	{% set desc = description %}
@@ -14,7 +14,7 @@
 {# General #}
 <meta name="description" content="{{ desc }}">
 <link rel="canonical" href="{{ canonical }}">
-<meta name="author" content="{{ site.author.name }}">
+<meta name="author" content="{{ metadata.author.name }}">
 <meta name="generator" content="{{ eleventy.generator }}">
 
 {# Style #}
@@ -23,11 +23,11 @@
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#5a1c93">
 
 {# Open Graph #}
-<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:site_name" content="{{ metadata.title }}">
 <meta property="og:title" content="{{ ogTitle }}">
 <meta property="og:description" content="{{ desc }}">
 <meta property="og:url" content="{{ absolutePageUrl }}">
-<meta property="og:locale" content="{{ site.locale }}">
+<meta property="og:locale" content="{{ metadata.locale }}">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="twitter:image" content="https://v1.screenshot.11ty.dev/https%3A%2F%2Fellyloel.com%2Fog{{ ogUrl | urlencode }}/opengraph/">
 <meta property="og:image" content="https://v1.screenshot.11ty.dev/https%3A%2F%2Fellyloel.com%2Fog{{ ogUrl | urlencode }}/opengraph/">
@@ -42,12 +42,12 @@
 <link rel="manifest" href="/assets/manifest.webmanifest">
 
 {# RSS Feed #}
-<link type="application/atom+xml" rel="alternate" href="{{ site.url }}/feed.atom" title="{{ site.title }}">
-<link type="application/rss+xml" rel="alternate" href="{{ site.url }}/feed.rss" title="{{ site.title }}">
-<link type="application/json" rel="alternate" href="{{ site.url }}/feed.json" title="{{ site.title }}">
+<link type="application/atom+xml" rel="alternate" href="{{ metadata.url }}/feed.atom" title="{{ metadata.title }}">
+<link type="application/rss+xml" rel="alternate" href="{{ metadata.url }}/feed.rss" title="{{ metadata.title }}">
+<link type="application/json" rel="alternate" href="{{ metadata.url }}/feed.json" title="{{ metadata.title }}">
 
 {# Webmentions #}
-<link href="https://github.com/ellyloel" rel="me">
-<link href="https://front-end.social/@elly" rel="me">
-<link rel="webmention" href="https://webmention.io/www.ellyloel.com/webmention">
-<link rel="pingback" href="https://webmention.io/www.ellyloel.com/xmlrpc">
+<link href="{{ metadata.author.links.GitHub }}" rel="me">
+<link href="{{ metadata.author.links.Mastodon }}" rel="me">
+<link rel="webmention" href="https://webmention.io/{{ metadata.domain }}/webmention">
+<link rel="pingback" href="https://webmention.io/{{ metadata.domain }}/xmlrpc">
