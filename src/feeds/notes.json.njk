@@ -1,40 +1,26 @@
----json
-{
-  "permalink": "/public/notes.json",
-  "eleventyExcludeFromCollections": true,
-  "site": {
-    "title": "Elly Loel",
-    "description": "This is my own lovely little corner of the internet. Look forward to plenty of interesting ideas & projects.",
-    "lang": "en",
-    "url": "https://ellyloel.com/",
-    "author": {
-      "name": "Elly Loel",
-      "email": "hello@ellyloel.com",
-    	"url": "https://ellyloel.com/about/"
-    }
-  }
-}
+---
+permalink: "/public/notes.json"
 ---
 {
   "version": "https://jsonfeed.org/version/1.1",
-  "title": "{{ site.title }}",
-  "language": "{{ site.lang }}",
-  "home_page_url": "{{ site.url }}",
-  "feed_url": "{{ '/notes.json' | absoluteUrl(site.url) }}",
-  "description": "{{ site.description }}",
+  "title": "{{ metadata.title }}",
+  "language": "{{ metadata.lang }}",
+  "home_page_url": "{{ metadata.url }}",
+  "feed_url": "{{ '/notes.json' | absoluteUrl(metadata.url) }}",
+  "description": "{{ metadata.description }}",
   "author": {
-    "name": "{{ site.author.name }}",
-    "url": "{{ site.author.url }}"
+    "name": "{{ metadata.author.name }}",
+    "url": "{{ metadata.author.url }}"
   },
   "items": [
     {%- for post in collections.garden | reverse %}
-  {%- set absolutePostUrl = post.url | absoluteUrl(site.url) %}
+	{%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
     {
       "id": "{{ absolutePostUrl }}",
       "url": "{{ absolutePostUrl }}",
       "title": "{{ post.data.title }}",
       "content_html": {% if post.templateContent %}{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | dump | safe }}
-  {% else %}""{% endif %},
+	{% else %}""{% endif %},
       "date_published": "{{ post.date | dateToRfc3339 }}"
     }
     {% if not loop.last %},{% endif %}

@@ -40,7 +40,7 @@ layout: base-without-header.njk
 				<sl-tooltip content="Stage">
 					<sl-icon class="[ icon ]" library="fa" name="fas-{%- if stage === "seedling" -%}seedling{%- elif stage === "budding" -%}spa{%- elif stage === "evergreen" -%}tree{%- elif stage === "draft" -%}file-pen{%- elif stage === "complete" -%}circle-check{%- endif -%}" label="stage"></sl-icon>
 				</sl-tooltip>
-				<span>{{ stage | sentenceCase }}</span>
+				<span>{{ stage | capitalize }}</span>
 			</span>
 		{%- endif -%}
 	</div>
@@ -83,11 +83,11 @@ layout: base-without-header.njk
 <footer class="[ content-footer ][ flow flow-space-setter ]" style="--flow-space-setter: var(--size-8);">
 	<div class="[ share ]">
 		<p>
-			<sl-icon class="[ icon ]" library="fa" name="fas-share-from-square" label=""></sl-icon> Share on <a href='https://toot.kytta.dev/?text="{{ title }}" by @ellyloel@front-end.social {{ site.url }}{{ page.url }}' class="[ text-decoration-none move-link-styling-to-child ]">
+			<sl-icon class="[ icon ]" library="fa" name="fas-share-from-square" label=""></sl-icon> Share on <a href='https://toot.kytta.dev/?text="{{ title }}" by @ellyloel@front-end.social {{ metadata.url }}{{ page.url }}' class="[ text-decoration-none move-link-styling-to-child ]">
 				<sl-icon class="[ icon ]" library="fa" name="fab-mastodon" label=""></sl-icon>
-				<span>Mastodon</span></a>, <a href='https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text="{{ title }}" by @ellyloel' class="[ text-decoration-none move-link-styling-to-child ]">
+				<span>Mastodon</span></a>, <a href='https://twitter.com/intent/tweet?url={{ metadata.url }}{{ page.url }}&text="{{ title }}" by @ellyloel' class="[ text-decoration-none move-link-styling-to-child ]">
 				<sl-icon class="[ icon ]" library="fa" name="fab-twitter" label=""></sl-icon>
-				<span>Twitter</span></a> or <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}" class="[ text-decoration-none move-link-styling-to-child ]">
+				<span>Twitter</span></a> or <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ metadata.url }}{{ page.url }}" class="[ text-decoration-none move-link-styling-to-child ]">
 				<sl-icon class="[ icon ]" library="fa" name="fab-linkedin" label=""></sl-icon>
 				<span>LinkedIn</span></a>.
 		</p>

@@ -1,0 +1,21 @@
+{
+	"title": "Elly Loel",
+	"short_name": "ellyloel",
+	"description": "This is my own lovely little corner of the internet. Look forward to plenty of interesting ideas & projects.",
+	"url": "https://ellyloel.com",
+	"domain": "www.ellyloel.com",
+	"lang": "en",
+	"locale": "en_au",
+	"author": {
+		"name": "Elly Loel",
+		"email": "hello@ellyloel.com",
+		"url": "https://ellyloel.com/about/",
+		"links": {
+			"Mastodon": "https://front-end.social/@elly",
+			"LinkedIn": "https://linkedin.com/in/ellyloel",
+			"CodePen": "https://codepen.io/ellyloel",
+			"GitHub": "https://github.com/ellyloel",
+			"Twitter": "https://twitter.com/ellyloel"
+		}
+	}
+}
