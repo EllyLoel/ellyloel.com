@@ -1,42 +1,46 @@
 {%- set postMentions = webmentions | webmentionsForPage -%}
 <article id="webmentions" class="[ webmentions ][ flow ]">
 	{%- ifAsync postMentions.likes.length -%}
-	<h3>
 		{%- if postMentions.likes.length === 1 -%}
-			{{ postMentions.likes.length }} Like
+			{%- set facepileMentionsHeading -%}
+				{{ postMentions.likes.length }} Like
+			{%- endset -%}
 		{%- elif (postMentions.likes.length > 1) -%}
-			{{ postMentions.likes.length }} Likes
+			{%- set facepileMentionsHeading -%}
+				{{ postMentions.likes.length }} Likes
+			{%- endset -%}
 		{%- endif -%}
-	</h3>
-	{%- set facepileMentions = postMentions.likes -%}
-	{%- include "webmentions-facepile.njk" -%}
+		{%- set facepileMentions = postMentions.likes -%}
+		{%- include "webmentions-facepile.njk" -%}
 	{%- endif -%}
 	{%- ifAsync postMentions.reposts.length -%}
-	<h3>
 		{%- if postMentions.reposts.length === 1 -%}
-			{{ postMentions.reposts.length }} Repost
+			{%- set facepileMentionsHeading -%}
+				{{ postMentions.reposts.length }} Repost
+			{%- endset -%}
 		{%- elif (postMentions.reposts.length > 1) -%}
-			{{ postMentions.reposts.length }} Reposts
+			{%- set facepileMentionsHeading -%}
+				{{ postMentions.reposts.length }} Reposts
+			{%- endset -%}
 		{%- endif -%}
-	</h3>
-	{%- set facepileMentions = postMentions.reposts -%}
-	{%- include "webmentions-facepile.njk" -%}
+		{%- set facepileMentions = postMentions.reposts -%}
+		{%- include "webmentions-facepile.njk" -%}
 	{%- endif -%}
 	{%- if postMentions.comments.length -%}
-	<details {% if page.url !== "/" %}open{% endif %}>
-		<summary>
-			{%- if postMentions.comments.length === 1 -%}
-				{{ postMentions.comments.length }} Comment
-				{%- elif (postMentions.comments.length > 1) -%}
-				{{ postMentions.comments.length }} Comments
-				{%- endif -%}
-		</summary>
-		<ol class="[ flow ]">
-			{%- asyncEach mention in postMentions.comments -%}
-			{%- include "webmention.njk" -%}
-			{%- endeach -%}
-		</ol>
-	</details>
+		<details {% if page.url !== "/" %}open{% endif %}>
+			<summary>
+				{%- if postMentions.comments.length === 1 -%}
+					{{ postMentions.comments.length }} Comment
+					{%- elif (postMentions.comments.length > 1) -%}
+					{{ postMentions.comments.length }} Comments
+					{%- endif -%}
+			</summary>
+			<ol class="[ flow ]">
+				{%- asyncEach mention in postMentions.comments -%}
+				{%- include "webmention.njk" -%}
+				{%- endeach -%}
+			</ol>
+		</details>
 	{%- endif -%}
 	<footer class="[ webmentions-header ][ flow ]">
 		<form action="https://webmention.io/www.ellyloel.com/webmention" method="post" class="[ webmentions-form ][ flow ]">
