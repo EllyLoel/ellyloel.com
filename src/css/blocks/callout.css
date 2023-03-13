@@ -1,28 +1,28 @@
 .callout {
-  background-color: var(--accent-bg-subtle);
-  border: var(--border-size-2) solid var(--accent-border);
-  border-radius: var(--radius-3);
-  padding-block-start: var(--size-7);
-  padding-block-end: var(--size-6);
-  padding-inline: var(--size-5);
-  position: relative;
+	background-color: var(--accent-bg-subtle);
+	border: var(--border-size-2) solid var(--accent-border);
+	border-radius: var(--radius-3);
+	padding-block-end: var(--size-6);
+	padding-block-start: var(--size-7);
+	padding-inline: var(--size-5);
+	position: relative;
 
-  & > sl-icon {
-    position: absolute;
-    left: -14px;
-    top: -14px;
-    font-size: 2rem;
-    color: var(--accent-border);
-    background-color: var(--accent-bg-subtle);
-    border-radius: var(--radius-round);
-  }
+	& > sl-icon {
+		background-color: var(--accent-bg-subtle);
+		border-radius: var(--radius-round);
+		color: var(--accent-border);
+		font-size: 2rem;
+		left: -14px;
+		position: absolute;
+		top: -14px;
+	}
 
-  & > strong {
-    line-height: 1;
-    font-size: var(--font-size-3);
-  }
+	& > strong {
+		font-size: var(--font-size-3);
+		line-height: 1;
+	}
 
-  & > div > *:first-child {
-    margin-block-start: var(--size-3);
-  }
+	& > div > *:first-child {
+		margin-block-start: var(--size-3);
+	}
 }

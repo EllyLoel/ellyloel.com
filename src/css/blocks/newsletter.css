@@ -1,65 +1,66 @@
 .newsletter {
-  margin-block-end: var(--size-10);
-  max-inline-size: min(var(--size-content-3), 95%);
-  margin-inline: auto;
-  background-color: var(--accent-bg-subtle);
-  border-color: var(--accent-bg-hover);
-  border-width: var(--border-size-2);
-  padding-inline: var(--size-fluid-3);
-  padding-block: var(--size-fluid-3);
-  border-radius: var(--radius-3);
-  --shadow-offset: var(--size-1);
-  border-radius: var(--radius-3);
-  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 0
-    var(--accent-bg-hover);
-  transition: box-shadow 0.3s var(--ease-1), opacity 0.5s var(--ease-2);
+	--shadow-offset: var(--size-1);
 
-  &:is(:hover, :focus-within) {
-    --shadow-offset: var(--size-2);
-    transition: box-shadow 0.15s var(--ease-1);
-  }
+	background-color: var(--accent-bg-subtle);
+	border-color: var(--accent-bg-hover);
+	border-radius: var(--radius-3);
+	border-width: var(--border-size-2);
+	box-shadow: var(--shadow-offset) var(--shadow-offset) 0 0
+		var(--accent-bg-hover);
+	margin-block-end: var(--size-10);
+	margin-inline: auto;
+	max-inline-size: min(var(--size-content-3), 95%);
+	padding-block: var(--size-fluid-3);
+	padding-inline: var(--size-fluid-3);
+	transition: box-shadow 0.3s var(--ease-1), opacity 0.5s var(--ease-2);
 
-  & > div {
-    --flow-space: 1.5em;
+	&:is(:hover, :focus-within) {
+		--shadow-offset: var(--size-2);
 
-    & h2 {
-      font-size: var(--font-size-fluid-2);
-    }
+		transition: box-shadow 0.15s var(--ease-1);
+	}
 
-    & summary {
-      padding: 0;
-    }
+	& > div {
+		--flow-space: 1.5em;
 
-    & > div:last-child {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: var(--size-fluid-1);
-      font-size: 1.5em;
+		& h2 {
+			font-size: var(--font-size-fluid-2);
+		}
 
-      & > * {
-        max-inline-size: 100%;
-        inline-size: 100%;
-      }
+		& summary {
+			padding: 0;
+		}
 
-      & > button {
-        block-size: fit-content;
-        margin-top: var(--size-3);
-      }
+		& > div:last-child {
+			align-items: flex-end;
+			display: flex;
+			flex-wrap: wrap;
+			font-size: 1.5em;
+			gap: var(--size-fluid-1);
+			justify-content: space-between;
 
-      & label {
-        color: var(--neutral-6);
-        font-size: 0.75em;
-        font-weight: var(--font-weight-body-bold);
-        text-transform: uppercase;
-      }
+			& > * {
+				inline-size: 100%;
+				max-inline-size: 100%;
+			}
 
-      & input {
-        padding-inline: 1ch;
-        padding-block: 0.75ch;
-        line-height: 1;
-      }
-    }
-  }
+			& > button {
+				block-size: fit-content;
+				margin-top: var(--size-3);
+			}
+
+			& label {
+				color: var(--neutral-6);
+				font-size: 0.75em;
+				font-weight: var(--font-weight-body-bold);
+				text-transform: uppercase;
+			}
+
+			& input {
+				line-height: 1;
+				padding-block: 0.75ch;
+				padding-inline: 1ch;
+			}
+		}
+	}
 }

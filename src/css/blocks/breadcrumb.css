@@ -1,45 +1,45 @@
 sl-breadcrumb {
-  &::part(base) {
-    display: inline-flex;
-  }
+	&::part(base) {
+		display: inline-flex;
+	}
 
-  & sl-breadcrumb-item {
-    &::part(base) {
-      white-space: revert;
-    }
+	& sl-breadcrumb-item {
+		&::part(base) {
+			white-space: revert;
+		}
 
-    &::part(label) {
-      color: var(--link);
-      outline-offset: 0px;
-      transition-property: color;
-      transition-duration: 145ms;
-      transition-timing-function: var(--ease-2);
+		&::part(label) {
+			color: var(--link);
+			outline-offset: 0;
+			transition-duration: 145ms;
+			transition-property: color;
+			transition-timing-function: var(--ease-2);
 
-      &:hover {
-        color: var(--link-visited);
-      }
+			&:hover {
+				color: var(--link-visited);
+			}
 
-      &:focus-visible {
-        outline: 2px solid var(--link);
-        outline-offset: var(--size-1);
-      }
+			&:focus-visible {
+				outline: 2px solid var(--link);
+				outline-offset: var(--size-1);
+			}
 
-      @media (prefers-reduced-motion: no-preference) {
-        transition-property: color, outline-offset;
-      }
-    }
+			@media (prefers-reduced-motion: no-preference) {
+				transition-property: color, outline-offset;
+			}
+		}
 
-    &:not([data-state="active"])::part(label):not(:hover, :focus-visible) {
-      text-decoration: underline;
-    }
+		&:not([data-state="active"])::part(label):not(:hover, :focus-visible) {
+			text-decoration: underline;
+		}
 
-    &[data-state="active"]::part(label) {
-      font-weight: var(--font-weight-bold, 622);
-    }
+		&[data-state="active"]::part(label) {
+			font-weight: var(--font-weight-bold, 622);
+		}
 
-    &::part(prefix),
-    &::part(separator) {
-      color: var(--accent-text);
-    }
-  }
+		&::part(prefix),
+		&::part(separator) {
+			color: var(--accent-text);
+		}
+	}
 }

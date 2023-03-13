@@ -1,49 +1,51 @@
 .toc {
-  --flow-space: 0.5em;
-  margin-block-start: var(--size-3);
-  margin-block-end: var(--size-2);
+	--flow-space: 0.5em;
 
-  & > ol {
-    padding-left: var(--size-5);
-    list-style-type: disc;
+	margin-block-end: var(--size-2);
+	margin-block-start: var(--size-3);
 
-    & ol {
-      list-style-type: circle;
+	& > ol {
+		list-style-type: disc;
+		padding-left: var(--size-5);
 
-      & ol {
-        list-style-type: square;
-      }
-    }
-  }
+		& ol {
+			list-style-type: circle;
+
+			& ol {
+				list-style-type: square;
+			}
+		}
+	}
 }
 
 .toc-container {
-  margin-inline: auto;
-  & details {
-    & summary {
-      align-items: center;
-      gap: var(--size-3);
+	margin-inline: auto;
 
-      & sl-icon {
-        transition: transform 300ms var(--ease-out-4);
-        color: var(--accent-solid);
-      }
+	& details {
+		& summary {
+			align-items: center;
+			gap: var(--size-3);
 
-      & h2 {
-        font-size: var(--font-size-fluid-1);
-      }
+			& sl-icon {
+				color: var(--accent-solid);
+				transition: transform 300ms var(--ease-out-4);
+			}
 
-      &:is(:hover, :focus-visible) sl-icon {
-        color: var(--accent-solid-hover);
-      }
+			& h2 {
+				font-size: var(--font-size-fluid-1);
+			}
 
-      &::-webkit-details-marker {
-        display: none;
-      }
-    }
+			&:is(:hover, :focus-visible) sl-icon {
+				color: var(--accent-solid-hover);
+			}
 
-    &[open] summary sl-icon {
-      transform: rotate(90deg);
-    }
-  }
+			&::-webkit-details-marker {
+				display: none;
+			}
+		}
+
+		&[open] summary sl-icon {
+			transform: rotate(90deg);
+		}
+	}
 }

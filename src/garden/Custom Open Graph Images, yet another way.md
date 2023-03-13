@@ -35,6 +35,7 @@ Honestly, the main reason I kept on putting off making custom Open Graph images 
 Luckily, unlike most other custom Open Graph image posts, we don't have to do that as I'm using the [11ty Screenshot API](https://github.com/11ty/api-screenshot) to screenshot the `og/` pages. As far as I can tell, it's pretty similar to the way most other people do it, a serverless function that uses Puppeteer (headless Chrome) to open a link and take a screenshot.
 
 Here's the meta tags:
+
 ```jinja2
 <meta name="twitter:card" content="summary_large_image">
 <meta property="twitter:image" content="https://v1.screenshot.11ty.dev/https%3A%2F%2Fellyloel.com%2Fog{{ "{{ ogUrl | urlencode }}" }}/opengraph/">
@@ -45,26 +46,29 @@ Here's the meta tags:
 ```
 
 This is the link:
+
 ```jinja2
 https://v1.screenshot.11ty.dev/https%3A%2F%2Fellyloel.com%2Fog{{ "{{ ogUrl | urlencode }}" }}/opengraph/
 ```
 
 As you can see, we're encoding `ogUrl` which is the current page's URL. Here's an example of what that looks like for this page:
+
 ```txt
 https://v1.screenshot.11ty.dev/https%3A%2F%2Fellyloel.com%2Fog%2Fgarden%2Fcustom-open-graph-images-yet-another-way%2F/opengraph/
 ```
 
 The 11ty Screenshot API URL format is: `https://v1.screenshot.11ty.dev/:url/:size/`.
-(*if you want to see all the options and details, check out their docs*).
+(_if you want to see all the options and details, check out their docs_).
 
 The size I'm using is `opengraph`, this just means that the screenshot will always be 1200×630, the best(?) size for Open Graph images.
 
 As I mentioned earlier and as stated in the docs, the URL "must be URI encoded." This is what it looks like decoded:
+
 ```txt
 https://ellyloel.com/og/garden/custom-open-graph-images-yet-another-way/
 ```
 
-Feel free to go to that URL if you want, as I've explained, it is literally the HTML version of the Open Graph image for this page. I think Ideally I wouldn't actually want to have this be an accessible page, but it wouldn't work if it wasn't as the 11ty Screenshot API needs to be able to go to it. Soooo.... :woman_shrugging: 
+Feel free to go to that URL if you want, as I've explained, it is literally the HTML version of the Open Graph image for this page. I think Ideally I wouldn't actually want to have this be an accessible page, but it wouldn't work if it wasn't as the 11ty Screenshot API needs to be able to go to it. Soooo.... :woman_shrugging:
 
 One other idea I did have was creating a new site that scraped the pages on this site and created the Open Graph HTML pages, but that feels overly complex and kinda stupid? Idk, that could be another option if you don't like the extra pages on your site.
 

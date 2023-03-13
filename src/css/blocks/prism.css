@@ -6,282 +6,258 @@
  */
 
 [class*="light"] {
-  & :is(code, pre)[class*="language-"] {
-    color: #403f53;
-    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    word-wrap: normal;
-    line-height: 1.5;
+	& :is(code, pre)[class*="language-"] {
+		color: #403f53;
+		font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+		hyphens: none;
+		line-height: 1.5;
+		tab-size: 4;
+		text-align: left;
+		white-space: pre;
+		word-break: normal;
+		word-spacing: normal;
+		word-wrap: normal;
+	}
 
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
+	& :is(pre, code)[class*="language-"]::selection,
+	& :is(pre, code)[class*="language-"] ::selection {
+		background: #e0e0e0;
+		text-shadow: none;
+	}
 
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-  }
+	@media print {
+		& :is(code, pre)[class*="language-"] {
+			text-shadow: none;
+		}
+	}
 
-  & :is(pre, code)[class*="language-"]::-moz-selection,
-  & :is(pre, code)[class*="language-"] ::-moz-selection {
-    text-shadow: none;
-    background: #e0e0e0;
-  }
+	/* Code blocks */
+	& :is(pre[class*="language-"]) {
+		margin: 0.5em 0;
+		overflow: auto;
+		padding: 1em;
+	}
 
-  & :is(pre, code)[class*="language-"]::selection,
-  & :is(pre, code)[class*="language-"] ::selection {
-    text-shadow: none;
-    background: #e0e0e0;
-  }
+	& :not(pre) > code[class*="language-"],
+	& pre[class*="language-"] {
+		background: #fbfbfb;
+		color: white;
+	}
 
-  @media print {
-    & :is(code, pre)[class*="language-"] {
-      text-shadow: none;
-    }
-  }
+	& :not(pre) > code[class*="language-"] {
+		border-radius: 0.3em;
+		padding: 0.1em;
+		white-space: normal;
+	}
 
-  /* Code blocks */
-  & :is(pre[class*="language-"]) {
-    padding: 1em;
-    margin: 0.5em 0;
-    overflow: auto;
-  }
+	& .token:is(.comment, .prolog, .cdata) {
+		color: rgb(152 159 177);
+	}
 
-  & :not(pre) > code[class*="language-"],
-  & pre[class*="language-"] {
-    color: white;
-    background: #fbfbfb;
-  }
+	& :is(.token.punctuation) {
+		color: rgb(153 76 195);
+	}
 
-  & :not(pre) > code[class*="language-"] {
-    padding: 0.1em;
-    border-radius: 0.3em;
-    white-space: normal;
-  }
+	& :is(.namespace) {
+		color: rgb(12 150 155);
+	}
 
-  & .token:is(.comment, .prolog, .cdata) {
-    color: rgb(152, 159, 177);
-  }
+	& :is(.token.deleted) {
+		color: rgb(239 83 80 / 56%);
+	}
 
-  & :is(.token.punctuation) {
-    color: rgb(153, 76, 195);
-  }
+	& .token:is(.symbol, .operator, .keyword, .property) {
+		color: rgb(12 150 155);
+	}
 
-  & :is(.namespace) {
-    color: rgb(12, 150, 155);
-  }
+	& :is(.token.tag) {
+		color: rgb(153 76 195);
+	}
 
-  & :is(.token.deleted) {
-    color: rgba(239, 83, 80, 0.56);
-  }
+	& :is(.token.boolean) {
+		color: rgb(188 84 84);
+	}
 
-  & .token:is(.symbol, .operator, .keyword, .property) {
-    color: rgb(12, 150, 155);
-  }
+	& :is(.token.number) {
+		color: rgb(170 9 130);
+	}
 
-  & :is(.token.tag) {
-    color: rgb(153, 76, 195);
-  }
+	& .token:is(.constant, .builtin, .string, .url, .entity, .char),
+	& :is(.language-css, .style) .token.string {
+		color: rgb(72 118 214);
+	}
 
-  & :is(.token.boolean) {
-    color: rgb(188, 84, 84);
-  }
+	& .token:is(.selector, .function, .doctype) {
+		color: rgb(153 76 195);
+	}
 
-  & :is(.token.number) {
-    color: rgb(170, 9, 130);
-  }
+	& .token:is(.attr-name, .inserted) {
+		color: rgb(72 118 214);
+	}
 
-  & .token:is(.constant, .builtin, .string, .url, .entity, .char),
-  & :is(.language-css, .style) .token.string {
-    color: rgb(72, 118, 214);
-  }
+	& .token:is(.class-name, .atrule, .attr-value) {
+		color: rgb(17 17 17);
+	}
 
-  & .token:is(.selector, .function, .doctype) {
-    color: rgb(153, 76, 195);
-  }
+	& .token:is(.regex, .important, .variable) {
+		color: rgb(201 103 101);
+	}
 
-  & .token:is(.attr-name, .inserted) {
-    color: rgb(72, 118, 214);
-  }
+	& .token:is(.important, .bold) {
+		font-weight: bold;
+	}
 
-  & .token:is(.class-name, .atrule, .attr-value) {
-    color: rgb(17, 17, 17);
-  }
-
-  & .token:is(.regex, .important, .variable) {
-    color: rgb(201, 103, 101);
-  }
-
-  & .token:is(.important, .bold) {
-    font-weight: bold;
-  }
-
-  & :is(.token.italic) {
-  }
+	/* stylelint-disable-next-line block-no-empty */
+	& :is(.token.italic) {
+	}
 }
 
 [class*="dark"] {
-  & :is(code, pre)[class*="language-"] {
-    color: #d6deeb;
-    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    word-wrap: normal;
-    line-height: 1.5;
+	& :is(code, pre)[class*="language-"] {
+		color: #d6deeb;
+		font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+		hyphens: none;
+		line-height: 1.5;
+		tab-size: 4;
+		text-align: left;
+		white-space: pre;
+		word-break: normal;
+		word-spacing: normal;
+		word-wrap: normal;
+	}
 
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
+	& :is(pre, code)[class*="language-"]::selection,
+	& :is(pre, code)[class*="language-"] ::selection {
+		background: rgb(29 59 83 / 99%);
+		text-shadow: none;
+	}
 
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-  }
+	@media print {
+		& :is(code, pre)[class*="language-"] {
+			text-shadow: none;
+		}
+	}
 
-  & :is(pre, code)[class*="language-"]::-moz-selection,
-  & :is(pre, code)[class*="language-"] ::-moz-selection {
-    text-shadow: none;
-    background: rgba(29, 59, 83, 0.99);
-  }
+	/* Code blocks */
+	& :is(pre[class*="language-"]) {
+		margin: 0.5em 0;
+		overflow: auto;
+		padding: 1em;
+	}
 
-  & :is(pre, code)[class*="language-"]::selection,
-  & :is(pre, code)[class*="language-"] ::selection {
-    text-shadow: none;
-    background: rgba(29, 59, 83, 0.99);
-  }
+	& :not(pre) > code[class*="language-"],
+	& pre[class*="language-"] {
+		background: #011627;
+		color: white;
+	}
 
-  @media print {
-    & :is(code, pre)[class*="language-"] {
-      text-shadow: none;
-    }
-  }
+	& :not(pre) > code[class*="language-"] {
+		border-radius: 0.3em;
+		padding: 0.1em;
+		white-space: normal;
+	}
 
-  /* Code blocks */
-  & :is(pre[class*="language-"]) {
-    padding: 1em;
-    margin: 0.5em 0;
-    overflow: auto;
-  }
+	& .token:is(.comment, .prolog, .cdata) {
+		color: rgb(99 119 119);
+	}
 
-  & :not(pre) > code[class*="language-"],
-  & pre[class*="language-"] {
-    color: white;
-    background: #011627;
-  }
+	& :is(.token.punctuation) {
+		color: rgb(199 146 234);
+	}
 
-  & :not(pre) > code[class*="language-"] {
-    padding: 0.1em;
-    border-radius: 0.3em;
-    white-space: normal;
-  }
+	& :is(.namespace) {
+		color: rgb(178 204 214);
+	}
 
-  & .token:is(.comment, .prolog, .cdata) {
-    color: rgb(99, 119, 119);
-  }
+	& :is(.token.deleted) {
+		color: rgb(239 83 80 / 56%);
+	}
 
-  & :is(.token.punctuation) {
-    color: rgb(199, 146, 234);
-  }
+	& .token:is(.symbol, .property) {
+		color: rgb(128 203 196);
+	}
 
-  & :is(.namespace) {
-    color: rgb(178, 204, 214);
-  }
+	& .token:is(.tag, .operator, .keyword) {
+		color: rgb(127 219 202);
+	}
 
-  & :is(.token.deleted) {
-    color: rgba(239, 83, 80, 0.56);
-  }
+	& :is(.token.boolean) {
+		color: rgb(255 88 116);
+	}
 
-  & .token:is(.symbol, .property) {
-    color: rgb(128, 203, 196);
-  }
+	& :is(.token.number) {
+		color: rgb(247 140 108);
+	}
 
-  & .token:is(.tag, .operator, .keyword) {
-    color: rgb(127, 219, 202);
-  }
+	& .token:is(.constant, .function, .builtin, .char) {
+		color: rgb(130 170 255);
+	}
 
-  & :is(.token.boolean) {
-    color: rgb(255, 88, 116);
-  }
+	& .token:is(.selector, .doctype) {
+		color: rgb(199 146 234);
+	}
 
-  & :is(.token.number) {
-    color: rgb(247, 140, 108);
-  }
+	& .token:is(.attr-name, .inserted) {
+		color: rgb(173 219 103);
+	}
 
-  & .token:is(.constant, .function, .builtin, .char) {
-    color: rgb(130, 170, 255);
-  }
+	& .token:is(.constant, .builtin, .string, .url, .entity, .char),
+	& :is(.language-css, .style) .token.string {
+		color: rgb(173 219 103);
+	}
 
-  & .token:is(.selector, .doctype) {
-    color: rgb(199, 146, 234);
-  }
+	& .token:is(.class-name, .atrule, .attr-value) {
+		color: rgb(255 203 139);
+	}
 
-  & .token:is(.attr-name, .inserted) {
-    color: rgb(173, 219, 103);
-  }
+	& .token:is(.regex, .important, .variable) {
+		color: rgb(214 222 235);
+	}
 
-  & .token:is(.constant, .builtin, .string, .url, .entity, .char),
-  & :is(.language-css, .style) .token.string {
-    color: rgb(173, 219, 103);
-  }
+	& .token:is(.important, .bold) {
+		font-weight: bold;
+	}
 
-  & .token:is(.class-name, .atrule, .attr-value) {
-    color: rgb(255, 203, 139);
-  }
-
-  & .token:is(.regex, .important, .variable) {
-    color: rgb(214, 222, 235);
-  }
-
-  & .token:is(.important, .bold) {
-    font-weight: bold;
-  }
-
-  & :is(.token.italic) {
-  }
+	/* stylelint-disable-next-line block-no-empty */
+	& :is(.token.italic) {
+	}
 }
 
 @media screen and (-ms-high-contrast: active) and (forced-colors: active) {
-  :is(code, pre)[class*="language-"] {
-    color: windowText;
-    background: window;
-  }
+	:is(code, pre)[class*="language-"] {
+		background: window;
+		color: windowText;
+	}
 
-  & :not(pre) > code[class*="language-"],
-  & pre[class*="language-"] {
-    background: window;
-  }
+	& :not(pre) > code[class*="language-"],
+	& pre[class*="language-"] {
+		background: window;
+	}
 
-  :is(.token.important) {
-    background: highlight;
-    color: window;
-    font-weight: normal;
-  }
+	:is(.token.important) {
+		background: highlight;
+		color: window;
+		font-weight: normal;
+	}
 
-  .token:is(.atrule, .attr-value, .function, .keyword, .operator, .selector) {
-    font-weight: bold;
-  }
+	.token:is(.atrule, .attr-value, .function, .keyword, .operator, .selector) {
+		font-weight: bold;
+	}
 
-  .token:is(
-      .attr-value,
-      .comment,
-      .doctype,
-      .function,
-      .keyword,
-      .operator,
-      .property,
-      .string
-    ) {
-    color: highlight;
-  }
+	.token:is(
+			.attr-value,
+			.comment,
+			.doctype,
+			.function,
+			.keyword,
+			.operator,
+			.property,
+			.string
+		) {
+		color: highlight;
+	}
 
-  .token:is(.attr-value, .url) {
-    font-weight: normal;
-  }
+	.token:is(.attr-value, .url) {
+		font-weight: normal;
+	}
 }
