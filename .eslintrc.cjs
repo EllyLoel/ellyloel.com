@@ -10,6 +10,7 @@ module.exports = {
 		"sort-imports": "error",
 		"sort-keys": "error",
 		"sort-vars": "error",
+		"no-prototype-builtins": "false",
 	},
 	env: {
 		node: true,
