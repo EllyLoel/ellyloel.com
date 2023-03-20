@@ -2,7 +2,6 @@
 
 // External imports
 require("dotenv").config();
-const slinkity = require("slinkity");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxhighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -18,7 +17,6 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addPlugin(pluginNavigation);
 	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addPlugin(pluginSyntaxhighlight);
-	eleventyConfig.addPlugin(slinkity.plugin, slinkity.defineConfig({}));
 	eleventyConfig.addPlugin(pluginNestingToc, {
 		tags: ["h2", "h3", "h4", "h5", "h6"],
 		wrapper: "nav",
@@ -143,7 +141,9 @@ module.exports = (eleventyConfig) => {
 	});
 
 	// Copy/pass-through files
-	eleventyConfig.addPassthroughCopy("public");
+	eleventyConfig.addPassthroughCopy({ public: "/" });
+	eleventyConfig.addPassthroughCopy({ "src/css": "css" });
+	eleventyConfig.addPassthroughCopy({ "src/js": "js" });
 
 	return {
 		dir: {
