@@ -31,20 +31,12 @@
 			padding-inline: var(--size-8);
 			transition: box-shadow 0.3s var(--ease-1), opacity 0.5s var(--ease-2);
 
-      :is(&, &.share > p) {
-        max-inline-size: unset;
-        font-size: var(--font-size-fluid-1);
-      }
+			:is(&, &.share > p) {
+				font-size: var(--font-size-fluid-1);
+				max-inline-size: unset;
+			}
 
-      border-radius: var(--radius-3);
-      border-color: var(--accent-bg-hover);
-      border-width: var(--border-size-2);
-
-      --shadow-offset: var(--size-1);
-      box-shadow: var(--shadow-offset) var(--shadow-offset) 0 0
-        var(--accent-bg-hover);
-      transition: box-shadow 0.3s var(--ease-1), opacity 0.5s var(--ease-2);
-			@nest :is(&, &.share > p) {
+			:is(&, &.share > p) {
 				font-size: var(--font-size-fluid-1);
 				max-inline-size: unset;
 			}
