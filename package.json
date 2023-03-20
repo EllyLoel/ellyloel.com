@@ -78,6 +78,7 @@
 		"markdown-it-wikilinks": "^1.2.0",
 		"open-props": "^1.5.3",
 		"postcss": "^8.4.21",
+		"postcss-import": "^15.1.0",
 		"postcss-jit-props": "^1.0.7",
 		"postcss-preset-env": "^8.0.1",
 		"prettier": "^2.6.1",

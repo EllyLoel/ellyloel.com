@@ -2,7 +2,7 @@
 @layer reset, vars, base, blocks, utilities;
 
 /* Reset */
-@import url("/@root/node_modules/cssremedy/css/remedy.css") layer(reset);
+@import url("/node_modules/cssremedy/css/remedy.css") layer(reset);
 @import url("./reset.css") layer(reset);
 
 /* Fonts */
