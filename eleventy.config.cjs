@@ -6,7 +6,8 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxhighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNestingToc = require("eleventy-plugin-nesting-toc");
-const pluginFaviconsPlugin = require("eleventy-plugin-gen-favicons");
+const pluginFavicons = require("eleventy-plugin-gen-favicons");
+const pluginVite = require("@11ty/eleventy-plugin-vite");
 const pluginWebmentions = require("eleventy-plugin-webmentions");
 
 // Internal imports
@@ -22,7 +23,8 @@ module.exports = (eleventyConfig) => {
 		wrapper: "nav",
 		wrapperClass: "[ toc ][ recursive-flow ]",
 	});
-	eleventyConfig.addPlugin(pluginFaviconsPlugin);
+	eleventyConfig.addPlugin(pluginFavicons);
+	eleventyConfig.addPlugin(pluginVite);
 	eleventyConfig.addPlugin(pluginWebmentions, {
 		domain: metadata.domain,
 		token: process.env.WEBMENTION_IO_API_KEY,
