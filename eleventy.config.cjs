@@ -119,22 +119,23 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addFilter("unique", require("./src/_11ty/filters/unique.cjs"));
 
 	// Shortcodes
-	eleventyConfig.addPairedNunjucksShortcode(
+	eleventyConfig.addPairedShortcode(
+		"figure",
+		require("./src/_11ty/shortcodes/figure.cjs")
+	);
+	eleventyConfig.addPairedShortcode(
 		"feedBlock",
 		require("./src/_11ty/shortcodes/feedBlock.cjs")
 	);
-	eleventyConfig.addNunjucksAsyncShortcode(
+	eleventyConfig.addShortcode(
 		"feedItem",
 		require("./src/_11ty/shortcodes/feedItem.cjs")
 	);
-	eleventyConfig.addNunjucksShortcode(
+	eleventyConfig.addShortcode(
 		"gh_edit",
 		require("./src/_11ty/shortcodes/gh_edit.cjs")
 	);
-	eleventyConfig.addAsyncShortcode(
-		"svg",
-		require("./src/_11ty/shortcodes/svg.cjs")
-	);
+	eleventyConfig.addShortcode("svg", require("./src/_11ty/shortcodes/svg.cjs"));
 
 	process.on("unhandledRejection", (error) => {
 		console.error(error); // This prints error with stack included (as for normal errors)
