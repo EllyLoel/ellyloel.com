@@ -36,11 +36,6 @@
 				max-inline-size: unset;
 			}
 
-			:is(&, &.share > p) {
-				font-size: var(--font-size-fluid-1);
-				max-inline-size: unset;
-			}
-
 			&:is(:hover, :focus-within) {
 				--shadow-offset: var(--size-2);
 
