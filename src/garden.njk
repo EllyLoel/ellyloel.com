@@ -5,6 +5,8 @@ eleventyNavigation:
   key: Digital garden
   parent: Writing
   order: 1
+eleventyImport:
+  collections: ["garden"]
 ---
 
 <p>A collection of my ideas that I'm nurturing out in the open. The notes range from seedlings, which are fresh out of my mind, to budding, which are developing, to evergreen, which are polished ideas.</p>
@@ -49,21 +51,21 @@ eleventyNavigation:
 {%- endfor -%}
 
 <sl-select class="[ stage ]" placeholder="All growth stages" label="Filter by growth stage" size="large" multiple clearable>
-  <sl-menu-item value="seedling">
+  <sl-option value="seedling">
     <sl-icon slot="prefix" class="[ icon ]" library="fa" name="fas-seedling"></sl-icon>
     Seedling
     <sl-badge slot="suffix" variant="neutral" pill>{{ seedlingCount }}</sl-badge>
-  </sl-menu-item>
-  <sl-menu-item value="budding">
+  </sl-option>
+  <sl-option value="budding">
     <sl-icon slot="prefix" class="[ icon ]" library="fa" name="fas-spa"></sl-icon>
     Budding
     <sl-badge slot="suffix" variant="neutral" pill>{{ buddingCount }}</sl-badge>
-  </sl-menu-item>
-  <sl-menu-item value="evergreen">
+  </sl-option>
+  <sl-option value="evergreen">
     <sl-icon slot="prefix" class="[ icon ]" library="fa" name="fas-tree"></sl-icon>
     Evergreen
     <sl-badge slot="suffix" variant="neutral" pill>{{ evergreenCount }}</sl-badge>
-  </sl-menu-item>
+  </sl-option>
 </sl-select>
 
 <ul class="[ feed ]">

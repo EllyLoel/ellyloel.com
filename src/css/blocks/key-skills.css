@@ -1,13 +1,13 @@
 .key-skills {
-  & li {
-    line-height: 1;
+	& li {
+		line-height: 1;
 
-    & sl-badge {
-      vertical-align: middle;
+		& sl-badge {
+			vertical-align: middle;
 
-      &::part(base) {
-        font-size: var(--font-size-1);
-      }
-    }
-  }
+			&::part(base) {
+				font-size: var(--font-size-1);
+			}
+		}
+	}
 }

@@ -1,39 +1,40 @@
 sl-select.stage {
-  display: none;
+	display: none;
+	max-inline-size: var(--size-content-2);
 
-  @supports selector(a:has(b)) {
-    display: block;
-  }
+	@supports selector(a:has(b)) {
+		display: block;
+	}
 
-  &::part(control) {
-    border-color: var(--accent-bg-hover);
-    border-radius: var(--radius-3);
-    border-width: var(--border-size-2);
-    --shadow-offset: var(--size-1);
-    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 0
-      var(--accent-bg-hover);
-    min-height: calc(var(--sl-input-height-large) + 2px);
+	&::part(combobox) {
+		--shadow-offset: var(--size-1);
 
-    &:is(:hover, :focus-visible) {
-      --shadow-offset: var(--size-2);
-      transition: box-shadow 0.15s var(--ease-1);
-    }
+		border-color: var(--accent-bg-hover);
+		border-radius: var(--radius-3);
+		border-width: var(--border-size-2);
+		box-shadow: var(--shadow-offset) var(--shadow-offset) 0 0
+			var(--accent-bg-hover);
+		min-height: calc(var(--sl-input-height-large) + 2px);
 
-    &:focus-visible {
-      outline: var(--sl-focus-ring);
-      outline-offset: -3px;
-    }
-  }
+		&:is(:hover, :focus-visible) {
+			--shadow-offset: var(--size-2);
 
-  &::part(tag__base) {
-    border-radius: calc(var(--radius-3) - 4px);
-  }
+			transition: box-shadow 0.15s var(--ease-1);
+		}
 
-  max-inline-size: var(--size-content-2);
+		&:focus-visible {
+			outline: var(--sl-focus-ring);
+			outline-offset: -3px;
+		}
+	}
 
-  & sl-menu-item {
-    &::part(base) {
-      gap: var(--size-1);
-    }
-  }
+	&::part(tag) {
+		--sl-input-border-radius-large: calc(var(--radius-3) - 4px);
+	}
+
+	& sl-option {
+		&::part(base) {
+			gap: var(--size-1);
+		}
+	}
 }

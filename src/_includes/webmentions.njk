@@ -1,0 +1,71 @@
+{%- set postMentions = webmentions | webmentionsForPage -%}
+<article id="webmentions" class="[ webmentions ][ flow ]">
+	{%- ifAsync postMentions.likes.length -%}
+		{%- if postMentions.likes.length === 1 -%}
+			{%- set facepileMentionsHeading -%}
+				{{ postMentions.likes.length }} Like
+			{%- endset -%}
+		{%- elif (postMentions.likes.length > 1) -%}
+			{%- set facepileMentionsHeading -%}
+				{{ postMentions.likes.length }} Likes
+			{%- endset -%}
+		{%- endif -%}
+		{%- set facepileMentions = postMentions.likes -%}
+		{%- include "webmentions-facepile.njk" -%}
+	{%- endif -%}
+	{%- ifAsync postMentions.reposts.length -%}
+		{%- if postMentions.reposts.length === 1 -%}
+			{%- set facepileMentionsHeading -%}
+				{{ postMentions.reposts.length }} Repost
+			{%- endset -%}
+		{%- elif (postMentions.reposts.length > 1) -%}
+			{%- set facepileMentionsHeading -%}
+				{{ postMentions.reposts.length }} Reposts
+			{%- endset -%}
+		{%- endif -%}
+		{%- set facepileMentions = postMentions.reposts -%}
+		{%- include "webmentions-facepile.njk" -%}
+	{%- endif -%}
+	{%- if postMentions.comments.length -%}
+		<details {% if page.url !== "/" %}open{% endif %}>
+			<summary>
+				{%- if postMentions.comments.length === 1 -%}
+					{{ postMentions.comments.length }} Comment
+					{%- elif (postMentions.comments.length > 1) -%}
+					{{ postMentions.comments.length }} Comments
+					{%- endif -%}
+			</summary>
+			<ol class="[ flow ]">
+				{%- asyncEach mention in postMentions.comments -%}
+				{%- include "webmention.njk" -%}
+				{%- endeach -%}
+			</ol>
+		</details>
+	{%- endif -%}
+	<footer class="[ webmentions-header ][ flow ]">
+		<form action="https://webmention.io/www.ellyloel.com/webmention" method="post" class="[ webmentions-form ][ flow ]">
+			<label for="form-webmention-source">
+				Have you published your own post mentioning this one? Let me know the URL:
+			</label>
+			<div class="[ input-wrapper ]">
+				<input
+					id="form-webmention-source"
+					type="url"
+					name="source"
+					placeholder="https://example.com"
+					required="required"
+					class="[ input ]">
+				<input type="hidden" name="target" value="{{ metadata.url }}{{ page.url }}">
+				<button type="submit">Send</button>
+			</div>
+		</form>
+		<small>
+			Powered by
+			<a href="https://indieweb.org/Webmention">Webmentions</a>
+			via
+			<a href="https://webmention.io">Webmention.io</a>
+			and
+			<a href="https://brid.gy">Bridgy</a>
+		</small>
+	</footer>
+</article>

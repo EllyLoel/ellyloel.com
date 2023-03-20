@@ -1,30 +1,31 @@
 .skip-link {
-  position: fixed;
-  inset-block-start: var(--size-3);
-  /* inset-inline-start: 50%; */
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: var(--layer-5);
-  background-color: var(--accent-text);
-  color: var(--accent-bg);
-  padding: var(--size-2) var(--size-4);
-  border-radius: var(--radius-round);
+	background-color: var(--accent-text);
+	border-radius: var(--radius-round);
+	color: var(--accent-bg);
+	inset-block-start: var(--size-3);
 
-  @supports (backdrop-filter: blur(8px)) {
-    color: revert;
-    background-color: lch(68.002% 55.309 304.53 / 12.5%);
-    backdrop-filter: blur(8px);
-  }
+	/* inset-inline-start: 50%; */
+	left: 50%;
+	padding: var(--size-2) var(--size-4);
+	position: fixed;
+	transform: translateX(-50%);
+	z-index: var(--layer-5);
 
-  &:not(:focus) {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: auto;
-    margin: 0;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    white-space: nowrap;
-  }
+	@supports (backdrop-filter: blur(8px)) {
+		backdrop-filter: blur(8px);
+		background-color: lch(68.002% 55.309 304.53deg / 12.5%);
+		color: revert;
+	}
+
+	&:not(:focus) {
+		border: 0;
+		clip: rect(0 0 0 0);
+		height: auto;
+		margin: 0;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		white-space: nowrap;
+		width: 1px;
+	}
 }

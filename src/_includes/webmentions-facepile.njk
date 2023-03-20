@@ -1,0 +1,15 @@
+<div class="[ facepile ]">
+	<h3>
+		{{ facepileMentionsHeading }}
+	</h3>
+	{% for facepileMention in facepileMentions %}
+		<a href="{{ facepileMention.author.url }}" class="[ face-link ]">
+			<sl-avatar
+				class="[ author-photo-image ]"
+				image="{{ facepileMention.author.photo | imageLink }}"
+				initials="{{ mention.author.name[0] }}"
+				label="{{ facepileMention.author.name }}"
+			></sl-avatar>
+		</a>
+	{% endfor %}
+</div>

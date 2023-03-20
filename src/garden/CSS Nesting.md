@@ -14,11 +14,13 @@ modified: 2022-12-16
 > - **Option 3:** Brackets: In order to avoid the double-syntax or extra clutter involved with the `@nest` proposals, [Miriam Suzanne](https://www.miriamsuzanne.com/) and [Elika Etemad](https://twitter.com/fantasai) proposed an [alternative syntax](https://github.com/w3c/csswg-drafts/issues/4748#issuecomment-924118287) that instead relies on additional curly-brackets. This provides syntax clarity, with only two extra characters, and no new at-rules. It also allows nested rules to be grouped by the type of nesting required, as a way of simplifying multiple similarly nested selectors.
 
 ### Examples
+
 #### **Option 1:** @nest
+
 ```css
 .foo {
 	color: #111;
-	
+
 	& .bar {
 		color: #eee;
 	}
@@ -26,10 +28,11 @@ modified: 2022-12-16
 ```
 
 #### **Option 2:** @nest always
+
 ```css
 .foo {
 	color: #111;
-	
+
 	@nest & .bar {
 		color: #eee;
 	}
@@ -37,11 +40,12 @@ modified: 2022-12-16
 ```
 
 #### **Option 3:** brackets
+
 ```css
 .foo {
 	color: #111;
-	
-	{
+
+	 {
 		& .bar {
 			color: #eee;
 		}
@@ -50,7 +54,8 @@ modified: 2022-12-16
 ```
 
 ### Results
-[Option 1 won the survey with 87% of the vote](https://developer.chrome.com/blog/help-css-nesting-results/) ***but*** [option 3 won out in the *extensive* debate the CSS Working Group](https://front-end.social/@jensimmons/109521266937294554).
+
+[Option 1 won the survey with 87% of the vote](https://developer.chrome.com/blog/help-css-nesting-results/) **_but_** [option 3 won out in the _extensive_ debate the CSS Working Group](https://front-end.social/@jensimmons/109521266937294554).
 
 ## Second nesting syntax survey
 
@@ -61,11 +66,13 @@ modified: 2022-12-16
 > - **Option 5:** Top-level @nest: Nested style rules are declared in a dedicated, independent at-rule that accepts only style rules. Declarations can be nested using & { .. }.
 
 ### Examples
+
 #### Option 3: Non-letter start
+
 ```css
 article {
 	font-family: avenir;
-	
+
 	& aside {
 		font-size: 1rem;
 	}
@@ -73,10 +80,12 @@ article {
 ```
 
 #### Option 4: Postfix block
+
 ```css
 article {
 	font-family: avenir;
-} {
+}
+ {
 	aside {
 		font-size: 1rem;
 	}
@@ -84,12 +93,13 @@ article {
 ```
 
 #### Option 5: Top-level @nest
+
 ```css
 @nest article {
 	& {
 		font-family: avenir;
 	}
-	
+
 	aside {
 		font-size: 1rem;
 	}
@@ -97,9 +107,11 @@ article {
 ```
 
 ### Results
-The results aren't finalised yet (*I don't think*), but at the time of writing, [option 3 has 76% of the vote](https://webkit.org/blog/13607/help-choose-from-options-for-css-nesting-syntax/#:~:text=Which%20option%20is%20best%20for%20the%20future%20of%20CSS%3F).
 
-## My opinion (*the only correct one* :wink:)
+The results aren't finalised yet (_I don't think_), but at the time of writing, [option 3 has 76% of the vote](https://webkit.org/blog/13607/help-choose-from-options-for-css-nesting-syntax/#:~:text=Which%20option%20is%20best%20for%20the%20future%20of%20CSS%3F).
+
+## My opinion (_the only correct one_ :wink:)
+
 I think option 3 is the best, as do most other people going by the survey results. But with a caveat, I think the `&` should be required. This is both for parsing and for mental model consistency. Obviously, I'm no CSS spec author, but I think having the `&` be required would make things much easier for the parser. And on the side of user's mental models, not having the ambiguity around the `&` is a good idea. Though as mentioned in the first Chrome Developers post you could use a linter to enforce `&` usage.
 
 ---

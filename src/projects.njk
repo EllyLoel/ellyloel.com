@@ -6,25 +6,27 @@ eleventyNavigation:
   order: 5
 navToHtmlOptions:
   showExcerpt: true
+eleventyImport:
+  collections: ["projects"]
 ---
 
 <h2>
   Feeds
 </h2>
 <ul>
-  <li>
-    <a href="/projects.rss">
-      <abbr title="Really Simple Syndication">RSS</abbr>
-    </a>
-  </li>
-  <li>
-    <a href="/projects.atom">Atom</a>
-  </li>
-  <li>
-    <a href="/projects.json">
-      <abbr title="JavaScript Object Notation">JSON</abbr>
-    </a>
-  </li>
+	<li>
+		<a href="/projects.rss">
+			<abbr title="Really Simple Syndication">RSS</abbr>
+		</a>
+	</li>
+	<li>
+		<a href="/projects.atom">Atom</a>
+	</li>
+	<li>
+		<a href="/projects.json">
+			<abbr title="JavaScript Object Notation">JSON</abbr>
+		</a>
+	</li>
 </ul>
 
 <h2>
@@ -34,13 +36,13 @@ navToHtmlOptions:
 
 {% set projects = collections.projects | sortByCreated %}
 <ul class="[ feed ]">
-  {%- for project in projects %}
-    {% feedItem
-    title = project.data.title,
-    url = project.url,
-    excerpt = project.data.page.excerpt,
-    image = project.data.image,
-    created = project.data.created
+	{%- for project in projects %}
+		{% feedItem
+		title = project.data.title,
+		url = project.url,
+		excerpt = project.data.page.excerpt,
+		image = project.data.image,
+		created = project.data.created
  %}
-  {%- endfor %}
+	{%- endfor %}
 </ul>

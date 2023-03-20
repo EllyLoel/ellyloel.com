@@ -8,4 +8,4 @@ modified: 2022-10-18
 
 {% unfurl "https://www.youtube.com/watch?v=I6L29qSTaFA" %}
 
-This is super informative, really learning about what the *actual* differences are between ~~frameworks~~ ++libraries++ on a fundamental level.
+This is super informative, really learning about what the _actual_ differences are between ~~frameworks~~ ++libraries++ on a fundamental level.
