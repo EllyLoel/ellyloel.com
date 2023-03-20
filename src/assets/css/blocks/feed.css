@@ -1,5 +1,4 @@
 .feed {
-	column-fill: auto;
 	columns: var(--size-content-2) auto;
 
 	& > li + li {
