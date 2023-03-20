@@ -16,7 +16,7 @@ Let's take a look at how you used Raycast over the last year to become productiv
 - Most Raycast opened by day, Tuesday 1538.
 - Most Raycast opened by hour, 9am 934.
 
-![](./public/assets/img/raycast-wrapped-1.png)
+![](./src/assets/img/raycast-wrapped-1.png)
 
 ## Extensions
 
@@ -41,7 +41,7 @@ In 2021, we launched the Raycast Store and Developer API. Here is how you adopte
   9.  Dictionary, 54 opens.
   10. Kill Process, 47 opens.
 
-![](./public/assets/img/raycast-wrapped-2.png)
+![](./src/assets/img/raycast-wrapped-2.png)
 
 ## Applications
 
@@ -64,7 +64,7 @@ Raycast became the launchpad for your tools. We're proud to be part of your next
   9.  Spotify, 144 opens.
   10. Arc, 135 opens.
 
-![](./public/assets/img/raycast-wrapped-3.png)
+![](./src/assets/img/raycast-wrapped-3.png)
 
 ## Calendar
 
@@ -77,7 +77,7 @@ Take a look at an overview of your meetings, and how you spent time on video cal
 - 113 total participants.
 - 1 conference tool used, Zoom.
 
-![](./public/assets/img/raycast-wrapped-4.png)
+![](./src/assets/img/raycast-wrapped-4.png)
 
 ## Summary
 
@@ -101,4 +101,4 @@ Take a look at an overview of your meetings, and how you spent time on video cal
 - 2937 total actions.
 - Installed Raycast 423 days ago.
 
-![](./public/assets/img/raycast-wrapped-5.png)
+![](./src/assets/img/raycast-wrapped-5.png)

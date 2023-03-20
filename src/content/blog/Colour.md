@@ -1,7 +1,7 @@
 ---
 title: Colour
 stage: draft
-image: "./public/assets/img/colour-gradient.png"
+image: "./src/assets/img/colour-gradient.png"
 created: 2023-01-10
 modified: 2023-01-10
 ---
@@ -16,7 +16,7 @@ I'm Australian, so I spell it like this, colour, not like this, color. _Except w
 
 ## Fuck sRGB, all my homies hate sRGB
 
-![A meme with the text “Fuck sRGB, all my homies hate sRGB”](./public/assets/img/all-my-homies-hate-srgb.png)
+![A meme with the text “Fuck sRGB, all my homies hate sRGB”](./src/assets/img/all-my-homies-hate-srgb.png)
 
 - [ ] Explain why current colours (sRGB) are shit
 

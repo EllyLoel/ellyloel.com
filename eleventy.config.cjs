@@ -143,16 +143,14 @@ module.exports = (eleventyConfig) => {
 	});
 
 	// Copy/pass-through files
-	eleventyConfig.addPassthroughCopy({ public: "/" });
-	eleventyConfig.addPassthroughCopy({ "src/css": "css" });
-	eleventyConfig.addPassthroughCopy({ "src/js": "js" });
+	eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
 
 	return {
 		dir: {
-			data: "_data",
-			includes: "_includes",
-			input: "src",
-			layouts: "_layouts",
+			data: "../_data", // Relative to input
+			includes: "../_includes", // Relative to input
+			input: "src/content",
+			layouts: "../_layouts", // Relative to input
 			output: "_site",
 		},
 		htmlTemplateEngine: "njk",
