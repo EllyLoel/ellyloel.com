@@ -10,34 +10,44 @@ Heads up! This post is under construction, so take it with a grain of salt.
 :::
 
 ## Coming up with a layer stack
+
 My current layer setup:
+
 ```css
 @layer reset, vars, base, blocks, utilities;
 ```
 
 Miriam Suzanne shared this one in her CSS-Tricks article:
+
 ```css
 @layer reset, default, themes, patterns, layouts, components, utilities;
 ```
 
 And this one in her article "A Whole Cascade of Layers":
+
 ```css
 @layer spec, browser, reset, default, features, layout, theme;
 ```
+
 Though, as she mentions, `spec` and `browser` aren't actual layers she's creating, they're fundamental to the web.
 So it's something more like this:
+
 ```css
 @layer reset, default, features, layout, theme;
 ```
 
 ## Ways to create or put styles into layers
+
 ### Formal syntax
+
 ```css
 @layer [ <layer-name># | <layer-name>? { <stylesheet> } ]
 ```
+
 WTF does that mean though??
 
 Okay, let's break it down
+
 ```css
 @layer [
   /* 1 or more layer names */
@@ -74,17 +84,21 @@ Basically, these are the ways you can use `@layer`:
 ```
 
 ### But wait, there's more
+
 Don't forget about importing styles into a layer
+
 ```css
 @import "foo.css" layer(layer-name);
 ```
 
 There's even been [talk](https://github.com/w3c/csswg-drafts/issues/5853) of being able to set a layer when linking to a stylesheet
+
 ```html
-<link rel="stylesheet" href="foo.css" layer="layer-name">
+<link rel="stylesheet" href="foo.css" layer="layer-name" />
 ```
 
 ## References
+
 - [Improving CSS Architecture with Cascade Layers, Container Queries, Scope, by Miriam Suzanne](https://youtu.be/vK8vj1l_oRk)
 - [No more specificity issues?! (or all new ones 🤔) - A look at CSS Cascade Layers by Kevin Powell](https://youtu.be/NDNRGW-_1EE)
 - [CSS Cascade Layers: An overview of the new @layer and layer() CSS primitives by Una Kravets](https://youtu.be/ilrPpSQJb3U)

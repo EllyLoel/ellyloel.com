@@ -2,6 +2,8 @@
 layout: base-without-header
 title: Home
 description: Hi, I’m Elly. I like creating delightful, magical, and accessible art with code.
+eleventyImport:
+  collections: ["allPostTypes"]
 ---
 
 <div class="[ home ]">
@@ -128,7 +130,7 @@ description: Hi, I’m Elly. I like creating delightful, magical, and accessible
 
 	{%- feedBlock title = "Recent posts" -%}
 	{%- set recentPostTitles = [] -%}
-	{%- set recentPosts = collections.allPostTypes | sortByCreated | sliceCollection -%}
+	{%- set recentPosts = collections.allPostTypes | sortByCreated | limit(8) -%}
 	{%- for post in recentPosts -%}
 		{%- if post.data.created -%}
 			{%- set recentPostTitles = (recentPostTitles.push(post.data.title), recentPostTitles) -%}

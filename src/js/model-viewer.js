@@ -7,12 +7,12 @@ const poster = modelViewerEl.querySelector("#poster");
 modelViewerEl.shadowRoot.querySelector("#prompt").remove();
 
 modelViewerEl.addEventListener("model-visibility", () => {
-  poster.animate([{ opacity: "100%" }, { opacity: "0%" }], {
-    fill: "forwards",
-    easing: "ease",
-    duration: 500,
-  });
-  poster.onfinish = () => {
-    poster.style.display = "none";
-  };
+	poster.animate([{ opacity: "100%" }, { opacity: "0%" }], {
+		duration: 500,
+		easing: "ease",
+		fill: "forwards",
+	});
+	poster.onfinish = () => {
+		poster.style.display = "none";
+	};
 });

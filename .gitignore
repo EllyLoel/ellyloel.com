@@ -1,11 +1,9 @@
 # Generic
-package-lock.json
-node_modules/
+**/node_modules/**
 .env
 .log
 .cache
 _webmentioncache/
-yarn.lock
 .vscode
 **/.DS_Store
 
