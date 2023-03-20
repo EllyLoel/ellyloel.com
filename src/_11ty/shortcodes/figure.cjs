@@ -5,8 +5,8 @@
  * @param {string} className
  * @returns {string}
  */
-module.exports = (figure, caption, className) => {
+module.exports = (content, caption, className) => {
 	const classMarkup = className ? ` class="${className}"` : "";
 	const captionMarkup = caption ? `<figcaption>${caption}</figcaption>` : "";
-	return `<figure${classMarkup}>${figure}${captionMarkup}</figure>`;
+	return `<figure${classMarkup}>${content}${captionMarkup}</figure>`;
 };
