@@ -2,6 +2,12 @@
 	<div class="[ meta ]">
 		{% if mention.author %}
 			<a href="{{ mention.author.url }}" class="[ author-wrapper ]">
+				<sl-avatar
+					class="[ author-photo-image ]"
+					image="{{ mention.author.photo | imageLink }}"
+					initials="{{ mention.author.name[0] }}"
+					label=""
+				></sl-avatar>
 				<strong class="[ author-name ]">{{ mention.author.name }}</strong>
 			</a>
 		{% else %}
