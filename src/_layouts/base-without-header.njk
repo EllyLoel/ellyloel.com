@@ -8,7 +8,7 @@
 		<title>{{ title }} | Elly Loel</title>
 
 		<!-- Include stylesheets here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
-		<link rel="stylesheet" href="/@input/css/style.css">
+		<link rel="stylesheet" href="/assets/css/style.css">
 
 		<script>
 			const localStorageColorScheme = localStorage.getItem("color-scheme");
@@ -28,13 +28,13 @@
 		</script>
 
 		<!-- Include scripts here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
-		<script type="module" src="/@input/js/main.js" defer></script>
+		<script type="module" src="/assets/js/main.js" defer></script>
 		{%- if page.url === "/" -%}
-			<script type="module" src="/@input/js/model-viewer.js" defer></script>
-			<script type="module" src="/@input/js/spotify.js" defer></script>
+			<script type="module" src="/assets/js/model-viewer.js" defer></script>
+			<script type="module" src="/assets/js/spotify.js" defer></script>
 		{%- endif -%}
 		{%- if page.url === "/garden/" or page.url === "/blog/" or page.url === "/projects/" or page.url === "/bookmarks/" or page.url === "/til/" or page.url === "/til/d3/" -%}
-			<script type="module" src="/@input/js/graph.js" defer></script>
+			<script type="module" src="/assets/js/graph.js" defer></script>
 		{%- endif -%}
 
 		{%- include "meta.njk" -%}
