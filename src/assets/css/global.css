@@ -11,17 +11,6 @@ html {
 	scrollbar-color: var(--scrollthumb-color) transparent;
 }
 
-/* FOUCE https:/*www.abeautifulsite.net/posts/flash-of-undefined-custom-elements/ */
-
-/* :where(:not(:defined)) {
-  opacity: 0;
-}
-
-:where(:defined) {
-  opacity: 1;
-  transition: opacity 500ms var(--ease-3);
-} */
-
 body {
 	font-family: "Work Sans", var(--font-sans), "Noto Color Emoji",
 		"Apple Color Emoji", "Twemoji Mozilla", "Segoe UI Emoji", "Segoe UI Symbol",
@@ -31,9 +20,7 @@ body {
 	overflow-x: hidden;
 
 	& > :is(header, main, footer) {
-		animation: var(--animation-fade-in) forwards;
 		isolation: isolate;
-		opacity: 0;
 	}
 }
 
@@ -264,6 +251,10 @@ mark {
 
 p {
 	max-inline-size: var(--size-content-3);
+
+	&:empty {
+		display: none;
+	}
 }
 
 :is(dt, summary) {
