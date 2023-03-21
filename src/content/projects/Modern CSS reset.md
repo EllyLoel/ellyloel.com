@@ -1,212 +1,76 @@
 ---
 title: Modern CSS reset
 created: 2022-06-20
-modified: 2022-08-17
+modified: 2023-03-19
 ---
 
-I put together a CSS Reset that uses modern CSS features such as :where(), logical properties, prefers-reduced-motion, etc. :sparkles:
+**A reset is more than a reset.**
 
-Lots of inspiration from Josh W Comeau, Andy Bell, and Adam Argyle.
-
-[Tweet](https://twitter.ellyloel.com/1538752447560110080)
-[Gist](https://gist.github.com/EllyLoel/4ff8a6472247e6dd2315fd4038926522)
+Sure if you wanna actually just reset things and nothing else then here you go:
 
 ```css
-/*
-  Made by Elly Loel - https://ellyloel.com/
-  With inspiration from:
-    - Josh W Comeau - https://courses.joshwcomeau.com/css-for-js/treasure-trove/010-global-styles/
-    - Andy Bell - https://piccalil.li/blog/a-modern-css-reset/
-    - Adam Argyle - https://unpkg.com/open-props@1.3.16/normalize.min.css / https://codepen.io/argyleink/pen/KKvRORE
-
-  Notes:
-    - `:where()` is used to lower specificity for easy overriding.
-*/
-
-* {
-	/* Remove default margin on everything */
-	margin: 0;
-	/* Remove default padding on everything */
-	padding: 0;
-	/* Calc `em` based line height, bigger line height for smaller font size and smaller line height for bigger font size: https://kittygiraudel.com/2020/05/18/using-calc-to-figure-out-optimal-line-height/ */
-	line-height: calc(0.25rem + 1em + 0.25rem);
-}
-
-/* Use a more-intuitive box-sizing model on everything */
 *,
-::before,
-::after {
-	box-sizing: border-box;
-}
-
-/* Remove border and set sensible defaults for backgrounds, on all elements except fieldset progress and meter */
-*:where(:not(fieldset, progress, meter)) {
-	border-width: 0;
-	border-style: solid;
-	background-origin: border-box;
-	background-repeat: no-repeat;
-}
-
-html {
-	/* Allow percentage-based heights in the application */
-	block-size: 100%;
-	/* Making sure text size is only controlled by font-size */
-	-webkit-text-size-adjust: none;
-}
-
-/* Smooth scrolling for users that don't prefer reduced motion */
-@media (prefers-reduced-motion: no-preference) {
-	html:focus-within {
-		scroll-behavior: smooth;
-	}
-}
-
-body {
-	/* Improve text rendering */
-	-webkit-font-smoothing: antialiased;
-	/* https://marco.org/2012/11/15/text-rendering-optimize-legibility */
-	text-rendering: optimizeSpeed;
-	/* Allow percentage-based heights in the application */
-	min-block-size: 100%;
-	/* https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-gutter#example_2 */
-	/* scrollbar-gutter: stable both-edges; Removed until this bug is fixed: https://bugs.chromium.org/p/chromium/issues/detail?id=1318404#c2 */
-}
-
-/* Improve media defaults */
-:where(img, svg, video, canvas, audio, iframe, embed, object) {
-	display: block;
-}
-:where(img, svg, video) {
-	block-size: auto;
-	max-inline-size: 100%;
-}
-
-/* Remove stroke and set fill colour to the inherited font colour */
-:where(svg) {
-	stroke: none;
-	fill: currentColor;
-}
-
-/* SVG's without a fill attribute */
-:where(svg):where(:not([fill])) {
-	/* Remove fill and set stroke colour to the inherited font colour */
-	stroke: currentColor;
-	fill: none;
-	/* Rounded stroke */
-	stroke-linecap: round;
-	stroke-linejoin: round;
-}
-
-/* Set a size for SVG's without a width attribute */
-:where(svg):where(:not([width])) {
-	inline-size: 5rem;
-}
-
-/* Remove built-in form typography styles */
-:where(input, button, textarea, select),
-:where(input[type="file"])::-webkit-file-upload-button {
-	color: inherit;
-	font: inherit;
-	font-size: inherit;
-	letter-spacing: inherit;
-	word-spacing: inherit;
-}
-
-/* Change textarea resize to vertical only and block only if the browser supports that */
-:where(textarea) {
-	resize: vertical;
-}
-@supports (resize: block) {
-	:where(textarea) {
-		resize: block;
-	}
-}
-
-/* Avoid text overflows */
-:where(p, h1, h2, h3, h4, h5, h6) {
-	overflow-wrap: break-word;
-}
-
-/* Fix h1 font size inside article, aside, nav, and section */
-h1 {
-	font-size: 2em;
-}
-
-/* Position list marker inside */
-:where(ul, ol) {
-	list-style-position: inside;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-:where(ul, ol)[role="list"] {
-	list-style: none;
-}
-
-/* More readable underline style for anchor tags without a class. This could be set on anchor tags globally, but it can cause conflicts. */
-a:not([class]) {
-	text-decoration-skip-ink: auto;
-}
-
-/* Make it clear that interactive elements are interactive */
-:where(
-		a[href],
-		area,
-		button,
-		input,
-		label[for],
-		select,
-		summary,
-		textarea,
-		[tabindex]:not([tabindex*="-"])
-	) {
-	cursor: pointer;
-	touch-action: manipulation;
-}
-:where(input[type="file"]) {
-	cursor: auto;
-}
-:where(input[type="file"])::-webkit-file-upload-button,
-:where(input[type="file"])::file-selector-button {
-	cursor: pointer;
-}
-
-/* Animate focus outline */
-@media (prefers-reduced-motion: no-preference) {
-	:focus-visible {
-		transition: outline-offset 145ms cubic-bezier(0.25, 0, 0.4, 1);
-	}
-	:where(:not(:active)):focus-visible {
-		transition-duration: 0.25s;
-	}
-}
-:where(:not(:active)):focus-visible {
-	outline-offset: 5px;
-}
-
-/* Make sure users can't select button text */
-:where(
-		button,
-		button[type],
-		input[type="button"],
-		input[type="submit"],
-		input[type="reset"]
-	),
-:where(input[type="file"])::-webkit-file-upload-button,
-:where(input[type="file"])::file-selector-button {
-	-webkit-tap-highlight-color: transparent;
-	-webkit-touch-callout: none;
-	user-select: none;
-	text-align: center;
-}
-
-/* Disabled cursor for disabled buttons */
-:where(
-		button,
-		button[type],
-		input[type="button"],
-		input[type="submit"],
-		input[type="reset"]
-	)[disabled] {
-	cursor: not-allowed;
+*::after,
+*::before {
+	all: initial !important;
 }
 ```
+
+> Why waste your time on half-measures? Make your site **THE MOST NORMALEST** with this **ULTIMATE CSS RESET**.
+> – [Miriam Suzanne's most normalest CSS Reset](https://www.miriamsuzanne.com/2019/11/02/most-normal/)
+
+> In other words, this is a starting point, not a self-contained black box of no-touchiness.
+> – [Eric Meyer's CSS Reset](https://meyerweb.com/eric/tools/css/reset/)
+
+## There are always some opinions in resets
+
+- [ ] add examples
+
+> Nicolas Gallagher and I started writing normalize.css together. I named and created the normalize.css repository with the help of Paul Irish and Ben Alman. I transferred the repository to Necolas, who turned it into a “household” CSS library.
+>
+> Later, I resumed authorship of normalize.css with Luciano Battagliero. Together, we tagged, deprecated, and removed “opinionated” styles — styles developers often prefer but which do not fix bugs or “normalize” browser differences.
+>
+> Later, Necolas resumed authorship and the issue of whether to include or omit the opinionated styles forced us to split.
+>
+> I continue working on the normalize.css project, currently under the “csstools” tag. I hope one day our differences are resolved and the projects are one again.
+> – [@csstools/normalize.css's differences from normalize.css](https://github.com/csstools/normalize.css/#differences-from-necolasnormalizecss)
+
+> A secondary reminders.css with more opinionated or situational remedies that should be reviewed and considered on a case-by-case basis.
+> – [CSS Remedy's reminders](https://github.com/jensimmons/cssremedy#guiding-ideas)
+
+> A reset of sensible defaults
+> – [Andy Bell's modern CSS Reset](https://andy-bell.co.uk/a-modern-css-reset/#heading-a-reset-of-sensible-defaults)
+
+{% unfurl "https://bitsofco.de/a-look-at-css-resets-in-2018/" %}
+
+## My first take on a reset
+
+- [ ] break it down
+- [ ] explain what happened
+
+Inspiration from:
+
+- Adam Argyle
+- Andy Bell
+- Josh W Comeau
+
+[Tweet](https://twitter.ellyloel.com/1538752447560110080)
+
+## A revised take on a reset and more
+
+- [ ] add a breakdown
+
+Inspiration from: [a-z]
+
+- Adam Argyle – [Open-Props Normalize](https://codepen.io/argyleink/pen/KKvRORE)
+- Andy Bell – [Modern CSS Reset](https://andy-bell.co.uk/a-modern-css-reset/)
+- Eric Meyer – [CSS Reset](https://meyerweb.com/eric/tools/css/reset/)
+- Jen Simmons – [CSS Remedy](https://github.com/jensimmons/cssremedy)
+- Jonathan Neal – [@csstools/normalize.css](https://github.com/csstools/normalize.css/) [sanitize.css](https://github.com/csstools/sanitize.css/)
+- Josh W Comeau – [Custom CSS Reset](https://www.joshwcomeau.com/css/custom-css-reset/)
+- Miriam Suzanne – [CSS Remedy](https://github.com/jensimmons/cssremedy) [miriamsuzanne.com reset styles](https://github.com/mirisuzanne/mia/tree/main/src/scss/reset) [miriamsuzanne.com default styles](https://github.com/mirisuzanne/mia/tree/main/src/scss/reset)
+- Nicolas Gallagher – [normalize.css](https://github.com/necolas/normalize.css)
+
+---
+
+[Gist](https://gist.github.com/EllyLoel/4ff8a6472247e6dd2315fd4038926522)
