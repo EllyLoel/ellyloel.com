@@ -4,7 +4,7 @@ title: Lulu
 eleventyNavigation:
   key: Lulu
   parent: Me
-  order: 6
+  order: 7
 ---
 
 ::: callout Warning!
