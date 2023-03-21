@@ -1,0 +1,16 @@
+<details class="[ namepile ]">
+	<summary>
+		{{ namepileMentionsHeading }}
+	</summary>
+	<p>
+		{% for namepileMention in namepileMentions %}
+			{% if loop.length > 1 %}
+				{%- if loop.last %} and {% elif loop.first %}
+				{%- else %}, {% endif -%}
+			{% endif %}
+			<a href="{{ namepileMention.author.url }}" class="[ name-link ]">
+				{{ namepileMention.author.name }}
+			</a>
+		{% endfor %}
+	</p>
+</details>

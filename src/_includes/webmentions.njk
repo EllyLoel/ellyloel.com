@@ -2,32 +2,32 @@
 <article id="webmentions" class="[ webmentions ][ flow ]">
 	{%- ifAsync postMentions.likes.length -%}
 		{%- if postMentions.likes.length === 1 -%}
-			{%- set facepileMentionsHeading -%}
+			{%- set namepileMentionsHeading -%}
 				{{ postMentions.likes.length }} Like
 			{%- endset -%}
 		{%- elif (postMentions.likes.length > 1) -%}
-			{%- set facepileMentionsHeading -%}
+			{%- set namepileMentionsHeading -%}
 				{{ postMentions.likes.length }} Likes
 			{%- endset -%}
 		{%- endif -%}
-		{%- set facepileMentions = postMentions.likes -%}
-		{%- include "webmentions-facepile.njk" -%}
+		{%- set namepileMentions = postMentions.likes -%}
+		{%- include "webmentions-namepile.njk" -%}
 	{%- endif -%}
 	{%- ifAsync postMentions.reposts.length -%}
 		{%- if postMentions.reposts.length === 1 -%}
-			{%- set facepileMentionsHeading -%}
+			{%- set namepileMentionsHeading -%}
 				{{ postMentions.reposts.length }} Repost
 			{%- endset -%}
 		{%- elif (postMentions.reposts.length > 1) -%}
-			{%- set facepileMentionsHeading -%}
+			{%- set namepileMentionsHeading -%}
 				{{ postMentions.reposts.length }} Reposts
 			{%- endset -%}
 		{%- endif -%}
-		{%- set facepileMentions = postMentions.reposts -%}
-		{%- include "webmentions-facepile.njk" -%}
+		{%- set namepileMentions = postMentions.reposts -%}
+		{%- include "webmentions-namepile.njk" -%}
 	{%- endif -%}
 	{%- if postMentions.comments.length -%}
-		<details {% if page.url !== "/" %}open{% endif %}>
+		<details>
 			<summary>
 				{%- if postMentions.comments.length === 1 -%}
 					{{ postMentions.comments.length }} Comment
@@ -45,7 +45,7 @@
 	<footer class="[ webmentions-header ][ flow ]">
 		<form action="https://webmention.io/www.ellyloel.com/webmention" method="post" class="[ webmentions-form ][ flow ]">
 			<label for="form-webmention-source">
-				Have you published your own post mentioning this one? Let me know the URL:
+				Have you published your own post mentioning this one?<br>Let me know the URL:
 			</label>
 			<div class="[ input-wrapper ]">
 				<input
