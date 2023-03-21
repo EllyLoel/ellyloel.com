@@ -10,3 +10,16 @@
 - [ ] Switch from Vite to [PostCSS/LightningCSS](https://11ty.rocks/posts/process-css-with-lightningcss/) and [Rollup](https://front-end.social/@elly/109761380779409750)
 - [ ] Improve [bookmark sharing workflow](https://front-end.social/@elly/109995347630229003)
 - [ ] Perf perf perf
+- [ ] [Pagefind](https://pagefind.app/)
+- [ ] [IndieWebify.Me](https://indiewebify.me/validate-h-card/?url=https://ellyloel.com)
+- [ ] [social preview image](https://bnijenhuis.nl/notes/automatically-generate-open-graph-images-in-eleventy/)
+- [ ] [WebC conversion](https://github.com/darthmall/darthmall.net/pull/64/files)
+- [ ] Analytics (Free)
+	- Hosted service
+		- [GoatCounter](https://www.goatcounter.com/)
+		- [Counter](https://counter.dev/)
+		- [TinyAnalytics](https://tinyanalytics.io/)
+	- Self hosted ([Fly.io](https://fly.io/docs/about/pricing/))
+		- [Umami](https://umami.is/)
+		- [Matomo](https://matomo.org/)
+		- [Plausible](https://plausible.io/self-hosted-web-analytics)
