@@ -26,25 +26,32 @@ She describes it well:
 		</thead>
 		<tbody>
 			<tr>
-				<td><time>Sep 2021</time></td>
+				<td><time datetime="2021-09">Sep 2021</time></td>
 				<td>Portable</td>
 				<td>Junior developer</td>
 				<td>4 days a week</td>
 				<td>$62,000 (pro rata $49,600)</td>
 			</tr>
 			<tr>
-				<td><time>Apr 2022</time></td>
+				<td><time datetime="2022-04">Apr 2022</time></td>
 				<td>Portable</td>
 				<td>Junior developer</td>
 				<td>4 days a week</td>
 				<td>$62,500 (pro rata $50,000)</td>
 			</tr>
 			<tr>
-				<td><time>Sep 2022</time></td>
+				<td><time datetime="2022-09">Sep 2022</time></td>
 				<td>Portable</td>
 				<td>Junior developer</td>
 				<td>4 days a week</td>
 				<td>$66,000 (pro rata $52,800)</td>
+			</tr>
+			<tr>
+				<td><time datetime="2023-03">Mar 2023</time></td>
+				<td>Portable</td>
+				<td>Mid-level developer</td>
+				<td>4 days a week</td>
+				<td>$85,000 (pro rata $68,000)</td>
 			</tr>
 		</tbody>
 	</table>
