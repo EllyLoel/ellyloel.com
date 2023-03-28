@@ -24,8 +24,8 @@
 		"build:benchmark": "ELEVENTY_ENV=production DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
 		"clean": "rimraf _site",
 		"format": "prettier . --write",
-		"lint:css": "stylelint \"src/css/**/*.css\" --fix",
-		"lint:js": "eslint src/js/ --fix"
+		"lint:css": "stylelint \"src/assets/css/**/*.css\" --fix",
+		"lint:js": "eslint src/assets/js/ --fix"
 	},
 	"dependencies": {
 		"@11ty/eleventy-fetch": "^3.0.0",
