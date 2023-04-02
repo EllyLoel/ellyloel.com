@@ -52,7 +52,8 @@ let markdownLibrary = require("markdown-it")({
 			suffix: "",
 			uriSuffix: "",
 		})
-	);
+	)
+	.use(require("markdown-it-attrs"));
 
 markdownLibrary.renderer.rules.emoji = (token, idx) =>
 	`<span class="[ emoji ]">${token[idx].content}</span>`;
