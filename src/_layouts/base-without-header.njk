@@ -36,6 +36,10 @@
 		{%- if page.url === "/garden/" or page.url === "/blog/" or page.url === "/projects/" or page.url === "/bookmarks/" or page.url === "/til/" or page.url === "/til/d3/" -%}
 			<script type="module" src="/assets/js/graph.js" defer></script>
 		{%- endif -%}
+		{%- if page.url === "/search/" -%}
+			<script type="module" src="/assets/js/is-land.js" defer></script>
+			<script type="module" src="/assets/js/search.js" defer></script>
+		{%- endif -%}
 		<script data-goatcounter="https://ellyloel.goatcounter.com/count" src="//gc.zgo.at/count.js" defer></script>
 
 		{%- include "meta.njk" -%}
@@ -46,7 +50,7 @@
 		{%- include "header.njk" -%}
 
 		<!-- tabindex fixes focus issue: https://benmyers.dev/blog/skip-links/#tldr -->
-		<main id="content" tabindex="-1" class="[ wrapper flow ]" style="--wrapper-size: 100ch;">
+		<main id="content" tabindex="-1" class="[ wrapper flow ]" style="--wrapper-size: 100ch;"{% if page.url !== "/" %} data-pagefind-body{% endif %}>
 			{{ content | safe }}
 		</main>
 
