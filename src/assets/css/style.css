@@ -24,6 +24,7 @@
 @import url("./utilities/radius.css") layer(utilities);
 @import url("./utilities/recursive-flow.css") layer(utilities);
 @import url("./utilities/stroke.css") layer(utilities);
+@import url("./utilities/truncate.css") layer(utilities);
 @import url("./utilities/typography.css") layer(utilities);
 @import url("./utilities/visually-hidden.css") layer(utilities);
 @import url("./utilities/wrapper.css") layer(utilities);
@@ -51,6 +52,7 @@
 @import url("./blocks/newsletter.css") layer(blocks);
 @import url("./blocks/photos.css") layer(blocks);
 @import url("./blocks/prism.css") layer(blocks);
+@import url("./blocks/search.css") layer(blocks);
 @import url("./blocks/site-head.css") layer(blocks);
 @import url("./blocks/skip-link.css") layer(blocks);
 @import url("./blocks/stage.css") layer(blocks);

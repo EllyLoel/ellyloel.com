@@ -1,0 +1,25 @@
+---
+layout: base
+title: Search
+eleventyNavigation:
+  key: Search
+  order: 8
+---
+
+<form action="https://duckduckgo.com/" method="get" class="search" id="search">
+	<div class="[ flex gap-2 align-center ]">
+		<div>
+			<label for="search-term" class="[ visually-hidden ]">Search Terms</label>
+			<input type="text" enterkeyhint="search" name="q" id="search-term" class="search-txt" autocomplete="off" autofocus>
+			<input aria-hidden="true" hidden name="sites" value="www.ellyloel.com">
+		</div>
+		<div>
+			<button type="submit" class="search-btn btn-form">Search</button>
+		</div>
+	</div>
+	<p><small>Search provided by <is-land><a href="https://duckduckgo.com/">DuckDuckGo</a><template data-island="replace"><a href="https://pagefind.app/">Pagefind</a></template></is-land>.</small></p>
+</form>
+<div id="search-results" class="[ hide flow ]">
+	<h2 id="search-results-count" aria-live="polite">Results</h2>
+	<ol id="search-results-list" class="[ flow ]"></ol>
+</div>

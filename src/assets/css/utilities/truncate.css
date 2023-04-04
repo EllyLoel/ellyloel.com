@@ -1,0 +1,22 @@
+/* https://css-tricks.com/snippets/css/truncate-string-with-ellipsis/ */
+.truncate-one-line {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* https://css-tricks.com/line-clampin/ */
+.truncate-multiple-lines {
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	-webkit-line-clamp: var(--lines-to-truncate, 3);
+	overflow: hidden;
+}
+
+/* https://codepen.io/ellyloel/pen/eYjoVEg */
+.fade-truncate-multiple-lines {
+	mask: linear-gradient(black 0 0) top / 100% calc(100% - 1lh) no-repeat,
+		linear-gradient(to left, transparent, black 80%) bottom / 100% 1lh no-repeat;
+	max-block-size: calc(var(--lines-to-truncate, 3) * 1lh);
+	overflow: hidden;
+}

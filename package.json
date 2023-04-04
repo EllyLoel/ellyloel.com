@@ -29,7 +29,7 @@
 	},
 	"dependencies": {
 		"@11ty/eleventy-fetch": "^3.0.0",
-		"@11ty/eleventy-img": "^2.0.1",
+		"@11ty/is-land": "^4.0.0",
 		"@google/model-viewer": "^2.1.1",
 		"@shoelace-style/shoelace": "^2.0.0",
 		"@zachleat/details-utils": "^2.0.2",
@@ -37,12 +37,13 @@
 		"css-doodle": "0.30.10",
 		"d3": "^7.6.1",
 		"howler": "^2.2.3",
-		"netlify-plugin-cache": "^1.0.3"
+		"netlify-plugin-cache": "^1.0.3",
+		"pagefind": "^0.12.0"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^2.0.0",
 		"@11ty/eleventy-fetch": "^3.0.0",
-		"@11ty/eleventy-img": "^3.0.0",
+		"@11ty/eleventy-img": "^3.1.0",
 		"@11ty/eleventy-navigation": "^0.3.3",
 		"@11ty/eleventy-plugin-inclusive-language": "^1.0.3",
 		"@11ty/eleventy-plugin-rss": "^1.2.0",
