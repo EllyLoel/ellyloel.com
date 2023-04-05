@@ -21,7 +21,22 @@ module.exports = (eleventyConfig) => {
 		wrapperClass: "[ toc ][ recursive-flow ]",
 	});
 	eleventyConfig.addPlugin(pluginFavicons);
-	eleventyConfig.addPlugin(pluginVite);
+	eleventyConfig.addPlugin(pluginVite, {
+		viteOptions: {
+			/**
+			 * @see https://github.com/vitejs/vite/blob/ee1a686abf69db8a4026ed5462615766f222c29a/packages/vite/src/node/constants.ts#L97
+			 */
+			assetsInclude: ["**/*.xml"],
+
+			build: {
+				sourcemap: "true",
+				manifest: true,
+				rollupOptions: {
+					external: "/pagefind/pagefind.js",
+				},
+			},
+		},
+	});
 	eleventyConfig.addPlugin(pluginWebmentions, {
 		domain: metadata.domain,
 		token: process.env.WEBMENTION_IO_API_KEY,
