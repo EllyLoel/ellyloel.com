@@ -1,6 +1,5 @@
 // External imports
 require("dotenv").config();
-const { execSync } = require("child_process");
 
 // Internal imports
 
@@ -21,11 +20,6 @@ module.exports = (eleventyConfig) => {
 
 	// Copy/pass-through files
 	eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
-
-	// Pagefind
-	eleventyConfig.on("eleventy.after", () => {
-		execSync(`npx pagefind --source _site`, { encoding: "utf-8" });
-	});
 
 	return {
 		dir: {

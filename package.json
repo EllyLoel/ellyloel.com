@@ -18,7 +18,9 @@
 	},
 	"scripts": {
 		"start": "ELEVENTY_ENV=development npx @11ty/eleventy --serve --incremental --quiet",
-		"build": "ELEVENTY_ENV=production npx @11ty/eleventy --quiet",
+		"build": "pnpm build:eleventy && pnpm build:pagefind",
+		"build:eleventy": "ELEVENTY_ENV=production npx @11ty/eleventy --quiet",
+		"build:pagefind": "npx pagefind --source _site --bundle-dir pagefind",
 		"start:debug": "ELEVENTY_ENV=development DEBUG=Eleventy* npx @11ty/eleventy --serve --incremental",
 		"build:debug": "ELEVENTY_ENV=production DEBUG=Eleventy* npx @11ty/eleventy",
 		"build:benchmark": "ELEVENTY_ENV=production DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
