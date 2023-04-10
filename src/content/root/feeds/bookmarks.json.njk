@@ -2,28 +2,29 @@
 permalink: "/bookmarks.json"
 ---
 {
-  "version": "https://jsonfeed.org/version/1.1",
-  "title": "{{ metadata.title }}",
-  "language": "{{ metadata.lang }}",
-  "home_page_url": "{{ metadata.url }}",
-  "feed_url": "{{ '/bookmarks.json' | absoluteUrl(metadata.url) }}",
-  "description": "{{ metadata.description }}",
-  "author": {
-    "name": "{{ metadata.author.name }}",
-    "url": "{{ metadata.author.url }}"
-  },
-  "items": [
-    {%- for post in collections.bookmarks | reverse %}
-	{%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
-    {
-      "id": "{{ absolutePostUrl }}",
-      "url": "{{ absolutePostUrl }}",
-      "title": "{{ post.data.title }}",
-      "content_html": {% if post.templateContent %}{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | dump | safe }}
-	{% else %}""{% endif %},
-      "date_published": "{{ post.date | dateToRfc3339 }}"
-    }
-    {% if not loop.last %},{% endif %}
+	"version": "https://jsonfeed.org/version/1.1",
+	"title": "{{ metadata.title }}",
+	"language": "{{ metadata.lang }}",
+	"home_page_url": "{{ metadata.url }}",
+	"feed_url": "{{ '/bookmarks.json' | absoluteUrl(metadata.url) }}",
+	"description": "{{ metadata.description }}",
+	"author": {
+		"name": "{{ metadata.author.name }}",
+		"url": "{{ metadata.author.url }}"
+	},
+	"items": [
+	{%- for bookmark in bookmarks.items %}
+		{
+		"id": "{{ bookmark.link }}",
+		"url": "{{ bookmark.link }}",
+		"title": "{{ bookmark.title }}",
+		"date_published": "{{ bookmark.created | dateObj | dateToRfc3339 }}",
+		{%- if bookmark.lastUpdate -%}
+			"date_modified": "{{ bookmark.lastUpdate | dateObj | dateToRfc3339 }}",
+		{%- endif -%}
+		"content_text": {% if bookmark.excerpt %}"{{ bookmark.excerpt }}"{% else %}""{% endif %}
+		}
+	{%- if not loop.last %},{% endif %}
 {%- endfor %}
 ]
 }

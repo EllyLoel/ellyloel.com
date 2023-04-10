@@ -6,41 +6,46 @@ const markdown = require("../plugins/markdown.cjs");
 
 module.exports = async (feedItem) => {
 	let image = ``;
-	if (
-		(feedItem?.image && !feedItem?.image?.includes("v1.opengraph.11ty.dev")) ||
-		(feedItem?.image?.includes("v1.opengraph.11ty.dev") &&
-			Buffer.byteLength(await pluginFetch(feedItem.image)) !== 0)
-	) {
-		image = `<div slot="image">${pluginImage.generateHTML(
-			await pluginImage(feedItem.image, {
-				cacheOptions: {
-					duration: "4w",
+	try {
+		if (
+			(feedItem?.image &&
+				!feedItem?.image?.includes("v1.opengraph.11ty.dev")) ||
+			(feedItem?.image?.includes("v1.opengraph.11ty.dev") &&
+				Buffer.byteLength(await pluginFetch(feedItem.image)) !== 0)
+		) {
+			image = `<div slot="image">${pluginImage.generateHTML(
+				await pluginImage(feedItem.image, {
+					cacheOptions: {
+						duration: "4w",
+					},
+					formats: ["avif", "webp", "jpeg"],
+					outputDir: path.join("_site", "img"),
+					widths: [300, 600, 1000],
+				}),
+				{
+					alt: "",
+					class: "[ image ]",
+					decoding: "async",
+					loading: "lazy",
+					sizes: "450px",
 				},
-				formats: ["avif", "webp", "jpeg"],
-				outputDir: path.join("_site", "img"),
-				widths: [300, 600, 1000],
-			}),
-			{
-				alt: "",
-				class: "[ image ]",
-				decoding: "async",
-				loading: "lazy",
-				sizes: "450px",
-			},
-			{
-				whiteSpace: "inline",
-			}
-		)}</div>`;
+				{
+					whiteSpace: "inline",
+				}
+			)}</div>`;
+		}
+	} catch (e) {
+		console.log(e);
 	}
 
 	const date = feedItem?.created ? feedItem.created : feedItem?.modified;
 
 	const isoDate = date
-		? DateTime.fromJSDate(date, { zone: "utc" }).toISODate()
+		? DateTime.fromJSDate(new Date(date), { zone: "utc" }).toISODate()
 		: ``;
 
 	const fullDate = date
-		? DateTime.fromJSDate(date, { zone: "utc" }).toLocaleString(
+		? DateTime.fromJSDate(new Date(date), { zone: "utc" }).toLocaleString(
 				DateTime.DATE_FULL
 		  )
 		: ``;
@@ -49,10 +54,10 @@ module.exports = async (feedItem) => {
 
 	const stage = feedItem?.stage
 		? `<span>
-          <sl-tooltip content="${
+					<sl-tooltip content="${
 						feedItem.stage[0].toUpperCase() + feedItem.stage.substring(1)
 					}">
-            <sl-icon class="[ icon ]" library="fa" name="fas-${
+						<sl-icon class="[ icon ]" library="fa" name="fas-${
 							feedItem.stage === "seedling" ? "seedling" : ""
 						}${feedItem.stage === "budding" ? "spa" : ""}${
 				feedItem.stage === "evergreen" ? "tree" : ""
@@ -61,55 +66,51 @@ module.exports = async (feedItem) => {
 		  }" label="${
 				feedItem.stage[0].toUpperCase() + feedItem.stage.substring(1)
 		  }"></sl-icon>
-          </sl-tooltip>
-        </span>`
+					</sl-tooltip>
+				</span>`
 		: ``;
 
 	return `<li class="${feedItem?.stage || ""}">
-        <sl-card class="[ feed-item-card ]">
-          ${image}
-          <div ${
+				<sl-card class="[ feed-item-card ]">
+					${image}
+					<div ${
 						feedItem.excerpt ? `slot="header"` : ``
 					} class="[ feed-item-card-title ]">
-            <p>
-              ${stage}
-              <a href="${feedItem.url}">${feedItem.title}</a>
-            </p>
-          </div>
-          ${
-						feedItem.excerpt
-							? markdown.library.render(`${feedItem.excerpt}`)
-							: ``
-					}
-          ${
+						<p>
+							${stage}
+							<a href="${feedItem.url}">${feedItem.title}</a>
+						</p>
+					</div>
+					${feedItem.excerpt ? markdown.library.render(`${feedItem.excerpt}`) : ``}
+					${
 						date || feedItem?.collection
 							? `<div slot="footer" class="[ flex align-center ]">
-                  ${
+									${
 										date
 											? `
-                          <sl-tooltip content="${label} ${fullDate}">
-                            <span class="[ flex align-center gap-1ch ]">
-                              <sl-icon class="[ icon ]" library="fa" name="far-calendar${
+													<sl-tooltip content="${label} ${fullDate}">
+														<span class="[ flex align-center gap-1ch ]">
+															<sl-icon class="[ icon ]" library="fa" name="far-calendar${
 																feedItem?.created ? `` : `-plus`
 															}" label="${label}"></sl-icon>
-                              <sl-relative-time class="[ date ]" date="${isoDate}" style="line-height: 1;"></sl-relative-time>
-                            </span>
-                          </sl-tooltip>
-                        `
+															<sl-relative-time class="[ date ]" date="${isoDate}" style="line-height: 1;"></sl-relative-time>
+														</span>
+													</sl-tooltip>
+												`
 											: ``
 									}
-                  ${
+									${
 										feedItem?.collection
 											? `<a href="/${feedItem.collectionUrl.split("/")[1]}/">
-                      <sl-badge variant="neutral" pill>
-                        ${feedItem.collection}
-                      </sl-badge>
-                    </a>`
+											<sl-badge variant="neutral" pill>
+												${feedItem.collection}
+											</sl-badge>
+										</a>`
 											: ``
 									}
-                </div>`
+								</div>`
 							: ``
 					}
-        </sl-card>
-      </li>`;
+				</sl-card>
+			</li>`;
 };

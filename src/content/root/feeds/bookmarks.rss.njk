@@ -9,15 +9,17 @@ permalink: "/bookmarks.rss"
 		<atom:link href="{{ '/bookmarks.rss' | absoluteUrl(metadata.url) }}" rel="self" type="application/rss+xml"/>
 		<description>{{ metadata.description }}</description>
 		<language>{{ metadata.lang }}</language>
-		{%- for post in collections.bookmarks | reverse %}
-			{%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
+		{%- for bookmark in bookmarks.items %}
 			<item>
-				<title>{{ post.data.title }}</title>
-				<link>{{ absolutePostUrl }}</link>
-				<description>{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</description>
-				<pubDate>{{ post.date | dateToRfc822 }}</pubDate>
+				<title>{{ bookmark.title }}</title>
+				<link>{{ bookmark.link }}</link>
+				<description>{{ bookmark.excerpt }}</description>
+				<pubDate>{{ bookmark.created | dateObj | dateToRfc822 }}</pubDate>
+				{%- if bookmark.lastUpdate -%}
+					<lastBuildDate>{{ bookmark.lastUpdate | dateObj | dateToRfc822 }}</lastBuildDate>
+				{%- endif -%}
 				<dc:creator>{{ metadata.author.name }}</dc:creator>
-				<guid>{{ absolutePostUrl }}</guid>
+				<guid>{{ bookmark.link }}</guid>
 			</item>
 		{%- endfor %}
 	</channel>
