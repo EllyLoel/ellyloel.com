@@ -1,3 +1,3 @@
-const markdownIt = require("markdown-it");
+const markdown = require("../plugins/markdown.cjs");
 
-module.exports = (content = "") => markdownIt({ html: true }).render(content);
+module.exports = (content = "") => markdown.plugin.render(content);

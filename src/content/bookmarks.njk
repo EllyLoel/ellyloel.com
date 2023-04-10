@@ -4,43 +4,21 @@ title: Bookmarks
 eleventyNavigation:
   key: Bookmarks
   order: 4
-eleventyImport:
-  collections: ["bookmarks"]
 ---
 
-<h2>
-  Feeds
-</h2>
-<ul>
-  <li>
-    <a href="/bookmarks.rss">
-      <abbr title="Really Simple Syndication">RSS</abbr>
-    </a>
-  </li>
-  <li>
-    <a href="/bookmarks.atom">Atom</a>
-  </li>
-  <li>
-    <a href="/bookmarks.json">
-      <abbr title="JavaScript Object Notation">JSON</abbr>
-    </a>
-  </li>
-</ul>
+<div>
+	{% md %}
+	These are [my public raindrop.io bookmarks](https://raindrop.io/ellyloel/public-33237518), also avaliable in your favourite flavour of feed [RSS](/bookmarks.rss), [Atom](/bookmarks.atom) or [JSON](/bookmarks.json).
+	{% endmd %}
+</div>
 
-<h2>
-  Linked posts graph
-</h2>
-<div id="graph"></div>
-
-{% set bookmarks = collections.bookmarks | sortByCreated %}
 <ul class="[ feed ]">
-  {%- for bookmark in bookmarks %}
-    {% feedItem
-    title = bookmark.data.title,
-    url = bookmark.url,
-    excerpt = bookmark.data.page.excerpt,
-    image = bookmark.data.image,
-    created = bookmark.data.created
- %}
-  {%- endfor %}
+	{%- for bookmark in bookmarks.items %}
+		{% feedItem
+		title = bookmark.title,
+		url = bookmark.link,
+		excerpt = bookmark.excerpt,
+		image = bookmark.cover,
+		modified = bookmark.lastUpdate %}
+	{%- endfor %}
 </ul>
