@@ -14,3 +14,6 @@
 - [ ] Perf perf perf
 - [ ] [social preview image](https://bnijenhuis.nl/notes/automatically-generate-open-graph-images-in-eleventy/)
 - [ ] [WebC conversion](https://github.com/darthmall/darthmall.net/pull/64/files)
+- [ ] [RSS Content in 11ty](https://www.raymondcamden.com/2022/03/08/including-rss-content-in-your-eleventy-site)
+- [ ] [Use SVG for stroked text](https://blog.logrocket.com/create-beautiful-stroked-text-css/)
+- [ ] [Add Not By AI badge](https://notbyai.fyi/)
