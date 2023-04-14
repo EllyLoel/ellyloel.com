@@ -1,6 +1,7 @@
 ---
 title: Colour
 stage: draft
+draft: true
 image: "./src/assets/img/colour-gradient.png"
 created: 2023-01-10
 modified: 2023-01-10

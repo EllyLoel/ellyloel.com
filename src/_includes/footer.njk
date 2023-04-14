@@ -26,11 +26,19 @@
 			<div class="[ sitemap ] [ flow ]">
 				<h2>Sitemap</h2>
 				<ul class="[ flow ]">
-					{%- for collectionPage in collections.all | sortAlphabetically -%}
-						{%- if not collectionPage.data.excludeFromSitemap and collectionPage.data.eleventyNavigation.parent === undefined and collectionPage.url -%}
+					{%- for entry in collections.all | eleventyNavigation -%}
+						{%- if entry.url === "/me/" or entry.url === "/writing/" -%}
+									{%- for child in entry.children %}
+										<li>
+											<a href="{{ child.url | url }}"{% if child.url === page.url %} aria-current="page"{% endif %}>
+												{{ child.title }}
+											</a>
+										</li>
+									{%- endfor -%}
+						{%- else -%}
 							<li>
-								<a href="{{ collectionPage.url | url }}"{% if collectionPage.url === page.url %} aria-current="page"{% endif %}>
-									{{ collectionPage.data.title }}
+								<a href="{{ entry.url | url }}"{% if entry.url === page.url %} aria-current="page"{% endif %}>
+									{{ entry.title }}
 								</a>
 							</li>
 						{%- endif -%}
