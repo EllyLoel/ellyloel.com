@@ -84,17 +84,20 @@ main {
 	}
 }
 
-h1, .h1 {
+h1,
+.h1 {
 	font-size: var(--font-size-fluid-3);
 	max-inline-size: var(--size-header-1);
 }
 
-h2, .h2 {
+h2,
+.h2 {
 	font-size: var(--font-size-fluid-2);
 	max-inline-size: var(--size-header-2);
 }
 
-h3, .h3 {
+h3,
+.h3 {
 	font-size: var(--font-size-fluid-1);
 }
 
@@ -635,7 +638,7 @@ menu {
 /* General interactive states */
 
 :focus-visible {
-	outline-color: var(--link);
+	outline: 2px solid var(--link);
 	outline-offset: 0;
 }
 
