@@ -39,7 +39,7 @@ main {
 	}
 }
 
-:is(h1, h2, h3, h4, h5, h6, dt) {
+:is(h1, .h1, h2, .h2, h3, .h3, h4, h5, h6, dt) {
 	--font-wonkiness: 1;
 	--font-softness: 100;
 
@@ -84,21 +84,21 @@ main {
 	}
 }
 
-h1 {
+h1, .h1 {
 	font-size: var(--font-size-fluid-3);
 	max-inline-size: var(--size-header-1);
 }
 
-h2 {
+h2, .h2 {
 	font-size: var(--font-size-fluid-2);
 	max-inline-size: var(--size-header-2);
 }
 
-h3 {
+h3, .h3 {
 	font-size: var(--font-size-fluid-1);
 }
 
-:is(h3, h4, h5, h6, dt) {
+:is(h3, .h3, h4, h5, h6, dt) {
 	max-inline-size: var(--size-header-3);
 }
 
@@ -110,7 +110,7 @@ h3 {
 	font-size: var(--font-size-2);
 }
 
-strong:not(h1, h2, h3, h4, h5, h6, pre, code, kbd, var, samp) {
+strong:not(h1, .h1, h2, .h2, h3, .h3, h4, h5, h6, pre, code, kbd, var, samp) {
 	color: var(--accent-text);
 	font-weight: var(--font-weight-body-bold);
 }
