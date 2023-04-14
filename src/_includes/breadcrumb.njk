@@ -2,7 +2,7 @@
 	allowMissing: true,
 	includeSelf: true
 }) -%}
-<sl-breadcrumb>
+<sl-breadcrumb label="Breadcrumb">
 	<sl-icon slot="separator" library="fa" name="fas-caret-right"></sl-icon>
 	<sl-breadcrumb-item href="/">
 		<sl-icon slot="prefix" library="fa" name="fas-house"></sl-icon>
@@ -10,7 +10,7 @@
 	</sl-breadcrumb-item>
 	{%- for entry in navPages -%}
 		{%- if entry.url !== "/me/" and entry.url !== "/writing/" -%}
-			<sl-breadcrumb-item href="{{ entry.url | url }}" {%- if entry.url === page.url %} data-state="active" aria-current="page" {%- endif -%}>
+			<sl-breadcrumb-item href="{{ entry.url | url }}"{% if entry.url === page.url %} data-state="active" aria-current="page"{% endif %}>
 				{{ entry.title }}
 			</sl-breadcrumb-item>
 		{%- endif -%}
