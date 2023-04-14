@@ -2,12 +2,9 @@
 	& li {
 		line-height: 1;
 
-		& sl-badge {
+		.badge {
+			font-size: var(--font-size-1);
 			vertical-align: middle;
-
-			&::part(base) {
-				font-size: var(--font-size-1);
-			}
 		}
 	}
 }

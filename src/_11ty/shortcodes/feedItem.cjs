@@ -102,9 +102,9 @@ module.exports = async (feedItem) => {
 									${
 										feedItem?.collection
 											? `<a href="/${feedItem.collectionUrl.split("/")[1]}/">
-											<sl-badge variant="neutral" pill>
+											<span class="[ badge ][ neutral pill ]">
 												${feedItem.collection}
-											</sl-badge>
+											</span>
 										</a>`
 											: ``
 									}
