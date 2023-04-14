@@ -25,8 +25,9 @@
 			}
 
 			& summary {
+				color: var(--link);
 				cursor: pointer;
-				font-weight: revert;
+				font-weight: var(--font-weight-body-bold);
 			}
 
 			&[open] summary {
