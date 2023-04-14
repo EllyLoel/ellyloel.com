@@ -28,3 +28,9 @@
 		}
 	}
 }
+
+model-viewer:focus-within {
+	border-radius: var(--radius-blob-4);
+	outline: 2px solid var(--link);
+	outline-offset: 0;
+}
