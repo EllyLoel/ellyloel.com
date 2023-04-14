@@ -14,6 +14,7 @@
 	}
 
 	&::part(image) {
+		justify-content: center;
 		margin-bottom: var(--size-3);
 	}
 
