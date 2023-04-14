@@ -1,0 +1,23 @@
+.badge {
+	align-items: center;
+	background-color: var(--accent-6);
+	border: solid 1px var(--neutral-base);
+	border-radius: 3px;
+	color: var(--neutral-base);
+	display: inline-flex;
+	font-size: var(--font-size-0);
+	font-weight: var(--font-weight-body-bold);
+	justify-content: center;
+	line-height: 1;
+	padding: 0.35em 0.6em;
+	white-space: nowrap;
+
+	&.neutral {
+		background-color: var(--neutral-6);
+		color: var(--neutral-base);
+	}
+
+	&.pill {
+		border-radius: var(--radius-round);
+	}
+}

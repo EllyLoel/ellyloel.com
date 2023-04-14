@@ -62,12 +62,8 @@
 			text-decoration: none;
 
 			&,
-			& > sl-badge {
+			> .badge {
 				border-radius: var(--sl-border-radius-pill);
-			}
-
-			& > sl-badge::part(base) {
-				font-weight: var(--font-weight-body-bold);
 			}
 		}
 	}

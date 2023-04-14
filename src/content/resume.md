@@ -9,7 +9,7 @@ eleventyNavigation:
 
 ## Elly Loel
 
-<sl-badge>Design engineer</sl-badge> <sl-badge>Technical designer</sl-badge> <sl-badge>Creative technologist</sl-badge>
+<span class="[ badge ]">Design engineer</span> <span class="[ badge ]">Technical designer</span> <span class="[ badge ]">Creative technologist</span>
 
 ## Contact details
 
@@ -27,59 +27,59 @@ Elly has recently started her journey in the tech industry as a junior developer
 ## Key skills
 
 <ul class="[ key-skills ][ flex flex-wrap gap-1 ]">
-	<li><sl-badge>Semantic HTML</sl-badge></li>
-	<li><sl-badge>Advanced CSS</sl-badge></li>
-	<li><sl-badge>JavaScript</sl-badge></li>
-	<li><sl-badge>PHP</sl-badge></li>
-	<li><sl-badge>Git</sl-badge></li>
-	<li><sl-badge>A11y</sl-badge></li>
-	<li><sl-badge>Sass</sl-badge></li>
-	<li><sl-badge>Tailwind</sl-badge></li>
-	<li><sl-badge>React</sl-badge></li>
-	<li><sl-badge>Gatsby</sl-badge></li>
-	<li><sl-badge>Next.js</sl-badge></li>
-	<li><sl-badge>WordPress</sl-badge></li>
-	<li><sl-badge>SilverStripe</sl-badge></li>
-	<li><sl-badge>Laravel</sl-badge></li>
-	<li><sl-badge>Docker</sl-badge></li>
-	<li><sl-badge>GitHub</sl-badge></li>
-	<li><sl-badge>Bitbucket</sl-badge></li>
+	<li><span class="[ badge ]">Semantic HTML</span></li>
+	<li><span class="[ badge ]">Advanced CSS</span></li>
+	<li><span class="[ badge ]">JavaScript</span></li>
+	<li><span class="[ badge ]">PHP</span></li>
+	<li><span class="[ badge ]">Git</span></li>
+	<li><span class="[ badge ]">A11y</span></li>
+	<li><span class="[ badge ]">Sass</span></li>
+	<li><span class="[ badge ]">Tailwind</span></li>
+	<li><span class="[ badge ]">React</span></li>
+	<li><span class="[ badge ]">Gatsby</span></li>
+	<li><span class="[ badge ]">Next.js</span></li>
+	<li><span class="[ badge ]">WordPress</span></li>
+	<li><span class="[ badge ]">SilverStripe</span></li>
+	<li><span class="[ badge ]">Laravel</span></li>
+	<li><span class="[ badge ]">Docker</span></li>
+	<li><span class="[ badge ]">GitHub</span></li>
+	<li><span class="[ badge ]">Bitbucket</span></li>
 </ul>
 
 ## Software
 
 <ul class="[ key-skills ][ flex flex-wrap gap-1 ]">
-	<li><sl-badge>Notion</sl-badge></li>
-	<li><sl-badge>Atlassian Suite</sl-badge></li>
-	<li><sl-badge>Figma</sl-badge></li>
-	<li><sl-badge>Adobe Creative Suite</sl-badge></li>
-	<li><sl-badge>Google Workspace</sl-badge></li>
-	<li><sl-badge>Microsoft 365 Suite</sl-badge></li>
+	<li><span class="[ badge ]">Notion</span></li>
+	<li><span class="[ badge ]">Atlassian Suite</span></li>
+	<li><span class="[ badge ]">Figma</span></li>
+	<li><span class="[ badge ]">Adobe Creative Suite</span></li>
+	<li><span class="[ badge ]">Google Workspace</span></li>
+	<li><span class="[ badge ]">Microsoft 365 Suite</span></li>
 </ul>
 
 ## Work history
 
-### Junior Developer at Portable <sl-badge pill variant="neutral">Sep 2021-Present</sl-badge>
+### Developer at Portable <span class="[ badge ][ neutral pill ]">Sep 2021-Present</span>
 
 Developed web apps for client (VEOHRC, Headspace, etc.) projects using a range of web technologies (React, Gatsby, PHP, SilverStripe, Docker, etc.) as well as gave talks on neurodiversity and landing your first tech job.
 
-### PC Sales, Support and Service Technician at Aftershock PC Australia <sl-badge pill variant="neutral">Dec 2020-Jun 2021</sl-badge>
+### PC Sales, Support and Service Technician at Aftershock PC Australia <span class="[ badge ][ neutral pill ]">Dec 2020-Jun 2021</span>
 
 Created and finalised sales leads for hundreds of high end custom built desktop PC's, generating thousands of dollars of profit.
 
-### Video Editor and Motion Designer at Idleglance (_YouTube Channel_) <sl-badge pill variant="neutral">2018-2019</sl-badge>
+### Video Editor and Motion Designer at Idleglance (_YouTube Channel_) <span class="[ badge ][ neutral pill ]">2018-2019</span>
 
 Delivered music video edits with audio syncing, motion graphics, titles, audio and special effects.
 
-### Social Media Manager and Content Curator at Coaching Psychology Online <sl-badge pill variant="neutral">2017-2018</sl-badge>
+### Social Media Manager and Content Curator at Coaching Psychology Online <span class="[ badge ][ neutral pill ]">2017-2018</span>
 
 After consultation with the client I created and edited visual communications tobe posted on platforms, such as Facebook and LinkedIn.
 
 ## Education
 
-- The Frontend Developer Career Path at Scrimba <sl-badge pill variant="neutral">Jun 2021-Dec 2021</sl-badge>
-- Bachelor of Computer Science at Swinburne University of Technology <sl-badge pill variant="neutral">Mar 2020-Sep 2021</sl-badge>
-- Victorian Certificate of Education at Rosebud Secondary College <sl-badge pill variant="neutral">2014-2019</sl-badge>
+- The Frontend Developer Career Path at Scrimba <span class="[ badge ][ neutral pill ]">Jun 2021-Dec 2021</span>
+- Bachelor of Computer Science at Swinburne University of Technology <span class="[ badge ][ neutral pill ]">Mar 2020-Sep 2021</span>
+- Victorian Certificate of Education at Rosebud Secondary College <span class="[ badge ][ neutral pill ]">2014-2019</span>
 
 ## Certifications
 

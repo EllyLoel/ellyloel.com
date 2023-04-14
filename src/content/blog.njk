@@ -49,12 +49,12 @@ eleventyImport:
   <sl-option value="draft">
     <sl-icon slot="prefix" class="[ icon ]" library="fa" name="fas-file-pen"></sl-icon>
     Draft
-    <sl-badge slot="suffix" variant="neutral" pill>{{ draftCount }}</sl-badge>
+    <span slot="suffix" class="[ badge ][ neutral pill ]">{{ draftCount }}</span>
   </sl-option>
   <sl-option value="complete">
     <sl-icon slot="prefix" class="[ icon ]" library="fa" name="fas-circle-check"></sl-icon>
     Complete
-    <sl-badge slot="suffix" variant="neutral" pill>{{ completeCount }}</sl-badge>
+    <span slot="suffix" class="[ badge ][ neutral pill ]">{{ completeCount }}</span>
   </sl-option>
 </sl-select>
 
