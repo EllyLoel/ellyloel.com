@@ -11,12 +11,6 @@
 	transform: translateX(-50%);
 	z-index: var(--layer-5);
 
-	@supports (backdrop-filter: blur(8px)) {
-		backdrop-filter: blur(8px);
-		background-color: lch(68.002% 55.309 304.53deg / 12.5%);
-		color: revert;
-	}
-
 	&:not(:focus) {
 		border: 0;
 		clip: rect(0 0 0 0);

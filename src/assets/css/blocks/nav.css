@@ -57,8 +57,7 @@
 				}
 
 				&:focus-visible {
-					outline: 1px auto;
-					outline-color: var(--link);
+					outline: 2px solid var(--link);
 					outline-offset: 0;
 				}
 
