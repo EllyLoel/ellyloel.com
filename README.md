@@ -17,3 +17,5 @@
 - [ ] [RSS Content in 11ty](https://www.raymondcamden.com/2022/03/08/including-rss-content-in-your-eleventy-site)
 - [ ] [Use SVG for stroked text](https://blog.logrocket.com/create-beautiful-stroked-text-css/)
 - [ ] [Add Not By AI badge](https://notbyai.fyi/)
+- [ ] Update theme picker to be more accessible - [Building an accessible theme picker](https://fossheim.io/writing/posts/accessible-theme-picker-html-css-js/) by Sarah L. Fossheim
+- [ ] Write more and finish updating [my CSS reset](https://github.com/EllyLoel/ellyloel.com/blob/d70a8789ec34656287ecb257a2c1bed4403a956c/src/content/projects/Modern%20CSS%20reset.md)
