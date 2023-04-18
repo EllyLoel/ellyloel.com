@@ -3,6 +3,7 @@ require("dotenv").config();
 
 // Internal imports
 
+/** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 module.exports = (eleventyConfig) => {
 	// Plugins
 	eleventyConfig.addPlugin(require("./src/_11ty/plugins/plugins.cjs"));
