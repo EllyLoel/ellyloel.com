@@ -10,6 +10,47 @@ eleventyNavigation:
 An on & off log of what I'm currently doing/interested in. Slower paced than a twitter feed but less permanent then an [[about]] page.
 [Now pages](https://nownownow.com/about) are becoming more common, you should make one for yourself!
 
+## April, 2023
+
+Helping my partner out tabling in the artist alley at their first convention, Supanova Melbourne. [**nervousghost.com**](https://nervousghost.com)
+
+Started working my way through Sara Soueidan's [Practical Accessibility](https://practical-accessibility.today/) course, and I'm absolutely loving it so far.
+
+Trying to help improve our design systems practice at Portable. Governance and direction are my top priorities.
+
+After some discussions, we've realised that it's not so much the "Portable Design System" as the "Portable Design System Design System". Design System<sup>2</sup>. As it's a Design System for making Design Systems.
+
+Tagged, versioned and released [PDS Styles](https://github.com/PortableStudios/PDS-Styles) as a package.
+
+## March, 2023
+
+Had the great pleasure of taking part in a [Crafting Type](https://craftingtype.com/) workshop, where I got to start *crafting* my very own typeface! Many thanks to [Thomas Phinney](https://www.thomasphinney.com/) and [Wayne Thompson](https://www.atf.com.au/).
+
+Helped build a website for [Victorian Law Week](https://www.viclawweek.org.au/) (*yay!*) but it was on WebFlow (*oh nooo*).
+
+Wrote about [[Input types a11y|the accessibility of the different input types]].
+
+Still working on building out the Portable Design System, things are slow moving working as a one woman show.
+
+## February, 2023
+
+Working on building out the Portable Design System, starting with [Styles](https://github.com/PortableStudios/PDS-Styles) and [Docs](https://github.com/PortableStudios/PDS-Docs).
+
+Revamped the Portable website's IA/navigation, fixed many many accessibility issues.
+
+Went to [DDD by Night](https://www.meetup.com/ddd-melbourne-by-night/events/287278315) as listened to these talks:
+- "Career pathways for software engineers" by Michelle Gleeson
+- "Slim your Docker images in less than a handful of steps" by James Liu
+- "Web 3 The Great Con" by Alexander Karan
+- "Speech to Text: Making Podcasts and AI Accessible" by Akanksha Malik
+- "Debunking Common Consulting Myths" by Lachlan Wright
+
+Went to [Laneway Festival](https://lanewayfestival.com/melbourne/) and saw:
+- 100 Gecs
+- Girl in red
+- Phoebe Bridgers
+- Joji
+
 ## January, 2023
 
 I want to learn about generative art, specifically with SVG.
@@ -28,7 +69,7 @@ I did a presentation on [Solid JS](https://www.solidjs.com/), going from zero kn
 
 I also did a presentation on the future of CSS, covering what new things are usable now and what will be usable soon™.
 
-I'm looking into building a component library with [WebC](https://github.com/11ty/webc), though one of the key useage situation will be in WordPress so I need to figure out how/when to run the compile step.
+I'm looking into building a component library with [WebC](https://github.com/11ty/webc), though one of the key usage situation will be in WordPress so I need to figure out how/when to run the compile step.
 
 ## October, 2022
 
