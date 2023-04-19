@@ -50,9 +50,9 @@ eleventyNavigation:
 ## Software
 
 - VS Code
-- iTerm 2
+- Warp
 - Obsidian
-- Amplenote
+- Apple Reminders
 - Cron
 - Arc
 - Notion
