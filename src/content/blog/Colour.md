@@ -7,8 +7,8 @@ created: 2023-01-10
 modified: 2023-01-10
 ---
 
-::: callout :warning: This post is not complete, be wary.
-:::
+~~~ callout :warning: This post is not complete, be wary.
+~~~
 
 ## ~~Color~~ ++Colour++
 

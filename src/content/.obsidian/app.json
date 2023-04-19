@@ -259,7 +259,7 @@
     "Nanum",
     "Noto"
   ],
-  "vimMode": true,
+  "vimMode": false,
   "promptDelete": false,
   "legacyEditor": false,
   "livePreview": true,
@@ -274,19 +274,8 @@
   "strictLineBreaks": false,
   "showInlineTitle": true,
   "userIgnoreFilters": [
-    "_site/",
-    "_webmentioncache/",
-    "img/",
-    "node_modules/",
-    "patches/",
-    "utils/",
-    "src/api/",
-    "src/css/",
-    "src/js/",
-    "src/data/",
-    "src/feeds/",
-    "src/includes/",
-    "src/layouts/"
+    "api/",
+    "root/"
   ],
   "newFileLocation": "current"
 }

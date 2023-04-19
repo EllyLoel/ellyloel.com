@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "cc410db7243529f3",
+        "id": "948788239bd90d6f",
         "type": "tabs",
         "children": [
           {
-            "id": "0459a517ca6b8ea1",
+            "id": "33832fd63a2b8645",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/bookmarks/A Whole Cascade of Layers.md",
+                "file": "garden/Cascade layers.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -62,7 +62,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 726.5
+    "width": 318.5
   },
   "right": {
     "id": "84b304f5dd126125",
@@ -89,7 +89,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/bookmarks/A Whole Cascade of Layers.md"
+                "file": "garden/Cascade layers.md"
               }
             }
           },
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/bookmarks/A Whole Cascade of Layers.md",
+                "file": "garden/Cascade layers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,31 +115,48 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 292.5
   },
   "left-ribbon": {
     "hiddenItems": {
-      "templater-obsidian:Templater": false,
-      "obsidian-tts:Text to Speech": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "command-palette:Open command palette": false,
-      "random-note:Open random note": false
+      "random-note:Open random note": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-tts:Text to Speech": false
     }
   },
-  "active": "0459a517ca6b8ea1",
+  "active": "185612779993f727",
   "lastOpenFiles": [
-    "src/bookmarks/ADHD factsheet for people with a lived experience.md",
-    "src/bookmarks/Be Gay, Do Design.md",
-    "src/bookmarks/Components are pure overhead.md",
-    "src/bookmarks/Design Systems at Scale.md",
-    "src/bookmarks/Design Systems for Figma.md",
-    "src/bookmarks/Design systems handbook.md",
-    "src/bookmarks/Designing for people with dyscalculia and low numeracy.md",
-    "src/bookmarks/genders.wtf.md",
-    "src/bookmarks/How Should You Name Your Colors in a Design System.md",
-    "src/bookmarks/How to fight fascism.md"
+    "garden/Composition over Inheritance.md",
+    "speaking.md",
+    "resume.md",
+    "salary.md",
+    "now.md",
+    "me.md",
+    "src/bookmarks/Sandcastles.md",
+    "src/bookmarks/Use the Dialog Element.md",
+    "src/bookmarks/I Don't Want to Make Too Many Assumptions but It....md",
+    "src/bookmarks/A Whole Cascade of Layers-2.md",
+    "src/bookmarks/I Can’t Breathe-2.md",
+    "src/bookmarks/Why Most Design Systems Implode-2.md",
+    "src/bookmarks/The Patchability of the Open Web-2.md",
+    "src/bookmarks/My Therapist Suggested I Talk to My Inner Child. I Thought She Was Joking – But It Changed Everything.md",
+    "src/bookmarks/On Using Web Component Libraries-2.md",
+    "src/bookmarks/Into the Personal-Website-Verse-2.md",
+    "src/bookmarks/Setting Up a Screen Reader Testing Environment on Your Computer-2.md",
+    "src/bookmarks/Landmarks and Where to Put Them - HTMHell.md",
+    "src/bookmarks/Where Web Components Went Wrong-2.md",
+    "src/bookmarks/Mastodon and Federation-2.md",
+    "src/bookmarks/How to Name Your Colors in a Design System.md",
+    "src/bookmarks/Designing for People With Dyscalculia and Low Numeracy-2.md",
+    "src/bookmarks/There Is No Document Outline Algorithm-2.md",
+    "src/bookmarks/Three Design Smells Only Developers Can Sense.md",
+    "src/bookmarks/ADHD and Task Initiation Getting the Ball Rolling.md",
+    "src/bookmarks/Disentangling Frameworks.md",
+    "src/bookmarks",
+    "src"
   ]
 }
