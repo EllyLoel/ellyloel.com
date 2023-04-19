@@ -5,9 +5,9 @@ created: 2022-09-28
 modified: 2022-10-07
 ---
 
-::: callout :construction_worker_woman: Under construction :construction:
+~~~callout :construction_worker_woman: Under construction :construction:
 Heads up! This post is under construction, so take it with a grain of salt.
-:::
+~~~
 
 ## Coming up with a layer stack
 

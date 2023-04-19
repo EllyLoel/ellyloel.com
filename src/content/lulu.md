@@ -7,9 +7,9 @@ eleventyNavigation:
   order: 7
 ---
 
-::: callout Warning!
+~~~ callout Warning!
 This page is a work-in-progress, currently not every image has ALT text.
-:::
+~~~
 
 ## A collection of images of my lovely little lady Lu
 
