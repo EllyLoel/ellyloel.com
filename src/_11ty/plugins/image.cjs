@@ -1,6 +1,7 @@
 const path = require("path");
 const eleventyImage = require("@11ty/eleventy-img");
 
+/** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 module.exports = (eleventyConfig) => {
 	eleventyConfig.addAsyncShortcode(
 		"image",
