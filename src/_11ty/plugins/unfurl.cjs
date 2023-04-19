@@ -2,6 +2,7 @@ const path = require("path");
 const pluginImage = require("@11ty/eleventy-img");
 const pluginUnfurl = require("eleventy-plugin-unfurl");
 
+/** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 module.exports = (eleventyConfig) => {
 	eleventyConfig.addPlugin(pluginUnfurl, {
 		duration: "4w",

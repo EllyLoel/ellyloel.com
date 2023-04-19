@@ -1,3 +1,4 @@
+/** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 module.exports = (eleventyConfig) => {
 	eleventyConfig.addPairedShortcode("figure", require("./figure.cjs"));
 	eleventyConfig.addPairedShortcode("feedBlock", require("./feedBlock.cjs"));

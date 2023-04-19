@@ -1,5 +1,6 @@
 const removeMd = require("remove-markdown");
 
+/** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 module.exports = (eleventyConfig) => {
 	eleventyConfig.setFrontMatterParsingOptions({
 		excerpt: (file) => {
