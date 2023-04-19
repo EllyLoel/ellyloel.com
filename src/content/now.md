@@ -24,6 +24,8 @@ Tagged, versioned and released [PDS Styles](https://github.com/PortableStudios/P
 
 ## March, 2023
 
+I'm no longer a junior! I'm now officially a mid-level developer, or just a developer, but really as y'all know, *I'm actually a Design Engineer*.
+
 Had the great pleasure of taking part in a [Crafting Type](https://craftingtype.com/) workshop, where I got to start *crafting* my very own typeface! Many thanks to [Thomas Phinney](https://www.thomasphinney.com/) and [Wayne Thompson](https://www.atf.com.au/).
 
 Helped build a website for [Victorian Law Week](https://www.viclawweek.org.au/) (*yay!*) but it was on WebFlow (*oh nooo*).
