@@ -28,6 +28,7 @@ module.exports.eleventyComputedPermalink = eleventyComputedPermalink;
 module.exports.eleventyComputedExcludeFromCollections =
 	eleventyComputedExcludeFromCollections;
 
+/** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 module.exports = (eleventyConfig) => {
 	eleventyConfig.addGlobalData(
 		"eleventyComputed.permalink",

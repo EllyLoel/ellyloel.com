@@ -141,6 +141,7 @@ markdownLibrary.renderer.rules.image = function (tokens, idx) {
 	return figure(generated, caption);
 };
 
+/** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 module.exports.plugin = (eleventyConfig) => {
 	eleventyConfig.setLibrary("md", markdownLibrary);
 };
