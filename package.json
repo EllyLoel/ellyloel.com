@@ -49,7 +49,7 @@
 		"@11ty/eleventy-navigation": "^0.3.3",
 		"@11ty/eleventy-plugin-inclusive-language": "^1.0.3",
 		"@11ty/eleventy-plugin-rss": "^1.2.0",
-		"@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
+		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
 		"@11ty/eleventy-plugin-vite": "^4.0.0",
 		"@eslint/js": "^8.36.0",
 		"@photogabble/eleventy-plugin-interlinker": "^1.0.1",
