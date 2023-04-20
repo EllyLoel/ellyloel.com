@@ -334,9 +334,10 @@ figure {
 	}
 }
 
-/* Picture */
+/* Picture and video */
 
-picture .image {
+picture .image,
+video {
 	border-radius: var(--radius-2);
 }
 
