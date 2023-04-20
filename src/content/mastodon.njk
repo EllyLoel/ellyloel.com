@@ -1,0 +1,41 @@
+---
+layout: base
+title: Mastodon
+eleventyNavigation:
+  key: Mastodon
+  parent: Writing
+  order: 4
+---
+
+<ul class="[ feed ]">
+	{%- for post in mastodon.items -%}
+		<li>
+			<sl-card class="[ feed-item-card ]">
+				<div class="[ flow ]">
+					{{ post.content | safe }}
+					{%- if post["media:content"] -%}
+						<div style="columns: {{ post["media:content"].length }}">
+							{%- for image in post["media:content"] -%}
+								{%- set extension = image["$"].url | getUrlExtension -%}
+								{%- if extension === "mp4" -%}
+									<video aria-label="{{ image["media:description"][0]["_"] }}" src="{{ image["$"].url }}" controls autoplay loop playsinline></video>
+								{%- endif -%}
+								{%- image image["$"].url, image["media:description"][0]["_"] -%}
+							{%- endfor -%}
+						</div>
+					{%- endif -%}
+				</div>
+				<div slot="footer" class="[ flex align-center ]">
+					<sl-tooltip content="Posted on {{ post.isoDate | dateObj | dateToLocaleDateFull }}">
+						<span class="[ flex align-center gap-1ch ]">
+							<sl-icon class="[ icon ]" library="fa" name="far-calendar" label="Posted on {{ post.isoDate | dateObj | dateToLocaleDateFull }}"></sl-icon>
+							<a href={{ post.link }}>
+								<sl-relative-time class="[ date ]" date="{{ post.isoDate }}" style="line-height: 1;"></sl-relative-time>
+							</a>
+						</span>
+					</sl-tooltip>
+				</div>
+			</sl-card>
+		</li>
+	{%- endfor -%}
+</ul>

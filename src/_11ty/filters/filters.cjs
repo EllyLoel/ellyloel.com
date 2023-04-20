@@ -14,6 +14,7 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addFilter("excerpt", require("./excerpt.cjs"));
 	eleventyConfig.addFilter("filterTagList", require("./filterTagList.cjs"));
 	eleventyConfig.addFilter("getAllTags", require("./getAllTags.cjs"));
+	eleventyConfig.addFilter("getUrlExtension", require("./getUrlExtension.cjs"));
 	eleventyConfig.addFilter("htmlDateString", require("./htmlDateString.cjs"));
 	eleventyConfig.addFilter("imageLink", require("./imageLink.cjs"));
 	eleventyConfig.addFilter("limit", require("./limit.cjs"));

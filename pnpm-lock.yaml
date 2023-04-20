@@ -174,6 +174,9 @@ devDependencies:
   rimraf:
     specifier: ^4.4.0
     version: 4.4.0
+  rss-parser:
+    specifier: ^3.13.0
+    version: 3.13.0
   stylelint:
     specifier: ^15.2.0
     version: 15.3.0
@@ -7207,6 +7210,13 @@ packages:
       fsevents: 2.3.2
     dev: true
 
+  /rss-parser@3.13.0:
+    resolution: {integrity: sha512-7jWUBV5yGN3rqMMj7CZufl/291QAhvrrGpDNE4k/02ZchL0npisiYYqULF71jCEKoIiHvK/Q2e6IkDwPziT7+w==}
+    dependencies:
+      entities: 2.2.0
+      xml2js: 0.5.0
+    dev: true
+
   /run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
     dependencies:
@@ -7250,6 +7260,10 @@ packages:
       is-plain-object: 5.0.0
       parse-srcset: 1.0.2
       postcss: 8.4.21
+    dev: true
+
+  /sax@1.2.4:
+    resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==}
     dev: true
 
   /schema-utils@3.1.1:
@@ -8248,6 +8262,19 @@ packages:
         optional: true
       utf-8-validate:
         optional: true
+    dev: true
+
+  /xml2js@0.5.0:
+    resolution: {integrity: sha512-drPFnkQJik/O+uPKpqSgr22mpuFHqKdbS835iAQrUC73L2F5WkboIRd63ai/2Yg6I1jzifPFKH2NTK+cfglkIA==}
+    engines: {node: '>=4.0.0'}
+    dependencies:
+      sax: 1.2.4
+      xmlbuilder: 11.0.1
+    dev: true
+
+  /xmlbuilder@11.0.1:
+    resolution: {integrity: sha512-fDlsI/kFEx7gLvbecc0/ohLG50fugQp8ryHzMTuW9vSa1GJ0XYWKnhsUx7oie3G98+r56aTQIUB4kht42R3JvA==}
+    engines: {node: '>=4.0'}
     dev: true
 
   /xmlhttprequest-ssl@2.0.0:
