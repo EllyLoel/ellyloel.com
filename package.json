@@ -56,7 +56,7 @@
 		"@sindresorhus/slugify": "^1.1.0",
 		"@types/markdown-it": "*",
 		"browserslist": "^4.21.1",
-		"cssnano": "^5.1.12",
+		"cssnano": "^6.0.0",
 		"cssremedy": "^0.1.0-beta.2",
 		"dotenv": "^16.0.3",
 		"eleventy-plugin-backlinks": "^0.2.0",
