@@ -26,6 +26,7 @@ module.exports = async () => {
 					cover: item.cover,
 					created: item.created,
 					excerpt: item.excerpt,
+					highlights: item.highlights,
 					lastUpdate: item.lastUpdate,
 					link: item.link,
 					note: item.note,
