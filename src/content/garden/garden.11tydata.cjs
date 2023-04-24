@@ -1,7 +1,7 @@
 module.exports = {
 	date: "git Last Modified",
 	layout: "post",
-	permalink: "/garden/{{ title | slugify }}/",
+	permalink: "garden/{{ title | slugify }}/",
 	tags: ["garden"],
 	eleventyComputed: {
 		eleventyNavigation: {
