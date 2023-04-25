@@ -26,11 +26,5 @@ module.exports = (eleventyConfig) => {
 		"removeRandomLink",
 		require("./removeRandomLink.cjs")
 	);
-	eleventyConfig.addFilter(
-		"sortAlphabetically",
-		require("./sortAlphabetically.cjs")
-	);
-	eleventyConfig.addFilter("sortByCreated", require("./sortByCreated.cjs"));
-	eleventyConfig.addFilter("sortByModified", require("./sortByModified.cjs"));
 	eleventyConfig.addFilter("unique", require("./unique.cjs"));
 };
