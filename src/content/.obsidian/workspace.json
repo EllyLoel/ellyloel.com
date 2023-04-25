@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "garden/Cascade layers.md",
+                "file": "lulu.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -89,7 +89,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "garden/Cascade layers.md"
+                "file": "lulu.md"
               }
             }
           },
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "garden/Cascade layers.md",
+                "file": "lulu.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,13 +128,22 @@
       "obsidian-tts:Text to Speech": false
     }
   },
-  "active": "185612779993f727",
+  "active": "33832fd63a2b8645",
   "lastOpenFiles": [
+    "src/assets/img/IMG_2128.png.md",
+    "lulu.md",
+    "src/assets/img",
+    "src/assets",
+    "src",
+    "IMG_1652.png",
+    "writing.md",
+    "uses.md",
+    "now.md",
+    "salary.md",
+    "garden/Cascade layers.md",
     "garden/Composition over Inheritance.md",
     "speaking.md",
     "resume.md",
-    "salary.md",
-    "now.md",
     "me.md",
     "src/bookmarks/Sandcastles.md",
     "src/bookmarks/Use the Dialog Element.md",
@@ -151,12 +160,6 @@
     "src/bookmarks/Where Web Components Went Wrong-2.md",
     "src/bookmarks/Mastodon and Federation-2.md",
     "src/bookmarks/How to Name Your Colors in a Design System.md",
-    "src/bookmarks/Designing for People With Dyscalculia and Low Numeracy-2.md",
-    "src/bookmarks/There Is No Document Outline Algorithm-2.md",
-    "src/bookmarks/Three Design Smells Only Developers Can Sense.md",
-    "src/bookmarks/ADHD and Task Initiation Getting the Ball Rolling.md",
-    "src/bookmarks/Disentangling Frameworks.md",
-    "src/bookmarks",
-    "src"
+    "src/bookmarks"
   ]
 }
