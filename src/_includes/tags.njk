@@ -1,0 +1,5 @@
+{%- for tag in tags -%}
+	{%- if tag !== exclude -%}
+		<a href="/{{ tag | slugify }}/" class="[ badge ][ neutral pill ]">{{ tag }}</a>
+	{%- endif -%}
+{%- endfor -%}

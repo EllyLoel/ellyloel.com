@@ -1,0 +1,37 @@
+<li {% if stage %}class="{{ stage }}"{%- endif -%}>
+	<sl-card class="[ feed-item-card ]">
+		{%- if imageMarkup -%}
+			<div slot="image">
+				{{ imageMarkup | safe }}
+			</div>
+		{%- endif -%}
+
+		<div {% if body %}slot="header"{% endif %} class="[ feed-item-card-title ]">
+			<p>
+				{%- if stage -%}
+					{%- include "stage.njk" -%}
+				{%- endif -%}
+				<a href="{{ url }}">{{ title }}</a>
+			</p>
+		</div>
+
+		{%- if body -%}
+			{{ body | safe }}
+		{%- endif -%}
+
+		<div slot="footer" class="[ flex flex-col align-start gap-2 ]">
+			{%- if date and label -%}
+				{%- include "date.njk" -%}
+			{%- endif -%}
+
+			{%- if tags and tags.length !== 0 -%}
+				<span class="[ flex flex-wrap align-center gap-1 ]">
+					<sl-tooltip content="Tags">
+						<sl-icon class="[ icon ]" library="fa" name="fas-tag" label="Tags"></sl-icon>
+					</sl-tooltip>
+					{%- include "tags.njk" -%}
+				</span>
+			{%- endif -%}
+		</div>
+	</sl-card>
+</li>
