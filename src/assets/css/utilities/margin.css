@@ -1,0 +1,167 @@
+.margin-1 {
+	margin: var(--size-1);
+}
+
+.margin-2 {
+	margin: var(--size-2);
+}
+
+.margin-3 {
+	margin: var(--size-3);
+}
+
+.margin-4 {
+	margin: var(--size-4);
+}
+
+.margin-5 {
+	margin: var(--size-5);
+}
+
+.margin-6 {
+	margin: var(--size-6);
+}
+
+.margin-inline-1 {
+	margin-inline: var(--size-1);
+}
+
+.margin-inline-2 {
+	margin-inline: var(--size-2);
+}
+
+.margin-inline-3 {
+	margin-inline: var(--size-3);
+}
+
+.margin-inline-4 {
+	margin-inline: var(--size-4);
+}
+
+.margin-inline-5 {
+	margin-inline: var(--size-5);
+}
+
+.margin-inline-6 {
+	margin-inline: var(--size-6);
+}
+
+.margin-block-1 {
+	margin-block: var(--size-1);
+}
+
+.margin-block-2 {
+	margin-block: var(--size-2);
+}
+
+.margin-block-3 {
+	margin-block: var(--size-3);
+}
+
+.margin-block-4 {
+	margin-block: var(--size-4);
+}
+
+.margin-block-5 {
+	margin-block: var(--size-5);
+}
+
+.margin-block-6 {
+	margin-block: var(--size-6);
+}
+
+.margin-inline-start-1 {
+	margin-inline-start: var(--size-1);
+}
+
+.margin-inline-start-2 {
+	margin-inline-start: var(--size-2);
+}
+
+.margin-inline-start-3 {
+	margin-inline-start: var(--size-3);
+}
+
+.margin-inline-start-4 {
+	margin-inline-start: var(--size-4);
+}
+
+.margin-inline-start-5 {
+	margin-inline-start: var(--size-5);
+}
+
+.margin-inline-start-6 {
+	margin-inline-start: var(--size-6);
+}
+
+.margin-inline-end-1 {
+	margin-inline-end: var(--size-1);
+}
+
+.margin-inline-end-2 {
+	margin-inline-end: var(--size-2);
+}
+
+.margin-inline-end-3 {
+	margin-inline-end: var(--size-3);
+}
+
+.margin-inline-end-4 {
+	margin-inline-end: var(--size-4);
+}
+
+.margin-inline-end-5 {
+	margin-inline-end: var(--size-5);
+}
+
+.margin-inline-end-6 {
+	margin-inline-end: var(--size-6);
+}
+
+.margin-block-start-1 {
+	margin-block-start: var(--size-1);
+}
+
+.margin-block-start-2 {
+	margin-block-start: var(--size-2);
+}
+
+.margin-block-start-3 {
+	margin-block-start: var(--size-3);
+}
+
+.margin-block-start-4 {
+	margin-block-start: var(--size-4);
+}
+
+.margin-block-start-5 {
+	margin-block-start: var(--size-5);
+}
+
+.margin-block-start-6 {
+	margin-block-start: var(--size-6);
+}
+
+.margin-block-end-1 {
+	margin-block-end: var(--size-1);
+}
+
+.margin-block-end-2 {
+	margin-block-end: var(--size-2);
+}
+
+.margin-block-end-3 {
+	margin-block-end: var(--size-3);
+}
+
+.margin-block-end-4 {
+	margin-block-end: var(--size-4);
+}
+
+.margin-block-end-5 {
+	margin-block-end: var(--size-5);
+}
+
+.margin-block-end-6 {
+	margin-block-end: var(--size-6);
+}

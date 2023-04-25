@@ -2,4 +2,4 @@
 eleventyExcludeFromCollections: true
 permalink: 'api/graph.json'
 ---
-{{ collections.allPostTypes | linkGraph | dump | safe }}
+{{ collections.allSortedByDate | linkGraph | dump | safe }}

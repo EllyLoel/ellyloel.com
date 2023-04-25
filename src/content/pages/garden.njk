@@ -1,6 +1,7 @@
 ---
 layout: base
 title: Digital garden
+permalink: "garden/"
 eleventyNavigation:
   key: Digital garden
   parent: Writing
@@ -15,19 +16,19 @@ eleventyImport:
   Feeds
 </h2>
 <ul>
-  <li>
-    <a href="/notes.rss">
-      <abbr title="Really Simple Syndication">RSS</abbr>
-    </a>
-  </li>
-  <li>
-    <a href="/notes.atom">Atom</a>
-  </li>
-  <li>
-    <a href="/notes.json">
-      <abbr title="JavaScript Object Notation">JSON</abbr>
-    </a>
-  </li>
+	<li>
+		<a href="/notes.rss">
+			<abbr title="Really Simple Syndication">RSS</abbr>
+		</a>
+	</li>
+	<li>
+		<a href="/notes.atom">Atom</a>
+	</li>
+	<li>
+		<a href="/notes.json">
+			<abbr title="JavaScript Object Notation">JSON</abbr>
+		</a>
+	</li>
 </ul>
 
 <h2>
@@ -35,48 +36,43 @@ eleventyImport:
 </h2>
 <div id="graph"></div>
 
-{%- set notes = collections.garden | sortByCreated -%}
-{%- set seedlingCount = 0 -%}
+{%- set notes = collections.GardenSortedByDate -%}
+
+{# {%- set seedlingCount = 0 -%}
 {%- set buddingCount = 0 -%}
 {%- set evergreenCount = 0 -%}
 
 {%- for note in notes -%}
-  {%- if note.data.stage === "seedling" -%}
-    {%- set seedlingCount = seedlingCount + 1 -%}
-  {%- elif note.data.stage === "budding" -%}
-    {%- set buddingCount = buddingCount + 1 -%}
-  {%- elif note.data.stage === "evergreen" -%}
-    {%- set evergreenCount = evergreenCount + 1 -%}
-  {%- endif -%}
-{%- endfor -%}
-
-<sl-select class="[ stage ]" placeholder="All growth stages" label="Filter by growth stage" size="large" multiple clearable>
-  <sl-option value="seedling">
-    <sl-icon slot="prefix" class="[ icon ]" library="fa" name="fas-seedling"></sl-icon>
-    Seedling
-    <span slot="suffix" class="[ badge ][ neutral pill ]">{{ seedlingCount }}</span>
-  </sl-option>
-  <sl-option value="budding">
-    <sl-icon slot="prefix" class="[ icon ]" library="fa" name="fas-spa"></sl-icon>
-    Budding
-    <span slot="suffix" class="[ badge ][ neutral pill ]">{{ buddingCount }}</span>
-  </sl-option>
-  <sl-option value="evergreen">
-    <sl-icon slot="prefix" class="[ icon ]" library="fa" name="fas-tree"></sl-icon>
-    Evergreen
-    <span slot="suffix" class="[ badge ][ neutral pill ]">{{ evergreenCount }}</span>
-  </sl-option>
-</sl-select>
+	{%- if note.data.stage === "seedling" -%}
+		{%- set seedlingCount = seedlingCount + 1 -%}
+	{%- elif note.data.stage === "budding" -%}
+		{%- set buddingCount = buddingCount + 1 -%}
+	{%- elif note.data.stage === "evergreen" -%}
+		{%- set evergreenCount = evergreenCount + 1 -%}
+	{%- endif -%}
+{%- endfor -%} #}
 
 <ul class="[ feed ]">
-  {%- for note in notes -%}
-    {%- feedItem
-    title = note.data.title,
-    url = note.url,
-    excerpt = note.data.page.excerpt,
-    stage = note.data.stage,
-    image = note.data.image,
-    created = note.data.created
-    -%}
-  {%- endfor -%}
+	{%- for note in notes -%}
+		{%- if note.data.stage -%}
+			{%- set stage = note.data.stage -%}
+		{%- endif -%}
+		{%- set title = note.data.title -%}
+		{%- set url = note.url -%}
+		{%- if note.data.image -%}
+			{%- setAsync "imageMarkup" -%}
+			{%- image note.data.image, "" -%}
+			{%- endsetAsync -%}
+		{%- endif -%}
+		{# {%- set body = note.data.page.excerpt -%} #}
+		{%- set date = note.data.date -%}
+		{%- set label = "" -%}
+		{%- if note.data.modified -%}
+			{%- set label = "Last modified" -%}
+		{%- elif note.data.created -%}
+			{%- set label = "Created" -%}
+		{%- endif -%}
+		{%- set tags = note.data.tags -%}
+		{%- include "feedItem.njk" -%}
+	{%- endfor -%}
 </ul>

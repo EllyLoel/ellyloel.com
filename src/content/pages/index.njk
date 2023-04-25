@@ -2,8 +2,9 @@
 layout: base-without-header
 title: Home
 description: Hi, I’m Elly. I like creating delightful, magical, and accessible art with code.
+permalink: "/"
 eleventyImport:
-  collections: ["allPostTypes"]
+  collections: ["allSortedByDate"]
 ---
 
 <div class="[ home ]">
@@ -129,44 +130,28 @@ eleventyImport:
 	</article>
 
 	{%- feedBlock title = "Recent posts" -%}
-	{%- set recentPostTitles = [] -%}
-	{%- set recentPosts = collections.allPostTypes | sortByCreated | limit(8) -%}
+	{%- set recentPosts = collections.allSortedByDate | limit(10) -%}
 	{%- for post in recentPosts -%}
-		{%- if post.data.created -%}
-			{%- set recentPostTitles = (recentPostTitles.push(post.data.title), recentPostTitles) -%}
-			{%- feedItem
-			title = post.data.title,
-			url = post.url,
-			excerpt = post.data.page.excerpt,
-			stage = post.data.stage,
-			image = post.data.image,
-			created = post.data.created,
-			collection = post.data.eleventyNavigation.parent,
-			collectionUrl = post.data.page.url
- -%}
+		{%- if post.data.stage -%}
+			{%- set stage = post.data.stage -%}
 		{%- endif -%}
-	{%- endfor -%}
-	{%- endfeedBlock -%}
-
-	{%- feedBlock title = "Recently updated posts" -%}
-	{%- set updatedPosts = collections.allPostTypes | sortByModified -%}
-	{%- set index = 0 -%}
-	{%- for post in updatedPosts -%}
-		{%- if post.data.modified and not recentPostTitles.includes(post.data.title) and index < 8 -%}
-			{%- set index = index + 1 -%}
-			{%- feedItem
-			title = post.data.title,
-			url = post.url,
-			excerpt = post.data.page.excerpt,
-			stage = post.data.stage,
-			image = post.data.image,
-			modified = post.data.modified,
-			collection = post.data.eleventyNavigation.parent,
-			collectionUrl = post.data.page.url
- -%}
+		{%- set title = post.data.title -%}
+		{%- set url = post.url -%}
+		{%- if post.data.image -%}
+			{%- setAsync "imageMarkup" -%}
+			{%- image post.data.image, "" -%}
+			{%- endsetAsync -%}
 		{%- endif -%}
+		{# {%- set body = post.data.page.excerpt -%} #}
+		{%- set date = post.data.date -%}
+		{%- set label = "" -%}
+		{%- if post.data.modified -%}
+			{%- set label = "Last modified" -%}
+		{%- elif post.data.created -%}
+			{%- set label = "Created" -%}
+		{%- endif -%}
+		{%- set tags = post.data.tags -%}
+		{%- include "feedItem.njk" -%}
 	{%- endfor -%}
 	{%- endfeedBlock -%}
 </div>
-
-{%- include "webmentions.njk" -%}

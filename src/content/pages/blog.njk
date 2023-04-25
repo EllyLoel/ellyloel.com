@@ -13,19 +13,19 @@ eleventyImport:
   Feeds
 </h2>
 <ul>
-  <li>
-    <a href="/articles.rss">
-      <abbr title="Really Simple Syndication">RSS</abbr>
-    </a>
-  </li>
-  <li>
-    <a href="/articles.atom">Atom</a>
-  </li>
-  <li>
-    <a href="/articles.json">
-      <abbr title="JavaScript Object Notation">JSON</abbr>
-    </a>
-  </li>
+	<li>
+		<a href="/articles.rss">
+			<abbr title="Really Simple Syndication">RSS</abbr>
+		</a>
+	</li>
+	<li>
+		<a href="/articles.atom">Atom</a>
+	</li>
+	<li>
+		<a href="/articles.json">
+			<abbr title="JavaScript Object Notation">JSON</abbr>
+		</a>
+	</li>
 </ul>
 
 <h2>
@@ -33,8 +33,9 @@ eleventyImport:
 </h2>
 <div id="graph"></div>
 
-{%- set blog = collections.blog | sortByCreated -%}
-{%- set draftCount = 0 -%}
+{%- set blog = collections.BlogSortedByDate -%}
+
+{# {%- set draftCount = 0 -%}
 {%- set completeCount = 0 -%}
 
 {%- for post in blog -%}
@@ -43,30 +44,29 @@ eleventyImport:
   {%- elif post.data.stage === "complete" -%}
     {%- set completeCount = completeCount + 1 -%}
   {%- endif -%}
-{%- endfor -%}
-
-<sl-select class="[ stage ]" placeholder="All stages" label="Filter by stage" size="large" multiple clearable>
-  <sl-option value="draft">
-    <sl-icon slot="prefix" class="[ icon ]" library="fa" name="fas-file-pen"></sl-icon>
-    Draft
-    <span slot="suffix" class="[ badge ][ neutral pill ]">{{ draftCount }}</span>
-  </sl-option>
-  <sl-option value="complete">
-    <sl-icon slot="prefix" class="[ icon ]" library="fa" name="fas-circle-check"></sl-icon>
-    Complete
-    <span slot="suffix" class="[ badge ][ neutral pill ]">{{ completeCount }}</span>
-  </sl-option>
-</sl-select>
+{%- endfor -%} #}
 
 <ul class="[ feed ]">
-  {%- for post in blog %}
-    {% feedItem
-    title = post.data.title,
-    url = post.url,
-    excerpt = post.data.page.excerpt,
-    stage = post.data.stage,
-    image = post.data.image,
-    created = post.data.created
- %}
-  {%- endfor %}
+	{%- for post in blog %}
+		{%- if post.data.stage -%}
+			{%- set stage = post.data.stage -%}
+		{%- endif -%}
+		{%- set title = post.data.title -%}
+		{%- set url = post.url -%}
+		{%- if post.data.image -%}
+			{%- setAsync "imageMarkup" -%}
+			{%- image post.data.image, "" -%}
+			{%- endsetAsync -%}
+		{%- endif -%}
+		{# {%- set body = post.data.page.excerpt -%} #}
+		{%- set date = post.data.date -%}
+		{%- set label = "" -%}
+		{%- if post.data.modified -%}
+			{%- set label = "Last modified" -%}
+		{%- elif post.data.created -%}
+			{%- set label = "Created" -%}
+		{%- endif -%}
+		{%- set tags = post.data.tags -%}
+		{%- include "feedItem.njk" -%}
+	{%- endfor %}
 </ul>

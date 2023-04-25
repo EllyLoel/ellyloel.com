@@ -34,15 +34,25 @@ eleventyImport:
 </h2>
 <div id="graph"></div>
 
-{% set projects = collections.projects | sortByCreated %}
+{% set projects = collections.ProjectsSortedByDate %}
 <ul class="[ feed ]">
 	{%- for project in projects %}
-		{% feedItem
-		title = project.data.title,
-		url = project.url,
-		excerpt = project.data.page.excerpt,
-		image = project.data.image,
-		created = project.data.created
- %}
+		{%- set title = project.data.title -%}
+		{%- set url = project.url -%}
+		{%- if project.data.image -%}
+			{%- setAsync "imageMarkup" -%}
+			{%- image project.data.image, "" -%}
+			{%- endsetAsync -%}
+		{%- endif -%}
+		{# {%- set body = project.data.page.excerpt -%} #}
+		{%- set date = project.data.date -%}
+		{%- set label = "" -%}
+		{%- if project.data.modified -%}
+			{%- set label = "Last modified" -%}
+		{%- elif project.data.created -%}
+			{%- set label = "Created" -%}
+		{%- endif -%}
+		{%- set tags = project.data.tags -%}
+		{%- include "feedItem.njk" -%}
 	{%- endfor %}
 </ul>

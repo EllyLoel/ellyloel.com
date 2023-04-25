@@ -4,21 +4,28 @@ title: Bookmarks
 eleventyNavigation:
   key: Bookmarks
   order: 4
+eleventyImport:
+  collections: ["bookmarks"]
 ---
 
 <div>
-	{% md %}
+	{%- md -%}
 	These are [my public raindrop.io bookmarks](https://raindrop.io/ellyloel/public-33237518), also avaliable in your favourite flavour of feed [RSS](/bookmarks.rss), [Atom](/bookmarks.atom) or [JSON](/bookmarks.json).
-	{% endmd %}
+	{%- endmd -%}
 </div>
 
 <ul class="[ feed ]">
-	{%- for bookmark in bookmarks.items %}
-		{% feedItem
-		title = bookmark.title,
-		url = bookmark.link,
-		excerpt = bookmark.excerpt,
-		image = bookmark.cover,
-		modified = bookmark.lastUpdate %}
-	{%- endfor %}
+	{%- for bookmark in bookmarks.items -%}
+		{%- set title = bookmark.title -%}
+		{%- set url = "./" + bookmark.title | slugify + "/" -%}
+		{%- if bookmark.cover -%}
+			{%- setAsync "imageMarkup" -%}
+			{%- image bookmark.cover, "" -%}
+			{%- endsetAsync -%}
+		{%- endif -%}
+		{%- set created = bookmark.created -%}
+		{%- set modified = bookmark.lastUpdate -%}
+		{%- set tags = bookmark.tags -%}
+		{%- include "feedItem.njk" -%}
+	{%- endfor -%}
 </ul>
