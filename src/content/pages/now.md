@@ -1,6 +1,7 @@
 ---
 layout: base
 title: What I'm Doing Now
+permalink: "now/"
 eleventyNavigation:
   key: Now
   parent: Me
