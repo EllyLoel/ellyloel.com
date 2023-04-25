@@ -9,9 +9,21 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addPlugin(require("./src/_11ty/plugins/plugins.cjs"));
 
 	// Collections
-	eleventyConfig.addCollection("allPostTypes", (collection) =>
-		collection.getFilteredByGlob("./src/content/*/*.md")
+	eleventyConfig.addCollection("allSortedByDate", (collectionApi) =>
+		collectionApi
+			.getAll()
+			.sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
 	);
+	["Blog", "Garden", "Projects", "TIL"].forEach((collection) => {
+		eleventyConfig.addCollection(
+			`${collection}SortedByDate`,
+			(collectionApi) => {
+				return collectionApi
+					.getFilteredByTag(collection)
+					.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
+			}
+		);
+	});
 
 	// Filters
 	eleventyConfig.addPlugin(require("./src/_11ty/filters/filters.cjs"));
