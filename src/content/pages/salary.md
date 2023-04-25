@@ -1,6 +1,7 @@
 ---
 layout: base
 title: Salary history
+permalink: "salary/"
 eleventyNavigation:
   key: Salary history
   parent: Me
