@@ -46,9 +46,16 @@
 		border: none;
 	}
 
-	.image {
-		max-height: 200px;
-		width: 100%;
+	& [slot="image"] {
+		display: block;
+		max-height: 300px;
+		object-fit: contain;
+
+		.image {
+			height: 100%;
+			margin-inline: auto;
+			width: auto;
+		}
 	}
 
 	& div[slot="footer"] {
