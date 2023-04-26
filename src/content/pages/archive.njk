@@ -1,34 +1,34 @@
 ---
 layout: base
-pagination:
-  data: collections
-  size: 1
-  alias: tag
-  filter:
-    - all
-    - allSortedByDate
-    - blog
-    - Blog
-    - BlogSortedByDate
-    - bookmarks
-    - Bookmarks
-    - garden
-    - Garden
-    - GardenSortedByDate
-    - projects
-    - Projects
-    - ProjectsSortedByDate
-    - til
-    - TIL
-    - TILSortedByDate
-permalink: "{{ tag | slugify }}/"
-eleventyComputed:
-  title: "{{ tag }}"
+title: Archive
+eleventyNavigation:
+  key: Archive
+  parent: Writing
+  order: 5
+eleventyImport:
+  collections: ["allSortedByDate"]
 ---
 
-<ul>
-	{% set taglist = collections[tag] %}
-	{% for post in taglist | reverse %}
+<h2>
+  Linked posts graph
+</h2>
+<div id="graph"></div>
+
+{%- set posts = collections.allSortedByDate -%}
+
+{# {%- set draftCount = 0 -%}
+{%- set completeCount = 0 -%}
+
+{%- for post in posts -%}
+  {%- if post.data.stage === "draft" -%}
+    {%- set draftCount = draftCount + 1 -%}
+  {%- elif post.data.stage === "complete" -%}
+    {%- set completeCount = completeCount + 1 -%}
+  {%- endif -%}
+{%- endfor -%} #}
+
+<ul class="[ feed ]">
+	{%- for post in posts %}
 		{%- if post.data.stage -%}
 			{%- set stage = post.data.stage -%}
 		{%- endif -%}
@@ -50,5 +50,5 @@ eleventyComputed:
 		{%- endif -%}
 		{%- set tags = post.data.tags -%}
 		{%- include "feedItem.njk" -%}
-	{% endfor %}
+	{%- endfor %}
 </ul>

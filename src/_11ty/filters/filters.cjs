@@ -21,6 +21,7 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addFilter("linkGraph", require("./linkGraph.cjs"));
 	eleventyConfig.addFilter("md", require("./md.cjs"));
 	eleventyConfig.addFilter("newUrl", require("./newUrl.cjs"));
+	eleventyConfig.addFilter("objKeys", require("./objKeys.cjs"));
 	eleventyConfig.addFilter("readableDate", require("./readableDate.cjs"));
 	eleventyConfig.addFilter(
 		"removeRandomLink",
