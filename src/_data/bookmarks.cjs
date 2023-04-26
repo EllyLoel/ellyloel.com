@@ -37,7 +37,7 @@ module.exports = async () => {
 			});
 
 			const newestItemDate = new Date(
-				Math.max(...response.map((item) => new Date(item?.lastUpdate || "")))
+				Math.max(...response.map((item) => new Date(item?.modified || "")))
 			);
 
 			return {
