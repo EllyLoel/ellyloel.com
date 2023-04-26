@@ -39,6 +39,7 @@ eleventyImport:
 	{%- for project in projects %}
 		{%- set title = project.data.title -%}
 		{%- set url = project.url -%}
+		{%- setAsync "imageMarkup" -%}{%- endsetAsync -%}
 		{%- if project.data.image -%}
 			{%- setAsync "imageMarkup" -%}
 			{%- image project.data.image, "" -%}

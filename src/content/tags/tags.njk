@@ -34,6 +34,7 @@ eleventyComputed:
 		{%- endif -%}
 		{%- set title = post.data.title -%}
 		{%- set url = post.url -%}
+		{%- setAsync "imageMarkup" -%}{%- endsetAsync -%}
 		{%- if post.data.image -%}
 			{%- setAsync "imageMarkup" -%}
 			{%- image post.data.image, "" -%}
