@@ -46,6 +46,11 @@
 		border: none;
 	}
 
+	.image {
+		max-height: 200px;
+		width: 100%;
+	}
+
 	& div[slot="footer"] {
 		justify-content: space-between;
 
