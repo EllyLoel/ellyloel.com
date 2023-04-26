@@ -24,7 +24,7 @@ eleventyImport:
 			{%- endsetAsync -%}
 		{%- endif -%}
 		{%- set created = bookmark.created -%}
-		{%- set modified = bookmark.lastUpdate -%}
+		{%- set modified = bookmark.modified -%}
 		{%- set tags = bookmark.tags -%}
 		{%- include "feedItem.njk" -%}
 	{%- endfor -%}

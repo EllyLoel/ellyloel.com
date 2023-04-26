@@ -15,8 +15,8 @@ permalink: "bookmarks.rss"
 				<link>{{ bookmark.link }}</link>
 				<description>{{ bookmark.excerpt }}</description>
 				<pubDate>{{ bookmark.created | dateObj | dateToRfc822 }}</pubDate>
-				{%- if bookmark.lastUpdate -%}
-					<lastBuildDate>{{ bookmark.lastUpdate | dateObj | dateToRfc822 }}</lastBuildDate>
+				{%- if bookmark.modified -%}
+					<lastBuildDate>{{ bookmark.modified | dateObj | dateToRfc822 }}</lastBuildDate>
 				{%- endif -%}
 				<dc:creator>{{ metadata.author.name }}</dc:creator>
 				<guid>{{ bookmark.link }}</guid>
