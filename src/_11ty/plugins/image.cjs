@@ -18,39 +18,45 @@ module.exports = (eleventyConfig) => {
 				throw new Error(`Missing \`alt\` on image from: ${src}`);
 			}
 
-			let formats = ["avif", "webp", "auto"];
-			let metadata = await eleventyImage(src, {
-				cacheOptions: {
-					duration: "4w",
-				},
-				formats,
-				outputDir: path.join(eleventyConfig.dir.output, "img"),
-				widths: widths || ["auto"],
-			});
+			try {
+				let formats = ["avif", "webp", "auto"];
 
-			let imageAttributes = {
-				alt,
-				class: "[ image ]",
-				decoding: "async",
-				loading: "lazy",
-				sizes,
-			};
+				let metadata = await eleventyImage(src, {
+					cacheOptions: {
+						duration: "4w",
+					},
+					formats,
+					outputDir: path.join(eleventyConfig.dir.output, "img"),
+					widths: widths || ["auto"],
+				});
 
-			if (caption) {
-				return `<figure>${eleventyImage.generateHTML(
-					metadata,
-					imageAttributes,
-					{
-						whiteSpace: "inline",
-					}
-				)}<figcaption ${
-					noItalics ? `class="no-italics"` : ``
-				}>${caption}</figcaption></figure>`;
+				let imageAttributes = {
+					alt,
+					class: "[ image ]",
+					decoding: "async",
+					loading: "lazy",
+					sizes,
+				};
+
+				if (caption) {
+					return `<figure>${eleventyImage.generateHTML(
+						metadata,
+						imageAttributes,
+						{
+							whiteSpace: "inline",
+						}
+					)}<figcaption ${
+						noItalics ? `class="no-italics"` : ``
+					}>${caption}</figcaption></figure>`;
+				}
+
+				return eleventyImage.generateHTML(metadata, imageAttributes, {
+					whiteSpace: "inline",
+				});
+			} catch (e) {
+				console.log(e);
+				return "";
 			}
-
-			return eleventyImage.generateHTML(metadata, imageAttributes, {
-				whiteSpace: "inline",
-			});
 		}
 	);
 };
