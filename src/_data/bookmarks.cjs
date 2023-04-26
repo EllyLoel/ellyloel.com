@@ -23,7 +23,7 @@ module.exports = async () => {
 		if (items.length) {
 			items.forEach((item) => {
 				response.push({
-					cover: item.cover,
+					image: item.cover,
 					created: item.created,
 					excerpt: item.excerpt,
 					highlights: item.highlights,
