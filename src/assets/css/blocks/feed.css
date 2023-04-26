@@ -1,4 +1,8 @@
 .feed {
+	& > li {
+		max-inline-size: 40ch;
+	}
+
 	& > li + li {
 		margin-block-start: var(--size-7);
 	}
