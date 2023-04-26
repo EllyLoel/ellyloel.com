@@ -18,13 +18,14 @@ eleventyImport:
 	{%- for bookmark in bookmarks.items -%}
 		{%- set title = bookmark.title -%}
 		{%- set url = "./" + bookmark.title | slugify + "/" -%}
-		{%- if bookmark.cover -%}
+		{%- setAsync "imageMarkup" -%}{%- endsetAsync -%}
+		{%- if bookmark.image -%}
 			{%- setAsync "imageMarkup" -%}
-			{%- image bookmark.cover, "" -%}
+			{%- image bookmark.image, "" -%}
 			{%- endsetAsync -%}
 		{%- endif -%}
 		{%- set created = bookmark.created -%}
-		{%- set modified = bookmark.lastUpdate -%}
+		{%- set modified = bookmark.modified -%}
 		{%- set tags = bookmark.tags -%}
 		{%- include "feedItem.njk" -%}
 	{%- endfor -%}

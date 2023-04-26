@@ -18,8 +18,8 @@ permalink: "bookmarks.atom"
 			<title>{{ bookmark.title }}</title>
 			<link href="{{ bookmark.link }}"/>
 			<published>{{ bookmark.created | dateObj | dateToRfc3339 }}</published>
-			{%- if bookmark.lastUpdate -%}
-				<updated>{{ bookmark.lastUpdate | dateObj | dateToRfc3339 }}</updated>
+			{%- if bookmark.modified -%}
+				<updated>{{ bookmark.modified | dateObj | dateToRfc3339 }}</updated>
 			{%- endif -%}
 			<id>{{ bookmark.link }}</id>
 			<content xml:lang="{{ metadata.lang }}" type="html">{{ bookmark.excerpt }}</content>

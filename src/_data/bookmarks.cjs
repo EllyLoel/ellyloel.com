@@ -23,21 +23,21 @@ module.exports = async () => {
 		if (items.length) {
 			items.forEach((item) => {
 				response.push({
-					cover: item.cover,
+					image: item.cover,
 					created: item.created,
 					excerpt: item.excerpt,
 					highlights: item.highlights,
-					lastUpdate: item.lastUpdate,
+					modified: item.lastUpdate,
 					link: item.link,
 					note: item.note,
-					tags: item.tags,
+					tags: ["Bookmarks", ...item.tags],
 					title: item.title,
 					type: item.type,
 				});
 			});
 
 			const newestItemDate = new Date(
-				Math.max(...response.map((item) => new Date(item?.lastUpdate || "")))
+				Math.max(...response.map((item) => new Date(item?.modified || "")))
 			);
 
 			return {
