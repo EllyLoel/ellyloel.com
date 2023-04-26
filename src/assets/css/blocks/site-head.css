@@ -1,5 +1,6 @@
 .site-head {
 	padding: var(--size-6) 0;
+	z-index: 1;
 
 	& .inner {
 		align-items: center;
