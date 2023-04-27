@@ -3,9 +3,9 @@ title: Thoughts on Web Components
 stage: seedling
 ---
 
-::: callout Currently this is a bunch of snippets from other articles
+~~~ callout Currently this is a bunch of snippets from other articles
 [Let's talk about web components from Brad Frost](https://bradfrost.com/blog/post/lets-talk-about-web-components/)
-:::
+~~~
 
 ---
 

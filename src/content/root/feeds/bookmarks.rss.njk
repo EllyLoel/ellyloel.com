@@ -1,5 +1,5 @@
 ---
-permalink: "/bookmarks.rss"
+permalink: "bookmarks.rss"
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="{{ metadata.url }}" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -15,8 +15,8 @@ permalink: "/bookmarks.rss"
 				<link>{{ bookmark.link }}</link>
 				<description>{{ bookmark.excerpt }}</description>
 				<pubDate>{{ bookmark.created | dateObj | dateToRfc822 }}</pubDate>
-				{%- if bookmark.lastUpdate -%}
-					<lastBuildDate>{{ bookmark.lastUpdate | dateObj | dateToRfc822 }}</lastBuildDate>
+				{%- if bookmark.modified -%}
+					<lastBuildDate>{{ bookmark.modified | dateObj | dateToRfc822 }}</lastBuildDate>
 				{%- endif -%}
 				<dc:creator>{{ metadata.author.name }}</dc:creator>
 				<guid>{{ bookmark.link }}</guid>

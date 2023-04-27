@@ -1,5 +1,5 @@
 ---
-permalink: "/bookmarks.json"
+permalink: "bookmarks.json"
 ---
 {
 	"version": "https://jsonfeed.org/version/1.1",
@@ -19,8 +19,8 @@ permalink: "/bookmarks.json"
 		"url": "{{ bookmark.link }}",
 		"title": "{{ bookmark.title }}",
 		"date_published": "{{ bookmark.created | dateObj | dateToRfc3339 }}",
-		{%- if bookmark.lastUpdate -%}
-			"date_modified": "{{ bookmark.lastUpdate | dateObj | dateToRfc3339 }}",
+		{%- if bookmark.modified -%}
+			"date_modified": "{{ bookmark.modified | dateObj | dateToRfc3339 }}",
 		{%- endif -%}
 		"content_text": {% if bookmark.excerpt %}"{{ bookmark.excerpt }}"{% else %}""{% endif %}
 		}

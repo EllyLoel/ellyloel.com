@@ -1,5 +1,5 @@
 ---
-permalink: "/feed.json"
+permalink: "feed.json"
 ---
 {
   "version": "https://jsonfeed.org/version/1.1",
@@ -13,7 +13,7 @@ permalink: "/feed.json"
     "url": "{{ metadata.author.url }}"
   },
   "items": [
-    {%- for post in collections.allPostTypes | reverse %}
+    {%- for post in collections.allSortedByDate | reverse %}
 	{%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
     {
       "id": "{{ absolutePostUrl }}",

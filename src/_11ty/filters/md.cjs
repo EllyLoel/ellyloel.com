@@ -1,3 +1,3 @@
 const markdown = require("../plugins/markdown.cjs");
 
-module.exports = (content = "") => markdown.plugin.render(content);
+module.exports = (content = "") => markdown.library.render(content);

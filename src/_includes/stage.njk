@@ -1,0 +1,13 @@
+{%- set icon -%}
+{%- if stage === "seedling" -%}seedling{%- endif -%}
+{%- if stage === "budding" -%}spa{%- endif -%}
+{%- if stage === "evergreen" -%}tree{%- endif -%}
+{%- if stage === "draft" -%}file-pen{%- endif -%}
+{%- if stage === "complete" -%}circle-check{%- endif -%}
+{%- endset -%}
+
+<span>
+	<sl-tooltip content="{{ stage | title }}">
+		<sl-icon class="[ icon ]" library="fa" name="fas-{{ icon }}" label="{{ stage | title }}"></sl-icon>
+	</sl-tooltip>
+</span>

@@ -9,6 +9,7 @@
 	font-weight: var(--font-weight-body-bold);
 	justify-content: center;
 	line-height: 1;
+	margin: 0;
 	padding: 0.35em 0.6em;
 	white-space: nowrap;
 

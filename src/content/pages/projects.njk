@@ -1,0 +1,59 @@
+---
+layout: base
+title: Projects
+eleventyNavigation:
+  key: Projects
+  order: 5
+navToHtmlOptions:
+  showExcerpt: true
+eleventyImport:
+  collections: ["projects"]
+---
+
+<h2>
+  Feeds
+</h2>
+<ul>
+	<li>
+		<a href="/projects.rss">
+			<abbr title="Really Simple Syndication">RSS</abbr>
+		</a>
+	</li>
+	<li>
+		<a href="/projects.atom">Atom</a>
+	</li>
+	<li>
+		<a href="/projects.json">
+			<abbr title="JavaScript Object Notation">JSON</abbr>
+		</a>
+	</li>
+</ul>
+
+<h2>
+  Linked posts graph
+</h2>
+<div id="graph"></div>
+
+{% set projects = collections.ProjectsSortedByDate %}
+<ul class="[ feed ]">
+	{%- for project in projects %}
+		{%- set title = project.data.title -%}
+		{%- set url = project.url -%}
+		{%- setAsync "imageMarkup" -%}{%- endsetAsync -%}
+		{%- if project.data.image -%}
+			{%- setAsync "imageMarkup" -%}
+			{%- image project.data.image, "" -%}
+			{%- endsetAsync -%}
+		{%- endif -%}
+		{# {%- set body = project.data.page.excerpt -%} #}
+		{%- set date = project.data.date -%}
+		{%- set label = "" -%}
+		{%- if project.data.modified -%}
+			{%- set label = "Last modified" -%}
+		{%- elif project.data.created -%}
+			{%- set label = "Created" -%}
+		{%- endif -%}
+		{%- set tags = project.data.tags -%}
+		{%- include "feedItem.njk" -%}
+	{%- endfor %}
+</ul>

@@ -4,7 +4,7 @@ const wikilinkRegEx = /\[\[\s*([^\[\]\|\n\r]+)(\|[^\[\]\|\n\r]+)?\s*\]\]/g;
 
 module.exports = {
 	backlinks: (data) => {
-		const posts = data.collections.allPostTypes;
+		const posts = data.collections.allSortedByDate;
 
 		let backlinks = [];
 
@@ -31,4 +31,9 @@ module.exports = {
 		return backlinks;
 	},
 	canonical: (data) => new URL(data.page.url, data.metadata.url).href,
+	date: function (data) {
+		if (data?.modified) return this.dateToISO(new Date(data?.modified));
+		if (data?.created) return this.dateToISO(new Date(data?.created));
+		return this.dateToISO("2001-08-16");
+	},
 };
