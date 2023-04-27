@@ -1,0 +1,34 @@
+---
+layout: post
+tags:
+  - Bookmarks
+pagination:
+  data: bookmarks.items
+  size: 1
+  alias: bookmark
+  addAllPagesToCollections: true
+permalink: "bookmarks/{{ bookmark.title | slugify }}/"
+---
+
+{%- if bookmark.note -%}
+	<p>{{ bookmark.note }}</p>
+{%- endif -%}
+
+{%- if bookmark.excerpt -%}
+	<p>{{ bookmark.excerpt }}</p>
+{%- endif -%}
+
+{%- if bookmark.highlights -%}
+	{%- for highlight in bookmark.highlights -%}
+		<blockquote>
+			{{ highlight.text | nl2br | replace(r/(<br \/>\n)+/gm, "<br><br>") | safe }}
+		</blockquote>
+	{%- endfor -%}
+{%- endif -%}
+
+<a href="{{ bookmark.link }}" class="[ flex flex-col gap-1 padding-2 ]">
+	<h2>Link to {{ bookmark.type }}</h2>
+	<picture>
+		<img alt="" class="[ image ]" src="https://v1.screenshot.11ty.dev/{{ bookmark.link | urlencode }}/large" width="1024" height="1024">
+	</picture>
+</a>

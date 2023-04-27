@@ -7,9 +7,9 @@ modified: 2023-01-10
 
 ## Creating a page for every page
 
-::: callout :warning: This probably isn't the best way to do this!
+~~~ callout :warning: This probably isn't the best way to do this!
 If you're following along keep this in mind, and if you know a better way to do it please let me know, so I can update it!
-:::
+~~~
 
 ```jinja2
 ---

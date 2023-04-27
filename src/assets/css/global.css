@@ -21,13 +21,15 @@ body {
 
 	& > :is(header, main, footer) {
 		isolation: isolate;
+		position: relative;
+		z-index: 0;
 	}
 }
 
 main {
 	--flow-space: var(--size-10);
 
-	margin-block: var(--size-12);
+	margin-block: var(--size-8);
 
 	/* only doing this as it has a tabindex of -1 for the skip link */
 	&:focus-visible {
@@ -36,6 +38,10 @@ main {
 
 	& > * :where(*) {
 		--flow-space: 1em;
+	}
+
+	@media (width >= 768px) {
+		margin-block: var(--size-10);
 	}
 }
 
@@ -334,9 +340,10 @@ figure {
 	}
 }
 
-/* Picture */
+/* Picture and video */
 
-picture .image {
+picture .image,
+video {
 	border-radius: var(--radius-2);
 }
 

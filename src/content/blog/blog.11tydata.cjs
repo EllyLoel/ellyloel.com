@@ -1,8 +1,7 @@
 module.exports = {
-	date: "git Last Modified",
 	layout: "post",
-	permalink: "/blog/{{ title | slugify }}/",
-	tags: ["blog"],
+	permalink: "blog/{{ title | slugify }}/",
+	tags: ["Blog"],
 	eleventyComputed: {
 		eleventyNavigation: {
 			key: (data) => data.title,

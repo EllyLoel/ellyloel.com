@@ -1,0 +1,73 @@
+---
+layout: base
+title: Blog
+eleventyNavigation:
+  key: Blog
+  parent: Writing
+  order: 2
+eleventyImport:
+  collections: ["blog"]
+---
+
+<h2>
+  Feeds
+</h2>
+<ul>
+	<li>
+		<a href="/articles.rss">
+			<abbr title="Really Simple Syndication">RSS</abbr>
+		</a>
+	</li>
+	<li>
+		<a href="/articles.atom">Atom</a>
+	</li>
+	<li>
+		<a href="/articles.json">
+			<abbr title="JavaScript Object Notation">JSON</abbr>
+		</a>
+	</li>
+</ul>
+
+<h2>
+  Linked posts graph
+</h2>
+<div id="graph"></div>
+
+{%- set blog = collections.BlogSortedByDate -%}
+
+{# {%- set draftCount = 0 -%}
+{%- set completeCount = 0 -%}
+
+{%- for post in blog -%}
+  {%- if post.data.stage === "draft" -%}
+    {%- set draftCount = draftCount + 1 -%}
+  {%- elif post.data.stage === "complete" -%}
+    {%- set completeCount = completeCount + 1 -%}
+  {%- endif -%}
+{%- endfor -%} #}
+
+<ul class="[ feed ]">
+	{%- for post in blog %}
+		{%- if post.data.stage -%}
+			{%- set stage = post.data.stage -%}
+		{%- endif -%}
+		{%- set title = post.data.title -%}
+		{%- set url = post.url -%}
+		{%- setAsync "imageMarkup" -%}{%- endsetAsync -%}
+		{%- if post.data.image -%}
+			{%- setAsync "imageMarkup" -%}
+			{%- image post.data.image, "" -%}
+			{%- endsetAsync -%}
+		{%- endif -%}
+		{# {%- set body = post.data.page.excerpt -%} #}
+		{%- set date = post.data.date -%}
+		{%- set label = "" -%}
+		{%- if post.data.modified -%}
+			{%- set label = "Last modified" -%}
+		{%- elif post.data.created -%}
+			{%- set label = "Created" -%}
+		{%- endif -%}
+		{%- set tags = post.data.tags -%}
+		{%- include "feedItem.njk" -%}
+	{%- endfor %}
+</ul>

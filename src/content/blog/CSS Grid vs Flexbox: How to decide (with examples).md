@@ -1,7 +1,7 @@
 ---js
 {
 	title: "CSS Grid vs Flexbox: How to decide (with examples)",
-	permalink: "/blog/css-grid-vs-flexbox",
+	permalink: "blog/css-grid-vs-flexbox",
 	stage: "complete",
 	image: "./src/assets/img/Should-I-use-Flexbox-or-Grid.png",
 	created: new Date("2022-10-04"),
@@ -266,9 +266,9 @@ A CSS layout mode, sometimes called layout, is an algorithm that determines the 
 
 ![](./src/assets/img/layout-mode-cheat-sheet.png)
 
-::: callout Warning
+~~~ callout Warning
 Developers used to push table and float to the limit to layout pages. This is now considered a bad practice, as you should use the best layout mode for the job, reserving table and float for what they were originally designed to do.
-:::
+~~~
 
 ## The verdict
 

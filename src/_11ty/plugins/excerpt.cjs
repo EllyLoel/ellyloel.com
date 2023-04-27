@@ -28,7 +28,7 @@ module.exports = (eleventyConfig) => {
 					""
 				)
 				.replace(/\[|\]/gm, "")
-				.replace(/:::.+:?:?:?/gm, "")
+				.replace(/~~~.+~?~?~?/gm, "")
 				.replace(/{%.+%?}?/gm, "")
 				.split(/\.\s/gm)
 				.slice(0, -1)

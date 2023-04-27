@@ -18,7 +18,9 @@
 @import url("./utilities/content-width.css") layer(utilities);
 @import url("./utilities/detitlify.css") layer(utilities);
 @import url("./utilities/layout.css") layer(utilities);
+@import url("./utilities/margin.css") layer(utilities);
 @import url("./utilities/no-width.css") layer(utilities);
+@import url("./utilities/padding.css") layer(utilities);
 @import url("./utilities/flow.css") layer(utilities);
 @import url("./utilities/panel.css") layer(utilities);
 @import url("./utilities/radius.css") layer(utilities);

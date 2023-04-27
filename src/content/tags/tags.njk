@@ -1,0 +1,54 @@
+---
+layout: base
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - allSortedByDate
+    - blog
+    - Blog
+    - BlogSortedByDate
+    - bookmarks
+    - Bookmarks
+    - garden
+    - Garden
+    - GardenSortedByDate
+    - projects
+    - Projects
+    - ProjectsSortedByDate
+    - til
+    - TIL
+    - TILSortedByDate
+permalink: "{{ tag | slugify }}/"
+eleventyComputed:
+  title: "{{ tag }}"
+---
+
+<ul>
+	{% set taglist = collections[tag] %}
+	{% for post in taglist | reverse %}
+		{%- if post.data.stage -%}
+			{%- set stage = post.data.stage -%}
+		{%- endif -%}
+		{%- set title = post.data.title -%}
+		{%- set url = post.url -%}
+		{%- setAsync "imageMarkup" -%}{%- endsetAsync -%}
+		{%- if post.data.image -%}
+			{%- setAsync "imageMarkup" -%}
+			{%- image post.data.image, "" -%}
+			{%- endsetAsync -%}
+		{%- endif -%}
+		{# {%- set body = post.data.page.excerpt -%} #}
+		{%- set date = post.data.date -%}
+		{%- set label = "" -%}
+		{%- if post.data.modified -%}
+			{%- set label = "Last modified" -%}
+		{%- elif post.data.created -%}
+			{%- set label = "Created" -%}
+		{%- endif -%}
+		{%- set tags = post.data.tags -%}
+		{%- include "feedItem.njk" -%}
+	{% endfor %}
+</ul>

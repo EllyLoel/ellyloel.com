@@ -1,0 +1,41 @@
+---
+layout: base
+title: TIL
+eleventyNavigation:
+  key: TIL
+  parent: Writing
+  order: 3
+eleventyImport:
+  collections: ["til"]
+---
+
+<dfn>Today I Learned</dfn>
+
+<h2>
+  Linked posts graph
+</h2>
+<div id="graph"></div>
+
+{% set til = collections.TILSortedByDate %}
+<ul class="[ feed ]">
+	{%- for post in til %}
+		{%- set title = post.data.title -%}
+		{%- set url = post.url -%}
+		{%- setAsync "imageMarkup" -%}{%- endsetAsync -%}
+		{%- if post.data.image -%}
+			{%- setAsync "imageMarkup" -%}
+			{%- image post.data.image, "" -%}
+			{%- endsetAsync -%}
+		{%- endif -%}
+		{# {%- set body = post.data.page.excerpt -%} #}
+		{%- set date = post.data.date -%}
+		{%- set label = "" -%}
+		{%- if post.data.modified -%}
+			{%- set label = "Last modified" -%}
+		{%- elif post.data.created -%}
+			{%- set label = "Created" -%}
+		{%- endif -%}
+		{%- set tags = post.data.tags -%}
+		{%- include "feedItem.njk" -%}
+	{%- endfor %}
+</ul>

@@ -1,0 +1,16 @@
+---
+layout: og
+pagination:
+  data: collections.all
+  size: 1
+  alias: ogPost
+permalink: "og/{{ ogPost.data.page.url }}/"
+---
+
+<h1>
+	{%- if ogPost.data.title == "Home" -%}
+		Creating delightful, magical, and accessible art with code
+	{%- else -%}
+		{{ ogPost.data.title }}
+	{%- endif -%}
+</h1>

@@ -16,6 +16,7 @@ let markdownLibrary = require("markdown-it")({
 	.use(require("markdown-it-mark"))
 	.use(require("markdown-it-abbr"))
 	.use(require("markdown-it-container"), "callout", {
+		marker: "~",
 		render: (tokens, idx) => {
 			const title = tokens[idx].info.trim().match(/^callout\s+(.*)$/);
 			if (tokens[idx].nesting === 1) {

@@ -5,9 +5,9 @@ created: 2022-09-19
 modified: 2022-09-23
 ---
 
-::: callout Multi layered design system
+~~~ callout Multi layered design system
 With different levels of abstraction.
-:::
+~~~
 
 {% svg "./src/assets/svg/workflow.svg", "The client's brand identity is used to create design tokens which get passed into an unbranded component library to create the basis of their design system." %}
 
