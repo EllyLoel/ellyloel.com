@@ -1,4 +1,3 @@
-import "../css/shoelace.css";
 import "@shoelace-style/shoelace/dist/components/animated-image/animated-image.js";
 import "@shoelace-style/shoelace/dist/components/avatar/avatar.js";
 import "@shoelace-style/shoelace/dist/components/badge/badge.js";
