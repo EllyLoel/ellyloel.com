@@ -2,7 +2,7 @@ module.exports = {
 	root: true,
 	plugins: ["prettier"],
 	extends: ["eslint:recommended", "plugin:prettier/recommended"],
-	ignorePatterns: [".eslintrc.cjs"],
+	ignorePatterns: [".eslintrc.cjs", "rollup.config.js"],
 	rules: {
 		"no-console": "warn",
 		"prettier/prettier": "error",
@@ -10,7 +10,7 @@ module.exports = {
 		"sort-imports": "error",
 		"sort-keys": "error",
 		"sort-vars": "error",
-		"no-prototype-builtins": "false",
+		"no-prototype-builtins": "off",
 	},
 	env: {
 		node: true,
