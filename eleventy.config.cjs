@@ -34,11 +34,15 @@ module.exports = (eleventyConfig) => {
 	// Copy/pass-through files
 	eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
 
+	// Watch targets
+	eleventyConfig.addWatchTarget("src/css");
+	eleventyConfig.addWatchTarget("src/js");
+
 	return {
 		dir: {
 			data: "../_data", // Relative to input
 			includes: "../_includes", // Relative to input
-			input: "src/content",
+			input: "src/input",
 			layouts: "../_layouts", // Relative to input
 			output: "_site",
 		},
