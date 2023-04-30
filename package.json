@@ -39,7 +39,8 @@
 		"d3": "^7.8.4",
 		"howler": "^2.2.3",
 		"netlify-plugin-cache": "^1.0.3",
-		"pagefind": "^0.12.0"
+		"pagefind": "^0.12.0",
+		"three": "^0.151.2"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^2.0.1",
@@ -52,6 +53,7 @@
 		"@eslint/js": "^8.38.0",
 		"@photogabble/eleventy-plugin-interlinker": "^1.0.1",
 		"@rollup/plugin-node-resolve": "^15.0.2",
+		"@rollup/plugin-terser": "^0.4.1",
 		"@sindresorhus/slugify": "^1.1.2",
 		"@types/markdown-it": "^12.2.3",
 		"browserslist": "^4.21.5",
@@ -92,7 +94,6 @@
 		"remove-markdown": "^0.5.0",
 		"rimraf": "^5.0.0",
 		"rollup": "^3.21.0",
-		"rollup-plugin-terser": "^7.0.2",
 		"rss-parser": "^3.13.0",
 		"stylelint": "^15.5.0",
 		"stylelint-config-standard": "^33.0.0",
