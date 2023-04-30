@@ -1,4 +1,0 @@
-{
-	"eleventyExcludeFromCollections": true,
-	"permalink": "{{ page.filePathStem }}.css"
-}

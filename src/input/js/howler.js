@@ -1,4 +1,4 @@
-import { Howl, Howler } from "howler";
+import "howler/dist/howler.core.min.js";
 
 let soundEnabled = true;
 
