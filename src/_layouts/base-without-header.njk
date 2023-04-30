@@ -8,7 +8,7 @@
 		<title>{{ title }} | Elly Loel</title>
 
 		<!-- Include stylesheets here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
-		<link rel="stylesheet" href="/assets/css/style.css">
+		<link rel="stylesheet" href="/css/style.css">
 
 		<script>
 			const localStorageColorScheme = localStorage.getItem("color-scheme");
@@ -28,17 +28,17 @@
 		</script>
 
 		<!-- Include scripts here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
-		<script type="module" src="/assets/js/main.js" defer></script>
+		{%- rollup "src/input/js/main.js" | url -%}
 		{%- if page.url === "/" -%}
-			<script type="module" src="/assets/js/model-viewer.js" defer></script>
-			<script type="module" src="/assets/js/spotify.js" defer></script>
+			{%- rollup "src/input/js/model-viewer.js" | url -%}
+			{%- rollup "src/input/js/spotify.js" | url -%}
 		{%- endif -%}
 		{%- if page.url === "/garden/" or page.url === "/blog/" or page.url === "/projects/" or page.url === "/til/" or page.url === "/til/d3/" or page.url === "/archive/" -%}
-			<script type="module" src="/assets/js/graph.js" defer></script>
+			{%- rollup "src/input/js/graph.js" | url -%}
 		{%- endif -%}
 		{%- if page.url === "/search/" -%}
-			<script type="module" src="/assets/js/is-land.js" defer></script>
-			<script type="module" src="/assets/js/search.js" defer></script>
+			{%- rollup "src/input/js/is-land.js" | url -%}
+			{%- rollup "src/input/js/search.js" | url -%}
 		{%- endif -%}
 		<script data-goatcounter="https://ellyloel.goatcounter.com/count" src="//gc.zgo.at/count.js" defer></script>
 
