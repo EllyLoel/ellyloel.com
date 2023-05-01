@@ -1,5 +1,6 @@
 ---
 title: Harder than being disabled
+stage: seedling
 created: 2022-10-18
 modified: 2022-10-18
 ---

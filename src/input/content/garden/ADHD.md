@@ -1,6 +1,8 @@
 ---
 title: ADHD
 stage: seedling
+tags:
+  - ADHD
 ---
 
 The worst acronym in the world. :upside_down_face:

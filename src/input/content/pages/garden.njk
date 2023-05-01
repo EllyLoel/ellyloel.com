@@ -54,26 +54,28 @@ eleventyImport:
 
 <ul class="[ feed ]">
 	{%- for note in notes -%}
-		{%- if note.data.stage -%}
-			{%- set stage = note.data.stage -%}
+		{%- if note.data.archived !== true -%}
+			{%- if note.data.stage -%}
+				{%- set stage = note.data.stage -%}
+			{%- endif -%}
+			{%- set title = note.data.title -%}
+			{%- set url = note.url -%}
+			{%- setAsync "imageMarkup" -%}{%- endsetAsync -%}
+			{%- if note.data.image -%}
+				{%- setAsync "imageMarkup" -%}
+				{%- image note.data.image, "" -%}
+				{%- endsetAsync -%}
+			{%- endif -%}
+			{# {%- set body = note.data.page.excerpt -%} #}
+			{%- set date = note.data.date -%}
+			{%- set label = "" -%}
+			{%- if note.data.modified -%}
+				{%- set label = "Last modified" -%}
+			{%- elif note.data.created -%}
+				{%- set label = "Created" -%}
+			{%- endif -%}
+			{%- set tags = note.data.tags -%}
+			{%- include "feedItem.njk" -%}
 		{%- endif -%}
-		{%- set title = note.data.title -%}
-		{%- set url = note.url -%}
-		{%- setAsync "imageMarkup" -%}{%- endsetAsync -%}
-		{%- if note.data.image -%}
-			{%- setAsync "imageMarkup" -%}
-			{%- image note.data.image, "" -%}
-			{%- endsetAsync -%}
-		{%- endif -%}
-		{# {%- set body = note.data.page.excerpt -%} #}
-		{%- set date = note.data.date -%}
-		{%- set label = "" -%}
-		{%- if note.data.modified -%}
-			{%- set label = "Last modified" -%}
-		{%- elif note.data.created -%}
-			{%- set label = "Created" -%}
-		{%- endif -%}
-		{%- set tags = note.data.tags -%}
-		{%- include "feedItem.njk" -%}
 	{%- endfor -%}
 </ul>

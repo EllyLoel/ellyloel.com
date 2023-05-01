@@ -45,7 +45,7 @@ main {
 	}
 }
 
-:is(h1, .h1, h2, .h2, h3, .h3, h4, h5, h6, dt) {
+:is(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, dt) {
 	--font-wonkiness: 1;
 	--font-softness: 100;
 
@@ -59,7 +59,7 @@ main {
 	font-weight: var(--font-weight-7);
 }
 
-:is(h1, h2, h3, h4, h5, h6) {
+:is(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) {
 	inline-size: fit-content;
 
 	& a {
@@ -107,11 +107,11 @@ h3,
 	font-size: var(--font-size-fluid-1);
 }
 
-:is(h3, .h3, h4, h5, h6, dt) {
+:is(h3, .h3, h4, .h4, h5, .h5, h6, .h6, dt) {
 	max-inline-size: var(--size-header-3);
 }
 
-:is(h4, h5, h6) {
+:is(h4, .h4, h5, .h5, h6, .h6) {
 	font-size: var(--font-size-3);
 }
 
@@ -119,7 +119,25 @@ h3,
 	font-size: var(--font-size-2);
 }
 
-strong:not(h1, .h1, h2, .h2, h3, .h3, h4, h5, h6, pre, code, kbd, var, samp) {
+strong:not(
+		h1,
+		.h1,
+		h2,
+		.h2,
+		h3,
+		.h3,
+		h4,
+		.h4,
+		h5,
+		.h5,
+		h6,
+		.h6,
+		pre,
+		code,
+		kbd,
+		var,
+		samp
+	) {
 	color: var(--accent-text);
 	font-weight: var(--font-weight-body-bold);
 }

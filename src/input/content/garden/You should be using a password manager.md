@@ -1,6 +1,7 @@
 ---
 title: You should be using a password manager
 stage: budding
+archived: true
 ---
 
 ## Why use a password manager?

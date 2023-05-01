@@ -1,6 +1,8 @@
 ---
 title: Input types a11y
 stage: seedling
+tags:
+  - A11y
 created: 2023-03-07
 modified: 2023-03-13
 ---

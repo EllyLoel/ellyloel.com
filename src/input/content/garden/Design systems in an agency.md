@@ -1,6 +1,8 @@
 ---
 title: Design systems in an agency
 stage: seedling
+tags:
+  - Design systems
 created: 2022-09-19
 modified: 2022-09-23
 ---

@@ -1,6 +1,8 @@
 ---
 title: How to give your brain the stimulation it needs
 stage: budding
+tags:
+  - ADHD
 ---
 
 ADHD brains need a lot of stimulation

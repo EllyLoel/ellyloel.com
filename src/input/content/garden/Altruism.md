@@ -1,6 +1,7 @@
 ---
 title: Altruism
 stage: seedling
+archived: true
 ---
 
 As lovely as it might seem, our selfless actions usually get prioritised above looking after ourselves.

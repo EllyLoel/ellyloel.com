@@ -55,6 +55,13 @@ layout: base-without-header.njk
 	</aside>
 {%- endif -%}
 <article class="[ markdown-container ][ flow flow-space-setter ]" style="--flow-space-setter: 2em;">
+	{%- if not created and not modified -%}
+		{%- md -%}
+~~~ callout Heads up this is an old post
+This post hasn't been updated a long time, so it might be kinda crusty.
+~~~
+		{%- endmd -%}
+	{%- endif -%}
 	{{ content | safe }}
 </article>
 {%- if backlinks === [] -%}

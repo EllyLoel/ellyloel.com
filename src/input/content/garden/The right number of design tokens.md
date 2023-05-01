@@ -1,6 +1,8 @@
 ---
 title: The right number of design tokens
 stage: seedling
+tags:
+  - Design tokens
 created: 2022-09-21
 modified: 2022-09-21
 ---

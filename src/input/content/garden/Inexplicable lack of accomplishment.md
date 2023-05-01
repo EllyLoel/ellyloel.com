@@ -1,6 +1,7 @@
 ---
 title: Inexplicable lack of accomplishment
 stage: seedling
+archived: true
 ---
 
 Unable to meet their normal expectations for seemingly no reason. Perceived decline in ability with no apparent cause.
