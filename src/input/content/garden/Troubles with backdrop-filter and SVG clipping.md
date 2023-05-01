@@ -1,6 +1,8 @@
 ---
 title: Troubles with backdrop-filter and SVG clipping
 stage: seedling
+tags:
+  - CSS
 created: 2022-07-04
 modified: 2022-07-04
 ---

@@ -1,6 +1,8 @@
 ---
 title: Astro
 stage: seedling
+tags:
+  - JavaScript
 created: 2022-09-19
 modified: 2022-09-19
 ---

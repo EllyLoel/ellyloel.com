@@ -1,6 +1,8 @@
 ---
 title: How to get stuff done when you have ADHD
 stage: seedling
+tags:
+  - ADHD
 ---
 
 **TL;DR**: Don't :smiling_face_with_tear:

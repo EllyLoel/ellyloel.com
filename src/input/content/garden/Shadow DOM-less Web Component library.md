@@ -1,5 +1,8 @@
 ---
 title: Shadow DOM-less Web Component library
+stage: seedling
+tags:
+  - Web Components
 created: 2022-10-18
 modified: 2022-10-18
 ---

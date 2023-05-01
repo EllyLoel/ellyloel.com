@@ -1,6 +1,8 @@
 ---
 title: Custom Open Graph Images, yet another way
 stage: budding
+tags:
+  - Building websites
 created: 2023-01-10
 modified: 2023-01-10
 ---

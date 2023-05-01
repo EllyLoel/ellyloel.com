@@ -39,11 +39,11 @@ module.exports = (eleventyConfig) => {
 							: ``
 				  }${
 						props?.url || props?.title
-							? `<h4 class="unfurl__heading${
+							? `<span class="h4 unfurl__heading${
 									!props?.author ? ` unfurl__meta` : ``
 							  }"><a class="unfurl__link" href="${props?.url}">${
 									props?.title
-							  }</a></h4>`
+							  }</a></span>`
 							: ``
 				  }${
 						props?.description

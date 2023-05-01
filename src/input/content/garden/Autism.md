@@ -1,5 +1,7 @@
 ---
 title: Autism
+tags:
+  - Autism
 stage: seedling
 ---
 

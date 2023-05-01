@@ -1,6 +1,8 @@
 ---
 title: Digital Garden
 stage: seedling
+tags:
+  - Digital Garden
 ---
 
 Pottering around in a digital garden, tending to the notes.
