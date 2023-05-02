@@ -7,7 +7,7 @@ eleventyNavigation:
   order: 7
 ---
 
-A collection of images of our lovely little lady Lu. :black_cat: 
+A collection of images of our lovely little lady Lu. {% emoji "🐈‍⬛" %}
 
 Knowledge for image descriptions:
 - Lulu is our little black cat

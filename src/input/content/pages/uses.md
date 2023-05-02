@@ -9,19 +9,18 @@ eleventyNavigation:
 
 ## Hardware
 
-- :computer: M1 MacBook Pro 13 inch
-- :desktop_computer: 2x Dell G3223Q 32 inch 4k 144hz
-- :computer: iPad Pro 2020
-- :iphone: iPhone 12
-- :watch: Apple Watch 5
-- :headphones: AirPods 3
-- :headphones: AirPods Max
-- :headphones: Nothing Ear(1)
-- :camera_flash: Panasonic Lumix G7
-- :studio_microphone: Audio-Technica AT2020
-- :computer_mouse: Glorious Model-O wireless
+- {% emoji "💻", "Computer" %} M1 MacBook Pro 13 inch
+- {% emoji "🖥️", "Monitor" %} 2x Dell G3223Q 32 inch 4k 144hz
+- {% emoji "📱", "Tablet" %} iPad Pro 2020
+- {% emoji "📱", "Phone" %} iPhone 12
+- {% emoji "⌚️", "Watch" %} Apple Watch 5
+- {% emoji "🎧", "Earphones" %} AirPods 3
+- {% emoji "🎧", "Headphones" %} AirPods Max
+- {% emoji "📸", "Camera" %} Panasonic Lumix G7
+- {% emoji "🎙️", "Microphone" %} Audio-Technica AT2020
+- {% emoji "🖱️", "Mouse" %} Glorious Model-O wireless
 
-### :keyboard: Keyboards
+### {% emoji "⌨️" %} Keyboards
 
 #### Pretty in pink
 

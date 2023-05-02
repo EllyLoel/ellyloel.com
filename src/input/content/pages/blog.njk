@@ -9,24 +9,13 @@ eleventyImport:
   collections: ["blog"]
 ---
 
-<h2>
-  Feeds
-</h2>
-<ul>
-	<li>
-		<a href="/articles.rss">
-			<abbr title="Really Simple Syndication">RSS</abbr>
-		</a>
-	</li>
-	<li>
-		<a href="/articles.atom">Atom</a>
-	</li>
-	<li>
-		<a href="/articles.json">
-			<abbr title="JavaScript Object Notation">JSON</abbr>
-		</a>
-	</li>
-</ul>
+<a href="#feed" class="[ visually-hidden ]">Skip to articles</a>
+
+<div>
+	{%- md -%}
+	This is my blog, for longer form content, also avaliable in your favourite flavour of feed [RSS](/articles.rss), [Atom](/articles.atom) or [JSON](/articles.json).
+	{%- endmd -%}
+</div>
 
 <h2>
   Linked posts graph
@@ -46,7 +35,7 @@ eleventyImport:
   {%- endif -%}
 {%- endfor -%} #}
 
-<ul class="[ feed ]">
+<ul id="feed" class="[ feed ]">
 	{%- for post in blog %}
 		{%- if post.data.stage -%}
 			{%- set stage = post.data.stage -%}

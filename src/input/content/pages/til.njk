@@ -1,10 +1,6 @@
 ---
 layout: base
 title: TIL
-eleventyNavigation:
-  key: TIL
-  parent: Writing
-  order: 3
 eleventyImport:
   collections: ["til"]
 ---
@@ -17,7 +13,7 @@ eleventyImport:
 <div id="graph"></div>
 
 {% set til = collections.TILSortedByDate %}
-<ul class="[ feed ]">
+<ul id="feed" class="[ feed ]">
 	{%- for post in til %}
 		{%- set title = post.data.title -%}
 		{%- set url = post.url -%}

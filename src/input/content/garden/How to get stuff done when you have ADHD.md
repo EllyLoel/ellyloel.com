@@ -5,7 +5,7 @@ tags:
   - ADHD
 ---
 
-**TL;DR**: Don't :smiling_face_with_tear:
+**TL;DR**: Don't {% emoji "🥲", "Smiling face with tear." %}
 
 There are only two times, [[Sense of time|now and not now]].
 

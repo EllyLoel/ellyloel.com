@@ -8,13 +8,15 @@ eleventyImport:
   collections: ["bookmarks"]
 ---
 
+<a href="#feed" class="[ visually-hidden ]">Skip to bookmarks</a>
+
 <div>
 	{%- md -%}
 	These are [my public raindrop.io bookmarks](https://raindrop.io/ellyloel/public-33237518), also avaliable in your favourite flavour of feed [RSS](/bookmarks.rss), [Atom](/bookmarks.atom) or [JSON](/bookmarks.json).
 	{%- endmd -%}
 </div>
 
-<ul class="[ feed ]">
+<ul id="feed" class="[ feed ]">
 	{%- for bookmark in bookmarks.items -%}
 		{%- set title = bookmark.title -%}
 		{%- set url = "./" + bookmark.title | slugify + "/" -%}

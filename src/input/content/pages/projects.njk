@@ -10,24 +10,13 @@ eleventyImport:
   collections: ["projects"]
 ---
 
-<h2>
-  Feeds
-</h2>
-<ul>
-	<li>
-		<a href="/projects.rss">
-			<abbr title="Really Simple Syndication">RSS</abbr>
-		</a>
-	</li>
-	<li>
-		<a href="/projects.atom">Atom</a>
-	</li>
-	<li>
-		<a href="/projects.json">
-			<abbr title="JavaScript Object Notation">JSON</abbr>
-		</a>
-	</li>
-</ul>
+<a href="#feed" class="[ visually-hidden ]">Skip to projects</a>
+
+<div>
+	{%- md -%}
+	This is a collection of projects I've started, and probably not finished {% emoji "😅", "Whoops!" %}. They're also avaliable in your favourite flavour of feed [RSS](/projects.rss), [Atom](/projects.atom) or [JSON](/projects.json).
+	{%- endmd -%}
+</div>
 
 <h2>
   Linked posts graph
@@ -35,7 +24,7 @@ eleventyImport:
 <div id="graph"></div>
 
 {% set projects = collections.ProjectsSortedByDate %}
-<ul class="[ feed ]">
+<ul id="feed" class="[ feed ]">
 	{%- for project in projects %}
 		{%- set title = project.data.title -%}
 		{%- set url = project.url -%}

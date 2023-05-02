@@ -93,6 +93,9 @@ devDependencies:
   eleventy-plugin-broken-links:
     specifier: ^2.0.3
     version: 2.0.3
+  eleventy-plugin-emoji:
+    specifier: ^1.1.0
+    version: 1.1.0
   eleventy-plugin-gen-favicons:
     specifier: ^1.1.2
     version: 1.1.2
@@ -141,9 +144,6 @@ devDependencies:
   markdown-it-container:
     specifier: ^3.0.0
     version: 3.0.0
-  markdown-it-emoji:
-    specifier: ^2.0.2
-    version: 2.0.2
   markdown-it-footnote:
     specifier: ^3.0.3
     version: 3.0.3
@@ -2654,6 +2654,10 @@ packages:
       - supports-color
     dev: true
 
+  /eleventy-plugin-emoji@1.1.0:
+    resolution: {integrity: sha512-BkTVNCLPoUned0PH+fBEkm8aF4PGXWCXwbGIEW5+/4d8ceTTuWQELIN6h1laJZZ3PjblZdgmbLmcPsh6u69eug==}
+    dev: true
+
   /eleventy-plugin-gen-favicons@1.1.2:
     resolution: {integrity: sha512-DtxS3J+ujDVZ9oP5RTOTxwET2K7S7WEvQ7XE/S3TwM7uQR/NOqHibuZXyftutK22EU1UInQc2yP1JZ7mtnWJUQ==}
     dependencies:
@@ -4082,10 +4086,6 @@ packages:
 
   /markdown-it-container@3.0.0:
     resolution: {integrity: sha512-y6oKTq4BB9OQuY/KLfk/O3ysFhB3IMYoIWhGJEidXt1NQFocFK2sA2t0NYZAMyMShAGL6x5OPIbrmXPIqaN9rw==}
-    dev: true
-
-  /markdown-it-emoji@2.0.2:
-    resolution: {integrity: sha512-zLftSaNrKuYl0kR5zm4gxXjHaOI3FAOEaloKmRA5hijmJZvSjmxcokOLlzycb/HXlUFWzXqpIEoyEMCE4i9MvQ==}
     dev: true
 
   /markdown-it-footnote@3.0.3:

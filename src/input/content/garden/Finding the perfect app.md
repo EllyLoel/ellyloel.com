@@ -4,7 +4,7 @@ stage: budding
 ---
 
 I've tried just about every productivity app under the sun, and I still haven't found "the one".
-Currently, I'm using ClickUp, but once again I'm thinking about switching :woman_facepalming:
+Currently, I'm using ClickUp, but once again I'm thinking about switching {% emoji "🤦🏼‍♀️", "Woman face palming." %}
 
 I've put together a list of my criteria for the "perfect" app for my needs:
 
@@ -54,38 +54,38 @@ I've put together a list of my criteria for the "perfect" app for my needs:
 
 ### [Napkin](https://napkin.one)
 
-- [✓] :brain: Whiteboard
-- [✓] :memo: Notes
-- [×] :white_check_mark: Tasks
-- [×] :calendar: Calendar
+- [✓] {% emoji "🧠" %} Whiteboard
+- [✓] {% emoji "📝" %} Notes
+- [×] {% emoji "☑️" %} Tasks
+- [×] {% emoji "📅" %} Calendar
 
 ### [Amplenote](https://www.amplenote.com/)
 
-- [×] :brain: Whiteboard
-- [✓] :memo: Notes
-- [✓] :white_check_mark: Tasks
-- [✓] :calendar: Calendar
+- [×] {% emoji "🧠" %} Whiteboard
+- [✓] {% emoji "📝" %} Notes
+- [✓] {% emoji "☑️" %} Tasks
+- [✓] {% emoji "📅" %} Calendar
 
 ### [NotePlan](https://noteplan.co/)
 
-- [×] :brain: Whiteboard
-- [✓] :memo: Notes
-- [✓] :white_check_mark: Tasks
-- [✓] :calendar: Calendar
+- [×] {% emoji "🧠" %} Whiteboard
+- [✓] {% emoji "📝" %} Notes
+- [✓] {% emoji "☑️" %} Tasks
+- [✓] {% emoji "📅" %} Calendar
 
 ### [ClickUp](https://clickup.com/)
 
-- [✓] :brain: Whiteboard
-- [✓] :memo: Notes
-- [✓] :white_check_mark: Tasks
-- [✓] :calendar: Calendar
+- [✓] {% emoji "🧠" %} Whiteboard
+- [✓] {% emoji "📝" %} Notes
+- [✓] {% emoji "☑️" %} Tasks
+- [✓] {% emoji "📅" %} Calendar
 
 ### [Organizedly](https://www.organized.ly/)
 
-- [✓] :brain: Whiteboard
-- [✓] :memo: Notes
-- [✓] :white_check_mark: Tasks
-- [✓] :calendar: Calendar
+- [✓] {% emoji "🧠" %} Whiteboard
+- [✓] {% emoji "📝" %} Notes
+- [✓] {% emoji "☑️" %} Tasks
+- [✓] {% emoji "📅" %} Calendar
 
 ---
 
