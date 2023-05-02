@@ -112,7 +112,7 @@ article {
 
 The results aren't finalised yet (_I don't think_), but at the time of writing, [option 3 has 76% of the vote](https://webkit.org/blog/13607/help-choose-from-options-for-css-nesting-syntax/#:~:text=Which%20option%20is%20best%20for%20the%20future%20of%20CSS%3F).
 
-## My opinion (_the only correct one_ :wink:)
+## My opinion (_the only correct one_ {% emoji "😉", "Wink." %})
 
 I think option 3 is the best, as do most other people going by the survey results. But with a caveat, I think the `&` should be required. This is both for parsing and for mental model consistency. Obviously, I'm no CSS spec author, but I think having the `&` be required would make things much easier for the parser. And on the side of user's mental models, not having the ambiguity around the `&` is a good idea. Though as mentioned in the first Chrome Developers post you could use a linter to enforce `&` usage.
 

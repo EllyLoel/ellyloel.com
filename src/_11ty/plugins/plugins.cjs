@@ -1,4 +1,5 @@
 // External imports
+const pluginEmoji = require("eleventy-plugin-emoji");
 const pluginFavicons = require("eleventy-plugin-gen-favicons");
 const pluginInterlinker = require("@photogabble/eleventy-plugin-interlinker");
 const pluginNavigation = require("@11ty/eleventy-navigation");
@@ -15,6 +16,9 @@ const metadata = require("../../_data/metadata.json");
 /** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 module.exports = (eleventyConfig) => {
 	// External plugins
+	eleventyConfig.addPlugin(pluginEmoji, {
+		className: "[ emoji ]",
+	});
 	eleventyConfig.addPlugin(pluginFavicons);
 	eleventyConfig.addPlugin(pluginInterlinker);
 	eleventyConfig.addPlugin(pluginNavigation);

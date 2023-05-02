@@ -7,37 +7,37 @@ created: 2023-01-10
 modified: 2023-01-10
 ---
 
-~~~ callout :warning: This post is not complete, be wary.
+~~~ callout {% emoji "⚠️", "Warning." %} This post is not complete, be wary.
 ~~~
 
 ## ~~Color~~ ++Colour++
 
 Let's get the elephant out of the room.
-I'm Australian, so I spell it like this, colour, not like this, color. _Except when I'm writing any kind of code haha…_ :smiling_face_with_tear:
+I'm Australian, so I spell it like this, colour, not like this, color. _Except when I'm writing any kind of code haha…_ {% emoji "🥲", "Smiling face with tear." %}
 
 ## Fuck sRGB, all my homies hate sRGB
 
 ![A meme with the text “Fuck sRGB, all my homies hate sRGB”](./src/assets/img/all-my-homies-hate-srgb.png)
 
-- [ ] Explain why current colours (sRGB) are shit
+- {% emoji "☑️", "To do." %} Explain why current colours (sRGB) are shit
 
 ## WTF is a colour space?
 
-- [ ] Explain what a colour space is
+- {% emoji "☑️", "To do." %} Explain what a colour space is
 
-- [ ] Visualise different colour spaces
+- {% emoji "☑️", "To do." %} Visualise different colour spaces
 
-- [ ] Explain what a colour gamut is
+- {% emoji "☑️", "To do." %} Explain what a colour gamut is
 
-- [ ] Visualise different colour gamuts
+- {% emoji "☑️", "To do." %} Visualise different colour gamuts
 
 ## Is it all worth it?
 
-"But I like hex codes!" :woman_facepalming:
+"But I like hex codes!" {% emoji "🤦🏼‍♀️", "Woman facepalming." %}
 
-- [ ] Compare sRGB and P3?
+- {% emoji "☑️", "To do." %} Compare sRGB and P3?
 
-- [ ] Compare hex, RGB, and HSL to LAB, LCH, OKLAB, and OKLCH
+- {% emoji "☑️", "To do." %} Compare hex, RGB, and HSL to LAB, LCH, OKLAB, and OKLCH
 
 ---
 

@@ -10,26 +10,13 @@ eleventyImport:
   collections: ["garden"]
 ---
 
-<p>A collection of my ideas that I'm nurturing out in the open. The notes range from seedlings, which are fresh out of my mind, to budding, which are developing, to evergreen, which are polished ideas.</p>
+<a href="#feed" class="[ visually-hidden ]">Skip to notes</a>
 
-<h2>
-  Feeds
-</h2>
-<ul>
-	<li>
-		<a href="/notes.rss">
-			<abbr title="Really Simple Syndication">RSS</abbr>
-		</a>
-	</li>
-	<li>
-		<a href="/notes.atom">Atom</a>
-	</li>
-	<li>
-		<a href="/notes.json">
-			<abbr title="JavaScript Object Notation">JSON</abbr>
-		</a>
-	</li>
-</ul>
+<div>
+	{%- md -%}
+	This is a collection of ideas that I'm nurturing out in the open. The notes range from seedlings, which are fresh out of my mind, to budding, which are developing into something a bit more fleshed out, to evergreen, which are polished ideas. They're also avaliable in your favourite flavour of feed [RSS](/notes.rss), [Atom](/notes.atom) or [JSON](/notes.json).
+	{%- endmd -%}
+</div>
 
 <h2>
   Linked posts graph
@@ -52,7 +39,7 @@ eleventyImport:
 	{%- endif -%}
 {%- endfor -%} #}
 
-<ul class="[ feed ]">
+<ul id="feed" class="[ feed ]">
 	{%- for note in notes -%}
 		{%- if note.data.archived !== true -%}
 			{%- if note.data.stage -%}

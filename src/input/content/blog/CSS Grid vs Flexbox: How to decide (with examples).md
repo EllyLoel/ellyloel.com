@@ -69,7 +69,7 @@ Flexbox was what the web needed, but because it was the first tool of it's kind,
 
 ![Not the hero we deserved, but the hero we needed.](./src/assets/img/hero-we-needed.png)
 
-The [law of the instrument](https://en.wikipedia.org/wiki/Law_of_the_instrument) is a cognitive bias that involves an over-reliance on a familiar tool. This perfectly describes most web developers' relationship with Flexbox 🤣.
+The [law of the instrument](https://en.wikipedia.org/wiki/Law_of_the_instrument) is a cognitive bias that involves an over-reliance on a familiar tool. This perfectly describes most web developers' relationship with Flexbox {% emoji "🤣", "ROFL." %}.
 
 <figure>
   <blockquote>If the only tool you have is a hammer, it is tempting to treat everything as if it were a nail</blockquote>

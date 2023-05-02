@@ -60,7 +60,7 @@ I want to learn about generative art, specifically with SVG.
 
 ## December, 2022
 
-Oop, I've moved onto a new Mastodon instance [@elly@front-end.social](https://front-end.social/@elly) :wave:
+Oop, I've moved onto a new Mastodon instance [@elly@front-end.social](https://front-end.social/@elly) {% emoji "👋🏻" %}
 
 I've also set up a [tweetback](https://www.zachleat.com/web/tweetback/) Twitter archive at [twitter.ellyloel.com](https://twitter.ellyloel.com)
 
@@ -68,7 +68,7 @@ I've also set up a [tweetback](https://www.zachleat.com/web/tweetback/) Twitter 
 
 So Twitter is a shit show lmao, I'm on Mastodon now [@ellyloel@tech.lgbt](https://tech.lgbt/@ellyloel)
 
-I did a presentation on [Solid JS](https://www.solidjs.com/), going from zero knowledge to trying to give a presentation in 2 days is harrrdddddd. Note to self for next time, make slides, you will forget what you want to talk about otherwise :joy:.
+I did a presentation on [Solid JS](https://www.solidjs.com/), going from zero knowledge to trying to give a presentation in 2 days is harrrdddddd. Note to self for next time, make slides, you will forget what you want to talk about otherwise {% emoji "😂", "Crying with laughter" %}.
 
 I also did a presentation on the future of CSS, covering what new things are usable now and what will be usable soon™.
 
@@ -86,9 +86,9 @@ Been learning a lot about accessibility lately and how sadly a lot of the more c
 
 ## August, 2022
 
-I'm officially an AWS certified cloud practitioner, what ever that means :joy:
+I'm officially an AWS certified cloud practitioner, what ever that means {% emoji "😂", "Crying with laughter" %}
 
-Looks like it's that time again, the clock has struck, and now I am 21 :exploding_head:
+Looks like it's that time again, the clock has struck, and now I am 21 {% emoji "🤯", "Mind blown" %}
 
 The fourth version of my website is complete! No more Gatsby or Next, 11ty all the way!!
 
@@ -169,11 +169,11 @@ Built Portable Justice hub
 Budding interest in Web Components
 
 Thinking about the unfortunate truth of stateful design often being ignored or forgotten
-[Twitter thread :thread:](https://twitter.ellyloel.com/1492033654264307712)
+[Twitter thread {% emoji "🧵" %}](https://twitter.ellyloel.com/1492033654264307712)
 
 ## January 2022
 
-Scrimba Podcast episode came out! :tada:
+Scrimba Podcast episode came out! {% emoji "🎉" %}
 https://scrimba.com/podcast/ep-44-elly-loel/
 
 I also made a personal link shortener using Netlify redirects, so all I have to do is run: `shorten https://twitter.com/ellyloel twitter` which automatically updates the redirects file and pushes up the changes so then we get [https://elly.to/twitter](https://elly.to/twitter)

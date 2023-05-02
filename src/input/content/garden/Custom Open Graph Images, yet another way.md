@@ -9,7 +9,7 @@ modified: 2023-01-10
 
 ## Creating a page for every page
 
-~~~ callout :warning: This probably isn't the best way to do this!
+~~~ callout {% emoji "⚠️", "Warning." %} This probably isn't the best way to do this!
 If you're following along keep this in mind, and if you know a better way to do it please let me know, so I can update it!
 ~~~
 
@@ -32,7 +32,7 @@ The content of each paginated page is the title of the page, which gets passed t
 
 ## Getting a screenshot of the `og` pages
 
-Honestly, the main reason I kept on putting off making custom Open Graph images was because I didn't want to have to write a serverless function. I know that probably sounds silly, but I didn't :woman_shrugging:. Sorry if the lack of reasoning is annoying, I just didn't really want to do it, lol.
+Honestly, the main reason I kept on putting off making custom Open Graph images was because I didn't want to have to write a serverless function. I know that probably sounds silly, but I didn't {% emoji "🤷🏼‍♀️", "Woman shrugging." %}. Sorry if the lack of reasoning is annoying, I just didn't really want to do it, lol.
 
 Luckily, unlike most other custom Open Graph image posts, we don't have to do that as I'm using the [11ty Screenshot API](https://github.com/11ty/api-screenshot) to screenshot the `og/` pages. As far as I can tell, it's pretty similar to the way most other people do it, a serverless function that uses Puppeteer (headless Chrome) to open a link and take a screenshot.
 
@@ -70,7 +70,7 @@ As I mentioned earlier and as stated in the docs, the URL "must be URI encoded."
 https://ellyloel.com/og/garden/custom-open-graph-images-yet-another-way/
 ```
 
-Feel free to go to that URL if you want, as I've explained, it is literally the HTML version of the Open Graph image for this page. I think Ideally I wouldn't actually want to have this be an accessible page, but it wouldn't work if it wasn't as the 11ty Screenshot API needs to be able to go to it. Soooo.... :woman_shrugging:
+Feel free to go to that URL if you want, as I've explained, it is literally the HTML version of the Open Graph image for this page. I think Ideally I wouldn't actually want to have this be an accessible page, but it wouldn't work if it wasn't as the 11ty Screenshot API needs to be able to go to it. Soooo.... {% emoji "🤷🏼‍♀️", "Woman shrugging." %}
 
 One other idea I did have was creating a new site that scraped the pages on this site and created the Open Graph HTML pages, but that feels overly complex and kinda stupid? Idk, that could be another option if you don't like the extra pages on your site.
 

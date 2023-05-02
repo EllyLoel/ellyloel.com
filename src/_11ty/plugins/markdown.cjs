@@ -41,23 +41,19 @@ let markdownLibrary = require("markdown-it")({
 		}),
 		slugify: slugify,
 	})
-	.use(require("markdown-it-emoji"))
 	.use(
 		require("markdown-it-wikilinks")({
 			baseURL: "/",
 			generatePageNameFromLabel: (label) =>
-				slugify(label, { lower: true, customReplacements: [[`"`, `\"`]] }),
+				slugify(label, { customReplacements: [[`"`, `\"`]], lower: true }),
 			postProcessPageName: (label) =>
-				slugify(label, { lower: true, customReplacements: [[`"`, `\"`]] }),
+				slugify(label, { customReplacements: [[`"`, `\"`]], lower: true }),
 			relativeBaseURL: "../",
 			suffix: "",
 			uriSuffix: "",
 		})
 	)
 	.use(require("markdown-it-attrs"));
-
-markdownLibrary.renderer.rules.emoji = (token, idx) =>
-	`<span class="[ emoji ]">${token[idx].content}</span>`;
 
 markdownLibrary.renderer.rules.image = function (tokens, idx) {
 	// responsive images with 11ty image

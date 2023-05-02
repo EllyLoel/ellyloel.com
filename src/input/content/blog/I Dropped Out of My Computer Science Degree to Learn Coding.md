@@ -15,7 +15,7 @@ Well hello there! My name is [Elly Loel](https://ellyloel.com/about). I'm a deve
 
 ![Lulu our black cat sitting behind my laptop with code open poking her eyes over looking at the camera](./src/assets/img/LuluCoding.png)_Lulu trying her very best to distract me._
 
-I run a [newsletter](http://newsletter.ellyloel.com/) and love [sharing interesting things](https://elly.to/twitter) to help people become better coders! In my spare time, I love building mechanical keyboards, watching cartoons and anime, and hanging out with my partner Brodie and our cat Lulu. :black_cat:
+I run a [newsletter](http://newsletter.ellyloel.com/) and love [sharing interesting things](https://elly.to/twitter) to help people become better coders! In my spare time, I love building mechanical keyboards, watching cartoons and anime, and hanging out with my partner Brodie and our cat Lulu. {% emoji "🐈‍⬛" %}
 
 You might have heard me on [the Scrimba podcast with Alex Booker](https://scrimba.com/podcast/ep-44-elly-loel/) or seen me in Portable’s [How to land your first tech job](https://youtu.be/1vix3U1P5xk) event.
 
@@ -126,11 +126,11 @@ Step by step the interview process was:
    - I got to chat and ask lots of questions to the CEO and the head of the tech team.
 8. Reference check
    - They contacted and chatted to my reference.
-9. Offer :tada:
+9. Offer {% emoji "🎉", "Party popper." %}
 
 ## What you know now that you wished back then
 
-I wish I knew that I didn't need to go to university. That would have saved me about $10,000 in debt :smiling_face_with_tear:. I wish I knew that you didn't need a degree to be a web developer, it's not like we're doctors or lawyers where you need to have the degree. I really wish I knew that being self taught was a completely acceptable way to get into this industry.
+I wish I knew that I didn't need to go to university. That would have saved me about $10,000 in debt {% emoji "🥲", "Smiling face with tear" %}. I wish I knew that you didn't need a degree to be a web developer, it's not like we're doctors or lawyers where you need to have the degree. I really wish I knew that being self taught was a completely acceptable way to get into this industry.
 
 I also wish I knew how important building projects to showcase your abilities and knowledge is. I did build a few projects while completing the Frontend Developer Career Path but I wish I had built more personal projects, as people always say, build projects that fill your own needs.
 
