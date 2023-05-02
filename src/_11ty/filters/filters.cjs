@@ -27,5 +27,6 @@ module.exports = (eleventyConfig) => {
 		"removeRandomLink",
 		require("./removeRandomLink.cjs")
 	);
+	eleventyConfig.addFilter("split", require("./split.cjs"));
 	eleventyConfig.addFilter("unique", require("./unique.cjs"));
 };
