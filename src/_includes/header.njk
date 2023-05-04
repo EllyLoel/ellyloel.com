@@ -1,6 +1,36 @@
 {% include "theme-switcher.njk" %}
 <header class="site-head">
 	<div class="[ nav-wrapper ]">
-		{% include "navigation.njk" %}
+		<div class="inner">
+			<!-- link to home: http://microformats.org/wiki/rel-home -->
+			<a href="/" rel="home" class="[ u-url u-uid ] [ text-decoration-none ]"{% if page.url === "/" %} data-state="active" aria-current="page"{% endif %}>
+				<span class="[ logo ]" aria-hidden="true" title="Elly">
+					&lt;e//y&gt;
+				</span>
+				<span class="[ p-name ] [ visually-hidden ]">
+					Elly<span aria-hidden="true"> Loel</span>
+				</span>
+			</a>
+
+			<sl-tooltip content="Disable sounds">
+				<sl-icon-button
+					id="sound-button"
+					library="fa"
+					name="fas-volume-high"
+					label="Disable sounds"
+				></sl-icon-button>
+			</sl-tooltip>
+
+			<sl-tooltip content="Switch theme">
+				<sl-icon-button
+					id="theme-switcher-open-button"
+					library="fa"
+					name="fas-palette"
+					label="Open theme switcher"
+				></sl-icon-button>
+			</sl-tooltip>
+
+			{% include "navigation.njk" %}
+		</div>
 	</div>
 </header>

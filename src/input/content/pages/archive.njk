@@ -35,7 +35,7 @@ eleventyImport:
   {%- endif -%}
 {%- endfor -%} #}
 
-<ul id="feed" class="[ feed ]">
+<ul id="feed" class="[ feed ] [ h-feed ]">
 	{%- for post in posts %}
 		{%- if post.data.stage -%}
 			{%- set stage = post.data.stage -%}

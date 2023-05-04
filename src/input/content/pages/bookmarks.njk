@@ -16,7 +16,7 @@ eleventyImport:
 	{%- endmd -%}
 </div>
 
-<ul id="feed" class="[ feed ]">
+<ul id="feed" class="[ feed ] [ h-feed ]">
 	{%- for bookmark in bookmarks.items -%}
 		{%- set title = bookmark.title -%}
 		{%- set url = "./" + bookmark.title | slugify + "/" -%}
