@@ -26,12 +26,12 @@ eleventyImport:
 	</header>
 
 	<article class="[ about ]">
-		<ul role="list" class="[ flow ]">
+		<ul role="list" class="[ p-note ] [ flow ]">
 			<li>
 				<details-utils animate>
 					<details class="[ interest-list ]">
 						<summary>
-							I'm a design engineer with a strong interest in and passion for...
+							I'm a <span class="[ p-role ]">design engineer</span> with a strong interest in and passion for...
 						</summary>
 						<ul role="list" class="[ flow ]">
 							<li>
@@ -71,10 +71,11 @@ eleventyImport:
 				</details-utils>
 			</li>
 			<li>
-				{% emoji "🏳️‍⚧️" %} I'm an incredibly queer pansexual trans woman.
+				{% emoji "🏳️‍⚧️" %} I'm an incredibly <span class="[ p-category ]">queer</span> <span class="[ p-category ]">pansexual</span> <span class="[ p-category ]">trans</span> <span class="[ p-gender-identity ]">woman</span>. My pronouns are <a href="https://en.pronouns.page/@ellyloel" class="[ p-pronouns ]">
+					<span class="[ p-pronoun ]">she</span>/<span class="[ p-pronoun ]">her</span></a>.
 			</li>
 			<li>
-				{% emoji "🧠" %} I'm an AuDHD (autistic and <a href="/garden/adhd"><abbr title="Attention Deficit Hyperactivity Disorder">ADHD</abbr></a>) neurodivergent.
+				{% emoji "🧠" %} I'm an <span class="[ p-category ]">AuDHD</span> (<span class="[ p-category ]">autistic</span> and <a href="/garden/adhd" class="[ p-category ]"><abbr title="Attention Deficit Hyperactivity Disorder">ADHD</abbr></a>) <span class="[ p-category ]">neurodivergent</span>.
 			</li>
 			<li>
 				{% emoji "🐈‍⬛" %} I have a little rascal of a cat named <a href="/lulu">Lulu</a>, who I love to bits.
@@ -83,7 +84,7 @@ eleventyImport:
 				{% emoji "📺" %} I love all kinds of animation (anime, cartoons, etc.).
 			</li>
 			<li>
-				{% emoji "🌏" %} I live on the edge of Bunurong and Wurundjeri Country, near Naarm (Melbourne), Australia.
+				{% emoji "🌏" %} I live on the edge of Bunurong and Wurundjeri Country, near <span class="[ p-locality ]">Naarm (Melbourne)</span>, <span class="[ p-country-name ]">Australia</span>.
 			</li>
 			<li class="[ spotify-playing ]">
 				{% emoji "🎵" %} The last song I listened to was "<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="song">Never Gonna Give You Up</a>" by <em class="artist">Rick Astley</em>.
@@ -93,7 +94,7 @@ eleventyImport:
 			<h2>Find me on:</h2>
 			<ul class="[ social-links ][ flow ]">
 				<li>
-					<a href="https://twitter.ellyloel.com" class="[ text-decoration-none move-link-styling-to-child ]">
+					<a href="https://twitter.ellyloel.com" rel="me" class="[ u-url ][ text-decoration-none move-link-styling-to-child ]">
 						<sl-icon class="[ icon ]" library="fa" name="fab-twitter"></sl-icon>
 						<del datetime="2022-11-18" cite="https://twitter.ellyloel.com/1593505830347100160/">
 							<span>Twitter</span>
@@ -101,7 +102,7 @@ eleventyImport:
 					</a>
 				</li>
 				<li>
-					<a href="https://front-end.social/@elly" class="[ text-decoration-none move-link-styling-to-child ]">
+					<a href="https://front-end.social/@elly" rel="me" class="[ u-url ][ text-decoration-none move-link-styling-to-child ]">
 						<sl-icon class="[ icon ]" library="fa" name="fab-mastodon"></sl-icon>
 						<ins datetime="2022-11-18" cite="https://twitter.ellyloel.com/1593505830347100160/">
 							<span>Mastodon</span>
@@ -109,19 +110,19 @@ eleventyImport:
 					</a>
 				</li>
 				<li>
-					<a href="https://elly.to/ama" class="[ text-decoration-none move-link-styling-to-child ]">
+					<a href="https://elly.to/ama" rel="me" class="[ u-url ][ text-decoration-none move-link-styling-to-child ]">
 						<sl-icon class="[ icon ]" library="fa" name="far-circle-question"></sl-icon>
 						<span>Ask me anything</span>
 					</a>
 				</li>
 				<li>
-					<a href="https://elly.to/codepen" class="[ text-decoration-none move-link-styling-to-child ]">
+					<a href="https://elly.to/codepen" rel="me" class="[ u-url ][ text-decoration-none move-link-styling-to-child ]">
 						<sl-icon class="[ icon ]" library="fa" name="fab-codepen"></sl-icon>
 						<span>Codepen</span>
 					</a>
 				</li>
 				<li>
-					<a href="https://elly.to/linkedin" class="[ text-decoration-none move-link-styling-to-child ]">
+					<a href="https://elly.to/linkedin" rel="me" class="[ u-url ][ text-decoration-none move-link-styling-to-child ]">
 						<sl-icon class="[ icon ]" library="fa" name="fab-linkedin"></sl-icon>
 						<span>LinkedIn</span>
 					</a>

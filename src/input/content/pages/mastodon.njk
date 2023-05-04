@@ -7,9 +7,9 @@ eleventyNavigation:
   order: 3
 ---
 
-<ul class="[ feed ]">
+<ul class="[ feed ] [ h-feed ]">
 	{%- for post in mastodon.items -%}
-		<li>
+		<li class="[ h-entry ]">
 			<sl-card class="[ feed-item-card ]">
 				{%- if post.content.includes("<hr>") -%}
 					<details class="[ padding-0 ]">
@@ -17,7 +17,7 @@ eleventyNavigation:
 							{{ post.content | split("<hr>") | first | striptags }}
 						</summary>
 					{%- endif -%}
-					<div class="[ flow ]">
+					<div class="[ flow ] [ e-content ]">
 						{%- if post.content.includes("<hr>") -%}
 							{{ post.content | replace(r/^.+<hr>/gim, "") | safe }}
 						{%- else -%}
@@ -51,8 +51,8 @@ eleventyNavigation:
 					<sl-tooltip content="Posted on {{ post.isoDate | dateObj | dateToLocaleDateFull }}">
 						<span class="[ flex align-center gap-1ch ]">
 							<sl-icon class="[ icon ]" library="fa" name="far-calendar" label="Posted on {{ post.isoDate | dateObj | dateToLocaleDateFull }}"></sl-icon>
-							<a href={{ post.link }}>
-								<sl-relative-time class="[ date ]" date="{{ post.isoDate }}" style="line-height: 1;"></sl-relative-time>
+							<a href="{{ post.link }}" class="[ u-url ]">
+								<sl-relative-time class="[ date ] [ dt-published ]" date="{{ post.isoDate }}" style="line-height: 1;"></sl-relative-time>
 							</a>
 						</span>
 					</sl-tooltip>

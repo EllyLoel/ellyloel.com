@@ -3,7 +3,7 @@ layout: base-without-header.njk
 ---
 <header style="border-block-end: var(--border-size-1) solid var(--neutral-border); padding-block-end: var(--size-3);">
 	{%- include "breadcrumb.njk" -%}
-	<h1>{{ title }}</h1>
+	<h1 class="[ p-name ]">{{ title }}</h1>
 	<div class="[ flex gap-3 flex-wrap ]">
 		{%- if created -%}
 			{%- set date = created -%}
@@ -28,7 +28,7 @@ layout: base-without-header.njk
 				<sl-tooltip content="Stage">
 					<sl-icon class="[ icon ]" library="fa" name="fas-{%- if stage === "seedling" -%}seedling{%- elif stage === "budding" -%}spa{%- elif stage === "evergreen" -%}tree{%- elif stage === "draft" -%}file-pen{%- elif stage === "complete" -%}circle-check{%- endif -%}" label="Stage"></sl-icon>
 				</sl-tooltip>
-				<span>{{ stage | capitalize }}</span>
+				<span class="[ p-category ]">{{ stage | capitalize }}</span>
 			</span>
 			<span aria-hidden="true">•</span>
 		{%- endif -%}
@@ -54,7 +54,7 @@ layout: base-without-header.njk
 		</details>
 	</aside>
 {%- endif -%}
-<article class="[ markdown-container ][ flow flow-space-setter ]" style="--flow-space-setter: 2em;">
+<article class="[ markdown-container ] [ e-content ] [ flow flow-space-setter ]" style="--flow-space-setter: 2em;">
 	{%- if not created and not modified -%}
 		{%- md -%}
 ~~~ callout Heads up this is an old post

@@ -1,4 +1,4 @@
-<li {% if stage %}class="{{ stage }}"{%- endif -%}>
+<li class="[ {% if stage %}{{ stage }}{%- endif -%} ] [ h-entry ]">
 	<sl-card class="[ feed-item-card ]">
 		{%- if imageMarkup -%}
 			<div slot="image">
@@ -11,7 +11,7 @@
 				{%- if stage -%}
 					{%- include "stage.njk" -%}
 				{%- endif -%}
-				<a href="{{ url }}">{{ title }}</a>
+				<a href="{{ url }}" class="[ u-url p-name ]">{{ title }}</a>
 			</p>
 		</div>
 
