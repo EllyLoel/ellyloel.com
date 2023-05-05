@@ -26,7 +26,7 @@ permalink: "bookmarks/{{ bookmark.title | slugify }}/"
 	{%- endfor -%}
 {%- endif -%}
 
-<a href="{{ bookmark.link }}" class="[ flex flex-col gap-1 padding-2 ]">
+<a href="{{ bookmark.link }}" class="[ u-bookmark-of h-cite ] [ flex flex-col gap-1 padding-2 ]">
 	<h2>Link to {{ bookmark.type }}</h2>
 	<picture>
 		<img alt="" class="[ image ]" src="https://v1.screenshot.11ty.dev/{{ bookmark.link | urlencode }}/large" width="1024" height="1024">
