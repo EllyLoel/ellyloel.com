@@ -3,7 +3,15 @@ layout: base-without-header.njk
 ---
 <header class="[ main-header ]">
 	{%- include "breadcrumb.njk" -%}
-	<h1>{{ title }}</h1>
+	<h1
+		class="
+			{%- if page.url === "/garden/" or page.url === "/blog/" or page.url === "/projects/" or page.url === "/til/" or page.url === "/archive/" or page.url === "/bookmarks/" or page.url === "/mastodon/" -%}
+				[ p-name ]
+			{%- endif -%}
+		"
+	>
+		{{ title }}
+	</h1>
 </header>
 <article class="[ markdown-container ][ flow ]">
 	{{ content | safe }}
