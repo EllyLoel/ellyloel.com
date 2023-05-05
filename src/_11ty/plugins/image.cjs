@@ -11,7 +11,8 @@ module.exports = (eleventyConfig) => {
 			caption,
 			noItalics,
 			sizes = "(max-width: 768px) 100vw, 768px",
-			widths
+			widths,
+			classes
 		) => {
 			if (alt === undefined) {
 				// You bet we throw an error on missing alt (alt="" works okay)
@@ -32,7 +33,7 @@ module.exports = (eleventyConfig) => {
 
 				let imageAttributes = {
 					alt,
-					class: "[ image ]",
+					class: "[ image ]" + classes,
 					decoding: "async",
 					loading: "lazy",
 					sizes,
