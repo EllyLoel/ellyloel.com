@@ -1,4 +1,4 @@
-<li class="[ {% if stage %}{{ stage }}{%- endif -%} ] [ h-entry ]">
+<li class="{% if stage %}[ {{ stage }} ]{% endif %} [ h-entry ]">
 	<sl-card class="[ feed-item-card ]">
 		{%- if imageMarkup -%}
 			<div slot="image">
