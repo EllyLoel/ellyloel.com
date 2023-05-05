@@ -5,10 +5,8 @@ layout: base-without-header.njk
 	{%- include "breadcrumb.njk" -%}
 	<h1 class="[ p-name ]">{{ title }}</h1>
 	<div class="[ flex gap-3 flex-wrap ]">
-		<div class="[ h-card ]" hidden>
-			<a rel="author" class="[ p-author ]" href="https://ellyloel.com" hidden>Elly Loel</a>
-			<img class="[ u-photo ]" src="/assets/img/pfp.jpg" alt='A digital drawing of me a white woman with blonde hair, smiling and doing a peace sign, wearing a white "golf le fleur" jumper.' hidden>
-		</div>
+		<a rel="author" class="[ h-card p-author ]" href="https://ellyloel.com" hidden>Elly Loel</a>
+		<img class="[ u-photo ]" src="/assets/img/pfp.jpg" alt='A digital drawing of me a white woman with blonde hair, smiling and doing a peace sign, wearing a white "golf le fleur" jumper.' hidden>
 		<a class="[ u-url ]" href="{{ page.url }}" hidden></a>
 		<a rel="syndication" class="[ u-syndication ]" {% if syndication-url %}href="{{ syndication-url }}"{% endif %} hidden></a>
 		<a href="https://brid.gy/publish/mastodon" hidden></a>
