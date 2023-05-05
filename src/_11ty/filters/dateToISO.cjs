@@ -1,4 +1,6 @@
 const { DateTime } = require("luxon");
 
 module.exports = (date) =>
-	DateTime.fromJSDate(date, { zone: "Australia/Melbourne" }).toISODate();
+	DateTime.fromJSDate(new Date(date), {
+		zone: "Australia/Melbourne",
+	}).toISODate();

@@ -48,11 +48,11 @@ eleventyNavigation:
 					</details>
 				{%- endif -%}
 				<div slot="footer" class="[ flex align-center ]">
-					<sl-tooltip content="Posted on {{ post.isoDate | dateObj | dateToLocaleDateFull }}">
+					<sl-tooltip content="Posted on {{ post.isoDate | dateToLocaleDateFull }}">
 						<span class="[ flex align-center gap-1ch ]">
-							<sl-icon class="[ icon ]" library="fa" name="far-calendar" label="Posted on {{ post.isoDate | dateObj | dateToLocaleDateFull }}"></sl-icon>
-							<a href="{{ post.link }}" class="[ u-url ]">
-								<sl-relative-time class="[ date ] [ dt-published ]" date="{{ post.isoDate }}" style="line-height: 1;"></sl-relative-time>
+							<sl-icon class="[ icon ]" library="fa" name="far-calendar" label="Posted on {{ post.isoDate | dateToLocaleDateFull }}"></sl-icon>
+							<a href="{{ post.link }}" class="[ u-url u-syndication ]" rel="syndication">
+								<time class="[ dt-published ]" datetime="{{ post.isoDate }}" style="line-height: 1;">{{ post.isoDate | dateToRelative }}</time>
 							</a>
 						</span>
 					</sl-tooltip>

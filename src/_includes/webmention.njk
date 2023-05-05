@@ -19,9 +19,9 @@
 				<strong class="[ author-name ]">Anonymous</strong>
 			</span>
 		{% endif %}
-		<small class="[ date ]">
+		<small>
 			<a href="{{ mention.url }}">
-				<sl-relative-time date="{{ mention.published }}"></sl-relative-time>
+				<time class="[ dt-published ]" datetime="{{ mention.published | dateToISO }}">{{ mention.published | dateToRelative }}</time>
 			</a>
 		</small>
 	</div>
