@@ -39,7 +39,7 @@ eleventyImport:
 	{%- endif -%}
 {%- endfor -%} #}
 
-<ul id="feed" class="[ feed ] [ h-feed ]">
+<ul id="feed" class="[ feed ]">
 	{%- for note in notes -%}
 		{%- if note.data.archived !== true -%}
 			{%- if note.data.stage -%}
