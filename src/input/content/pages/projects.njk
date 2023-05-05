@@ -24,7 +24,7 @@ eleventyImport:
 <div id="graph"></div>
 
 {% set projects = collections.ProjectsSortedByDate %}
-<ul id="feed" class="[ feed ] [ h-feed ]">
+<ul id="feed" class="[ feed ]">
 	{%- for project in projects %}
 		{%- set title = project.data.title -%}
 		{%- set url = project.url -%}

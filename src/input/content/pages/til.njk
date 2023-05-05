@@ -13,7 +13,7 @@ eleventyImport:
 <div id="graph"></div>
 
 {% set til = collections.TILSortedByDate %}
-<ul id="feed" class="[ feed ] [ h-feed ]">
+<ul id="feed" class="[ feed ]">
 	{%- for post in til %}
 		{%- set title = post.data.title -%}
 		{%- set url = post.url -%}
