@@ -18,10 +18,10 @@ For more up to date details check out the [[now]] page.
   <summary>
     Need a photo?
   </summary>
-  <div class="[ photos ] [ u-photo ] [ grid ]">
-    {%- image "./src/assets/img/Elly_0564.jpg", "A headshot of Elly Loel, a white trans woman wearing a white turtle neck with a cream blazer and long blonde hair laying down in front of her shoulders framing her face, smiling.", "Headshot" -%}
-    {%- image "./src/assets/img/062E9D23-2C1E-459F-B03B-ED6E556C78A7.jpg", "A torso shot of Elly Loel, a white trans woman in a pleated cream skirt and beige t-shirt with a white Ita bag covered in pins and badges, standing in front of a wall with a smiley face graffitied on it.", "Casual" -%}
-    {%- image "./src/assets/img/forest princess.jpg", "A medium shot of Elly Loel, a white trans woman in a flowy white dress with long blonde curly hair, standing amongst the ferns in a forest.", "✨🐸🌲🧚🌱", true -%}
+  <div class="[ photos ] [ grid ]">
+    {%- image "./src/assets/img/Elly_0564.jpg", "A headshot of Elly Loel, a white trans woman wearing a white turtle neck with a cream blazer and long blonde hair laying down in front of her shoulders framing her face, smiling.", "Headshot", false, undefined, undefined, "[ u-photo ]" -%}
+    {%- image "./src/assets/img/062E9D23-2C1E-459F-B03B-ED6E556C78A7.jpg", "A torso shot of Elly Loel, a white trans woman in a pleated cream skirt and beige t-shirt with a white Ita bag covered in pins and badges, standing in front of a wall with a smiley face graffitied on it.", "Casual", false, undefined, undefined, "[ u-photo ]" -%}
+    {%- image "./src/assets/img/forest princess.jpg", "A medium shot of Elly Loel, a white trans woman in a flowy white dress with long blonde curly hair, standing amongst the ferns in a forest.", "✨🐸🌲🧚🌱", true, undefined, undefined, "[ u-photo ]" -%}
   </div>
 </details>
 
