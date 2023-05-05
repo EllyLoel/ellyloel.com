@@ -5,6 +5,10 @@ layout: base-without-header.njk
 	{%- include "breadcrumb.njk" -%}
 	<h1 class="[ p-name ]">{{ title }}</h1>
 	<div class="[ flex gap-3 flex-wrap ]">
+		<a rel="author" class="[ p-author h-card ]" href="https://ellyloel.com" hidden>Elly Loel</a>
+		<a class="[ u-url ]" href="{{ page.url }}" hidden></a>
+		<a rel="syndication" class="[ u-syndication ]" {% if syndication-url %}href="{{ syndication-url }}"{% endif %} hidden></a>
+		<a href="https://brid.gy/publish/mastodon" hidden></a>
 		{%- if created -%}
 			{%- set date = created -%}
 			{%- set label = "Created" -%}
@@ -63,7 +67,6 @@ This post hasn't been updated a long time, so it might be kinda crusty.
 		{%- endmd -%}
 	{%- endif -%}
 	{{ content | safe }}
-	<a href="https://brid.gy/publish/mastodon" hidden></a>
 </article>
 {%- if backlinks === [] -%}
 	<aside class="[ flow content-width ]" data-pagefind-ignore>
