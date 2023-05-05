@@ -31,6 +31,9 @@ module.exports = (eleventyConfig) => {
 	// Shortcodes
 	eleventyConfig.addPlugin(require("./src/_11ty/shortcodes/shortcodes.cjs"));
 
+	// Transforms
+	eleventyConfig.addPlugin(require("./src/_11ty/transforms/transforms.cjs"));
+
 	// Copy/pass-through files
 	eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
 
