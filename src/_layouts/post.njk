@@ -6,7 +6,7 @@ layout: base-without-header.njk
 	<h1 class="[ p-name ]">{{ title }}</h1>
 	<div class="[ flex gap-3 flex-wrap ]">
 		<a rel="author" class="[ h-card p-author ]" href="https://ellyloel.com" hidden>Elly Loel</a>
-		{%- set regExp = r/^\/bookmarks\/\w+\// -%}
+		{%- set regExp = r/^\/bookmarks\/.+\// -%}
 		{%- if not regExp.test(page.url) -%}
 			<img class="[ u-photo ]" src="/assets/img/pfp.jpg" alt='A digital drawing of me a white woman with blonde hair, smiling and doing a peace sign, wearing a white "golf le fleur" jumper.' hidden>
 		{%- endif -%}
