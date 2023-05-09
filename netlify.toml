@@ -26,7 +26,17 @@
   force = true
 
 [[plugins]]
-package = "netlify-plugin-cache"
+  package = "netlify-plugin-cache"
 
   [plugins.inputs]
   paths = [ ".cache", "_webmentioncache" ]
+
+[[plugins]]
+  package = "netlify-plugin-webmentions"
+
+  [plugins.inputs]
+  # Path to the feed URL (optional, default: /feed.xml)
+  feedPath = "/feed.rss"
+
+  # Maximum number of feed entries to check for mentions (optional, default: 1)
+  limit = 10

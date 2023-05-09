@@ -85,6 +85,7 @@
 		"markdown-it-mark": "^3.0.1",
 		"markdown-it-sup": "^1.0.0",
 		"markdown-it-wikilinks": "^1.2.0",
+		"netlify-plugin-webmentions": "^1.1.1",
 		"open-props": "^1.5.8",
 		"postcss": "^8.4.23",
 		"postcss-import": "^15.1.0",
