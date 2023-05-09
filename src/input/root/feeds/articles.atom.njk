@@ -13,7 +13,7 @@ permalink: "articles.atom"
 		<name>{{ metadata.author.name }}</name>
 		<email>{{ metadata.author.email }}</email>
 	</author>
-	{%- for post in collections.blog | reverse %}
+	{%- for post in collections.BlogSortedByDate %}
 		{%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
 		<entry>
 			<title>{{ post.data.title }}</title>

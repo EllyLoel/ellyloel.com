@@ -9,7 +9,7 @@ permalink: "articles.rss"
 		<atom:link href="{{ '/articles.rss' | absoluteUrl(metadata.url) }}" rel="self" type="application/rss+xml"/>
 		<description>{{ metadata.description }}</description>
 		<language>{{ metadata.lang }}</language>
-		{%- for post in collections.blog | reverse %}
+		{%- for post in collections.BlogSortedByDate %}
 			{%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
 			<item>
 				<title>{{ post.data.title }}</title>
