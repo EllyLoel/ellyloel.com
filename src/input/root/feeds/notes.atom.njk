@@ -13,7 +13,7 @@ permalink: "notes.atom"
 		<name>{{ metadata.author.name }}</name>
 		<email>{{ metadata.author.email }}</email>
 	</author>
-	{%- for post in collections.garden | reverse %}
+	{%- for post in collections.GardenSortedByDate %}
 		{%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
 		<entry>
 			<title>{{ post.data.title }}</title>

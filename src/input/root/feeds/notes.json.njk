@@ -13,7 +13,7 @@ permalink: "notes.json"
     "url": "{{ metadata.author.url }}"
   },
   "items": [
-    {%- for post in collections.garden | reverse %}
+    {%- for post in collections.GardenSortedByDate %}
 	{%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
     {
       "id": "{{ absolutePostUrl }}",
