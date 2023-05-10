@@ -8,12 +8,12 @@ module.exports = async () => {
 	try {
 		const data = await EleventyFetch(raindropApiUrl, {
 			duration: "1d",
-			type: "json",
 			fetchOptions: {
 				headers: {
 					Authorization: `Bearer ${process.env.RAINDROP_ACCESS_TOKEN}`,
 				},
 			},
+			type: "json",
 		});
 
 		const items = data.items;
@@ -23,12 +23,12 @@ module.exports = async () => {
 		if (items.length) {
 			items.forEach((item) => {
 				response.push({
-					image: item.cover,
 					created: item.created,
 					excerpt: item.excerpt,
 					highlights: item.highlights,
-					modified: item.lastUpdate,
+					image: item.cover,
 					link: item.link,
+					modified: item.lastUpdate,
 					note: item.note,
 					tags: ["Bookmarks", ...item.tags],
 					title: item.title,
@@ -41,8 +41,8 @@ module.exports = async () => {
 			);
 
 			return {
-				newestItemDate,
 				items: response,
+				newestItemDate,
 			};
 		}
 	} catch (error) {
