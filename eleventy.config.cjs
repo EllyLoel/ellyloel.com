@@ -24,6 +24,16 @@ module.exports = (eleventyConfig) => {
 			}
 		);
 	});
+	eleventyConfig.addCollection("postsSortedByDate", (collectionApi) => {
+		const collection = [];
+		collection.push(...collectionApi.getFilteredByTag("Blog"));
+		collection.push(...collectionApi.getFilteredByTag("Bookmarks"));
+		collection.push(...collectionApi.getFilteredByTag("Garden"));
+		collection.push(...collectionApi.getFilteredByTag("Projects"));
+		collection.push(...collectionApi.getFilteredByTag("TIL"));
+		collection.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
+		return collection;
+	});
 
 	// Filters
 	eleventyConfig.addPlugin(require("./src/_11ty/filters/filters.cjs"));
