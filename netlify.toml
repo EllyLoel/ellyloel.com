@@ -37,4 +37,4 @@
   [plugins.inputs]
   baseUrl = "https://www.ellyloel.com"
   feedPath = "feed.rss"
-  limit = 80
+  limit = 1
