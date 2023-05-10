@@ -301,7 +301,7 @@ hr {
 
 /* iFrames */
 
-iframe {
+:not(lite-youtube) > iframe {
 	border: var(--border-size-2) solid var(--neutral-border);
 	border-radius: var(--radius-2);
 	inline-size: 100ch;

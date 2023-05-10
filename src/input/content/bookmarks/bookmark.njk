@@ -11,11 +11,11 @@ permalink: "bookmarks/{{ bookmark.title | slugify }}/"
 ---
 
 {%- if bookmark.note -%}
-	<p>{{ bookmark.note }}</p>
+	{{ bookmark.note | md | safe }}
 {%- endif -%}
 
 {%- if bookmark.excerpt -%}
-	<p>{{ bookmark.excerpt }}</p>
+	{{ bookmark.excerpt | md | safe }}
 {%- endif -%}
 
 {%- if bookmark.highlights -%}
@@ -26,9 +26,17 @@ permalink: "bookmarks/{{ bookmark.title | slugify }}/"
 	{%- endfor -%}
 {%- endif -%}
 
-<a href="{{ bookmark.link }}" class="[ u-bookmark-of h-cite ] [ flex flex-col gap-1 padding-2 ]">
-	<h2>Link to {{ bookmark.type }}</h2>
-	<picture>
-		<img alt="" class="[ u-photo ] [ image ]" src="https://v1.screenshot.11ty.dev/{{ bookmark.link | urlencode }}/large" width="1024" height="1024">
-	</picture>
-</a>
+{%- if bookmark.tags | includes("YouTube") -%}
+	{% set videoTitle = bookmark.title %}
+	{% set videoId = bookmark.link | getYouTubeId %}
+	{% include "youtube.njk" %}
+{%- else -%}
+	<a href="{{ bookmark.link }}" class="[ u-bookmark-of h-cite ] [ flex flex-col gap-1 padding-2 ]">
+		<h2>Link to {{ bookmark.type }}</h2>
+		<picture>
+			<source media="(prefers-color-scheme: dark)" srcset="https://api.microlink.io?url={{ bookmark.link }}&screenshot=true&colorScheme=dark&meta=false&embed=screenshot.url">
+			<source media="(prefers-color-scheme: light)" srcset="https://api.microlink.io?url={{ bookmark.link }}&screenshot=true&colorScheme=light&meta=false&embed=screenshot.url">
+			<img alt="" class="[ u-photo ] [ image ]" src="https://api.microlink.io?url={{ bookmark.link }}&screenshot=true&meta=false&embed=screenshot.url" width="649" height="406">
+		</picture>
+	</a>
+{%- endif -%}
