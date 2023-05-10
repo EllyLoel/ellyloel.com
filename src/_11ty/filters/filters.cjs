@@ -20,8 +20,10 @@ module.exports = (eleventyConfig) => {
 		require("./getLatestCollectionItemDate.cjs")
 	);
 	eleventyConfig.addFilter("getUrlExtension", require("./getUrlExtension.cjs"));
+	eleventyConfig.addFilter("getYouTubeId", require("./getYouTubeId.cjs"));
 	eleventyConfig.addFilter("htmlDateString", require("./htmlDateString.cjs"));
 	eleventyConfig.addFilter("imageLink", require("./imageLink.cjs"));
+	eleventyConfig.addFilter("includes", require("./includes.cjs"));
 	eleventyConfig.addFilter("limit", require("./limit.cjs"));
 	eleventyConfig.addFilter("linkGraph", require("./linkGraph.cjs"));
 	eleventyConfig.addFilter("md", require("./md.cjs"));

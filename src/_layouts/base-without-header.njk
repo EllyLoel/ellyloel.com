@@ -25,6 +25,9 @@
 			{%- rollup "src/input/js/is-land.js" | url -%}
 			{%- rollup "src/input/js/search.js" | url -%}
 		{%- endif -%}
+		{%- if page.url !== "/bookmarks/" and page.url |includes("/bookmarks/") -%}
+			{%- rollup "src/input/js/lite-youtube.js" | url -%}
+		{%- endif -%}
 		<script data-goatcounter="https://ellyloel.goatcounter.com/count" src="//gc.zgo.at/count.js" defer></script>
 
 		{%- include "meta.njk" -%}
