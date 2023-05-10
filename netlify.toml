@@ -35,9 +35,6 @@
   package = "netlify-plugin-webmentions"
 
   [plugins.inputs]
-  # The base url of your site (optional, default: main URL set in Netlify)
   baseUrl = "https://www.ellyloel.com"
-  # Path to the feed URL (optional, default: /feed.xml)
-  feedPath = "/feed.rss"
-  # Maximum number of feed entries to check for mentions (optional, default: 1)
+  feedPath = "feed.rss"
   limit = 10
