@@ -57,6 +57,9 @@ devDependencies:
   '@11ty/eleventy-plugin-syntaxhighlight':
     specifier: ^5.0.0
     version: 5.0.0
+  '@aciccarello/netlify-plugin-webmentions':
+    specifier: ^1.1.0
+    version: 1.1.0
   '@eslint/js':
     specifier: ^8.38.0
     version: 8.38.0
@@ -162,9 +165,6 @@ devDependencies:
   markdown-it-wikilinks:
     specifier: ^1.2.0
     version: 1.2.0
-  netlify-plugin-webmentions:
-    specifier: ^1.1.1
-    version: 1.1.1
   open-props:
     specifier: ^1.5.8
     version: 1.5.8
@@ -416,6 +416,35 @@ packages:
   /@11ty/lodash-custom@4.17.21:
     resolution: {integrity: sha512-Mqt6im1xpb1Ykn3nbcCovWXK3ggywRJa+IXIdoz4wIIK+cvozADH63lexcuPpGS/gJ6/m2JxyyXDyupkMr5DHw==}
     engines: {node: '>=14'}
+    dev: true
+
+  /@aciccarello/netlify-plugin-webmentions@1.1.0:
+    resolution: {integrity: sha512-FwzNf6DCaW5UJAteS4XhTnTIel20TlizvcwEuyHqcaNu6sp953KK7b9W/OyQaoQZLpw6saAi0op/X+QAo7pOYw==}
+    dependencies:
+      '@aciccarello/webmention': 1.4.6
+    transitivePeerDependencies:
+      - debug
+      - encoding
+    dev: true
+
+  /@aciccarello/webmention@1.4.6:
+    resolution: {integrity: sha512-GFTp76MCbaW8qqf8AW5mvhignils2EMHpgAClEPyOR15LHOrGy5IajVTMQRP6F/ByIo/LH0Hlcp4cnHYEYINPQ==}
+    hasBin: true
+    dependencies:
+      cheerio: 0.22.0
+      clui: 0.3.6
+      decodeuricomponent: 0.3.1
+      follow-redirects: 1.15.2(debug@4.3.2)
+      li: 1.3.0
+      microformat-node: 2.0.1
+      ms: 2.1.2
+      node-fetch: 2.6.9
+      optimist: 0.6.1
+      rss-parser: 3.13.0
+      uuid: 3.4.0
+    transitivePeerDependencies:
+      - debug
+      - encoding
     dev: true
 
   /@babel/code-frame@7.21.4:
@@ -962,26 +991,6 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
-
-  /@remy/webmention@1.4.5:
-    resolution: {integrity: sha512-O3L/8Fp8/qpgwQIINxgfc5Odcm7iXRTgRVQMDX/JcjWfJctwJSGZDGkCZMaZEPp2iIhH8cV1l5cy9OogLpHU8w==}
-    hasBin: true
-    dependencies:
-      cheerio: 0.22.0
-      clui: 0.3.6
-      decodeuricomponent: 0.3.1
-      follow-redirects: 1.15.2(debug@4.3.2)
-      li: 1.3.0
-      microformat-node: 2.0.1
-      ms: 2.1.2
-      node-fetch: 2.6.9
-      optimist: 0.6.1
-      rss-parser: 3.13.0
-      uuid: 3.4.0
-    transitivePeerDependencies:
-      - debug
-      - encoding
-    dev: true
 
   /@rollup/plugin-node-resolve@15.0.2(rollup@3.21.0):
     resolution: {integrity: sha512-Y35fRGUjC3FaurG722uhUuG8YHOJRJQbI6/CkbRkdPotSpDj9NtIN85z1zrcyDcCQIW4qp5mgG72U+gJ0TAFEg==}
@@ -4551,15 +4560,6 @@ packages:
   /netlify-plugin-cache@1.0.3:
     resolution: {integrity: sha512-CTOwNWrTOP59T6y6unxQNnp1WX702v2R/faR5peSH94ebrYfyY4zT5IsRcIiHKq57jXeyCrhy0GLuTN8ktzuQg==}
     dev: false
-
-  /netlify-plugin-webmentions@1.1.1:
-    resolution: {integrity: sha512-oCE48tAvOkvPoljUM607oBP7o5kIGnBY7R0bvew83YHaIXZlDimK16nK6HJwQmS6ZOTTXjKQYNIhIipJxVyUxw==}
-    dependencies:
-      '@remy/webmention': 1.4.5
-    transitivePeerDependencies:
-      - debug
-      - encoding
-    dev: true
 
   /next-tick@0.2.2:
     resolution: {integrity: sha512-f7h4svPtl+QidoBv4taKXUjJ70G2asaZ8G28nS0OkqaalX8dwwrtWtyxEDPK62AC00ur/+/E0pUwBwY5EPn15Q==}

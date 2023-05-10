@@ -32,7 +32,7 @@
   paths = [ ".cache", "_webmentioncache" ]
 
 [[plugins]]
-  package = "netlify-plugin-webmentions"
+  package = "@aciccarello/netlify-plugin-webmentions"
 
   [plugins.inputs]
   baseUrl = "https://www.ellyloel.com"
