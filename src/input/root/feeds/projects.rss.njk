@@ -9,13 +9,14 @@ permalink: "projects.rss"
 		<atom:link href="{{ '/projects.rss' | absoluteUrl(metadata.url) }}" rel="self" type="application/rss+xml"/>
 		<description>{{ metadata.description }}</description>
 		<language>{{ metadata.lang }}</language>
+		<lastBuildDate>{{ collections.ProjectsSortedByDate | getLatestCollectionItemDate | dateToRfc822 }}</lastBuildDate>
 		{%- for post in collections.ProjectsSortedByDate %}
 			{%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
 			<item>
 				<title>{{ post.data.title }}</title>
 				<link>{{ absolutePostUrl }}</link>
 				<description>{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</description>
-				<pubDate>{{ post.date | dateToRfc822 }}</pubDate>
+				<pubDate>{{ post.data.date | dateObj | dateToRfc822 }}</pubDate>
 				<dc:creator>{{ metadata.author.name }}</dc:creator>
 				<guid>{{ absolutePostUrl }}</guid>
 			</item>

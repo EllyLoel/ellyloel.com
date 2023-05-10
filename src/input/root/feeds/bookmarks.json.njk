@@ -13,18 +13,17 @@ permalink: "bookmarks.json"
 		"url": "{{ metadata.author.url }}"
 	},
 	"items": [
-	{%- for bookmark in bookmarks.items %}
+		{%- for bookmark in bookmarks.items %}
 		{
-		"id": "{{ bookmark.link }}",
-		"url": "{{ bookmark.link }}",
-		"title": "{{ bookmark.title }}",
-		"date_published": "{{ bookmark.created | dateObj | dateToRfc3339 }}",
-		{%- if bookmark.modified -%}
-			"date_modified": "{{ bookmark.modified | dateObj | dateToRfc3339 }}",
-		{%- endif -%}
-		"content_text": {% if bookmark.excerpt %}"{{ bookmark.excerpt }}"{% else %}""{% endif %}
-		}
-	{%- if not loop.last %},{% endif %}
-{%- endfor %}
-]
+			"id": "{{ bookmark.link }}",
+			"url": "{{ bookmark.link }}",
+			"title": "{{ bookmark.title }}",
+			"date_published": "{{ bookmark.created | dateObj | dateToRfc3339 }}",
+			{%- if bookmark.modified -%}
+				"date_modified": "{{ bookmark.modified | dateObj | dateToRfc3339 }}",
+			{%- endif -%}
+			"content_text": {% if bookmark.excerpt %}"{{ bookmark.excerpt }}"{% else %}""{% endif %}
+		}{%- if not loop.last %},{% endif %}
+		{%- endfor %}
+	]
 }

@@ -7,8 +7,8 @@ permalink: "notes.atom"
 	<subtitle>{{ metadata.description }}</subtitle>
 	<link href="{{ '/notes.atom' | absoluteUrl(metadata.url) }}" rel="self"/>
 	<link href="{{ metadata.url }}"/>
-	<updated>{{ collections.garden | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
-	<id>{{ metadata.url }}</id>
+	<updated>{{ collections.GardenSortedByDate | getLatestCollectionItemDate | dateToRfc3339 }}</updated>
+	<id>{{ metadata.url }}/</id>
 	<author>
 		<name>{{ metadata.author.name }}</name>
 		<email>{{ metadata.author.email }}</email>
@@ -18,7 +18,20 @@ permalink: "notes.atom"
 		<entry>
 			<title>{{ post.data.title }}</title>
 			<link href="{{ absolutePostUrl }}"/>
-			<updated>{{ post.date | dateToRfc3339 }}</updated>
+			<published>
+				{%- if post.data.created -%}
+				{{ post.data.created | dateObj | dateToRfc3339 }}
+				{%- else -%}
+				{{ post.data.date | dateObj | dateToRfc3339 }}
+				{%- endif -%}
+			</published>
+			<updated>
+				{%- if post.data.modified -%}
+				{{ post.data.modified | dateObj | dateToRfc3339 }}
+				{%- else -%}
+				{{ post.data.date | dateObj | dateToRfc3339 }}
+				{%- endif -%}
+			</updated>
 			<id>{{ absolutePostUrl }}</id>
 			<content xml:lang="{{ metadata.lang }}" type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
 		</entry>
