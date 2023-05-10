@@ -1,2 +1,6 @@
-module.exports = (stringOrArray, searchElement) =>
-	stringOrArray.includes(searchElement);
+module.exports = (stringOrArray, searchElement) => {
+	if (stringOrArray) {
+		return stringOrArray.includes(searchElement);
+	}
+	return false;
+};

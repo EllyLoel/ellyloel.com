@@ -11,14 +11,14 @@ eleventyNavigation:
 	{%- for post in mastodon.items -%}
 		<li class="[ h-entry ]">
 			<sl-card class="[ feed-item-card ]">
-				{%- if post.content.includes("<hr>") -%}
+				{%- if post.content | includes("<hr>") -%}
 					<details class="[ padding-0 ]">
 						<summary>
 							{{ post.content | split("<hr>") | first | striptags }}
 						</summary>
 					{%- endif -%}
 					<div class="[ flow ] [ e-content ]">
-						{%- if post.content.includes("<hr>") -%}
+						{%- if post.content | includes("<hr>") -%}
 							{{ post.content | replace(r/^.+<hr>/gim, "") | safe }}
 						{%- else -%}
 							{{ post.content | safe }}
@@ -44,7 +44,7 @@ eleventyNavigation:
 							</div>
 						{%- endif -%}
 					</div>
-					{%- if post.content.includes("<hr>") -%}
+					{%- if post.content | includes("<hr>") -%}
 					</details>
 				{%- endif -%}
 				<div slot="footer" class="[ flex align-center ]">
