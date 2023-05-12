@@ -5,7 +5,7 @@ const cssnano = require("cssnano");
 const postcssImport = require("postcss-import");
 
 module.exports = {
-	from: "src/assets/css/style.css",
+	from: "src/input/css/style.css",
 	map: process.env.ELEVENTY_ENV !== "production",
 	// only variables that are used are in the build output (treeshaking)
 	plugins: [
