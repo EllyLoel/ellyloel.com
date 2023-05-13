@@ -17,7 +17,7 @@ permalink: "feed.rss"
 				<link>{{ absolutePostUrl }}</link>
 				<description>
 					{%- include "hidden-microformats.njk" -%}
-					{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | safe }}
+					{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
 				</description>
 				<pubDate>{{ post.data.date | dateObj | dateToRfc822 }}</pubDate>
 				<dc:creator>{{ metadata.author.name }}</dc:creator>

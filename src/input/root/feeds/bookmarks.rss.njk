@@ -14,7 +14,7 @@ permalink: "bookmarks.rss"
 			<item>
 				<title>{{ bookmark.title }}</title>
 				<link>{{ bookmark.link }}</link>
-				<description>{{ bookmark.excerpt | md | safe }}</description>
+				<description>{{ bookmark.excerpt | md }}</description>
 				<pubDate>
 					{%- if bookmark.modified -%}
 					{{ bookmark.modified | dateObj | dateToRfc822 }}
