@@ -36,5 +36,5 @@
 
   [plugins.inputs]
   baseUrl = "https://www.ellyloel.com"
-  feedPath = "feed.rss"
+  feedPath = "feed.atom"
   limit = 1
