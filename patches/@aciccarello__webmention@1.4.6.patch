@@ -1,0 +1,12 @@
+diff --git a/lib/ignored-endpoints.js b/lib/ignored-endpoints.js
+index 92dbf217eb36b54f527534aac9cae7dd083418fb..567f37e20f270e8c96c8981f62ccb83b0f495271 100644
+--- a/lib/ignored-endpoints.js
++++ b/lib/ignored-endpoints.js
+@@ -40,7 +40,6 @@ module.exports = [
+   'indieauth.com',
+   'instagram.com',
+   'microformats.org',
+-  'www.brid.gy',
+   'www.complexity-explorables.org',
+   'www.frontendunited.org',
+   'www.meltingasphalt.com',
