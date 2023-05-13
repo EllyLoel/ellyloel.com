@@ -34,7 +34,9 @@ permalink: "feed.atom"
 			</updated>
 			<id>{{ absolutePostUrl }}</id>
 			<content xml:lang="{{ metadata.lang }}" type="html">
-				{%- include "hidden-microformats.njk" -%}
+				{%- filter escape -%}
+					{%- include "hidden-microformats.njk" -%}
+				{%- endfilter -%}
 				{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
 			</content>
 		</entry>
