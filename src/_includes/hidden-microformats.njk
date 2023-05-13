@@ -1,0 +1,15 @@
+<a rel="author" class="[ h-card p-author ]" href="https://ellyloel.com" hidden>Elly Loel</a>
+{%- set regExp = r/^\/bookmarks\/.+\// -%}
+{%- if not regExp.test(page.url) -%}
+	<img class="[ u-photo ]" src="/assets/img/pfp.jpg" alt='A digital drawing of me a white woman with blonde hair, smiling and doing a peace sign, wearing a white "golf le fleur" jumper.' hidden>
+{%- endif -%}
+<a class="[ u-url ]" href="{{ page.url }}" hidden></a>
+{% if syndication-url %}
+	<a rel="syndication" class="[ u-syndication ]" href="{{ syndication-url }}" hidden></a>
+{% endif %}
+<a href="https://brid.gy/publish/mastodon" hidden></a>
+<p class="p-bridgy-mastodon-content" hidden>{{ title }}
+	{%- if bookmark.link -%}
+		<br>🔖 {{ bookmark.link }}
+	{%- endif -%}
+	<br>🔗 {{ page.url }}</p>
