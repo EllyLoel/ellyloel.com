@@ -1,5 +1,10 @@
 lockfileVersion: '6.0'
 
+patchedDependencies:
+  '@aciccarello/webmention@1.4.6':
+    hash: gmiubv33cktpzud3dxubd6cvie
+    path: patches/@aciccarello__webmention@1.4.6.patch
+
 dependencies:
   '@11ty/is-land':
     specifier: ^4.0.0
@@ -421,13 +426,13 @@ packages:
   /@aciccarello/netlify-plugin-webmentions@1.1.0:
     resolution: {integrity: sha512-FwzNf6DCaW5UJAteS4XhTnTIel20TlizvcwEuyHqcaNu6sp953KK7b9W/OyQaoQZLpw6saAi0op/X+QAo7pOYw==}
     dependencies:
-      '@aciccarello/webmention': 1.4.6
+      '@aciccarello/webmention': 1.4.6(patch_hash=gmiubv33cktpzud3dxubd6cvie)
     transitivePeerDependencies:
       - debug
       - encoding
     dev: true
 
-  /@aciccarello/webmention@1.4.6:
+  /@aciccarello/webmention@1.4.6(patch_hash=gmiubv33cktpzud3dxubd6cvie):
     resolution: {integrity: sha512-GFTp76MCbaW8qqf8AW5mvhignils2EMHpgAClEPyOR15LHOrGy5IajVTMQRP6F/ByIo/LH0Hlcp4cnHYEYINPQ==}
     hasBin: true
     dependencies:
@@ -446,6 +451,7 @@ packages:
       - debug
       - encoding
     dev: true
+    patched: true
 
   /@babel/code-frame@7.21.4:
     resolution: {integrity: sha512-LYvhNKfwWSPpocw8GI7gpK2nq3HSDuEPC/uSYaALSJu9xjsalaaYFOq0Pwt5KmVqwEbZlDu81aLXwBOmD/Fv9g==}

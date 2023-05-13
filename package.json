@@ -108,5 +108,10 @@
 	"peerDependencies": {
 		"@types/markdown-it": "*",
 		"webpack": ">=5"
+	},
+	"pnpm": {
+		"patchedDependencies": {
+			"@aciccarello/webmention@1.4.6": "patches/@aciccarello__webmention@1.4.6.patch"
+		}
 	}
 }
