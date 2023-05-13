@@ -1,0 +1,923 @@
+{
+	"result": true,
+	"items": [
+		{
+			"_id": 571108545,
+			"link": "https://chriscoyier.net/2023/05/08/it-is-not-me-who-is-bad-it-is-the-machine-you-see/",
+			"title": "It is not me who is bad, it is the machine, you see. - Chris Coyier",
+			"excerpt": "I think text-generation “AI” will succeed entirely on the merit that most people just don’t like writing. They just don’t wanna do it. They have to do it, because job, but they’d rather not. It’s not a part of their role that they enjoy. It’s certainly not a fun break from other duties. They may […]",
+			"note": "",
+			"type": "article",
+			"user": { "$ref": "users", "$id": 708988 },
+			"cover": "https://i0.wp.com/chriscoyier.net/wp-content/uploads/2022/04/Frame-1.png?fit=1200%2C1200&ssl=1",
+			"media": [
+				{
+					"link": "https://i0.wp.com/chriscoyier.net/wp-content/uploads/2022/04/Frame-1.png?fit=1200%2C1200&ssl=1",
+					"type": "image"
+				}
+			],
+			"tags": ["Writing"],
+			"highlights": [],
+			"important": false,
+			"removed": false,
+			"created": "2023-05-11T22:18:29.705Z",
+			"lastUpdate": "2023-05-11T22:18:29.705Z",
+			"collection": { "$ref": "collections", "$id": 33237518, "oid": 33237518 },
+			"domain": "chriscoyier.net",
+			"creatorRef": {
+				"_id": 708988,
+				"avatar": "https://up.raindrop.io/user/avatars/708/988/pfp.jpg",
+				"name": "ellyloel",
+				"email": ""
+			},
+			"sort": 571108545,
+			"collectionId": 33237518
+		},
+		{
+			"_id": 571108289,
+			"link": "https://design.family/",
+			"title": "Slow design",
+			"excerpt": "A call to slow down in a fast-moving world.",
+			"note": "",
+			"type": "link",
+			"user": { "$ref": "users", "$id": 708988 },
+			"cover": "https://framerusercontent.com/modules/8Ucfyj9i9frHe420cLY1/OWL4Pyk1CL5w8rEGNiRR/assets/Rm4j4gBZ6NybSmE30DJTnK0Ac.jpg",
+			"media": [
+				{
+					"link": "https://framerusercontent.com/modules/8Ucfyj9i9frHe420cLY1/OWL4Pyk1CL5w8rEGNiRR/assets/Rm4j4gBZ6NybSmE30DJTnK0Ac.jpg",
+					"type": "image"
+				}
+			],
+			"tags": ["Design"],
+			"highlights": [],
+			"important": false,
+			"removed": false,
+			"created": "2023-05-11T22:16:28.819Z",
+			"lastUpdate": "2023-05-11T22:16:28.819Z",
+			"collection": { "$ref": "collections", "$id": 33237518, "oid": 33237518 },
+			"domain": "design.family",
+			"creatorRef": {
+				"_id": 708988,
+				"avatar": "https://up.raindrop.io/user/avatars/708/988/pfp.jpg",
+				"name": "ellyloel",
+				"email": ""
+			},
+			"sort": 571108289,
+			"collectionId": 33237518
+		},
+		{
+			"_id": 571101364,
+			"link": "https://buttondown.email/robinrendle/archive/build-the-archive/",
+			"title": "Build the Archive",
+			"excerpt": "Hi hi hi. Robin here. It’s Saturday. I’m up early, dressed, eated, walked. Now: under an awning outside my favorite cafe in the city, with the rain making a...",
+			"note": "",
+			"type": "article",
+			"user": { "$ref": "users", "$id": 708988 },
+			"cover": "https://buttondown.imgix.net/images/32482220-f9eb-49f8-8fe4-e4573a657b86.jpg?w=960&fit=max",
+			"media": [
+				{
+					"link": "https://buttondown.imgix.net/images/32482220-f9eb-49f8-8fe4-e4573a657b86.jpg?w=960&fit=max",
+					"type": "image"
+				}
+			],
+			"tags": ["IndieWeb", "Why you need a personal website"],
+			"highlights": [
+				{
+					"text": "I think my website should archive everything; every website I’ve ever made, every weirdo CSS demo, every little thing.",
+					"note": "",
+					"color": "yellow",
+					"created": "2023-05-11T22:03:40.988Z",
+					"lastUpdate": "2023-05-11T22:04:31.989Z",
+					"creatorRef": 708988,
+					"_id": "645d663dbe5a0e92e531b168"
+				},
+				{
+					"text": "I want to earnestly look back on what I’ve made — the stuff that I think is cool and punk rock as well as the stuff that was half-baked, inexperienced, or headed in the wrong direction from the start.",
+					"note": "",
+					"color": "yellow",
+					"created": "2023-05-11T22:04:30.961Z",
+					"lastUpdate": "2023-05-11T22:04:31.989Z",
+					"creatorRef": 708988,
+					"_id": "645d666fd5a68fbaadbdf6ac"
+				}
+			],
+			"important": false,
+			"removed": false,
+			"created": "2023-05-11T22:01:03.834Z",
+			"lastUpdate": "2023-05-11T22:04:31.988Z",
+			"collection": { "$ref": "collections", "$id": 33237518, "oid": 33237518 },
+			"domain": "buttondown.email",
+			"creatorRef": {
+				"_id": 708988,
+				"avatar": "https://up.raindrop.io/user/avatars/708/988/pfp.jpg",
+				"name": "ellyloel",
+				"email": ""
+			},
+			"sort": 571101364,
+			"collectionId": 33237518
+		},
+		{
+			"_id": 570099433,
+			"link": "https://daverupert.com/2023/05/assembly-line/",
+			"title": "Sometimes the job is an assembly line",
+			"excerpt": "A riff on a post by Robb Owen",
+			"note": "",
+			"type": "link",
+			"user": { "$ref": "users", "$id": 708988 },
+			"cover": "https://daverupert.com/images/global/newshammericon.png",
+			"media": [
+				{
+					"link": "https://daverupert.com/images/global/newshammericon.png",
+					"type": "image"
+				}
+			],
+			"tags": ["Development", "Design", "Building websites"],
+			"important": false,
+			"reminder": { "date": null },
+			"removed": false,
+			"created": "2023-05-10T14:30:58.106Z",
+			"lastUpdate": "2023-05-11T22:05:51.094Z",
+			"collection": { "$ref": "collections", "$id": 33237518, "oid": 33237518 },
+			"highlights": [
+				{
+					"text": "creative work is much better suited by a prototyping demo loop or a hot-potato process to overcome the tension between design and development",
+					"note": "",
+					"color": "yellow",
+					"created": "2023-05-11T22:05:06.697Z",
+					"lastUpdate": "2023-05-11T22:05:51.094Z",
+					"creatorRef": 708988,
+					"_id": "645d6693130697b40f813a57"
+				},
+				{
+					"text": "Anyways. If you do find yourself stuck on an assembly line, I recommend a good set of headphones and chill lo-fi beats or whatever music helps you focus.",
+					"note": "",
+					"color": "yellow",
+					"created": "2023-05-11T22:05:50.082Z",
+					"lastUpdate": "2023-05-11T22:05:51.094Z",
+					"creatorRef": 708988,
+					"_id": "645d66bfbe5a0e92e531bae2"
+				}
+			],
+			"domain": "daverupert.com",
+			"creatorRef": {
+				"_id": 708988,
+				"avatar": "https://up.raindrop.io/user/avatars/708/988/pfp.jpg",
+				"name": "ellyloel",
+				"email": ""
+			},
+			"sort": 570099433,
+			"collectionId": 33237518
+		},
+		{
+			"_id": 569941383,
+			"link": "https://sunny.garden/@knowler/110342320128469693",
+			"title": "Accessibility auditing tips from Nathan Knowler",
+			"excerpt": "@elly@front-end.social I know this feeling to well. (I’m still refining my approach, so take all of this with a grain of salt.) If there is a tonne, I would avoid being exhaustive or overly detailed. I try to limit my auditing sessions to a fixed amount of time so that it doesn’t turn into an endless task or wear on me mentally. In situations where there’s a lot, I think it’s more important to call that out, but then focus on the high impact issues. Those will help a client get a sense of where to start and the resources they’ll need for it (which might include followup audits). Also, remember: you didn’t make this mess and you don’t need to burn yourself out to fix it.",
+			"note": "",
+			"type": "article",
+			"user": { "$ref": "users", "$id": 708988 },
+			"cover": "https://rdl.ink/render/https%3A%2F%2Fsunny.garden%2F%40knowler%2F110342320128469693",
+			"media": [
+				{
+					"type": "image",
+					"link": "https://rdl.ink/render/https%3A%2F%2Fsunny.garden%2F%40knowler%2F110342320128469693",
+					"screenshot": true
+				}
+			],
+			"tags": ["A11y"],
+			"highlights": [],
+			"important": false,
+			"removed": false,
+			"created": "2023-05-10T03:51:20.018Z",
+			"lastUpdate": "2023-05-10T03:51:20.018Z",
+			"collection": { "$ref": "collections", "$id": 33237518, "oid": 33237518 },
+			"domain": "sunny.garden",
+			"creatorRef": {
+				"_id": 708988,
+				"avatar": "https://up.raindrop.io/user/avatars/708/988/pfp.jpg",
+				"name": "ellyloel",
+				"email": ""
+			},
+			"sort": 569941383,
+			"collectionId": 33237518
+		},
+		{
+			"_id": 569603056,
+			"link": "https://evilmartians.com/chronicles/icon-transcendence-customizing-icons-to-complement-fonts",
+			"title": "Icon transcendence: customizing icons to complement fonts",
+			"excerpt": "There are many lovely open source icon sets out there, but sometimes, we just need to 'transcend' them. Product Designer Gleb Stroganov shows us how to craft customized icons by leveraging product font styles, bridging two key interface elements—and giving our products some serious style.",
+			"note": "",
+			"type": "article",
+			"user": { "$ref": "users", "$id": 708988 },
+			"cover": "https://evilmartians.com/social-cards/chronicles/icon-transcendence-customizing-icons-to-complement-fonts.jpg",
+			"media": [
+				{
+					"link": "https://evilmartians.com/social-cards/chronicles/icon-transcendence-customizing-icons-to-complement-fonts.jpg",
+					"type": "image"
+				},
+				{
+					"link": "https://evilmartians.com/static/357aac52e80724278480f6a1dd2ec0e3/b6dc8/cover.avif",
+					"type": "image"
+				},
+				{
+					"link": "https://evilmartians.com/static/10a422b50a8c65956d3f7502151fba1f/791ed/default-icon.avif",
+					"type": "image"
+				}
+			],
+			"tags": ["Typefaces", "Design", "SVG"],
+			"important": false,
+			"reminder": { "date": null },
+			"removed": false,
+			"created": "2023-05-09T13:26:32.157Z",
+			"lastUpdate": "2023-05-09T13:26:57.401Z",
+			"collection": { "$ref": "collections", "$id": 33237518, "oid": 33237518 },
+			"highlights": [],
+			"domain": "evilmartians.com",
+			"creatorRef": {
+				"_id": 708988,
+				"avatar": "https://up.raindrop.io/user/avatars/708/988/pfp.jpg",
+				"name": "ellyloel",
+				"email": ""
+			},
+			"sort": 569603056,
+			"collectionId": 33237518
+		},
+		{
+			"_id": 569003004,
+			"link": "https://heydonworks.com/article/functional-documentation/",
+			"title": "Functional documentation: HeydonWorks",
+			"excerpt": "[](https://front-end.social/@elly/110327098611403837){.u-syndication rel=syndication hidden}",
+			"note": "",
+			"type": "link",
+			"user": { "$ref": "users", "$id": 708988 },
+			"cover": "https://rdl.ink/render/https%3A%2F%2Fheydonworks.com%2Farticle%2Ffunctional-documentation%2F",
+			"media": [
+				{
+					"type": "image",
+					"link": "https://rdl.ink/render/https%3A%2F%2Fheydonworks.com%2Farticle%2Ffunctional-documentation%2F",
+					"screenshot": true
+				}
+			],
+			"tags": ["Documentation", "Design Systems", "11ty"],
+			"highlights": [],
+			"important": false,
+			"removed": false,
+			"created": "2023-05-07T08:54:13.268Z",
+			"lastUpdate": "2023-05-10T14:10:50.916Z",
+			"collection": { "$ref": "collections", "$id": 33237518, "oid": 33237518 },
+			"domain": "heydonworks.com",
+			"creatorRef": {
+				"_id": 708988,
+				"avatar": "https://up.raindrop.io/user/avatars/708/988/pfp.jpg",
+				"name": "ellyloel",
+				"email": ""
+			},
+			"sort": 569003004,
+			"collectionId": 33237518
+		},
+		{
+			"_id": 568994658,
+			"link": "https://realtimecolors.com/?colors=000000-ffffff-4685ff-f2f2f2-ffb084",
+			"title": "Realtime Colors",
+			"excerpt": "A tool to visualize color choices and color palettes on a real website to help with branding and UI design decision making.",
+			"note": "",
+			"type": "link",
+			"user": { "$ref": "users", "$id": 708988 },
+			"cover": "https://rdl.ink/render/https%3A%2F%2Frealtimecolors.com%2F%3Fcolors%3D000000-ffffff-4685ff-f2f2f2-ffb084",
+			"media": [
+				{
+					"type": "image",
+					"link": "https://rdl.ink/render/https%3A%2F%2Frealtimecolors.com%2F%3Fcolors%3D000000-ffffff-4685ff-f2f2f2-ffb084",
+					"screenshot": true
+				}
+			],
+			"tags": ["Tools", "Building websites", "Design"],
+			"highlights": [],
+			"important": false,
+			"removed": false,
+			"created": "2023-05-07T08:40:01.031Z",
+			"lastUpdate": "2023-05-07T08:40:01.031Z",
+			"collection": { "$ref": "collections", "$id": 33237518, "oid": 33237518 },
+			"domain": "realtimecolors.com",
+			"creatorRef": {
+				"_id": 708988,
+				"avatar": "https://up.raindrop.io/user/avatars/708/988/pfp.jpg",
+				"name": "ellyloel",
+				"email": ""
+			},
+			"sort": 568994658,
+			"collectionId": 33237518
+		},
+		{
+			"_id": 557850783,
+			"excerpt": "Accessibility resources free online from the international standards organization: W3C Web Accessibility Initiative (WAI).",
+			"note": "",
+			"type": "link",
+			"cover": "https://www.w3.org/WAI/content-images/wai-tutorials/images/social.png",
+			"tags": ["A11y", "Resources"],
+			"removed": false,
+			"title": "An alt Decision Tree",
+			"collection": { "$ref": "collections", "$id": 33237518, "oid": 33237518 },
+			"link": "https://www.w3.org/WAI/tutorials/images/decision-tree/",
+			"created": "2023-04-15T09:30:07.987Z",
+			"lastUpdate": "2023-05-07T00:25:41.310Z",
+			"important": false,
+			"media": [
+				{
+					"type": "image",
+					"link": "https://www.w3.org/WAI/content-images/wai-tutorials/images/social.png"
+				}
+			],
+			"user": { "$ref": "users", "$id": 708988 },
+			"highlights": [],
+			"domain": "w3.org",
+			"creatorRef": {
+				"_id": 708988,
+				"avatar": "https://up.raindrop.io/user/avatars/708/988/pfp.jpg",
+				"name": "ellyloel",
+				"email": ""
+			},
+			"sort": 567591565,
+			"collectionId": 33237518
+		},
+		{
+			"_id": 557848828,
+			"excerpt": "In this tutorial, we’ll use HTML, CSS, and vanilla JavaScript to add an accessible theme picker component to a website.",
+			"note": "",
+			"type": "article",
+			"cover": "https://cdn.sanity.io/images/njlrbdui/production/aac92be353577628a07b9b506e8006a16786ebe0-2400x1350.png?w=1600",
+			"tags": ["Resources", "A11y", "HTML", "CSS", "JavaScript"],
+			"removed": false,
+			"title": "Building an accessible theme picker with HTML, CSS and JavaScript. by Sarah L. Fossheim",
+			"collection": { "$ref": "collections", "$id": 33237518, "oid": 33237518 },
+			"link": "https://fossheim.io/writing/posts/accessible-theme-picker-html-css-js/",
+			"created": "2023-04-15T09:22:01.861Z",
+			"lastUpdate": "2023-05-07T00:25:33.163Z",
+			"important": false,
+			"media": [
+				{
+					"type": "image",
+					"link": "https://cdn.sanity.io/images/njlrbdui/production/aac92be353577628a07b9b506e8006a16786ebe0-2400x1350.png?w=1600"
+				},
+				{
+					"type": "image",
+					"link": "https://cdn.sanity.io/images/njlrbdui/production/31075c2c77f9bde05ebd64d5a9ab66034b52db99-2858x1378.png?w=1200"
+				},
+				{
+					"type": "image",
+					"link": "https://cdn.sanity.io/images/njlrbdui/production/c580d093f4ad1709a34fdd8dd8f94c950e9bec6e-1578x1198.png?w=1200"
+				},
+				{
+					"type": "image",
+					"link": "https://cdn.sanity.io/images/njlrbdui/production/026eb28e86932538af9221537f9293ba78e50c5f-1704x1038.png?w=1200"
+				}
+			],
+			"user": { "$ref": "users", "$id": 708988 },
+			"highlights": [],
+			"domain": "fossheim.io",
+			"creatorRef": {
+				"_id": 708988,
+				"avatar": "https://up.raindrop.io/user/avatars/708/988/pfp.jpg",
+				"name": "ellyloel",
+				"email": ""
+			},
+			"sort": 567591564,
+			"collectionId": 33237518
+		},
+		{
+			"_id": 567591565,
+			"link": "https://ericwbailey.website/published/dont-use-custom-css-scrollbars/",
+			"title": "Don’t use custom CSS scrollbars",
+			"excerpt": "While a custom CSS scrollbar may seem flashy and fun, consider that it may present a significant, unnecessary barrier to access…",
+			"note": "",
+			"type": "link",
+			"user": { "$ref": "users", "$id": 708988 },
+			"cover": "https://ericwbailey.website/static/favicons/social/facebook.png",
+			"media": [
+				{
+					"link": "https://ericwbailey.website/static/favicons/social/facebook.png",
+					"type": "image"
+				}
+			],
+			"tags": ["A11y", "CSS"],
+			"highlights": [],
+			"important": false,
+			"removed": false,
+			"created": "2023-05-03T14:59:08.485Z",
+			"lastUpdate": "2023-05-03T14:59:08.485Z",
+			"collection": { "$ref": "collections", "$id": 33237518, "oid": 33237518 },
+			"domain": "ericwbailey.website",
+			"creatorRef": {
+				"_id": 708988,
+				"avatar": "https://up.raindrop.io/user/avatars/708/988/pfp.jpg",
+				"name": "ellyloel",
+				"email": ""
+			},
+			"sort": 567591563,
+			"collectionId": 33237518
+		},
+		{
+			"_id": 567330199,
+			"link": "https://ericaheinz.com/notes/give-it-the-craigslist-test/",
+			"title": "Give it the Craigslist test",
+			"excerpt": "All the AI design hype got me twitching enough to write about the business risks of working so high-fidelity so fast.",
+			"note": "",
+			"type": "article",
+			"user": { "$ref": "users", "$id": 708988 },
+			"cover": "http://ericaheinz.com/uploads/4D-Thinking-Kit.png",
+			"media": [
+				{
+					"link": "http://ericaheinz.com/uploads/4D-Thinking-Kit.png",
+					"type": "image"
+				},
+				{
+					"link": "https://ericaheinz.com/uploads/4D-Thinking-Kit.png",
+					"type": "image"
+				}
+			],
+			"tags": ["Design"],
+			"important": false,
+			"reminder": { "date": null },
+			"removed": false,
+			"created": "2023-05-03T06:11:15.606Z",
+			"lastUpdate": "2023-05-03T06:11:30.196Z",
+			"collection": { "$ref": "collections", "$id": 33237518, "oid": 33237518 },
+			"highlights": [],
+			"domain": "ericaheinz.com",
+			"creatorRef": {
+				"_id": 708988,
+				"avatar": "https://up.raindrop.io/user/avatars/708/988/pfp.jpg",
+				"name": "ellyloel",
+				"email": ""
+			},
+			"sort": 567330197,
+			"collectionId": 33237518
+		},
+		{
+			"_id": 567328650,
+			"link": "https://keithjgrant.com/posts/2023/05/the-webdev-social-schism/",
+			"title": "The webdev social schism",
+			"excerpt": "I’m concerned about what the Twitter/Mastodon/BlueSky debate means for the webdev community at large. Have we split ourselves in two?",
+			"note": "",
+			"type": "article",
+			"user": { "$ref": "users", "$id": 708988 },
+			"cover": "https://res.cloudinary.com/keithjgrant/image/fetch/c_scale,f_auto,w_600/https://keithjgrant.com//images/2023/broken-bridge.jpg",
+			"media": [
+				{
+					"link": "https://res.cloudinary.com/keithjgrant/image/fetch/c_scale,f_auto,w_600/https://keithjgrant.com//images/2023/broken-bridge.jpg",
+					"type": "image"
+				},
+				{
+					"link": "https://res.cloudinary.com/keithjgrant/image/fetch/c_scale,f_auto,w_1200/https://keithjgrant.com/images/2023/broken-bridge.jpg",
+					"type": "image"
+				},
+				{
+					"link": "https://res.cloudinary.com/keithjgrant/image/fetch/c_scale,f_auto,w_400/https://keithjgrant.com/images/keithjgrant.jpg",
+					"type": "image"
+				}
+			],
+			"tags": [
+				"Building websites",
+				"HTML",
+				"CSS",
+				"JavaScript",
+				"Community",
+				"Development"
+			],
+			"important": false,
+			"reminder": { "date": null },
+			"removed": false,
+			"created": "2023-05-03T06:05:15.191Z",
+			"lastUpdate": "2023-05-03T06:05:58.509Z",
+			"collection": { "$ref": "collections", "$id": 33237518, "oid": 33237518 },
+			"highlights": [],
+			"domain": "keithjgrant.com",
+			"creatorRef": {
+				"_id": 708988,
+				"avatar": "https://up.raindrop.io/user/avatars/708/988/pfp.jpg",
+				"name": "ellyloel",
+				"email": ""
+			},
+			"sort": 567328648,
+			"collectionId": 33237518
+		},
+		{
+			"_id": 566579719,
+			"link": "https://erinkissane.com/blue-skies-over-mastodon",
+			"title": "Blue skies over Mastodon | Erin Kissane",
+			"excerpt": "In the early 80s, my mom worked a couple shifts a month at a little small-town food co-op that smelled like nutritional mummy. She brought home",
+			"note": "",
+			"type": "article",
+			"user": { "$ref": "users", "$id": 708988 },
+			"cover": "https://erinkissane.com/_files/piggie.png",
+			"media": [
+				{ "link": "https://erinkissane.com/_files/piggie.png", "type": "image" }
+			],
+			"tags": ["Community"],
+			"highlights": [],
+			"important": false,
+			"removed": false,
+			"created": "2023-05-01T22:06:34.669Z",
+			"lastUpdate": "2023-05-01T22:06:34.669Z",
+			"collection": { "$ref": "collections", "$id": 33237518, "oid": 33237518 },
+			"domain": "erinkissane.com",
+			"creatorRef": {
+				"_id": 708988,
+				"avatar": "https://up.raindrop.io/user/avatars/708/988/pfp.jpg",
+				"name": "ellyloel",
+				"email": ""
+			},
+			"sort": 566579717,
+			"collectionId": 33237518
+		},
+		{
+			"_id": 566316622,
+			"link": "https://inclusivedesignprinciples.org/",
+			"title": "Inclusive Design Principles",
+			"excerpt": "",
+			"note": "",
+			"type": "link",
+			"user": { "$ref": "users", "$id": 708988 },
+			"cover": "https://rdl.ink/render/https%3A%2F%2Finclusivedesignprinciples.org%2F",
+			"media": [
+				{
+					"type": "image",
+					"link": "https://rdl.ink/render/https%3A%2F%2Finclusivedesignprinciples.org%2F",
+					"screenshot": true
+				}
+			],
+			"tags": ["Design", "Resources"],
+			"important": false,
+			"reminder": { "date": null },
+			"removed": false,
+			"created": "2023-05-01T11:40:08.132Z",
+			"lastUpdate": "2023-05-01T11:40:20.459Z",
+			"collection": { "$ref": "collections", "$id": 33237518, "oid": 33237518 },
+			"highlights": [],
+			"domain": "inclusivedesignprinciples.org",
+			"creatorRef": {
+				"_id": 708988,
+				"avatar": "https://up.raindrop.io/user/avatars/708/988/pfp.jpg",
+				"name": "ellyloel",
+				"email": ""
+			},
+			"sort": 566316620,
+			"collectionId": 33237518
+		},
+		{
+			"_id": 566316246,
+			"link": "https://stackoverflow.blog/2023/02/19/developer-with-adhd-youre-not-alone/",
+			"title": "Developer with ADHD? You’re not alone.",
+			"excerpt": "Is there a connection between programming and ADHD? And could it be that people with ADHD are particularly well-suited to programming careers?",
+			"note": "",
+			"type": "article",
+			"user": { "$ref": "users", "$id": 708988 },
+			"cover": "https://149351115.v2.pressablecdn.com/wp-content/uploads/2023/02/DevelopersADHD-1.png",
+			"media": [
+				{
+					"link": "https://149351115.v2.pressablecdn.com/wp-content/uploads/2023/02/DevelopersADHD-1.png",
+					"type": "image"
+				}
+			],
+			"tags": ["ADHD", "Development"],
+			"important": false,
+			"reminder": { "date": null },
+			"removed": false,
+			"created": "2023-05-01T11:37:00.794Z",
+			"lastUpdate": "2023-05-01T11:38:45.668Z",
+			"collection": { "$ref": "collections", "$id": 33237518, "oid": 33237518 },
+			"highlights": [],
+			"domain": "stackoverflow.blog",
+			"creatorRef": {
+				"_id": 708988,
+				"avatar": "https://up.raindrop.io/user/avatars/708/988/pfp.jpg",
+				"name": "ellyloel",
+				"email": ""
+			},
+			"sort": 566316244,
+			"collectionId": 33237518
+		},
+		{
+			"_id": 566119762,
+			"link": "https://www.youtube.com/watch?v=5Zc3W4NpiA8",
+			"title": "A Design System Governance Process Chart Walkthrough",
+			"excerpt": "In this video, Brad walks through this chart detailing a design system governance process: https://coggle.it/diagram/XTZ3TKMV3SdbE6Pq/t/product-team-comes-to-design-help-design-and-build-new-work/6a980806f82da5777174934f9cd27fdb6f4b06c9c211ac92191a7619e1aa8e6b",
+			"note": "",
+			"type": "video",
+			"user": { "$ref": "users", "$id": 708988 },
+			"cover": "https://i.ytimg.com/vi/5Zc3W4NpiA8/hqdefault.jpg",
+			"media": [
+				{
+					"link": "https://i.ytimg.com/vi/5Zc3W4NpiA8/hqdefault.jpg",
+					"type": "image"
+				}
+			],
+			"tags": ["YouTube", "Design Systems", "Resources"],
+			"important": false,
+			"removed": false,
+			"collection": { "$ref": "collections", "$id": 33237518, "oid": 33237518 },
+			"created": "2023-05-01T04:36:08.309Z",
+			"lastUpdate": "2023-05-01T11:25:19.671Z",
+			"domain": "youtube.com",
+			"creatorRef": {
+				"_id": 708988,
+				"avatar": "https://up.raindrop.io/user/avatars/708/988/pfp.jpg",
+				"name": "ellyloel",
+				"email": ""
+			},
+			"sort": 566119760,
+			"highlights": [],
+			"collectionId": 33237518
+		},
+		{
+			"_id": 566088385,
+			"link": "https://tetralogical.com/blog/2022/06/24/accessible-design-systems/",
+			"title": "Accessible design systems - TetraLogical",
+			"excerpt": "Accessibility consultancy with a focus on inclusion. We can help you with knowledge, experience, strategy, assessments, and development.",
+			"note": "",
+			"type": "article",
+			"user": { "$ref": "users", "$id": 708988 },
+			"cover": "https://tetralogical.com/_images/favicons/icon-512x512.png",
+			"media": [
+				{
+					"link": "https://tetralogical.com/_images/favicons/icon-512x512.png",
+					"type": "image"
+				},
+				{
+					"link": "https://tetralogical.com/blog/2022/06/24/accessible-design-systems/design-adobe-spectrum-colour-usage.jpg",
+					"type": "image"
+				},
+				{
+					"link": "https://tetralogical.com/blog/2022/06/24/accessible-design-systems/design-babylon-dna-inclusive-language-page.png",
+					"type": "image"
+				},
+				{
+					"link": "https://tetralogical.com/blog/2022/06/24/accessible-design-systems/bbc-screen-reader-ux-poster.png",
+					"type": "image"
+				},
+				{
+					"link": "https://tetralogical.com/blog/2022/06/24/accessible-design-systems/doc-inclusive-components-heydon-pickering-homepage.png",
+					"type": "image"
+				}
+			],
+			"tags": ["A11y", "Design Systems"],
+			"important": false,
+			"reminder": { "date": null },
+			"removed": false,
+			"created": "2023-05-01T04:09:34.606Z",
+			"lastUpdate": "2023-05-01T04:09:54.264Z",
+			"collection": { "$ref": "collections", "$id": 33237518, "oid": 33237518 },
+			"highlights": [],
+			"domain": "tetralogical.com",
+			"creatorRef": {
+				"_id": 708988,
+				"avatar": "https://up.raindrop.io/user/avatars/708/988/pfp.jpg",
+				"name": "ellyloel",
+				"email": ""
+			},
+			"sort": 566088383,
+			"collectionId": 33237518
+		},
+		{
+			"_id": 565557777,
+			"link": "https://myclientwants.com/",
+			"title": "But My Client Wants ...",
+			"excerpt": "The JAMstack, static site, serverless revolution has started. A lot of people\n    working with clients think they can't use this amazing new architecture because their clients want very\n    specific things. This site is meant to help you solve your clients' needs while getting to use the JAMstack!",
+			"note": "",
+			"type": "link",
+			"user": { "$ref": "users", "$id": 708988 },
+			"cover": "https://myclientwants.com/assets/images/twitter-card.png",
+			"media": [
+				{
+					"link": "https://myclientwants.com/assets/images/twitter-card.png",
+					"type": "image"
+				}
+			],
+			"tags": ["Resources", "Building websites"],
+			"important": false,
+			"reminder": { "date": null },
+			"removed": false,
+			"created": "2023-04-30T05:35:17.368Z",
+			"lastUpdate": "2023-04-30T05:35:34.014Z",
+			"collection": { "$ref": "collections", "$id": 33237518, "oid": 33237518 },
+			"highlights": [],
+			"domain": "myclientwants.com",
+			"creatorRef": {
+				"_id": 708988,
+				"avatar": "https://up.raindrop.io/user/avatars/708/988/pfp.jpg",
+				"name": "ellyloel",
+				"email": ""
+			},
+			"sort": 565557775,
+			"collectionId": 33237518
+		},
+		{
+			"_id": 565419931,
+			"link": "https://matthiasott.com/notes/simple-truths-about-personal-websites",
+			"title": "Simple Truths About Personal Websites · Matthias Ott – User Experience Designer",
+			"excerpt": "Matthias Ott is an independent user experience designer and developer from Stuttgart, Germany. Besides design practice he teaches Interface Prototyping at the Muthesius Academy of Fine Arts and Design, Kiel.",
+			"note": "",
+			"type": "article",
+			"user": { "$ref": "users", "$id": 708988 },
+			"cover": "https://matthiasott.com/android-chrome-384x384.png?v=00rKnA7O762",
+			"media": [
+				{
+					"link": "https://matthiasott.com/android-chrome-384x384.png?v=00rKnA7O762",
+					"type": "image"
+				}
+			],
+			"tags": ["Why you need a personal website"],
+			"highlights": [],
+			"important": false,
+			"removed": false,
+			"created": "2023-04-30T00:46:25.643Z",
+			"lastUpdate": "2023-04-30T00:46:25.643Z",
+			"collection": { "$ref": "collections", "$id": 33237518, "oid": 33237518 },
+			"domain": "matthiasott.com",
+			"creatorRef": {
+				"_id": 708988,
+				"avatar": "https://up.raindrop.io/user/avatars/708/988/pfp.jpg",
+				"name": "ellyloel",
+				"email": ""
+			},
+			"sort": 565419929,
+			"collectionId": 33237518
+		},
+		{
+			"_id": 565107410,
+			"link": "https://www.youtube.com/watch?v=5kixsu_yeHs",
+			"title": "Scott Kellum – Mapping Typography – btconf Düsseldorf 2023",
+			"excerpt": "The websites we make are nothing less than multi-dimensional objects: the size and shape of them change with every device and browser they are viewed on. We have lots of new tooling to develop layouts for this multi-dimensional landscape, but one crucial element seems to have resisted our attempts at tooling: our typography. How does our typography both maintain meaningful structure while flexing across our dynamic website space? In this talk, we’ll explore that problem. We will make a map of how text and typography behave in our website landscape, and then take these maps and apply them using CSS animations. In this way, we’ll drive dynamic interpolations across our websites' multiple dimensions.\n\n----- \n\nAbout Scott Kellum\n\nScott Kellum is the founder of Typetura, a typography as a service company offering both bespoke and ready-made typographic solutions. With over 15 years of design experience across type, editorial, digital, and print design; Scott’s experience gives him a unique perspective on the typographic challenges and opportunities in the design industry. He has invented multiple web technologies, holds two patents, and has contributed to major projects at Vox Media, Darden Studio, and Roger Black Studio. These accomplishments include inventing dynamic typographic systems, high impact ad formats, new parallax techniques, and the fluid typesetting technology that powers Typetura itself.\n\n-----\n\nThis talk was held at the \"beyond tellerrand\" conference 2023 in Düsseldorf: More information about beyond tellerrand (#btconf in short) here: https://beyondtellerrand.com\n\nbeyond tellerrand is the affordable single-track event where creativity and technology meet in a renowned, familiar and friendly atmosphere.\n\nMastodon: https://mastodon.social/@btconf\nLinkedin: https://www.linkedin.com/groups/3808125/\nInstagram: https://instagram.com/btconf\nTwitter: https://twitter.com/btconf",
+			"note": "",
+			"type": "video",
+			"user": { "$ref": "users", "$id": 708988 },
+			"cover": "https://i.ytimg.com/vi/5kixsu_yeHs/hqdefault.jpg",
+			"media": [
+				{
+					"link": "https://i.ytimg.com/vi/5kixsu_yeHs/hqdefault.jpg",
+					"type": "image"
+				}
+			],
+			"tags": ["YouTube", "Typefaces", "CSS"],
+			"important": false,
+			"removed": false,
+			"collection": { "$ref": "collections", "$id": 33237518, "oid": 33237518 },
+			"created": "2023-04-29T04:17:01.666Z",
+			"lastUpdate": "2023-05-01T11:35:39.589Z",
+			"domain": "youtube.com",
+			"creatorRef": {
+				"_id": 708988,
+				"avatar": "https://up.raindrop.io/user/avatars/708/988/pfp.jpg",
+				"name": "ellyloel",
+				"email": ""
+			},
+			"sort": 565107408,
+			"highlights": [],
+			"collectionId": 33237518
+		},
+		{
+			"_id": 565107408,
+			"link": "https://www.youtube.com/watch?v=2ZUqa-lTbnU",
+			"title": "Sophie Koonin – This Website Is under Construction, a Love Letter to the Personal Website – btconf",
+			"excerpt": "(Split screen, with slides on the left, starting at 3:37)\n\nRemember Geocities? The unbridled creativity and questionable colour schemes of a bygone era. There was a time when websites existed as reflections of your personality or a shrine to your favourite band rather than carbon copies of a Facebook page or Twitter feed. Content wasn’t algorithmically curated, but shared through links pages and webrings.\n\nWith modern browsers, we have at our fingertips so many powerful APIs and tools to build the most incredible, beautiful and wonderfully pointless websites that have ever existed, in ways that are accessible and performant like never before. So why aren’t we? Why do all the websites today look the same?\n\nThis is a manifesto for building something just for the fun of it, and a rallying cry to tell your story on a platform that’s entirely yours.\n\n----- \n\nAbout Sophie Koonin\n\nSophie is the web engineering lead at Monzo Bank in London, responsible for the web platform across the organisation and working on internal tooling that powers Monzo’s award-winning customer service. Building websites since the age of 10, she’s passionate about creating inclusive, accessible and fun websites that people love. Sophie writes about tech & mental health at localghost.dev, builds intentionally useless web apps, and makes music.\n\n-----\n\nThis talk was held at the \"beyond tellerrand\" conference 2023 in Düsseldorf: More information about beyond tellerrand (#btconf in short) here: https://beyondtellerrand.com\n\nbeyond tellerrand is the affordable single-track event where creativity and technology meet in a renowned, familiar and friendly atmosphere.\n\nMastodon: https://mastodon.social/@btconf\nLinkedin: https://www.linkedin.com/groups/3808125/\nInstagram: https://instagram.com/btconf\nTwitter: https://twitter.com/btconf",
+			"note": "",
+			"type": "video",
+			"user": { "$ref": "users", "$id": 708988 },
+			"cover": "https://i.ytimg.com/vi/2ZUqa-lTbnU/hqdefault.jpg",
+			"media": [
+				{
+					"link": "https://i.ytimg.com/vi/2ZUqa-lTbnU/hqdefault.jpg",
+					"type": "image"
+				}
+			],
+			"tags": ["YouTube", "Why you need a personal website", "Community"],
+			"important": false,
+			"removed": false,
+			"collection": { "$ref": "collections", "$id": 33237518, "oid": 33237518 },
+			"created": "2023-04-29T04:17:00.130Z",
+			"lastUpdate": "2023-05-01T11:35:58.970Z",
+			"domain": "youtube.com",
+			"creatorRef": {
+				"_id": 708988,
+				"avatar": "https://up.raindrop.io/user/avatars/708/988/pfp.jpg",
+				"name": "ellyloel",
+				"email": ""
+			},
+			"sort": 565107406,
+			"highlights": [],
+			"collectionId": 33237518
+		},
+		{
+			"_id": 565091007,
+			"link": "https://adrianroselli.com/2017/11/a-responsive-accessible-table.html",
+			"title": "A Responsive Accessible Table",
+			"excerpt": "Painfully slow demonstration of the example table resizing and different media queries kicking in. After writing (again) that it is ok to use tables, and after providing quick examples of responsive tables, I received questions about why I used some of the code I did. I am going to attempt…",
+			"note": "",
+			"type": "article",
+			"user": { "$ref": "users", "$id": 708988 },
+			"cover": "https://adrianroselli.com/wp-content/uploads/2017/10/RespA11yTable_split-thumb-300x297.png",
+			"media": [
+				{
+					"link": "https://adrianroselli.com/wp-content/uploads/2017/10/RespA11yTable_split-thumb-300x297.png",
+					"type": "image"
+				},
+				{
+					"link": "https://adrianroselli.com/wp-content/uploads/2017/10/RespA11yTable_WHCM_IE11_narrow.png",
+					"type": "image"
+				},
+				{
+					"link": "https://adrianroselli.com/wp-content/uploads/2017/10/RespA11yTable_WHCM_Edge_narrow-1.png",
+					"type": "image"
+				},
+				{
+					"link": "https://adrianroselli.com/wp-content/uploads/2017/10/RespA11yTable_print_FF.png",
+					"type": "image"
+				}
+			],
+			"tags": ["CSS", "Resources", "A11y"],
+			"important": false,
+			"reminder": { "date": null },
+			"removed": false,
+			"created": "2023-04-29T03:36:44.668Z",
+			"lastUpdate": "2023-04-29T03:36:53.727Z",
+			"collection": { "$ref": "collections", "$id": 33237518, "oid": 33237518 },
+			"highlights": [],
+			"domain": "adrianroselli.com",
+			"creatorRef": {
+				"_id": 708988,
+				"avatar": "https://up.raindrop.io/user/avatars/708/988/pfp.jpg",
+				"name": "ellyloel",
+				"email": ""
+			},
+			"sort": 565091005,
+			"collectionId": 33237518
+		},
+		{
+			"_id": 564101166,
+			"link": "https://gradient.style/",
+			"title": "CSS HD Gradients",
+			"excerpt": "Wide gamut Color 4 complaint CSS gradient builder.",
+			"note": "",
+			"type": "link",
+			"user": { "$ref": "users", "$id": 708988 },
+			"cover": "https://rdl.ink/render/https%3A%2F%2Fgradient.style%2F",
+			"media": [
+				{
+					"type": "image",
+					"link": "https://rdl.ink/render/https%3A%2F%2Fgradient.style%2F",
+					"screenshot": true
+				}
+			],
+			"tags": ["CSS", "Tools"],
+			"highlights": [],
+			"important": false,
+			"removed": false,
+			"created": "2023-04-27T00:56:03.186Z",
+			"lastUpdate": "2023-04-27T00:56:03.186Z",
+			"collection": { "$ref": "collections", "$id": 33237518, "oid": 33237518 },
+			"domain": "gradient.style",
+			"creatorRef": {
+				"_id": 708988,
+				"avatar": "https://up.raindrop.io/user/avatars/708/988/pfp.jpg",
+				"name": "ellyloel",
+				"email": ""
+			},
+			"sort": 564101164,
+			"collectionId": 33237518
+		},
+		{
+			"_id": 564069534,
+			"link": "https://bradfrost.com/blog/post/a-design-system-governance-process/",
+			"title": "A Design System Governance Process",
+			"excerpt": "You can have a comprehensive design system that contains a slew of well-structured components, thorough documentation, thoughtful guidelines, and a well-considered design language. But if a design system user can't get done what they're trying to get done, the whole system risks obsolescence.  Produ",
+			"note": "",
+			"type": "article",
+			"user": { "$ref": "users", "$id": 708988 },
+			"cover": "https://bradfrost.com/wp-content/uploads/2019/11/Screen-Shot-2019-11-03-at-9.11.39-PM.png",
+			"media": [
+				{
+					"link": "https://bradfrost.com/wp-content/uploads/2019/11/Screen-Shot-2019-11-03-at-9.11.39-PM.png",
+					"type": "image"
+				}
+			],
+			"tags": ["Design Systems", "Resources"],
+			"highlights": [],
+			"important": false,
+			"removed": false,
+			"created": "2023-04-26T21:25:21.736Z",
+			"lastUpdate": "2023-04-26T21:25:21.736Z",
+			"collection": { "$ref": "collections", "$id": 33237518, "oid": 33237518 },
+			"domain": "bradfrost.com",
+			"creatorRef": {
+				"_id": 708988,
+				"avatar": "https://up.raindrop.io/user/avatars/708/988/pfp.jpg",
+				"name": "ellyloel",
+				"email": ""
+			},
+			"sort": 564069532,
+			"collectionId": 33237518
+		}
+	],
+	"count": 190,
+	"collectionId": 33237518
+}
