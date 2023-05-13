@@ -33,7 +33,7 @@ permalink: "feed.atom"
 				{%- endif -%}
 			</updated>
 			<id>{{ absolutePostUrl }}</id>
-			<content xml:lang="{{ metadata.lang }}" type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+			<content xml:lang="{{ metadata.lang }}" type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | safe }}</content>
 		</entry>
 	{%- endfor %}
 </feed>

@@ -26,7 +26,7 @@ permalink: "bookmarks.atom"
 				{%- endif -%}
 			</updated>
 			<id>{{ bookmark.link }}</id>
-			<content xml:lang="{{ metadata.lang }}" type="html">{{ bookmark.excerpt }}</content>
+			<content xml:lang="{{ metadata.lang }}" type="html">{{ bookmark.excerpt | md | safe }}</content>
 		</entry>
 	{%- endfor %}
 </feed>
