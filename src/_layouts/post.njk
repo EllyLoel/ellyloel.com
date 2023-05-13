@@ -15,6 +15,11 @@ layout: base-without-header.njk
 			<a rel="syndication" class="[ u-syndication ]" href="{{ syndication-url }}" hidden></a>
 		{% endif %}
 		<a href="https://brid.gy/publish/mastodon" hidden></a>
+		<p class="p-bridgy-mastodon-content" hidden>{{ title }}
+			{%- if bookmark.link -%}
+				<br>🔖 {{ bookmark.link }}
+			{%- endif -%}
+			<br>🔗 {{ page.url }}</p>
 		{%- if created -%}
 			{%- set date = created -%}
 			{%- set label = "Created" -%}
