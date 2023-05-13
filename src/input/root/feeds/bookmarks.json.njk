@@ -22,7 +22,7 @@ permalink: "bookmarks.json"
 			{%- if bookmark.modified -%}
 				"date_modified": "{{ bookmark.modified | dateObj | dateToRfc3339 }}",
 			{%- endif -%}
-			"content_text": {% if bookmark.excerpt %}"{{ bookmark.excerpt | md | safe }}"{% else %}""{% endif %}
+			"content_html": {% if bookmark.excerpt %}"{{ bookmark.excerpt | md }}"{% else %}""{% endif %}
 		}{%- if not loop.last %},{% endif %}
 		{%- endfor %}
 	]
