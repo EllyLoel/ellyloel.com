@@ -8,7 +8,7 @@ module.exports = async () => {
 	try {
 		const data = await EleventyFetch(raindropApiUrl, {
 			directory: "bookmarks",
-			duration: "1d",
+			duration: "0s",
 			fetchOptions: {
 				headers: {
 					Authorization: `Bearer ${process.env.RAINDROP_ACCESS_TOKEN}`,
