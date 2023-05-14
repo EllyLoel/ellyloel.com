@@ -3,13 +3,7 @@
 {%- else -%}
 	{%- set link = page.url | absoluteUrl(metadata.url) -%}
 {%- endif -%}
-<span class="[ h-card p-author ]">
-	<a rel="author" class="[ p-name u-url ]" href="https://ellyloel.com" hidden="">Elly Loel</a>
-	{%- set regExp = r/^\/bookmarks\/.+\// -%}
-	{%- if not regExp.test(page.url) -%}
-		<img class="[ u-photo ]" src="/assets/img/pfp.jpg" alt='A digital drawing of me a white woman with blonde hair, smiling and doing a peace sign, wearing a white "golf le fleur" jumper.' hidden="">
-	{%- endif -%}
-</span>
+<a rel="author" class="[ h-card p-author ]" href="https://ellyloel.com" hidden="">Elly Loel</a>
 <a class="[ u-url ]" href="{{ link }}" hidden=""></a>
 {% if syndication-url %}
 	<a rel="syndication" class="[ u-syndication ]" href="{{ syndication-url }}" hidden=""></a>
