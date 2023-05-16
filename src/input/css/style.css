@@ -38,6 +38,7 @@
 @import url("./blocks/button.css") layer(blocks);
 @import url("./blocks/callout.css") layer(blocks);
 @import url("./blocks/card.css") layer(blocks);
+@import url("./blocks/color-scheme-switcher.css") layer(blocks);
 @import url("./blocks/date.css") layer(blocks);
 @import url("./blocks/emoji.css") layer(blocks);
 @import url("./blocks/feed-block.css") layer(blocks);
@@ -61,7 +62,6 @@
 @import url("./blocks/site-head.css") layer(blocks);
 @import url("./blocks/skip-link.css") layer(blocks);
 @import url("./blocks/stage.css") layer(blocks);
-@import url("./blocks/theme-switcher.css") layer(blocks);
 @import url("./blocks/toc.css") layer(blocks);
 @import url("./blocks/tooltip.css") layer(blocks);
 @import url("./blocks/unfurl.css") layer(blocks);

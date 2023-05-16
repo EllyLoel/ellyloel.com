@@ -10,8 +10,6 @@
 		<!-- Include stylesheets here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
 		<link rel="stylesheet" href="/css/style.css">
 
-		{%- include "theme-init.njk" -%}
-
 		<!-- Include scripts here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
 		{%- rollup "src/input/js/main.js" | url -%}
 		{%- if page.url === "/" -%}

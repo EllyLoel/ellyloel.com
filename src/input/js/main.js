@@ -1,5 +1,7 @@
 import "./shoelace.js";
 import "./color-scheme.js";
+import "./theme-hue.js";
+import "./color-scheme-switcher-dialog.js";
 import "./details-utils.js";
 import "./css-doodle.js";
 import "./howler.js";
