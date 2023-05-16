@@ -1,0 +1,27 @@
+<dialog class="[ color-scheme-switcher-dialog ]">
+	<div class="[ container ][ flow ]">
+		<button type="button" data-action="close">Close</button>
+
+		<h2>Pick a color scheme</h2>
+		<div class="[ color-scheme-switcher ]">
+			<button data-color-scheme="auto" aria-pressed="true">Auto</button>
+			<button data-color-scheme="light" aria-pressed="false">Light</button>
+			<button data-color-scheme="dark" aria-pressed="false">Dark</button>
+		</div>
+
+		<div>
+			<label for="theme-hue">
+				Change theme hue
+			</label>
+			<input type="range"
+				id="theme-hue"
+				class="[ theme-hue-slider ]"
+				name="theme-hue"
+				min="0"
+				max="360"
+				step="1"
+				value="265"
+			>
+		</div>
+	</div>
+</dialog>

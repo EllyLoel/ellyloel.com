@@ -1,4 +1,3 @@
-{% include "theme-switcher.njk" %}
 <header class="site-head">
 	<div class="[ nav-wrapper ]">
 		<div class="inner">
@@ -21,14 +20,15 @@
 				></sl-icon-button>
 			</sl-tooltip>
 
-			<sl-tooltip content="Switch theme">
+			<sl-tooltip content="Switch color scheme">
 				<sl-icon-button
-					id="theme-switcher-open-button"
+					id="color-scheme-switcher-dialog-open-button"
 					library="fa"
 					name="fas-palette"
-					label="Open theme switcher"
+					label="Open color scheme switcher"
 				></sl-icon-button>
 			</sl-tooltip>
+			{% include "color-scheme-switcher.njk" %}
 
 			{% include "navigation.njk" %}
 		</div>

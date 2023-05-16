@@ -1,113 +1,41 @@
-const SELECTORS = {
-	container: ".theme-switcher",
-	openButton: "#theme-switcher-open-button",
-	radioButton: "sl-radio-button[name=color-scheme]",
-	radioGroup: ".theme-switcher-radio-group",
+const pressedButtonSelector = '[data-color-scheme][aria-pressed="true"]';
+const defaultColorScheme = "auto";
+
+const applyColorScheme = (colorScheme) => {
+	const target = document.querySelector(`[data-color-scheme="${colorScheme}"]`);
+	document.documentElement.setAttribute(
+		"data-selected-color-scheme",
+		colorScheme
+	);
+	document
+		.querySelector(pressedButtonSelector)
+		.setAttribute("aria-pressed", "false");
+	target.setAttribute("aria-pressed", "true");
 };
 
-const THEME_STORAGE_KEY = "color-scheme";
+const handleColorSchemeSelection = (event) => {
+	const target = event.target;
+	const isPressed = target.getAttribute("aria-pressed");
+	const colorScheme = target.getAttribute("data-color-scheme");
 
-class ThemePicker {
-	constructor() {
-		this.isOpen = false;
-		this.activeTheme = "auto";
-		this.hasLocalStorage = typeof Storage !== "undefined";
-		this.hasThemeColorMeta =
-			!!document.querySelector('meta[name="theme-color"]') && window.metaColors;
-
-		this.root = document.documentElement;
-		this.container = document.querySelector(SELECTORS.container);
-		this.radioGroup = document.querySelector(SELECTORS.radioGroup);
-		this.radioButtons = Array.from(
-			this.radioGroup.querySelectorAll(SELECTORS.radioButton)
-		);
-		this.openButton = document.querySelector(SELECTORS.openButton);
-
-		this.mutationObserver = new MutationObserver((entries) => {
-			if (entries[0].target.children?.[2]?.nodeName === "SL-BUTTON-GROUP")
-				entries[0].target.children[2].setAttribute(
-					"exportparts",
-					"base: button-group__base"
-				);
-		});
-
-		this.init();
+	if (isPressed !== "true") {
+		applyColorScheme(colorScheme);
+		localStorage.setItem("selected-color-scheme", colorScheme);
 	}
+};
 
-	init() {
-		const storedPreference = this.getStoredPreference();
-
-		if (storedPreference) {
-			this.activeTheme = storedPreference;
-		}
-
-		this.setActiveItem();
-		this.bindEvents();
+const setInitialColorScheme = () => {
+	const savedColorScheme = localStorage.getItem("selected-color-scheme");
+	if (savedColorScheme && savedColorScheme !== defaultColorScheme) {
+		applyColorScheme(savedColorScheme);
 	}
+};
 
-	bindEvents() {
-		this.mutationObserver.observe(this.radioGroup.shadowRoot, {
-			childList: true,
-			subtree: true,
-		});
+setInitialColorScheme();
 
-		this.openButton.addEventListener("click", () => this.container.show());
+const colorSchemeSwitcher = document.querySelector(".color-scheme-switcher");
+const buttons = colorSchemeSwitcher.querySelectorAll("button");
 
-		this.radioButtons.forEach((radioButton) => {
-			radioButton.addEventListener("click", (e) => {
-				if (this.radioGroup.value !== e.target.value)
-					this.setTheme(e.target.value);
-			});
-		});
-	}
-
-	getStoredPreference() {
-		if (this.hasLocalStorage) {
-			return localStorage.getItem(THEME_STORAGE_KEY);
-		}
-		return false;
-	}
-
-	setActiveItem() {
-		// Set the theme switchers value to the documents theme
-		const prevChecked = this.radioGroup.querySelector(`[data-checked=true]`);
-		if (prevChecked) prevChecked.dataset.checked = false;
-
-		this.radioGroup.querySelector(
-			`[value=${this.activeTheme}]`
-		).dataset.checked = true;
-
-		this.radioGroup.value = this.activeTheme;
-	}
-
-	setTheme(newTheme) {
-		this.activeTheme = newTheme;
-		this.root.setAttribute("color-scheme", newTheme);
-		this.root.setAttribute(
-			"class",
-			`${
-				newTheme.includes("light")
-					? "sl-theme-light"
-					: newTheme.includes("dark")
-					? "sl-theme-dark"
-					: window.matchMedia("(prefers-color-scheme: light)").matches
-					? "sl-theme-light"
-					: "sl-theme-dark"
-			}`
-		);
-
-		if (this.hasLocalStorage) {
-			localStorage.setItem(THEME_STORAGE_KEY, newTheme);
-		}
-
-		if (this.hasThemeColorMeta) {
-			const metaColor = window.metaColors[newTheme];
-			const metaTag = document.querySelector('meta[name="theme-color"]');
-			metaTag.setAttribute("content", metaColor);
-		}
-
-		this.setActiveItem();
-	}
-}
-
-new ThemePicker();
+buttons.forEach((button) => {
+	button.addEventListener("click", handleColorSchemeSelection);
+});
