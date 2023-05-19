@@ -4,6 +4,7 @@ const defaultThemeHue = 265;
 const applyThemeHue = (themeHue) => {
 	document.documentElement.setAttribute("data-selected-theme-hue", themeHue);
 	document.documentElement.style.setProperty("--hue", `${themeHue}deg`);
+	document.querySelector("#theme-hue").value = themeHue;
 };
 
 const handleThemeHueSelection = (event) => {

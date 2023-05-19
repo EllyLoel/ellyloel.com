@@ -11,7 +11,12 @@ module.exports = {
 	plugins: [
 		postcssImport(),
 		postcssJitProps(openProps),
-		postcssPresetEnv({ stage: 0 }),
+		postcssPresetEnv({
+			features: {
+				"gradients-interpolation-method": true,
+			},
+			stage: 0,
+		}),
 		...(process.env.ELEVENTY_ENV === "production"
 			? [cssnano({ preset: "default" })]
 			: []),

@@ -1,15 +1,58 @@
 .color-scheme-switcher-dialog {
+	align-content: start;
+	border-radius: var(--radius-3);
+	box-shadow: var(--shadow-6);
+	color: var(--text-1);
+	display: grid;
+	inline-size: 100%;
 	inset: 0;
 	margin: auto;
+	max-inline-size: min(90vi, var(--size-content-2));
+	overflow: hidden;
+	padding: 0;
+	position: fixed;
+	transition: opacity 500ms var(--ease-3);
+	z-index: var(--layer-important);
 
-	.container {
-		padding: var(--size-7);
+	&[loading] {
+		visibility: hidden;
+	}
 
-		.color-scheme-switcher {
-			& button[aria-pressed="true"] {
-				background: var(--neutral-text);
-				color: var(--_bg);
-			}
+	&:not([open]) {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		animation: var(--animation-scale-down) forwards;
+		animation-timing-function: var(--ease-squish-3);
+
+		&[open] {
+			animation: var(--animation-scale-up) forwards;
+			scale: 80%;
+		}
+	}
+}
+
+.color-scheme-switcher-dialog .container {
+	grid-column: 1/2;
+	padding: var(--size-7);
+
+	& button[data-action="close"] {
+		position: absolute;
+		right: var(--size-7);
+		top: var(--size-7);
+	}
+
+	.color-scheme-switcher {
+		& button[aria-pressed="true"] {
+			background: var(--accent-solid);
+			color: var(--accent-2);
+		}
+
+		& button[aria-pressed="false"] {
+			background: var(--accent-bg-subtle);
+			color: var(--accent-solid);
 		}
 	}
 }
@@ -29,7 +72,13 @@
 		oklch(0.5 0.4 320),
 		oklch(0.5 0.4 360)
 	);
+	background: linear-gradient(
+		to right in oklch longer hue,
+		color(display-p3 1 0 0) 0%,
+		color(display-p3 1 0 0) 100%
+	);
 	border-radius: 9999px;
+	display: block;
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -44,12 +93,16 @@
 .theme-hue-slider::-webkit-slider-thumb {
 	appearance: none;
 	background: transparent;
-	border: 2px solid;
+	border: 4px groove var(--accent-1);
 	border-radius: 9999px;
-	cursor: pointer;
+	cursor: grab;
 	height: 1.5rem;
 	margin-top: 0;
 	width: 1.5rem;
+
+	&:active {
+		cursor: grabbing;
+	}
 }
 
 .theme-hue-slider::-moz-range-track {
@@ -60,9 +113,13 @@
 
 .theme-hue-slider::-moz-range-thumb {
 	background: transparent;
-	border: 2px solid;
+	border: 4px groove var(--accent-1);
 	border-radius: 9999px;
-	cursor: pointer;
+	cursor: grab;
 	height: 1.5rem;
 	width: 1.5rem;
+
+	&:active {
+		cursor: grabbing;
+	}
 }
