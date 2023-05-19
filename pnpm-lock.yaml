@@ -68,6 +68,9 @@ devDependencies:
   '@eslint/js':
     specifier: ^8.38.0
     version: 8.38.0
+  '@fortawesome/fontawesome-free':
+    specifier: ^6.4.0
+    version: 6.4.0
   '@photogabble/eleventy-plugin-interlinker':
     specifier: ^1.0.1
     version: 1.0.1(@11ty/eleventy@2.0.1)
@@ -107,6 +110,9 @@ devDependencies:
   eleventy-plugin-gen-favicons:
     specifier: ^1.1.2
     version: 1.1.2
+  eleventy-plugin-icons:
+    specifier: ^2.4.3
+    version: 2.4.3
   eleventy-plugin-json-feed:
     specifier: ^0.0.7
     version: 0.0.7
@@ -866,6 +872,12 @@ packages:
     dependencies:
       '@floating-ui/core': 1.2.6
     dev: false
+
+  /@fortawesome/fontawesome-free@6.4.0:
+    resolution: {integrity: sha512-0NyytTlPJwB/BF5LtRV8rrABDbe3TdTXqNB3PdZ+UUUZAEIrdOJdmABqKjt4AXwIoJNaRVVZEXxpNrqvE1GAYQ==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dev: true
 
   /@google/model-viewer@3.1.1(three@0.151.3):
     resolution: {integrity: sha512-RSIsFv/5XaHJHx4cWWlcR8fG8AD8bkGhw+rRfgAUKrJmbEzHQy7BZ1Cz6Ry66mNZ8uqQZwzclPsi4ckCMG02tw==}
@@ -2759,6 +2771,15 @@ packages:
       sharp: 0.31.3
     dev: true
 
+  /eleventy-plugin-icons@2.4.3:
+    resolution: {integrity: sha512-804FPvSzhN8r1IEbyc2mmG+ODJXYZhJLe/n2HLGl6VHLlatsYwUF/MiHwswMxQ2r/FPeEJYn3BUCUCm0OQZAbg==}
+    dependencies:
+      chalk: 4.1.2
+      just-memoize: 2.2.0
+      prettier: 2.8.7
+      svgo: 3.0.2
+    dev: true
+
   /eleventy-plugin-json-feed@0.0.7:
     resolution: {integrity: sha512-u2obUGq2s8XWp7cexFfJEz36uNIeRs//GW6/PwMCEKDCe10bWZCuurezDpxHImYh2kF5yilC+p3zlrrJs1IGcw==}
     dependencies:
@@ -3995,6 +4016,10 @@ packages:
   /junk@1.0.3:
     resolution: {integrity: sha512-3KF80UaaSSxo8jVnRYtMKNGFOoVPBdkkVPsw+Ad0y4oxKXPduS6G6iHkrf69yJVff/VAaYXkV42rtZ7daJxU3w==}
     engines: {node: '>=0.10.0'}
+    dev: true
+
+  /just-memoize@2.2.0:
+    resolution: {integrity: sha512-zriv+MY+61RXT0QsrO1ZJtL5umouqqSWmCGBkp2wJm35kniunBAA4qhUKx8Lvg/QcwrF9xuw9E6PkevKFf4boQ==}
     dev: true
 
   /kind-of@3.2.2:

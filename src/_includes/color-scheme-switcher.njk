@@ -1,16 +1,28 @@
-<dialog class="[ color-scheme-switcher-dialog ]">
-	<div class="[ container ][ flow ]">
-		<button type="button" data-action="close">Close</button>
+<dialog class="[ color-scheme-switcher-dialog ]" inert loading>
+	<div class="[ container ][ flex flex-col gap-3 ]">
+		<button type="button" data-action="close" class="[ padding-1 ]" style="font-size: 1.25rem;">
+			<span class="[ visually-hidden ]">Close</span>
+			{%- icon "fas:xmark" -%}
+		</button>
 
-		<h2>Pick a color scheme</h2>
-		<div class="[ color-scheme-switcher ]">
-			<button data-color-scheme="auto" aria-pressed="true">Auto</button>
-			<button data-color-scheme="light" aria-pressed="false">Light</button>
-			<button data-color-scheme="dark" aria-pressed="false">Dark</button>
+		<h2 class="[ margin-0 line-height-1 ]">Pick a colour<br>scheme</h2>
+		<div class="[ color-scheme-switcher ][ flex flex-wrap gap-3 ]">
+			<button data-color-scheme="auto" aria-pressed="true">
+				{%- icon "fas:laptop" -%}
+				Auto
+			</button>
+			<button data-color-scheme="light" aria-pressed="false">
+				{%- icon "fas:sun" -%}
+				Light
+			</button>
+			<button data-color-scheme="dark" aria-pressed="false">
+				{%- icon "fas:moon" -%}
+				Dark
+			</button>
 		</div>
 
-		<div>
-			<label for="theme-hue">
+		<div class="[ flex flex-col gap-2 ]">
+			<label for="theme-hue" class="[ h3 line-height-1 ]">
 				Change theme hue
 			</label>
 			<input type="range"
@@ -20,7 +32,6 @@
 				min="0"
 				max="360"
 				step="1"
-				value="265"
 			>
 		</div>
 	</div>

@@ -1,4 +1,14 @@
 .icon {
+	height: 1em;
+	pointer-events: none;
+	width: 1em;
+
+	> path {
+		fill: currentcolor;
+	}
+}
+
+.inline-icon {
 	display: inline-block;
 	height: 1em;
 	margin: 0 0.05em 0 0.1em;

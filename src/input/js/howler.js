@@ -1,6 +1,6 @@
 import "howler/dist/howler.core.min.js";
 
-let soundEnabled = true;
+let soundEnabled = localStorage.getItem("sound-enabled") ?? true;
 
 Howler.volume(0.25);
 
@@ -16,35 +16,27 @@ const soundButtonTooltip = document.querySelector(
 	'sl-tooltip[content="Disable sounds"]'
 );
 
-soundButton.addEventListener("click", () => {
+const toggleSound = (event) => {
 	if (soundEnabled) {
 		soundEnabled = false;
-		disableSound.play();
+		if (event) disableSound.play();
+		localStorage.setItem("sound-enabled", soundEnabled);
 		soundButton.setAttribute("name", "fas-volume-xmark");
 		soundButton.setAttribute("label", "Enable sounds");
 		soundButtonTooltip.setAttribute("content", "Enable sounds");
 	} else {
 		soundEnabled = true;
-		enableSound.play();
+		if (event) enableSound.play();
+		localStorage.setItem("sound-enabled", soundEnabled);
 		soundButton.setAttribute("name", "fas-volume-high");
 		soundButton.setAttribute("label", "Disable sounds");
 		soundButtonTooltip.setAttribute("content", "Disable sounds");
 	}
-});
+};
 
-////////////
+toggleSound();
 
-const pop = new Howl({
-	src: ["/assets/sounds/pop.mp3"],
-});
-
-const stroked = document.querySelectorAll("span.stroke");
-
-stroked.forEach((element) => {
-	element.addEventListener("click", () => {
-		if (soundEnabled) pop.play();
-	});
-});
+soundButton.addEventListener("click", toggleSound);
 
 ////////////
 
@@ -58,25 +50,38 @@ const bite = new Howl({
 	src: ["/assets/sounds/bite.mp3"],
 });
 
-const themeSwitcherButton = document.querySelector(
-	"sl-icon-button#theme-switcher-open-button"
-);
-const themeSwitcher = document.querySelector("sl-drawer.theme-switcher");
-const themeSwitcherRadioButtons = document.querySelectorAll(
-	"sl-drawer sl-radio-button"
-);
+if (soundEnabled) bite.play();
 
-themeSwitcherButton.addEventListener("click", () => {
-	if (soundEnabled) popOpen.play();
+document.querySelectorAll("dialog").forEach((dialog) => {
+	dialog.addEventListener("opening", () => {
+		if (soundEnabled) popOpen.play();
+	});
+	dialog.addEventListener("closing", () => {
+		if (soundEnabled) popClose.play();
+	});
 });
 
-themeSwitcher.addEventListener("sl-hide", () => {
-	if (soundEnabled) popClose.play();
+const colorSchemeSwitcher = document.querySelector(".color-scheme-switcher");
+const buttons = colorSchemeSwitcher.querySelectorAll("button");
+
+buttons.forEach((button) => {
+	button.addEventListener("click", () => {
+		const isPressed = button.getAttribute("aria-pressed");
+		if (soundEnabled && isPressed !== "true") bite.play();
+	});
 });
 
-themeSwitcherRadioButtons.forEach((themeSwitcherRadioButton) => {
-	themeSwitcherRadioButton.addEventListener("click", () => {
-		if (soundEnabled) bite.play();
+////////////
+
+const pop = new Howl({
+	src: ["/assets/sounds/pop.mp3"],
+});
+
+const stroked = document.querySelectorAll("span.stroke");
+
+stroked.forEach((element) => {
+	element.addEventListener("click", () => {
+		if (soundEnabled) pop.play();
 	});
 });
 

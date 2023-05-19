@@ -3,7 +3,6 @@ const dialogClosingEvent = new Event("closing");
 const dialogClosedEvent = new Event("closed");
 const dialogOpeningEvent = new Event("opening");
 const dialogOpenedEvent = new Event("opened");
-const dialogRemovedEvent = new Event("removed");
 
 // track opening
 const dialogAttrObserver = new MutationObserver((mutations, observer) => {
@@ -26,19 +25,6 @@ const dialogAttrObserver = new MutationObserver((mutations, observer) => {
 			await animationsComplete(dialog);
 			dialog.dispatchEvent(dialogOpenedEvent);
 		}
-	});
-});
-
-// track deletion
-const dialogDeleteObserver = new MutationObserver((mutations, observer) => {
-	mutations.forEach((mutation) => {
-		mutation.removedNodes.forEach((removedNode) => {
-			if (removedNode.nodeName === "DIALOG") {
-				removedNode.removeEventListener("click", lightDismiss);
-				removedNode.removeEventListener("close", dialogClose);
-				removedNode.dispatchEvent(dialogRemovedEvent);
-			}
-		});
 	});
 });
 
@@ -69,12 +55,6 @@ export default async function (dialog) {
 
 	dialogAttrObserver.observe(dialog, {
 		attributes: true,
-	});
-
-	dialogDeleteObserver.observe(document.body, {
-		attributes: false,
-		childList: true,
-		subtree: false,
 	});
 
 	// remove loading attribute

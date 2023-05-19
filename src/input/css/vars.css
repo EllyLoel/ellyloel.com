@@ -70,14 +70,17 @@
 	--neutral-solid-hover: var(--neutral-8);
 	--neutral-text: var(--neutral-9);
 	--neutral-text-contrast: var(--neutral-10);
-	--info: lch(69.928% 42.583 var(--hue));
-	--success: lch(72.02% 66.383 var(--hue));
-	--warning: lch(69.545% 65.691 var(--hue));
-	--error: lch(68.867% 51.731 var(--hue));
+	--info: lch(69.928% 42.583 251.574deg);
+	--success: lch(72.02% 66.383 129.588deg);
+	--warning: lch(69.545% 65.691 63.721deg);
+	--error: lch(68.867% 51.731 36.633deg);
 
 	/* Typography */
 	--font-weight-body-bold: 622;
 	--font-weight-body-normal: 400;
+
+	/* Scrollbar width */
+	--scrollbar-width: 15px;
 
 	color-scheme: light dark;
 

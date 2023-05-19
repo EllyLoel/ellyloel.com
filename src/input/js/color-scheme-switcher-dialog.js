@@ -1,33 +1,13 @@
 import GuiDialog from "./dialog.js";
 
 // new events
-const dialogClosing = ({ target: dialog }) => {
-	console.log("Dialog closing", dialog);
-};
+const dialogClosing = ({ target: dialog }) => {};
 
-const dialogClosed = ({ target: dialog }) => {
-	console.log("Dialog closed", dialog);
-	console.info("Dialog user action:", dialog.returnValue);
-};
+const dialogClosed = ({ target: dialog }) => {};
 
-const dialogOpened = ({ target: dialog }) => {
-	console.log("Dialog open", dialog);
-};
+const dialogOpened = ({ target: dialog }) => {};
 
-const dialogOpening = ({ target: dialog }) => {
-	console.log("Dialog opening", dialog);
-};
-
-const dialogRemoved = ({ target: dialog }) => {
-	// cleanup new/optional <dialog> events
-	dialog.removeEventListener("closing", dialogClosing);
-	dialog.removeEventListener("closed", dialogClosed);
-	dialog.removeEventListener("opening", dialogOpening);
-	dialog.removeEventListener("opened", dialogOpened);
-	dialog.removeEventListener("removed", dialogRemoved);
-
-	console.log("Dialog removed", dialog);
-};
+const dialogOpening = ({ target: dialog }) => {};
 
 // SETUP
 document.querySelectorAll("dialog").forEach((dialog) => {
@@ -39,7 +19,6 @@ document.querySelectorAll("dialog").forEach((dialog) => {
 	dialog.addEventListener("closed", dialogClosed);
 	dialog.addEventListener("opening", dialogOpening);
 	dialog.addEventListener("opened", dialogOpened);
-	dialog.addEventListener("removed", dialogRemoved);
 });
 
 const colorSchemeSwitcherDialogOpenButton = document.querySelector(

@@ -75,27 +75,9 @@ body {
 	max-inline-size: 100%;
 }
 
-/* Remove stroke and set fill colour to the inherited font colour */
-:where(svg) {
-	fill: currentcolor;
-	stroke: none;
-}
-
-/* SVG's without a fill attribute */
-:where(svg):where(:not([fill])) {
-	fill: none;
-
-	/* Remove fill and set stroke colour to the inherited font colour */
-	stroke: currentcolor;
-
-	/* Rounded stroke */
-	stroke-linecap: round;
-	stroke-linejoin: round;
-}
-
 /* Set a size for SVG's without a width attribute */
 :where(svg):where(:not([width])) {
-	inline-size: 5rem;
+	max-inline-size: 5rem;
 }
 
 /* Remove built-in form typography styles */
