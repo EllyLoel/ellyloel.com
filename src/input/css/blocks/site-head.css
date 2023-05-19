@@ -3,11 +3,6 @@
 	z-index: 1;
 
 	& .inner {
-		align-items: center;
-		display: flex;
-		flex-wrap: wrap;
-		gap: var(--size-3);
-
 		& > sl-icon-button {
 			--sl-focus-ring: 2px solid var(--link);
 
