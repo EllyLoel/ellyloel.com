@@ -1,5 +1,5 @@
 :root {
-	--hue: 265deg;
+	--hue: 315deg;
 	--black: lch(5.243% 2.967 var(--hue));
 	--white: lch(97.959% 2.447 var(--hue));
 

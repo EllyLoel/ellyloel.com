@@ -1,5 +1,8 @@
 const themeHueInput = document.querySelector("#theme-hue");
-const defaultThemeHue = 265;
+const defaultThemeHue = Number.parseInt(
+	getComputedStyle(document.documentElement).getPropertyValue("--hue"),
+	10
+);
 
 const applyThemeHue = (themeHue) => {
 	document.documentElement.setAttribute("data-selected-theme-hue", themeHue);
