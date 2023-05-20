@@ -20,8 +20,10 @@ const handleThemeHueSelection = (event) => {
 
 const setInitialThemeHue = () => {
 	const savedThemeHue = localStorage.getItem("selected-theme-hue");
-	if (savedThemeHue && savedThemeHue !== defaultThemeHue) {
+	if (savedThemeHue) {
 		applyThemeHue(savedThemeHue);
+	} else {
+		applyThemeHue(defaultThemeHue);
 	}
 };
 
