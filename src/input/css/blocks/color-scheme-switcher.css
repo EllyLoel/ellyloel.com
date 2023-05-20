@@ -61,21 +61,21 @@
 	appearance: none;
 	background: linear-gradient(
 		to right,
-		oklch(0.5 0.4 0),
-		oklch(0.5 0.4 40),
-		oklch(0.5 0.4 80),
-		oklch(0.5 0.4 120),
-		oklch(0.5 0.4 160),
-		oklch(0.5 0.4 200),
-		oklch(0.5 0.4 240),
-		oklch(0.5 0.4 280),
-		oklch(0.5 0.4 320),
-		oklch(0.5 0.4 360)
+		lch(46 150 0deg),
+		lch(46 150 40deg),
+		lch(46 150 80deg),
+		lch(46 150 120deg),
+		lch(46 150 160deg),
+		lch(46 150 200deg),
+		lch(46 150 240deg),
+		lch(46 150 280deg),
+		lch(46 150 320deg),
+		lch(46 150 360deg)
 	);
 	background: linear-gradient(
 		to right in oklch longer hue,
-		color(display-p3 1 0 0) 0%,
-		color(display-p3 1 0 0) 100%
+		lch(46 150 0deg) 0%,
+		lch(46 150 0deg) 100%
 	);
 	border-radius: 9999px;
 	display: block;
