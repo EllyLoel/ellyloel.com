@@ -33,10 +33,6 @@
 	}
 
 	& a[href="/"] {
-		flex-shrink: 0;
-		margin-inline-end: auto; /* Prevents nav bunching up to the logo */
-		margin-right: auto; /* Prevents nav bunching up to the logo */
-
 		&:hover {
 			background-color: transparent;
 		}
