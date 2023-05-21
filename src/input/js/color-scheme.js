@@ -63,8 +63,9 @@ const applyColorScheme = (colorScheme) => {
 	if (
 		nextPressedButton &&
 		nextPressedButton.getAttribute("aria-pressed") !== "true"
-	)
+	) {
 		nextPressedButton.setAttribute("aria-pressed", "true");
+	}
 };
 
 const handleColorSchemeSelection = (event) => {
