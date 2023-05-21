@@ -617,14 +617,10 @@ abbr {
 /* Dialog */
 
 dialog {
-	background-color: var(--neutral-base);
+	background-color: var(--neutral-base, Canvas);
 	border-radius: var(--radius-3);
 	box-shadow: var(--shadow-6);
 	color: inherit;
-}
-
-dialog::backdrop {
-	backdrop-filter: blur(25px);
 }
 
 html[\:has\(dialog\[open\]\)],
