@@ -33,6 +33,20 @@ module.exports = (eleventyConfig) => {
 			fas: "node_modules/@fortawesome/fontawesome-free/svgs/solid",
 		},
 	});
+	eleventyConfig.addPlugin(pluginIcons, {
+		icon: {
+			class: (name, source) => `inline-icon icon-${name}`,
+			insertAttributes: {
+				"aria-hidden": "true",
+			},
+			shortcode: "inlineIcon",
+		},
+		sources: {
+			fab: "node_modules/@fortawesome/fontawesome-free/svgs/brands",
+			far: "node_modules/@fortawesome/fontawesome-free/svgs/regular",
+			fas: "node_modules/@fortawesome/fontawesome-free/svgs/solid",
+		},
+	});
 	eleventyConfig.addPlugin(pluginInterlinker);
 	eleventyConfig.addPlugin(pluginNavigation);
 	eleventyConfig.addPlugin(pluginNestingToc, {

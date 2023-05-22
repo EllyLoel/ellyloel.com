@@ -51,6 +51,7 @@
 @import url("./blocks/icon.css") layer(blocks);
 @import url("./blocks/key-skills.css") layer(blocks);
 @import url("./blocks/lego.css") layer(blocks);
+@import url("./blocks/link-icon-start.css") layer(blocks);
 @import url("./blocks/lite-youtube.css") layer(blocks);
 @import url("./blocks/logo.css") layer(blocks);
 @import url("./blocks/markdown-container.css") layer(blocks);
