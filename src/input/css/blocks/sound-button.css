@@ -1,0 +1,22 @@
+/* stylelint-disable no-descending-specificity */
+#sound-button {
+	&[aria-pressed="true"] svg {
+		&:first-of-type {
+			display: block;
+		}
+
+		&:last-of-type {
+			display: none;
+		}
+	}
+
+	&[aria-pressed="false"] svg {
+		&:first-of-type {
+			display: none;
+		}
+
+		&:last-of-type {
+			display: block;
+		}
+	}
+}

@@ -12,25 +12,18 @@ const disableSound = new Howl({
 });
 
 const soundButton = document.getElementById("sound-button");
-const soundButtonTooltip = document.querySelector(
-	'sl-tooltip[content="Disable sounds"]'
-);
 
 const toggleSound = (event) => {
 	if (soundEnabled) {
 		soundEnabled = false;
 		if (event) disableSound.play();
+		soundButton.setAttribute("aria-pressed", soundEnabled.toString());
 		localStorage.setItem("sound-enabled", soundEnabled);
-		soundButton.setAttribute("name", "fas-volume-xmark");
-		soundButton.setAttribute("label", "Enable sounds");
-		soundButtonTooltip.setAttribute("content", "Enable sounds");
 	} else {
 		soundEnabled = true;
 		if (event) enableSound.play();
+		soundButton.setAttribute("aria-pressed", soundEnabled.toString());
 		localStorage.setItem("sound-enabled", soundEnabled);
-		soundButton.setAttribute("name", "fas-volume-high");
-		soundButton.setAttribute("label", "Disable sounds");
-		soundButtonTooltip.setAttribute("content", "Disable sounds");
 	}
 };
 

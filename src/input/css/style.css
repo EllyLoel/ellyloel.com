@@ -61,6 +61,7 @@
 @import url("./blocks/search.css") layer(blocks);
 @import url("./blocks/site-head.css") layer(blocks);
 @import url("./blocks/skip-link.css") layer(blocks);
+@import url("./blocks/sound-button.css") layer(blocks);
 @import url("./blocks/stage.css") layer(blocks);
 @import url("./blocks/toc.css") layer(blocks);
 @import url("./blocks/tooltip.css") layer(blocks);
