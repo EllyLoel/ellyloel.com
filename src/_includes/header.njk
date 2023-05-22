@@ -11,23 +11,17 @@
 				</span>
 			</a>
 
-			<sl-tooltip content="Disable sounds">
-				<sl-icon-button
-					id="sound-button"
-					library="fa"
-					name="fas-volume-high"
-					label="Disable sounds"
-				></sl-icon-button>
-			</sl-tooltip>
+			<button type="button" id="sound-button" aria-pressed="true">
+				{%- icon "fas:volume-high" -%}
+				{%- icon "fas:volume-xmark" -%}
+				Sounds
+			</button>
 
-			<sl-tooltip content="Switch color scheme">
-				<sl-icon-button
-					id="color-scheme-switcher-dialog-open-button"
-					library="fa"
-					name="fas-palette"
-					label="Open color scheme switcher"
-				></sl-icon-button>
-			</sl-tooltip>
+			<button type="button" id="color-scheme-switcher-dialog-open-button">
+				{%- icon "fas:palette" -%}
+				Theme editor
+			</button>
+
 			{% include "color-scheme-switcher.njk" %}
 		</div>
 
