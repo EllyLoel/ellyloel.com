@@ -37,4 +37,4 @@
   [plugins.inputs]
   baseUrl = "https://www.ellyloel.com"
   feedPath = "feed.atom"
-  limit = 1
+  limit = 10
