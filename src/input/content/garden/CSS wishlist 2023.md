@@ -53,6 +53,8 @@ Just to be clear, when I say "don't exist yet" I mean that these are things that
 - Generated content alt text
 - Colour contrast
 - Display contents but without the accessibility issues (stolen from Tyler Sticka)
+- Random numbers
+  - [random() function](https://github.com/w3c/csswg-drafts/issues/2826#issuecomment-1204305712)
 
 Not really CSS
 - Declarative custom elements (no shadow DOM)
