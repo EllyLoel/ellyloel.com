@@ -96,7 +96,7 @@
 		"postcss-preset-env": "^8.3.2",
 		"prettier": "^2.8.7",
 		"remove-markdown": "^0.5.0",
-		"rimraf": "^5.0.0",
+		"rimraf": "^5.0.1",
 		"rollup": "^3.21.0",
 		"rss-parser": "^3.13.0",
 		"stylelint": "^15.5.0",
