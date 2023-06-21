@@ -39,8 +39,6 @@ Elly has recently started her journey in the tech industry as a junior developer
 	<li><span class="[ badge ]">Gatsby</span></li>
 	<li><span class="[ badge ]">Next.js</span></li>
 	<li><span class="[ badge ]">WordPress</span></li>
-	<li><span class="[ badge ]">SilverStripe</span></li>
-	<li><span class="[ badge ]">Laravel</span></li>
 	<li><span class="[ badge ]">Docker</span></li>
 	<li><span class="[ badge ]">GitHub</span></li>
 	<li><span class="[ badge ]">Bitbucket</span></li>
@@ -61,7 +59,7 @@ Elly has recently started her journey in the tech industry as a junior developer
 
 ### Developer at Portable <span class="[ badge ][ neutral pill ]">Sep 2021-Present</span>
 
-Developed web apps for client (VEOHRC, Headspace, etc.) projects using a range of web technologies (React, Gatsby, PHP, SilverStripe, Docker, etc.) as well as gave talks on neurodiversity and landing your first tech job.
+Developed web apps for client projects using a range of web technologies as well as gave talks on neurodiversity and landing your first tech job.
 
 ### PC Sales, Support and Service Technician at Aftershock PC Australia <span class="[ badge ][ neutral pill ]">Dec 2020-Jun 2021</span>
 
@@ -78,17 +76,20 @@ After consultation with the client I created and edited visual communications to
 ## Education
 
 - The Frontend Developer Career Path at Scrimba <span class="[ badge ][ neutral pill ]">Jun 2021-Dec 2021</span>
-- Bachelor of Computer Science at Swinburne University of Technology <span class="[ badge ][ neutral pill ]">Mar 2020-Sep 2021</span>
+- Bachelor of Computer Science at Swinburne University of Technology (half completed) <span class="[ badge ][ neutral pill ]">Mar 2020-Sep 2021</span>
 - Victorian Certificate of Education at Rosebud Secondary College <span class="[ badge ][ neutral pill ]">2014-2019</span>
 
 ## Certifications
 
+- Smart Interface Design Patterns from Vitaly Friedman
+- Practical Accessibility from Sara Soueidan
+- CSS for JS Devs from Josh W Comeau
 - The Frontend Developer Career Path from Scrimba
 - Certificate III in Information, Digital Media and Technology
 
 ## Interests
 
-- Building artisan mechanical keyboards
-- Personal knowledge management and digital gardening
-- Developing general development skills
-- Landscape photography
+- Accessibility
+- Inclusive design
+- Web standards
+- Design engineering
