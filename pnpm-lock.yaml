@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 patchedDependencies:
   '@aciccarello/webmention@1.4.6':
     hash: gmiubv33cktpzud3dxubd6cvie
@@ -111,8 +115,8 @@ devDependencies:
     specifier: ^1.1.2
     version: 1.1.2
   eleventy-plugin-icons:
-    specifier: ^2.4.3
-    version: 2.4.3
+    specifier: ^3.0.1
+    version: 3.0.1
   eleventy-plugin-json-feed:
     specifier: ^0.0.7
     version: 0.0.7
@@ -445,7 +449,7 @@ packages:
       cheerio: 0.22.0
       clui: 0.3.6
       decodeuricomponent: 0.3.1
-      follow-redirects: 1.15.2(debug@4.3.2)
+      follow-redirects: 1.15.2
       li: 1.3.0
       microformat-node: 2.0.1
       ms: 2.1.2
@@ -2211,6 +2215,10 @@ packages:
       css-tree: 2.2.1
     dev: true
 
+  /cssom@0.5.0:
+    resolution: {integrity: sha512-iKuQcq+NdHqlAcwUY0o/HL69XQrUaQdMjmStJ8JFmUaiiQErlhrmuigkg/CU4E2J0IyUKUrMAgl36TvN67MqTw==}
+    dev: true
+
   /cssremedy@0.1.0-beta.2:
     resolution: {integrity: sha512-6mpPQzoUQHY7fiAxWCQDgPz73j5ugz2LqU62BLohUsxYurYLdTHQc+ilPm4i52wU2SxzPTrcRMIdniE2zGfjOA==}
     dev: true
@@ -2665,7 +2673,7 @@ packages:
   /domutils@1.5.1:
     resolution: {integrity: sha512-gSu5Oi/I+3wDENBsOWBiRK1eoGxcywYSqg3rR960/+EfY0CF4EX1VPkgHOZ3WiS/Jg2DtliF6BhWcHlfpYUcGw==}
     dependencies:
-      dom-serializer: 0.1.1
+      dom-serializer: 0.2.2
       domelementtype: 1.3.1
     dev: true
 
@@ -2771,12 +2779,13 @@ packages:
       sharp: 0.31.3
     dev: true
 
-  /eleventy-plugin-icons@2.4.3:
-    resolution: {integrity: sha512-804FPvSzhN8r1IEbyc2mmG+ODJXYZhJLe/n2HLGl6VHLlatsYwUF/MiHwswMxQ2r/FPeEJYn3BUCUCm0OQZAbg==}
+  /eleventy-plugin-icons@3.0.1:
+    resolution: {integrity: sha512-LXq8B0SNk706/wOrPl3EBYtH9cBErahma+vgXAxuzjHF6xUQj0xECs6X5PPWihmGn/OSOyyzQ+b22KMc9kq6wg==}
+    engines: {node: '>=16.0.0'}
     dependencies:
-      chalk: 4.1.2
       just-memoize: 2.2.0
-      prettier: 2.8.7
+      kleur: 4.1.5
+      linkedom: 0.14.26
       svgo: 3.0.2
     dev: true
 
@@ -3315,6 +3324,16 @@ packages:
     resolution: {integrity: sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==}
     dev: true
 
+  /follow-redirects@1.15.2:
+    resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dev: true
+
   /follow-redirects@1.15.2(debug@4.3.2):
     resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
     engines: {node: '>=4.0'}
@@ -3592,6 +3611,10 @@ packages:
 
   /html-entities@2.3.3:
     resolution: {integrity: sha512-DV5Ln36z34NNTDgnz0EWGBLZENelNAtkiFA4kyNOG2tDI6Mz1uSWiq1wAKdyjnJwyDiDO7Fa2SO1CTxPXL8VxA==}
+    dev: true
+
+  /html-escaper@3.0.3:
+    resolution: {integrity: sha512-RuMffC89BOWQoY0WKGpIhn5gX3iI54O6nRA0yC124NYVtzjmFWBIiFd8M0x+ZdX0P9R4lADg1mgP8C7PxGOWuQ==}
     dev: true
 
   /html-minifier@4.0.0:
@@ -4066,6 +4089,16 @@ packages:
 
   /lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
+    dev: true
+
+  /linkedom@0.14.26:
+    resolution: {integrity: sha512-mK6TrydfFA7phrnp+1j57ycBwFI5bGSW6YXlw9acHoqF+mP/y+FooEYYyniOt5Ot57FSKB3iwmnuQ1UUyNLm5A==}
+    dependencies:
+      css-select: 5.1.0
+      cssom: 0.5.0
+      html-escaper: 3.0.3
+      htmlparser2: 8.0.2
+      uhyphen: 0.2.0
     dev: true
 
   /linkify-it@3.0.3:
@@ -6894,6 +6927,10 @@ packages:
     engines: {node: '>=0.8.0'}
     hasBin: true
     requiresBuild: true
+    dev: true
+
+  /uhyphen@0.2.0:
+    resolution: {integrity: sha512-qz3o9CHXmJJPGBdqzab7qAYuW8kQGKNEuoHFYrBwV6hWIMcpAmxDLXojcHfFr9US1Pe6zUswEIJIbLI610fuqA==}
     dev: true
 
   /universalify@0.1.2:
