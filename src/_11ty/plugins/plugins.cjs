@@ -31,6 +31,7 @@ module.exports = (eleventyConfig) => {
 			fab: "node_modules/@fortawesome/fontawesome-free/svgs/brands",
 			far: "node_modules/@fortawesome/fontawesome-free/svgs/regular",
 			fas: "node_modules/@fortawesome/fontawesome-free/svgs/solid",
+			local: "src/assets/svg",
 		},
 	});
 	eleventyConfig.addPlugin(pluginIcons, {
@@ -45,6 +46,7 @@ module.exports = (eleventyConfig) => {
 			fab: "node_modules/@fortawesome/fontawesome-free/svgs/brands",
 			far: "node_modules/@fortawesome/fontawesome-free/svgs/regular",
 			fas: "node_modules/@fortawesome/fontawesome-free/svgs/solid",
+			local: "src/assets/svg",
 		},
 	});
 	eleventyConfig.addPlugin(pluginInterlinker);
