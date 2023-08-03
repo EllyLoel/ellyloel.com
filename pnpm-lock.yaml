@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 patchedDependencies:
   '@aciccarello/webmention@1.4.6':
     hash: gmiubv33cktpzud3dxubd6cvie
@@ -445,7 +449,7 @@ packages:
       cheerio: 0.22.0
       clui: 0.3.6
       decodeuricomponent: 0.3.1
-      follow-redirects: 1.15.2(debug@4.3.2)
+      follow-redirects: 1.15.2
       li: 1.3.0
       microformat-node: 2.0.1
       ms: 2.1.2
@@ -3313,6 +3317,16 @@ packages:
 
   /flatted@3.2.7:
     resolution: {integrity: sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==}
+    dev: true
+
+  /follow-redirects@1.15.2:
+    resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
     dev: true
 
   /follow-redirects@1.15.2(debug@4.3.2):
@@ -6405,15 +6419,15 @@ packages:
       '@socket.io/component-emitter': 3.1.0
       debug: 4.3.4
       engine.io-client: 6.4.0
-      socket.io-parser: 4.2.2
+      socket.io-parser: 4.2.4
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - utf-8-validate
     dev: true
 
-  /socket.io-parser@4.2.2:
-    resolution: {integrity: sha512-DJtziuKypFkMMHCm2uIshOYC7QaylbtzQwiMYDuCKy3OPkjLzu4B2vAhTlqipRHHzrI0NJeBAizTK7X+6m1jVw==}
+  /socket.io-parser@4.2.4:
+    resolution: {integrity: sha512-/GbIKmo8ioc+NIWIhwdecY0ge+qVBSMdgxGygevmdHj24bsfgtCmcUUcQ5ZzcylGFHsN3k4HB4Cgkl96KVnuew==}
     engines: {node: '>=10.0.0'}
     dependencies:
       '@socket.io/component-emitter': 3.1.0
@@ -6431,7 +6445,7 @@ packages:
       debug: 4.3.4
       engine.io: 6.4.1
       socket.io-adapter: 2.5.2
-      socket.io-parser: 4.2.2
+      socket.io-parser: 4.2.4
     transitivePeerDependencies:
       - bufferutil
       - supports-color
