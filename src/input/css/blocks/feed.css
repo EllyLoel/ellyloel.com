@@ -1,6 +1,6 @@
 .feed {
 	& > li {
-		max-inline-size: 40ch;
+		max-inline-size: 60ch;
 	}
 
 	& > li + li {

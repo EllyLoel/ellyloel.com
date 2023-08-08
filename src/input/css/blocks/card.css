@@ -1,10 +1,21 @@
 .feed-item-card {
 	--shadow-offset: var(--size-1);
 
+	align-content: space-between;
+	background-color: var(--accent-bg-subtle);
+	border-color: var(--accent-bg-hover);
 	border-radius: var(--radius-3);
+	border-style: solid;
+	border-width: var(--border-size-2);
 	box-shadow: var(--shadow-offset) var(--shadow-offset) 0 0
 		var(--accent-bg-hover);
-	inline-size: 100%;
+	display: grid;
+	gap: var(--size-3);
+	grid-template-areas:
+		"image"
+		"content";
+	inline-size: fit-content;
+	padding: var(--size-4);
 	transition: box-shadow 300ms var(--ease-1), opacity 0.5s var(--ease-2);
 
 	&:is(:hover, :focus-within) {
@@ -13,52 +24,40 @@
 		transition: box-shadow 150ms var(--ease-1);
 	}
 
-	&::part(image) {
-		justify-content: center;
-		margin-bottom: var(--size-3);
+	@media (width >= 35em) {
+		grid-template-areas: "image content";
 	}
 
-	&::part(base) {
-		background-color: var(--accent-bg-subtle);
-		border-color: var(--accent-bg-hover);
-		border-radius: var(--radius-3);
-		border-width: var(--border-size-2);
-		gap: var(--size-3);
-		padding: var(--padding);
-	}
-
-	&::part(header),
-	&::part(body) {
-		font-size: var(--font-size-4);
-	}
-
-	&::part(header),
-	&::part(body),
-	&::part(footer) {
-		padding: 0;
-	}
-
-	&::part(header) {
-		border: none;
-	}
-
-	&::part(footer) {
-		border: none;
-	}
-
-	& [slot="image"] {
-		display: block;
-		max-height: 300px;
-		object-fit: contain;
+	.feed-item-card-image {
+		grid-area: image;
+		height: 100%;
+		margin-inline: auto;
+		overflow: hidden;
+		width: auto;
 
 		.image {
-			height: 100%;
-			margin-inline: auto;
+			max-height: 200px;
 			width: auto;
+		}
+
+		@media (width >= 35em) {
+			height: auto;
+			margin-inline: unset;
+			max-width: 200px;
+			width: 100%;
+
+			.image {
+				max-height: unset;
+			}
 		}
 	}
 
-	& div[slot="footer"] {
+	.feed-item-card-header,
+	.feed-item-card-body {
+		font-size: var(--font-size-4);
+	}
+
+	.feed-item-card-footer {
 		justify-content: space-between;
 
 		& > sl-tooltip > span {
@@ -75,16 +74,12 @@
 
 			&,
 			> .badge {
-				border-radius: var(--sl-border-radius-pill);
+				border-radius: var(--radius-round);
 			}
 		}
 	}
 
-	& .feed-item-card-title {
+	& .feed-item-card-title * {
 		font-size: inherit;
-
-		& * {
-			font-size: inherit;
-		}
 	}
 }
