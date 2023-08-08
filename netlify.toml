@@ -38,3 +38,6 @@
   baseUrl = "https://www.ellyloel.com"
   feedPath = "feed.atom"
   limit = 10
+
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"
