@@ -1,37 +1,46 @@
 <li class="{% if stage %}[ {{ stage }} ]{% endif %} [ h-entry ]">
-	<sl-card class="[ feed-item-card ]">
+	<article class="[ feed-item-card ]">
 		{%- if imageMarkup -%}
-			<div slot="image">
+			<div class="[ feed-item-card-image ]">
 				{{ imageMarkup | safe }}
 			</div>
 		{%- endif -%}
 
-		<div {% if body %}slot="header"{% endif %} class="[ feed-item-card-title ]">
-			<p>
-				{%- if stage -%}
-					{%- include "stage.njk" -%}
+		<div
+			class="[ flow ]"
+			{% if imageMarkup -%}
+				style="grid-area: content;"
+			{% endif -%}
+		>
+			<div class="[ feed-item-card-title ] [ feed-item-card-{% if body %}header{% else %}body{% endif %} ]">
+				<p>
+					{%- if stage -%}
+						{%- include "stage.njk" -%}
+					{%- endif -%}
+					<a href="{{ url }}" class="[ u-url p-name ]">{{ title }}</a>
+				</p>
+			</div>
+
+			{%- if body -%}
+				<div class="[ feed-item-card-body ]">
+					{{ body | safe }}
+				</div>
+			{%- endif -%}
+
+			<div class="[ feed-item-card-footer ]">
+				{%- if date and label -%}
+					{%- include "date.njk" -%}
 				{%- endif -%}
-				<a href="{{ url }}" class="[ u-url p-name ]">{{ title }}</a>
-			</p>
+
+				{%- if tags and tags.length !== 0 -%}
+					<span class="[ flex flex-wrap align-center gap-1 ]">
+						<sl-tooltip content="Tags">
+							<sl-icon class="[ inline-icon ]" library="fa" name="fas-tag" label="Tags"></sl-icon>
+						</sl-tooltip>
+						{%- include "tags.njk" -%}
+					</span>
+				{%- endif -%}
+			</div>
 		</div>
-
-		{%- if body -%}
-			{{ body | safe }}
-		{%- endif -%}
-
-		<div slot="footer" class="[ flex flex-col align-start gap-2 ]">
-			{%- if date and label -%}
-				{%- include "date.njk" -%}
-			{%- endif -%}
-
-			{%- if tags and tags.length !== 0 -%}
-				<span class="[ flex flex-wrap align-center gap-1 ]">
-					<sl-tooltip content="Tags">
-						<sl-icon class="[ inline-icon ]" library="fa" name="fas-tag" label="Tags"></sl-icon>
-					</sl-tooltip>
-					{%- include "tags.njk" -%}
-				</span>
-			{%- endif -%}
-		</div>
-	</sl-card>
+	</article>
 </li>
