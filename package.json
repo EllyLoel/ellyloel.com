@@ -42,7 +42,8 @@
 		"netlify-plugin-cache": "^1.0.3",
 		"node-fetch": "^2.6.12",
 		"pagefind": "^0.12.0",
-		"three": "^0.154.0"
+		"three": "^0.154.0",
+		"whatwg-url": "5.0.0"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^2.0.1",

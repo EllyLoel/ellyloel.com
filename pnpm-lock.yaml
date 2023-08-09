@@ -46,6 +46,9 @@ dependencies:
   three:
     specifier: ^0.154.0
     version: 0.154.0
+  whatwg-url:
+    specifier: 5.0.0
+    version: 5.0.0
 
 devDependencies:
   '@11ty/eleventy':
