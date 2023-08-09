@@ -103,7 +103,7 @@
 		"rollup": "^3.27.2",
 		"rss-parser": "^3.13.0",
 		"stylelint": "^15.10.2",
-		"stylelint-config-standard": "^33.0.0",
+		"stylelint-config-standard": "^34.0.0",
 		"stylelint-order": "^6.0.3",
 		"webpack": "^5.88.2"
 	},
