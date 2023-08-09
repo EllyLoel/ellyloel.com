@@ -29,6 +29,7 @@
 		"lint:css": "stylelint \"src/input/css/**/*.css\" --fix",
 		"lint:js": "eslint src/input/js/ --fix"
 	},
+	"packageManager": "pnpm@8.6.12",
 	"dependencies": {
 		"@11ty/is-land": "^4.0.0",
 		"@google/model-viewer": "^3.2.1",
