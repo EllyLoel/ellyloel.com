@@ -36,11 +36,11 @@ permalink: "feed.atom"
 			<content xml:lang="{{ metadata.lang }}" type="html">
 				{%- filter escape -%}
 					<a href="https://brid.gy/publish/mastodon" class="p-bridgy-omit-link" hidden=""></a>
-					<p class="p-bridgy-mastodon-content" hidden="">{{ post.data.title }}
+					<p class="p-bridgy-mastodon-content" hidden="">{{ post.data.title }} 
 						{%- if post.data.bookmark.link -%}
-							<br>🔖 {{ post.data.bookmark.link }}
+							<br> 🔖 {{ post.data.bookmark.link }}
 						{%- endif -%}
-						<br>🔗 {{ absolutePostUrl }}</p>
+						<br> 🔗 {{ absolutePostUrl }}</p>
 				{%- endfilter -%}
 				{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | escape }}
 			</content>
