@@ -5,8 +5,8 @@ created: 2024-02-12
 modified: 2024-02-12
 ---
 
-This post was inspired by Lynn Fisher's post [Unordered, incomplete list of things I want from a job](https://lynnandtonic.com/thoughts/entries/unordered-incomplete-list-of-things-i-want-from-a-job/) and my lovely former colleague Joanne Osbourne-Taylor. The dot points a based on the workplace attributes cards that were made by my wonderful friend Julia Birks.
-I'm doing this because I need a place to direct others to and a way to remind myself what I want/need from a job.
+This post was inspired by Lynn Fisher's post [Unordered, incomplete list of things I want from a job](https://lynnandtonic.com/thoughts/entries/unordered-incomplete-list-of-things-i-want-from-a-job/) and my lovely former colleague Joanne Osbourne-Taylor. The dot points are based on the workplace attributes cards that were made by my wonderful friend Julia Birks.
+I'm doing this because I need a place to direct others and a way to remind myself what I want/need from a job.
 
 ## Must have
 
