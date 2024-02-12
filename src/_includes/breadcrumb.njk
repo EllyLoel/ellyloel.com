@@ -5,21 +5,22 @@
 <nav aria-label="Breadcrumb">
 	<ol>
 		<li>
-			<a href="/">
-				<sl-icon slot="prefix" library="fa" name="fas-house"></sl-icon>
-				Home
+			<a href="/" class="[ text-decoration-none move-link-styling-to-child ]">
+				{%- inlineIcon "local:house" -%}
+				<span>Home</span>
 			</a>
+			{%- inlineIcon "local:caret-right" -%}
 		</li>
 		{%- for entry in navPages -%}
 			{%- if entry.url !== "/me/" and entry.url !== "/writing/" -%}
 				<li>
 					<a href="{{ entry.url | url }}"{% if entry.url === page.url %} data-state="active" aria-current="page"{% endif %}>
-						{{ entry.title }}
+						{{- entry.title -}}
 					</a>
+					{%- if not loop.last -%}
+						{%- inlineIcon "local:caret-right" -%}
+					{%- endif -%}
 				</li>
-				{%- if not loop.last -%}
-					<sl-icon library="fa" name="fas-caret-right"></sl-icon>
-				{%- endif -%}
 			{%- endif -%}
 		{%- endfor -%}
 	</ol>
