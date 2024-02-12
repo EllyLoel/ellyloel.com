@@ -1,15 +1,16 @@
-sl-breadcrumb {
-	&::part(base) {
-		display: inline-flex;
-	}
+nav[aria-label="Breadcrumb"] ol {
+	display: inline-flex;
+	gap: var(--size-2);
+	list-style: none;
+	padding: 0;
 
-	& sl-breadcrumb-item {
-		&::part(base) {
-			white-space: revert;
-		}
+	& li {
+		padding: 0;
+		white-space: revert;
 
-		&::part(label) {
+		& a {
 			color: var(--link);
+			margin: 0;
 			outline-offset: 0;
 			transition-duration: 145ms;
 			transition-property: color;
@@ -27,18 +28,19 @@ sl-breadcrumb {
 			@media (prefers-reduced-motion: no-preference) {
 				transition-property: color, outline-offset;
 			}
+
+			/* stylelint-disable-next-line selector-not-notation */
+			&:not([data-state="active"]):not(:hover, :focus-visible) {
+				text-decoration: underline;
+			}
+	
+			&[data-state="active"] {
+				font-weight: var(--font-weight-bold, 622);
+			}
 		}
 
-		&:not([data-state="active"])::part(label):not(:hover, :focus-visible) {
-			text-decoration: underline;
-		}
 
-		&[data-state="active"]::part(label) {
-			font-weight: var(--font-weight-bold, 622);
-		}
-
-		&::part(prefix),
-		&::part(separator) {
+		& sl-icon {
 			color: var(--accent-text);
 		}
 	}

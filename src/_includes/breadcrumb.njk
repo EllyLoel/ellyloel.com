@@ -2,17 +2,25 @@
 	allowMissing: true,
 	includeSelf: true
 }) -%}
-<sl-breadcrumb label="Breadcrumb">
-	<sl-icon slot="separator" library="fa" name="fas-caret-right"></sl-icon>
-	<sl-breadcrumb-item href="/">
-		<sl-icon slot="prefix" library="fa" name="fas-house"></sl-icon>
-		Home
-	</sl-breadcrumb-item>
-	{%- for entry in navPages -%}
-		{%- if entry.url !== "/me/" and entry.url !== "/writing/" -%}
-			<sl-breadcrumb-item href="{{ entry.url | url }}"{% if entry.url === page.url %} data-state="active" aria-current="page"{% endif %}>
-				{{ entry.title }}
-			</sl-breadcrumb-item>
-		{%- endif -%}
-	{%- endfor -%}
-</sl-breadcrumb>
+<nav aria-label="Breadcrumb">
+	<ol>
+		<li>
+			<a href="/">
+				<sl-icon slot="prefix" library="fa" name="fas-house"></sl-icon>
+				Home
+			</a>
+		</li>
+		{%- for entry in navPages -%}
+			{%- if entry.url !== "/me/" and entry.url !== "/writing/" -%}
+				<li>
+					<a href="{{ entry.url | url }}"{% if entry.url === page.url %} data-state="active" aria-current="page"{% endif %}>
+						{{ entry.title }}
+					</a>
+				</li>
+				{%- if not loop.last -%}
+					<sl-icon library="fa" name="fas-caret-right"></sl-icon>
+				{%- endif -%}
+			{%- endif -%}
+		{%- endfor -%}
+	</ol>
+</nav>
