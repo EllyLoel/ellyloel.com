@@ -17,7 +17,7 @@ import { registerIconLibrary } from "@shoelace-style/shoelace/dist/utilities/ico
 import { setBasePath } from "@shoelace-style/shoelace/dist/utilities/base-path.js";
 
 setBasePath(
-	"https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.78/dist/"
+	"https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.6.0/dist/"
 );
 
 registerIconLibrary("fa", {
