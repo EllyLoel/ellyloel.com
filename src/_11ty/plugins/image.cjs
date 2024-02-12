@@ -19,7 +19,16 @@ module.exports = (eleventyConfig) => {
 				throw new Error(`Missing \`alt\` on image from: ${src}`);
 			}
 
-			try {
+			const isLocal = src.includes("./src/assets/img/");
+			const imageExists = async () => {
+				try {
+					return await fetch(src, { method: "HEAD" }).then((res) => res.ok);
+				} catch {
+					return false;
+				}
+			};
+
+			const generateImage = async () => {
 				let formats = ["avif", "webp", "auto"];
 
 				let metadata = await eleventyImage(src, {
@@ -33,7 +42,7 @@ module.exports = (eleventyConfig) => {
 
 				let imageAttributes = {
 					alt,
-					class: "[ image ]" + classes,
+					class: `[ image ] ${classes}`,
 					decoding: "async",
 					loading: "lazy",
 					sizes,
@@ -54,6 +63,18 @@ module.exports = (eleventyConfig) => {
 				return eleventyImage.generateHTML(metadata, imageAttributes, {
 					whiteSpace: "inline",
 				});
+			};
+
+			const generatePlaceholder = () => {
+				return `<div class="flex--centered image__placeholder ${classes}">Placeholder</div>`;
+			};
+
+			try {
+				return isLocal
+					? await generateImage()
+					: await imageExists().then(async (exists) =>
+							exists ? await generateImage() : generatePlaceholder()
+					  );
 			} catch (e) {
 				console.log(e);
 				return "";
