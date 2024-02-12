@@ -674,3 +674,7 @@ menu {
 [hidden] {
 	display: none !important;
 }
+
+sl-icon:empty {
+	display: none !important;
+}
