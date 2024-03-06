@@ -7,26 +7,33 @@ permalink: "bookmarks.atom"
 	<subtitle>{{ metadata.description }}</subtitle>
 	<link href="{{ '/bookmarks.atom' | absoluteUrl(metadata.url) }}" rel="self"/>
 	<link href="{{ metadata.url }}"/>
-	<updated>{{ bookmarks.newestItemDate | dateObj | dateToRfc3339 }}</updated>
+	<updated>{{ collections.BookmarksSortedByDate | getLatestCollectionItemDate | dateToRfc3339 }}</updated>
 	<id>{{ metadata.url }}/</id>
 	<author>
 		<name>{{ metadata.author.name }}</name>
 		<email>{{ metadata.author.email }}</email>
 	</author>
-	{%- for bookmark in bookmarks.items %}
+	{%- for post in collections.BookmarksSortedByDate %}
+		{%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
 		<entry>
-			<title>{{ bookmark.title }}</title>
-			<link href="{{ bookmark.link }}"/>
-			<published>{{ bookmark.created | dateObj | dateToRfc3339 }}</published>
-			<updated>
-				{%- if bookmark.modified -%}
-				{{ bookmark.modified | dateObj | dateToRfc3339 }}
+			<title>{{ post.data.title }}</title>
+			<link href="{{ absolutePostUrl }}"/>
+			<published>
+				{%- if post.data.created -%}
+					{{ post.data.created | dateObj | dateToRfc3339 }}
 				{%- else -%}
-				{{ bookmark.created | dateObj | dateToRfc3339 }}
+					{{ post.data.date | dateObj | dateToRfc3339 }}
+				{%- endif -%}
+			</published>
+			<updated>
+				{%- if post.data.modified -%}
+					{{ post.data.modified | dateObj | dateToRfc3339 }}
+				{%- else -%}
+					{{ post.data.date | dateObj | dateToRfc3339 }}
 				{%- endif -%}
 			</updated>
-			<id>{{ bookmark.link }}</id>
-			<content xml:lang="{{ metadata.lang }}" type="html">{{ bookmark.excerpt | md }}</content>
+			<id>{{ absolutePostUrl }}</id>
+			<content xml:lang="{{ metadata.lang }}" type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
 		</entry>
 	{%- endfor %}
 </feed>

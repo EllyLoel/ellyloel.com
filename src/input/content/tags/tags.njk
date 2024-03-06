@@ -6,19 +6,26 @@ pagination:
   alias: tag
   filter:
     - all
+    - allsortedbydate
     - allSortedByDate
     - blog
+    - blogsortedbydate
     - Blog
     - BlogSortedByDate
     - bookmarks
+    - bookmarkssortedbydate
     - Bookmarks
+    - BookmarksSortedByDate
     - garden
+    - gardensortedbydate
     - Garden
     - GardenSortedByDate
     - projects
+    - projectssortedbydate
     - Projects
     - ProjectsSortedByDate
     - til
+    - tilsortedbydate
     - TIL
     - TILSortedByDate
 permalink: "{{ tag | slugify }}/"
@@ -26,7 +33,7 @@ eleventyComputed:
   title: "{{ tag }}"
 ---
 
-<ul>
+<ul id="feed" class="[ feed ]">
 	{% set taglist = collections[tag] %}
 	{% for post in taglist | reverse %}
 		{%- if post.data.stage -%}

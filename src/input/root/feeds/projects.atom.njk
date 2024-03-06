@@ -20,16 +20,16 @@ permalink: "projects.atom"
 			<link href="{{ absolutePostUrl }}"/>
 			<published>
 				{%- if post.data.created -%}
-				{{ post.data.created | dateObj | dateToRfc3339 }}
+					{{ post.data.created | dateObj | dateToRfc3339 }}
 				{%- else -%}
-				{{ post.data.date | dateObj | dateToRfc3339 }}
+					{{ post.data.date | dateObj | dateToRfc3339 }}
 				{%- endif -%}
 			</published>
 			<updated>
 				{%- if post.data.modified -%}
-				{{ post.data.modified | dateObj | dateToRfc3339 }}
+					{{ post.data.modified | dateObj | dateToRfc3339 }}
 				{%- else -%}
-				{{ post.data.date | dateObj | dateToRfc3339 }}
+					{{ post.data.date | dateObj | dateToRfc3339 }}
 				{%- endif -%}
 			</updated>
 			<id>{{ absolutePostUrl }}</id>

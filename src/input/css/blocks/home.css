@@ -28,6 +28,12 @@
 				color: var(--link);
 				cursor: pointer;
 				font-weight: var(--font-weight-body-bold);
+				text-decoration: underline;
+				text-decoration-thickness: 0.125rem;
+
+				&:hover {
+					text-decoration: none;
+				}
 			}
 
 			&[open] summary {
