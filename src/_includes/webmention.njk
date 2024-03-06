@@ -11,7 +11,7 @@
 		{% endif %}
 		<small>
 			<a href="{{ mention.url }}">
-				<time class="[ dt-published ]" datetime="{{ mention.published | dateToISO }}">{{ mention.published | dateToRelative }}</time>
+				<time class="[ dt-published ]" datetime="{{ mention.published | dateToISO }}">{{ mention.published | dateToLocaleDateFull }}</time>
 			</a>
 		</small>
 	</div>

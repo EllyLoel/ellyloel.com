@@ -13,11 +13,13 @@
 }
 
 .logo-link {
-	font-size: var(--font-size-7);
+	transform: translateY(0.05em); /* optical alignment */
 
-	&::part(base) {
-		box-sizing: content-box;
-		height: calc(1em / 2.8182);
-		transform: translateY(0.025em); /* optical alignment */
+	& .icon {
+		aspect-ratio: 2.8182;
+		display: block;
+		height: 100%;
+		transform: translateY(0.05em); /* optical alignment */
+		width: auto;
 	}
 }

@@ -38,9 +38,14 @@
 		& .social-links {
 			block-size: fit-content;
 			display: flex;
+			font-size: var(--font-size-4);
 			gap: var(--size-3);
 			grid-area: socials;
-			transform: translateX(-8px); /* optical alignment */
+
+			& a {
+				display: block;
+				height: 1em;
+			}
 		}
 
 		& .gh-edit {

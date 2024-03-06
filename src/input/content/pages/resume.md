@@ -13,12 +13,12 @@ eleventyNavigation:
 
 ## Contact details
 
-<sl-icon class="[ inline-icon ]" library="fa" name="fas-envelope"></sl-icon> [hello@ellyloel.com](mailto:hello@ellyloel.com)
-<sl-icon class="[ inline-icon ]" library="fa" name="fas-phone"></sl-icon> [0435 900 094](tel:+61435900094)
-<sl-icon class="[ inline-icon ]" library="fa" name="fas-house"></sl-icon> Bunurong and Wurundjeri Country (Melbourne, Victoria)
-<sl-icon class="[ inline-icon ]" library="fa" name="fas-desktop"></sl-icon> [ellyloel.com](https://www.ellyloel.com)
-<sl-icon class="[ inline-icon ]" library="fa" name="fab-linkedin"></sl-icon> [LinkedIn](http://elly.to/linkedin)
-<sl-icon class="[ inline-icon ]" library="fa" name="fab-github"></sl-icon> [GitHub](http://elly.to/github)
+{%- inlineIcon "fas:envelope" -%} [hello@ellyloel.com](mailto:hello@ellyloel.com)
+{%- inlineIcon "fas:phone" -%} [0435 900 094](tel:+61435900094)
+{%- inlineIcon "fas:house" -%} Bunurong and Wurundjeri Country (Melbourne, Victoria)
+{%- inlineIcon "fas:desktop" -%} [ellyloel.com](https://www.ellyloel.com)
+{%- inlineIcon "fab:linkedin" -%} [LinkedIn](http://elly.to/linkedin)
+{%- inlineIcon "fab:github" -%} [GitHub](http://elly.to/github)
 
 ## Summary
 
