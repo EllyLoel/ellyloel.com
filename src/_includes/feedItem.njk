@@ -22,18 +22,16 @@
 			{%- endif -%}
 
 			<div class="[ feed-item-card-footer ]">
-				{%- if date and label -%}
-					{%- include "date.njk" -%}
-				{%- endif -%}
+				{% if date and label %}
+					{% include "date.njk" %}
+				{% endif %}
 
-				{%- if tags and tags.length !== 0 -%}
+				{% if tags and tags.length !== 0 %}
 					<span class="[ flex flex-wrap align-center gap-1 ]">
-						<sl-tooltip content="Tags">
-							<sl-icon class="[ inline-icon ]" library="fa" name="fas-tag" label="Tags"></sl-icon>
-						</sl-tooltip>
-						{%- include "tags.njk" -%}
+						{% labelledInlineIcon "fas:tag", { "aria-label": "Tags" } %}
+						{% include "tags.njk" %}
 					</span>
-				{%- endif -%}
+				{% endif %}
 			</div>
 		</div>
 

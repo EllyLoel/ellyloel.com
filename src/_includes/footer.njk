@@ -28,13 +28,13 @@
 				<ul class="[ flow ]">
 					{%- for entry in collections.all | eleventyNavigation -%}
 						{%- if entry.url === "/me/" or entry.url === "/writing/" -%}
-									{%- for child in entry.children %}
-										<li>
-											<a href="{{ child.url | url }}"{% if child.url === page.url %} aria-current="page"{% endif %}>
-												{{ child.title }}
-											</a>
-										</li>
-									{%- endfor -%}
+							{%- for child in entry.children %}
+								<li>
+									<a href="{{ child.url | url }}"{% if child.url === page.url %} aria-current="page"{% endif %}>
+										{{ child.title }}
+									</a>
+								</li>
+							{%- endfor -%}
 						{%- else -%}
 							<li>
 								<a href="{{ entry.url | url }}"{% if entry.url === page.url %} aria-current="page"{% endif %}>
@@ -48,34 +48,29 @@
 
 			<ul role="list" class="[ social-links ][ flex-wrap ]">
 				<li>
-					<sl-tooltip content="Elly">
-						<sl-icon-button class="[ logo-link ]" src="/assets/svg/elly.svg" label="to homepage" href="/"{% if page.url === "/" %} aria-current="page"{% endif %}></sl-icon-button>
-					</sl-tooltip>
+					<a href="/"{% if page.url === "/" %} aria-current="page"{% endif %} class="[ logo-link ]">
+						{%- icon "local:elly" -%}
+					</a>
 				</li>
 				<li>
-					<sl-tooltip content="Mastodon">
-						<sl-icon-button library="fa" name="fab-mastodon" label="Mastodon" href="https://front-end.social/@elly"></sl-icon-button>
-					</sl-tooltip>
+					<a href="https://front-end.social/@elly">
+						{%- labelledIcon "fab:mastodon", { "aria-label": "Mastodon" } -%}
+					</a>
 				</li>
 				<li>
-					<sl-tooltip content="Twitter">
-						<sl-icon-button library="fa" name="fab-twitter" label="Twitter" href="https://twitter.ellyloel.com"></sl-icon-button>
-					</sl-tooltip>
+					<a href="https://elly.to/linkedin">
+						{%- labelledIcon "fab:linkedin", { "aria-label": "LinkedIn" } -%}
+					</a>
 				</li>
 				<li>
-					<sl-tooltip content="Linkedin">
-						<sl-icon-button library="fa" name="fab-linkedin" label="Linkedin" href="https://elly.to/linkedin"></sl-icon-button>
-					</sl-tooltip>
+					<a href="https://elly.to/github">
+						{%- labelledIcon "fab:github", { "aria-label": "GitHub" } -%}
+					</a>
 				</li>
 				<li>
-					<sl-tooltip content="Codepen">
-						<sl-icon-button library="fa" name="fab-codepen" label="Codepen" href="https://elly.to/codepen"></sl-icon-button>
-					</sl-tooltip>
-				</li>
-				<li>
-					<sl-tooltip content="Dribbble">
-						<sl-icon-button library="fa" name="fab-dribbble" label="Dribbble" href="https://elly.to/dribbble"></sl-icon-button>
-					</sl-tooltip>
+					<a href="https://elly.to/codepen">
+						{%- labelledIcon "fab:codepen", { "aria-label": "Codepen" } -%}
+					</a>
 				</li>
 			</ul>
 

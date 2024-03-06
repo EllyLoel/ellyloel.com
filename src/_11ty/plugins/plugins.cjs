@@ -36,11 +36,40 @@ module.exports = (eleventyConfig) => {
 	});
 	eleventyConfig.addPlugin(pluginIcons, {
 		icon: {
+			insertAttributes: {
+				role: "img",
+			},
+			shortcode: "labelledIcon",
+		},
+		sources: {
+			fab: "node_modules/@fortawesome/fontawesome-free/svgs/brands",
+			far: "node_modules/@fortawesome/fontawesome-free/svgs/regular",
+			fas: "node_modules/@fortawesome/fontawesome-free/svgs/solid",
+			local: "src/assets/svg",
+		},
+	});
+	eleventyConfig.addPlugin(pluginIcons, {
+		icon: {
 			class: (name, source) => `inline-icon icon-${name}`,
 			insertAttributes: {
 				"aria-hidden": "true",
 			},
 			shortcode: "inlineIcon",
+		},
+		sources: {
+			fab: "node_modules/@fortawesome/fontawesome-free/svgs/brands",
+			far: "node_modules/@fortawesome/fontawesome-free/svgs/regular",
+			fas: "node_modules/@fortawesome/fontawesome-free/svgs/solid",
+			local: "src/assets/svg",
+		},
+	});
+	eleventyConfig.addPlugin(pluginIcons, {
+		icon: {
+			class: (name, source) => `inline-icon icon-${name}`,
+			insertAttributes: {
+				role: "img",
+			},
+			shortcode: "labelledInlineIcon",
 		},
 		sources: {
 			fab: "node_modules/@fortawesome/fontawesome-free/svgs/brands",

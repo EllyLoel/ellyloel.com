@@ -1,8 +1,5 @@
 <span>
-	<sl-tooltip content="{{ label }} {{ date | dateToLocaleDateFull }}">
-		<span class="[ flex align-center gap-1ch ]">
-			<sl-icon class="[ inline-icon ]" library="fa" name="far-calendar{%- if label === "Last modified" -%}-plus{%- endif -%}" label="{{ label }}"></sl-icon>
-			<time class="[ {% if label === "Created" %}dt-published{% else %}dt-updated{% endif %} ]" datetime="{{ date | dateToISO }}">{{ date | dateToRelative }}</time>
-		</span>
-	</sl-tooltip>
+	{%- if label === "Created" %}Created on {% endif -%}
+	{%- if label === "Last modified" %}Last modified on {% endif -%}
+	<time class="[ {% if label === "Created" %}dt-published{% else %}dt-updated{% endif %} ]" datetime="{{ date | dateToISO }}">{{ date | dateToLocaleDateFull }}</time>
 </span>

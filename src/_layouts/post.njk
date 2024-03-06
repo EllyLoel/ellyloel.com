@@ -26,18 +26,25 @@ layout: base-without-header.njk
 		{%- endif -%}
 		{%- if stage -%}
 			<span>
-				<sl-tooltip content="Stage">
-					<sl-icon class="[ inline-icon ]" library="fa" name="fas-{%- if stage === "seedling" -%}seedling{%- elif stage === "budding" -%}spa{%- elif stage === "evergreen" -%}tree{%- elif stage === "draft" -%}file-pen{%- elif stage === "complete" -%}circle-check{%- endif -%}" label="Stage"></sl-icon>
-				</sl-tooltip>
+				{%- set stageIcon -%}fas:
+					{%- if stage === "seedling" -%}
+						seedling
+					{%- elif stage === "budding" -%}
+						spa
+					{%- elif stage === "evergreen" -%}
+						tree
+					{%- elif stage === "draft" -%}
+						file-pen
+					{%- elif stage === "complete" -%}
+						circle-check{%- endif -%}{%- endset -%}
+				{%- labelledInlineIcon stageIcon, { "aria-label": "Stage" } -%}
 				<span class="[ p-category ]">{{ stage | capitalize }}</span>
 			</span>
 			<span aria-hidden="true">•</span>
 		{%- endif -%}
 		{%- if tags -%}
 			<span class="[ flex align-center gap-1 ]">
-				<sl-tooltip content="Tags">
-					<sl-icon class="[ inline-icon ]" library="fa" name="fas-tag" label="Tags"></sl-icon>
-				</sl-tooltip>
+				{%- labelledInlineIcon "fas:tag", { "aria-label": "Tags" } -%}
 				{%- include "tags.njk" -%}
 			</span>
 		{%- endif -%}
@@ -48,7 +55,7 @@ layout: base-without-header.njk
 	<aside class="[ toc-container ][ flow content-width ]" data-pagefind-ignore>
 		<details>
 			<summary class="[ flex ]">
-				<sl-icon class="[ inline-icon ]" library="fa" name="fas-play" label=""></sl-icon>
+				{%- inlineIcon "fas:play" -%}
 				<h2>Table of contents</h2>
 			</summary>
 			{{ content | toc | safe }}
@@ -88,13 +95,13 @@ This post hasn't been updated a long time, so it might be kinda crusty.
 <footer class="[ content-footer ][ flow flow-space-setter ]" style="--flow-space-setter: var(--size-8);" data-pagefind-ignore>
 	<div class="[ share ]">
 		<p>
-			<sl-icon class="[ inline-icon ]" library="fa" name="fas-share-from-square" label=""></sl-icon> Share on <a href='https://toot.kytta.dev/?text="{{ title }}" by @ellyloel@front-end.social {{ metadata.url }}{{ page.url }}' class="[ text-decoration-none move-link-styling-to-child ]">
-				<sl-icon class="[ inline-icon ]" library="fa" name="fab-mastodon" label=""></sl-icon>
-				<span>Mastodon</span></a>, <a href='https://twitter.com/intent/tweet?url={{ metadata.url }}{{ page.url }}&text="{{ title }}" by @ellyloel' class="[ text-decoration-none move-link-styling-to-child ]">
-				<sl-icon class="[ inline-icon ]" library="fa" name="fab-twitter" label=""></sl-icon>
-				<span>Twitter</span></a> or <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ metadata.url }}{{ page.url }}" class="[ text-decoration-none move-link-styling-to-child ]">
-				<sl-icon class="[ inline-icon ]" library="fa" name="fab-linkedin" label=""></sl-icon>
-				<span>LinkedIn</span></a>.
+			{%- inlineIcon "fas:share-from-square" -%} Share on <a href='https://toot.kytta.dev/?text="{{ title }}" by @ellyloel@front-end.social {{ metadata.url }}{{ page.url }}' class="[ text-decoration-none move-link-styling-to-child ]">
+				{%- inlineIcon "fab:mastodon" -%}
+				<span>Mastodon</span></a>, <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ metadata.url }}{{ page.url }}" class="[ text-decoration-none move-link-styling-to-child ]">
+				{%- inlineIcon "fab:linkedin" -%}
+				<span>LinkedIn</span></a> or <a href='https://twitter.com/intent/tweet?url={{ metadata.url }}{{ page.url }}&text="{{ title }}" by @ellyloel' class="[ text-decoration-none move-link-styling-to-child ]">
+				{%- inlineIcon "fab:twitter" -%}
+				<span>Twitter</span></a>.
 		</p>
 	</div>
 	{%- set previousPost = collections.allSortedByDate | getPreviousCollectionItem -%}
@@ -104,7 +111,7 @@ This post hasn't been updated a long time, so it might be kinda crusty.
 			{%- if previousPost -%}
 				<sl-tooltip content="{{ previousPost.data.title }}">
 					<a href="{{ previousPost.url }}" class="[ text-decoration-none move-link-styling-to-child flex align-center gap-1 ]">
-						<sl-icon class="[ inline-icon ]" library="fa" name="fas-angle-left" label=""></sl-icon>
+						{%- inlineIcon "fas:angle-left" -%}
 						<span>Prev Post</span>
 					</a>
 				</sl-tooltip>
@@ -113,7 +120,7 @@ This post hasn't been updated a long time, so it might be kinda crusty.
 				<sl-tooltip content="{{ nextPost.data.title }}">
 					<a href="{{ nextPost.url }}" class="[ text-decoration-none move-link-styling-to-child flex align-center gap-1 ]">
 						<span>Next Post</span>
-						<sl-icon class="[ inline-icon ]" library="fa" name="fas-angle-right" label=""></sl-icon>
+						{%- inlineIcon "fas:angle-right" -%}
 					</a>
 				</sl-tooltip>
 			{%- endif -%}
