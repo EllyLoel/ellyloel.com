@@ -66,7 +66,7 @@ module.exports = (eleventyConfig) => {
 			};
 
 			const generatePlaceholder = () => {
-				return `<div class="flex--centered image__placeholder ${classes}">Placeholder</div>`;
+				return `<div class="image-placeholder ${classes}"></div>`;
 			};
 
 			try {

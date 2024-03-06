@@ -13,16 +13,17 @@ permalink: "bookmarks.json"
 		"url": "{{ metadata.author.url }}"
 	},
 	"items": [
-		{%- for bookmark in bookmarks.items %}
+		{%- for post in collections.BookmarksSortedByDate %}
+		{%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
 		{
-			"id": "{{ bookmark.link }}",
-			"url": "{{ bookmark.link }}",
-			"title": "{{ bookmark.title }}",
-			"date_published": "{{ bookmark.created | dateObj | dateToRfc3339 }}",
-			{%- if bookmark.modified -%}
-				"date_modified": "{{ bookmark.modified | dateObj | dateToRfc3339 }}",
+			"id": "{{ absolutePostUrl }}",
+			"url": "{{ absolutePostUrl }}",
+			"title": "{{ post.data.title }}",
+			"content_html": {% if post.templateContent %}{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | dump | safe }}{% else %}""{% endif %},
+			{%- if post.data.modified -%}
+			"date_modified": "{{ post.data.modified | dateObj | dateToRfc3339 }}",
 			{%- endif -%}
-			"content_html": {% if bookmark.excerpt %}"{{ bookmark.excerpt | md }}"{% else %}""{% endif %}
+			"date_published": "{% if post.data.created %}{{ post.data.created | dateObj | dateToRfc3339 }}{% else %}{{ post.data.date | dateObj | dateToRfc3339 }}{% endif %}"
 		}{%- if not loop.last %},{% endif %}
 		{%- endfor %}
 	]

@@ -55,6 +55,7 @@ main {
 	font-variation-settings: "SOFT" var(--font-softness),
 		"WONK" var(--font-wonkiness);
 	font-weight: var(--font-weight-7);
+	text-wrap: balance;
 }
 
 :is(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) {
@@ -115,6 +116,11 @@ h3,
 
 :is(p, ul, ol, dl, h6) {
 	font-size: var(--font-size-2);
+}
+
+:is(p, ul, ol, dl) {
+	text-wrap: balance;
+	text-wrap: pretty;
 }
 
 strong:not(
@@ -380,6 +386,7 @@ blockquote {
 	gap: var(--size-3);
 	padding-block: var(--size-3);
 	padding-inline: var(--size-5);
+	text-wrap: balance;
 }
 
 /* Details */

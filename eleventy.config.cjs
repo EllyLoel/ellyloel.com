@@ -14,7 +14,7 @@ module.exports = (eleventyConfig) => {
 			.getAll()
 			.sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
 	);
-	["Blog", "Garden", "Projects", "TIL"].forEach((collection) => {
+	["Blog", "Bookmarks", "Garden", "Projects", "TIL"].forEach((collection) => {
 		eleventyConfig.addCollection(
 			`${collection}SortedByDate`,
 			(collectionApi) => {
