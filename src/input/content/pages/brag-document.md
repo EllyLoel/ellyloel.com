@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: base
 title: Brag document
 eleventyNavigation:
   key: Brag document

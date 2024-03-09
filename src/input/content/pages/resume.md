@@ -9,83 +9,57 @@ eleventyNavigation:
 
 ## Elly Loel
 
-<span class="[ badge ]">Design engineer</span> <span class="[ badge ]">Technical designer</span> <span class="[ badge ]">Creative technologist</span>
+<span class="badge">Front-end Developer/Designer</span> <span class="badge">Design System Developer</span> <span class="badge">Accessibility Specialist</span>
 
 ## Contact details
 
-{%- inlineIcon "fas:envelope" -%} [hello@ellyloel.com](mailto:hello@ellyloel.com)
-{%- inlineIcon "fas:phone" -%} [0435 900 094](tel:+61435900094)
-{%- inlineIcon "fas:house" -%} Bunurong and Wurundjeri Country (Melbourne, Victoria)
-{%- inlineIcon "fas:desktop" -%} [ellyloel.com](https://www.ellyloel.com)
-{%- inlineIcon "fab:linkedin" -%} [LinkedIn](http://elly.to/linkedin)
-{%- inlineIcon "fab:github" -%} [GitHub](http://elly.to/github)
+{% include "contact-details.njk" %}
 
 ## Summary
 
-Elly has recently started her journey in the tech industry as a junior developer. Self-motivated learner with strong organisation, time management and communication skills. Able to work independently and collaboratively in a team with a meticulous attention to detail.
+Passionate Front-end Web Developer/Designer, Accessibility Specialist, and Design System Enthusiast based in Naarm (Melbourne), Australia, dedicated to creating inclusive and accessible digital experiences. I bring a diverse skill set in web development, specializing in Semantic HTML, Advanced CSS, JavaScript, and more.
 
-## Key skills
+### Identity & Inclusivity 🌈
 
-<ul class="[ key-skills ][ flex flex-wrap gap-1 ]">
-	<li><span class="[ badge ]">Semantic HTML</span></li>
-	<li><span class="[ badge ]">Advanced CSS</span></li>
-	<li><span class="[ badge ]">JavaScript</span></li>
-	<li><span class="[ badge ]">PHP</span></li>
-	<li><span class="[ badge ]">Git</span></li>
-	<li><span class="[ badge ]">A11y</span></li>
-	<li><span class="[ badge ]">Sass</span></li>
-	<li><span class="[ badge ]">Tailwind</span></li>
-	<li><span class="[ badge ]">React</span></li>
-	<li><span class="[ badge ]">Gatsby</span></li>
-	<li><span class="[ badge ]">Next.js</span></li>
-	<li><span class="[ badge ]">WordPress</span></li>
-	<li><span class="[ badge ]">Docker</span></li>
-	<li><span class="[ badge ]">GitHub</span></li>
-	<li><span class="[ badge ]">Bitbucket</span></li>
-</ul>
+I'm an incredibly queer trans woman, and my pronouns are she/her. As a disabled AuDHD (autistic and ADHD) neurodivergent individual, I am deeply committed to promoting inclusivity in both design and development. Embracing my unique perspective, I advocate for diversity and accessibility in all aspects of my work.
 
-## Software
+### Key Highlights 🌟
 
-<ul class="[ key-skills ][ flex flex-wrap gap-1 ]">
-	<li><span class="[ badge ]">Notion</span></li>
-	<li><span class="[ badge ]">Atlassian Suite</span></li>
-	<li><span class="[ badge ]">Figma</span></li>
-	<li><span class="[ badge ]">Adobe Creative Suite</span></li>
-	<li><span class="[ badge ]">Google Workspace</span></li>
-	<li><span class="[ badge ]">Microsoft 365 Suite</span></li>
-</ul>
+#### Front-end Expertise 🎨
 
-## Work history
+Proficient in building diverse websites using semantic HTML, CSS, and JavaScript, with experience in React, Gatsby, Next.JS, WordPress, and much more.
 
-### Developer at Portable <span class="[ badge ][ neutral pill ]">Sep 2021-Present</span>
+#### Accessibility Champion ♿
 
-Developed web apps for client projects using a range of web technologies as well as gave talks on neurodiversity and landing your first tech job.
+Led accessibility audits using WCAG-EM methodology, resulting in improved website accessibility. Advocated for inclusivity, educating teams on assistive technologies and fostering a culture of accessibility.
 
-### PC Sales, Support and Service Technician at Aftershock PC Australia <span class="[ badge ][ neutral pill ]">Dec 2020-Jun 2021</span>
+#### Design System Advocate 📚
 
-Created and finalised sales leads for hundreds of high end custom built desktop PC's, generating thousands of dollars of profit.
+Reestablished and expanded the Portable design system, enhancing features and promoting its use across diverse tech stacks.
 
-### Video Editor and Motion Designer at Idleglance (_YouTube Channel_) <span class="[ badge ][ neutral pill ]">2018-2019</span>
+#### Knowledge Sharing 🧠
 
-Delivered music video edits with audio syncing, motion graphics, titles, audio and special effects.
+Passionate about continuous learning, I actively share valuable insights and resources on front-end development, contributing to the growth and efficiency of the team.
 
-### Social Media Manager and Content Curator at Coaching Psychology Online <span class="[ badge ][ neutral pill ]">2017-2018</span>
+## Skills
 
-After consultation with the client I created and edited visual communications tobe posted on platforms, such as Facebook and LinkedIn.
+{% include "skills.njk" %}
+
+## Experience
+
+- **Portable** – Developer<br><span class="[ badge ][ neutral pill ]">Sep 2021-Present</span>
+- **Aftershock PC Australia** – PC Sales, Support and Service Technician<br><span class="[ badge ][ neutral pill ]">Dec 2020-Jun 2021</span>
+- **Idleglance** – Video Editor and Motion Designer (_YouTube Channel_)<br><span class="[ badge ][ neutral pill ]">2018-2019</span>
+- **Coaching Psychology Online** – Social Media Manager and Content Curator<br><span class="[ badge ][ neutral pill ]">2017-2018</span>
 
 ## Education
 
-- The Frontend Developer Career Path at Scrimba <span class="[ badge ][ neutral pill ]">Jun 2021-Dec 2021</span>
-- Bachelor of Computer Science at Swinburne University of Technology (half completed) <span class="[ badge ][ neutral pill ]">Mar 2020-Sep 2021</span>
-- Victorian Certificate of Education at Rosebud Secondary College <span class="[ badge ][ neutral pill ]">2014-2019</span>
-
-## Certifications
-
-- Smart Interface Design Patterns from Vitaly Friedman
-- Practical Accessibility from Sara Soueidan
-- CSS for JS Devs from Josh W Comeau
-- The Frontend Developer Career Path from Scrimba
-- Certificate III in Information, Digital Media and Technology
+- **Sara Soueidan** – Practical Accessibility<br><span class="[ badge ][ neutral pill ]">Feb 2023-Dec 2023</span>
+- **Josh W Comeau** – CSS for JS Devs<br><span class="[ badge ][ neutral pill ]">Jan 2022-Jun 2022</span>
+- **Scrimba** – The Frontend Developer Career Path<br><span class="[ badge ][ neutral pill ]">Jun 2021-Dec 2021</span>
+- **Swinburne University of Technology** – Bachelor of Computer Science<br><span class="[ badge ][ neutral pill ]">Mar 2020-Sep 2021</span>
+- **Rosebud Secondary College** – Certificate III in Information, Digital Media and Technology<br><span class="[ badge ][ neutral pill ]">2018-2019</span>
+- **Rosebud Secondary College** – Victorian Certificate of Education<br><span class="[ badge ][ neutral pill ]">2014-2019</span>
 
 ## Interests
 
@@ -93,3 +67,4 @@ After consultation with the client I created and edited visual communications to
 - Inclusive design
 - Web standards
 - Design engineering
+- Design Systems
