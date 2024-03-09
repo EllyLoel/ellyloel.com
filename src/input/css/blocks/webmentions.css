@@ -16,7 +16,7 @@
 		padding-right: var(--size-1);
 
 		& > summary {
-			font-size: var(--font-size-fluid-1);
+			font-size: var(--font-size-4);
 		}
 
 		&[open] > summary {

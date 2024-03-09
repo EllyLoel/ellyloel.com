@@ -91,19 +91,19 @@ main {
 
 h1,
 .h1 {
-	font-size: var(--font-size-fluid-3);
+	font-size: var(--font-size-7);
 	max-inline-size: var(--size-header-1);
 }
 
 h2,
 .h2 {
-	font-size: var(--font-size-fluid-2);
+	font-size: var(--font-size-5);
 	max-inline-size: var(--size-header-2);
 }
 
 h3,
 .h3 {
-	font-size: var(--font-size-fluid-1);
+	font-size: var(--font-size-4);
 }
 
 :is(h3, .h3, h4, .h4, h5, .h5, h6, .h6, dt) {
@@ -114,7 +114,7 @@ h3,
 	font-size: var(--font-size-3);
 }
 
-:is(p, ul, ol, dl, h6) {
+:is(p, ul, ol, dl) {
 	font-size: var(--font-size-2);
 }
 

@@ -24,7 +24,7 @@
 		--flow-space: 1.5em;
 
 		& h2 {
-			font-size: var(--font-size-fluid-2);
+			font-size: var(--font-size-5);
 		}
 
 		& summary {
