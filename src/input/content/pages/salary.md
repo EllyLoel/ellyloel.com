@@ -2,10 +2,10 @@
 layout: base
 title: Salary history
 permalink: "salary/"
-eleventyNavigation:
-  key: Salary history
-  parent: Me
-  order: 5
+# eleventyNavigation:
+#   key: Salary history
+#   parent: Me
+#   order: 6
 ---
 
 This page was inspired by [Carolina Gilabert's salary page](https://carol.gg/salary/).
