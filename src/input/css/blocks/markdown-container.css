@@ -32,7 +32,7 @@
 			transition: box-shadow 0.3s var(--ease-1), opacity 0.5s var(--ease-2);
 
 			:is(&, &.share > p) {
-				font-size: var(--font-size-fluid-1);
+				font-size: var(--font-size-4);
 				max-inline-size: unset;
 			}
 
