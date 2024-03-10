@@ -26,7 +26,7 @@
 			align-items: center;
 			gap: var(--size-3);
 
-			& sl-icon {
+			& .inline-icon {
 				color: var(--accent-solid);
 				transition: transform 300ms var(--ease-out-4);
 			}
@@ -35,7 +35,7 @@
 				font-size: var(--font-size-4);
 			}
 
-			&:is(:hover, :focus-visible) sl-icon {
+			&:is(:hover, :focus-visible) .inline-icon {
 				color: var(--accent-solid-hover);
 			}
 
@@ -44,7 +44,7 @@
 			}
 		}
 
-		&[open] summary sl-icon {
+		&[open] summary .inline-icon {
 			transform: rotate(90deg);
 		}
 	}

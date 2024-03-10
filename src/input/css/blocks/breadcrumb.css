@@ -34,14 +34,13 @@ nav[aria-label="Breadcrumb"] ol {
 			&:not([data-state="active"]):not(:hover, :focus-visible) {
 				text-decoration: underline;
 			}
-	
+
 			&[data-state="active"] {
 				font-weight: var(--font-weight-bold, 622);
 			}
 		}
 
-
-		& sl-icon {
+		& .inline-icon {
 			color: var(--accent-text);
 		}
 	}

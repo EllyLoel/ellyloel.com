@@ -3,9 +3,10 @@
 	line-height: 1;
 
 	& .list {
+		column-gap: var(--size-3);
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--size-3);
+		row-gap: var(--size-2);
 	}
 
 	& a {

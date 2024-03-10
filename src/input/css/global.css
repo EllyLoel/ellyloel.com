@@ -212,7 +212,7 @@ var {
 		}
 	}
 
-	:is(span):has(+ &) sl-icon {
+	:is(span):has(+ &) .inline-icon {
 		color: var(--link);
 	}
 }
@@ -679,9 +679,5 @@ menu {
 
 /* If an element is [hidden] it needs to be max priority */
 [hidden] {
-	display: none !important;
-}
-
-sl-icon:empty {
 	display: none !important;
 }
