@@ -1,5 +1,6 @@
 nav[aria-label="Breadcrumb"] ol {
 	display: inline-flex;
+	flex-wrap: wrap;
 	gap: var(--size-2);
 	list-style: none;
 	padding: 0;
