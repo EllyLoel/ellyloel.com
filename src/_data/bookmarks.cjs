@@ -1,11 +1,19 @@
 const EleventyFetch = require("@11ty/eleventy-fetch");
+const fs = require("node:fs/promises");
+const path = require("node:path");
 require("dotenv").config();
 
 module.exports = async () => {
 	const publicCollectionId = "33237518";
 	const raindropApiUrl = `https://api.raindrop.io/rest/v1/raindrops/${publicCollectionId}`;
+	const backupFilePath = path.normalize(
+		`${__dirname}/../../bookmarks/backup.json`
+	);
 
 	try {
+		const backupData = JSON.parse(
+			await fs.readFile(backupFilePath, { encoding: "utf8" })
+		);
 		const data = await EleventyFetch(raindropApiUrl, {
 			directory: "bookmarks",
 			duration: "0s",
@@ -17,7 +25,25 @@ module.exports = async () => {
 			type: "json",
 		});
 
-		const items = data.items;
+		const backupItems = backupData.items.map((item) => {
+			if (item.tags) {
+				item.tags = item.tags.split(", ");
+			} else {
+				item.tags = [];
+			}
+			return item;
+		});
+		const newItems = data.items.map((item) => {
+			item.id = item._id;
+			delete item._id;
+			return item;
+		});
+		let items = newItems.concat(backupItems);
+
+		items = items.filter(
+			(itemA, index, self) =>
+				index === self.findIndex((itemB) => itemB.id === itemA.id)
+		);
 
 		let response = [];
 
@@ -28,12 +54,12 @@ module.exports = async () => {
 					excerpt: item.excerpt,
 					highlights: item.highlights,
 					image: item.cover,
-					link: item.link,
-					modified: item.lastUpdate,
+					link: item?.link || item?.url,
+					modified: item?.lastUpdate,
 					note: item.note,
 					tags: ["Bookmarks", ...item.tags],
 					title: item.title,
-					type: item.type,
+					type: item?.type || "",
 				});
 			});
 
