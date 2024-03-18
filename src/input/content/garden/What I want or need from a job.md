@@ -1,6 +1,8 @@
 ---
 title: What I want/need from a job
 stage: budding
+tags:
+  - Working
 created: 2024-02-12
 modified: 2024-02-12
 ---
