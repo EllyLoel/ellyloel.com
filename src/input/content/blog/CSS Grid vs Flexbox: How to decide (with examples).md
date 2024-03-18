@@ -4,6 +4,7 @@
 	permalink: "blog/css-grid-vs-flexbox/",
 	stage: "complete",
 	image: "./src/assets/img/Should-I-use-Flexbox-or-Grid.png",
+	tags: ["CSS"],
 	created: new Date("2022-10-04"),
 	modified: new Date("2022-10-24"),
 	eleventyComputed: {
