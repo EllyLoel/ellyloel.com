@@ -43,7 +43,7 @@ layout: base-without-header.njk
 			<span aria-hidden="true">•</span>
 		{%- endif -%}
 		{%- if tags -%}
-			<span class="[ flex align-center gap-1 ]">
+			<span class="[ flex flex-wrap align-center gap-1 ]">
 				{%- labelledInlineIcon "fas:tag", { "aria-label": "Tags" } -%}
 				{%- include "tags.njk" -%}
 			</span>
