@@ -1,8 +1,8 @@
 ---
 layout: base
-title: Resume
+title: Résumé
 eleventyNavigation:
-  key: Resume
+  key: Résumé
   parent: Me
   order: 4
 ---
