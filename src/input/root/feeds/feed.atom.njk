@@ -37,7 +37,7 @@ permalink: "feed.atom"
 				{%- filter escape -%}
 					<a href="https://brid.gy/publish/mastodon" class="p-bridgy-omit-link" hidden=""></a>
 					<a href="https://brid.gy/publish/bluesky" class="p-bridgy-omit-link" hidden=""></a>
-					<p class="p-bridgy-mastodon-content" hidden="">{{ post.data.title }}
+					<p class="p-bridgy-mastodon-content p-bridgy-bluesky-content" hidden="">{{ post.data.title }}
 						{% if post.data.bookmark.link %}
 							<br> 🔖 <a href="{{ post.data.bookmark.link }}">{{ post.data.bookmark.link }}</a>
 						{% endif %}
