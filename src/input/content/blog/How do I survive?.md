@@ -8,7 +8,7 @@ tags:
   - Autism
   - Disability
 created: 2024-03-18
-modified: 2024-03-18
+modified: 2024-03-23
 syndication-url: "https://front-end.social/@elly/112118705289157048"
 ---
 
@@ -28,12 +28,12 @@ It's also annoying because I know [what I want/need from a job](/garden/what-i-w
 ## I feel like I'm running out of jobs
 
 Same fooding is something that I do as an autistic person, my lunches for like the past 6 months or longer have been this one tomato and basil flavoured rice packet. Previous to that though it was a spicy Mexican flavoured rice, but I same fooded that one until one day I hated it. This cycle has happened many times for many foods, but I think I can see it happening for jobs.
-I feel like I’m constantly specialising more and shrinking the types of jobs I'm willing to do. When I was a kid I just knew I wanted to do something with computers, an impossibly broad scope, the opposite problem that I have now. Then as I got older I fell in love with games so I thought maybe I'd wanna be a Game Developer, I very quickly realised I didn't but through trying that out I discovered web development, though unfortunately it was bad timing and I forgot about it.
+I feel like I’m constantly specialising more and shrinking the types of jobs I'm willing to do. When I was a kid I just knew I wanted to do something with computers, an impossibly broad scope—the opposite problem that I have now. Then as I got older I fell in love with games so I thought maybe I'd wanna be a Game Developer, I very quickly realised I didn't but through trying that out I discovered web development, though unfortunately it was bad timing and I forgot about it.
 After that I thought maybe I wanted to be a Graphic Designer because I loved visual design. That led me to trying video editing, and subsequently motion graphics, but I grew to hate how painstaking and tedious they were.
 Then I went super broad again and thought computer science would be good, so I went to university. I thought I might want to be a software developer or software designer, but really I had no idea what any of that really entailed. It was finally at this point that I rediscovered web development and really fell in love.
 I managed to land my first web development job where I learnt an incredible amount of stuff that I both did and didn't care about. Loads of full-stack and back-end web development knowledge that I couldn't care less about, but also mountains of front-end web development knowledge which is what I love the most.
 Unfortunately Front-end Web Developer no longer means what it should mean. Really I'm a Front-of-the-Front-end Web Developer, a Design Engineer, or _god forbid_ a Web Designer. But there aren't many people hiring for roles like that, they just want "front-end" aka React aka full-stack developers. They don't give a shit if you know anything about CSS or accessibility or performance, they just want to know if you've drunk enough of the Facebook or Vercel Kool Aid. Which, if you couldn't already tell, isn't really my cup of tea.
-So I've ended up specialising even more into being an Accessibility Specialist, but now I don't get to build websites anymore... _oh well at least I'm not bringing anymore lines of JSX into this world?_
+So I've ended up specialising even more into being an Accessibility Specialist, but now I don't get to build websites anymore... _oh well at least I'm not bringing any more lines of JSX into this world?_
 
 ## The number of places I want to work is shrinking
 
