@@ -52,11 +52,51 @@ After consultation with the client I created and edited visual communications to
 
 ## Education
 
+### Dan Mall (Design System University) – Make Design Systems People Want to Use, How to Use a Design System in Code, and How to Use a Design System in Figma
+
+<span class="[ badge ][ neutral pill ]">Apr 2024</span>
+
+### W3C Web Accessibility Initiative – Digital Accessibility Foundations - Introduction to Web Accessibility
+
+<span class="[ badge ][ neutral pill ]">Apr 2024</span>
+
 ### Sara Soueidan – Practical Accessibility
 
 <span class="[ badge ][ neutral pill ]">Feb 2023-Dec 2023</span>
 
 Sara Soueidan is an accomplished engineer and expert in inclusive design and accessibility. The course provided valuable knowledge on how to create accessible websites and web applications. I gained the ability to recognize and address common accessibility issues, build inclusive user interfaces from scratch, and feel more confident in my ability to create inclusive digital experiences. The course included over 15 hours of instructional videos and written lessons, covering topics such as the Web Content Accessibility Guidelines (WCAG), the accessibility tree, semantic HTML, ARIA, accessible images and forms, keyboard navigation, and more. Through this comprehensive course, I have acquired the necessary skills and resources to design and develop websites and apps that are accessible to all users.
+
+### Dan Mall (Design System University) – Design System Email Course
+
+<span class="[ badge ][ neutral pill ]">Aug 2023</span>
+
+### Vitaly Friedman (Smashing Magazine) – Smart Interface Design Patterns
+
+<span class="[ badge ][ neutral pill ]">Jun 2023</span>
+
+### Ethan Marcotte (Aquent Gymnasium) – Design Systems for Developers, Design Systems for Designers, Design Systems for Product Managers, and Design Systems for Everyone
+
+<span class="[ badge ][ neutral pill ]">May 2023</span>
+
+### web.dev – Learn Accessibility, Learn CSS, Learn PWA, Learn HTML, Learn Images, Learn Responsive Design, Learn Performance, and Learn Forms
+
+<span class="[ badge ][ neutral pill ]">2023</span>
+
+### AWS – Certified Cloud Practitioner
+
+<span class="[ badge ][ neutral pill ]">Aug 2022</span>
+
+### Sarah Drasner (Frontend Masters) – Design for Developers
+
+<span class="[ badge ][ neutral pill ]">Aug 2022</span>
+
+### Dave Rupert (Frontend Masters) – Web Components
+
+<span class="[ badge ][ neutral pill ]">Aug 2022</span>
+
+### Lea Verou (Frontend Masters) – Dynamic CSS with Custom Properties
+
+<span class="[ badge ][ neutral pill ]">Aug 2022</span>
 
 ### Josh W Comeau – CSS for JS Devs
 

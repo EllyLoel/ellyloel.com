@@ -54,7 +54,17 @@ Passionate about continuous learning, I actively share valuable insights and res
 
 ## Education
 
+- **Dan Mall (Design System University)** – Make Design Systems People Want to Use, How to Use a Design System in Code, and How to Use a Design System in Figma<br><span class="[ badge ][ neutral pill ]">Apr 2024</span>
+- **W3C Web Accessibility Initiative** – Digital Accessibility Foundations - Introduction to Web Accessibility<br><span class="[ badge ][ neutral pill ]">Apr 2024</span>
 - **Sara Soueidan** – Practical Accessibility<br><span class="[ badge ][ neutral pill ]">Feb 2023-Dec 2023</span>
+- **Dan Mall (Design System University)** – Design System Email Course<br><span class="[ badge ][ neutral pill ]">Aug 2023</span>
+- **Vitaly Friedman (Smashing Magazine)** – Smart Interface Design Patterns<br><span class="[ badge ][ neutral pill ]">Jun 2023</span>
+- **Ethan Marcotte (Aquent Gymnasium)** – Design Systems for Developers, Design Systems for Designers, Design Systems for Product Managers, and Design Systems for Everyone<br><span class="[ badge ][ neutral pill ]">May 2023</span>
+- **web.dev** – Learn Accessibility, Learn CSS, Learn PWA, Learn HTML, Learn Images, Learn Responsive Design, Learn Performance, and Learn Forms<br><span class="[ badge ][ neutral pill ]">2023</span>
+- **AWS** – Certified Cloud Practitioner<br><span class="[ badge ][ neutral pill ]">Aug 2022</span>
+- **Sarah Drasner (Frontend Masters)** – Design for Developers<br><span class="[ badge ][ neutral pill ]">Aug 2022</span>
+- **Dave Rupert (Frontend Masters)** – Web Components<br><span class="[ badge ][ neutral pill ]">Aug 2022</span>
+- **Lea Verou (Frontend Masters)** – Dynamic CSS with Custom Properties<br><span class="[ badge ][ neutral pill ]">Aug 2022</span>
 - **Josh W Comeau** – CSS for JS Devs<br><span class="[ badge ][ neutral pill ]">Jan 2022-Jun 2022</span>
 - **Scrimba** – The Frontend Developer Career Path<br><span class="[ badge ][ neutral pill ]">Jun 2021-Dec 2021</span>
 - **Swinburne University of Technology** – Bachelor of Computer Science<br><span class="[ badge ][ neutral pill ]">Mar 2020-Sep 2021</span>
