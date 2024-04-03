@@ -8,7 +8,7 @@
 				and
 			{% endif %}
 			<a href="{{ facepileMention.author.url }}">
-				{{- facepileMention.author.name -}}
+				{{- facepileMention.author.name | replace("?", "") -}}
 			</a>
 			{%- if not loop.last and loop.length !== 2 -%}
 				,
