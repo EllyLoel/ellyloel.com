@@ -2,7 +2,7 @@
 	<div class="[ meta ]">
 		{% if mention.author %}
 			<a href="{{ mention.author.url }}" class="[ author-wrapper ]">
-				<strong class="[ author-name ]">{{ mention.author.name }}</strong>
+				<strong class="[ author-name ]">{{ mention.author.name | replace("?", "") }}</strong>
 			</a>
 		{% else %}
 			<span class="[ author-wrapper ]">
