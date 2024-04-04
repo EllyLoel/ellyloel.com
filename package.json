@@ -27,7 +27,8 @@
 		"clean": "rimraf _site",
 		"format": "prettier . --write",
 		"lint:css": "stylelint \"src/input/css/**/*.css\" --fix",
-		"lint:js": "eslint src/input/js/ --fix"
+		"lint:js": "eslint src/input/js/ --fix",
+		"deploy": "netlify deploy -p --build"
 	},
 	"packageManager": "pnpm@8.6.12",
 	"dependencies": {
