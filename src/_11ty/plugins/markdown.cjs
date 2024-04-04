@@ -38,9 +38,6 @@ let markdownLibrary = require("markdown-it")({
 	})
 	.use(markdownItAnchor, {
 		level: 2,
-		permalink: markdownItAnchor.permalink.headerLink({
-			safariReaderFix: true,
-		}),
 		slugify: slugify,
 	})
 	.use(
