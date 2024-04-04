@@ -9,8 +9,8 @@ eleventyNavigation:
 
 ## Who am I?
 
-Well hello there! My name is [Elly Loel](https://ellyloel.com/){.h-card rel=me}. I'm a developer, designer and writer, currently working as a mid-level developer at Portable!
-I love sharing interesting things so check out my socials or my newsletter! In my spare time, I love building mechanical keyboards, watching cartoons and anime, and hanging out with my partner [Brodie](https://nervousghost.com) and our cat [[Lulu]]. :black_cat:
+Well hello there! My name is [Elly Loel](https://ellyloel.com/){.h-card rel=me}. I'm a web designer ([front-end developer?](/blog/front-end-development-s-identity-crisis/)) and accessibility & design system specialist.
+I love sharing interesting things so check out my socials or my newsletter! In my spare time, I love building mechanical keyboards, watching cartoons and anime, and hanging out with my partner [Brodie](https://nervousghost.com) and our cat [[Lulu]]. 🐈‍⬛
 
 For more up to date details check out the [[now]] page.
 
