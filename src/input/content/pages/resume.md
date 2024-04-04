@@ -17,7 +17,7 @@ eleventyNavigation:
 
 ## Summary
 
-Passionate Front-end Web Developer/Designer, Accessibility Specialist, and Design System Enthusiast based in Naarm (Melbourne), Australia, dedicated to creating inclusive and accessible digital experiences. I bring a diverse skill set in web development, specializing in Semantic HTML, Advanced CSS, JavaScript, and more.
+Passionate Front-end Web Developer/Designer, Accessibility Specialist, and Design System Enthusiast based in Naarm (Melbourne, Australia), dedicated to creating inclusive and accessible digital experiences. I bring a diverse skill set in web development, specializing in Semantic HTML, Advanced CSS, JavaScript, and more.
 
 ### Identity & Inclusivity 🌈
 
@@ -61,6 +61,7 @@ Passionate about continuous learning, I actively share valuable insights and res
 - **Vitaly Friedman (Smashing Magazine)** – Smart Interface Design Patterns<br><span class="[ badge ][ neutral pill ]">Jun 2023</span>
 - **Ethan Marcotte (Aquent Gymnasium)** – Design Systems for Developers, Design Systems for Designers, Design Systems for Product Managers, and Design Systems for Everyone<br><span class="[ badge ][ neutral pill ]">May 2023</span>
 - **web.dev** – Learn Accessibility, Learn CSS, Learn PWA, Learn HTML, Learn Images, Learn Responsive Design, Learn Performance, and Learn Forms<br><span class="[ badge ][ neutral pill ]">2023</span>
+- **Portable** – Ethical Human-Centred Design Foundations<br><span class="[ badge ][ neutral pill ]">Oct 2022</span>
 - **AWS** – Certified Cloud Practitioner<br><span class="[ badge ][ neutral pill ]">Aug 2022</span>
 - **Sarah Drasner (Frontend Masters)** – Design for Developers<br><span class="[ badge ][ neutral pill ]">Aug 2022</span>
 - **Dave Rupert (Frontend Masters)** – Web Components<br><span class="[ badge ][ neutral pill ]">Aug 2022</span>
