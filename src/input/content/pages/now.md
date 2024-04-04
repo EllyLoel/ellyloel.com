@@ -11,9 +11,69 @@ eleventyNavigation:
 An on & off log of what I'm currently doing/interested in. Slower paced than a twitter feed but less permanent then an [[about]] page.
 [Now pages](https://nownownow.com/about) are becoming more common, you should make one for yourself!
 
+## April, 2024
+
+Updated my now page for the first time in a year... That's why the last year of updates are so sparse. I honestly couldn't remember much.
+
+Still jobless.
+
+## March, 2024
+
+Brodie's birthday! 🎉
+
+Diagnosed with POTS.
+
+Wrote some banger posts, [How do I survive?](/blog/how-do-i-survive) and [Front-end development’s identity crisis](/blog/front-end-development-s-identity-crisis).
+
+Still jobless.
+
+## February, 2024
+
+Still jobless.
+
+## January, 2024
+
+Officially jobless.
+
+Helped Brodie out tabling at Dark Moon Expo.
+
+Brodie got covid for the second time, I miraculously managed to avoid it.
+
+## December, 2023
+
+I'm being made redundant.
+
+Made some amazing new friends.
+
+## November, 2023
+
+I might be made redundant.
+
+Helped Brodie out tabling at Raven Witch's Market.
+
+## October, 2023
+
+## September, 2023
+
+Had an extremely belated birthday party.
+
+## August, 2023
+
+It's my birthday!
+
+## July, 2023
+
+Flew to Sydney for my grand pa's funeral.
+
+Took a week off because I'm burnt out. Wasn't enough.
+
+## June, 2023
+
+## May, 2023
+
 ## April, 2023
 
-Helping my partner out tabling in the artist alley at their first convention, Supanova Melbourne. [**nervousghost.com**](https://nervousghost.com)
+Helped Brodie out tabling in the artist alley at their first convention, Supanova Melbourne. [**nervousghost.com**](https://nervousghost.com)
 
 Started working my way through Sara Soueidan's [Practical Accessibility](https://practical-accessibility.today/) course, and I'm absolutely loving it so far.
 
@@ -25,11 +85,11 @@ Tagged, versioned and released [PDS Styles](https://github.com/PortableStudios/P
 
 ## March, 2023
 
-I'm no longer a junior! I'm now officially a mid-level developer, or just a developer, but really as y'all know, *I'm actually a Design Engineer*.
+I'm no longer a junior! I'm now officially a mid-level developer, or just a developer, but really as y'all know, _I'm actually a Design Engineer_.
 
-Had the great pleasure of taking part in a [Crafting Type](https://craftingtype.com/) workshop, where I got to start *crafting* my very own typeface! Many thanks to [Thomas Phinney](https://www.thomasphinney.com/) and [Wayne Thompson](https://www.atf.com.au/).
+Had the great pleasure of taking part in a [Crafting Type](https://craftingtype.com/) workshop, where I got to start _crafting_ my very own typeface! Many thanks to [Thomas Phinney](https://www.thomasphinney.com/) and [Wayne Thompson](https://www.atf.com.au/).
 
-Helped build a website for [Victorian Law Week](https://www.viclawweek.org.au/) (*yay!*) but it was on WebFlow (*oh nooo*).
+Helped build a website for [Victorian Law Week](https://www.viclawweek.org.au/) (_yay!_) but it was on WebFlow (_oh nooo_).
 
 Wrote about [[Input types a11y|the accessibility of the different input types]].
 
@@ -42,6 +102,7 @@ Working on building out the Portable Design System, starting with [Styles](https
 Revamped the Portable website's IA/navigation, fixed many many accessibility issues.
 
 Went to [DDD by Night](https://www.meetup.com/ddd-melbourne-by-night/events/287278315) as listened to these talks:
+
 - "Career pathways for software engineers" by Michelle Gleeson
 - "Slim your Docker images in less than a handful of steps" by James Liu
 - "Web 3 The Great Con" by Alexander Karan
@@ -49,6 +110,7 @@ Went to [DDD by Night](https://www.meetup.com/ddd-melbourne-by-night/events/2872
 - "Debunking Common Consulting Myths" by Lachlan Wright
 
 Went to [Laneway Festival](https://lanewayfestival.com/melbourne/) and saw:
+
 - 100 Gecs
 - Girl in red
 - Phoebe Bridgers
