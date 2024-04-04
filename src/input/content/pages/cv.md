@@ -82,6 +82,10 @@ Sara Soueidan is an accomplished engineer and expert in inclusive design and acc
 
 <span class="[ badge ][ neutral pill ]">2023</span>
 
+### Portable – Ethical Human-Centred Design Foundations
+
+<span class="[ badge ][ neutral pill ]">Oct 2022</span>
+
 ### AWS – Certified Cloud Practitioner
 
 <span class="[ badge ][ neutral pill ]">Aug 2022</span>
