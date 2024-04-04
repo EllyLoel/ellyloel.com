@@ -60,33 +60,6 @@ main {
 
 :is(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) {
 	inline-size: fit-content;
-
-	& a {
-		color: var(--neutral-text-contrast);
-		margin-inline: 0;
-		padding-inline: 0;
-		position: relative;
-		text-decoration: none;
-
-		&::after {
-			content: "🔗";
-			display: inline-block;
-			font-size: 0.75em;
-			opacity: 0;
-			padding: 0.175em;
-			position: absolute;
-			transform: translateY(-0.1em);
-			transition: opacity 300ms var(--ease-2);
-		}
-
-		&:is(:hover, :focus-visible) {
-			background-color: transparent;
-
-			&::after {
-				opacity: 1;
-			}
-		}
-	}
 }
 
 h1,
