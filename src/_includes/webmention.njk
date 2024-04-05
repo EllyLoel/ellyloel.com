@@ -2,7 +2,7 @@
 	<div class="[ meta ]">
 		{% if mention.author %}
 			<a href="{{ mention.author.url }}" class="[ author-wrapper ]">
-				<strong class="[ author-name ]">{{ mention.author.name | replace("?", "") }}</strong>
+				<strong class="[ author-name ]">{{ mention.author.name | replace("?", "") | replace(r/:\w*:/g, "") | trim }}</strong>
 			</a>
 		{% else %}
 			<span class="[ author-wrapper ]">
@@ -15,6 +15,5 @@
 			</a>
 		</small>
 	</div>
-
 	<p>{{ mention.content.value | removeRandomLink | safe }}</p>
 </li>

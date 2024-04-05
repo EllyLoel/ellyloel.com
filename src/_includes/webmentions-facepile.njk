@@ -1,14 +1,14 @@
-<div class="[ facepile ]">
+<details class="[ facepile ]">
+	<summary class="[ h3 ]">
+		{{ facepileMentionsHeading }}
+	</summary>
 	<p>
-		<span class="[ h3 ]">
-			{{ facepileMentionsHeading }}
-		</span>
 		{%- for facepileMention in facepileMentions -%}
 			{%- if loop.last and not loop.first %}
 				and
 			{% endif %}
 			<a href="{{ facepileMention.author.url }}">
-				{{- facepileMention.author.name | replace("?", "") -}}
+				{{- facepileMention.author.name | replace("?", "") | replace(r/:\w*:/g, "") | trim -}}
 			</a>
 			{%- if not loop.last and loop.length !== 2 -%}
 				,
@@ -18,4 +18,4 @@
 			{% endif %}
 		{%- endfor -%}
 	</p>
-</div>
+</details>
