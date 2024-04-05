@@ -1,0 +1,13 @@
+<!-- This seems like an anti-pattern but I can't use display: none; because it breaks the svg filter. I probably don't need to use aria-hidden but I haven't tested it and I don't wanna risk it. -->
+<svg class="[ visually-hidden ]" aria-hidden="true">
+	<defs>
+		<filter id="filter" x="0%" y="0%" width="100%" height="100%">
+			<feTurbulence baseFrequency="0.025 0.025" result="DisplaceNoise" numOctaves="2"/>
+			<feDisplacementMap in="SourceGraphic" in2="DisplaceNoise" scale="20" xChannelSelector="R" yChannelSelector="R" result="displace"/>
+			<feGaussianBlur in="displace" stdDeviation="2" result="blur"/>
+			<feBlend in="blur" in2="DisplaceNoise" mode="difference" result="noiseDiff"/>
+			<feBlend in="noiseDiff" in2="SourceGraphic" mode="difference" result="doubleDiff"/>
+			<feColorMatrix in="doubleDiff" type="saturate" values="0.75"/>
+		</filter>
+	</defs>
+</svg>

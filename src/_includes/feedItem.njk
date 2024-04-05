@@ -7,12 +7,12 @@
 			{% endif -%}
 		>
 			<div class="[ feed-item-card-title ] [ feed-item-card-{% if body %}header{% else %}body{% endif %} ]">
-				<p>
+				{%- if headingLevel === 3 -%}<h3>{%- else -%}<h2 class="h3">{%- endif -%}
 					{%- if stage -%}
 						{%- include "stage.njk" -%}
 					{%- endif -%}
 					<a href="{{ url }}" class="[ u-url p-name ]">{{ title }}</a>
-				</p>
+				{%- if headingLevel === 3 -%}</h3>{%- else -%}</h2>{%- endif -%}
 			</div>
 
 			{%- if body -%}
@@ -27,7 +27,7 @@
 				{% endif %}
 
 				{% if tags and tags.length !== 0 %}
-					<span class="[ flex flex-wrap align-center gap-1 ]">
+					<span class="[ flex flex-wrap align-center gap-1 margin-block-start-2 ]">
 						{% labelledInlineIcon "fas:tag", { "aria-label": "Tags" } %}
 						{% include "tags.njk" %}
 					</span>

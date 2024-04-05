@@ -16,6 +16,13 @@ eleventyImport:
 	{%- endmd -%}
 </div>
 
+<h2>
+  Linked posts graph
+</h2>
+<div id="graph"></div>
+
+{%- include "crazy-filter.njk" -%}
+
 <ul id="feed" class="[ feed ]">
 	{%- for bookmark in bookmarks.items -%}
 		{%- set title = bookmark.title -%}
@@ -23,7 +30,10 @@ eleventyImport:
 		{%- setAsync "imageMarkup" -%}{%- endsetAsync -%}
 		{%- if bookmark.image -%}
 			{%- setAsync "imageMarkup" -%}
-			{%- image bookmark.image, "" -%}
+			<svg viewBox="0 0 200 150" width="200" height="150">
+				{%- set randomNumber -%}{%- random 0, 1 -%}{%- endset -%}
+				<image class="image" xlink:href="{{ bookmark.image }}" x="-50%" y="-50%" width="200%" height="200%" filter="url(#filter)" opacity="0.65" style="transform: rotate({{ randomNumber | round(3) }}turn); transform-origin: center;"></image>
+			</svg>
 			{%- endsetAsync -%}
 		{%- endif -%}
 		{%- set created = bookmark.created -%}

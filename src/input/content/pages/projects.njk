@@ -14,7 +14,8 @@ eleventyImport:
 
 <div>
 	{%- md -%}
-	This is a collection of projects I've started, and probably not finished {% emoji "😅", "Whoops!" %}. They're also avaliable in your favourite flavour of feed [RSS](/projects.rss), [Atom](/projects.atom) or [JSON](/projects.json).{.p-summary}
+	This is a collection of projects I've started, and probably not finished {% emoji "😅",
+	"Whoops!" %}. They're also avaliable in your favourite flavour of feed [RSS](/projects.rss), [Atom](/projects.atom) or [JSON](/projects.json).{.p-summary}
 	{%- endmd -%}
 </div>
 
@@ -22,6 +23,8 @@ eleventyImport:
   Linked posts graph
 </h2>
 <div id="graph"></div>
+
+{%- include "crazy-filter.njk" -%}
 
 {% set projects = collections.ProjectsSortedByDate %}
 <ul id="feed" class="[ feed ]">
@@ -31,10 +34,12 @@ eleventyImport:
 		{%- setAsync "imageMarkup" -%}{%- endsetAsync -%}
 		{%- if project.data.image -%}
 			{%- setAsync "imageMarkup" -%}
-			{%- image project.data.image, "" -%}
+			<svg viewBox="0 0 200 150" width="200" height="150">
+				{%- set randomNumber -%}{%- random 0, 1 -%}{%- endset -%}
+				<image class="image" xlink:href="{{ project.data.image }}" x="-50%" y="-50%" width="200%" height="200%" filter="url(#filter)" opacity="0.65" style="transform: rotate({{ randomNumber | round(3) }}turn); transform-origin: center;"></image>
+			</svg>
 			{%- endsetAsync -%}
 		{%- endif -%}
-		{# {%- set body = project.data.page.excerpt -%} #}
 		{%- set date = project.data.date -%}
 		{%- set label = "" -%}
 		{%- if project.data.modified -%}
