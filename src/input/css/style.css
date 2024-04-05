@@ -10,7 +10,6 @@
 
 /* Variables */
 @import url("./vars.css") layer(vars);
-@import url("./shoelace.css") layer(vars);
 
 /* Global styles */
 @import url("./global.css") layer(base);
