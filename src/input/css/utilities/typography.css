@@ -19,14 +19,7 @@
 
 	&:hover {
 		& > span {
-			background-color: var(--accent-bg);
 			text-decoration-color: transparent;
-		}
-	}
-
-	&:active {
-		& > span {
-			background-color: var(--accent-bg-hover);
 		}
 	}
 }
