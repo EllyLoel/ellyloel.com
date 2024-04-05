@@ -104,25 +104,24 @@ This post hasn't been updated a long time, so it might be kinda crusty.
 				<span>Twitter</span></a>.
 		</p>
 	</div>
-	{%- set previousPost = collections.allSortedByDate | getPreviousCollectionItem -%}
-	{%- set nextPost = collections.allSortedByDate | getNextCollectionItem -%}
+	{# These are flipped because we want next to be newer and prev to be older, the opposite of the collections sorting. #}
+	{%- set nextPost = collections.allSortedByDate | getPreviousCollectionItem -%}
+	{%- set previousPost = collections.allSortedByDate | getNextCollectionItem -%}
 	{%- if previousPost or nextPost -%}
-		<div class="[ post-pagination ][ flex gap-5 ]">
+		<div class="[ post-pagination ]">
 			{%- if previousPost -%}
-				<sl-tooltip content="{{ previousPost.data.title }}">
-					<a href="{{ previousPost.url }}" class="[ text-decoration-none move-link-styling-to-child flex align-center gap-1 ]">
-						{%- inlineIcon "fas:angle-left" -%}
-						<span>Prev Post</span>
-					</a>
-				</sl-tooltip>
+				<p>
+					Previously:
+					<br>
+					<a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+				</p>
 			{%- endif -%}
 			{%- if nextPost -%}
-				<sl-tooltip content="{{ nextPost.data.title }}">
-					<a href="{{ nextPost.url }}" class="[ text-decoration-none move-link-styling-to-child flex align-center gap-1 ]">
-						<span>Next Post</span>
-						{%- inlineIcon "fas:angle-right" -%}
-					</a>
-				</sl-tooltip>
+				<p>
+					Next:
+					<br>
+					<a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+				</p>
 			{%- endif -%}
 		</div>
 	{%- endif -%}

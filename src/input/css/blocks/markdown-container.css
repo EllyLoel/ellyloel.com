@@ -23,7 +23,6 @@
 			border-width: var(--border-size-2);
 			box-shadow: var(--shadow-offset) var(--shadow-offset) 0 0
 				var(--accent-bg-hover);
-			display: flex;
 			inline-size: fit-content;
 			justify-content: center;
 			margin-inline: auto;
@@ -51,6 +50,10 @@
 		& > .post-pagination {
 			padding-block: var(--size-3);
 			padding-inline: var(--size-3);
+
+			& > p:last-of-type {
+				text-align: right;
+			}
 		}
 	}
 }
