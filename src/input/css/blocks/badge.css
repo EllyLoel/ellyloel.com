@@ -1,7 +1,7 @@
 .badge {
 	align-items: center;
 	background-color: var(--accent-6);
-	border: solid 1px var(--neutral-base);
+	border: solid 1px transparent;
 	border-radius: 3px;
 	color: var(--neutral-base);
 	display: inline-flex;
