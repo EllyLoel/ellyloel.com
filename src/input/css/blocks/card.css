@@ -36,6 +36,22 @@
 		max-width: 200px;
 		mix-blend-mode: color-burn;
 		overflow: hidden;
+
+		[data-selected-color-scheme="light"] & {
+			mix-blend-mode: color-burn;
+		}
+
+		[data-selected-color-scheme="dark"] & {
+			mix-blend-mode: color-dodge;
+		}
+
+		@media (prefers-color-scheme: light) {
+			mix-blend-mode: color-burn;
+		}
+
+		@media (prefers-color-scheme: dark) {
+			mix-blend-mode: color-dodge;
+		}
 	}
 
 	/* .feed-item-card-header,
