@@ -22,19 +22,9 @@ eleventyImport:
 </h2>
 <div id="graph"></div>
 
+{%- include "crazy-filter.njk" -%}
+
 {%- set blog = collections.BlogSortedByDate -%}
-
-{# {%- set draftCount = 0 -%}
-{%- set completeCount = 0 -%}
-
-{%- for post in blog -%}
-  {%- if post.data.stage === "draft" -%}
-    {%- set draftCount = draftCount + 1 -%}
-  {%- elif post.data.stage === "complete" -%}
-    {%- set completeCount = completeCount + 1 -%}
-  {%- endif -%}
-{%- endfor -%} #}
-
 <ul id="feed" class="[ feed ]">
 	{%- for post in blog %}
 		{%- if post.data.stage -%}
@@ -45,10 +35,12 @@ eleventyImport:
 		{%- setAsync "imageMarkup" -%}{%- endsetAsync -%}
 		{%- if post.data.image -%}
 			{%- setAsync "imageMarkup" -%}
-			{%- image post.data.image, "" -%}
+			<svg viewBox="0 0 200 150" width="200" height="150">
+				{%- set randomNumber -%}{%- random 0, 1 -%}{%- endset -%}
+				<image class="image" xlink:href="{{ post.data.image }}" x="-50%" y="-50%" width="200%" height="200%" filter="url(#filter)" opacity="0.65" style="transform: rotate({{ randomNumber | round(3) }}turn); transform-origin: center;"></image>
+			</svg>
 			{%- endsetAsync -%}
 		{%- endif -%}
-		{# {%- set body = post.data.page.excerpt -%} #}
 		{%- set date = post.data.date -%}
 		{%- set label = "" -%}
 		{%- if post.data.modified -%}

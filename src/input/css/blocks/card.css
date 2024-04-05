@@ -29,33 +29,19 @@
 	}
 
 	.feed-item-card-image {
+		aspect-ratio: 4/3;
+		border-radius: var(--radius-2);
 		grid-area: image;
-		height: 100%;
-		margin-inline: auto;
+		max-height: 150px;
+		max-width: 200px;
+		mix-blend-mode: color-burn;
 		overflow: hidden;
-		width: auto;
-
-		.image {
-			max-height: 200px;
-			width: auto;
-		}
-
-		@media (width >= 35em) {
-			height: auto;
-			margin-inline: unset;
-			max-width: 200px;
-			width: 100%;
-
-			.image {
-				max-height: unset;
-			}
-		}
 	}
 
-	.feed-item-card-header,
+	/* .feed-item-card-header,
 	.feed-item-card-body {
 		font-size: var(--font-size-4);
-	}
+	} */
 
 	.feed-item-card-footer {
 		justify-content: space-between;
@@ -79,7 +65,7 @@
 		}
 	}
 
-	& .feed-item-card-title * {
-		font-size: inherit;
+	& .feed-item-card-title p {
+		inline-size: 100%;
 	}
 }

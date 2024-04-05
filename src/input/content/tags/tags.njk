@@ -33,6 +33,8 @@ eleventyComputed:
   title: "{{ tag }}"
 ---
 
+{%- include "crazy-filter.njk" -%}
+
 <ul id="feed" class="[ feed ]">
 	{% set taglist = collections[tag] %}
 	{% for post in taglist | reverse %}
@@ -44,10 +46,12 @@ eleventyComputed:
 		{%- setAsync "imageMarkup" -%}{%- endsetAsync -%}
 		{%- if post.data.image -%}
 			{%- setAsync "imageMarkup" -%}
-			{%- image post.data.image, "" -%}
+			<svg viewBox="0 0 200 150" width="200" height="150">
+				{%- set randomNumber -%}{%- random 0, 1 -%}{%- endset -%}
+				<image class="image" xlink:href="{{ post.data.image }}" x="-50%" y="-50%" width="200%" height="200%" filter="url(#filter)" opacity="0.65" style="transform: rotate({{ randomNumber | round(3) }}turn); transform-origin: center;"></image>
+			</svg>
 			{%- endsetAsync -%}
 		{%- endif -%}
-		{# {%- set body = post.data.page.excerpt -%} #}
 		{%- set date = post.data.date -%}
 		{%- set label = "" -%}
 		{%- if post.data.modified -%}

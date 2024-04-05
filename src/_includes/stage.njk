@@ -6,10 +6,6 @@
 {%- if stage === "complete" -%}circle-check{%- endif -%}
 {%- endset -%}
 
-{%- set stage -%}
-{{ stage | title }}
-{%- endset -%}
+{%- set stage -%}{{ stage | title }}{%- endset -%}
 
-<span>
-	{%- labelledInlineIcon icon, { "aria-label": stage } -%}
-</span>
+{%- labelledInlineIcon icon, { "aria-label": stage } -%}
