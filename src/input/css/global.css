@@ -160,6 +160,7 @@ var {
 :where(a) {
 	background-color: transparent;
 	border-radius: var(--radius-2);
+	box-decoration-break: clone;
 	margin-inline: calc(var(--size-1) * -1);
 	padding-inline: var(--size-1);
 	text-decoration: underline;
