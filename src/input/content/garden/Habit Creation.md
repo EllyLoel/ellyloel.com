@@ -3,7 +3,7 @@ title: Habit Creation
 stage: budding
 ---
 
-The most impossible task for someone^[me, I am someone] with [[ADHD]] is to create a habit.
+The most impossible task for someone^[me, I am someone] with ADHD is to create a habit.
 
 ## The Habit loop
 

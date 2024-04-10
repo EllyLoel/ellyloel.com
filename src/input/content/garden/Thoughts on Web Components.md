@@ -3,6 +3,7 @@ title: Thoughts on Web Components
 stage: seedling
 tags:
   - Web Components
+archived: true
 ---
 
 ~~~ callout Currently this is a bunch of snippets from other articles

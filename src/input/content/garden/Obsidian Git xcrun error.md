@@ -1,5 +1,5 @@
 ---
-title: Obsidian Git xcrun error
+title: Git xcrun error
 stage: seedling
 created: 2022-07-18
 modified: 2022-07-18

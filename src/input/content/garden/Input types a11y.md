@@ -13,32 +13,32 @@ See here for [a list of every single input type](https://developer.mozilla.org/e
 
 ### The bad ones:
 
-- `button`
 - `date`
 - `datetime-local`
-- `email`
 - `month`
 - `number`
 - `reset`
 - `search`
-- `submit`
 - `time`
 - `week`
 
 ### The good ones:
 
+- `button`
 - `checkbox`
+- `email`
 - `file`
 - `hidden`
 - `password`
 - `radio`
+- `range`
+- `submit`
 - `text`
 
 ### The I'm not sure ones:
 
 - `color`
 - `image`
-- `range`
 - `tel`
 - `url`
 
@@ -46,22 +46,11 @@ If you have any info/knowledge on whether these inputs are good or bad let me kn
 
 ## The longer version
 
-### Button like inputs
-
-- `button`
-- `reset`
-- `submit`
-
-As far as I can tell they're not inherently terrible but you're probably just better off using the `<button>` version of them:
-
-- `<button type="button">`
-- `<button type="reset">`
-- `<button type="submit">`
-
-But for reset, keep in mind that:
+### Reset
 
 > You should usually avoid including reset buttons in your forms. They're rarely useful, and are instead more likely to frustrate users who click them by mistake (often while trying to click the submit button).
-> – [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/reset)
+
+— [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/reset)
 
 ### Dates
 
