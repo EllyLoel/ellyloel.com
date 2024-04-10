@@ -2,7 +2,7 @@
 	inline-size: min(var(--size-content-3), 95%);
 	margin-inline: auto;
 
-	& .input-wrapper {
+	.input-wrapper {
 		display: flex;
 		flex-wrap: wrap;
 		gap: var(--size-3);
@@ -15,7 +15,12 @@
 		padding-bottom: var(--size-1);
 		padding-right: var(--size-1);
 
-		& > summary {
+		> summary {
+			margin: 0;
+			padding: 0;
+		}
+
+		> summary:not(.h1, .h2, .h3, .h4, .h5, .h6) {
 			font-size: var(--font-size-4);
 		}
 
@@ -51,33 +56,29 @@
 		}
 	}
 
-	& .facepile {
-		align-items: center;
-		display: flex;
-		flex-wrap: wrap;
-
-		& .h3 {
-			margin-right: var(--size-1);
-		}
+	.namepile .h3 {
+		margin-right: var(--size-1);
 	}
 
-	& .webmention {
+	.webmention {
 		--flow-space: 1.5em;
-		--_offset: calc(2em + var(--size-2));
 
-		& > * {
+		> * {
 			--flow-space: 0.5em;
 		}
 
-		& .meta {
-			align-items: center;
+		> p img {
+			display: inline;
+			width: 1.2em;
+		}
+
+		.meta {
+			align-items: baseline;
 			display: flex;
+			flex-wrap: wrap;
 			gap: var(--size-2);
 
-			& .author-wrapper {
-				align-items: center;
-				display: flex;
-				gap: var(--size-2);
+			.author-wrapper {
 				text-decoration: none;
 
 				&:hover {
@@ -92,10 +93,7 @@
 
 			& small {
 				flex-grow: 1;
-			}
-
-			& .date {
-				margin-left: auto;
+				max-inline-size: unset;
 			}
 		}
 	}

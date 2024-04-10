@@ -1,0 +1,30 @@
+<li class="[ webmention ][ flow ]">
+	<div class="[ meta ]">
+		{% if comment.author and comment.author.name %}
+			<{{ "a" if comment.author.url else "span" }} {% if comment.author.url %}href="{{ comment.author.url }}"{% endif %} class="[ author-wrapper ]">
+				<strong class="[ author-name ]">
+					{{- comment.author.name | replace("?", "") | replace(r/:\w*:/g, "") | trim -}}
+				</strong>
+			</{{ "a" if comment.author.url else "span" }}>
+		{% else %}
+			<span class="[ author-wrapper ]">
+				<strong class="[ author-name ]">Anonymous</strong>
+			</span>
+		{% endif %}
+		<small>
+			<a href="{{ comment.url }}">
+				{%- if comment.published -%}
+					{%- set commentPublished = comment.published -%}
+				{%- else -%}
+					{%- set commentPublished = comment["wm-received"] -%}
+				{%- endif -%}
+				<time class="[ dt-published ]" datetime="{{ commentPublished }}">{{ commentPublished | dateToLocaleLongShort }}</time>
+			</a>
+		</small>
+	</div>
+	{%- if comment.content.html -%}
+		{{ comment.content.html | removeRandomLink | safe }}
+	{%- else -%}
+		{{ comment.content.value | removeRandomLink | safe }}
+	{%- endif -%}
+</li>
