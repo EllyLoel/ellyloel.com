@@ -11,10 +11,15 @@ module.exports = (eleventyConfig) => {
 		"dateToLocaleDateFull",
 		require("./dateToLocaleDateFull.cjs")
 	);
+	eleventyConfig.addFilter(
+		"dateToLocaleLongShort",
+		require("./dateToLocaleLongShort.cjs")
+	);
 	eleventyConfig.addFilter("dateToRelative", require("./dateToRelative.cjs"));
 	eleventyConfig.addFilter("excerpt", require("./excerpt.cjs"));
 	eleventyConfig.addFilter("filterTagList", require("./filterTagList.cjs"));
 	eleventyConfig.addFilter("getAllTags", require("./getAllTags.cjs"));
+	eleventyConfig.addFilter("getDomain", require("./getDomain.cjs"));
 	eleventyConfig.addFilter(
 		"getLatestCollectionItemDate",
 		require("./getLatestCollectionItemDate.cjs")
