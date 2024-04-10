@@ -95,7 +95,14 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addPlugin(pluginSyntaxhighlight);
 	eleventyConfig.addPlugin(pluginWebmentions, {
 		domain: metadata.domain,
+		mentionTypes: {
+			comments: ["in-reply-to"],
+			likes: ["like-of"],
+			mentions: ["mention-of"],
+			reposts: ["repost-of"],
+		},
 		token: process.env.WEBMENTION_IO_API_KEY,
+		truncate: false,
 	});
 
 	// Internal plugins
