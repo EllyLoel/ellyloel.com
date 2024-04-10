@@ -10,22 +10,24 @@
 	transform: scale(0.75);
 	width: 300px;
 
-	& model-viewer {
+	& model-viewer,
+	& is-land--model-viewer {
+		display: block;
 		height: 100%;
 		transform: scale(1.5);
 		width: 100%;
+	}
 
-		& #poster {
-			height: 100%;
-			margin-inline: auto;
-			object-fit: contain;
-			pointer-events: none;
-		}
+	& #poster {
+		height: 100%;
+		margin-inline: auto;
+		object-fit: contain;
+		pointer-events: none;
+	}
 
-		& .progress-bar {
-			display: none;
-			visibility: hidden;
-		}
+	& .progress-bar {
+		display: none;
+		visibility: hidden;
 	}
 }
 
