@@ -26,7 +26,7 @@ eleventyImport:
 {%- include "crazy-filter.njk" -%}
 
 {%- set notes = collections.GardenSortedByDate -%}
-<ul id="feed" class="[ feed ]">
+<ul id="feed" class="[ feed ]" tabindex="-1">
 	{%- for note in notes -%}
 		{%- if note.data.archived !== true -%}
 			{%- if note.data.stage -%}

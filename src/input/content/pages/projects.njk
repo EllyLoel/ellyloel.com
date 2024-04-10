@@ -27,7 +27,7 @@ eleventyImport:
 {%- include "crazy-filter.njk" -%}
 
 {% set projects = collections.ProjectsSortedByDate %}
-<ul id="feed" class="[ feed ]">
+<ul id="feed" class="[ feed ]" tabindex="-1">
 	{%- for project in projects %}
 		{%- set title = project.data.title -%}
 		{%- set url = project.url -%}

@@ -25,7 +25,7 @@ eleventyImport:
 {%- include "crazy-filter.njk" -%}
 
 {%- set posts = collections.allSortedByDate -%}
-<ul id="feed" class="[ feed ]">
+<ul id="feed" class="[ feed ]" tabindex="-1">
 	{%- for post in posts %}
 		{%- if post.data.stage -%}
 			{%- set stage = post.data.stage -%}
