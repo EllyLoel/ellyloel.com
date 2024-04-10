@@ -54,18 +54,8 @@
 		}
 	}
 
-	/* .feed-item-card-header,
-	.feed-item-card-body {
-		font-size: var(--font-size-4);
-	} */
-
 	.feed-item-card-footer {
 		justify-content: space-between;
-
-		& > sl-tooltip > span {
-			font-size: 0.85em;
-			max-width: fit-content;
-		}
 
 		& > a {
 			background: none;
@@ -81,7 +71,7 @@
 		}
 	}
 
-	& .feed-item-card-title p {
+	& .feed-item-card-title :is(h3, .h3) {
 		inline-size: 100%;
 	}
 }
