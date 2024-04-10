@@ -14,29 +14,21 @@ But I'm not a designer who knows how to code, I am a design engineer. My brain v
 
 ## Some great ways of thinking about it
 
-<figure>
-  <blockquote>A front-of-the-front-end developer determines the look and feel of a `button`, while a back-of-the-front-end developer determines what happens when that `button` is clicked.</blockquote>
-  <figcaption>
-    — <cite>Brad Frost</cite>
-  </figcaption>
-</figure>
-<figure>
-  <blockquote>A front-of-the-front-end developer is a web developer who specializes in writing HTML, CSS, and presentational JavaScript code.</blockquote>
-	<blockquote>A back-of-the-front-end developer is a web developer who specializes in writing JavaScript code necessary to make a web application function properly.</blockquote>
-  <figcaption>
-    — <cite>Brad Frost</cite>
-  </figcaption>
-</figure>
+> "A front-of-the-front-end developer determines the look and feel of a `button`, while a back-of-the-front-end developer determines what happens when that `button` is clicked."
+
+— Brad Frost
+
+> "A front-of-the-front-end developer is a web developer who specializes in writing HTML, CSS, and presentational JavaScript code."
+> "A back-of-the-front-end developer is a web developer who specializes in writing JavaScript code necessary to make a web application function properly."
+
+— Brad Frost
 
 The same separation applies to the backend:
 
-<figure>
-  <blockquote>A Front-of-the-backend person writes PHP/JS/etc. scripts which perform the required actions such as inserting records into a database, sending off an e-mail, etc.</blockquote>
-  <blockquote>A Back-of-the-backend person provisions and maintains the infrastructure.</blockquote>
-  <figcaption>
-    — <cite>Bramus Van Damme</cite>
-  </figcaption>
-</figure>
+> "A Front-of-the-backend person writes PHP/JS/etc. scripts which perform the required actions such as inserting records into a database, sending off an e-mail, etc."
+> "A Back-of-the-backend person provisions and maintains the infrastructure."
+
+— Bramus Van Damme
 
 ## References
 

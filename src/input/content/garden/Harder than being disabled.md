@@ -5,6 +5,10 @@ created: 2022-10-18
 modified: 2022-10-18
 ---
 
+~~~ callout Heads up this is an old post
+This post hasn't been updated a long time, so it might be kinda crusty.
+~~~
+
 You know what's harder than being disabled, accepting that you're actually disabled.
 
 You know what's harder than accepting that you're actually disabled, not holding yourself up to internalised ableist expectations.
