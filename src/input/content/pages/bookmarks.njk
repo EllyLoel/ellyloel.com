@@ -23,7 +23,7 @@ eleventyImport:
 
 {%- include "crazy-filter.njk" -%}
 
-<ul id="feed" class="[ feed ]">
+<ul id="feed" class="[ feed ]" tabindex="-1">
 	{%- for bookmark in bookmarks.items -%}
 		{%- set title = bookmark.title -%}
 		{%- set url = "./" + bookmark.title | slugify + "/" -%}
