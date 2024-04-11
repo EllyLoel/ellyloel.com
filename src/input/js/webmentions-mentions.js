@@ -3,7 +3,7 @@ const renderMentions = async (mentions) => {
 		let meta;
 		try {
 			const response = await fetch(
-				`https://api.microlink.io/?url=${encodeURIComponent(mention.url)}`
+				`https://api.microlink.io/?url=${encodeURIComponent(mention.url)}&filter=title,lang,publisher,author`
 			);
 			const { data } = await response.json();
 			meta = data;
