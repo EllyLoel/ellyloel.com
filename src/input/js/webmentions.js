@@ -18,6 +18,7 @@ const renderWebmentions = async (webmentions) => {
 			case "in-reply-to":
 				comments.push(entry);
 				break;
+			case "bookmark-of":
 			case "mention-of":
 				mentions.push(entry);
 				break;
