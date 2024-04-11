@@ -98,7 +98,7 @@ module.exports = (eleventyConfig) => {
 		mentionTypes: {
 			comments: ["in-reply-to"],
 			likes: ["like-of"],
-			mentions: ["mention-of"],
+			mentions: ["bookmark-of", "mention-of"],
 			reposts: ["repost-of"],
 		},
 		token: process.env.WEBMENTION_IO_API_KEY,
