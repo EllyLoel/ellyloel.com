@@ -377,6 +377,7 @@ blockquote {
 summary {
 	border-radius: var(--radius-2);
 	margin: calc(var(--size-2) * -1) calc(var(--size-3) * -1);
+	overflow-wrap: break-word;
 	padding: var(--size-2) var(--size-3);
 }
 
