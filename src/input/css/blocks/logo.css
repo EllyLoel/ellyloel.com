@@ -1,21 +1,18 @@
-:is(.logo, .logo-inline) {
-	font-family: "Nanum Pen Script", sans-serif;
-	font-size: 1.5em; /* scales with the font size around it */
-}
-
-.logo {
-	text-decoration: none;
-}
-
 .logo-inline {
 	display: inline-block;
 	transform: translateY(0.1em); /* optical alignment */
+
+	.icon {
+		height: 1.25em;
+		transform: translateY(0.4em);
+		width: auto;
+	}
 }
 
 .logo-link {
 	transform: translateY(0.05em); /* optical alignment */
 
-	& .icon {
+	.icon {
 		aspect-ratio: 2.8182;
 		display: block;
 		height: 100%;
