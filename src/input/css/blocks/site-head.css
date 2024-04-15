@@ -5,10 +5,9 @@
 	.inner {
 		> div {
 			align-items: center;
-			column-gap: var(--size-3);
 			display: flex;
 			flex-wrap: wrap;
-			row-gap: var(--size-2);
+			gap: var(--size-2) var(--size-3);
 
 			> button {
 				all: unset;
@@ -65,8 +64,10 @@
 			background-color: transparent;
 		}
 
-		& > .logo {
-			font-size: var(--font-size-5);
+		> .logo {
+			height: 1.5em;
+			transform: translateY(0.15rem);
+			width: auto;
 		}
 	}
 

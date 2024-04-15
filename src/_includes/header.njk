@@ -3,9 +3,7 @@
 		<div>
 			<!-- link to home: http://microformats.org/wiki/rel-home -->
 			<a href="/" rel="home" class="[ u-url u-uid ] [ text-decoration-none ]"{% if page.url === "/" %} data-state="active" aria-current="page"{% endif %}>
-				<span class="[ logo ]" aria-hidden="true" title="Elly">
-					&lt;e//y&gt;
-				</span>
+				{%- icon "local:elly", class="logo" -%}
 				<span class="[ p-name ] [ visually-hidden ]">
 					Elly<span aria-hidden="true"> Loel</span>
 				</span>

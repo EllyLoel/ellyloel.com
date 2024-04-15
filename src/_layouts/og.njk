@@ -69,11 +69,15 @@
 
 				color: black;
 				font-size: 3rem;
-				font-family: 'Nanum Pen Script';
 				line-height: 1;
 
 				background-color: white;
 				mix-blend-mode: lighten;
+			}
+
+			h2 svg {
+				height: 0.8em;
+				transform: translateY(0.225em);
 			}
 		</style>
 		<link rel="stylesheet" href="/css/fonts.css">
@@ -107,6 +111,6 @@
       );
     </css-doodle>
 		{{ content | safe }}
-		<h2>{{ "<e//y>" | e }}</h2>
+		<h2>{% icon "local:elly" %}</h2>
 	</body>
 </html>
