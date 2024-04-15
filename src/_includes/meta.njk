@@ -3,12 +3,14 @@
 	{% set text = "Creating delightful, magical, and accessible art with code." %}
 	{% set desc = description %}
 	{% set ogTitle = "Elly Loel" %}
-	{% set ogUrl = "" %}
+	{% set ogUrl = "https://api.microlink.io/?url=https%3A%2F%2Fwww.ellyloel.com&screenshot=true&meta=false&embed=screenshot.url" %}
 {% else %}
 	{% set text = title %}
 	{% set desc = page.excerpt %}
 	{% set ogTitle = title %}
-	{% set ogUrl = page.url %}
+	{% set ogUrl -%}
+		https://api.microlink.io/?url=https%3A%2F%2Fwww.ellyloel.com%2Fog{{ page.url }}&screenshot=true&meta=false&embed=screenshot.url
+	{%- endset %}
 {% endif %}
 
 {# General #}
@@ -30,10 +32,10 @@
 <meta property="og:url" content="{{ absolutePageUrl }}">
 <meta property="og:locale" content="{{ metadata.locale }}">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:image" content="https://api.microlink.io/?url=https://ellyloel.com/og{{ ogUrl }}&screenshot=true&meta=false&embed=screenshot.url">
-<meta property="og:image" content="https://api.microlink.io/?url=https://ellyloel.com/og{{ ogUrl }}&screenshot=true&meta=false&embed=screenshot.url">
-<meta name="og:image" content="https://api.microlink.io/?url=https://ellyloel.com/og{{ ogUrl }}&screenshot=true&meta=false&embed=screenshot.url">
-<meta name="og:image:secure_url" content="https://api.microlink.io/?url=https://ellyloel.com/og{{ ogUrl }}&screenshot=true&meta=false&embed=screenshot.url">
+<meta property="twitter:image" content="{{ ogUrl }}">
+<meta property="og:image" content="{{ ogUrl }}">
+<meta name="og:image" content="{{ ogUrl }}">
+<meta name="og:image:secure_url" content="{{ ogUrl }}">
 <meta property="og:image:alt" content="A background of curved purple lines with the text “{{ text }}” ontop, Elly's logo is in the bottom right corner.">
 
 {# Icons #}
