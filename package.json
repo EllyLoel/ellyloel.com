@@ -57,7 +57,6 @@
 		"@aciccarello/netlify-plugin-webmentions": "^1.1.0",
 		"@eslint/js": "^8.57.0",
 		"@fortawesome/fontawesome-free": "^6.5.2",
-		"@fullhuman/postcss-purgecss": "^6.0.0",
 		"@photogabble/eleventy-plugin-interlinker": "^1.0.5",
 		"@rollup/plugin-node-resolve": "^15.2.3",
 		"@rollup/plugin-terser": "^0.4.4",
