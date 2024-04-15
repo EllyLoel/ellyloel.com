@@ -3,7 +3,6 @@ import "./theme-hue.js";
 import "./color-scheme-switcher-dialog.js";
 import "./scrollbar-width.js";
 import "./details-utils.js";
-import "./css-doodle.js";
 import "./howler.js";
 import "./iframe.js";
 import "./confetti.js";
