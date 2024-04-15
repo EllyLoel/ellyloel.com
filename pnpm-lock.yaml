@@ -84,6 +84,9 @@ devDependencies:
   '@fortawesome/fontawesome-free':
     specifier: ^6.5.2
     version: 6.5.2
+  '@fullhuman/postcss-purgecss':
+    specifier: ^6.0.0
+    version: 6.0.0(postcss@8.4.38)
   '@photogabble/eleventy-plugin-interlinker':
     specifier: ^1.0.5
     version: 1.0.5(@11ty/eleventy@2.0.1)
@@ -919,6 +922,15 @@ packages:
     resolution: {integrity: sha512-hRILoInAx8GNT5IMkrtIt9blOdrqHOnPBH+k70aWUAqPZPgopb9G5EQJFpaBx/S8zp2fC+mPW349Bziuk1o28Q==}
     engines: {node: '>=6'}
     requiresBuild: true
+    dev: true
+
+  /@fullhuman/postcss-purgecss@6.0.0(postcss@8.4.38):
+    resolution: {integrity: sha512-sUvk5PV7O5xvTJcxDYrQ00xlKtSxivvJdZrwgxE8F1GmNMs7w9U+dSbr83N/qEs9b+f+6QsZKXDs0k8nMjBIqA==}
+    peerDependencies:
+      postcss: ^8.0.0
+    dependencies:
+      postcss: 8.4.38
+      purgecss: 6.0.0
     dev: true
 
   /@google/model-viewer@3.4.0(three@0.160.1):
@@ -2027,6 +2039,11 @@ packages:
   /commander@10.0.1:
     resolution: {integrity: sha512-y4Mg2tXshplEbSGzx7amzPwKKOCGuoSRP/CjEdwwk0FOGlUbq6lKuoyDZTNZkmxHdJtp54hdfY/JUrdL7Xfdug==}
     engines: {node: '>=14'}
+    dev: true
+
+  /commander@12.0.0:
+    resolution: {integrity: sha512-MwVNWlYjDTtOjX5PiD7o5pK0UrFU/OYgcJfjjK4RaHZETNtjJqrZa9Y9ds88+A+f+d5lv+561eZ+yCKoS3gbAA==}
+    engines: {node: '>=18'}
     dev: true
 
   /commander@2.20.3:
@@ -6075,6 +6092,16 @@ packages:
   /punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
+    dev: true
+
+  /purgecss@6.0.0:
+    resolution: {integrity: sha512-s3EBxg5RSWmpqd0KGzNqPiaBbWDz1/As+2MzoYVGMqgDqRTLBhJW6sywfTBek7OwNfoS/6pS0xdtvChNhFj2cw==}
+    hasBin: true
+    dependencies:
+      commander: 12.0.0
+      glob: 10.3.12
+      postcss: 8.4.38
+      postcss-selector-parser: 6.0.16
     dev: true
 
   /qs@6.12.0:
