@@ -88,8 +88,13 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addPlugin(pluginPostCss);
 	eleventyConfig.addPlugin(pluginRollup, {
 		rollupOptions: "rollup.config.js",
-		scriptGenerator: (file) =>
-			`<script src="${file}" type="module" defer></script>`,
+		scriptGenerator: (file, attributes = {}) => {
+			let attributesString = " ";
+			for (const [key, value] of Object.entries(attributes)) {
+				attributesString += `${key}="${value}" `;
+			}
+			return `<script src="${file}" type="module"${attributesString.trimEnd()}></script>`;
+		},
 	});
 	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addPlugin(pluginSyntaxhighlight);
