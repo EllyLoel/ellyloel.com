@@ -1,4 +1,5 @@
 .dt-published,
 .dt-updated {
-	font-family: "JetBrains Mono", var(--font-mono);
+	font-family: "JetBrains Mono", "JetBrains Mono Fallback", var(--font-mono);
+	letter-spacing: normal;
 }

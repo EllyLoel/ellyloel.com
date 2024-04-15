@@ -1,4 +1,4 @@
 .detitlify {
-	font-family: "Work Sans", var(--font-sans);
+	font-family: var(--font-sans);
 	font-size: var(--font-size-3);
 }
