@@ -4,24 +4,23 @@
 
 	<div class="[ site-footer ]">
 		<css-doodle click-to-update aria-hidden="true">
-		:doodle {
-			@grid: 20 / 100% 100%;
-			background: var(--neutral-base);
-			font-family: sans-serif;
-			overflow: hidden;
-		}
-		:after {
-			content: \@hex.@r(0x2500, 0x257f);
-			color: var(--accent-@round.@rand(0, 3));
-			font-size: 8vmin;
-		}
-	</css-doodle>
+			:doodle {
+				@grid: 20 / 100% 100%;
+				background: var(--neutral-base);
+				font-family: sans-serif;
+				overflow: hidden;
+			}
+			:after {
+				content: \@hex.@r(0x2500, 0x257f);
+				color: var(--accent-@round.@rand(0, 3));
+				font-size: 8vmin;
+			}
+		</css-doodle>
 		<div class="[ inner ] [ wrapper ]" style="--wrapper-size: 100ch;">
 
-			{% image
+			{%- image
 			"./src/assets/img/coding.png",
-			"A digital drawing of me, a blonde woman in a white sweater with headphones on sitting at my desk in front of a keyboard and monitor coding."
- %}
+			"A digital drawing of me, a blonde woman in a white sweater with headphones on sitting at my desk in front of a keyboard and monitor coding." -%}
 
 			<div class="[ sitemap ] [ flow ]">
 				<h2>Sitemap</h2>

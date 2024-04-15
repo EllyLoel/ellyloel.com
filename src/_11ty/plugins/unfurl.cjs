@@ -24,7 +24,7 @@ module.exports = (eleventyConfig) => {
 							: ``
 				  }${
 						props?.image?.url
-							? `<img alt="" class="[ image unfurl-image ]" decoding="async" loading="lazy" src="${props.image.url}" width="${props.image.width}" height="${props.image.height}">`
+							? `<img alt="" class="[ image unfurl-image ]" decoding="async" loading="lazy" src="https://res.cloudinary.com/ellyloel/image/fetch/f_auto/q_auto/ar_2.0,c_auto,g_auto/${props.image.url}" width="${props.image.width}" height="${props.image.height}">`
 							: ``
 				  }</p></article>`
 				: ``;
