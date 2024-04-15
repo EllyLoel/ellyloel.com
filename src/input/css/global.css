@@ -7,15 +7,16 @@ html {
 	background-color: var(--neutral-base);
 	caret-color: var(--link);
 	color: var(--neutral-text);
+	font-family: var(--font-sans), "Noto Color Emoji", "Apple Color Emoji",
+		"Twemoji Mozilla", "Segoe UI Emoji", "Segoe UI Symbol", "EmojiOne Color",
+		"Android Emoji";
+	font-size: calc(0.1vw + 0.1vh + 1em);
+	font-weight: var(--font-weight-body-normal);
+	letter-spacing: 0.04em;
 }
 
 body {
-	font-family: "Work Sans", var(--font-sans), "Noto Color Emoji",
-		"Apple Color Emoji", "Twemoji Mozilla", "Segoe UI Emoji", "Segoe UI Symbol",
-		"EmojiOne Color", "Android Emoji";
 	font-size: var(--font-size-2);
-	font-weight: var(--font-weight-body-normal);
-	overflow-x: hidden;
 
 	& > :is(header, main, footer) {
 		isolation: isolate;
@@ -48,13 +49,15 @@ main {
 	--font-softness: 100;
 
 	color: var(--neutral-text-contrast);
-	font-family: Fraunces, var(--font-serif), "Noto Color Emoji",
+	font-family: Fraunces, "Fraunces Fallback: Times New Roman",
+		"Fraunces Fallback: Roboto", var(--font-serif), "Noto Color Emoji",
 		"Apple Color Emoji", "Twemoji Mozilla", "Segoe UI Emoji", "Segoe UI Symbol",
 		"EmojiOne Color", "Android Emoji";
 	font-optical-sizing: auto;
 	font-variation-settings: "SOFT" var(--font-softness),
 		"WONK" var(--font-wonkiness);
 	font-weight: var(--font-weight-7);
+	letter-spacing: normal;
 	text-wrap: balance;
 }
 
@@ -126,9 +129,10 @@ code,
 kbd,
 samp,
 pre {
-	font-family: "JetBrains Mono", var(--font-mono), "Noto Color Emoji",
-		"Apple Color Emoji", "Twemoji Mozilla", "Segoe UI Emoji", "Segoe UI Symbol",
-		"EmojiOne Color", "Android Emoji";
+	font-family: "JetBrains Mono", "JetBrains Mono Fallback", var(--font-mono),
+		"Noto Color Emoji", "Apple Color Emoji", "Twemoji Mozilla", "Segoe UI Emoji",
+		"Segoe UI Symbol", "EmojiOne Color", "Android Emoji";
+	letter-spacing: normal;
 }
 
 pre {
@@ -343,18 +347,25 @@ video {
 /* Blockquote */
 
 blockquote {
+	--font-wonkiness: 1;
+	--font-softness: 100;
+
 	background-color: var(--neutral-bg-subtle);
 	border-bottom-right-radius: var(--radius-3);
 	border-left: var(--border-size-3) solid var(--accent-border);
 	border-top-right-radius: var(--radius-3);
 	display: grid;
-	font-family: Fraunces, var(--font-serif), "Noto Color Emoji",
+	font-family: Fraunces, "Fraunces Fallback: Times New Roman",
+		"Fraunces Fallback: Roboto", var(--font-serif), "Noto Color Emoji",
 		"Apple Color Emoji", "Twemoji Mozilla", "Segoe UI Emoji", "Segoe UI Symbol",
 		"EmojiOne Color", "Android Emoji";
 	font-size: var(--font-size-3);
 	font-style: italic;
+	font-variation-settings: "SOFT" var(--font-softness),
+		"WONK" var(--font-wonkiness);
 	font-weight: 420;
 	gap: var(--size-3);
+	letter-spacing: normal;
 	padding-block: var(--size-3);
 	padding-inline: var(--size-5);
 	text-wrap: balance;
