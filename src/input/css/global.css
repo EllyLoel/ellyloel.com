@@ -39,7 +39,8 @@ main {
 		--flow-space: 1em;
 	}
 
-	@media (width >= 768px) {
+	@media (width >= 48em) {
+		/* 768px */
 		margin-block: var(--size-10);
 	}
 }
@@ -402,7 +403,8 @@ details[open] > summary {
 	overflow-x: auto;
 	position: relative;
 
-	@media (any-pointer: fine) and (width <= 735px) {
+	@media (any-pointer: fine) and (width <= 45.9375em) {
+		/* 735px */
 		&,
 		& * {
 			border-bottom-left-radius: 0 !important;

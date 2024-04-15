@@ -30,7 +30,7 @@
 		}
 	}
 
-	@media (width >= 768px) {
+	@media (width >= 48em) { /* 768px */
 		grid-template-columns: auto var(--size-8) 1fr;
 
 		& h1 {

@@ -52,7 +52,7 @@
 			grid-area: edit;
 		}
 
-		@media (width >= 1024px) {
+		@media (width >= 64em) { /* 1024px */
 			column-gap: var(--size-9);
 			grid-template-areas:
 				"sitemap image"

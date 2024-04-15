@@ -7,7 +7,7 @@
 		margin-block-start: var(--size-7);
 	}
 
-	@media (width >= 768px) {
+	@media (width >= 48em) { /* 768px */
 		& > li + li {
 			margin-block-start: var(--size-4);
 		}

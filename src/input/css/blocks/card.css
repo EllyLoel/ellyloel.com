@@ -24,7 +24,7 @@
 		transition: box-shadow 150ms var(--ease-1);
 	}
 
-	@media (width >= 35em) {
+	@media (width >= 35em) { /* 560px */
 		grid-template-areas: "content image";
 	}
 

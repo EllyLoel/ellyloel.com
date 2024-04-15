@@ -45,7 +45,7 @@
 			}
 		}
 
-		@media (width >= 768px) {
+		@media (width >= 48em) { /* 768px */
 			grid-template-columns: 2fr 1fr;
 			row-gap: var(--size-8);
 		}
