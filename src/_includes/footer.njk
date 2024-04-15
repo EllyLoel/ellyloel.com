@@ -5,7 +5,7 @@
 	<div class="[ site-footer ]">
 		<css-doodle click-to-update aria-hidden="true">
 		:doodle {
-			@grid: 20 / 100vw 100%;
+			@grid: 20 / 100% 100%;
 			background: var(--neutral-base);
 			font-family: sans-serif;
 			overflow: hidden;
@@ -50,6 +50,9 @@
 				<li>
 					<a href="/"{% if page.url === "/" %} aria-current="page"{% endif %} class="[ logo-link ]">
 						{%- icon "local:elly" -%}
+						<span class="[ visually-hidden ]">
+							Elly
+						</span>
 					</a>
 				</li>
 				<li>
