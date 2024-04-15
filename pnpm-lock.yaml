@@ -8,6 +8,9 @@ patchedDependencies:
   '@aciccarello/webmention@1.4.6':
     hash: gmiubv33cktpzud3dxubd6cvie
     path: patches/@aciccarello__webmention@1.4.6.patch
+  eleventy-plugin-rollup@1.3.0:
+    hash: 6bkplkunu2lg22hn2qr2pbc7hq
+    path: patches/eleventy-plugin-rollup@1.3.0.patch
 
 dependencies:
   '@11ty/is-land':
@@ -134,7 +137,7 @@ devDependencies:
     version: 1.0.4
   eleventy-plugin-rollup:
     specifier: ^1.3.0
-    version: 1.3.0
+    version: 1.3.0(patch_hash=6bkplkunu2lg22hn2qr2pbc7hq)
   eleventy-plugin-unfurl:
     specifier: ^1.0.0
     version: 1.0.0
@@ -2922,9 +2925,10 @@ packages:
       - ts-node
     dev: true
 
-  /eleventy-plugin-rollup@1.3.0:
+  /eleventy-plugin-rollup@1.3.0(patch_hash=6bkplkunu2lg22hn2qr2pbc7hq):
     resolution: {integrity: sha512-Ylfp5aeRY+3BkflizlM688KxX6c2efoHKtDNb8Udb2gSVf/fSO+0SAC+dzbqwhX1MopumEgMM77iEApxurFbfg==}
     dev: true
+    patched: true
 
   /eleventy-plugin-unfurl@1.0.0:
     resolution: {integrity: sha512-pN2b4oRQtzxy9a1mVHd17MfFvM69CJA71lAejSkWIWEbfGeO9UrEWD1sPwoHTu+lNwLb0PKuy0QOP9KPU80Phw==}

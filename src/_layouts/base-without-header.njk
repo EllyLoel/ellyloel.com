@@ -27,7 +27,8 @@
 		{%- if page.url !== "/bookmarks/" and page.url |includes("/bookmarks/") -%}
 			{%- rollup "src/input/js/lite-youtube.js" | url -%}
 		{%- endif -%}
-		<script data-goatcounter="https://ellyloel.goatcounter.com/count" src="//gc.zgo.at/count.js" defer></script>
+		{%- set countPath = "src/input/js/count.js" | url -%}
+		{%- rollup countPath, { "data-goatcounter": "https://ellyloel.goatcounter.com/count" } -%}
 
 		{%- include "meta.njk" -%}
 	</head>

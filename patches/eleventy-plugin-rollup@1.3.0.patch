@@ -1,0 +1,26 @@
+diff --git a/index.js b/index.js
+index 027a70c590e7b8cb52abd062a13d36cf8970a8ab..c86869ea6d5d901f982d4bcf99966d66b8732368 100644
+--- a/index.js
++++ b/index.js
+@@ -149,7 +149,7 @@ class EleventyPluginRollup {
+    * @param {boolean} [isFileRelative=false] Should the file resolve relative to the current template?
+    * @returns
+    */
+-  async rollupperShortcode(eleventyInstance, src, isFileRelative = false) {
++  async rollupperShortcode(eleventyInstance, src, attributes, isFileRelative = false) {
+     // Return early if page is not rendered to filesystem to avoid errors and remove unnecessary files from bundle.
+     if (eleventyInstance.page.outputPath === false) {
+       return;
+@@ -198,10 +198,10 @@ class EleventyPluginRollup {
+       )
+       .replaceAll('\\', '/');
+ 
+-    return this.scriptGenerator(importPath, eleventyInstance);
++    return this.scriptGenerator(importPath, attributes, eleventyInstance);
+   }
+ 
+-  defaultScriptGenerator(filePath, eleventyInstance) {
++  defaultScriptGenerator(filePath, attributes, eleventyInstance) {
+     return `<script src="${filePath}" type="module"></script>`;
+   }
+ 
