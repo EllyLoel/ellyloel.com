@@ -3,7 +3,7 @@ title: Front-end development’s identity crisis
 stage: complete
 tags:
   - Working
-  - Web design
+  - Web Design
 created: 2024-03-29
 modified: 2024-03-29
 syndication-url: ""
