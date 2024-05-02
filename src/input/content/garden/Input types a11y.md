@@ -1,6 +1,6 @@
 ---
 title: Input types a11y
-stage: seedling
+stage: budding
 tags:
   - A11y
 created: 2023-03-07
