@@ -30,7 +30,7 @@
 		"lint:js": "eslint src/input/js/ --fix",
 		"deploy": "netlify deploy -p --build"
 	},
-	"packageManager": "pnpm@9.0.6",
+	"packageManager": "pnpm@9.1.1",
 	"dependencies": {
 		"@11ty/is-land": "^4.0.0",
 		"@google/model-viewer": "^3.4.0",
