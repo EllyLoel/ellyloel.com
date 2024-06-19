@@ -7,7 +7,6 @@
 	}
 
 	& > :is(figure, picture, .table-container, .iframe-container) {
-		grid-column: 1 / 4;
 		margin-inline: auto;
 		max-inline-size: 100%;
 		text-align: center;
