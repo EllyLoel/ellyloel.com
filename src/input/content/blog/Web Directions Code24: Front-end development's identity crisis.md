@@ -461,7 +461,7 @@ Image description: A screenshot of [userinyerface.com](https://userinyerface.com
 
 ![](./src/assets/img/wdc24-slides/60.jpg)
 
-First and foremost, don’t give up! Even through the current landscape of front-end development presents challenges for us web designers we owe it to the people using our sites to not give in to the status quo.
+First and foremost, don’t give up! Even though the current landscape of front-end development presents challenges for us web designers we owe it to the people using our sites to not give in to the status quo.
 
 ## Slide 62
 
@@ -509,7 +509,7 @@ Also, we should start changing how we refer to ourselves. Whether it be when you
 
 ![](./src/assets/img/wdc24-slides/68.jpg)
 
-Once you’ve changed how you’re referring to yourself then it’ll be much easier to change how others refer to you. It might not be easy, but it will be easier. Talk to your manager, see if you can change how they refer to you, both officially and unofficially. If you can get your title changed that’s amazing. If not you should still absolutely be able to get everyone to change how they refer to basically everywhere with the only exception being things like official documents.
+Once you’ve changed how you’re referring to yourself then it’ll be much easier to change how others refer to you. It might not be easy, but it will be easier. Talk to your manager, see if you can change how they refer to you, both officially and unofficially. If you can get your title changed that’s amazing. If not you should still absolutely be able to get everyone to change how they refer to you basically everywhere with the only exception being things like official documents.
 
 ## Slide 70
 
