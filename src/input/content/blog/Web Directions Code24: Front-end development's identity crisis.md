@@ -12,6 +12,9 @@ syndication-url: ""
 
 This is a more accessible and self hosted version of [my publicly available slides on Notist](https://noti.st/ellyloel/0kzRrD/slides).
 
+Checkout the recording of my talk on Conffab:
+{% unfurl "https://conffab.com/presentation/front-end-developments-identity-crisis/?gl=E8kMaI8SANNY" %}
+
 ## Slide 1
 
 ![](./src/assets/img/wdc24-slides/0.jpg)
