@@ -120,5 +120,8 @@
 			"@aciccarello/webmention@1.4.6": "patches/@aciccarello__webmention@1.4.6.patch",
 			"eleventy-plugin-rollup@1.3.0": "patches/eleventy-plugin-rollup@1.3.0.patch"
 		}
+	},
+	"engines": {
+		"pnpm": "9.14.2^"
 	}
 }
