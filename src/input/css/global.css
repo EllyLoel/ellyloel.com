@@ -1,5 +1,5 @@
 @view-transition {
-  navigation: auto;
+	navigation: auto;
 }
 
 /* stylelint-disable font-family-no-missing-generic-family-keyword */
@@ -286,23 +286,35 @@ hr {
 /* iFrames */
 
 :not(lite-youtube) > iframe {
-	border: var(--border-size-2) solid var(--neutral-border);
 	border-radius: var(--radius-2);
-	inline-size: 100ch;
+	inline-size: 100cqi;
 	min-block-size: 400px;
 	min-inline-size: 175px;
-	padding: var(--size-3);
-	resize: both;
+
+	&[data-zoom] {
+		inline-size: max(100%, 100cqi);
+		zoom: var(--zoom, unset);
+	}
+
+	&[data-resize] {
+		padding: var(--size-3);
+		resize: both;
+	}
 }
 
 .iframe-container {
 	block-size: fit-content;
+	border: var(--border-size-2) solid var(--neutral-border);
 	border-radius: var(--radius-2);
 	inline-size: fit-content;
-	overflow: hidden;
+	overflow: clip;
 	position: relative;
 
-	&::after {
+	&:has([data-zoom]) {
+		inline-size: max(100%, 100cqi);
+	}
+
+	&:has([data-resize])::after {
 		block-size: var(--size-3);
 		border-left: var(--size-3) solid transparent;
 		border-right: var(--size-3) solid transparent;
