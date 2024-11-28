@@ -90,37 +90,37 @@ In this section let's look at some common uses for Flexbox:
 #### Distributed navigation
 
 <div class="[ iframe-container ]">
-	<iframe src="https://mdn.github.io/css-examples/flexbox/use-cases/navigation.html" loading="lazy"></iframe>
+	<iframe data-resize src="https://mdn.github.io/css-examples/flexbox/use-cases/navigation.html" loading="lazy"></iframe>
 </div>
 
 #### Split navigation
 
 <div class="[ iframe-container ]">
-	<iframe src="https://mdn.github.io/css-examples/flexbox/use-cases/split-navigation.html" loading="lazy"></iframe>
+	<iframe data-resize src="https://mdn.github.io/css-examples/flexbox/use-cases/split-navigation.html" loading="lazy"></iframe>
 </div>
 
 #### Centring an element
 
 <div class="[ iframe-container ]">
-	<iframe src="https://mdn.github.io/css-examples/flexbox/use-cases/center.html" loading="lazy"></iframe>
+	<iframe data-resize src="https://mdn.github.io/css-examples/flexbox/use-cases/center.html" loading="lazy"></iframe>
 </div>
 
 #### Card layout pushing footer down
 
 <div class="[ iframe-container ]">
-	<iframe src="https://mdn.github.io/css-examples/flexbox/use-cases/cards.html" loading="lazy"></iframe>
+	<iframe data-resize src="https://mdn.github.io/css-examples/flexbox/use-cases/cards.html" loading="lazy"></iframe>
 </div>
 
 #### Media objects
 
 <div class="[ iframe-container ]">
-	<iframe src="https://mdn.github.io/css-examples/flexbox/use-cases/media.html" loading="lazy"></iframe>
+	<iframe data-resize src="https://mdn.github.io/css-examples/flexbox/use-cases/media.html" loading="lazy"></iframe>
 </div>
 
 #### Form controls
 
 <div class="[ iframe-container ]">
-	<iframe src="https://mdn.github.io/css-examples/flexbox/use-cases/label-input-button.html" loading="lazy"></iframe>
+	<iframe data-resize src="https://mdn.github.io/css-examples/flexbox/use-cases/label-input-button.html" loading="lazy"></iframe>
 </div>
 
 ## CSS Grid
@@ -142,13 +142,13 @@ In this section let's look at some common uses for CSS Grid:
 #### Responsive 1-3 column holy grail layout
 
 <div class="[ iframe-container ]">
-	<iframe src="https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout/_sample_.a_responsive_layout_with_1_to_3_fluid_columns_using_grid-template-areas.html" loading="lazy"></iframe>
+	<iframe data-resize src="https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout/_sample_.a_responsive_layout_with_1_to_3_fluid_columns_using_grid-template-areas.html" loading="lazy"></iframe>
 </div>
 
 #### RAM (Repeat, Auto, Minmax)
 
 <div class="[ iframe-container ]">
-	<iframe title="Grid by Example 28: minmax() in auto-fill repeating tracks" src="https://codepen.io/rachelandrew/embed/preview/GZQYOL?default-tab=css%2Cresult&editable=true&theme-id=light" loading="lazy" allowtransparency="true" allowfullscreen="true">
+	<iframe data-resize title="Grid by Example 28: minmax() in auto-fill repeating tracks" src="https://codepen.io/rachelandrew/embed/preview/GZQYOL?default-tab=css%2Cresult&editable=true&theme-id=light" loading="lazy" allowtransparency="true" allowfullscreen="true">
 		See the Pen <a href="https://codepen.io/rachelandrew/pen/GZQYOL">
 		Grid by Example 28: minmax() in auto-fill repeating tracks</a> by rachelandrew (<a href="https://codepen.io/rachelandrew">@rachelandrew</a>)
 		on <a href="https://codepen.io">CodePen</a>.
@@ -158,7 +158,7 @@ In this section let's look at some common uses for CSS Grid:
 #### Different sized grid items
 
 <div class="[ iframe-container ]">
-	<iframe title="CSS Grid: Multiple image hero block" src="https://codepen.io/rachelandrew/embed/preview/QKwvxJ?default-tab=css%2Cresult&editable=true&theme-id=light" loading="lazy" allowtransparency="true" allowfullscreen="true">
+	<iframe data-resize title="CSS Grid: Multiple image hero block" src="https://codepen.io/rachelandrew/embed/preview/QKwvxJ?default-tab=css%2Cresult&editable=true&theme-id=light" loading="lazy" allowtransparency="true" allowfullscreen="true">
 		See the Pen <a href="https://codepen.io/rachelandrew/pen/QKwvxJ">
 		CSS Grid: Multiple image hero block</a> by rachelandrew (<a href="https://codepen.io/rachelandrew">@rachelandrew</a>)
 		on <a href="https://codepen.io">CodePen</a>.
@@ -267,9 +267,9 @@ A CSS layout mode, sometimes called layout, is an algorithm that determines the 
 
 ![](./src/assets/img/layout-mode-cheat-sheet.png)
 
-~~~ callout Warning
+```callout Warning
 Developers used to push table and float to the limit to layout pages. This is now considered a bad practice, as you should use the best layout mode for the job, reserving table and float for what they were originally designed to do.
-~~~
+```
 
 ## The verdict
 
