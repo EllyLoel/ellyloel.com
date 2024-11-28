@@ -29,7 +29,7 @@
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
 	background: #fbfbfb;
-	color: white;
+	color: black;
 }
 
 :not(pre) > code[class*="language-"] {
@@ -180,7 +180,7 @@ pre[class*="language-"] {
 	:not(pre) > code[class*="language-"],
 	pre[class*="language-"] {
 		background: #fbfbfb;
-		color: white;
+		color: black;
 	}
 
 	.token:is(.comment, .prolog, .cdata) {
