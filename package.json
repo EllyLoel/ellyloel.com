@@ -121,6 +121,7 @@
 			"eleventy-plugin-rollup@1.3.0": "patches/eleventy-plugin-rollup@1.3.0.patch"
 		}
 	},
+	"packageManager": "pnpm@9.14.2",
 	"engines": {
 		"pnpm": "9.14.2^"
 	}
