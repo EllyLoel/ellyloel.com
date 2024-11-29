@@ -123,6 +123,7 @@
 	},
 	"packageManager": "pnpm@9.14.2",
 	"engines": {
-		"pnpm": "9.14.2^"
+		"pnpm": "9.14.2^",
+		"node": "22.11.0^"
 	}
 }
