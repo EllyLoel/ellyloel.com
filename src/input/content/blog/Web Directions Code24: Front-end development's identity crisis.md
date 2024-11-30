@@ -7,7 +7,9 @@ tags:
   - Web Design
 created: 2024-06-19
 modified: 2024-06-19
-syndication-url: ""
+syndication:
+  - "https://front-end.social/@elly/112646696834043099"
+  - "https://bsky.app/profile/ellyloel.com/post/3kvd7uzec3t24"
 ---
 
 This is a more accessible and self hosted version of [my publicly available slides on Notist](https://noti.st/ellyloel/0kzRrD/slides).

@@ -6,7 +6,9 @@ tags:
   - Web Design
 created: 2024-03-29
 modified: 2024-03-29
-syndication-url: ""
+syndication:
+  - "https://front-end.social/@elly/112181535785151957"
+  - "https://bsky.app/profile/ellyloel.com/post/3kounk7mao622"
 ---
 
 I’m not a “[\[full-stack\] developer](https://bradfrost.com/blog/post/full-stack-developers/)”, regardless of what my last job title says.
