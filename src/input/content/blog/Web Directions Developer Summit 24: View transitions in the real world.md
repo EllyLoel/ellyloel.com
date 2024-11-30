@@ -7,6 +7,9 @@ tags:
   - Web Design
 created: 2024-11-28
 modified: 2024-11-28
+syndication:
+  - "https://front-end.social/@elly/113568897446114657"
+  - "https://bsky.app/profile/ellyloel.com/post/3lc4rebeqsc2q"
 ---
 
 ## [Check out the slides here](https://view-transitions-irl.netlify.app/)

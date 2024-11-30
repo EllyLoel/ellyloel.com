@@ -9,7 +9,8 @@ tags:
   - Disability
 created: 2024-03-18
 modified: 2024-03-23
-syndication-url: "https://front-end.social/@elly/112118705289157048"
+syndication:
+  - "https://front-end.social/@elly/112118705289157048"
 ---
 
 I thought I'd share my current musings. With the hope that it might either find me some answers from those in similar situations or maybe help someone else in a similar situation feel less alone.
