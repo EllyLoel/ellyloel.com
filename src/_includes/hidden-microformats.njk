@@ -10,10 +10,3 @@
 		<a rel="syndication" class="[ u-syndication ]" href="{{ entry }}" hidden=""></a>
 	{%- endfor -%}
 {% endif %}
-<a href="https://brid.gy/publish/mastodon" class="p-bridgy-omit-link" hidden=""></a>
-<a href="https://brid.gy/publish/bluesky" class="p-bridgy-omit-link" hidden=""></a>
-<p class="p-bridgy-mastodon-content p-bridgy-bluesky-content" hidden="">{{ title }}
-	{%- if bookmark.link -%}
-		<br> 🔖 {{ bookmark.link }}
-	{%- endif -%}
-	<br> 🔗 {{ link }}</p>
