@@ -34,6 +34,11 @@ module.exports = async () => {
 			return item;
 		});
 		const newItems = data.items.map((item) => {
+			if (item.highlights.length > 0) {
+				for (let i = 0; i < item.highlights.length; i++) {
+					item.highlights[i] = item.highlights[i].text;
+				}
+			}
 			item.id = item._id;
 			delete item._id;
 			return item;
