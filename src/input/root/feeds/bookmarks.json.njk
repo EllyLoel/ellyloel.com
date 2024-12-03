@@ -26,7 +26,8 @@ permalink: "bookmarks.json"
 			{%- if post.data.bookmark.tags -%}
 			"tags": [
 				{%- for tag in post.data.bookmark.tags -%}
-					{%- if tag !== "Bookmarks" -%}
+					{%- if ["Bookmarks", "YouTube"] | includes(tag) -%}
+					{%- else -%}
 						"{{ tag }}"{% if not loop.last %}{{ ",\n" }}{% endif %}
 					{%- endif -%}
 				{%- endfor %}
