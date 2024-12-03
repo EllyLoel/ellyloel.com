@@ -20,9 +20,11 @@ permalink: "bookmarks/{{ bookmark.title | slugify }}/"
 
 {%- if bookmark.highlights -%}
 	{%- for highlight in bookmark.highlights -%}
-		<blockquote>
-			{{ highlight.text | nl2br | replace(r/(<br \/>\n)+/gm, "<br><br>") | safe }}
-		</blockquote>
+		{%- if highlight -%}
+			<blockquote>
+				{{ highlight | nl2br | replace(r/(<br \/>\n)+/gm, "<br><br>") | safe }}
+			</blockquote>
+		{%- endif -%}
 	{%- endfor -%}
 {%- endif -%}
 

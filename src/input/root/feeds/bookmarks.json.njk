@@ -20,9 +20,12 @@ permalink: "bookmarks.json"
 			"url": "{{ absolutePostUrl }}",
 			"title": "{{ post.data.title }}",
 			"content_html": {% if post.templateContent %}{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | dump | safe }}{% else %}""{% endif %},
-			{%- if post.data.modified -%}
+			{%- if post.data.bookmark.link %}
+			"external_url": "{{ post.data.bookmark.link }}",
+			{% endif -%}
+			{%- if post.data.modified %}
 			"date_modified": "{{ post.data.modified | dateObj | dateToRfc3339 }}",
-			{%- endif -%}
+			{% endif -%}
 			"date_published": "{% if post.data.created %}{{ post.data.created | dateObj | dateToRfc3339 }}{% else %}{{ post.data.date | dateObj | dateToRfc3339 }}{% endif %}"
 		}{%- if not loop.last %},{% endif %}
 		{%- endfor %}
