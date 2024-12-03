@@ -1,0 +1,33 @@
+---
+permalink: "feed.json"
+---
+{
+	"version": "https://jsonfeed.org/version/1.1",
+	"title": "{{ metadata.title }}",
+	"language": "{{ metadata.lang }}",
+	"home_page_url": "{{ metadata.url }}",
+	"feed_url": "{{ '/feed.json' | absoluteUrl(metadata.url) }}",
+	"description": "{{ metadata.description }}",
+	"author": {
+		"name": "{{ metadata.author.name }}",
+		"url": "{{ metadata.author.url }}"
+	},
+	"items": [
+		{%- for post in collections.notBookmarksSortedByDate %}
+	{%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
+		{
+			"id": "{{ absolutePostUrl }}",
+			"url": "{{ absolutePostUrl }}",
+			"title": "{{ post.data.title }}",
+			"content_html": {% if post.templateContent %}{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | dump | safe }}
+	{% else %}""{% endif %},
+			{%- if post.data.modified -%}
+			"date_modified": "{{ post.data.modified | dateObj | dateToRfc3339 }}",
+			{%- endif -%}
+			"date_published": "{% if post.data.created %}{{ post.data.created | dateObj | dateToRfc3339 }}
+	{% else %}{{ post.data.date | dateObj | dateToRfc3339 }}
+	{% endif %}"
+		}{% if not loop.last %},{% endif %}
+{%- endfor %}
+]
+}
