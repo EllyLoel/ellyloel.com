@@ -31,7 +31,7 @@ permalink: "feed.json"
 					{%- set tags = post.data.tags -%}
 				{%- endif -%}
 				{%- for tag in tags -%}
-					{%- if ["Blog", "Bookmarks", "Garden", "Projects", "TIL"] | includes(tag) -%}
+					{%- if ["Blog", "Bookmarks", "Garden", "Projects", "TIL", "YouTube"] | includes(tag) -%}
 					{%- else -%}
 						"{{ tag }}"{% if not loop.last %}{{ ",\n" }}{% endif %}
 					{%- endif -%}
