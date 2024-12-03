@@ -1,30 +1,30 @@
 {%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(metadata.url) }}{%- endset -%}
 {%- if title === "Home" -%}
-	{% set text = "Creating delightful, magical, and accessible art with code." %}
-	{% set desc = description %}
-	{% set ogTitle = "Elly Loel" %}
-	{% set ogUrl = "https://api.microlink.io/?url=https%3A%2F%2Fwww.ellyloel.com&screenshot=true&meta=false&embed=screenshot.url" %}
-{% else %}
-	{% set text = title %}
-	{% set desc = page.excerpt %}
-	{% set ogTitle = title %}
-	{% set ogUrl -%}
+	{%- set text = "Creating delightful, magical, and accessible art with code." -%}
+	{%- set desc = description -%}
+	{%- set ogTitle = "Elly Loel" -%}
+	{%- set ogUrl = "https://api.microlink.io/?url=https%3A%2F%2Fwww.ellyloel.com&screenshot=true&meta=false&embed=screenshot.url" -%}
+{%- else -%}
+	{%- set text = title -%}
+	{%- set desc = page.excerpt -%}
+	{%- set ogTitle = title -%}
+	{%- set ogUrl -%}
 		https://api.microlink.io/?url=https%3A%2F%2Fwww.ellyloel.com%2Fog{{ page.url }}&screenshot=true&meta=false&embed=screenshot.url
-	{%- endset %}
-{% endif %}
+	{%- endset -%}
+{%- endif -%}
 
-{# General #}
-<meta name="description" content="{{ desc }}">
+{#- General -#}
+<meta name="description" content="{{ desc | trim }}">
 <link rel="canonical" href="{{ canonical }}">
 <meta name="author" content="{{ metadata.author.name }}">
 <meta name="generator" content="{{ eleventy.generator }}">
 
-{# Style #}
+{#- Style -#}
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f9f9f9">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111111">
 
-{# Open Graph #}
+{#- Open Graph -#}
 <meta property="og:site_name" content="{{ metadata.title }}">
 <meta property="og:title" content="{{ ogTitle }}">
 <meta property="og:description" content="{{ desc }}">
@@ -37,18 +37,18 @@
 <meta name="og:image:secure_url" content="{{ ogUrl }}">
 <meta property="og:image:alt" content="A background of curved purple lines with the text “{{ text }}” ontop, Elly's logo is in the bottom right corner.">
 
-{# Icons #}
+{#- Icons -#}
 <link rel="icon" href="/assets/img/icons/favicon.ico" sizes="any">
 <link rel="icon" href="/assets/img/icons/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
 
-{# RSS Feed #}
+{#- RSS Feed -#}
 <link type="application/atom+xml" rel="alternate" href="{{ metadata.url }}/feed.atom" title="{{ metadata.title }}">
 <link type="application/rss+xml" rel="alternate" href="{{ metadata.url }}/feed.rss" title="{{ metadata.title }}">
 <link type="application/json" rel="alternate" href="{{ metadata.url }}/feed.json" title="{{ metadata.title }}">
 
-{# Webmentions #}
+{#- Webmentions -#}
 <link href="{{ metadata.author.links.GitHub }}" rel="me">
 <link href="{{ metadata.author.links.Mastodon }}" rel="me">
 <link rel="webmention" href="https://webmention.io/{{ metadata.domain }}/webmention">
