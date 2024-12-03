@@ -24,13 +24,17 @@ module.exports = (eleventyConfig) => {
 			}
 		);
 	});
-	eleventyConfig.addCollection("postsSortedByDate", (collectionApi) => {
-		const collection = [];
+	let collection = [];
+	eleventyConfig.addCollection("notBookmarksSortedByDate", (collectionApi) => {
 		collection.push(...collectionApi.getFilteredByTag("Blog"));
-		collection.push(...collectionApi.getFilteredByTag("Bookmarks"));
 		collection.push(...collectionApi.getFilteredByTag("Garden"));
 		collection.push(...collectionApi.getFilteredByTag("Projects"));
 		collection.push(...collectionApi.getFilteredByTag("TIL"));
+		collection.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
+		return collection;
+	});
+	eleventyConfig.addCollection("postsSortedByDate", (collectionApi) => {
+		collection.push(...collectionApi.getFilteredByTag("Bookmarks"));
 		collection.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
 		return collection;
 	});
