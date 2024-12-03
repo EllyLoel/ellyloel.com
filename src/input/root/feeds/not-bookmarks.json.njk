@@ -27,11 +27,8 @@ permalink: "not-bookmarks.json"
 				{%- endif -%},
 			{%- if post.data.tags -%}
 			"tags": [
-				{% for tag in post.data.tags -%}
-					{%- if ["Blog", "Bookmarks", "Garden", "Projects", "TIL"] | includes(tag) -%}
-					{%- else -%}
-						"{{ tag }}"{% if not loop.last %}{{ ",\n" }}{% endif %}
-					{%- endif -%}
+				{% for tag in post.data.tags  | reject("equalto", "Blog") | reject("equalto", "Garden") | reject("equalto", "Projects") | reject("equalto", "TIL") | reject("equalto", "YouTube") -%}
+					"{{ tag }}"{% if not loop.last %}{{ ",\n" }}{% endif %}
 				{%- endfor %}
 			],
 			{%- endif -%}

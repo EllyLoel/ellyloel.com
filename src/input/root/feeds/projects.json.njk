@@ -22,11 +22,8 @@ permalink: "projects.json"
 			"content_html": {% if post.templateContent %}{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | dump | safe }}{% else %}""{% endif %},
 			{%- if post.data.tags -%}
 			"tags": [
-				{% for tag in post.data.tags -%}
-					{%- if ["Blog", "Bookmarks", "Garden", "Projects", "TIL"] | includes(tag) -%}
-					{%- else -%}
-						"{{ tag }}"{% if not loop.last %}{{ ",\n" }}{% endif %}
-					{%- endif -%}
+				{% for tag in post.data.tags | reject("equalto", "Projects") -%}
+					"{{ tag }}"{% if not loop.last %}{{ ",\n" }}{% endif %}
 				{%- endfor %}
 			],
 			{%- endif -%}
