@@ -20,6 +20,16 @@ permalink: "notes.json"
 			"url": "{{ absolutePostUrl }}",
 			"title": "{{ post.data.title }}",
 			"content_html": {% if post.templateContent %}{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | dump | safe }}{% else %}""{% endif %},
+			{%- if post.data.tags -%}
+			"tags": [
+				{% for tag in post.data.tags -%}
+					{%- if ["Blog", "Bookmarks", "Garden", "Projects", "TIL"] | includes(tag) -%}
+					{%- else -%}
+						"{{ tag }}"{% if not loop.last %}{{ ",\n" }}{% endif %}
+					{%- endif -%}
+				{%- endfor %}
+			],
+			{%- endif -%}
 			{%- if post.data.modified -%}
 			"date_modified": "{{ post.data.modified | dateObj | dateToRfc3339 }}",
 			{%- endif -%}
