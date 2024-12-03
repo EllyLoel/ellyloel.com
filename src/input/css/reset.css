@@ -70,6 +70,10 @@ body {
 	display: block;
 }
 
+:where(picture) {
+	display: inline-block;
+}
+
 :where(img, svg, video) {
 	block-size: auto;
 	max-inline-size: 100%;

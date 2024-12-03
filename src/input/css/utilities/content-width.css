@@ -1,3 +1,7 @@
 .content-width {
-	max-width: var(--size-content-3);
+	max-inline-size: var(--size-content-3);
+}
+
+.header-width {
+	max-inline-size: var(--size-header-2);
 }
