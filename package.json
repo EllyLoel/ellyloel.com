@@ -30,7 +30,7 @@
 		"lint:js": "eslint src/input/js/ --fix",
 		"deploy": "netlify deploy -p --build"
 	},
-	"packageManager": "pnpm@9.1.1",
+	"packageManager": "pnpm@9.14.2",
 	"dependencies": {
 		"@11ty/is-land": "^4.0.0",
 		"@google/model-viewer": "^3.4.0",
@@ -121,7 +121,6 @@
 			"eleventy-plugin-rollup@1.3.0": "patches/eleventy-plugin-rollup@1.3.0.patch"
 		}
 	},
-	"packageManager": "pnpm@9.14.2",
 	"engines": {
 		"pnpm": ">=9.14.2",
 		"node": ">=22.11.0"
