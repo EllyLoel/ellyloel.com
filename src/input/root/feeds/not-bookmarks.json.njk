@@ -1,12 +1,12 @@
 ---
-permalink: "feed.json"
+permalink: "not-bookmarks.json"
 ---
 {
 	"version": "https://jsonfeed.org/version/1.1",
 	"title": "{{ metadata.title }}",
 	"language": "{{ metadata.lang }}",
 	"home_page_url": "{{ metadata.url }}",
-	"feed_url": "{{ '/feed.json' | absoluteUrl(metadata.url) }}",
+	"feed_url": "{{ '/not-bookmarks.json' | absoluteUrl(metadata.url) }}",
 	"description": "{{ metadata.description }}",
 	"author": {
 		"name": "{{ metadata.author.name }}",
