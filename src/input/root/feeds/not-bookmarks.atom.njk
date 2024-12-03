@@ -1,11 +1,11 @@
 ---
-permalink: "feed.atom"
+permalink: "not-bookmarks.atom"
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ metadata.url }}">
 	<title>{{ metadata.title }}</title>
 	<subtitle>{{ metadata.description }}</subtitle>
-	<link href="{{ '/feed.atom' | absoluteUrl(metadata.url) }}" rel="self"/>
+	<link href="{{ '/not-bookmarks.atom' | absoluteUrl(metadata.url) }}" rel="self"/>
 	<link href="{{ metadata.url }}"/>
 	<updated>{{ collections.notBookmarksSortedByDate | getLatestCollectionItemDate | dateToRfc3339 }}</updated>
 	<id>{{ metadata.url }}/</id>
