@@ -25,6 +25,16 @@ permalink: "not-bookmarks.json"
 				{%- else -%}
 					""
 				{%- endif -%},
+			{%- if post.data.tags -%}
+			"tags": [
+				{% for tag in post.data.tags -%}
+					{%- if ["Blog", "Bookmarks", "Garden", "Projects", "TIL"] | includes(tag) -%}
+					{%- else -%}
+						"{{ tag }}"{% if not loop.last %}{{ ",\n" }}{% endif %}
+					{%- endif -%}
+				{%- endfor %}
+			],
+			{%- endif -%}
 			{%- if post.data.modified %}
 			"date_modified": "{{- post.data.modified | dateObj | dateToRfc3339 -}}",
 			{% endif -%}

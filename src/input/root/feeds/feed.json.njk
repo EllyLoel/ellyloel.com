@@ -23,6 +23,21 @@ permalink: "feed.json"
 			{%- if post.data.bookmark.link %}
 			"external_url": "{{ post.data.bookmark.link }}",
 			{% endif -%}
+			{%- if post.data.tags or post.data.bookmark.tags -%}
+			"tags": [
+				{% if post.data.bookmark.tags -%}
+					{%- set tags = post.data.tags.concat(post.data.bookmark.tags) -%}
+				{%- else -%}
+					{%- set tags = post.data.tags -%}
+				{%- endif -%}
+				{%- for tag in tags -%}
+					{%- if ["Blog", "Bookmarks", "Garden", "Projects", "TIL"] | includes(tag) -%}
+					{%- else -%}
+						"{{ tag }}"{% if not loop.last %}{{ ",\n" }}{% endif %}
+					{%- endif -%}
+				{%- endfor %}
+			],
+			{%- endif -%}
 			{%- if post.data.modified %}
 			"date_modified": "{{ post.data.modified | dateObj | dateToRfc3339 }}",
 			{% endif -%}
