@@ -52,15 +52,13 @@ layout: base-without-header.njk
 </header>
 {%- set contentWithoutHtml = content.replace(r/<\/?[a-z0-9]+\b[^>]*>/g, "") -%}
 {%- if contentWithoutHtml.length > 3000 -%}
-	<aside class="[ toc-container ][ flow content-width ]" data-pagefind-ignore>
-		<details>
-			<summary class="[ flex ]">
-				{%- inlineIcon "fas:play" -%}
-				<h2>Table of contents</h2>
-			</summary>
+	{%- rollup "src/input/js/table-of-contents.js" | url -%}
+	<table-of-contents>
+		<nav aria-labelledby="toc-heading" class="[ toc-container ][ content-width ]" data-pagefind-ignore>
+			<h2 id="toc-heading">Table of contents</h2>
 			{{ content | toc | safe }}
-		</details>
-	</aside>
+		</nav>
+	</table-of-contents>
 {%- endif -%}
 <article class="[ markdown-container ] [ e-content ] [ flow flow-space-setter ]" style="--flow-space-setter: 2em;">
 	{%- if not created and not modified -%}
@@ -95,35 +93,39 @@ This post hasn't been updated a long time, so it might be kinda crusty.
 <footer class="[ content-footer ][ flow flow-space-setter ]" style="--flow-space-setter: var(--size-8);" data-pagefind-ignore>
 	<div class="[ share ]">
 		<p>
-			{%- inlineIcon "fas:share-from-square" -%} Share on <wbr><a href='https://toot.kytta.dev/?text="{{ title }}" by @elly@front-end.social {{ metadata.url }}{{ page.url }}' class="[ text-decoration-none move-link-styling-to-child ]">
-			{%- inlineIcon "fab:mastodon" -%}
-			<span>Mastodon</span></a>, <wbr><a href="https://www.linkedin.com/sharing/share-offsite/?url={{ metadata.url }}{{ page.url }}" class="[ text-decoration-none move-link-styling-to-child ]">
-			{%- inlineIcon "fab:linkedin" -%}
-			<span>LinkedIn</span></a> <wbr>or <wbr><a href='https://twitter.com/intent/tweet?url={{ metadata.url }}{{ page.url }}&text="{{ title }}" by @ellyloel' class="[ text-decoration-none move-link-styling-to-child ]">
-			{%- inlineIcon "fab:twitter" -%}
-			<span>Twitter</span></a>.
+			{%- inlineIcon "fas:share-from-square" -%} Share on <wbr>
+			<a href='https://toot.kytta.dev/?text="{{ title }}" by @elly@front-end.social {{ metadata.url }}{{ page.url }}' class="[ text-decoration-none move-link-styling-to-child ]">
+				{%- inlineIcon "fab:mastodon" -%}
+				<span>Mastodon</span></a>, <wbr>
+			<a href="https://www.linkedin.com/sharing/share-offsite/?url={{ metadata.url }}{{ page.url }}" class="[ text-decoration-none move-link-styling-to-child ]">
+				{%- inlineIcon "fab:linkedin" -%}
+				<span>LinkedIn</span></a>
+			<wbr>or <wbr>
+				<a href='https://twitter.com/intent/tweet?url={{ metadata.url }}{{ page.url }}&text="{{ title }}" by @ellyloel' class="[ text-decoration-none move-link-styling-to-child ]">
+					{%- inlineIcon "fab:twitter" -%}
+					<span>Twitter</span></a>.
 		</p>
-	</div>
-	{# These are flipped because we want next to be newer and prev to be older, the opposite of the collections sorting. #}
-	{%- set nextPost = collections.allSortedByDate | getPreviousCollectionItem -%}
-	{%- set previousPost = collections.allSortedByDate | getNextCollectionItem -%}
-	{%- if previousPost or nextPost -%}
-		<div class="[ post-pagination ]">
-			{%- if previousPost -%}
-				<p>
+		</div>
+		{# These are flipped because we want next to be newer and prev to be older, the opposite of the collections sorting. #}
+		{%- set nextPost = collections.allSortedByDate | getPreviousCollectionItem -%}
+		{%- set previousPost = collections.allSortedByDate | getNextCollectionItem -%}
+		{%- if previousPost or nextPost -%}
+			<div class="[ post-pagination ]">
+				{%- if previousPost -%}
+					<p>
 					Previously:
 					<br>
-					<a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
-				</p>
-			{%- endif -%}
-			{%- if nextPost -%}
-				<p>
+						<a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+					</p>
+				{%- endif -%}
+				{%- if nextPost -%}
+					<p>
 					Next:
 					<br>
-					<a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
-				</p>
-			{%- endif -%}
-		</div>
-	{%- endif -%}
-	{%- include "webmentions.njk" -%}
-</footer>
+						<a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+					</p>
+				{%- endif -%}
+			</div>
+		{%- endif -%}
+		{%- include "webmentions.njk" -%}
+	</footer>

@@ -16,6 +16,7 @@ html {
 		"Android Emoji";
 	font-size: calc(0.1vw + 0.1vh + 1em);
 	font-weight: var(--font-weight-body-normal);
+	interpolate-size: allow-keywords;
 	letter-spacing: 0.04em;
 }
 
