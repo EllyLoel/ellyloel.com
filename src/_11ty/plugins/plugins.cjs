@@ -82,7 +82,7 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addPlugin(pluginNavigation);
 	eleventyConfig.addPlugin(pluginNestingToc, {
 		tags: ["h2", "h3", "h4", "h5", "h6"],
-		wrapper: "nav",
+		wrapper: "div",
 		wrapperClass: "[ toc ][ recursive-flow ]",
 	});
 	eleventyConfig.addPlugin(pluginPostCss);
