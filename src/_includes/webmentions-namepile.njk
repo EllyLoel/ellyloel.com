@@ -7,7 +7,7 @@
 		{%- for namepileMention in namepileMentions -%}
 			{{- "and " if loop.last and not loop.first -}}
 			<a href="{{ namepileMention.author.url }}">
-				{{- namepileMention.author.name | replace("?", "") | replace(r/:\w*:/g, "") | trim -}}
+				{{- namepileMention.author.name | replace("????", "") | replace(r/:\w*:/g, "") | trim -}}
 			</a>
 			{{- ", " if not loop.last and loop.length !== 2 -}}
 			{{- "." if loop.last -}}
