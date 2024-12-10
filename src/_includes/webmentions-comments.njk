@@ -3,7 +3,7 @@
 		{% if comment.author and comment.author.name %}
 			<{{ "a" if comment.author.url else "span" }} {% if comment.author.url %}href="{{ comment.author.url }}"{% endif %} class="[ author-wrapper ]">
 				<strong class="[ author-name ]">
-					{{- comment.author.name | replace("?", "") | replace(r/:\w*:/g, "") | trim -}}
+					{{- comment.author.name | replace("????", "") | replace(r/:\w*:/g, "") | trim -}}
 				</strong>
 			</{{ "a" if comment.author.url else "span" }}>
 		{% else %}
@@ -23,8 +23,8 @@
 		</small>
 	</div>
 	{%- if comment.content.html -%}
-		{{ comment.content.html | removeRandomLink | safe }}
+		{{ comment.content.html | replace("????", "") | removeRandomLink | safe }}
 	{%- else -%}
-		{{ comment.content.value | removeRandomLink | safe }}
+		{{ comment.content.value | replace("????", "") | removeRandomLink | safe }}
 	{%- endif -%}
 </li>

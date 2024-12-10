@@ -7,7 +7,7 @@ const renderNamepile = (mentions, mentionType) => {
 		`${
 			index === mentions.length - 1 && mentions.length > 1 ? "and " : ""
 		}<a href="${mention.author.url}">${mention.author.name
-			.replaceAll("?", "")
+			.replaceAll("????", "")
 			.replaceAll(/:\w*:/g, "")
 			.trim()}</a>${
 			mentions.length > 2 && index !== mentions.length - 1 ? ", " : ""

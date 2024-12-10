@@ -11,7 +11,7 @@
 			class="[ author-wrapper ]">
 			<strong class="[ author-name ]">
 				{%- if mention.author.name -%}
-					{{ mention.author.name | replace("?", "") | replace(r/:\w*:/g, "") | trim }}
+					{{ mention.author.name | replace("????", "") | replace(r/:\w*:/g, "") | trim }}
 				{%- else -%}
 					Anonymous
 				{%- endif -%}

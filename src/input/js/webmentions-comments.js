@@ -6,13 +6,15 @@ const renderComments = (comments) => {
 			comment.author.url ? `href="${comment.author.url}"` : ""
 		} class="[ author-wrapper ]">
 	<strong class="[ author-name ]">${comment.author.name
-		.replaceAll("?", "")
+		.replaceAll("????", "")
 		.replaceAll(/:\w*:/g, "")
 		.trim()}</strong>
 </${authorWrapperTag}>
 		`.trim();
 
 		const date = comment.published || comment["wm-received"];
+
+		console.log(comment.content);
 
 		return `
 <li class="[ webmention ][ flow ]">
@@ -34,7 +36,9 @@ const renderComments = (comments) => {
 	</div>
 	${
 		comment.content
-			? comment.content.value.replaceAll(/<a[^>]+><\/a>/gm, "")
+			? comment.content.value
+					.replaceAll("????", "")
+					.replaceAll(/<a[^>]+><\/a>/gm, "")
 			: ""
 	}
 </li>
