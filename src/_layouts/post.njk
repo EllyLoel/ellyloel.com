@@ -92,40 +92,40 @@ This post hasn't been updated a long time, so it might be kinda crusty.
 {%- endif -%}
 <footer class="[ content-footer ][ flow flow-space-setter ]" style="--flow-space-setter: var(--size-8);" data-pagefind-ignore>
 	<div class="[ share ]">
-		<p>
-			{%- inlineIcon "fas:share-from-square" -%} Share on <wbr>
-			<a href='https://toot.kytta.dev/?text="{{ title }}" by @elly@front-end.social {{ metadata.url }}{{ page.url }}' class="[ text-decoration-none move-link-styling-to-child ]">
-				{%- inlineIcon "fab:mastodon" -%}
-				<span>Mastodon</span></a>, <wbr>
-			<a href="https://www.linkedin.com/sharing/share-offsite/?url={{ metadata.url }}{{ page.url }}" class="[ text-decoration-none move-link-styling-to-child ]">
-				{%- inlineIcon "fab:linkedin" -%}
-				<span>LinkedIn</span></a>
-			<wbr>or <wbr>
-				<a href='https://twitter.com/intent/tweet?url={{ metadata.url }}{{ page.url }}&text="{{ title }}" by @ellyloel' class="[ text-decoration-none move-link-styling-to-child ]">
-					{%- inlineIcon "fab:twitter" -%}
-					<span>Twitter</span></a>.
-		</p>
+		<h2>Share</h2>
+		<div>
+			{%- rollup "src/input/js/share-button.js" | url -%}
+			<share-button></share-button>
+			<a href="https://toot.kytta.dev/?text={{ title + " by @elly@front-end.social%0A" + metadata.url + page.url | urlencode }}" class="[ text-decoration-none ]">
+				{%- icon "fab:mastodon" -%}
+				<span class="[ visually-hidden ]">Share on Mastodon</span>
+			</a>
+			<a href="https://bsky.app/intent/compose?text={{ title + " by @elly.lol%0A" + metadata.url + page.url | urlencode }}" class="[ text-decoration-none ]">
+				{%- icon "fab:bluesky" -%}
+				<span class="[ visually-hidden ]">Share on Bluesky</span>
+			</a>
 		</div>
-		{# These are flipped because we want next to be newer and prev to be older, the opposite of the collections sorting. #}
-		{%- set nextPost = collections.allSortedByDate | getPreviousCollectionItem -%}
-		{%- set previousPost = collections.allSortedByDate | getNextCollectionItem -%}
-		{%- if previousPost or nextPost -%}
-			<div class="[ post-pagination ]">
-				{%- if previousPost -%}
-					<p>
-					Previously:
-					<br>
-						<a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
-					</p>
-				{%- endif -%}
-				{%- if nextPost -%}
-					<p>
-					Next:
-					<br>
-						<a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
-					</p>
-				{%- endif -%}
-			</div>
-		{%- endif -%}
-		{%- include "webmentions.njk" -%}
-	</footer>
+	</div>
+	{# These are flipped because we want next to be newer and prev to be older, the opposite of the collections sorting. #}
+	{%- set nextPost = collections.allSortedByDate | getPreviousCollectionItem -%}
+	{%- set previousPost = collections.allSortedByDate | getNextCollectionItem -%}
+	{%- if previousPost or nextPost -%}
+		<nav class="[ post-pagination ]" aria-labelledby="pagination"><p id="pagination" hidden>Pagination</p>
+			{%- if previousPost -%}
+				<p>
+				Previously:
+				<br>
+					<a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+				</p>
+			{%- endif -%}
+			{%- if nextPost -%}
+				<p>
+				Next:
+				<br>
+					<a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+				</p>
+			{%- endif -%}
+		</nav>
+	{%- endif -%}
+	{%- include "webmentions.njk" -%}
+</footer>

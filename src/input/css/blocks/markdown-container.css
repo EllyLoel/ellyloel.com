@@ -29,8 +29,49 @@
 			padding-inline: var(--size-4);
 			transition: box-shadow 0.3s var(--ease-1), opacity 0.5s var(--ease-2);
 
-			&.share > p {
-				font-size: var(--font-size-3);
+			&.share {
+				font-size: var(--font-size-5);
+				inline-size: fit-content;
+
+				> h2 {
+					line-height: 1;
+					text-align: center;
+				}
+
+				> div,
+				& share-button {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 0.5em;
+					justify-content: center;
+				}
+
+				> div {
+					margin-block-start: 0.25em;
+				}
+
+				& a,
+				& button {
+					margin: calc(var(--size-1) * -1);
+					padding: var(--size-1);
+				}
+
+				& button {
+					background: none;
+					border: none;
+					box-shadow: 0 0 0 var(--_highlight-size) var(--_highlight);
+					color: var(--link);
+					display: inline;
+					font-weight: var(--font-weight-body-normal);
+
+					&:hover {
+						--_highlight-size: 0.1em;
+					}
+				}
+
+				& a {
+					display: block;
+				}
 			}
 
 			&:is(:hover, :focus-within) {

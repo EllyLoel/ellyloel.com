@@ -1,5 +1,5 @@
 {%- set postMentions = webmentions | webmentionsForPage -%}
-<article id="webmentions" class="[ webmentions ]">
+<div id="webmentions" class="[ webmentions ]">
 	<details class="[ flow ]">
 		<summary id="webmentions-summary" class="[ h2 ]">
 			{{- postMentions.total + " " if postMentions.total >= 1 -}}
@@ -81,4 +81,4 @@
 			</small>
 		</details>
 	</details>
-</article>
+</div>

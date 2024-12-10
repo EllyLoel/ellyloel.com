@@ -14,7 +14,9 @@
 {%- endif -%}
 
 {#- General -#}
-<meta name="description" content="{{ desc }}">
+{%- if desc -%}
+	<meta name="description" content="{{ desc | trim }}">
+{%- endif -%}
 <link rel="canonical" href="{{ canonical }}">
 <meta name="author" content="{{ metadata.author.name }}">
 <meta name="generator" content="{{ eleventy.generator }}">

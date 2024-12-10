@@ -1,4 +1,4 @@
-nav[aria-label="Breadcrumb"] ol {
+nav[aria-labelledby="breadcrumb"] ol {
 	display: inline-flex;
 	flex-wrap: wrap;
 	gap: var(--size-2);
