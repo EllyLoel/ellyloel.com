@@ -96,11 +96,11 @@ This post hasn't been updated a long time, so it might be kinda crusty.
 		<div>
 			{%- rollup "src/input/js/share-button.js" | url -%}
 			<share-button></share-button>
-			<a href="https://toot.kytta.dev/?text={{ title + " by @elly@front-end.social%0A" + metadata.url + page.url | urlencode }}" class="[ text-decoration-none ]">
+			<a href="https://toot.kytta.dev/?text={{ title + " by @elly@front-end.social%0D%0A" + metadata.url + page.url | urlencode }}" class="[ text-decoration-none ]">
 				{%- icon "fab:mastodon" -%}
 				<span class="[ visually-hidden ]">Share on Mastodon</span>
 			</a>
-			<a href="https://bsky.app/intent/compose?text={{ title + " by @elly.lol%0A" + metadata.url + page.url | urlencode }}" class="[ text-decoration-none ]">
+			<a href="https://bsky.app/intent/compose?text={{ title + " by @elly.lol%0D%0A" + metadata.url + page.url | urlencode }}" class="[ text-decoration-none ]">
 				{%- icon "fab:bluesky" -%}
 				<span class="[ visually-hidden ]">Share on Bluesky</span>
 			</a>
