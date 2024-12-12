@@ -31,7 +31,7 @@ class ShareButton extends HTMLElement {
 					await navigator.share({
 						text: document.querySelector(`meta[name="description"]`)?.content,
 						title: document.title,
-						url: window.location.href,
+						url: location.href,
 					});
 				} catch (error) {
 					console.error(error);
@@ -49,11 +49,7 @@ class ShareButton extends HTMLElement {
 
 			this.copyButton.addEventListener("click", async (event) => {
 				try {
-					await navigator.clipboard.writeText(
-						`${document.title}\n${window.location.href}\n${
-							document.querySelector(`meta[name="description"]`)?.content
-						}`.trim()
-					);
+					await navigator.clipboard.writeText(location.href);
 				} catch (error) {
 					console.error(error);
 				}
