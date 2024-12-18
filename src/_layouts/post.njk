@@ -91,7 +91,7 @@ This post hasn't been updated a long time, so it might be kinda crusty.
 	</aside>
 {%- endif -%}
 <footer class="[ content-footer ][ flow flow-space-setter ]" style="--flow-space-setter: var(--size-8);" data-pagefind-ignore>
-	<div class="[ share ]">
+	<div class="[ share ][ flow flow-space-setter ]">
 		<h2>Share</h2>
 		<div>
 			{%- rollup "src/input/js/share-button.js" | url -%}
@@ -105,6 +105,10 @@ This post hasn't been updated a long time, so it might be kinda crusty.
 				<span class="[ visually-hidden ]">Share on Bluesky</span>
 			</a>
 		</div>
+		<details>
+			<summary>Preview image</summary>
+			<img src="https://api.microlink.io/?url=https%3A%2F%2Fwww.ellyloel.com%2Fog{{ page.url }}&screenshot=true&meta=false&embed=screenshot.url" alt="A background of curved purple lines with the text “{{ title }}” ontop, Elly's logo is in the bottom right corner." loading="lazy" width="2560" height="1600">
+		</details>
 	</div>
 	{# These are flipped because we want next to be newer and prev to be older, the opposite of the collections sorting. #}
 	{%- set nextPost = collections.allSortedByDate | getPreviousCollectionItem -%}

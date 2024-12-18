@@ -30,12 +30,11 @@
 			transition: box-shadow 0.3s var(--ease-1), opacity 0.5s var(--ease-2);
 
 			&.share {
-				font-size: var(--font-size-5);
-				inline-size: fit-content;
+				--flow-space-setter: 0.75rem;
 
 				> h2 {
+					font-size: var(--font-size-5);
 					line-height: 1;
-					text-align: center;
 				}
 
 				> div,
@@ -43,10 +42,10 @@
 					display: flex;
 					flex-wrap: wrap;
 					gap: 0.5em;
-					justify-content: center;
 				}
 
 				> div {
+					font-size: var(--font-size-5);
 					margin-block-start: 0.25em;
 				}
 
@@ -71,6 +70,21 @@
 
 				& a {
 					display: block;
+				}
+
+				& details {
+					margin: 0;
+					padding: 0;
+
+					& summary {
+						margin: 0;
+						margin-block-end: var(--size-2);
+						padding: 0;
+					}
+
+					& img {
+						border-radius: var(--radius-2);
+					}
 				}
 			}
 
