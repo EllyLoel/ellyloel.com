@@ -19,10 +19,11 @@
 	"scripts": {
 		"start": "ELEVENTY_ENV=development eleventy --serve --incremental --quiet",
 		"build": "ELEVENTY_ENV=production pnpm build:eleventy && pnpm build:pagefind",
-		"build:prod": "ELEVENTY_ENV=production pnpm build:eleventy && pnpm build:pagefind && node ./scripts/send-webmentions.js",
+		"build:prod": "ELEVENTY_ENV=production pnpm build:eleventy && pnpm build:pagefind && pnpm send-webmentions",
 		"build:local": "ELEVENTY_ENV=development pnpm build:eleventy && pnpm build:pagefind",
 		"build:eleventy": "eleventy --quiet",
 		"build:pagefind": "pagefind --source _site --bundle-dir pagefind",
+		"send-webmentions": "node ./scripts/send-webmentions.js",
 		"start:debug": "ELEVENTY_ENV=development DEBUG=Eleventy* eleventy --serve --incremental",
 		"build:debug": "DEBUG=Eleventy* eleventy",
 		"build:benchmark": "DEBUG=Eleventy:Benchmark* eleventy",
