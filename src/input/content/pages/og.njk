@@ -4,9 +4,10 @@ pagination:
   data: collections.all
   size: 1
   alias: ogPost
-permalink: "og/{{ ogPost.data.page.url }}/"
+permalink: "og{{ ogPost.data.page.url }}"
 ---
 
 <h1>
-	{{ ogPost.data.title }}
+	<a href="{{ ogPost.data.page.url }}">{{ ogPost.data.title }}</a>
+	<div class="glass-edge"></div>
 </h1>
