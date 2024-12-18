@@ -99,6 +99,7 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addPlugin(pluginSyntaxhighlight);
 	eleventyConfig.addPlugin(pluginWebmentions, {
+		cacheDirectory: "./.cache",
 		domain: metadata.domain,
 		mentionTypes: {
 			comments: ["in-reply-to"],

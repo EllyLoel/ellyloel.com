@@ -29,7 +29,7 @@
   package = "netlify-plugin-cache"
 
   [plugins.inputs]
-  paths = [ ".cache", "_webmentioncache" ]
+  paths = [ ".cache" ]
 
 [[plugins]]
   package = "@aciccarello/netlify-plugin-webmentions"
