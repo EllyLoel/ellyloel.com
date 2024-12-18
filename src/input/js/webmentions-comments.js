@@ -14,8 +14,6 @@ const renderComments = (comments) => {
 
 		const date = comment.published || comment["wm-received"];
 
-		console.log(comment.content);
-
 		return `
 <li class="[ webmention ][ flow ]">
 	<div class="[ meta ]">
