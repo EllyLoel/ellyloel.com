@@ -1,4 +1,4 @@
-import Webmention from "@aciccarello/webmention";
+import Webmention from "../node_modules/@aciccarello/webmention";
 
 const sendWebmentions = async () => {
 	const limit = 10;
