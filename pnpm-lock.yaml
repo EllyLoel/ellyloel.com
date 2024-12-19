@@ -19,6 +19,9 @@ importers:
       '@11ty/is-land':
         specifier: ^4.0.0
         version: 4.0.0
+      '@aciccarello/webmention':
+        specifier: ^1.4.6
+        version: 1.4.6(patch_hash=gmiubv33cktpzud3dxubd6cvie)
       '@google/model-viewer':
         specifier: ^3.4.0
         version: 3.4.0(three@0.160.1)
@@ -6112,7 +6115,7 @@ snapshots:
 
   domutils@1.5.1:
     dependencies:
-      dom-serializer: 0.1.1
+      dom-serializer: 0.2.2
       domelementtype: 1.3.1
 
   domutils@1.7.0:

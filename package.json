@@ -34,6 +34,7 @@
 	"packageManager": "pnpm@9.14.2",
 	"dependencies": {
 		"@11ty/is-land": "^4.0.0",
+		"@aciccarello/webmention": "^1.4.6",
 		"@google/model-viewer": "^3.4.0",
 		"@zachleat/details-utils": "^2.0.2",
 		"canvas-confetti": "^1.9.2",
