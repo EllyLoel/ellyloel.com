@@ -1,5 +1,5 @@
 (async () => {
-	const res = await fetch(`/.netlify/functions/lastfm`);
+	const res = await fetch(`/lastfm`);
 	const data = await res.json();
 
 	const song = data.recenttracks.track[0].name;
