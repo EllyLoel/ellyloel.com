@@ -19,11 +19,9 @@
 	"scripts": {
 		"start": "ELEVENTY_ENV=development eleventy --serve --incremental --quiet",
 		"build": "ELEVENTY_ENV=production pnpm build:eleventy && pnpm build:pagefind",
-		"build:prod": "ELEVENTY_ENV=production pnpm build:eleventy && pnpm build:pagefind && pnpm send-webmentions",
 		"build:local": "ELEVENTY_ENV=development pnpm build:eleventy && pnpm build:pagefind",
 		"build:eleventy": "eleventy --quiet",
 		"build:pagefind": "pagefind --source _site --bundle-dir pagefind",
-		"send-webmentions": "node ./scripts/send-webmentions.js",
 		"start:debug": "ELEVENTY_ENV=development DEBUG=Eleventy* eleventy --serve --incremental",
 		"build:debug": "DEBUG=Eleventy* eleventy",
 		"build:benchmark": "DEBUG=Eleventy:Benchmark* eleventy",
@@ -109,7 +107,8 @@
 		"stylelint": "^15.11.0",
 		"stylelint-config-standard": "^33.0.0",
 		"stylelint-order": "^6.0.4",
-		"webpack": "^5.91.0"
+		"webpack": "^5.91.0",
+		"wrangler": "^3.96.0"
 	},
 	"browserslist": [
 		"defaults"
