@@ -1,6 +1,6 @@
 import Webmention from "@aciccarello/webmention";
 
-const sendWebmentions = async () => {
+export const onRequest = async () => {
 	const limit = 10;
 	const feedPath = "feed.atom";
 	const baseUrl = "https://www.ellyloel.com";
@@ -51,10 +51,14 @@ const sendWebmentions = async () => {
 			});
 
 			wm.fetch(feedUrl);
+
+			return new Response(null, {
+				status: 200,
+			});
 		});
-	} catch (e) {
-		console.error(e);
+	} catch (error) {
+		return new Response(error.toString(), {
+			status: 500,
+		});
 	}
 };
-
-await sendWebmentions();
