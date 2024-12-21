@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger build webhook on Netlify
+      - name: Trigger deploy hook on Cloudflare Pages
         env:
-          TOKEN: ${​{ secrets.NETLIFY_WEEKLY_BUILD }​}
-        run: curl -X POST -d {} https://api.netlify.com/build_hooks/${TOKEN}
+          TOKEN: ${​{ secrets.CLOUDFLARE_DEPLOY_HOOK }​}
+        run: curl -X POST https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/${TOKEN}
