@@ -3,7 +3,6 @@
 .env
 .log
 .cache
-_webmentioncache/
 .vscode
 **/.DS_Store
 
@@ -13,16 +12,3 @@ _site/
 _generated*
 node-supporters/
 src/_data/builtwith/
-
-# Netlify generated stuff
-.netlify/
-
-# Serverless
-netlify/functions/serverless/*
-!netlify/functions/serverless/index.js
-netlify/functions/dynamic/*
-!netlify/functions/dynamic/index.js
-
-# Obsidian
-**/.obsidian/workspace
-**/.obsidian/workspaces.json

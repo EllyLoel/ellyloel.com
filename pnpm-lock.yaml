@@ -5,9 +5,6 @@ settings:
   excludeLinksFromLockfile: false
 
 patchedDependencies:
-  '@aciccarello/webmention@1.4.6':
-    hash: gmiubv33cktpzud3dxubd6cvie
-    path: patches/@aciccarello__webmention@1.4.6.patch
   eleventy-plugin-rollup@1.3.0:
     hash: 6bkplkunu2lg22hn2qr2pbc7hq
     path: patches/eleventy-plugin-rollup@1.3.0.patch
@@ -19,12 +16,12 @@ importers:
       '@11ty/is-land':
         specifier: ^4.0.0
         version: 4.0.0
-      '@aciccarello/webmention':
-        specifier: ^1.4.6
-        version: 1.4.6(patch_hash=gmiubv33cktpzud3dxubd6cvie)
       '@google/model-viewer':
         specifier: ^3.4.0
         version: 3.4.0(three@0.160.1)
+      '@remy/webmention':
+        specifier: ^1.5.0
+        version: 1.5.0
       '@zachleat/details-utils':
         specifier: ^2.0.2
         version: 2.0.2
@@ -43,9 +40,6 @@ importers:
       howler:
         specifier: ^2.2.4
         version: 2.2.4
-      netlify-plugin-cache:
-        specifier: ^1.0.3
-        version: 1.0.3
       node-fetch:
         specifier: ^2.7.0
         version: 2.7.0
@@ -80,9 +74,6 @@ importers:
       '@11ty/eleventy-plugin-syntaxhighlight':
         specifier: ^5.0.0
         version: 5.0.0
-      '@aciccarello/netlify-plugin-webmentions':
-        specifier: ^1.1.0
-        version: 1.1.0
       '@eslint/js':
         specifier: ^8.57.0
         version: 8.57.0
@@ -301,13 +292,6 @@ packages:
   '@aashutoshrathi/word-wrap@1.2.6':
     resolution: {integrity: sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==}
     engines: {node: '>=0.10.0'}
-
-  '@aciccarello/netlify-plugin-webmentions@1.1.0':
-    resolution: {integrity: sha512-FwzNf6DCaW5UJAteS4XhTnTIel20TlizvcwEuyHqcaNu6sp953KK7b9W/OyQaoQZLpw6saAi0op/X+QAo7pOYw==}
-
-  '@aciccarello/webmention@1.4.6':
-    resolution: {integrity: sha512-GFTp76MCbaW8qqf8AW5mvhignils2EMHpgAClEPyOR15LHOrGy5IajVTMQRP6F/ByIo/LH0Hlcp4cnHYEYINPQ==}
-    hasBin: true
 
   '@babel/code-frame@7.24.2':
     resolution: {integrity: sha512-y5+tLQyV8pg3fsiln67BVLD1P13Eg4lh5RW9mF0zUuvLrv9uIQ4MCL+CRT+FTsBlBjcIan6PGsLcBN0m3ClUyQ==}
@@ -828,6 +812,10 @@ packages:
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
+
+  '@remy/webmention@1.5.0':
+    resolution: {integrity: sha512-50HD/WfXlykMgQxX5Oz9Kzl8WqBbkdXP58mbd7VkBh4ZcKBixNoObyeCeomtTPW36kUMBe9icF4MofF4FC42mw==}
+    hasBin: true
 
   '@rollup/plugin-node-resolve@15.2.3':
     resolution: {integrity: sha512-j/lym8nf5E21LwBT4Df1VD6hRO2L2iwUeUmP7litikRsVp1H6NWx20NEp0Y7su+7XGc476GnXXc4kFeZNGmaSQ==}
@@ -2913,9 +2901,6 @@ packages:
   neo-async@2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
 
-  netlify-plugin-cache@1.0.3:
-    resolution: {integrity: sha512-CTOwNWrTOP59T6y6unxQNnp1WX702v2R/faR5peSH94ebrYfyY4zT5IsRcIiHKq57jXeyCrhy0GLuTN8ktzuQg==}
-
   next-tick@0.2.2:
     resolution: {integrity: sha512-f7h4svPtl+QidoBv4taKXUjJ70G2asaZ8G28nS0OkqaalX8dwwrtWtyxEDPK62AC00ur/+/E0pUwBwY5EPn15Q==}
 
@@ -4588,30 +4573,6 @@ snapshots:
 
   '@aashutoshrathi/word-wrap@1.2.6': {}
 
-  '@aciccarello/netlify-plugin-webmentions@1.1.0':
-    dependencies:
-      '@aciccarello/webmention': 1.4.6(patch_hash=gmiubv33cktpzud3dxubd6cvie)
-    transitivePeerDependencies:
-      - debug
-      - encoding
-
-  '@aciccarello/webmention@1.4.6(patch_hash=gmiubv33cktpzud3dxubd6cvie)':
-    dependencies:
-      cheerio: 0.22.0
-      clui: 0.3.6
-      decodeuricomponent: 0.3.1
-      follow-redirects: 1.15.6
-      li: 1.3.0
-      microformat-node: 2.0.1
-      ms: 2.1.3
-      node-fetch: 2.7.0
-      optimist: 0.6.1
-      rss-parser: 3.13.0
-      uuid: 3.4.0
-    transitivePeerDependencies:
-      - debug
-      - encoding
-
   '@babel/code-frame@7.24.2':
     dependencies:
       '@babel/highlight': 7.24.2
@@ -5041,6 +5002,23 @@ snapshots:
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
+
+  '@remy/webmention@1.5.0':
+    dependencies:
+      cheerio: 0.22.0
+      clui: 0.3.6
+      decodeuricomponent: 0.3.1
+      follow-redirects: 1.15.6
+      li: 1.3.0
+      microformat-node: 2.0.1
+      ms: 2.1.3
+      node-fetch: 2.7.0
+      optimist: 0.6.1
+      rss-parser: 3.13.0
+      uuid: 3.4.0
+    transitivePeerDependencies:
+      - debug
+      - encoding
 
   '@rollup/plugin-node-resolve@15.2.3(rollup@3.29.4)':
     dependencies:
@@ -7347,8 +7325,6 @@ snapshots:
   negotiator@0.6.3: {}
 
   neo-async@2.6.2: {}
-
-  netlify-plugin-cache@1.0.3: {}
 
   next-tick@0.2.2: {}
 
