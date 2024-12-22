@@ -6,111 +6,213 @@ eleventyNavigation:
   order: 3
 ---
 
-<p>
-  If you want to keep up with my posts via a feed, here they are! Provided in the flavour of your liking.
-</p>
+{%- md -%}
+If you want to keep up with my posts via a feed, here they are! Provided in the flavour of your liking.
+
+If you don't already have a feed reader, I'd recommend [Feedbin](https://feedbin.com/home) with any of these [great apps](https://feedbin.com/apps) or check out the [comparison of feed aggregators](https://en.wikipedia.org/wiki/Comparison_of_feed_aggregators) page on Wikipedia.
+
+Also, you should [learn how to setup your own feed(s)](https://www.mnot.net/rss/tutorial/).
+{%- endmd -%}
 
 <div class="[ table-container ]">
-  <table>
-    <thead>
-      <tr>
-        <th></th>
-        <th>{% emoji "🌱" %} Digital garden</th>
-        <th>{% emoji "📝" %} Blog</th>
-        <th>{% emoji "📌" %} Bookmarks</th>
-        <th>{% emoji "👩🏼‍💻" %} Projects</th>
-        <th>{% emoji "🌐" %} Everything</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>
+	<table>
+		<thead>
+			<tr>
+				<th></th>
+				<th>
+					<a href="https://www.rssboard.org/rss-specification" class="[ link-icon-start text-decoration-none move-link-styling-to-child ]">
+						{%- inlineIcon "fas:rss" -%}
+						<span>RSS</span>
+					</a>
+				</th>
+				<th>
+					<a href="https://www.rfc-editor.org/rfc/rfc4287.html" class="[ link-icon-start text-decoration-none move-link-styling-to-child ]">
+						{%- inlineIcon "local:Atom" -%}
+						<span>Atom</span>
+					</a>
+				</th>
+				<th>
+					<a href="https://www.jsonfeed.org/" class="[ link-icon-start text-decoration-none move-link-styling-to-child ]">
+						{%- inlineIcon "local:JSON Feed" -%}
+						<span>JSON</span>
+					</a>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>
+					<a href="/garden/">Digital garden</a>
+				</th>
+				<td>
+					<a href="">notes.rss</a>
+				</td>
+				<td>
+					<a href="">notes.atom</a>
+				</td>
+				<td>
+					<a href="">notes.json</a>
+				</td>
+			</tr>
+			<tr>
+				<th>
+					<a href="/blog/">Blog</a>
+				</th>
+				<td>
+					<a href="/articles.rss">articles.rss</a>
+				</td>
+				<td>
+					<a href="/articles.atom">articles.atom</a>
+				</td>
+				<td>
+					<a href="/articles.json">articles.json</a>
+				</td>
+			</tr>
+			<tr>
+				<th>
+					<a href="/bookmarks/">Bookmarks</a>
+				</th>
+				<td>
+					<a href="/bookmarks.rss">bookmarks.rss</a>
+				</td>
+				<td>
+					<a href="/bookmarks.atom">bookmarks.atom</a>
+				</td>
+				<td>
+					<a href="/bookmarks.json">bookmarks.json</a>
+				</td>
+			</tr>
+			<tr>
+				<th>
+					<a href="/projects/">Projects</a>
+				</th>
+				<td>
+					<a href="/projects.rss">projects.rss</a>
+				</td>
+				<td>
+					<a href="/projects.atom">projects.atom</a>
+				</td>
+				<td>
+					<a href="/projects.json">projects.json</a>
+				</td>
+			</tr>
+			<tr>
+				<th>
+					<a href="/archive/">Everything</a>
+				</th>
+				<td>
+					<a href="/feed.rss">feed.rss</a>
+				</td>
+				<td>
+					<a href="/feed.atom">feed.atom</a>
+				</td>
+				<td>
+					<a href="/feed.json">feed.json</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+{# <table>
+		<thead>
+			<tr>
+				<th></th>
+				<th>Digital garden</th>
+				<th>Blog</th>
+				<th>Bookmarks</th>
+				<th>Projects</th>
+				<th>Everything</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>
           RSS
         </th>
-        <td>
-          <a href="/notes.rss">
+				<td>
+					<a href="/notes.rss">
             notes.rss
           </a>
-        </td>
-        <td>
-          <a href="/articles.rss">
+				</td>
+				<td>
+					<a href="/articles.rss">
             articles.rss
           </a>
-        </td>
-        <td>
-          <a href="/bookmarks.rss">
+				</td>
+				<td>
+					<a href="/bookmarks.rss">
             bookmarks.rss
           </a>
-        </td>
-        <td>
-          <a href="/projects.rss">
+				</td>
+				<td>
+					<a href="/projects.rss">
             projects.rss
           </a>
-        </td>
-        <td>
-          <a href="/feed.rss">
+				</td>
+				<td>
+					<a href="/feed.rss">
             feed.rss
           </a>
-        </td>
-      </tr>
-      <tr>
-        <th>Atom</th>
-        <td>
-          <a href="/notes.atom">
+				</td>
+			</tr>
+			<tr>
+				<th>Atom</th>
+				<td>
+					<a href="/notes.atom">
             notes.atom
           </a>
-        </td>
-        <td>
-          <a href="/articles.atom">
+				</td>
+				<td>
+					<a href="/articles.atom">
             articles.atom
           </a>
-        </td>
-        <td>
-          <a href="/bookmarks.atom">
+				</td>
+				<td>
+					<a href="/bookmarks.atom">
             bookmarks.atom
           </a>
-        </td>
-        <td>
-          <a href="/projects.atom">
+				</td>
+				<td>
+					<a href="/projects.atom">
             projects.atom
           </a>
-        </td>
-        <td>
-          <a href="/feed.atom">
+				</td>
+				<td>
+					<a href="/feed.atom">
             feed.atom
           </a>
-        </td>
-      </tr>
-      <tr>
-        <th>
+				</td>
+			</tr>
+			<tr>
+				<th>
           JSON
         </th>
-        <td>
-          <a href="/notes.json">
+				<td>
+					<a href="/notes.json">
             notes.json
           </a>
-        </td>
-        <td>
-          <a href="/articles.json">
+				</td>
+				<td>
+					<a href="/articles.json">
             articles.json
           </a>
-        </td>
-        <td>
-          <a href="/bookmarks.json">
+				</td>
+				<td>
+					<a href="/bookmarks.json">
             bookmarks.json
           </a>
-        </td>
-        <td>
-          <a href="/projects.json">
+				</td>
+				<td>
+					<a href="/projects.json">
             projects.json
           </a>
-        </td>
-        <td>
-          <a href="/feed.json">
+				</td>
+				<td>
+					<a href="/feed.json">
             feed.json
           </a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+				</td>
+			</tr>
+		</tbody>
+	</table> #}
