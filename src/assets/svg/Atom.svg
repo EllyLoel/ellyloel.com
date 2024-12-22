@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-25 -26.75 50 50" fill="none">
+	<title>Atom</title>
+	<ellipse stroke="currentColor" rx="3" ry="22"/>
+	<ellipse stroke="currentColor" rx="3" ry="22" transform="rotate(-66)"/>
+	<ellipse stroke="currentColor" rx="3" ry="22" transform="rotate(66)"/>
+	<circle stroke="currentColor" r="22"/>
+	<circle fill="currentColor" stroke="currentColor" r="6.5"/>
+	<circle fill="currentColor" cy="-22" r="4.5"/>
+	<circle fill="currentColor" cx="-20" cy="9" r="4.5"/>
+	<circle fill="currentColor" cx="20" cy="9" r="4.5"/>
+</svg>
