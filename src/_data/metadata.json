@@ -12,9 +12,11 @@
 		"url": "https://ellyloel.com/about/",
 		"links": {
 			"Mastodon": "https://front-end.social/@elly",
+			"Bluesky": "https://bsky.app/profile/elly.lol",
 			"LinkedIn": "https://linkedin.com/in/ellyloel",
-			"CodePen": "https://codepen.io/ellyloel",
 			"GitHub": "https://github.com/ellyloel",
+			"CodePen": "https://codepen.io/ellyloel",
+			"Threads": "https://www.threads.net/@ellyloel",
 			"Twitter": "https://twitter.com/ellyloel"
 		}
 	}
