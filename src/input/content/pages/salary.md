@@ -2,10 +2,10 @@
 layout: base
 title: Salary history
 permalink: "salary/"
-# eleventyNavigation:
-#   key: Salary history
-#   parent: Me
-#   order: 6
+eleventyNavigation:
+  key: Salary history
+  parent: Me
+  order: 6
 ---
 
 This page was inspired by [Carolina Gilabert's salary page](https://carol.gg/salary/).
@@ -53,6 +53,20 @@ She describes it well:
 				<td>Mid-level developer</td>
 				<td>4 days a week</td>
 				<td>$85,000 (pro rata $68,000)</td>
+			</tr>
+			<tr>
+				<td><time datetime="2024-05">May 2024</time></td>
+				<td>Department of Employment and Workplace Relations</td>
+				<td>Digital Accessibility Officer</td>
+				<td>4 days a week</td>
+				<td>$98,105 (pro rata $78,484)</td>
+			</tr>
+			<tr>
+				<td><time datetime="2024-11">Nov 2024</time></td>
+				<td>Department of Employment and Workplace Relations</td>
+				<td>Digital Accessibility Officer</td>
+				<td>Full-time condensed into 4 days a week</td>
+				<td>$98,105</td>
 			</tr>
 		</tbody>
 	</table>
