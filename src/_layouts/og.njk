@@ -39,12 +39,8 @@
 				max-width: calc(100vw - 4rem);
 			}
 
-			h1 a,
-			h2 a {
-				border-radius: 1rem;
-			}
-
 			h1 a {
+				border-radius: 1rem;
 				position: relative;
 				display: block;
 				padding: 2rem;
@@ -61,27 +57,18 @@
 			}
 
 			h2 a {
+				border-radius: 0.8rem;
 				position: absolute;
 				display: block;
 				right: 2rem;
 				bottom: 2rem;
-				width: -webkit-fit-content;
-				width: -moz-fit-content;
-				width: fit-content;
-				margin-left: auto;
-				padding: 14px 12px 8px;
-
-				color: black;
-				font-size: 3rem;
-				line-height: 1;
-
-				background-color: hsl(0 0 100% / 90%);
+				color: hsl(0 0 100% / 90%);
 				mix-blend-mode: lighten;
 			}
 
 			h2 svg {
 				display: block;
-				height: 0.8em;
+				height: 4rem;
 			}
 
 			@supports (backdrop-filter: blur(2rem)) or (-webkit-backdrop-filter: blur(2rem)) {
@@ -96,16 +83,14 @@
 
 				h1 .glass-edge {
 					position: absolute;
-					left: 0;
+					top: 0;
 					right: 0;
-					bottom: 0;
-					height: 1.4em;
+					bottom: -0.4em;
+					left: 0;
 					background: hsl(0deg 0% 100% / 0.1);
 					-webkit-backdrop-filter: blur(0.5rem) brightness(110%) saturate(120%);
 					backdrop-filter: blur(0.5rem) brightness(110%) saturate(120%);
-					transform: translateY(0.4em);
-					border-bottom-left-radius: 1rem;
-					border-bottom-right-radius: 1rem;
+					border-radius: 1rem;
 					z-index: -1;
 					box-shadow: inset 0 -0.1rem 0.1rem 0 hsl(0 0 100% / 10%);
 				}
@@ -113,8 +98,8 @@
 				h2 a {
 					background: none;
 					mix-blend-mode: normal;
-					backdrop-filter: contrast(50%) saturate(200%) brightness(200%) blur(2rem) hue-rotate(-22deg);
-					color: #5a1c93;
+					backdrop-filter: contrast(100%) saturate(200%) brightness(100%) blur(0.5rem);
+					color: hsl(0 0 100% / 70%);
 				}
 			}
 		</style>
@@ -123,34 +108,32 @@
 	</head>
 	<body>
 		<css-doodle>
-      :doodle {
-        @grid: 100x1 / 100vmax;
-      }
-    
-      :container {
-        @size: 125%;
-        transform:
-        scale(8)
-        translateY(17.5%) translateX(-20%)
-        rotate(315deg);
-      }
-    
-      @place-cell: center;
-      border-radius: 50%;
-      transform: rotate(@rand(-.5deg, .5deg, .1));
-    
-      height: 20%;
-      width: calc(
-        100% - @calc(@index() -1) * 100% / @size()
-      );
-    
-      background: @pick(
-        #1f0538, #3d0f66, #5a1c93, #772bbf, #9244e4, #a96bf4, #bd93f9, #d2b8fb, #e8dcfd
-      );
-    </css-doodle>
+			:doodle {
+				@grid: 100x1 / 100vmax;
+			}
+
+			:container {
+				@size: 125%;
+				transform:
+				scale(8)
+				translateY(17.5%) translateX(-20%)
+				rotate(315deg);
+			}
+
+			@place-cell: center;
+			border-radius: 50%;
+			transform: rotate(@rand(-.5deg, .5deg, .1));
+
+			height: 20%;
+			width: calc(
+				100% - @calc(@index() -1) * 100% / @size()
+			);
+
+			background: @pick(#1f0538, #3d0f66, #5a1c93, #772bbf, #9244e4, #a96bf4, #bd93f9, #d2b8fb, #e8dcfd);
+		</css-doodle>
 		{{ content | safe }}
 		<h2>
-			<a href="/">{% labelledIcon "local:elly" %}</a>
+			<a href="/">{% labelledIcon "local:elly-invert" %}</a>
 		</h2>
 	</body>
 </html>
