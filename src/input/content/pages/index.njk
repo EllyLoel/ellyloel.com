@@ -1,7 +1,7 @@
 ---
 layout: base-without-header
 title: Home
-description: Hi, I’m Elly. I like creating delightful, magical, and accessible art with code.
+description: Web Designer. Accessibility Specialist. Neurodivergent. Disabled. Queer.
 permalink: "/"
 eleventyExcludeFromCollections: true
 eleventyImport:
@@ -11,11 +11,21 @@ eleventyImport:
 <div class="[ home ]">
 	<header class="[ hero ]">
 		<h1>
-			<span class="[ p-note ] [ visually-hidden ]">Hi, I'm Elly. I like creating delightful, magical, and accessible art with code.</span>
-			<span class="[ detitlify ]" aria-hidden="true">
-				Hi, I’m <span class="[ logo-inline ]">{% icon "local:elly" %}</span>
-			</span>
-			<span aria-hidden="true">I like creating <span class="stroke" style="--color: var(--accent-solid); --thickness: 1.5px;">delightful</span>, <span class="stroke" style="--color: var(--accent-solid); --thickness: 1.5px;">magical</span>, and <span class="stroke" style="--color: var(--accent-solid); --thickness: 1.5px;">accessible</span> art with code<span style="color: var(--accent-solid);">.</span></span>
+			<span class="[ detitlify ]">Hi, I’m <span class="[ logo-inline ]">{% icon "local:elly" %}</span></span>
+			{%- rollup "src/input/js/eight-ball.js" | url -%}
+			<eight-ball>
+				<span>I like creating <span class="stroke">delightful</span>, <span class="stroke">magical</span>, and <span class="stroke">accessible</span> art with code.</span>
+				<span hidden="until-found"><span class="stroke">Web development is political</span>—every line of code shapes who has access, who’s excluded, and how power is distributed online.</span>
+				<span hidden="until-found">Pushing back against the <span class="stroke">enshittification</span> of the web by building ethical, inclusive, and transparent tech.</span>
+				<span hidden="until-found"><span class="stroke">Queering the web</span> means designing inclusive, diverse spaces that challenge normative boundaries and embrace fluidity in both code and culture.</span>
+				<span hidden="until-found">To be neutral on ableism perpetuates it—only by being <span class="stroke">anti-ableist</span> can you create accessible work.</span>
+				<span hidden="until-found">In a continual battle against the status quo, we need <span class="stroke">progress over perfection</span>.</span>
+				<span hidden="until-found">True web accessibility goes beyond standards, addressing the <span class="stroke">intersectionality</span> of barriers people face online.</span>
+				<span hidden="until-found">Disability isn't defined by the individual; it's shaped by the barriers society creates… <span class="stroke">We are society</span>.</span>
+				<span hidden="until-found"><span class="stroke">Madding</span>, <span class="stroke">cripping</span>, and <span class="stroke">queering</span> will revolutionise the web—by reimagining accessibility as an ongoing, creative process rather than a set of fixed guidelines.</span>
+				<span hidden="until-found"><span class="stroke">Crip technoscience</span> empowers disabled people to reshape the world through critical design and activism, challenging ableist norms in technology and society.</span>
+				<button type="button" slot="action">{% inlineIcon "fas:shuffle" %}</button>
+			</eight-ball>
 		</h1>
 		<div id="lego" class="[ lego-container ]">
 			<is-land on:interaction="click,focusin">
@@ -34,7 +44,7 @@ eleventyImport:
 					</script>
 				</template>
 				<model-viewer tabindex="0" loading="eager" alt="A 3D modeled Lego Minifigure designed to look like myself." src="/assets/3d/me.glb" camera-controls disable-pan disable-zoom shadow-intensity="0" exposure="0.75" shadow-softness="1" camera-orbit="31.49deg 78.9deg 98.24m" field-of-view="30deg">
-					<img id="poster" src="/assets/img/poster.webp" alt="A 3D modeled Lego Minifigure designed to look like myself.">
+					<img id="poster" src="/assets/img/poster.webp" alt="A 3D modeled Lego Minifigure designed to look like myself." width="600" height="600">
 					<div class="progress-bar" slot="progress-bar"></div>
 				</model-viewer>
 			</is-land>
@@ -43,86 +53,85 @@ eleventyImport:
 
 	<article class="[ about ][ flow ]">
 		<img class="[ u-photo ]" src="/assets/img/pfp.jpg" alt='A digital drawing of me a white woman with blonde hair, smiling and doing a peace sign, wearing a white "golf le fleur" jumper.' hidden loading="lazy" decoding="async" width="723" height="723">
-		<ul role="list" class="[ p-note ] [ flow ]">
-			<li>
-				<details-utils animate>
-					<details class="[ interest-list ]">
-						<summary>I'm a <span class="[ p-role ]">front-end developer/designer and accessibility specialist</span> with a strong interest in and passion for...</summary>
-						<ul role="list" class="[ flow ]">
-							<li>
-								{%- inlineIcon "fas:code" -%}
-								Web Standards
-								<ul role="list" class="[ flow margin-block-start-3 ]">
-									<li>
-										{%- inlineIcon "fab:html5" -%}
-										HTML
-									</li>
-									<li>
-										{%- inlineIcon "fab:css3-alt" -%}
-										CSS
-									</li>
-									<li>
-										{%- inlineIcon "fas:book" -%}
-										WCAG
-									</li>
-									<li>
-										{%- inlineIcon "fas:pen-nib" -%}
-										SVG
-									</li>
-									<li>
-										{%- inlineIcon "fas:diagram-project" -%}
-										ARIA
-									</li>
-									<li>
-										{%- inlineIcon "fas:cube" -%}
-										Web Components
-									</li>
-								</ul>
-							</li>
-							<li>
-								{%- inlineIcon "fas:universal-access" -%}
-								Accessibility
-							</li>
-							<li>
-								{%- inlineIcon "fas:cubes" -%}
-								Design Systems
-							</li>
-							<li>
-								{%- inlineIcon "fas:gears" -%}
-								Design Tokens
-							</li>
-						</ul>
-					</details>
-				</details-utils>
-			</li>
-			<li>
-				{% emoji "🏳️‍⚧️" %} I'm an incredibly <span class="[ p-category ]">queer</span> <span class="[ p-category ]">trans</span> <span class="[ p-gender-identity ]">woman</span>. My pronouns are <a href="https://en.pronouns.page/@ellyloel" class="[ p-pronouns ]"><span class="[ p-pronoun ]">she</span>/<span class="[ p-pronoun ]">her</span></a>.
-			</li>
-			<li>
-				{% emoji "🧠" %} I'm an <span class="[ p-category ]">AuDHD</span> (<span class="[ p-category ]">autistic</span> and <span class="[ p-category ]">ADHD</span>) <span class="[ p-category ]">neurodivergent</span>.
-			</li>
-			<li>
-				{% emoji "🐈‍⬛" %} I have a little rascal of a cat named <a href="/lulu">Lulu</a>, who I love to bits.
-			</li>
-			<li>
-				{% emoji "📺" %} I love all kinds of animation (anime, cartoons, etc.).
-			</li>
-			<li>
-				{% emoji "🌏" %} I live on the edge of Bunurong and Wurundjeri Country, near <span class="[ p-locality ]">Naarm (Melbourne</span>, <span class="[ p-country-name ]">Australia</span>).
-			</li>
-			<li class="[ spotify-playing ]">
-				{% emoji "🎵" %} The last song I listened to was "<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="song">Never Gonna Give You Up</a>" by <em class="artist">Rick Astley</em>.
-			</li>
-		</ul>
-		<div class="[ flow ]">
-			<h2>Find me on:</h2>
-			<ul class="[ social-links ][ flow ]">
+		<div class="[ p-note ] [ flow ]">
+			<p>That is to say, I'm <strong>Elly Loel</strong>—my pronouns are <a href="https://en.pronouns.page/@ellyloel" class="[ link-icon-start text-decoration-none move-link-styling-to-child ]">{% inlineIcon "local:pronounspage" %} <span>she/her</span></a>. I’m a <a href="/blog/front-end-development-s-identity-crisis/" class="[ link-icon-start text-decoration-none move-link-styling-to-child ]">{% inlineIcon "local:ui" %} <span>Web Designer / Design Engineer</span></a> with a passion for <a href="/tags/accessibility/" class="[ link-icon-start text-decoration-none move-link-styling-to-child ]">{% inlineIcon "fas:universal-access" %} <span>Accessibility</span></a> and <a href="/tags/design-systems/" class="[ link-icon-start text-decoration-none move-link-styling-to-child ]">{% inlineIcon "fas:cubes" %} <span>Design Systems</span></a>, working to make the <a href="/tags/web/" class="[ link-icon-start text-decoration-none move-link-styling-to-child ]">{% inlineIcon "local:browser" %} <span>web</span></a> a more inclusive space in <a href="https://en.wikipedia.org/wiki/Melbourne#:~:text=%3A%20Narrm%20or-,Naarm,-%5B9%5D" class="[ link-icon-start text-decoration-none move-link-styling-to-child ]">{% inlineIcon "fas:earth-oceania" %} <span>Naarm</span></a>.</p>
+			<p>I love crafting with <a href="/tags/web-standards/" class="[ link-icon-start text-decoration-none move-link-styling-to-child ]">{% inlineIcon "fas:passport" %} <span>Web Standards</span></a> like <a href="/tags/html/" class="[ link-icon-start text-decoration-none move-link-styling-to-child ]">{% inlineIcon "local:code-rectangle" %} <span>HTML</span></a> & <a href="/tags/css/" class="[ link-icon-start text-decoration-none move-link-styling-to-child ]">{% inlineIcon "fab:css" %} <span>CSS</span></a>, and I’m always looking for ways to queer the web and make things less shit.</p>
+			<p>I'm <a href="/garden/my-disabilities/" class="[ link-icon-start text-decoration-none move-link-styling-to-child ]">{% inlineIcon "fas:wheelchair-move" %} <span>disabled</span></a> & {% inlineIcon "fas:brain" %} <span>neurodivergent</span> & {% inlineIcon "fas:transgender" %} trans & {% inlineIcon "fas:venus-double" %} queer—this is where my work and identity meet.</p>
+			<p>When I’m not advocating for better digital experiences, I’m probably geeking out over web standards or figuring out how to make life more equitable for {% inlineIcon "fas:users-between-lines" %} <strong>everyone</strong>.</p>
+			<p>If you want, you can <a href="https://elly.to/ama" rel="me" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">{% inlineIcon "far:circle-question" %} <span>ask me anything</span></a>.</p>
+			<p class="[ spotify-playing ]">The last song I listened to was <a href="https://www.last.fm/music/Never+Gonna+Give+You+Up/_/Rick+Astley" class="[ song ][ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">{% inlineIcon "fab:lastfm" %} "<span>Never Gonna Give You Up</span>"</a> by <em class="[ artist ]">Rick Astley</em>.</p>
+			<div hidden>
 				<li>
-					<a href="https://elly.to/ama" rel="me" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">
-						{%- inlineIcon "far:circle-question" -%}
-						<span>Ask me anything</span>
-					</a>
+					<details-utils animate>
+						<details class="[ interest-list ]">
+							<summary>I'm a <span class="[ p-role ]">front-end developer/designer and accessibility specialist</span> with a strong interest in and passion for...</summary>
+							<ul role="list" class="[ flow ]">
+								<li>
+									{%- inlineIcon "fas:code" -%}
+									Web Standards
+									<ul role="list" class="[ flow margin-block-start-3 ]">
+										<li>
+											{%- inlineIcon "fab:html5" -%}
+											HTML
+										</li>
+										<li>
+											{%- inlineIcon "fab:css3-alt" -%}
+											CSS
+										</li>
+										<li>
+											{%- inlineIcon "fas:book" -%}
+											WCAG
+										</li>
+										<li>
+											{%- inlineIcon "fas:pen-nib" -%}
+											SVG
+										</li>
+										<li>
+											{%- inlineIcon "fas:diagram-project" -%}
+											ARIA
+										</li>
+										<li>
+											{%- inlineIcon "fas:cube" -%}
+											Web Components
+										</li>
+									</ul>
+								</li>
+								<li>
+									{%- inlineIcon "fas:universal-access" -%}
+									Accessibility
+								</li>
+								<li>
+									{%- inlineIcon "fas:cubes" -%}
+									Design Systems
+								</li>
+								<li>
+									{%- inlineIcon "fas:gears" -%}
+									Design Tokens
+								</li>
+							</ul>
+						</details>
+					</details-utils>
 				</li>
+				<li>
+					{% emoji "🏳️‍⚧️" %} I'm an incredibly <span class="[ p-category ]">queer</span> <span class="[ p-category ]">trans</span> <span class="[ p-gender-identity ]">woman</span>. My pronouns are <a href="https://en.pronouns.page/@ellyloel" class="[ p-pronouns ]"><span class="[ p-pronoun ]">she</span>/<span class="[ p-pronoun ]">her</span></a>.
+				</li>
+				<li>
+					{% emoji "🧠" %} I'm an <span class="[ p-category ]">AuDHD</span> (<span class="[ p-category ]">autistic</span> and <span class="[ p-category ]">ADHD</span>) <span class="[ p-category ]">neurodivergent</span>.
+				</li>
+				<li>
+					{% emoji "🐈‍⬛" %} I have a little rascal of a cat named <a href="/lulu">Lulu</a>, who I love to bits.
+				</li>
+				<li>
+					{% emoji "📺" %} I love all kinds of animation (anime, cartoons, etc.).
+				</li>
+				<li>
+					{% emoji "🌏" %} I live on the edge of Bunurong and Wurundjeri Country, near <span class="[ p-locality ]">Naarm (Melbourne</span>, <span class="[ p-country-name ]">Australia</span>).
+				</li>
+			</div>
+		</div>
+		<div class="[ flow ]">
+			<h2>Where's Elly?</h2>
+			<ul class="[ social-links ][ flow ]">
 				<li>
 					<a href="https://elly.to/mastodon" rel="me" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">
 						{%- inlineIcon "fab:mastodon" -%}

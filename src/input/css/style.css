@@ -39,6 +39,7 @@
 @import url("./blocks/card.css") layer(blocks);
 @import url("./blocks/color-scheme-switcher.css") layer(blocks);
 @import url("./blocks/date.css") layer(blocks);
+@import url("./blocks/eight-ball.css") layer(blocks);
 @import url("./blocks/emoji.css") layer(blocks);
 @import url("./blocks/feed-block.css") layer(blocks);
 @import url("./blocks/feed.css") layer(blocks);

@@ -29,7 +29,7 @@ For more up to date details check out the [[now]] page.
 
 - Design engineering
 - CSS
-- A11y
+- Accessibility
 - SVG
 - Web standards
 - Design tokens
