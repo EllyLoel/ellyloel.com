@@ -22,6 +22,9 @@ importers:
       '@remy/webmention':
         specifier: ^1.5.0
         version: 1.5.0
+      '@terriblemia/eight-ball':
+        specifier: ^0.2.0
+        version: 0.2.0
       '@zachleat/details-utils':
         specifier: ^2.0.2
         version: 2.0.2
@@ -78,8 +81,8 @@ importers:
         specifier: ^8.57.0
         version: 8.57.0
       '@fortawesome/fontawesome-free':
-        specifier: ^6.5.2
-        version: 6.5.2
+        specifier: ^6.7.2
+        version: 6.7.2
       '@photogabble/eleventy-plugin-interlinker':
         specifier: ^1.0.5
         version: 1.0.5(@11ty/eleventy@2.0.1)
@@ -722,8 +725,8 @@ packages:
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
     engines: {node: '>=14'}
 
-  '@fortawesome/fontawesome-free@6.5.2':
-    resolution: {integrity: sha512-hRILoInAx8GNT5IMkrtIt9blOdrqHOnPBH+k70aWUAqPZPgopb9G5EQJFpaBx/S8zp2fC+mPW349Bziuk1o28Q==}
+  '@fortawesome/fontawesome-free@6.7.2':
+    resolution: {integrity: sha512-JUOtgFW6k9u4Y+xeIaEiLr3+cjoUPiAuLXoyKOJSia6Duzb7pq+A76P9ZdPDoAoxHdHzq6gE9/jKBGXlZT8FbA==}
     engines: {node: '>=6'}
 
   '@google/model-viewer@3.4.0':
@@ -854,6 +857,9 @@ packages:
 
   '@socket.io/component-emitter@3.1.0':
     resolution: {integrity: sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==}
+
+  '@terriblemia/eight-ball@0.2.0':
+    resolution: {integrity: sha512-3w63Zq4yBe5I+a2l8KyJNQ/c74RQEWUs57Tyn8qJiVMa77h6OFgII+ebSDGALJhiKsTMKW+6fFXxhv5rpDWfjQ==}
 
   '@trysound/sax@0.2.0':
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
@@ -4910,7 +4916,7 @@ snapshots:
 
   '@fastify/busboy@2.1.1': {}
 
-  '@fortawesome/fontawesome-free@6.5.2': {}
+  '@fortawesome/fontawesome-free@6.7.2': {}
 
   '@google/model-viewer@3.4.0(three@0.160.1)':
     dependencies:
@@ -5058,6 +5064,8 @@ snapshots:
       lodash.deburr: 4.1.0
 
   '@socket.io/component-emitter@3.1.0': {}
+
+  '@terriblemia/eight-ball@0.2.0': {}
 
   '@trysound/sax@0.2.0': {}
 

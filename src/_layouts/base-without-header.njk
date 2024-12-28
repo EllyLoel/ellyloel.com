@@ -5,7 +5,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- specify viewport: https://developers.google.com/speed/docs/insights/ConfigureViewport -->
+		{%- if page.url === "/" -%}
+		<title>Elly Loel</title>
+		{%- else -%}
 		<title>{{ title }} - Elly Loel</title>
+		{%- endif -%}
 
 		<!-- Include stylesheets here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
 		<link rel="stylesheet" href="/css/style.css">

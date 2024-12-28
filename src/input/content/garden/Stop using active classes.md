@@ -2,7 +2,7 @@
 title: Stop using active classes
 stage: seedling
 tags:
-  - A11y
+  - Accessibility
   - CSS
 created: 2022-09-10
 modified: 2022-09-10

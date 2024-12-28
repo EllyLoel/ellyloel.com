@@ -362,6 +362,11 @@ video {
 	border-radius: var(--radius-2);
 }
 
+/* svg */
+svg {
+	overflow: visible;
+}
+
 /* Blockquote */
 
 blockquote {

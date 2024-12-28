@@ -1,16 +1,14 @@
 .stroke {
-	--thickness: 1px;
+	--thickness: 0.175em;
 	--stroke-color: var(--color, var(--neutral-text-contrast));
 	--fill-color: var(--neutral-base);
 
 	color: var(--fill-color);
-	text-shadow: calc(var(--thickness) * -1) calc(var(--thickness) * -1) 0
-			var(--stroke-color),
-		var(--thickness) calc(var(--thickness) * -1) 0 var(--stroke-color),
-		calc(var(--thickness) * -1) var(--thickness) 0 var(--stroke-color),
-		var(--thickness) var(--thickness) 0 var(--stroke-color);
+	paint-order: stroke fill;
+	-webkit-text-stroke-color: var(--stroke-color);
+	-webkit-text-stroke-width: var(--thickness);
 	transition-duration: 500ms;
-	transition-property: color, text-shadow;
+	transition-property: color, -webkit-text-stroke-color;
 	transition-timing-function: ease;
 
 	&:hover {
@@ -18,7 +16,7 @@
 
 		color: var(--hover-color, var(--color));
 		transition-duration: 250ms;
-		transition-property: color, text-shadow;
+		transition-property: color, -webkit-text-stroke-color;
 		transition-timing-function: ease;
 	}
 }

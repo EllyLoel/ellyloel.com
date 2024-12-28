@@ -1,0 +1,24 @@
+eight-ball [data-current] {
+	display: inline;
+}
+
+eight-ball button {
+	--_bg: var(--accent-solid);
+	--_border: transparent;
+	--_highlight-size: 0;
+	--_size: 0.7em;
+	--_size: 1cap;
+	--_text: var(--neutral-base);
+
+	border-radius: 0.3em;
+	box-shadow: none;
+	padding: var(--size-1);
+
+	&:is(:hover, :focus-visible) {
+		--_bg: var(--neutral-base);
+		--_border: transparent;
+		--_text: var(--accent-solid);
+
+		box-shadow: none;
+	}
+}
