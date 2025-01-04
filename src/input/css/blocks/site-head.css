@@ -72,6 +72,7 @@
 	}
 
 	& .nav {
-		padding: var(--size-3) 0;
+		padding: 0;
+		padding-block-start: var(--size-3);
 	}
 }

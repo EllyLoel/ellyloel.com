@@ -7,16 +7,4 @@
 	paint-order: stroke fill;
 	-webkit-text-stroke-color: var(--stroke-color);
 	-webkit-text-stroke-width: var(--thickness);
-	transition-duration: 500ms;
-	transition-property: color, -webkit-text-stroke-color;
-	transition-timing-function: ease;
-
-	&:hover {
-		--stroke-color: var(--fill-color);
-
-		color: var(--hover-color, var(--color));
-		transition-duration: 250ms;
-		transition-property: color, -webkit-text-stroke-color;
-		transition-timing-function: ease;
-	}
 }
