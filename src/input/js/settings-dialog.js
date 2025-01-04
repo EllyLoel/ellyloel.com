@@ -21,19 +21,17 @@ document.querySelectorAll("dialog").forEach((dialog) => {
 	dialog.addEventListener("opened", dialogOpened);
 });
 
-const colorSchemeSwitcherDialogOpenButton = document.querySelector(
-	"#color-scheme-switcher-dialog-open-button"
+const settingsDialogOpenButton = document.querySelector(
+	"#settings-dialog-open-button"
 );
-const colorSchemeSwitcherDialogCloseButton = document.querySelector(
+const settingsDialogCloseButton = document.querySelector(
 	'[data-action="close"]'
 );
-const colorSchemeSwitcherDialog = document.querySelector(
-	".color-scheme-switcher-dialog"
-);
+const settingsDialog = document.querySelector(".settings-dialog");
 
-colorSchemeSwitcherDialogOpenButton.addEventListener("click", (event) => {
-	colorSchemeSwitcherDialog.showModal();
+settingsDialogOpenButton.addEventListener("click", (event) => {
+	settingsDialog.showModal();
 });
-colorSchemeSwitcherDialogCloseButton.addEventListener("click", (event) => {
-	colorSchemeSwitcherDialog.close("close");
+settingsDialogCloseButton.addEventListener("click", (event) => {
+	settingsDialog.close("close");
 });

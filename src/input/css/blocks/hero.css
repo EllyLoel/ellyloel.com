@@ -79,20 +79,26 @@
 			}
 		}
 
-		& eight-ball {
-			color: var(--accent-solid);
-			display: block;
+		> div {
+			font-size: smaller;
 			font-weight: 1000;
 			isolation: isolate;
-			text-align: right;
 
-			/* for some reason this is causing my 11ty build to run out of memory 🤯 */
+			> * {
+				display: block;
+			}
 
-			/* & span:not(:has(a)) {
-				text-decoration: 0.4rem wavy line-through
-					oklch(from var(--accent-bg-hover) l c h / 20%);
-				text-decoration-skip-ink: none;
-			} */
+			& eight-ball {
+				color: var(--accent-solid);
+				margin-inline-start: auto;
+
+				/* for some reason this is causing my 11ty build to run out of memory 🤯 */
+
+				/* & span:not(:has(a)) {
+					text-decoration: 0.4rem wavy line-through oklch(from var(--accent-bg-hover) l c h / 20%);
+					text-decoration-skip-ink: none;
+				} */
+			}
 		}
 	}
 
@@ -126,7 +132,7 @@
 						cursor: url("/assets/img/meme-pop-cat-pointer.webp"), default;
 					}
 
-					&:hover:not(#\#):not(#\#) {
+					&:hover:not(#\#, #\#) {
 						--stroke-color: var(--fill-color);
 
 						color: var(--hover-color, var(--color));
@@ -142,6 +148,12 @@
 			grid-column: 1 / 2;
 			grid-row: 2 / 3;
 			max-inline-size: 100%;
+		}
+	}
+
+	@media (width >= 30em) { /* 480px */
+		& .hero > div {
+			font-size: var(--font-size-3);
 		}
 	}
 

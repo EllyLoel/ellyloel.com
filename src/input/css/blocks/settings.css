@@ -1,4 +1,4 @@
-.color-scheme-switcher-dialog {
+.settings-dialog {
 	align-content: start;
 	border-radius: var(--radius-3);
 	box-shadow: var(--shadow-6);
@@ -34,7 +34,7 @@
 	}
 }
 
-.color-scheme-switcher-dialog .container {
+.settings-dialog .container {
 	grid-column: 1/2;
 	padding: var(--size-7);
 

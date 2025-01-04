@@ -9,18 +9,12 @@
 				</span>
 			</a>
 
-			<button type="button" id="sound-button" aria-pressed="true">
-				{%- icon "fas:volume-high" -%}
-				{%- icon "fas:volume-xmark" -%}
-				Sounds
+			<button type="button" id="settings-dialog-open-button">
+				{%- icon "fas:gear" -%}
+				<span class="[ visually-hidden ]">Settings</span>
 			</button>
 
-			<button type="button" id="color-scheme-switcher-dialog-open-button">
-				{%- icon "fas:palette" -%}
-				Theme editor
-			</button>
-
-			{% include "color-scheme-switcher.njk" %}
+			{% include "settings.njk" %}
 		</div>
 
 		{% include "navigation.njk" %}

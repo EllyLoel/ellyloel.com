@@ -358,7 +358,7 @@ video {
 }
 
 /* svg */
-svg {
+:not(#graph) > svg {
 	overflow: visible;
 }
 
