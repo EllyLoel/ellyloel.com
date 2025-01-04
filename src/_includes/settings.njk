@@ -1,10 +1,16 @@
-<dialog class="[ color-scheme-switcher-dialog ]" inert loading>
-	<div class="[ container ][ flex flex-col gap-3 ]">
-		<h2 class="[ margin-0 line-height-1 ]">Theme editor</h2>
+<dialog class="[ settings-dialog ]" inert loading>
+	<div class="[ container ][ flex flex-col gap-5 ]">
+		<h2 class="[ margin-0 line-height-1 ]">Settings</h2>
 
 		<button type="button" data-action="close" class="[ padding-1 ]" style="font-size: 1.25rem;">
 			<span class="[ visually-hidden ]">Close</span>
 			{%- icon "fas:xmark" -%}
+		</button>
+
+		<button type="button" id="sound-button" aria-pressed="true">
+			{%- icon "fas:volume-high" -%}
+			{%- icon "fas:volume-xmark" -%}
+			Sounds
 		</button>
 
 		<fieldset style="border: none;">

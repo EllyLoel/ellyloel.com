@@ -37,7 +37,6 @@
 @import url("./blocks/button.css") layer(blocks);
 @import url("./blocks/callout.css") layer(blocks);
 @import url("./blocks/card.css") layer(blocks);
-@import url("./blocks/color-scheme-switcher.css") layer(blocks);
 @import url("./blocks/date.css") layer(blocks);
 @import url("./blocks/eight-ball.css") layer(blocks);
 @import url("./blocks/emoji.css") layer(blocks);
@@ -58,6 +57,7 @@
 @import url("./blocks/photos.css") layer(blocks);
 @import url("./blocks/prism.css") layer(blocks);
 @import url("./blocks/search.css") layer(blocks);
+@import url("./blocks/settings.css") layer(blocks);
 @import url("./blocks/site-head.css") layer(blocks);
 @import url("./blocks/skip-link.css") layer(blocks);
 @import url("./blocks/sound-button.css") layer(blocks);

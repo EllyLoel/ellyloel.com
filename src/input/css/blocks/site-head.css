@@ -1,4 +1,6 @@
 .site-head {
+  border-block-end-width: 0.1em;
+	border-image: linear-gradient(to right, transparent, var(--accent-solid), transparent) 1;
 	padding: var(--size-6) 0;
 	z-index: 1;
 
@@ -8,52 +10,21 @@
 			display: flex;
 			flex-wrap: wrap;
 			gap: var(--size-2) var(--size-3);
+			justify-content: space-between;
 
 			> button {
-				all: unset;
-				/* stylelint-disable-next-line order/properties-alphabetical-order */
-				align-items: center;
-				background-color: transparent;
-				border-radius: var(--radius-2);
-				color: var(--link);
-				cursor: pointer;
-				display: flex;
-				font-weight: var(--font-weight-body-bold);
-				gap: 1ch;
-				margin-left: calc(var(--size-1) * -1);
-				margin-right: calc(var(--size-1) * -1);
-				outline-offset: 0;
-				padding-block: 0;
-				padding-left: var(--size-1);
-				padding-right: var(--size-1);
-				transition: background-color 200ms var(--ease-2);
+				--_border: var(--accent-bg-subtle);
+
+				border-width: var(--border-size-1);
+				color: var(--accent-bg-active);
+				padding: var(--size-1);
 
 				&:hover {
-					background-color: var(--accent-bg);
-					text-decoration-color: transparent;
+					--_highlight-size: var(--size-1);
 				}
-
-				&:active {
-					background-color: var(--accent-bg-hover);
-				}
-
-				&:focus-visible {
-					outline: 2px solid var(--link);
-					outline-offset: 0;
-				}
-
-				&:not(:active):focus-visible {
-					outline-offset: var(--size-1);
-				}
-
-				@media (prefers-reduced-motion: no-preference) {
-					&:focus-visible {
-						transition: outline-offset 145ms var(--ease-2);
-					}
-
-					&:not(:active):focus-visible {
-						transition-duration: 0.25s;
-					}
+				
+				&:is(:hover, :focus, :active) {
+					--_border: var(--accent-bg);
 				}
 			}
 		}
