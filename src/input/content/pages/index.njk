@@ -9,45 +9,64 @@ eleventyImport:
 ---
 
 <div class="[ home ]">
-	<header class="[ hero ]">
-		<h1>
-			<span class="[ detitlify ]">Hi, I’m <span class="[ logo-inline ]">{% icon "local:elly" %}</span></span>
-			{%- rollup "src/input/js/eight-ball.js" | url -%}
-			<eight-ball>
-				<span>I like creating <span class="stroke">delightful</span>, <span class="stroke">magical</span>, and <span class="stroke">accessible</span> art with code.</span>
-				<span hidden="until-found"><span class="stroke">Web development is political</span>—every line of code shapes who has access, who’s excluded, and how power is distributed online.</span>
-				<span hidden="until-found">Pushing back against the <span class="stroke">enshittification</span> of the web by building ethical, inclusive, and transparent tech.</span>
-				<span hidden="until-found"><span class="stroke">Queering the web</span> means designing inclusive, diverse spaces that challenge normative boundaries and embrace fluidity in both code and culture.</span>
-				<span hidden="until-found">To be neutral on ableism perpetuates it—only by being <span class="stroke">anti-ableist</span> can you create accessible work.</span>
-				<span hidden="until-found">In a continual battle against the status quo, we need <span class="stroke">progress over perfection</span>.</span>
-				<span hidden="until-found">True web accessibility goes beyond standards, addressing the <span class="stroke">intersectionality</span> of barriers people face online.</span>
-				<span hidden="until-found">Disability isn't defined by the individual; it's shaped by the barriers society creates… <span class="stroke">We are society</span>.</span>
-				<span hidden="until-found"><span class="stroke">Madding</span>, <span class="stroke">cripping</span>, and <span class="stroke">queering</span> will revolutionise the web—by reimagining accessibility as an ongoing, creative process rather than a set of fixed guidelines.</span>
-				<span hidden="until-found"><span class="stroke">Crip technoscience</span> empowers disabled people to reshape the world through critical design and activism, challenging ableist norms in technology and society.</span>
-				<button type="button" slot="action">{% inlineIcon "fas:shuffle" %}</button>
+	<header>
+		{%- rollup "src/input/js/eight-ball.js" | url -%}
+		<div class="[ hero ]">
+			<h1>
+				<span class="[ text-fit ]">
+					<span><span class="[ stroke ]" style="--thickness: 0.0125em; --fill-color: var(--accent-bg); --stroke-color: var(--accent-border);">Elly Loel</span></span>
+					<span aria-hidden="true">Elly Loel</span>
+				</span>
+			</h1>
+			<eight-ball class="[ detitlify ]">
+				<span hidden>Design Engineer</span>
+				<span hidden><a href="/blog/front-end-development-s-identity-crisis/">Front-end Developer?</a></span>
+				<span hidden>Unshittifier</span>
+				<span hidden>Luddite</span>
+				<span hidden>Web Designer</span>
+				<span hidden>Accessibility specialist</span>
+				<span hidden>Crip technoscientist</span>
+				<button type="button" slot="action">{% labelledInlineIcon "fas:shuffle", { "aria-label": "Shuffle" } %}</button>
 			</eight-ball>
-		</h1>
-		<div id="lego" class="[ lego-container ]">
-			<is-land on:interaction="click,focusin">
-				<template data-island>
-					{%- rollup "src/input/js/model-viewer.js" | url -%}
-					<script type="module">
-						customElements
-							.whenDefined("model-viewer")
-							.then(() => {
-								const modelViewer = document
-									?.querySelector("model-viewer");
-								modelViewer.onblur = function () {
-									modelViewer.removeAttribute("tabindex");
-								};
-							});
-					</script>
-				</template>
-				<model-viewer tabindex="0" loading="eager" alt="A 3D modeled Lego Minifigure designed to look like myself." src="/assets/3d/me.glb" camera-controls disable-pan disable-zoom shadow-intensity="0" exposure="0.75" shadow-softness="1" camera-orbit="31.49deg 78.9deg 98.24m" field-of-view="30deg">
-					<img id="poster" src="/assets/img/poster.webp" alt="A 3D modeled Lego Minifigure designed to look like myself." width="600" height="600">
-					<div class="progress-bar" slot="progress-bar"></div>
-				</model-viewer>
-			</is-land>
+		</div>
+		<div class="[ grid ]">
+			<p class="[ h1 ]">
+				<span class="[ detitlify ]">Hi, I’m <span class="[ logo-inline ]">{% labelledIcon "local:elly" %}</span></span>
+				<eight-ball>
+					<span hidden><span class="stroke">Web development is political</span>—every line of code shapes who has access, who’s excluded, and how power is distributed online.</span>
+					<span hidden>Pushing back against the <span class="stroke">enshittification</span> of the web by building ethical, inclusive, and transparent tech.</span>
+					<span hidden><span class="stroke">Queering the web</span> means designing inclusive, diverse spaces that challenge normative boundaries and embrace fluidity in both code and culture.</span>
+					<span hidden>To be neutral on ableism perpetuates it—only by being <span class="stroke">anti-ableist</span> can you create accessible work.</span>
+					<span hidden>In a continual battle against the status quo, we need <span class="stroke">progress over perfection</span>.</span>
+					<span hidden>True web accessibility goes beyond standards, addressing the <span class="stroke">intersectionality</span> of barriers people face online.</span>
+					<span hidden>Disability isn't defined by the individual; it's shaped by the barriers society creates & <span class="stroke">we are society</span>.</span>
+					<span hidden><span class="stroke">Madding</span>, <span class="stroke">cripping</span>, and <span class="stroke">queering</span> will revolutionise the web—by reimagining accessibility as an ongoing, creative process rather than a set of fixed guidelines.</span>
+					<span hidden><span class="stroke">Crip technoscience</span> empowers disabled people to reshape the world through critical design and activism, challenging ableist norms in technology and society.</span>
+					<button type="button" slot="action">{% labelledInlineIcon "fas:shuffle", { "aria-label": "Shuffle" } %}</button>
+				</eight-ball>
+			</p>
+			<div id="lego" class="[ lego-container ]">
+				<is-land on:interaction="click,focusin">
+					<template data-island>
+						{%- rollup "src/input/js/model-viewer.js" | url -%}
+						<script type="module">
+							customElements
+								.whenDefined("model-viewer")
+								.then(() => {
+									const modelViewer = document
+										?.querySelector("model-viewer");
+									modelViewer.onblur = function () {
+										modelViewer.removeAttribute("tabindex");
+									};
+								});
+						</script>
+					</template>
+					<model-viewer tabindex="0" loading="eager" alt="A 3D modeled Lego Minifigure designed to look like myself." src="/assets/3d/me.glb" camera-controls disable-pan disable-zoom shadow-intensity="0" exposure="0.75" shadow-softness="1" camera-orbit="31.49deg 78.9deg 98.24m" field-of-view="30deg">
+						<img id="poster" src="/assets/img/poster.webp" alt="A 3D modeled Lego Minifigure designed to look like myself." width="600" height="600">
+						<div class="progress-bar" slot="progress-bar"></div>
+					</model-viewer>
+				</is-land>
+			</div>
 		</div>
 	</header>
 
