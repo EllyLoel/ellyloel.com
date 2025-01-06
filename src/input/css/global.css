@@ -678,8 +678,3 @@ menu {
 	background-color: var(--accent-text);
 	color: var(--accent-bg);
 }
-
-/* If an element is [hidden] it needs to be max priority */
-[hidden] {
-	display: none !important;
-}
