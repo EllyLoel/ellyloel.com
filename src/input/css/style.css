@@ -17,6 +17,7 @@
 /* Utilities */
 @import url("./utilities/content-width.css") layer(utilities);
 @import url("./utilities/detitlify.css") layer(utilities);
+@import url("./utilities/gradient-border.css") layer(utilities);
 @import url("./utilities/layout.css") layer(utilities);
 @import url("./utilities/margin.css") layer(utilities);
 @import url("./utilities/no-width.css") layer(utilities);

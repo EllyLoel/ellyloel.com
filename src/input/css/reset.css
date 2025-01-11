@@ -66,11 +66,11 @@ body {
 }
 
 /* Improve media defaults */
-:where(img, svg, video, canvas, audio, iframe, embed, object) {
+:where(img, svg, video, canvas, audio, iframe, embed, object):not([hidden]) {
 	display: block;
 }
 
-:where(picture) {
+:where(picture):not([hidden]) {
 	display: inline-block;
 }
 

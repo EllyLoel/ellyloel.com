@@ -2,8 +2,7 @@
 	background-color: var(--accent-bg-subtle);
 	border: var(--border-size-2) solid var(--accent-border);
 	border-radius: var(--radius-3);
-	padding-block-end: var(--size-6);
-	padding-block-start: var(--size-7);
+	padding-block: var(--size-5);
 	padding-inline: var(--size-5);
 	position: relative;
 
@@ -20,9 +19,5 @@
 	> strong {
 		font-size: var(--font-size-3);
 		line-height: 1;
-	}
-
-	> div > *:first-child {
-		margin-block-start: var(--size-3);
 	}
 }

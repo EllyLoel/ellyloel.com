@@ -118,6 +118,6 @@ I think option 3 is the best, as do most other people going by the survey result
 
 ---
 
-~~~ callout What do you think?
+~~~ callout **What do you think?**
 Let me know on [this post on Mastodon](https://front-end.social/@elly/109522190096953962).
 ~~~
