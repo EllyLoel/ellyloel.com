@@ -119,7 +119,8 @@
 	},
 	"pnpm": {
 		"patchedDependencies": {
-			"eleventy-plugin-rollup@1.3.0": "patches/eleventy-plugin-rollup@1.3.0.patch"
+			"eleventy-plugin-rollup@1.3.0": "patches/eleventy-plugin-rollup@1.3.0.patch",
+			"cssremedy": "patches/cssremedy.patch"
 		}
 	},
 	"engines": {

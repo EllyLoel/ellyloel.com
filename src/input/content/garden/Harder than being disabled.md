@@ -5,7 +5,7 @@ created: 2022-10-18
 modified: 2022-10-18
 ---
 
-~~~ callout Heads up this is an old post
+~~~ callout **Heads up this is an old post**
 This post hasn't been updated a long time, so it might be kinda crusty.
 ~~~
 

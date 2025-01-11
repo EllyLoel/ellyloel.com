@@ -9,7 +9,7 @@ modified: 2023-05-28
 
 I know I'm late, but hey why not!
 
-~~~ callout To be polished...
+~~~ callout **To be polished...**
 This is a bit of a messy brain dump, poke me on Mastodon to clean it up.
 ~~~
 

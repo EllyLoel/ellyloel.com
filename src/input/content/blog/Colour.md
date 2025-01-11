@@ -7,7 +7,7 @@ created: 2023-01-10
 modified: 2023-01-10
 ---
 
-~~~ callout {% emoji "⚠️", "Warning." %} This post is not complete, be wary.
+~~~ callout **{% emoji "⚠️", "Warning." %} This post is not complete, be wary.**
 ~~~
 
 ## ~~Color~~ ++Colour++

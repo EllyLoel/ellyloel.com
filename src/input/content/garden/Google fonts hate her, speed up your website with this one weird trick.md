@@ -92,5 +92,5 @@ So I had to pull out the big guns:
 - fonttools
 - fontforge
 
-~~~ callout To be continued…
+~~~ callout **To be continued…**
 ~~~

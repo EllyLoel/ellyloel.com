@@ -1,53 +1,55 @@
 ---
 layout: base-without-header.njk
 ---
-<header style="border-block-end: var(--border-size-1) solid var(--neutral-border); padding-block-end: var(--size-3);">
-	{%- include "breadcrumb.njk" -%}
-	<h1 class="[ p-name ]">{{ title }}</h1>
-	<div class="[ flex gap-3 flex-wrap ]">
+<header class="[ post-head ][ padding-block-end-6 gradient-border border-block-end-width ]">
+	<h1 class="[ p-name ][ line-height-1 margin-0 ]">{{ title }}</h1>
+	<div class="[ post-meta ][ margin-block-start-2 ]" style="font-size: 0.8em">
 		{%- include "hidden-microformats.njk" -%}
-		{%- if created -%}
-			{%- set date = created -%}
-			{%- set label = "Created" -%}
-			{%- include "date.njk" -%}
-			<span aria-hidden="true">•</span>
-		{%- endif -%}
-		{%- if modified -%}
-			{%- set date = modified -%}
-			{%- set label = "Last modified" -%}
-			{%- include "date.njk" -%}
-			<span aria-hidden="true">•</span>
-		{%- endif -%}
-		{%- if not created and not modified -%}
-			{%- set date = page.date -%}
-			{%- set label = "Last modified" -%}
-			{%- include "date.njk" -%}
-			<span aria-hidden="true">•</span>
-		{%- endif -%}
-		{%- if stage -%}
-			<span>
-				{%- set stageIcon -%}fas:
-					{%- if stage === "seedling" -%}
-						seedling
-					{%- elif stage === "budding" -%}
-						spa
-					{%- elif stage === "evergreen" -%}
-						tree
-					{%- elif stage === "draft" -%}
-						file-pen
-					{%- elif stage === "complete" -%}
-						circle-check{%- endif -%}{%- endset -%}
-				{%- labelledInlineIcon stageIcon, { "aria-label": "Stage" } -%}
-				<span class="[ p-category ]">{{ stage | capitalize }}</span>
-			</span>
-			<span aria-hidden="true">•</span>
-		{%- endif -%}
-		{%- if tags -%}
-			<span class="[ flex flex-wrap align-center gap-1 ]">
-				{%- labelledInlineIcon "fas:tag", { "aria-label": "Tags" } -%}
-				{%- include "tags.njk" -%}
-			</span>
-		{%- endif -%}
+		<div>
+			{%- if created -%}
+				{%- set date = created -%}
+				{%- set label = "Created" -%}
+				{%- include "date.njk" -%}
+			{%- endif -%}
+			{%- if created and modified -%}
+				<span aria-hidden="true">•</span>
+			{%- endif -%}
+			{%- if modified and modified !== created -%}
+				{%- set date = modified -%}
+				{%- set label = "Modified" -%}
+				{%- include "date.njk" -%}
+			{%- endif -%}
+			{%- if not created and not modified -%}
+				{%- set date = page.date -%}
+				{%- set label = "Modified" -%}
+				{%- include "date.njk" -%}
+			{%- endif -%}
+		</div>
+		<div class="[ flex flex-wrap align-center column-gap-2 row-gap-1 margin-block-start-1 ]">
+			{%- if tags -%}
+				<span class="[ flex flex-wrap align-center gap-1 ]">
+					{%- labelledInlineIcon "fas:tag", { "aria-label": "Tags" } -%}
+					{%- include "tags.njk" -%}
+				</span>
+			{%- endif -%}
+			{%- if stage -%}
+				<span>
+					{%- set stageIcon -%}fas:
+						{%- if stage === "seedling" -%}
+							seedling
+						{%- elif stage === "budding" -%}
+							spa
+						{%- elif stage === "evergreen" -%}
+							tree
+						{%- elif stage === "draft" -%}
+							file-pen
+						{%- elif stage === "complete" -%}
+							circle-check{%- endif -%}{%- endset -%}
+					{%- labelledInlineIcon stageIcon, { "aria-label": "Stage" } -%}
+					<span class="[ p-category ]">{{ stage | capitalize }}</span>
+				</span>
+			{%- endif -%}
+		</div>
 	</div>
 </header>
 {%- set contentWithoutHtml = content.replace(r/<\/?[a-z0-9]+\b[^>]*>/g, "") -%}
@@ -63,7 +65,7 @@ layout: base-without-header.njk
 <article class="[ markdown-container ] [ e-content ] [ flow flow-space-setter ]" style="--flow-space-setter: 2em;">
 	{%- if not created and not modified -%}
 		{%- md -%}
-~~~ callout Heads up this is an old post
+~~~ callout **Heads up this is an old post**
 This post hasn't been updated a long time, so it might be kinda crusty.
 ~~~
 		{%- endmd -%}
