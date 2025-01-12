@@ -7,6 +7,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger deploy hook on Cloudflare Pages
-        env:
-          TOKEN: ${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}
-        run: curl -X POST https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/${{ env.TOKEN }}
+        run: |
+          curl -X POST "https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}"
