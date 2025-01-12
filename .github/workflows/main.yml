@@ -8,5 +8,5 @@ jobs:
     steps:
       - name: Trigger deploy hook on Cloudflare Pages
         env:
-          TOKEN: ${​{ secrets.CLOUDFLARE_DEPLOY_HOOK }​}
+          TOKEN: ${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}
         run: curl -X POST https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/${{ env.TOKEN }}
