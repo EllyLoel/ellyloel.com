@@ -1,8 +1,5 @@
 name: Scheduled build
 on:
-  push:
-    branches:
-    - main
   schedule:
     - cron: '0 20 * * 0'
 jobs:
