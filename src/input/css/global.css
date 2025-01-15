@@ -31,7 +31,7 @@ body {
 }
 
 main {
-	--flow-space: var(--size-10);
+	--flow-space: var(--size-8);
 
 	margin-block: var(--size-8);
 

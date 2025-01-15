@@ -2,8 +2,9 @@
 layout: base-without-header.njk
 ---
 <header class="[ post-head ][ padding-block-end-6 gradient-border border-block-end-width ]">
-	<h1 class="[ p-name ][ line-height-1 margin-0 ]">{{ title }}</h1>
-	<div class="[ post-meta ][ margin-block-start-2 ]" style="font-size: 0.8em">
+	<!-- tabindex fixes focus issue: https://benmyers.dev/blog/skip-links/#tldr -->
+	<h1 id="content" tabindex="-1" class="[ p-name ][ line-height-1 margin-0 ]">{{ title }}</h1>
+	<div class="[ post-meta ][ margin-block-start-2 ]">
 		{%- include "hidden-microformats.njk" -%}
 		<div>
 			{%- if created -%}
@@ -14,13 +15,13 @@ layout: base-without-header.njk
 			{%- if created and modified -%}
 				<span aria-hidden="true">•</span>
 			{%- endif -%}
-			{%- if modified and modified !== created -%}
+			{%- if modified -%}
 				{%- set date = modified -%}
 				{%- set label = "Modified" -%}
 				{%- include "date.njk" -%}
 			{%- endif -%}
 			{%- if not created and not modified -%}
-				{%- set date = page.date -%}
+				{%- set date = "2001-08-16" | dateToISO -%}
 				{%- set label = "Modified" -%}
 				{%- include "date.njk" -%}
 			{%- endif -%}

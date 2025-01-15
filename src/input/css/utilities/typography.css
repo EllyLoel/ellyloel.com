@@ -2,6 +2,10 @@
 	text-decoration: none;
 }
 
+.lowercase {
+	text-transform: lowercase;
+}
+
 .line-height-1 {
 	line-height: 1;
 }
