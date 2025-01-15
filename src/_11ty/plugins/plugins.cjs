@@ -112,7 +112,6 @@ module.exports = (eleventyConfig) => {
 	});
 
 	// Internal plugins
-	eleventyConfig.addPlugin(require("./drafts.cjs"));
 	eleventyConfig.addPlugin(require("./excerpt.cjs"));
 	eleventyConfig.addPlugin(require("./image.cjs"));
 	eleventyConfig.addPlugin(require("./markdown.cjs").plugin);
