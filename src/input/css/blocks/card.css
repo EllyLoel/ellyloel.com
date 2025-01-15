@@ -55,7 +55,7 @@
 	}
 
 	.feed-item-card-footer {
-		justify-content: space-between;
+		--flow-space: var(--size-1);
 
 		& > a {
 			background: none;

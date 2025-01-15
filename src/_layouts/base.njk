@@ -2,7 +2,10 @@
 layout: base-without-header.njk
 ---
 <header class="[ main-header ][ padding-block-end-6 gradient-border border-block-end-width ]">
+	<!-- tabindex fixes focus issue: https://benmyers.dev/blog/skip-links/#tldr -->
 	<h1
+		id="content"
+		tabindex="-1"
 		class="
 			{%- if page.url === "/garden/" or page.url === "/essays/" or page.url === "/notes/" or page.url === "/microposts/" or page.url === "/bookmarks/" or page.url === "/projects/" -%}
 				[ p-name ]

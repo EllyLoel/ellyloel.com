@@ -40,6 +40,7 @@
 }
 
 :where(
+		.button,
 		button,
 		button[type],
 		input[type="button"],
@@ -58,6 +59,7 @@
 }
 
 :where(
+		.button,
 		button,
 		button[type],
 		input[type="button"],
