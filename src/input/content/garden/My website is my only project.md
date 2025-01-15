@@ -1,6 +1,8 @@
 ---
 title: My website is my only project
-stage: seedling
+tags:
+  - Seedling
+  - Notes
 created: 2022-09-19
 modified: 2022-09-19
 ---

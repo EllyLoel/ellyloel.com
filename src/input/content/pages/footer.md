@@ -1,7 +1,7 @@
 ---
 layout: base
-title: Me
+title: Footer
 eleventyNavigation:
-  key: Me
-  order: 1
+  key: Footer
+  order: 10
 ---

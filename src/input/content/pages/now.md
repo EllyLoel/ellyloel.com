@@ -1,11 +1,11 @@
 ---
 layout: base
-title: What I'm Doing Now
+title: What I'm doing now
 permalink: "now/"
 eleventyNavigation:
   key: Now
-  parent: Me
-  order: 2
+  parent: Chronological
+  order: 1
 ---
 
 An on & off log of what I'm currently doing/interested in. Slower paced than a twitter feed but less permanent then an [[about]] page.

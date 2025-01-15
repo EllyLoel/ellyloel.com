@@ -1,7 +1,8 @@
 ---
 title: Google fonts hate her, speed up your website with this one weird trick!
-stage: budding
 tags:
+  - Budding
+  - Notes
   - Typeface
   - Building websites
 created: 2022-12-30

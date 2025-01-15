@@ -1,7 +1,7 @@
 ---
 title: "Web Directions Code24: Front-end development's identity crisis"
-stage: complete
 tags:
+  - Evergreen
   - Talks
   - Working
   - Web Design

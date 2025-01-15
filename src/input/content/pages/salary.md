@@ -4,8 +4,8 @@ title: Salary history
 permalink: "salary/"
 eleventyNavigation:
   key: Salary history
-  parent: Me
-  order: 6
+  parent: Work
+  order: 4
 ---
 
 This page was inspired by [Carolina Gilabert's salary page](https://carol.gg/salary/).

@@ -1,6 +1,8 @@
 ---
 title: Habit Creation
-stage: budding
+tags:
+  - Budding
+  - Notes
 ---
 
 The most impossible task for someone^[me, I am someone] with ADHD is to create a habit.

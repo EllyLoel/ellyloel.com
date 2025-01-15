@@ -1,7 +1,8 @@
 ---
 title: Web feeds
-stage: seedling
 tags:
+  - Seedling
+  - Notes
   - Feeds
   - Web
 created: 2024-12-22

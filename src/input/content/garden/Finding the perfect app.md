@@ -1,6 +1,8 @@
 ---
 title: Finding the perfect app
-stage: budding
+tags:
+  - Budding
+  - Notes
 ---
 
 I've tried just about every productivity app under the sun, and I still haven't found "the one".

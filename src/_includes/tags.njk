@@ -1,5 +1,13 @@
 {%- for tag in tags -%}
+	{%- set icon -%}fas:
+		{%- if tag === "Seedling" -%}seedling{%- endif -%}
+		{%- if tag === "Budding" -%}spa{%- endif -%}
+		{%- if tag === "Evergreen" -%}tree{%- endif -%}
+	{%- endset -%}
 	{%- if tag !== exclude -%}
-		<a href="/tags/{{ tag | slugify }}/" class="[ badge ] [ p-category ] [ neutral pill text-decoration-none ]">{{ tag }}</a>
+		<a href="/tags/{{ tag | slugify }}/" class="[ badge ] [ p-category ] [ neutral pill gap-1 text-decoration-none ]">
+			{%- if icon !== "fas:" -%}{%- inlineIcon icon -%}{%- endif -%}
+			{{- tag -}}
+		</a>
 	{%- endif -%}
 {%- endfor -%}

@@ -3,8 +3,8 @@ layout: base
 title: Brag document
 eleventyNavigation:
   key: Brag document
-  parent: Me
-  order: 6
+  parent: Work
+  order: 3
 ---
 
 This is inspired by Julia Evans' post on the importance of maintaining a brag document.

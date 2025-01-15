@@ -1,7 +1,8 @@
 ---
 title: Front-end development’s identity crisis
-stage: complete
 tags:
+  - Evergreen
+  - Essays
   - Working
   - Web Design
 created: 2024-03-29

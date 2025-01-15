@@ -1,7 +1,8 @@
 ---
 title: AI leads to working more, not less
-stage: seedling
 tags:
+  - Seedling
+  - Notes
   - AI
   - Working
 created: 2024-12-04

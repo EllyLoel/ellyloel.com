@@ -1,4 +1,4 @@
-<li class="{% if stage %}[ {{ stage }} ]{% endif %} [ h-entry ]">
+<li class="[ h-entry ]">
 	<article class="[ feed-item-card ]">
 		<div
 			class="[ flow ]"
@@ -8,9 +8,6 @@
 		>
 			<div class="[ feed-item-card-title ] [ feed-item-card-{% if body %}header{% else %}body{% endif %} ]">
 				{%- if headingLevel === 3 -%}<h3>{%- else -%}<h2 class="h3">{%- endif -%}
-					{%- if stage -%}
-						{%- include "stage.njk" -%}
-					{%- endif -%}
 					<a href="{{ url }}" class="[ u-url p-name ]">{{ title }}</a>
 				{%- if headingLevel === 3 -%}</h3>{%- else -%}</h2>{%- endif -%}
 			</div>

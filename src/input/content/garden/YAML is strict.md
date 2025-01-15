@@ -1,6 +1,8 @@
 ---
 title: YAML is strict
-stage: seedling
+tags:
+  - Seedling
+  - Notes
 created: 2022-07-06
 modified: 2022-09-28
 ---

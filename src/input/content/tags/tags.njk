@@ -24,10 +24,6 @@ pagination:
     - projectssortedbydate
     - Projects
     - ProjectsSortedByDate
-    - til
-    - tilsortedbydate
-    - TIL
-    - TILSortedByDate
 permalink: "tags/{{ tag | slugify }}/"
 eleventyComputed:
   title: "{{ tag }}"
@@ -38,9 +34,6 @@ eleventyComputed:
 <ul id="feed" class="[ feed ]">
 	{% set taglist = collections[tag] %}
 	{% for post in taglist | reverse %}
-		{%- if post.data.stage -%}
-			{%- set stage = post.data.stage -%}
-		{%- endif -%}
 		{%- set title = post.data.title -%}
 		{%- set url = post.url -%}
 		{%- setAsync "imageMarkup" -%}{%- endsetAsync -%}

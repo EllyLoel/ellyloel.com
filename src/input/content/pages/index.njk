@@ -237,9 +237,6 @@ eleventyImport:
 	{%- set recentPosts = collections.allSortedByDate | limit(10) -%}
 	{%- for post in recentPosts -%}
 		{%- set headingLevel = 3 -%}
-		{%- if post.data.stage -%}
-			{%- set stage = post.data.stage -%}
-		{%- endif -%}
 		{%- set title = post.data.title -%}
 		{%- set url = post.url -%}
 		{%- setAsync "imageMarkup" -%}{%- endsetAsync -%}

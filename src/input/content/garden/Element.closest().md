@@ -1,5 +1,9 @@
 ---
 title: Element.closest()
+tags:
+  - Seedling
+  - Notes
+  - JavaScript
 created: 2022-11-02
 modified: 2022-11-02
 ---

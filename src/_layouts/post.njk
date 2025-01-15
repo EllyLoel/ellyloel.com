@@ -32,23 +32,6 @@ layout: base-without-header.njk
 					{%- include "tags.njk" -%}
 				</span>
 			{%- endif -%}
-			{%- if stage -%}
-				<span>
-					{%- set stageIcon -%}fas:
-						{%- if stage === "seedling" -%}
-							seedling
-						{%- elif stage === "budding" -%}
-							spa
-						{%- elif stage === "evergreen" -%}
-							tree
-						{%- elif stage === "draft" -%}
-							file-pen
-						{%- elif stage === "complete" -%}
-							circle-check{%- endif -%}{%- endset -%}
-					{%- labelledInlineIcon stageIcon, { "aria-label": "Stage" } -%}
-					<span class="[ p-category ]">{{ stage | capitalize }}</span>
-				</span>
-			{%- endif -%}
 		</div>
 	</div>
 </header>

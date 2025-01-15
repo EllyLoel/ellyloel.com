@@ -1,5 +1,4 @@
 <footer>
-
 	{% include "newsletter.njk" %}
 
 	<div class="[ site-footer ]">
@@ -27,28 +26,28 @@
 			"./src/assets/img/coding.png",
 			"A digital drawing of me, a blonde woman in a white sweater with headphones on sitting at my desk in front of a keyboard and monitor coding." -%}
 
-			<div class="[ sitemap ] [ flow ]">
-				<h2>Sitemap</h2>
-				<ul class="[ flow ]">
+			<nav aria-labelledby="footer-nav" class="[ sitemap ] [ flow ]">
+				<h2 id="footer-nav">Sitemap</h2>
+				<ul class="[ flex flex-wrap gap-6 ]">
+					{%- macro renderNavListItem(entry) -%}
+						<li>
+							<a href="{{ entry.url | url }}"{% if entry.url === page.url %} aria-current="page"{% endif %}>
+								{{ entry.title }}
+							</a>
+							{%- if entry.children -%}
+								<ul class="[ flow ][ margin-block-start-3 margin-inline-start-3 ]">
+									{%- for child in entry.children %}
+										{{ renderNavListItem(child) }}
+									{%- endfor -%}
+								</ul>
+							{%- endif -%}
+						</li>
+					{%- endmacro -%}
 					{%- for entry in collections.all | eleventyNavigation -%}
-						{%- if entry.url === "/me/" or entry.url === "/writing/" -%}
-							{%- for child in entry.children %}
-								<li>
-									<a href="{{ child.url | url }}"{% if child.url === page.url %} aria-current="page"{% endif %}>
-										{{ child.title }}
-									</a>
-								</li>
-							{%- endfor -%}
-						{%- else -%}
-							<li>
-								<a href="{{ entry.url | url }}"{% if entry.url === page.url %} aria-current="page"{% endif %}>
-									{{ entry.title }}
-								</a>
-							</li>
-						{%- endif -%}
+						{{ renderNavListItem(entry) }}
 					{%- endfor -%}
 				</ul>
-			</div>
+			</nav>
 
 			<ul role="list" class="[ social-links ][ flex-wrap ]">
 				<li>

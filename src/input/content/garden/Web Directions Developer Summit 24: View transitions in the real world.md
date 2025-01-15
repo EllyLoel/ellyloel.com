@@ -1,7 +1,7 @@
 ---
 title: "Web Directions Developer Summit 24: View transitions in the real world"
-stage: complete
 tags:
+  - Evergreen
   - Talks
   - CSS
   - Web Design

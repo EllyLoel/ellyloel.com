@@ -1,12 +1,12 @@
 ---
 layout: base
-title: Blog
+title: Essays
 eleventyNavigation:
-  key: Blog
-  parent: Writing
+  key: Essays
+  parent: Garden
   order: 2
 eleventyImport:
-  collections: ["blog"]
+  collections: ["Essays"]
 ---
 
 <a href="#feed" class="[ visually-hidden ]">Skip to articles</a>
@@ -27,9 +27,6 @@ eleventyImport:
 {%- set blog = collections.BlogSortedByDate -%}
 <ul id="feed" class="[ feed ]" tabindex="-1">
 	{%- for post in blog %}
-		{%- if post.data.stage -%}
-			{%- set stage = post.data.stage -%}
-		{%- endif -%}
 		{%- set title = post.data.title -%}
 		{%- set url = post.url -%}
 		{%- setAsync "imageMarkup" -%}{%- endsetAsync -%}

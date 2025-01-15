@@ -1,7 +1,8 @@
 ---
 title: Input types a11y
-stage: budding
 tags:
+  - Budding
+  - Notes
   - Accessibility
 created: 2023-03-07
 modified: 2023-03-13
