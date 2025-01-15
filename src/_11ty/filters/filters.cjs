@@ -4,6 +4,7 @@ module.exports = (eleventyConfig) => {
 		"addNonBreakingSpace",
 		require("./addNonBreakingSpace.cjs")
 	);
+	eleventyConfig.addFilter("arrayFilter", require("./arrayFilter.cjs"));
 	eleventyConfig.addFilter("dateObj", require("./dateObj.cjs"));
 	eleventyConfig.addFilter("dateToFormat", require("./dateToFormat.cjs"));
 	eleventyConfig.addFilter("dateToISO", require("./dateToISO.cjs"));
