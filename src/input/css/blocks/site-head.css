@@ -1,49 +1,27 @@
 .site-head {
-  border-block-end-width: 0.1em;
-	border-image: linear-gradient(to right, transparent, var(--accent-solid), transparent) 1;
-	padding: var(--size-6) 0;
-	z-index: 1;
+	border-block-end-width: 0.1em;
+	border-image: linear-gradient(
+			to right,
+			transparent,
+			var(--accent-solid),
+			transparent
+		)
+		1;
+	padding-block: var(--size-6);
 
-	.inner {
-		> div {
-			align-items: center;
+	& .list:first-of-type {
+		display: flex;
+
+		@media (width < 35em) {
+			display: none;
+		}
+	}
+
+	& .list:last-of-type {
+		display: none;
+
+		@media (width < 35em) {
 			display: flex;
-			flex-wrap: wrap;
-			gap: var(--size-2) var(--size-3);
-			justify-content: space-between;
-
-			> button {
-				--_border: var(--accent-bg-subtle);
-
-				border-width: var(--border-size-1);
-				color: var(--accent-bg-active);
-				padding: var(--size-1);
-
-				&:hover {
-					--_highlight-size: var(--size-1);
-				}
-				
-				&:is(:hover, :focus, :active) {
-					--_border: var(--accent-bg);
-				}
-			}
 		}
-	}
-
-	& a[href="/"] {
-		&:hover {
-			background-color: transparent;
-		}
-
-		> .logo {
-			height: 1.5em;
-			transform: translateY(0.15rem);
-			width: auto;
-		}
-	}
-
-	& .nav {
-		padding: 0;
-		padding-block-start: var(--size-3);
 	}
 }
