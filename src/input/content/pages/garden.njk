@@ -23,6 +23,60 @@ eleventyImport:
 <h2>Linked posts graph</h2>
 <div id="graph"></div>
 
+<form class="[ garden-filters ]" hidden>
+	<h2>Filters</h2>
+	<div class="[ flow ]">
+		{%- macro renderFilterButton(id, name, label) %}
+			<button 
+				type="button"
+				id="filters-{{ id }}"
+				class="[ badge ]"
+				aria-pressed="false"
+				data-filter-name="{{ name }}"
+			>{{ label }}</button>
+		{%- endmacro -%}
+
+		<fieldset>
+			<legend>
+				<button type="button" aria-expanded="false" aria-controls="fieldset-stage-content">
+					Stage {% inlineIcon "fas:chevron-down" %}
+				</button>
+			</legend>
+			<div id="fieldset-stage-content" hidden="until-found">
+				{{ renderFilterButton("seedling", "Stage", "Seedling") }}
+				{{ renderFilterButton("budding", "Stage", "Budding") }}
+				{{ renderFilterButton("evergreen", "Stage", "Evergreen") }}
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>
+				<button type="button" aria-expanded="false" aria-controls="fieldset-type-content">
+					Type {% inlineIcon "fas:chevron-down" %}
+				</button>
+			</legend>
+			<div id="fieldset-type-content" hidden="until-found">
+				{{ renderFilterButton("essays", "Type", "Essays") }}
+				{{ renderFilterButton("notes", "Type", "Notes") }}
+				{{ renderFilterButton("microposts", "Type", "Microposts") }}
+				{{ renderFilterButton("bookmarks", "Type", "Bookmarks") }}
+				{{ renderFilterButton("projects", "Type", "Projects") }}
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>
+				<button type="button" aria-expanded="false" aria-controls="fieldset-tags-content">
+					Tags {% inlineIcon "fas:chevron-down" %}
+				</button>
+			</legend>
+			<div id="fieldset-tags-content" hidden="until-found">
+				{%- for tag in collections | objKeys | reject("equalto", "Seedling") | reject("equalto", "Budding") | reject("equalto", "Evergreen") | reject("equalto", "Essays") | reject("equalto", "Notes") | reject("equalto", "Microposts") | reject("equalto", "Bookmarks") | reject("equalto", "Projects") | reject("equalto", "Garden") | reject("equalto", "all") | reject("equalto", "allSortedByDate") | reject("equalto", "EssaysSortedByDate") | reject("equalto", "BookmarksSortedByDate") | reject("equalto", "GardenSortedByDate") | reject("equalto", "ProjectsSortedByDate") | reject("equalto", "notBookmarksSortedByDate") | reject("equalto", "postsSortedByDate") -%}
+					{{ renderFilterButton(tag | lower, "Tags", tag) }}
+				{%- endfor -%}
+			</div>
+		</fieldset>
+	</div>
+</form>
+
 {%- include "crazy-filter.njk" -%}
 {%- set posts = collections.allSortedByDate -%}
 <ul id="feed" class="[ feed ]" tabindex="-1">
