@@ -24,6 +24,9 @@
 		{%- if page.url === "/garden/" or page.url === "/essays/" or page.url === "/notes/" or page.url === "/bookmarks/" or page.url === "/projects/" or page.url === "/garden/d3/" -%}
 			{%- rollup "src/input/js/graph.js" | url -%}
 		{%- endif -%}
+		{%- if page.url === "/garden/" -%}
+			{%- rollup "src/input/js/garden-filters.js" | url -%}
+		{%- endif -%}
 		{%- if page.url === "/search/" -%}
 			{%- rollup "src/input/js/search.js" | url -%}
 		{%- endif -%}

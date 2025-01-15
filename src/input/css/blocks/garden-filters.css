@@ -1,0 +1,25 @@
+.garden-filters {
+	& fieldset {
+		border: none;
+		margin: 0;
+		padding: 0;
+
+		& legend {
+			padding: 0;
+
+			& button {
+				& svg {
+					transition: rotate 0.3s cubic-bezier(0, 0.8, 0, 1);
+				}
+
+				&[aria-expanded="true"] svg {
+					rotate: x 0.5turn;
+				}
+			}
+		}
+
+		> div {
+			margin-block-start: var(--size-2);
+		}
+	}
+}
