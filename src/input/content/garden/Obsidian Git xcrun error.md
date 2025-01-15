@@ -1,6 +1,8 @@
 ---
 title: Git xcrun error
-stage: seedling
+tags:
+  - Seedling
+  - Notes
 created: 2022-07-18
 modified: 2022-07-18
 ---

@@ -1,5 +1,8 @@
 ---
 title: Modern CSS reset
+tags:
+  - Seedling
+  - Projects
 created: 2022-06-20
 modified: 2022-08-17
 ---

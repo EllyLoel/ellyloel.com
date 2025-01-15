@@ -1,57 +1,54 @@
 ---
 layout: base
-title: Digital garden
-permalink: "garden/"
+title: Garden
 eleventyNavigation:
-  key: Digital garden
-  parent: Writing
+  key: Garden
   order: 1
 eleventyImport:
-  collections: ["garden"]
+  collections: ["Garden"]
 ---
 
-<a href="#feed" class="[ visually-hidden ]">Skip to notes</a>
+<a href="#feed" class="[ visually-hidden ]">Skip to posts</a>
 
-<div>
+<div class="[ p-summary ][ flow ]">
 	{%- md -%}
-	This is a collection of ideas that I'm nurturing out in the open. The notes range from seedlings, which are fresh out of my mind, to budding, which are developing into something a bit more fleshed out, to evergreen, which are polished ideas. They're also avaliable in your favourite flavour of feed [RSS](/notes.rss), [Atom](/notes.atom) or [JSON](/notes.json).{.p-summary}
+	Seedlings are fresh out of my mind, budding I have come back to and updated at least once, and evergreen I likely won't be updating anymore.
+
+	For a more thorough explanation of what a digital garden is, I'd recommend [Maggie Appleton's wonderful essay](https://maggieappleton.com/garden-history).
+
+	Also avaliable in your favourite flavour of feed [RSS](/feed.rss), [Atom](/feed.atom) or [JSON](/feed.json).
 	{%- endmd -%}
 </div>
 
-<h2>
-  Linked posts graph
-</h2>
+<h2>Linked posts graph</h2>
 <div id="graph"></div>
 
 {%- include "crazy-filter.njk" -%}
-
-{%- set notes = collections.GardenSortedByDate -%}
+{%- set posts = collections.allSortedByDate -%}
 <ul id="feed" class="[ feed ]" tabindex="-1">
-	{%- for note in notes -%}
-		{%- if note.data.archived !== true -%}
-			{%- if note.data.stage -%}
-				{%- set stage = note.data.stage -%}
-			{%- endif -%}
-			{%- set title = note.data.title -%}
-			{%- set url = note.url -%}
+	{%- for post in posts %}
+		{%- if post.data.archived !== true -%}
+			{%- set title = post.data.title -%}
+			{%- set url = post.url -%}
 			{%- setAsync "imageMarkup" -%}{%- endsetAsync -%}
-			{%- if note.data.image -%}
+			{%- if post.data.image -%}
 				{%- setAsync "imageMarkup" -%}
 				<svg viewBox="0 0 200 150" width="200" height="150">
 					{%- set randomNumber -%}{%- random 0, 1 -%}{%- endset -%}
-					<image class="image" xlink:href="https://res.cloudinary.com/ellyloel/image/fetch/f_auto/q_auto:low/c_fill,h_150,w_200/{{ note.data.image }}" x="-50%" y="-50%" width="200%" height="200%" filter="url(#filter)" opacity="0.65" style="transform: rotate({{ randomNumber | round(3) }}turn); transform-origin: center;"></image>
+					<image class="image" xlink:href="https://res.cloudinary.com/ellyloel/image/fetch/f_auto/q_auto:low/c_fill,h_150,w_200/{{ post.data.image }}" x="-50%" y="-50%" width="200%" height="200%" filter="url(#filter)" opacity="0.65" style="transform: rotate({{ randomNumber | round(3) }}turn); transform-origin: center;"></image>
 				</svg>
 				{%- endsetAsync -%}
 			{%- endif -%}
-			{%- set date = note.data.date -%}
+			{%- set date = post.data.date -%}
 			{%- set label = "" -%}
-			{%- if note.data.modified -%}
-				{%- set label = "Last modified" -%}
-			{%- elif note.data.created -%}
+			{%- if post.data.modified -%}
+				{%- set label = "Modified" -%}
+			{%- elif post.data.created -%}
 				{%- set label = "Created" -%}
 			{%- endif -%}
-			{%- set tags = note.data.tags -%}
+			{%- set tags = post.data.tags -%}
+			{%- set exclude = "Garden" -%}
 			{%- include "feedItem.njk" -%}
 		{%- endif -%}
-	{%- endfor -%}
+	{%- endfor %}
 </ul>

@@ -3,8 +3,7 @@ layout: base
 title: About
 eleventyNavigation:
   key: About
-  parent: Me
-  order: 1
+  order: 2
 ---
 
 ## Who am I?

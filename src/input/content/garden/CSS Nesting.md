@@ -1,7 +1,8 @@
 ---
 title: CSS Nesting
-stage: budding
 tags:
+  - Budding
+  - Notes
   - CSS
 created: 2022-12-16
 modified: 2022-12-16

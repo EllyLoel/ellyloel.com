@@ -1,7 +1,8 @@
 ---
 layout: base
-title: Writing
+title: Work
 eleventyNavigation:
-  key: Writing
+  key: Work
+  parent: About
   order: 2
 ---

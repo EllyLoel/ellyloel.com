@@ -1,7 +1,8 @@
 ---
 title: Web Components as templates
-stage: seedling
 tags:
+  - Seedling
+  - Notes
   - Web Components
 created: 2022-09-25
 modified: 2022-09-25

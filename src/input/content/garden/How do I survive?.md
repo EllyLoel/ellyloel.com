@@ -1,7 +1,8 @@
 ---
 title: How do I survive?
-stage: complete
 tags:
+  - Evergreen
+  - Essays
   - Working
   - Queerness
   - ADHD

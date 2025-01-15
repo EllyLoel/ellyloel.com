@@ -1,10 +1,6 @@
 ---
 layout: base
 title: Archive
-eleventyNavigation:
-  key: Archive
-  parent: Writing
-  order: 4
 eleventyImport:
   collections: ["allSortedByDate"]
 ---
@@ -27,9 +23,6 @@ eleventyImport:
 {%- set posts = collections.allSortedByDate -%}
 <ul id="feed" class="[ feed ]" tabindex="-1">
 	{%- for post in posts %}
-		{%- if post.data.stage -%}
-			{%- set stage = post.data.stage -%}
-		{%- endif -%}
 		{%- set title = post.data.title -%}
 		{%- set url = post.url -%}
 		{%- setAsync "imageMarkup" -%}{%- endsetAsync -%}

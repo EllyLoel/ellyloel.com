@@ -1,12 +1,11 @@
 ---
 title: Catch me at Web Directions Code 24
-stage: evergreen
 tags:
+  - Evergreen
+  - Talks
   - Web Design
   - Web
   - Community
-  - Writing
-  - Talking
 created: 2024-05-02
 modified: 2024-05-02
 ---

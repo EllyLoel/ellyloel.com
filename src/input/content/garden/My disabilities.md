@@ -1,7 +1,8 @@
 ---
 title: My disabilities
-stage: seedling
 tags:
+  - Seedling
+  - Notes
   - ADHD
   - Autism
   - Coeliac

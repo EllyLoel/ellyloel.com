@@ -1,6 +1,8 @@
 ---
 title: tweetback
-stage: seedling
+tags:
+  - Seedling
+  - Notes
 created: 2022-12-05
 modified: 2022-12-05
 ---

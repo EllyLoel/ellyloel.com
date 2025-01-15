@@ -3,8 +3,8 @@ layout: base
 title: Lulu
 eleventyNavigation:
   key: Lulu
-  parent: Me
-  order: 7
+  parent: About
+  order: 4
 ---
 
 A collection of images of our lovely little lady Lu. {% emoji "🐈‍⬛" %}

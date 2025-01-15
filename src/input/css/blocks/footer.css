@@ -30,8 +30,8 @@
 			block-size: fit-content;
 			grid-area: sitemap;
 
-			& > ul {
-				column-count: 2;
+			& a[href="/footer/"] {
+				visibility: hidden;
 			}
 		}
 

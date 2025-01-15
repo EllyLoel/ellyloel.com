@@ -1,9 +1,8 @@
 ---js
 {
 	title: "I Dropped Out of My Computer Science Degree to Learn Coding",
-	stage: "complete",
 	image: "./src/assets/img/I-Dropped-Out-of-My-Computer-Science-Degree-to-Learn-Coding-on-Scrimba.png",
-	tags: ["Working"],
+	tags: ["Evergreen", "Essays", "Working"],
 	created: new Date("2022-05-01"),
 	modified: new Date("2022-05-19"),
 	eleventyComputed: {

@@ -3,8 +3,8 @@ layout: base
 title: Résumé
 eleventyNavigation:
   key: Résumé
-  parent: Me
-  order: 4
+  parent: Work
+  order: 1
 ---
 
 ## Elly Loel

@@ -3,7 +3,7 @@ layout: base
 title: Uses
 eleventyNavigation:
   key: Uses
-  parent: Me
+  parent: About
   order: 3
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: Executive function
-stage: budding
 tags:
+  - Budding
+  - Notes
   - ADHD
 ---
 

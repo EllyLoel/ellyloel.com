@@ -3,8 +3,8 @@ layout: base
 title: CV
 eleventyNavigation:
   key: CV
-  parent: Me
-  order: 5
+  parent: Work
+  order: 2
 ---
 
 ## Elly Loel

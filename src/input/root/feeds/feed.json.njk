@@ -30,7 +30,7 @@ permalink: "feed.json"
 				{%- else -%}
 					{%- set tags = post.data.tags -%}
 				{%- endif -%}
-				{%- for tag in tags | reject("equalto", "Blog") | reject("equalto", "Bookmarks") | reject("equalto", "Garden") | reject("equalto", "Projects") | reject("equalto", "TIL") | reject("equalto", "YouTube") -%}
+				{%- for tag in tags | reject("equalto", "YouTube") | reject("equalto", "Seedling") | reject("equalto", "Budding") | reject("equalto", "Evergreen") | reject("equalto", "Essays") | reject("equalto", "Notes") | reject("equalto", "Microposts") | reject("equalto", "Bookmarks") | reject("equalto", "Projects") | reject("equalto", "Garden") -%}
 					"{{ tag }}"{% if not loop.last %}{{ ",\n" }}{% endif %}
 				{%- endfor %}
 			],

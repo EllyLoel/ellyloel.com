@@ -21,13 +21,13 @@
 		{%- if page.url === "/" -%}
 			{%- rollup "src/input/js/spotify.js" | url -%}
 		{%- endif -%}
-		{%- if page.url === "/bookmarks/" or page.url === "/garden/" or page.url === "/blog/" or page.url === "/projects/" or page.url === "/til/" or page.url === "/til/d3/" or page.url === "/archive/" -%}
+		{%- if page.url === "/garden/" or page.url === "/essays/" or page.url === "/notes/" or page.url === "/bookmarks/" or page.url === "/projects/" or page.url === "/garden/d3/" -%}
 			{%- rollup "src/input/js/graph.js" | url -%}
 		{%- endif -%}
 		{%- if page.url === "/search/" -%}
 			{%- rollup "src/input/js/search.js" | url -%}
 		{%- endif -%}
-		{%- if page.url !== "/bookmarks/" and page.url |includes("/bookmarks/") -%}
+		{%- if page.url !== "/bookmarks/" and page.url | includes("/bookmarks/") -%}
 			{%- rollup "src/input/js/lite-youtube.js" | url -%}
 		{%- endif -%}
 		{%- set countPath = "src/input/js/count.js" | url -%}
@@ -45,7 +45,7 @@
 			id="content"
 			tabindex="-1"
 			class="[ wrapper flow ]
-				{%- if page.url === "/garden/" or page.url === "/blog/" or page.url === "/projects/" or page.url === "/til/" or page.url === "/archive/" or page.url === "/bookmarks/" or page.url === "/mastodon/" -%}
+				{%- if page.url === "/garden/" or page.url === "/essays/" or page.url === "/notes/" or page.url === "/microposts/" or page.url === "/bookmarks/" or page.url === "/projects/" -%}
 					[ h-feed ]
 				{%- elif page.url !== "/" and page.url !== "/about/" -%}
 					[ h-entry ]

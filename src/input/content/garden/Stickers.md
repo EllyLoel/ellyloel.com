@@ -1,5 +1,8 @@
 ---
 title: Stickers
+tags:
+  - Seedling
+  - Projects
 created: 2022-11-05
 modified: 2023-05-02
 ---

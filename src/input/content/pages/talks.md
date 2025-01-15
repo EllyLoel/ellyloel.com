@@ -1,8 +1,9 @@
 ---
 layout: base
-title: Speaking
+title: Talks
 eleventyNavigation:
-  key: Speaking
+  key: Talks
+  parent: Garden
   order: 6
 ---
 

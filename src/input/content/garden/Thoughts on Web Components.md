@@ -1,7 +1,8 @@
 ---
 title: Thoughts on Web Components
-stage: seedling
 tags:
+  - Seedling
+  - Notes
   - Web Components
 archived: true
 ---

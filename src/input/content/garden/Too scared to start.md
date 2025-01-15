@@ -1,7 +1,8 @@
 ---
 title: Too scared to start
-stage: seedling
 tags:
+  - Seedling
+  - Notes
   - ADHD
   - Autism
 created: 2023-05-26

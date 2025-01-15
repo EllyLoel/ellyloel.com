@@ -1,7 +1,8 @@
 ---
 title: CSS wishlist 2023
-stage: budding
 tags:
+  - Budding
+  - Notes
   - CSS
 created: 2023-05-01
 modified: 2023-05-28

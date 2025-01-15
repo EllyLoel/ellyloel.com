@@ -1,7 +1,8 @@
 ---
 title: Stop using active classes
-stage: seedling
 tags:
+  - Seedling
+  - Notes
   - Accessibility
   - CSS
 created: 2022-09-10
