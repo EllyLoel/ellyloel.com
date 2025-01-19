@@ -1,29 +1,31 @@
 :root {
 	--hue: 315deg;
-	--black: lch(5.243% 2.967 var(--hue));
-	--white: lch(97.959% 2.447 var(--hue));
+	--black: oklch(18.09% 0.0105 var(--hue));
+	--white: oklch(98.32% 0.0068 var(--hue));
 
 	/* Accent colours https://schemist.fglt.fr?preset=1@b@41250,4125a,4125x14,4125x1e,4125x28,4125x32,4125x3c,4125x46,4125x50,4125x5a,4125x64,012230123456789a@clr,,color,bd93f9,l,amount */
-	--coalmine: lch(5.834% 35.337 var(--hue));
-	--voldemort: lch(16.405% 54.349 var(--hue));
-	--wild-violet: lch(26.256% 70.287 var(--hue));
-	--purple-emperor: lch(35.951% 83.499 var(--hue));
-	--magenta-affair: lch(46.006% 88.412 var(--hue));
-	--illicit-purple: lch(56.956% 75.105 var(--hue));
-	--diva: lch(68.002% 55.309 var(--hue));
-	--violet-heaven: lch(78.848% 35.402 var(--hue));
-	--grape-taffy: lch(95.495% 5.998 var(--hue));
+	--coalmine: oklch(20.13% 0.0961 var(--hue));
+	--voldemort: oklch(30.19% 0.1432 var(--hue));
+	--wild-violet: oklch(39.34% 0.1853 var(--hue));
+	--purple-emperor: oklch(48.21% 0.2209 var(--hue));
+	--magenta-affair: oklch(56.98% 0.2365 var(--hue));
+	--illicit-purple: oklch(65.69% 0.205 var(--hue));
+	--diva: oklch(74.35% 0.1532 var(--hue));
+	--violet-heaven: oklch(82.94% 0.0987 var(--hue));
+	--grape-taffy: oklch(96.3% 0.0168 var(--hue));
 
 	/* Neutral colours https://schemist.fglt.fr?preset=1@b@41250,4125a,4125x14,4125x1e,4125x28,4125x32,4125x3c,4125x46,4125x50,4125x5a,4125x64,012230123456789a@clr,,color,a9a4b0,l,amount */
-	--piano-black: lch(7.243% 2.967 var(--hue));
-	--moonless-night: lch(18.826% 4.513 var(--hue));
-	--tuna: lch(29.382% 5.734 var(--hue));
-	--wonder-wine: lch(39.625% 6.711 var(--hue));
-	--cement-feet: lch(49.743% 7.293 var(--hue));
-	--hatoba-pigeon: lch(59.811% 7.221 var(--hue));
-	--tangled-web: lch(69.862% 6.334 var(--hue));
-	--herring-silver: lch(79.912% 4.663 var(--hue));
-	--peekaboo: lch(92.959% 2.447 var(--hue));
+	--piano-black: oklch(20.11% 0.0086 var(--hue));
+	--moonless-night: oklch(30.17% 0.0126 var(--hue));
+	--tuna: oklch(39.3% 0.016 var(--hue));
+	--wonder-wine: oklch(48.16% 0.0187 var(--hue));
+	--cement-feet: oklch(56.91% 0.0204 var(--hue));
+	--hatoba-pigeon: oklch(65.58% 0.0202 var(--hue));
+	--tangled-web: oklch(74.22% 0.0177 var(--hue));
+	--herring-silver: oklch(82.83% 0.013 var(--hue));
+	--peekaboo: oklch(94.01% 0.0068 var(--hue));
+
+	/* Colour scale */
 	--accent-0: var(--white);
 	--accent-1: var(--grape-taffy);
 	--accent-2: var(--violet-heaven);
@@ -70,14 +72,15 @@
 	--neutral-solid-hover: var(--neutral-8);
 	--neutral-text: var(--neutral-9);
 	--neutral-text-contrast: var(--neutral-10);
-	--info: lch(69.928% 42.583 251.574deg);
-	--success: lch(72.02% 66.383 129.588deg);
-	--warning: lch(69.545% 65.691 63.721deg);
-	--error: lch(68.867% 51.731 36.633deg);
+	--info: oklch(74.2% 0.1262 241.9deg);
+	--success: oklch(74.2% 0.1766 136.9deg);
+	--warning: oklch(74.2% 0.1459 61.88deg);
+	--error: oklch(74.2% 0.1387 31.88deg);
 
 	/* Typography */
 	--font-weight-body-bold: 622;
 	--font-weight-body-normal: 400;
+	--font-emoji: "Noto Color Emoji", "Apple Color Emoji", "Twemoji Mozilla", "Segoe UI Emoji", "Segoe UI Symbol", "EmojiOne Color", "Android Emoji";
 
 	/* Scrollbar width */
 	--scrollbar-width: 15px;
