@@ -5,7 +5,6 @@ const pluginIcons = require("eleventy-plugin-icons");
 const pluginInterlinker = require("@photogabble/eleventy-plugin-interlinker");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginNestingToc = require("eleventy-plugin-nesting-toc");
-const pluginPostCss = require("eleventy-plugin-postcss");
 const pluginRollup = require("eleventy-plugin-rollup");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxhighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -85,7 +84,6 @@ module.exports = (eleventyConfig) => {
 		wrapper: "div",
 		wrapperClass: "[ toc ][ recursive-flow ]",
 	});
-	eleventyConfig.addPlugin(pluginPostCss);
 	eleventyConfig.addPlugin(pluginRollup, {
 		rollupOptions: "rollup.config.js",
 		scriptGenerator: (file, attributes = {}) => {
@@ -115,5 +113,6 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addPlugin(require("./excerpt.cjs"));
 	eleventyConfig.addPlugin(require("./image.cjs"));
 	eleventyConfig.addPlugin(require("./markdown.cjs").plugin);
+	eleventyConfig.addPlugin(require("./postcss.cjs"));
 	eleventyConfig.addPlugin(require("./unfurl.cjs"));
 };
