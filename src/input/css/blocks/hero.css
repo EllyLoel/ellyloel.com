@@ -84,6 +84,7 @@
 			font-weight: 1000;
 			isolation: isolate;
 
+			/* stylelint-disable-next-line no-descending-specificity */
 			> * {
 				display: block;
 			}
@@ -132,7 +133,8 @@
 						cursor: url("/assets/img/meme-pop-cat-pointer.webp"), default;
 					}
 
-					&:hover:not(#\#, #\#) {
+					/* stylelint-disable-next-line selector-id-pattern, selector-not-notation */
+					&:hover:not(#\#):not(#\#) {
 						--stroke-color: var(--fill-color);
 
 						color: var(--hover-color, var(--color));
