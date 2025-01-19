@@ -74,7 +74,7 @@ module.exports = (eleventyConfig) => {
 					? await generateImage()
 					: await imageExists().then(async (exists) =>
 							exists ? await generateImage() : generatePlaceholder()
-					  );
+						);
 			} catch (e) {
 				console.log(e);
 				return "";
