@@ -1,5 +1,3 @@
 .emoji {
-	font-family: "Noto Color Emoji", "Apple Color Emoji", "Twemoji Mozilla",
-		"Segoe UI Emoji", "Segoe UI Symbol", "EmojiOne Color", "Android Emoji",
-		sans-serif;
+	font-family: var(--font-emoji), sans-serif;
 }

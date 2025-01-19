@@ -1,5 +1,5 @@
 lite-youtube {
-	background-color: #000;
+	background-color: var(--black);
 	background-position: center center;
 	background-size: cover;
 	contain: content;

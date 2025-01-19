@@ -7,6 +7,7 @@ eight-ball button {
 	--_border: transparent;
 	--_highlight-size: 0;
 	--_size: 0.7em;
+	/* stylelint-disable-next-line declaration-block-no-duplicate-custom-properties */
 	--_size: 1cap;
 	--_text: var(--neutral-base);
 

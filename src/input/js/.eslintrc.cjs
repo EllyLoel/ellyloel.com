@@ -1,10 +1,9 @@
 module.exports = {
-	plugins: ["prettier"],
-	extends: ["eslint:recommended", "plugin:prettier/recommended"],
+	plugins: [],
+	extends: ["eslint:recommended"],
 	ignorePatterns: [".eslintrc.cjs"],
 	rules: {
 		"no-console": "warn",
-		"prettier/prettier": "error",
 		"no-unused-vars": "warn",
 		"sort-imports": "error",
 		"sort-keys": "error",
@@ -12,8 +11,7 @@ module.exports = {
 	},
 	env: {
 		browser: true,
-		es6: true,
-		es2022: true,
+		es2024: true,
 	},
 	parserOptions: {
 		sourceType: "module",

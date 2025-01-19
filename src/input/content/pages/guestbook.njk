@@ -7,16 +7,12 @@ eleventyNavigation:
   order: 1
 ---
 
-<aside class="callout">
-	{%- inlineIcon "fas:circle-info" -%}
-	<strong>
-		<p>This page displays entries sent via Webmention!</p>
-	</strong>
-	<div>
-		<p>If you want to sign the guestbook send through a Webmention, either from your website or you can <strong>reply on <a href="https://front-end.social/@elly/110143472326627842">Mastodon</a> or <a href="https://bsky.app/profile/elly.lol/post/3lcteiaaxsc2j">Bluesky</a></strong>.</p>
-	</div>
-</aside>
+{%- md -%}
+~~~ callout **This page displays entries sent via Webmention!**
+If you want to sign the guestbook send through a Webmention, either from your website or you can **reply on [Mastodon](https://front-end.social/@elly/110143472326627842) or [Bluesky](https://bsky.app/profile/elly.lol/post/3lcteiaaxsc2j)**.
+~~~
 
-<p>This page was inspired by <a href="https://ohhelloana.blog/guestbook/">Ana Rodrigues’ guestbook</a>.</p>
+This page was inspired by [Ana Rodrigues’ guestbook](https://ohhelloana.blog/guestbook/).
+{%- endmd -%}
 
 {%- include "webmentions.njk" -%}
