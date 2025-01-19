@@ -53,6 +53,8 @@ module.exports = (eleventyConfig) => {
 
 	// Copy/pass-through files
 	eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
+	eleventyConfig.addPassthroughCopy({ "node_modules/color-elements/src/color-slider/color-slider.css": "css" });
+	eleventyConfig.addPassthroughCopy({ "node_modules/color-elements/src/channel-slider/channel-slider.css": "css" });
 
 	// Watch targets
 	eleventyConfig.addWatchTarget("src/input/css");

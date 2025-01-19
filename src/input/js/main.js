@@ -5,4 +5,5 @@ import "./scrollbar-width.js";
 import "./details-utils.js";
 import "./howler.js";
 import "./iframe.js";
+import "./is-land.js";
 import "./confetti.js";

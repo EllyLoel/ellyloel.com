@@ -1,4 +1,4 @@
-<dialog class="[ settings-dialog ]" inert loading>
+<dialog class="[ settings-dialog ]" inert="inert" loading="loading">
 	<div class="[ container ][ flex flex-col gap-5 ]">
 		<h2 class="[ margin-0 line-height-1 ]">Settings</h2>
 
@@ -17,32 +17,27 @@
 			<legend class="[ h3 line-height-1 margin-block-end-2 ]">Pick a colour scheme</legend>
 			<div class="[ color-scheme-switcher ][ flex flex-wrap gap-3 ]">
 				<button data-color-scheme="auto" aria-pressed="true">
-					{%- icon "fas:laptop" -%}
-					Auto
+					{%- icon "fas:laptop" -%} Auto
 				</button>
 				<button data-color-scheme="light" aria-pressed="false">
-					{%- icon "fas:sun" -%}
-					Light
+					{%- icon "fas:sun" -%} Light
 				</button>
 				<button data-color-scheme="dark" aria-pressed="false">
-					{%- icon "fas:moon" -%}
-					Dark
+					{%- icon "fas:moon" -%} Dark
 				</button>
 			</div>
 		</fieldset>
 
 		<div class="[ flex flex-col gap-2 ]">
-			<label for="theme-hue" class="[ h3 line-height-1 ]">
+			<h3 class="[ line-height-1 ]">
 				Change theme hue
-			</label>
-			<input type="range"
-				id="theme-hue"
-				class="[ theme-hue-slider ]"
-				name="theme-hue"
-				min="0"
-				max="360"
-				step="1"
-			>
+			</h3>
+			<is-land on:visible>
+				<template data-island>
+					{%- rollup "src/input/js/channel-slider.js" | url -%}
+				</template>
+				<channel-slider id="theme-hue" space="oklch" channel="h" color="oklch(50% 50% 315deg)"></channel-slider>
+			</is-land>
 		</div>
 	</div>
 </dialog>

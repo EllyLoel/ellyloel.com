@@ -7,7 +7,7 @@ const defaultThemeHue = Number.parseInt(
 const applyThemeHue = (themeHue) => {
 	document.documentElement.setAttribute("data-selected-theme-hue", themeHue);
 	document.documentElement.style.setProperty("--hue", `${themeHue}deg`);
-	document.querySelector("#theme-hue").value = themeHue;
+	themeHueInput.value = themeHue;
 };
 
 const handleThemeHueSelection = (event) => {
@@ -29,4 +29,4 @@ const setInitialThemeHue = () => {
 
 setInitialThemeHue();
 
-themeHueInput.addEventListener("input", handleThemeHueSelection);
+themeHueInput.addEventListener("valuechange", handleThemeHueSelection);
