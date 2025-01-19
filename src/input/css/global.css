@@ -11,10 +11,8 @@ html {
 	background-color: var(--neutral-base);
 	caret-color: var(--link);
 	color: var(--neutral-text);
-	font-family: var(--font-sans), "Noto Color Emoji", "Apple Color Emoji",
-		"Twemoji Mozilla", "Segoe UI Emoji", "Segoe UI Symbol", "EmojiOne Color",
-		"Android Emoji";
-	font-size: calc(0.1vw + 0.1vh + 1em);
+	font-family: var(--font-sans), var(--font-emoji);
+	font-size: calc(0.25vi + 0.25vb + 1em);
 	font-weight: var(--font-weight-body-normal);
 	interpolate-size: allow-keywords;
 	letter-spacing: 0.04em;
@@ -35,11 +33,6 @@ main {
 
 	margin-block: var(--size-8);
 
-	/* only doing this as it has a tabindex of -1 for the skip link */
-	&:focus-visible {
-		outline: none;
-	}
-
 	& > * :where(*) {
 		--flow-space: 1em;
 	}
@@ -50,12 +43,10 @@ main {
 	--font-softness: 100;
 
 	color: var(--neutral-text-contrast);
-	font-family: Fraunces, "Fraunces Fallback: Times New Roman",
-		"Fraunces Fallback: Roboto", var(--font-serif), "Noto Color Emoji",
-		"Apple Color Emoji", "Twemoji Mozilla", "Segoe UI Emoji", "Segoe UI Symbol",
-		"EmojiOne Color", "Android Emoji";
+	font-family: Fraunces, "Fraunces Fallback: Times New Roman", "Fraunces Fallback: Roboto", var(--font-serif), var(--font-emoji);
 	font-optical-sizing: auto;
-	font-variation-settings: "SOFT" var(--font-softness),
+	font-variation-settings:
+		"SOFT" var(--font-softness),
 		"WONK" var(--font-wonkiness);
 	font-weight: var(--font-weight-7);
 	letter-spacing: normal;
@@ -89,32 +80,11 @@ h3,
 
 :is(p, ul, ol, dl) {
 	font-size: var(--font-size-2);
-}
-
-:is(p, ul, ol, dl) {
 	text-wrap: balance;
 	text-wrap: pretty;
 }
 
-strong:not(
-		h1,
-		.h1,
-		h2,
-		.h2,
-		h3,
-		.h3,
-		h4,
-		.h4,
-		h5,
-		.h5,
-		h6,
-		.h6,
-		pre,
-		code,
-		kbd,
-		var,
-		samp
-	) {
+:not(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, pre, code, kbd) strong {
 	color: var(--accent-text);
 	font-weight: var(--font-weight-body-bold);
 }
@@ -128,31 +98,31 @@ em {
 
 code,
 kbd,
-samp,
 pre {
-	font-family: "JetBrains Mono", "JetBrains Mono Fallback", var(--font-mono),
-		"Noto Color Emoji", "Apple Color Emoji", "Twemoji Mozilla", "Segoe UI Emoji",
-		"Segoe UI Symbol", "EmojiOne Color", "Android Emoji";
+	border: var(--border-size-1) solid transparent;
+	border-radius: var(--radius-2);
+	font-family: "JetBrains Mono", "JetBrains Mono Fallback", var(--font-mono), var(--font-emoji);
+	hyphens: none;
 	letter-spacing: normal;
 }
 
 pre {
+	border-color: var(--accent-border);
 	max-inline-size: max-content;
 	min-inline-size: 0;
+	overflow: auto;
+	padding: var(--size-3);
+	tab-size: 2;
 	white-space: pre;
 }
 
 :not(pre) > code {
 	background-color: var(--neutral-bg-subtle);
-	border-radius: var(--radius-2);
 	padding: var(--size-1) var(--size-2);
 }
 
-kbd,
-var {
+kbd {
 	border-color: var(--neutral-bg-hover);
-	border-radius: var(--radius-2);
-	border-width: var(--border-size-1);
 	padding: var(--size-1) var(--size-2);
 }
 
@@ -211,17 +181,13 @@ select {
 	padding-inline: 1.25ch 0;
 }
 
-:is(
-		textarea,
-		select,
-		input:not(
-				button,
-				button[type],
-				input[type="button"],
-				input[type="submit"],
-				input[type="reset"]
-			)
-	) {
+:is(textarea,
+	select,
+	input:not(button,
+		button[type],
+		input[type="button"],
+		input[type="submit"],
+		input[type="reset"])) {
 	background-color: var(--neutral-base);
 	border-color: var(--neutral-bg);
 	border-radius: var(--radius-2);
@@ -374,9 +340,7 @@ blockquote {
 	border-top-right-radius: var(--radius-3);
 	display: grid;
 	font-family: Fraunces, "Fraunces Fallback: Times New Roman",
-		"Fraunces Fallback: Roboto", var(--font-serif), "Noto Color Emoji",
-		"Apple Color Emoji", "Twemoji Mozilla", "Segoe UI Emoji", "Segoe UI Symbol",
-		"EmojiOne Color", "Android Emoji";
+		"Fraunces Fallback: Roboto", var(--font-serif), var(--font-emoji);
 	font-size: var(--font-size-3);
 	font-style: italic;
 	font-variation-settings: "SOFT" var(--font-softness),
@@ -421,7 +385,7 @@ details[open] > summary {
 	overflow-x: auto;
 	position: relative;
 
-	@media (any-pointer: fine) and (width <= 45.9375em) {
+	@media (any-pointer: fine) and (width <=45.9375em) {
 		/* 735px */
 		&,
 		& * {
@@ -538,12 +502,8 @@ fieldset {
 	border-radius: var(--radius-2);
 }
 
-mark::before,
-mark::after,
 del::before,
 del::after,
-ins::before,
-ins::after,
 s::before,
 s::after {
 	clip: rect(1px, 1px, 1px, 1px);
@@ -553,21 +513,6 @@ s::after {
 	position: absolute;
 	white-space: nowrap;
 	width: 1px;
-}
-
-mark::before {
-	content: " [highlight start] ";
-}
-
-mark::after {
-	content: " [highlight end] ";
-}
-
-@media screen and (-ms-high-contrast: active) {
-	mark {
-		background-color: Highlight;
-		color: HighlightText;
-	}
 }
 
 del,
@@ -583,15 +528,7 @@ del::after {
 	content: " [deletion end] ";
 }
 
-s::before {
-	content: " [start of stricken text] ";
-}
-
-s::after {
-	content: " [end stricken text] ";
-}
-
-@media screen and (-ms-high-contrast: active) {
+@media (forced-colors: active) {
 	s {
 		text-decoration-color: Highlight;
 	}
@@ -601,15 +538,7 @@ ins {
 	color: var(--success);
 }
 
-ins::before {
-	content: " [insertion start] ";
-}
-
-ins::after {
-	content: " [insertion end] ";
-}
-
-@media screen and (-ms-high-contrast: active) {
+@media (forced-colors: active) {
 	ins {
 		border-bottom-color: Highlight;
 	}
