@@ -17,7 +17,6 @@
 
 		<!-- Include scripts here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
 		{%- rollup "src/input/js/main.js" | url -%}
-		{%- rollup "src/input/js/is-land.js" | url -%}
 		{%- if page.url === "/" -%}
 			{%- rollup "src/input/js/spotify.js" | url -%}
 		{%- endif -%}

@@ -3,6 +3,7 @@ layout: base
 title: Search
 ---
 
+{%- rollup "src/input/js/search.js" | url -%}
 <form action="https://duckduckgo.com/" method="get" id="search" role="search" class="[ search ]" autocomplete="off" novalidate>
 	<div class="[ flex flex-wrap gap-2 align-center ]">
 		<div>
@@ -24,3 +25,29 @@ title: Search
 	<h2 id="search-results-count" aria-live="polite">results</h2>
 	<ol id="search-results-list" class="[ search-results-list ][ flow ]"></ol>
 </div>
+
+{# <hr>
+
+{%- rollup "src/input/js/pagefind-search.js" | url -%}
+<pagefind-search>
+	<form action="https://duckduckgo.com/" method="get" style="min-height: 3.2em;"><!-- min-height to reduce CLS -->
+		<label>
+			Search for:
+			<input type="search" name="q" autocomplete="off" autofocus>
+		</label>
+		<!-- Put your searchable domain here -->
+		<input type="hidden" name="sites" value="www.zachleat.com">
+		<button type="submit">Search</button>
+	</form>
+</pagefind-search>
+
+<hr>
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#search", showSubResults: true });
+    });
+</script> #}

@@ -1,13 +1,10 @@
 import GuiDialog from "./dialog.js";
 
 // new events
-const dialogClosing = ({ target: dialog }) => {};
-
-const dialogClosed = ({ target: dialog }) => {};
-
-const dialogOpened = ({ target: dialog }) => {};
-
-const dialogOpening = ({ target: dialog }) => {};
+// const dialogClosing = ({ target: dialog }) => {};
+// const dialogClosed = ({ target: dialog }) => {};
+// const dialogOpened = ({ target: dialog }) => {};
+// const dialogOpening = ({ target: dialog }) => {};
 
 // SETUP
 document.querySelectorAll("dialog").forEach((dialog) => {
@@ -15,10 +12,10 @@ document.querySelectorAll("dialog").forEach((dialog) => {
 	GuiDialog(dialog);
 
 	// new/optional <dialog> events to choose from
-	dialog.addEventListener("closing", dialogClosing);
-	dialog.addEventListener("closed", dialogClosed);
-	dialog.addEventListener("opening", dialogOpening);
-	dialog.addEventListener("opened", dialogOpened);
+	// dialog.addEventListener("closing", dialogClosing);
+	// dialog.addEventListener("closed", dialogClosed);
+	// dialog.addEventListener("opening", dialogOpening);
+	// dialog.addEventListener("opened", dialogOpened);
 });
 
 const settingsDialogOpenButton = document.querySelector(

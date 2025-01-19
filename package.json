@@ -39,12 +39,13 @@
 		"@terriblemia/eight-ball": "^0.2.0",
 		"@zachleat/details-utils": "^2.0.2",
 		"canvas-confetti": "^1.9.2",
+		"color-elements": "^0.0.3",
 		"css-doodle": "0.34.9",
 		"d3": "^7.9.0",
 		"dompurify": "^3.0.11",
 		"howler": "^2.2.4",
 		"node-fetch": "^2.7.0",
-		"pagefind": "^0.12.0",
+		"nude-element": "^0.0.12",
 		"three": "^0.160.0",
 		"whatwg-url": "5.0.0"
 	},
@@ -120,7 +121,8 @@
 	"pnpm": {
 		"patchedDependencies": {
 			"eleventy-plugin-rollup@1.3.0": "patches/eleventy-plugin-rollup@1.3.0.patch",
-			"cssremedy": "patches/cssremedy.patch"
+			"cssremedy": "patches/cssremedy.patch",
+			"color-elements@0.0.3": "patches/color-elements@0.0.3.patch"
 		}
 	},
 	"engines": {
