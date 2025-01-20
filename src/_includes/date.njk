@@ -3,5 +3,7 @@
 	<time 
 		class="[ {% if label === "Created" %}dt-published{% else %}dt-updated{% endif %} ]"
 		datetime="{{ date | dateToISO }}"
+		data-pagefind-meta="date[datetime]"
+		data-pagefind-sort="date[datetime]"
 	>{{ date | dateToLocaleDateFull }}</time>
 </span>

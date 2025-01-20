@@ -1,7 +1,7 @@
 ---
 layout: base-without-header.njk
 ---
-<header class="[ post-head ][ padding-block-end-6 gradient-border border-block-end-width ]">
+<header class="[ post-head ][ padding-block-end-6 gradient-border border-block-end-width ]" data-pagefind-ignore>
 	<!-- tabindex fixes focus issue: https://benmyers.dev/blog/skip-links/#tldr -->
 	<h1 id="content" tabindex="-1" class="[ p-name ][ line-height-1 margin-0 ]">{{ title }}</h1>
 	<div class="[ post-meta ][ margin-block-start-2 ]">
@@ -28,7 +28,7 @@ layout: base-without-header.njk
 		</div>
 		<div class="[ flex flex-wrap align-center column-gap-2 row-gap-1 margin-block-start-1 ]">
 			{%- if tags -%}
-				<span class="[ flex flex-wrap align-center gap-1 ]">
+				<span class="[ flex flex-wrap align-center gap-1 ]" data-pagefind-meta="tags">
 					{%- labelledInlineIcon "fas:tag", { "aria-label": "Tags" } -%}
 					{%- include "tags.njk" -%}
 				</span>
@@ -36,15 +36,18 @@ layout: base-without-header.njk
 		</div>
 	</div>
 </header>
-{%- set contentWithoutHtml = content.replace(r/<\/?[a-z0-9]+\b[^>]*>/g, "") -%}
-{%- if contentWithoutHtml.length > 3000 -%}
-	{%- rollup "src/input/js/table-of-contents.js" | url -%}
-	<table-of-contents>
-		<nav aria-labelledby="toc-heading" class="[ toc-container ][ content-width ]" data-pagefind-ignore>
-			<h2 id="toc-heading">Table of contents</h2>
-			{{ content | toc | safe }}
-		</nav>
-	</table-of-contents>
+{%- set headingRegex = r/<h[2-6] id="[a-z\-0-9]*" tabindex="-1">/m -%}
+{%- if headingRegex.test(content) -%}
+	{%- set contentWithoutHtml = content.replace(r/<\/?[a-z0-9]+\b[^>]*>/g, "") -%}
+	{%- if contentWithoutHtml.length > 1000 -%}
+		{%- rollup "src/input/js/table-of-contents.js" | url -%}
+		<table-of-contents>
+			<nav aria-labelledby="toc-heading" class="[ toc-container ][ content-width ]" data-pagefind-ignore>
+				<h2 id="toc-heading">Table of contents</h2>
+				{{ content | toc | safe }}
+			</nav>
+		</table-of-contents>
+	{%- endif -%}
 {%- endif -%}
 <article class="[ markdown-container ] [ e-content ] [ flow flow-space-setter ]" style="--flow-space-setter: 2em;">
 	{%- if not created and not modified -%}

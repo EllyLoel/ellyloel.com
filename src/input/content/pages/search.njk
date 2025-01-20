@@ -1,53 +1,28 @@
 ---
-layout: base
+layout: base-without-header
 title: Search
 ---
 
-{%- rollup "src/input/js/search.js" | url -%}
-<form action="https://duckduckgo.com/" method="get" id="search" role="search" class="[ search ]" autocomplete="off" novalidate>
-	<div class="[ flex flex-wrap gap-2 align-center ]">
-		<div>
-			<input type="text" name="q" id="search-input" class="[ search-input ]" aria-labelledby="search-button" enterkeyhint="search" autofocus>
+<header class="[ main-header ][ padding-block-end-6 gradient-border border-block-end-width ]">
+	<pagefind-search>
+		<form action="https://duckduckgo.com/" method="get" role="search" autocomplete="off" novalidate class="[ flow ]">
+			<!-- tabindex fixes focus issue: https://benmyers.dev/blog/skip-links/#tldr -->
+			<h1
+				id="content"
+				tabindex="-1"
+				class="[ p-name ][ margin-0 line-height-1 ]"
+			><label for="search">
+				{{ title }}
+			</label></h1>
+			<input type="text" id="search" name="q" enterkeyhint="search" autofocus>
 			<input type="hidden" name="sites" value="www.ellyloel.com">
-		</div>
-		<button type="submit" id="search-button">
-			{%- icon "fas:magnifying-glass" -%}
-			<span class="[ visually-hidden ]">Search</span>
-		</button>
-	</div>
-	<p>
-		<small>
-			Search provided by <is-land><a href="https://duckduckgo.com/">DuckDuckGo</a><template data-island="replace"><a href="https://pagefind.app/">Pagefind</a></template></is-land>.
-		</small>
-	</p>
-</form>
-<div id="search-results" class="[ search-results ][ flow ]" hidden>
-	<h2 id="search-results-count" aria-live="polite">results</h2>
-	<ol id="search-results-list" class="[ search-results-list ][ flow ]"></ol>
+			<p><small>
+				Search provided by <is-land><a href="https://duckduckgo.com/">DuckDuckGo</a><template data-island="replace"><a href="https://pagefind.app/">Pagefind</a></template></is-land>.
+			</small></p>
+		</form>
+	</pagefind-search>
+</header>
+<div id="search-results" class="[ flow ]" hidden>
+	<h2 aria-live="polite">results</h2>
+	<ol class="[ flow ]"></ol>
 </div>
-
-{# <hr>
-
-{%- rollup "src/input/js/pagefind-search.js" | url -%}
-<pagefind-search>
-	<form action="https://duckduckgo.com/" method="get" style="min-height: 3.2em;"><!-- min-height to reduce CLS -->
-		<label>
-			Search for:
-			<input type="search" name="q" autocomplete="off" autofocus>
-		</label>
-		<!-- Put your searchable domain here -->
-		<input type="hidden" name="sites" value="www.zachleat.com">
-		<button type="submit">Search</button>
-	</form>
-</pagefind-search>
-
-<hr>
-
-<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
-<script src="/pagefind/pagefind-ui.js"></script>
-<div id="search"></div>
-<script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-        new PagefindUI({ element: "#search", showSubResults: true });
-    });
-</script> #}
