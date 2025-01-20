@@ -50,7 +50,7 @@
 					[ h-entry ]
 				{%- endif -%}"
 			style="--wrapper-size: 100ch;"
-			{% if page.url !== "/" %}
+			{% if page.url !== "/" and page.url !== "/garden/" and page.url !== "/essays/" and page.url !== "/notes/" and page.url !== "/microposts/" and page.url !== "/bookmarks/" and page.url !== "/projects/" and page.url !== "/archive/" and not page.url | includes("/tags/") %}
 				data-pagefind-body
 			{% endif %}
 		>
