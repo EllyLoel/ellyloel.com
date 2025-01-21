@@ -155,11 +155,10 @@ a:not([class]) {
 		a[href],
 		area,
 		button,
-		input,
+		input:where([type="button"], [type="submit"], [type="reset"], [type="checkbox"], [type="radio"]),
 		label[for],
 		select,
 		summary,
-		textarea,
 		[tabindex]:not([tabindex*="-"])
 	) {
 	cursor: pointer;

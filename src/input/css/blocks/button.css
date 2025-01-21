@@ -120,8 +120,7 @@
 	max-inline-size: 100%;
 	padding: 0;
 
-	&:where(::-webkit-file-upload-button, ::file-selector-button) {
-		cursor: pointer;
+	&::file-selector-button {
 		margin-inline-end: 1.75ch;
 	}
 }
