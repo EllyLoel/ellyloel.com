@@ -1,12 +1,5 @@
 .site-head {
 	border-block-end-width: 0.1em;
-	border-image: linear-gradient(
-			to right,
-			transparent,
-			var(--accent-solid),
-			transparent
-		)
-		1;
 	padding-block: var(--size-6);
 
 	& .list:first-of-type {

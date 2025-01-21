@@ -1,25 +1,33 @@
-.border-block-start-width {
-	border-block-start-width: 0.1em;
-}
-
-.border-block-end-width {
-	border-block-end-width: 0.1em;
-}
-
-.border-inline-start-width {
-	border-inline-start-width: 0.1em;
-}
-
-.border-inline-end-width {
-	border-inline-end-width: 0.1em;
-}
-
 .gradient-border {
 	border-image: linear-gradient(
+		to right,
+		transparent,
+		var(--accent-solid),
+		transparent
+	) 1;
+
+	@media (forced-colors: active) {
+		border-image: linear-gradient(
 			to right,
 			transparent,
-			var(--accent-solid),
+			CanvasText,
 			transparent
-		)
-		1;
+		) 1;
+	}
+
+	&[data-gradient-border="block-start"] {
+		border-block-start-width: 0.1em;
+	}
+
+	&[data-gradient-border="block-end"] {
+		border-block-end-width: 0.1em;
+	}
+
+	&[data-gradient-border="inline-start"] {
+		border-inline-start-width: 0.1em;
+	}
+
+	&[data-gradient-border="inline-end"] {
+		border-inline-end-width: 0.1em;
+	}
 }
