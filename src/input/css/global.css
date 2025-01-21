@@ -181,24 +181,19 @@ select {
 	padding-inline: 1.25ch 0;
 }
 
-:is(textarea,
-	select,
-	input:not(button,
-		button[type],
-		input[type="button"],
-		input[type="submit"],
-		input[type="reset"])) {
+:is(textarea, select, input:not([type="button"], [type="submit"], [type="reset"], [type="checkbox"], [type="radio"])) {
 	background-color: var(--neutral-base);
-	border-color: var(--neutral-bg);
+	border-color: var(--neutral-border);
 	border-radius: var(--radius-2);
-	border-width: var(--border-size-1);
+	border-width: var(--border-size-2);
+	outline-color: transparent;
 
-	&:focus-visible {
-		border-color: transparent;
+	&:focus {
+		border-color: var(--accent-border);
 	}
 }
 
-:is(input[type="checkbox"], input[type="radio"]) {
+input:is([type="checkbox"], [type="radio"]) {
 	block-size: var(--size-3);
 	inline-size: var(--size-3);
 }
