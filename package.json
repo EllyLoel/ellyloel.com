@@ -84,7 +84,6 @@
 		"eslint-config-prettier": "^8.10.0",
 		"eslint-plugin-prettier": "^4.2.1",
 		"html-minifier": "^4.0.0",
-		"luxon": "^3.4.4",
 		"markdown-it": "^13.0.2",
 		"markdown-it-abbr": "^1.0.4",
 		"markdown-it-anchor": "^8.6.7",

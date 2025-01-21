@@ -52,7 +52,7 @@ eleventyNavigation:
 						<span class="[ flex align-center gap-1ch ]">
 							{%- labelledInlineIcon "far:calendar", { "aria-label": "Posted on" } -%}
 							<a href="{{ post.link }}" class="[ u-url u-syndication ]" rel="syndication">
-								<time class="[ dt-published ]" datetime="{{ post.isoDate }}" style="line-height: 1;">{{ post.isoDate | dateToLocaleDateFull }}</time>
+								<time class="[ dt-published ]" datetime="{{ post.isoDate }}" style="line-height: 1;">{{ post.isoDate | dateToLocale }}</time>
 							</a>
 						</span>
 					</div>

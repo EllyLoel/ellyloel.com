@@ -23,7 +23,7 @@
 			{%- else -%}
 				{%- set mentionPublished = mention["wm-received"] -%}
 			{%- endif -%}
-			<time class="[ dt-published ]" datetime="{{ mentionPublished }}">{{ mentionPublished | dateToLocaleLongShort }}</time>
+			<time class="[ dt-published ]" datetime="{{ mentionPublished }}">{{ mentionPublished | dateToLocale({ timeStyle: "short" }) }}</time>
 		</small>
 	</div>
 	<p>
