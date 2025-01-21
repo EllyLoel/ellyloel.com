@@ -3,7 +3,7 @@ layout: base-without-header
 title: Search
 ---
 
-<header class="[ main-header ][ padding-block-end-6 gradient-border border-block-end-width ]">
+<header class="[ main-header ][ padding-block-end-6 gradient-border ]" data-gradient-border="block-end">
 	<pagefind-search>
 		<form action="https://duckduckgo.com/" method="get" role="search" autocomplete="off" novalidate class="[ flow ]">
 			<!-- tabindex fixes focus issue: https://benmyers.dev/blog/skip-links/#tldr -->
@@ -22,7 +22,5 @@ title: Search
 		</form>
 	</pagefind-search>
 </header>
-<div id="search-results" class="[ flow ]" hidden>
-	<h2 aria-live="polite">results</h2>
-	<ol class="[ flow ]"></ol>
-</div>
+<h2 aria-live="polite"></h2>
+<div id="search-results" class="[ flow ]" hidden></div>

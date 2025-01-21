@@ -6,24 +6,28 @@ pagefind-search {
 			display: block;
 			inline-size: max(100%, var(--size-content-2));
 		}
+
+		& p {
+			margin-block-start: 0;
+		}
 	}
 }
 
-[id="search-results"] {
+h2[aria-live="polite"], div[id="search-results"] {
 	--flow-space: var(--size-6);
+}
 
-	> ol {
-		& li {
-			--flow-space: var(--size-6);
+div[id="search-results"] {
+	& article {
+		--flow-space: var(--size-6);
 
-			& p {
-				--flow-space: var(--size-2);
-			}
+		& p {
+			--flow-space: var(--size-2);
+		}
 
-			& .metadata {
-				color: var(--neutral-solid);
-				font-size: var(--font-size-0);
-			}
+		& .metadata {
+			color: var(--neutral-solid);
+			font-size: var(--font-size-0);
 		}
 	}
 }

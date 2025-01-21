@@ -5,6 +5,9 @@ class PagefindSearch extends HTMLElement {
 		}
 	}
 
+	static MIN_SEARCH_LENGTH = 2;
+	static SEARCH_DEBOUNCE_MS = 100;
+
 	constructor() {
 		super();
 		this.pagefind = null;
@@ -12,18 +15,17 @@ class PagefindSearch extends HTMLElement {
 	}
 
 	clearResults() {
-		this.searchResultsCount.innerHTML = "results";
-		this.searchResultsList.innerHTML = "";
+		this.searchResults.innerHTML = "";
 	}
 
 	addResult(result) {
-		const listItem = document.createElement("li");
+		const article = document.createElement("article");
 		const title = document.createElement("h3");
 		const link = document.createElement("a");
 		const metadata = document.createElement("p");
 		const matches = document.createElement("p");
 
-		listItem.className = "[ flow ]";
+		article.className = "[ flow ]";
 
 		link.href = result.url;
 		link.textContent = result.meta.title || result.url;
@@ -32,14 +34,20 @@ class PagefindSearch extends HTMLElement {
 		if (result.meta.date) {
 			const date = document.createElement("time");
 			date.dateTime = result.meta.date;
-			date.textContent = new Date(result.meta.date).toLocaleDateString("en-AU", { timeZone: "Australia/Melbourne" });
+			date.textContent = new Date(result.meta.date).toLocaleDateString("en-AU", {
+				dateStyle: "long",
+				timeZone: "Australia/Melbourne",
+			});
 			metadata.append(date);
 		}
 		if (result.filters.tags?.length) {
 			const tags = document.createElement("span");
-			tags.textContent = `Tags: ${result.filters.tags.join(", ")}`;
+			tags.textContent = result.filters.tags.join(", ");
 			if (metadata.hasChildNodes()) {
-				metadata.append(" • ");
+				const divider = document.createElement("span");
+				divider.setAttribute("aria-hidden", "true");
+				divider.textContent = " • ";
+				metadata.append(divider);
 			}
 			metadata.append(tags);
 		}
@@ -47,8 +55,8 @@ class PagefindSearch extends HTMLElement {
 		matches.innerHTML = result.excerpt;
 
 		title.append(link);
-		listItem.append(title, metadata, matches);
-		this.searchResultsList.append(listItem);
+		article.append(title, metadata, matches);
+		this.searchResults.append(article);
 	}
 
 	async getLibrary() {
@@ -64,31 +72,22 @@ class PagefindSearch extends HTMLElement {
 		this.onInputTimeout = window.setTimeout(async () => {
 			this.clearResults();
 
-			if (value.length > 1) {
-				this.searchResults.removeAttribute("hidden");
+			this.searchResults.toggleAttribute("hidden", value.length < PagefindSearch.MIN_SEARCH_LENGTH);
 
-				let search = await pagefind.search(value);
-				let results = await Promise.all(search.results.map((r) => r.data()));
-
-				for (let result of results) {
-					this.addResult(result, value);
-				}
-
-				if (results.length) {
-					this.searchResultsCount.innerHTML = `${results.length} result${
-						results.length > 1 ? "s" : ""
-					}`;
-				} else {
-					this.searchResultsList.innerHTML = `<li>No matches found.</li>`;
-				}
-
-				this.searchResultsList.classList[results.length > 0 ? "remove" : "add"](
-					"search-results-notfound"
-				);
-			} else {
-				this.searchResults.setAttribute("hidden", "");
+			let results = [];
+			if (value.length >= PagefindSearch.MIN_SEARCH_LENGTH) {
+				const search = await pagefind.search(value);
+				results = await Promise.all(search.results.map((r) => r.data()));
 			}
-		}, 100);
+
+			this.searchResultsHeading.innerHTML = value.length >= PagefindSearch.MIN_SEARCH_LENGTH
+				? `${results.length || "No"} result${results.length !== 1 ? "s" : ""} found for <q>${value}</q>`
+				: ``;
+
+			for (const result of results) {
+				this.addResult(result, value);
+			}
+		}, PagefindSearch.SEARCH_DEBOUNCE_MS);
 	}
 
 	getQueryString() {
@@ -122,19 +121,14 @@ class PagefindSearch extends HTMLElement {
 			}
 		}
 
-		let results = document.querySelector(`#search-results`);
+		let results = document.querySelector("#search-results");
 		if (results) {
 			this.searchResults = results;
 		}
 
-		let resultsCount = this.searchResults.querySelector(`h2`);
-		if (resultsCount) {
-			this.searchResultsCount = resultsCount;
-		}
-
-		let resultsList = this.searchResults.querySelector(`ol`);
-		if (resultsList) {
-			this.searchResultsList = resultsList;
+		let resultsHeading = document.querySelector(`h2[aria-live="polite"]`);
+		if (resultsHeading) {
+			this.searchResultsHeading = resultsHeading;
 		}
 	}
 }
