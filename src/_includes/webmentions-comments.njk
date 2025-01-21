@@ -18,7 +18,7 @@
 				{%- else -%}
 					{%- set commentPublished = comment["wm-received"] -%}
 				{%- endif -%}
-				<time class="[ dt-published ]" datetime="{{ commentPublished }}">{{ commentPublished | dateToLocaleLongShort }}</time>
+				<time class="[ dt-published ]" datetime="{{ commentPublished }}">{{ commentPublished | dateToLocale({ timeStyle: "short" }) }}</time>
 			</a>
 		</small>
 	</div>

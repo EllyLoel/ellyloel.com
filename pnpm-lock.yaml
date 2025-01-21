@@ -164,9 +164,6 @@ importers:
       html-minifier:
         specifier: ^4.0.0
         version: 4.0.0
-      luxon:
-        specifier: ^3.4.4
-        version: 3.4.4
       markdown-it:
         specifier: ^13.0.2
         version: 13.0.2

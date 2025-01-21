@@ -7,7 +7,7 @@ permalink: "sitemap.xml"
 	{%- if not page.data.excludeFromSitemap and page.url %}
 	<url>
 		<loc>{{ page.url | url | absoluteUrl(metadata.url) }}</loc>
-		<lastmod>{{ page.date | dateToFormat('yyyy-MM-dd') }}</lastmod>
+		<lastmod>{{ page.date | dateToISO }}</lastmod>
 	</url>
 	{%- endif -%}
 {%- endfor -%}

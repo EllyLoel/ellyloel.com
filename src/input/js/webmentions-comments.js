@@ -12,7 +12,7 @@ const renderComments = (comments) => {
 </${authorWrapperTag}>
 		`.trim();
 
-		const date = comment.published || comment["wm-received"];
+		const date = new Date(comment.published || comment["wm-received"]);
 
 		return `
 <li class="[ webmention ][ flow ]">
@@ -26,9 +26,7 @@ const renderComments = (comments) => {
 		}
 		<small>
 			<a href="${comment.url}">
-				<time class="[ dt-published ]" datetime="${date}">${new Date(
-			date
-		).toLocaleString("en", { dateStyle: "long", timeStyle: "short" })}</time>
+				<time class="[ dt-published ]" datetime="${date.toISOString()}">${date.toLocaleString("en-AU", { dateStyle: "long", timeStyle: "short" })}</time>
 			</a>
 		</small>
 	</div>

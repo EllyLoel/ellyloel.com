@@ -36,16 +36,14 @@ const renderMentions = async (mentions) => {
 </a>
 		`.trim();
 
-		const date = mention.published || mention["wm-received"];
+		const date = new Date(mention.published || mention["wm-received"]);
 
 		return `
 <li class="[ webmention ][ flow ]">
 	<div class="[ meta ]">
 		${author}
 		<small>
-			<time class="[ dt-published ]" datetime="${date}">${new Date(
-			date
-		).toLocaleString("en", { dateStyle: "long", timeStyle: "short" })}</time>
+			<time class="[ dt-published ]" datetime="${date.toISOString()}">${date.toLocaleString("en-AU", { dateStyle: "long", timeStyle: "short" })}</time>
 		</small>
 	</div>
 	<p ${meta.lang !== "en" ? `lang="${meta.lang}"` : ""}><a href="${
