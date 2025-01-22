@@ -14,12 +14,12 @@ pagefind-search {
 }
 
 h2[aria-live="polite"], div[id="search-results"] {
-	--flow-space: var(--size-6);
+	--flow-space: var(--size-8);
 }
 
 div[id="search-results"] {
 	& article {
-		--flow-space: var(--size-6);
+		--flow-space: var(--size-8);
 
 		& p {
 			--flow-space: var(--size-2);
