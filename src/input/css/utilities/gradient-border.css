@@ -16,18 +16,22 @@
 	}
 
 	&[data-gradient-border="block-start"] {
-		border-block-start-width: 0.1em;
+		border-block-start-style: solid;
+		border-block-start-width: var(--border-size-2);
 	}
 
 	&[data-gradient-border="block-end"] {
-		border-block-end-width: 0.1em;
+		border-block-end-style: solid;
+		border-block-end-width: var(--border-size-2);
 	}
 
 	&[data-gradient-border="inline-start"] {
-		border-inline-start-width: 0.1em;
+		border-inline-start-style: solid;
+		border-inline-start-width: var(--border-size-2);
 	}
 
 	&[data-gradient-border="inline-end"] {
-		border-inline-end-width: 0.1em;
+		border-inline-end-style: solid;
+		border-inline-end-width: var(--border-size-2);
 	}
 }
