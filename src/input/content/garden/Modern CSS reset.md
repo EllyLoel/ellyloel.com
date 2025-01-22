@@ -42,10 +42,8 @@ Lots of inspiration from Josh W Comeau, Andy Bell, and Adam Argyle.
 	box-sizing: border-box;
 }
 
-/* Remove border and set sensible defaults for backgrounds, on all elements except fieldset progress and meter */
+/* Set sensible defaults for backgrounds, on all elements except fieldset progress and meter */
 *:where(:not(fieldset, progress, meter)) {
-	border-width: 0;
-	border-style: solid;
 	background-origin: border-box;
 	background-repeat: no-repeat;
 }
