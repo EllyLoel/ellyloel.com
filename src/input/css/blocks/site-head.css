@@ -1,5 +1,6 @@
 .site-head {
-	border-block-end-width: 0.1em;
+	border-block-end-style: solid;
+	border-block-end-width: var(--border-size-2);
 	padding-block: var(--size-6);
 
 	& .list:first-of-type {
