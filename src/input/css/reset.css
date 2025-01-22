@@ -1,14 +1,3 @@
-/*
-  Made by Elly Loel - https://ellyloel.com/
-  With inspiration from:
-    - Josh W Comeau - https://courses.joshwcomeau.com/css-for-js/treasure-trove/010-global-styles/
-    - Andy Bell - https://piccalil.li/blog/a-modern-css-reset/
-    - Adam Argyle - https://unpkg.com/open-props@1.3.16/normalize.min.css / https://codepen.io/argyleink/pen/KKvRORE
-
-  Notes:
-    - `:where()` is used to lower specificity for easy overriding.
-*/
-
 * {
 	/* Calc `em` based line height, bigger line height for smaller font size and smaller line height for bigger font size: https://kittygiraudel.com/2020/05/18/using-calc-to-figure-out-optimal-line-height/ */
 	line-height: calc(0.25rem + 1em + 0.25rem);
@@ -20,19 +9,10 @@
 	padding: 0;
 }
 
-/* Use a more-intuitive box-sizing model on everything */
-*,
-::before,
-::after {
-	box-sizing: border-box;
-}
-
-/* Remove border and set sensible defaults for backgrounds, on all elements except fieldset progress and meter */
+/* Set sensible defaults for backgrounds, on all elements except fieldset progress and meter */
 *:where(:not(fieldset, progress, meter)) {
 	background-origin: border-box;
 	background-repeat: no-repeat;
-	border-style: solid;
-	border-width: 0;
 }
 
 html {
