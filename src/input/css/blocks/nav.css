@@ -4,7 +4,7 @@
 
 	& a[href="/"] {
 		&:hover {
-			background-color: transparent;
+			background: transparent;
 		}
 
 		> .logo {
@@ -47,7 +47,7 @@
 			}
 
 			&:hover {
-				background-color: var(--accent-text);
+				background: var(--accent-text);
 				color: var(--accent-bg);
 			}
 		}

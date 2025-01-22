@@ -2,7 +2,7 @@
 	--shadow-offset: var(--size-1);
 
 	align-content: space-between;
-	background-color: var(--accent-bg-subtle);
+	background: var(--accent-bg-subtle);
 	border-color: var(--accent-bg-hover);
 	border-radius: var(--radius-3);
 	border-style: solid;

@@ -1,5 +1,5 @@
 .skip-link {
-	background-color: var(--accent-text);
+	background: var(--accent-text);
 	border-radius: var(--radius-round);
 	color: var(--accent-bg);
 	inset-block-start: var(--size-3);

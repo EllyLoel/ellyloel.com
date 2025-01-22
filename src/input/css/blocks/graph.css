@@ -6,7 +6,7 @@
 	& > svg {
 		--shadow-offset: var(--size-1);
 
-		background-color: var(--accent-bg-subtle);
+		background: var(--accent-bg-subtle);
 		border: var(--border-size-2) solid var(--accent-bg-hover);
 		border-radius: var(--radius-3);
 		box-shadow: var(--shadow-offset) var(--shadow-offset) 0 0

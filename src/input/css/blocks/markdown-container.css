@@ -17,7 +17,7 @@
 		& > :is(.share, .post-pagination) {
 			--shadow-offset: var(--size-1);
 
-			background-color: var(--accent-bg-subtle);
+			background: var(--accent-bg-subtle);
 			border-color: var(--accent-bg-hover);
 			border-radius: var(--radius-3);
 			border-width: var(--border-size-2);
@@ -78,12 +78,12 @@
 
 					& summary {
 						margin: 0;
-						margin-block-end: var(--size-2);
 						padding: 0;
 					}
 
 					& img {
 						border-radius: var(--radius-2);
+						margin-block-start: var(--size-2);
 					}
 				}
 			}
