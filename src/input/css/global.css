@@ -235,9 +235,16 @@ small {
 }
 
 hr {
-	background-color: var(--neutral-bg);
-	height: var(--border-size-2);
-	margin-block: var(--size-fluid-5);
+	border-width: 0;
+	/* stylelint-disable-next-line order/properties-alphabetical-order */
+	border-block-start-width: var(--border-size-2);
+	border-image: linear-gradient(
+		to right,
+		transparent,
+		currentcolor,
+		transparent
+	) 1;
+	color: var(--accent-solid);
 }
 
 /* iFrames */
