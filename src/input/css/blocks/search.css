@@ -4,7 +4,7 @@ pagefind-search {
 	& form[role="search"] {
 		& input[type="text"] {
 			display: block;
-			inline-size: max(100%, var(--size-content-2));
+			inline-size: min(100%, var(--size-content-2));
 		}
 
 		& p {
