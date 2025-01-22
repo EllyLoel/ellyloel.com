@@ -8,7 +8,7 @@ html {
 	--link-visited: var(--accent-solid-hover);
 
 	accent-color: var(--link);
-	background-color: var(--neutral-base);
+	background: var(--neutral-base);
 	caret-color: var(--link);
 	color: var(--neutral-text);
 	font-family: var(--font-sans), var(--font-emoji);
@@ -117,7 +117,7 @@ pre {
 }
 
 :not(pre) > code {
-	background-color: var(--neutral-bg-subtle);
+	background: var(--neutral-bg-subtle);
 	padding: var(--size-1) var(--size-2);
 }
 
@@ -129,7 +129,7 @@ kbd {
 /* Links */
 
 :where(a) {
-	background-color: transparent;
+	background: transparent;
 	border-radius: var(--radius-2);
 	box-decoration-break: clone;
 	margin-inline: calc(var(--size-1) * -1);
@@ -138,7 +138,7 @@ kbd {
 	text-decoration-color: currentcolor;
 	text-decoration-thickness: 0.1em;
 	transition-duration: 200ms;
-	transition-property: background-color, text-decoration-color;
+	transition-property: background, text-decoration-color;
 	transition-timing-function: var(--ease-2);
 
 	&:where([href]) {
@@ -149,12 +149,12 @@ kbd {
 		}
 
 		&:hover {
-			background-color: var(--accent-bg);
+			background: var(--accent-bg);
 			text-decoration-color: transparent;
 		}
 
 		&:active {
-			background-color: var(--accent-bg-hover);
+			background: var(--accent-bg-hover);
 		}
 	}
 
@@ -182,7 +182,7 @@ select {
 }
 
 :is(textarea, select, input:not([type="button"], [type="submit"], [type="reset"], [type="checkbox"], [type="radio"])) {
-	background-color: var(--neutral-base);
+	background: var(--neutral-base);
 	border-color: var(--neutral-border);
 	border-radius: var(--radius-2);
 	border-width: var(--border-size-2);
@@ -314,7 +314,7 @@ figure {
 		}
 	}
 
-	& > :is(picture, svg, sl-animated-image) + figcaption {
+	& > :is(picture, svg) + figcaption {
 		text-align: center;
 	}
 }
@@ -337,7 +337,7 @@ blockquote {
 	--font-wonkiness: 1;
 	--font-softness: 100;
 
-	background-color: var(--neutral-bg-subtle);
+	background: var(--neutral-bg-subtle);
 	border-bottom-right-radius: var(--radius-3);
 	border-left: var(--border-size-3) solid var(--accent-border);
 	border-top-right-radius: var(--radius-3);
@@ -366,7 +366,7 @@ summary {
 }
 
 details {
-	background-color: var(--accent-bg-subtle);
+	background: var(--accent-bg-subtle);
 	border-radius: var(--radius-2);
 	padding-block: var(--size-2);
 	padding-inline: var(--size-3);
@@ -382,7 +382,7 @@ details[open] > summary {
 .table-container {
 	--_border: var(--border-size-1) solid var(--accent-4);
 
-	background-color: var(--accent-bg);
+	background: var(--accent-bg);
 	border: var(--_border);
 	border-radius: var(--radius-3);
 	overflow-x: auto;
@@ -405,7 +405,7 @@ details[open] > summary {
 		width: 100%;
 
 		& caption {
-			background-color: var(--accent-3);
+			background: var(--accent-3);
 			border-radius: var(--radius-2);
 			font-style: italic;
 			padding-block: var(--size-1);
@@ -461,7 +461,7 @@ details[open] > summary {
 		}
 
 		& td {
-			background-color: var(--accent-bg-subtle);
+			background: var(--accent-bg-subtle);
 			text-align: left;
 		}
 
@@ -558,7 +558,8 @@ abbr {
 /* Dialog */
 
 dialog {
-	background-color: var(--neutral-base, Canvas);
+	background: var(--neutral-base, Canvas);
+	border-color: transparent;
 	border-radius: var(--radius-3);
 	box-shadow: var(--shadow-6);
 	color: inherit;
@@ -607,6 +608,6 @@ menu {
 
 /* High contrast selection style */
 ::selection {
-	background-color: var(--accent-text);
+	background: var(--accent-text);
 	color: var(--accent-bg);
 }

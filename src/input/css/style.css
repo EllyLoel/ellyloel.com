@@ -64,6 +64,5 @@
 @import url("./blocks/skip-link.css") layer(blocks);
 @import url("./blocks/sound-button.css") layer(blocks);
 @import url("./blocks/toc.css") layer(blocks);
-@import url("./blocks/tooltip.css") layer(blocks);
 @import url("./blocks/unfurl.css") layer(blocks);
 @import url("./blocks/webmentions.css") layer(blocks);

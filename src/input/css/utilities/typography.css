@@ -17,7 +17,7 @@
 		text-decoration-skip-ink: auto;
 		text-decoration-thickness: 0.1em;
 		transition-duration: 200ms;
-		transition-property: background-color, text-decoration-color;
+		transition-property: background, text-decoration-color;
 		transition-timing-function: var(--ease-2);
 	}
 

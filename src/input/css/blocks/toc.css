@@ -40,7 +40,7 @@ table-of-contents {
 }
 
 .toc-container {
-	background-color: var(--accent-bg-subtle);
+	background: var(--accent-bg-subtle);
 	border-radius: var(--radius-2);
 	margin-inline: auto;
 	padding: var(--size-2) var(--size-3);

@@ -1,7 +1,7 @@
 .newsletter {
 	--shadow-offset: var(--size-1);
 
-	background-color: var(--accent-bg-subtle);
+	background: var(--accent-bg-subtle);
 	border-color: var(--accent-bg-hover);
 	border-radius: var(--radius-3);
 	border-width: var(--border-size-2);

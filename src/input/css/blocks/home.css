@@ -7,44 +7,6 @@
 		column-gap: var(--size-3);
 		display: grid;
 
-		& li {
-			max-width: revert;
-		}
-
-		& .interest-list {
-			background-color: revert;
-
-			& *:not(summary) {
-				overflow: hidden;
-			}
-
-			&,
-			& summary {
-				margin: revert;
-				padding: revert;
-			}
-
-			& summary {
-				color: var(--link);
-				cursor: pointer;
-				font-weight: var(--font-weight-body-bold);
-				text-decoration: underline;
-				text-decoration-thickness: 0.125rem;
-
-				&:hover {
-					text-decoration: none;
-				}
-			}
-
-			&[open] summary {
-				margin-bottom: var(--flow-space);
-			}
-
-			& ul {
-				margin-left: var(--size-4);
-			}
-		}
-
 		@media (width >= 48em) { /* 768px */
 			grid-template-columns: 2fr 1fr;
 			row-gap: var(--size-8);

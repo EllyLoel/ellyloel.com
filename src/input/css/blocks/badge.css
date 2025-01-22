@@ -1,6 +1,6 @@
 .badge {
 	align-items: center;
-	background-color: var(--accent-6);
+	background: var(--accent-6);
 	border: solid 1px transparent;
 	border-radius: 3px;
 	color: var(--neutral-base);
@@ -14,7 +14,7 @@
 	white-space: nowrap;
 
 	&.neutral {
-		background-color: var(--neutral-6);
+		background: var(--neutral-6);
 		color: var(--neutral-base);
 	}
 

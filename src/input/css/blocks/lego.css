@@ -1,5 +1,5 @@
 .lego-container {
-	background-image: radial-gradient(
+	background: radial-gradient(
 		circle farthest-corner at 10% 20%,
 		var(--accent-bg) 0%,
 		var(--accent-solid) 90%

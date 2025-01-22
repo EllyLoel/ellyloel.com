@@ -9,7 +9,7 @@
 	}
 
 	& details {
-		background-color: transparent;
+		background: transparent;
 		block-size: fit-content;
 		padding: 0;
 		padding-bottom: var(--size-1);
@@ -37,7 +37,7 @@
 		& li {
 			--shadow-offset: var(--size-1);
 
-			background-color: var(--accent-bg-subtle);
+			background: var(--accent-bg-subtle);
 			border-color: var(--accent-bg-hover);
 			border-radius: var(--radius-3);
 			border-width: var(--border-size-2);
@@ -82,7 +82,7 @@
 				text-decoration: none;
 
 				&:hover {
-					background-color: transparent;
+					background: transparent;
 				}
 
 				& strong {

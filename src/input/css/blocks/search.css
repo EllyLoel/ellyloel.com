@@ -8,7 +8,7 @@ pagefind-search {
 		}
 
 		& p {
-			margin-block-start: 0;
+			--flow-space: 0;
 		}
 	}
 }
