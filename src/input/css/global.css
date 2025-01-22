@@ -201,6 +201,7 @@ input:is([type="checkbox"], [type="radio"]) {
 /* Typography */
 
 mark {
+	background: var(--accent-bg);
 	border-radius: var(--radius-2);
 	padding-inline: var(--size-1);
 }
