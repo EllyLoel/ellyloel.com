@@ -21,6 +21,15 @@ div[id="search-results"] {
 	& article {
 		--flow-space: var(--size-8);
 
+		position: relative;
+
+		& a::after {
+			content: "";
+			display: block;
+			inset: 0;
+			position: absolute;
+		}
+
 		& p {
 			--flow-space: var(--size-2);
 		}
