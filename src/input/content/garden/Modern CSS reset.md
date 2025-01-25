@@ -183,8 +183,9 @@ a:not([class]) {
 	outline-offset: 5px;
 }
 
-/* Make sure users can't select button text */
+/* Make sure there's not a tap highlight interactive elements */
 :where(
+		a[href],
 		button,
 		button[type],
 		input[type="button"],
@@ -194,9 +195,6 @@ a:not([class]) {
 :where(input[type="file"])::-webkit-file-upload-button,
 :where(input[type="file"])::file-selector-button {
 	-webkit-tap-highlight-color: transparent;
-	-webkit-touch-callout: none;
-	user-select: none;
-	text-align: center;
 }
 
 /* Disabled cursor for disabled buttons */
