@@ -56,16 +56,14 @@
 		top: var(--size-7);
 	}
 
-	.color-scheme-switcher {
-		& button[aria-pressed="true"] {
-			background: var(--accent-solid);
-			color: var(--accent-2);
-		}
+	& button[aria-pressed="true"] {
+		background: var(--accent-solid);
+		color: var(--accent-2);
+	}
 
-		& button[aria-pressed="false"] {
-			background: var(--accent-bg-subtle);
-			color: var(--accent-solid);
-		}
+	& button[aria-pressed="false"] {
+		background: var(--accent-bg-subtle);
+		color: var(--accent-solid);
 	}
 }
 
