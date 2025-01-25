@@ -209,4 +209,9 @@ a:not([class]) {
 	)[disabled] {
 	cursor: not-allowed;
 }
+
+/* Reset UA text transform styles */
+input, textarea, select, button, ::file-selector-button {
+	text-transform: inherit;
+}
 ```

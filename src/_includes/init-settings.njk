@@ -1,4 +1,5 @@
 {# <script>
+	// Initialize color scheme from localStorage
 	const savedColorScheme = localStorage.getItem("selected-color-scheme");
 	const savedThemeHue = localStorage.getItem("selected-theme-hue");
 
@@ -49,5 +50,40 @@
 			.style
 			.setProperty("--hue", `${savedThemeHue}deg`);
 	}
+
+	// Initialize text transform state from localStorage or default to true
+	if (localStorage.getItem("textTransformEnabled") !== "false") {
+		document.querySelector("#text-transform-button")
+			.setAttribute("aria-pressed", "true");
+		document
+			.documentElement
+			.style
+			.textTransform = "lowercase";
+	}
 </script> #}
-<script>const e=localStorage.getItem("selected-color-scheme"),t=localStorage.getItem("selected-theme-hue");if(e){const t=document.querySelector('button[data-color-scheme][aria-pressed="true"]'),o=document.querySelector(`button[data-color-scheme="${e}"]`);if(document.documentElement.setAttribute("data-selected-color-scheme",e),"light"===e||"dark"===e){const e=document.querySelectorAll('meta[name="theme-color"]');for(const t of e)t.remove()}const r=document.createElement("meta");r.setAttribute("name","theme-color"),"light"===e&&(r.setAttribute("content","#f9f9f9"),document.head.appendChild(r)),"dark"===e&&(r.setAttribute("content","#111111"),document.head.appendChild(r)),t&&t.getAttribute("data-color-scheme")!==e&&t.setAttribute("aria-pressed","false"),o&&"true"!==o.getAttribute("aria-pressed")&&o.setAttribute("aria-pressed","true")}t&&(document.documentElement.setAttribute("data-selected-theme-hue",t),document.documentElement.style.setProperty("--hue",`${t}deg`));</script>
+<script>
+	const e = localStorage.getItem("selected-color-scheme"),
+		t = localStorage.getItem("selected-theme-hue");
+	if (e) {
+		const t = document.querySelector('button[data-color-scheme][aria-pressed="true"]'),
+			o = document.querySelector(`button[data-color-scheme="${e}"]`);
+		if (document.documentElement.setAttribute("data-selected-color-scheme", e), "light" === e || "dark" === e) {
+			const e = document.querySelectorAll('meta[name="theme-color"]');
+			for (const t of e) 
+				t.remove()
+		}
+		const r = document.createElement("meta");
+		r.setAttribute("name", "theme-color"),
+		"light" === e && (r.setAttribute("content", "#f9f9f9"), document.head.appendChild(r)),
+		"dark" === e && (r.setAttribute("content", "#111111"), document.head.appendChild(r)),
+		t && t.getAttribute("data-color-scheme") !== e && t.setAttribute("aria-pressed", "false"),
+		o && "true" !== o.getAttribute("aria-pressed") && o.setAttribute("aria-pressed", "true")
+	}
+	t && (
+		document.documentElement.setAttribute("data-selected-theme-hue", t),
+		document.documentElement.style.setProperty("--hue", `${t}deg`)
+	);
+	localStorage.getItem("textTransformEnabled") !== "false" && (
+		document.documentElement.style.textTransform = "lowercase"
+	);
+</script>
