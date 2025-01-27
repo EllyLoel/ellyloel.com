@@ -14,18 +14,13 @@ module.exports = (eleventyConfig) => {
 			.getAll()
 			.sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
 	);
-	["Essays", "Bookmarks", "Garden", "Projects"].forEach((collection) => {
-		eleventyConfig.addCollection(
-			`${collection}SortedByDate`,
-			(collectionApi) => {
-				return collectionApi
-					.getFilteredByTag(collection)
-					.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
-			}
-		);
-	});
+	eleventyConfig.addCollection("BookmarksSortedByDate", (collectionApi) =>
+		collectionApi
+			.getFilteredByTag("Bookmarks")
+			.sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
+	);
+	let collection = [];
 	eleventyConfig.addCollection("notBookmarksSortedByDate", (collectionApi) => {
-		const collection = [];
 		collection.push(...collectionApi.getFilteredByTag("Essays"));
 		collection.push(...collectionApi.getFilteredByTag("Garden"));
 		collection.push(...collectionApi.getFilteredByTag("Projects"));
@@ -33,11 +28,7 @@ module.exports = (eleventyConfig) => {
 		return collection;
 	});
 	eleventyConfig.addCollection("postsSortedByDate", (collectionApi) => {
-		const collection = [];
-		collection.push(...collectionApi.getFilteredByTag("Essays"));
 		collection.push(...collectionApi.getFilteredByTag("Bookmarks"));
-		collection.push(...collectionApi.getFilteredByTag("Garden"));
-		collection.push(...collectionApi.getFilteredByTag("Projects"));
 		collection.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
 		return collection;
 	});

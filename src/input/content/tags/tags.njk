@@ -6,24 +6,10 @@ pagination:
   alias: tag
   filter:
     - all
-    - allsortedbydate
     - allSortedByDate
-    - blog
-    - blogsortedbydate
-    - Blog
-    - BlogSortedByDate
-    - bookmarks
-    - bookmarkssortedbydate
-    - Bookmarks
     - BookmarksSortedByDate
-    - garden
-    - gardensortedbydate
-    - Garden
-    - GardenSortedByDate
-    - projects
-    - projectssortedbydate
-    - Projects
-    - ProjectsSortedByDate
+    - notBookmarksSortedByDate
+    - postsSortedByDate
 permalink: "tags/{{ tag | slugify }}/"
 eleventyComputed:
   title: "{{ tag }}"

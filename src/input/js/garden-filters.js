@@ -1,7 +1,8 @@
 const form = document.querySelector("form");
 const filterButtons = form.querySelectorAll("button[data-filter-name]");
-const disclosureButtons = form.querySelectorAll("legend > button");
-const disclosureContents = form.querySelectorAll("fieldset > div");
+const moreTags = form.querySelector("#show-more-tags + span");
+const showMoreTagsButton = form.querySelector("#show-more-tags");
+const showLessTagsButton = form.querySelector("#show-less-tags");
 const feed = document.getElementById("feed");
 
 // Store active filters
@@ -71,24 +72,6 @@ const loadFiltersFromURL = () => {
 	applyFilters();
 };
 
-const toggleDisclosure = (button, isExpanded) => {
-	if (isExpanded === "true") {
-		const contentId = button.getAttribute("aria-controls");
-		const content = document.getElementById(contentId);
-
-		button.setAttribute("aria-expanded", "false");
-		content.setAttribute("hidden", "until-found");
-	}
-
-	if (isExpanded === "false") {
-		const contentId = button.getAttribute("aria-controls");
-		const content = document.getElementById(contentId);
-
-		button.setAttribute("aria-expanded", "true");
-		content.removeAttribute("hidden");
-	}
-};
-
 const toggleFilter = (button) => {
 	const isPressed = button.getAttribute("aria-pressed") === "true";
 	const filterName = button.getAttribute("data-filter-name");
@@ -142,6 +125,7 @@ const applyFilters = () => {
 };
 
 // Initialize form visibility and load filters from URL
+form.previousElementSibling.removeAttribute("hidden");
 form.removeAttribute("hidden");
 loadFiltersFromURL();
 
@@ -152,20 +136,26 @@ for (const filterButton of filterButtons) {
 	}
 }
 
-// Set up disclosure button click handlers
-for (const disclosureButton of disclosureButtons) {
-	disclosureButton.addEventListener("click", (event) => {
-		const expanded = event.target.getAttribute("aria-expanded");
-		toggleDisclosure(event.target, expanded);
-	});
-}
+// Set up show more tags button click handlers
+showMoreTagsButton.addEventListener("click", (event) => {
+	// Hide the show more tags button
+	event.target.setAttribute("hidden", "");
+	// Show the more tags span
+	event.target.nextElementSibling.removeAttribute("hidden");
+	// Focus the first tag button
+	event.target.nextElementSibling.querySelector("button:first-of-type").focus();
+	// Show the show less tags button
+	event.target.nextElementSibling.nextElementSibling.removeAttribute("hidden");
+});
 
-// Set up beforematch handlers for hidden=until-found content
-for (const content of disclosureContents) {
-	content.addEventListener("beforematch", (event) => {
-		const disclosureButton = document.querySelector(
-			`[aria-controls="${event.target.id}"]`
-		);
-		toggleDisclosure(disclosureButton, "false");
-	});
-}
+// Set up show less tags button click handlers
+showLessTagsButton.addEventListener("click", (event) => {
+	// Hide the show less tags button
+	event.target.setAttribute("hidden", "");
+	// Hide the more tags span
+	event.target.previousElementSibling.setAttribute("hidden", "");
+	// Show the show more tags button
+	event.target.previousElementSibling.previousElementSibling.removeAttribute("hidden");
+	// Focus the show more tags button
+	event.target.previousElementSibling.previousElementSibling.focus();
+});
