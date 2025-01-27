@@ -3,7 +3,7 @@
 	background: var(--accent-6);
 	border: solid 1px transparent;
 	border-radius: 3px;
-	color: var(--neutral-base);
+	color: var(--accent-base);
 	display: inline-flex;
 	font-size: var(--font-size-0);
 	font-weight: var(--font-weight-body-bold);
@@ -13,12 +13,29 @@
 	padding: 0.35em 0.6em;
 	white-space: nowrap;
 
+	&.outline {
+		background: transparent;
+		border-color: var(--accent-6);
+		color: var(--accent-6);
+	}
+
 	&.neutral {
 		background: var(--neutral-6);
 		color: var(--neutral-base);
+
+		&.outline {
+			background: transparent;
+			border-color: var(--neutral-6);
+			color: var(--neutral-6);
+		}
 	}
 
 	&.pill {
 		border-radius: var(--radius-round);
+	}
+
+	& * {
+		background: inherit;
+		color: inherit;
 	}
 }

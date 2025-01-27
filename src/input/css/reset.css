@@ -173,3 +173,8 @@ a:not([class]) {
 input, textarea, select, button, ::file-selector-button {
 	text-transform: inherit;
 }
+
+/* Hidden attribute */
+[hidden=""], [hidden="hidden"] {
+	display: none !important;
+}

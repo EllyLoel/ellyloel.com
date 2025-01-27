@@ -5,81 +5,81 @@ eleventyNavigation:
   key: Garden
   order: 1
 eleventyImport:
-  collections: ["Garden"]
+  collections: ["allSortedByDate"]
 ---
 
 <a href="#feed" class="[ visually-hidden ]">Skip to posts</a>
 
 <div class="[ p-summary ][ flow ]">
-	{%- md -%}
-	Seedlings are fresh out of my mind, budding I have come back to and updated at least once, and evergreen I likely won't be updating anymore.
-
-	For a more thorough explanation of what a digital garden is, I'd recommend [Maggie Appleton's wonderful essay](https://maggieappleton.com/garden-history).
-
-	Also avaliable in your favourite flavour of feed [RSS](/feed.rss), [Atom](/feed.atom) or [JSON](/feed.json).
-	{%- endmd -%}
+	{%- md -%}Seedlings are fresh out of my mind, budding I have come back to and updated at least once, and evergreen I likely won't be updating anymore. For a more thorough explanation of what a digital garden is, I'd recommend [Maggie Appleton's wonderful essay](https://maggieappleton.com/garden-history).{%- endmd -%}
+	<p>Also available in your favourite flavour of feed <a href="/feed.rss" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">{% inlineIcon "fas:rss" %} <span>RSS</span></a>, <a href="/feed.atom" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">{% inlineIcon "local:Atom" %} <span>Atom</span></a> or <a href="/feed.json" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">{% inlineIcon "local:JSON Feed" %}<span>JSON</span></a>.</p>
+	<p>You can also find a list of all the <a href="/tags/" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">{% inlineIcon "fas:tags" %} <span>tags</span></a>.</p>
 </div>
 
-<h2>Linked posts graph</h2>
+<h2 class="[ visually-hidden ]" hidden>Graph</h2>
 <div id="graph"></div>
 
-<form class="[ garden-filters ]" hidden>
-	<h2>Filters</h2>
-	<div class="[ flow ]">
-		{%- macro renderFilterButton(id, name, label) %}
-			<button 
-				type="button"
-				id="filters-{{ id }}"
-				class="[ badge ]"
-				aria-pressed="false"
-				data-filter-name="{{ name }}"
-			>{{ label }}</button>
-		{%- endmacro -%}
-
-		<fieldset>
-			<legend>
-				<button type="button" aria-expanded="false" aria-controls="fieldset-stage-content">
-					Stage {% inlineIcon "fas:chevron-down" %}
+<h2 class="[ visually-hidden ]" hidden>Filters</h2>
+<form class="[ garden-filters ][ flow ]" hidden>
+	<fieldset>
+		<legend>Stages</legend>
+		<div id="fieldset-stages-content">
+			{% set stageButtons = [
+				{ id: "seedling", name: "Stages", label: "Seedling", icon: "fas:seedling" },
+				{ id: "budding", name: "Stages", label: "Budding", icon: "fas:spa" },
+				{ id: "evergreen", name: "Stages", label: "Evergreen", icon: "fas:tree" }
+			] -%}
+			{%- asyncAll button in stageButtons -%}
+				{# {%- include "filter-button.njk" -%} Had to remove this and inline it because of async weirdness #}
+				<button type="button" id="filters-{{ button.id }}" class="[ badge ]" aria-pressed="false" data-filter-name="{{ button.name }}">
+					{%- if button.icon -%}{%- icon button.icon -%}{%- endif -%}
+					{{- button.label -}}
 				</button>
-			</legend>
-			<div id="fieldset-stage-content" hidden="until-found">
-				{{ renderFilterButton("seedling", "Stage", "Seedling") }}
-				{{ renderFilterButton("budding", "Stage", "Budding") }}
-				{{ renderFilterButton("evergreen", "Stage", "Evergreen") }}
-			</div>
-		</fieldset>
-		<fieldset>
-			<legend>
-				<button type="button" aria-expanded="false" aria-controls="fieldset-type-content">
-					Type {% inlineIcon "fas:chevron-down" %}
-				</button>
-			</legend>
-			<div id="fieldset-type-content" hidden="until-found">
-				{{ renderFilterButton("essays", "Type", "Essays") }}
-				{{ renderFilterButton("notes", "Type", "Notes") }}
-				{{ renderFilterButton("microposts", "Type", "Microposts") }}
-				{{ renderFilterButton("bookmarks", "Type", "Bookmarks") }}
-				{{ renderFilterButton("projects", "Type", "Projects") }}
-			</div>
-		</fieldset>
-		<fieldset>
-			<legend>
-				<button type="button" aria-expanded="false" aria-controls="fieldset-tags-content">
-					Tags {% inlineIcon "fas:chevron-down" %}
-				</button>
-			</legend>
-			<div id="fieldset-tags-content" hidden="until-found">
-				{%- for tag in collections | objKeys | reject("equalto", "Seedling") | reject("equalto", "Budding") | reject("equalto", "Evergreen") | reject("equalto", "Essays") | reject("equalto", "Notes") | reject("equalto", "Microposts") | reject("equalto", "Bookmarks") | reject("equalto", "Projects") | reject("equalto", "Garden") | reject("equalto", "all") | reject("equalto", "allSortedByDate") | reject("equalto", "EssaysSortedByDate") | reject("equalto", "BookmarksSortedByDate") | reject("equalto", "GardenSortedByDate") | reject("equalto", "ProjectsSortedByDate") | reject("equalto", "notBookmarksSortedByDate") | reject("equalto", "postsSortedByDate") -%}
-					{{ renderFilterButton(tag | lower, "Tags", tag) }}
-				{%- endfor -%}
-			</div>
-		</fieldset>
-	</div>
+			{%- endall -%}
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Types</legend>
+		<div id="fieldset-types-content">
+			{% set typeButtons = [
+				{ id: "essays", name: "Types", label: "Essays" },
+				{ id: "notes", name: "Types", label: "Notes" },
+				{ id: "microposts", name: "Types", label: "Microposts" },
+				{ id: "bookmarks", name: "Types", label: "Bookmarks" },
+				{ id: "projects", name: "Types", label: "Projects" }
+			] -%}
+			{%- for button in typeButtons -%}
+				{%- include "filter-button.njk" -%}
+			{%- endfor -%}
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Tags</legend>
+		<div id="fieldset-tags-content">
+			{% set tagArray = collections | objKeys | reject("equalto", "Seedling") | reject("equalto", "Budding") | reject("equalto", "Evergreen") | reject("equalto", "Essays") | reject("equalto", "Notes") | reject("equalto", "Microposts") | reject("equalto", "Bookmarks") | reject("equalto", "Projects") | reject("equalto", "Garden") | reject("equalto", "all") | reject("equalto", "allSortedByDate") | reject("equalto", "BookmarksSortedByDate") | reject("equalto", "notBookmarksSortedByDate") | reject("equalto", "postsSortedByDate") -%}
+			{%- set tagButtons = [] -%}
+			{%- for tag in tagArray -%}
+				{% set tagButton = { id: tag | lower, name: "Tags", label: tag, count: collections[tag] | length } %}
+				{% set tagButtons = (tagButtons.push(tagButton), tagButtons) %}
+			{%- endfor -%}
+			{%- for button in tagButtons | sort(attribute="name") | sort(true, false, "count") -%}
+				{%- include "filter-button.njk" -%}
+				{%- if loop.index === 5 and not loop.last -%}
+					<button type="button" id="show-more-tags" class="[ badge ][ outline ]">Show more</button>
+					<span hidden>
+				{%- endif -%}
+				{%- if loop.last and loop.index > 5 -%}
+					</span>
+					<button type="button" id="show-less-tags" class="[ badge ][ outline ]" hidden>Show less</button>
+				{%- endif -%}
+			{%- endfor -%}
+		</div>
+	</fieldset>
 </form>
 
 {%- include "crazy-filter.njk" -%}
 {%- set posts = collections.allSortedByDate -%}
-<ul id="feed" class="[ feed ]" tabindex="-1">
+<ul id="feed" tabindex="-1" class="[ feed ]" style="--flow-space: var(--size-7)">
 	{%- for post in posts %}
 		{%- if post.data.archived !== true -%}
 			{%- set title = post.data.title -%}
@@ -89,7 +89,7 @@ eleventyImport:
 				{%- setAsync "imageMarkup" -%}
 				<svg viewBox="0 0 200 150" width="200" height="150">
 					{%- set randomNumber -%}{%- random 0, 1 -%}{%- endset -%}
-					<image class="image" xlink:href="https://res.cloudinary.com/ellyloel/image/fetch/f_auto/q_auto:low/c_fill,h_150,w_200/{{ post.data.image }}" x="-50%" y="-50%" width="200%" height="200%" filter="url(#filter)" opacity="0.65" style="transform: rotate({{ randomNumber | round(3) }}turn); transform-origin: center;"></image>
+					<image class="image" xlink:href="https://res.cloudinary.com/ellyloel/image/fetch/f_auto/q_auto:low/c_fill,h_150,w_200/{{ post.data.image }}" x="-50%" y="-50%" width="200%" height="200%" filter="url(#filter)" opacity="0.65" style="transform: rotate({{ randomNumber | round(3) }}turn); transform-origin: center;">
 				</svg>
 				{%- endsetAsync -%}
 			{%- endif -%}
