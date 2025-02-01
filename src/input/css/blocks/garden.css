@@ -1,0 +1,24 @@
+.garden-filters {
+	& fieldset {
+		--flow-space: var(--size-2);
+
+		border: none;
+		margin: 0;
+		padding: 0;
+
+		& button[aria-pressed="true"] {
+			background: var(--accent-solid);
+			color: var(--accent-2);
+		}
+
+		& button[aria-pressed="false"] {
+			background: var(--accent-bg-subtle);
+			color: var(--accent-solid);
+		}
+	}
+}
+
+.h-entry:nth-child(1 of :not([hidden="until-found"])),
+.h-entry[hidden="until-found"] {
+	margin: 0;
+}
