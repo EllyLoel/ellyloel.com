@@ -31,7 +31,7 @@ eleventyImport:
 			] -%}
 			{%- asyncAll button in stageButtons -%}
 				{# {%- include "filter-button.njk" -%} Had to remove this and inline it because of async weirdness #}
-				<button type="button" id="filters-{{ button.id }}" class="[ badge ]" aria-pressed="false" data-filter-name="{{ button.name }}">
+				<button type="button" id="filters-{{ button.id }}" class="[ badge ]" aria-pressed="false" data-filter-name="{{ button.name | lower }}">
 					{%- if button.icon -%}{%- icon button.icon -%}{%- endif -%}
 					{{- button.label -}}
 				</button>

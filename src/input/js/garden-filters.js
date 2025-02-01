@@ -1,15 +1,14 @@
 const form = document.querySelector("form");
 const filterButtons = form.querySelectorAll("button[data-filter-name]");
-const moreTags = form.querySelector("#show-more-tags + span");
 const showMoreTagsButton = form.querySelector("#show-more-tags");
 const showLessTagsButton = form.querySelector("#show-less-tags");
 const feed = document.getElementById("feed");
 
 // Store active filters
 const activeFilters = {
-	stage: new Set(),
+	stages: new Set(),
 	tags: new Set(),
-	type: new Set(),
+	types: new Set(),
 };
 
 // Handle browser navigation
@@ -21,20 +20,25 @@ const updateURL = () => {
 	const url = new URL(window.location);
 
 	// Clear all existing filter params first
-	url.searchParams.delete("stage");
-	url.searchParams.delete("type");
+	url.searchParams.delete("stages");
+	url.searchParams.delete("types");
 	url.searchParams.delete("tags");
 
 	// Only add parameters for categories that have active filters
 	for (const [category, filters] of Object.entries(activeFilters)) {
-		const activeFilters = Array.from(filters);
+		const activeFilters = Array.from(filters).sort();
 		if (activeFilters.length > 0) {
 			url.searchParams.set(category, activeFilters.join(","));
 		}
 	}
 
+	// Sort search parameters for consistent caching and replace percent encoded commas with commas
+	const newUrl = new URL(url);
+	url.searchParams.sort();
+	newUrl.search = url.search.replace(/%2C/gi, ",");
+
 	// Update URL without reloading the page
-	window.history.pushState({}, "", url);
+	window.history.pushState({}, "", newUrl);
 };
 
 const loadFiltersFromURL = () => {
@@ -51,7 +55,7 @@ const loadFiltersFromURL = () => {
 	// Load filters from URL params
 	for (const [category, value] of url.searchParams.entries()) {
 		if (value && category in activeFilters) {
-			const filters = value.split(",");
+			const filters = value.toLowerCase().split(",");
 			for (const filter of filters) {
 				activeFilters[category].add(filter);
 
@@ -59,7 +63,7 @@ const loadFiltersFromURL = () => {
 				const button = Array.from(filterButtons).find(
 					(btn) =>
 						btn.getAttribute("data-filter-name") === category &&
-						btn.textContent.trim() === filter
+						btn.textContent.trim().toLowerCase() === filter
 				);
 				if (button) {
 					button.setAttribute("aria-pressed", "true");
@@ -74,15 +78,15 @@ const loadFiltersFromURL = () => {
 
 const toggleFilter = (button) => {
 	const isPressed = button.getAttribute("aria-pressed") === "true";
-	const filterName = button.getAttribute("data-filter-name");
-	const filterValue = button.textContent.trim();
+	const category = button.getAttribute("data-filter-name");
+	const filter = button.textContent.trim().toLowerCase();
 
 	button.setAttribute("aria-pressed", !isPressed);
 
 	if (!isPressed) {
-		activeFilters[filterName].add(filterValue);
+		activeFilters[category].add(filter);
 	} else {
-		activeFilters[filterName].delete(filterValue);
+		activeFilters[category].delete(filter);
 	}
 
 	applyFilters();
@@ -92,29 +96,32 @@ const toggleFilter = (button) => {
 const applyFilters = () => {
 	const posts = feed.querySelectorAll("li");
 
-	// Get all active filters across all categories
-	const allActiveFilters = Object.values(activeFilters)
-		.flatMap((set) => Array.from(set))
-		.map((filter) => filter.toLowerCase());
-
 	// If no filters are active, show all posts
-	if (allActiveFilters.length === 0) {
+	const hasActiveFilters = Object.values(activeFilters).some(set => set.size > 0);
+	if (!hasActiveFilters) {
 		for (const post of posts) {
 			post.removeAttribute("hidden");
 		}
 		return;
 	}
 
-	// Otherwise, apply filtering
+	// Apply filtering
 	for (const post of posts) {
 		const postTags = Array.from(post.querySelectorAll(".badge")).map((badge) =>
 			badge.textContent.trim().toLowerCase()
 		);
 
-		// Show post if it matches any active filter
-		const shouldShow = allActiveFilters.some((filter) =>
-			postTags.includes(filter)
-		);
+		// Check each category separately
+		const categoryMatches = Object.entries(activeFilters).map(([category, filters]) => {
+			// If no filters in this category, consider it a match
+			if (filters.size === 0) return true;
+			
+			// Check if any filter in this category matches (OR within category)
+			return Array.from(filters).some(filter => postTags.includes(filter));
+		});
+
+		// Post should show only if ALL categories with active filters match (AND across categories)
+		const shouldShow = categoryMatches.every(matches => matches);
 
 		if (shouldShow) {
 			post.removeAttribute("hidden");
