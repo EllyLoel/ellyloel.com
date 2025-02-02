@@ -32,7 +32,6 @@ module.exports = {
 	},
 	canonical: (data) => new URL(data.page.url, data.metadata.url).href,
 	date: function (data) {
-		if (data?.modified) return this.dateToISO(new Date(data?.modified));
 		if (data?.created) return this.dateToISO(new Date(data?.created));
 		return this.dateToISO("2001-08-16");
 	},

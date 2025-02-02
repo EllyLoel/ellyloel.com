@@ -4,8 +4,6 @@ title: Garden
 eleventyNavigation:
   key: Garden
   order: 1
-eleventyImport:
-  collections: ["allSortedByDate"]
 ---
 
 <a href="#feed" class="[ visually-hidden ]">Skip to posts</a>
@@ -78,7 +76,7 @@ eleventyImport:
 </form>
 
 {%- include "crazy-filter.njk" -%}
-{%- set posts = collections.allSortedByDate -%}
+{%- set posts = collections.postsSortedByDate -%}
 <ul id="feed" tabindex="-1" class="[ feed ]" style="--flow-space: var(--size-7)">
 	{%- for post in posts %}
 		{%- if post.data.archived !== true -%}

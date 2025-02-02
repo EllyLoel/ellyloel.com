@@ -3,9 +3,8 @@ layout: base-without-header
 title: Home
 description: Web Designer. Accessibility Specialist. Neurodivergent. Disabled. Queer.
 permalink: "/"
-eleventyExcludeFromCollections: true
 eleventyImport:
-  collections: ["allSortedByDate"]
+  collections: ["postsSortedByDate"]
 ---
 
 <div class="[ home ]">
@@ -169,7 +168,7 @@ eleventyImport:
 	{%- include "crazy-filter.njk" -%}
 
 	{%- feedBlock title = "Recent posts" -%}
-	{%- set recentPosts = collections.allSortedByDate | limit(10) -%}
+	{%- set recentPosts = collections.postsSortedByDate | limit(10) -%}
 	{%- for post in recentPosts -%}
 		{%- set headingLevel = 3 -%}
 		{%- set title = post.data.title -%}
