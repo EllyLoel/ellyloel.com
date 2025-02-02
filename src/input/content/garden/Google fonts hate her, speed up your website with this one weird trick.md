@@ -9,7 +9,7 @@ created: 2022-12-30
 modified: 2023-01-10
 ---
 
-![Parody of an old school clickbait web ad with the text “GOOGLE FONTS HATE HER! Speed up your website With this one weird trick! LEARN THE TRUTH NOW”](./src/assets/img/one-weird-trick.png)
+![Parody of an old school clickbait web ad with the text “GOOGLE FONTS HATE HER! Speed up your website With this one weird trick! LEARN THE TRUTH NOW”](../../../assets/img/one-weird-trick.png)
 
 Jokes aside, I have spent a fair amount of time and effort figuring out how to improve my font situation.
 

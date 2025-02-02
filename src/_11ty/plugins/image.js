@@ -29,15 +29,6 @@ export default function(eleventyConfig) {
 			};
 
 			const generateImage = async () => {
-				// Skip optimization in development mode
-				if (process.env.ELEVENTY_ENV === "development") {
-					const imgSrc = src.replace("./src/", "/");
-					const imgTag = `<img src="${imgSrc}" alt="${alt}" class="[ image ] ${classes}" decoding="async" loading="lazy">`;
-					return caption
-						? `<figure>${imgTag}<figcaption ${noItalics ? `class="no-italics"` : ``}>${caption}</figcaption></figure>`
-						: imgTag;
-				}
-
 				let formats = ["webp", "jpeg", "auto"];
 
 				let metadata = await eleventyImage(src, {
@@ -53,6 +44,7 @@ export default function(eleventyConfig) {
 					alt,
 					class: `[ image ] ${classes}`,
 					decoding: "async",
+					"eleventy:ignore": "",
 					loading: "lazy",
 					sizes,
 				};

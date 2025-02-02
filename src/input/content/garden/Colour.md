@@ -18,7 +18,7 @@ I'm Australian, so I spell it like this, colour, not like this, color. _Except w
 
 ## Fuck sRGB, all my homies hate sRGB
 
-![A meme with the text “Fuck sRGB, all my homies hate sRGB”](./src/assets/img/all-my-homies-hate-srgb.png)
+![A meme with the text “Fuck sRGB, all my homies hate sRGB”](../../../assets/img/all-my-homies-hate-srgb.png)
 
 - {% emoji "☑️", "To do." %} Explain why current colours (sRGB) are shit
 

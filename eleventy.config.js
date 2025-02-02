@@ -1,6 +1,5 @@
 // External imports
 import "dotenv/config";
-import UpgradeHelper from "@11ty/eleventy-upgrade-help";
 
 // Internal imports
 import filters from "./src/_11ty/filters/filters.js";
@@ -57,9 +56,6 @@ export default async function(eleventyConfig) {
 	// Watch targets
 	eleventyConfig.addWatchTarget("src/input/css");
 	eleventyConfig.addWatchTarget("src/input/js");
-
-	// Upgrade helper
-	eleventyConfig.addPlugin(UpgradeHelper);
 }
 
 export const config = {

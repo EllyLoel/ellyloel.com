@@ -44,7 +44,7 @@ permalink: "bookmarks/{{ bookmark.title | slugify }}/"
 		<picture>
 			<source media="(prefers-color-scheme: dark)" srcset="https://api.microlink.io?url={{ bookmark.link }}&screenshot=true&colorScheme=dark&meta=false&embed=screenshot.url">
 			<source media="(prefers-color-scheme: light)" srcset="https://api.microlink.io?url={{ bookmark.link }}&screenshot=true&colorScheme=light&meta=false&embed=screenshot.url">
-			<img alt="" class="[ u-photo ] [ image ]" src="https://api.microlink.io?url={{ bookmark.link }}&screenshot=true&meta=false&embed=screenshot.url" width="649" height="406">
+			<img eleventy:ignore alt="" class="[ u-photo ] [ image ]" src="https://api.microlink.io?url={{ bookmark.link }}&screenshot=true&meta=false&embed=screenshot.url" width="649" height="406">
 		</picture>
 	</a>
 {%- endif -%}

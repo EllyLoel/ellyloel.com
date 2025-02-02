@@ -4,19 +4,15 @@ import postcss from "postcss";
 import postcssrc from "postcss-load-config";
 
 /** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
-export default function eleventyPluginPostcss(eleventyConfig, options = {}) {
+export default function eleventyPluginPostcss(eleventyConfig) {
 	let postcssConfig = {
 		options: {},
 		plugins: [],
 	};
 
-	options = Object.assign({
-		templateFormats: "css",
-	}, options);
+	eleventyConfig.addTemplateFormats("css");
 
-	eleventyConfig.addTemplateFormats(options.templateFormats);
-
-	eleventyConfig.addExtension(options.templateFormats, {
+	eleventyConfig.addExtension("css", {
 		compile: async (inputContent, inputPath) => {
 			return async ({ page: { outputPath } }) => {
 				const { options, plugins } = postcssConfig;

@@ -8,7 +8,7 @@ eleventyNavigation:
   order: 1
 ---
 
-An on & off log of what I'm currently doing/interested in. Slower paced than a twitter feed but less permanent then an [[about]] page.
+An on & off log of what I'm currently doing/interested in. Slower paced than a twitter feed but less permanent then an [about](/about/) page.
 [Now pages](https://nownownow.com/about) are becoming more common, you should make one for yourself!
 
 ## April, 2024
@@ -91,7 +91,7 @@ Had the great pleasure of taking part in a [Crafting Type](https://craftingtype.
 
 Helped build a website for [Victorian Law Week](https://www.viclawweek.org.au/) (_yay!_) but it was on WebFlow (_oh nooo_).
 
-Wrote about [[Input types a11y|the accessibility of the different input types]].
+Wrote about [the accessibility of the different input types](/garden/input-types-a11y).
 
 Still working on building out the Portable Design System, things are slow moving working as a one woman show.
 
@@ -164,7 +164,7 @@ Completed Web components course by Dave Rupert on Frontend Masters
 
 Reading Every layout by Andy Bell and Hayden Pickering
 
-Building a Web Component to make [[./projects/stylized-text/|stylized text]] accessible
+Building a Web Component to make [stylized text](/projects/stylized-text/) accessible
 
 Hosted a webinar about neurodiversity ([Neurodiversity in projects and at Portable](https://portable.com.au/events/neurodiversity-in-projects-and-at-portable))
 
@@ -246,10 +246,10 @@ Started CSS-for-JS Devs by Josh W Comeau
 
 I remixed a cool [Glitch In Bio](https://glitch.com/glitch-in-bio) on [Glitch](https://glitch.com/) for my partner [nervous ghost](https://twitter.com/nervousgh0st) (https://nervousgh0st.glitch.me/). The combination of simplicity and customisability makes it approachable for anyone. I was able to go in and make more advanced tweaks to set it up, but if my partner ever wants to add or change things they will easily be able to without having to worry about the more complex side.
 
-I finally got all of the bug fixes and small tweaks for my website shipped. Most of the changes were to do with parts of the [[digital garden]] (graph, markdown processing, link capturing, etc.) as well as some redirects 'n' stuff.
+I finally got all of the bug fixes and small tweaks for my website shipped. Most of the changes were to do with parts of the [digital garden](/garden/) (graph, markdown processing, link capturing, etc.) as well as some redirects 'n' stuff.
 
 ## November 2021
 
-I've been working on a presentation about [[neurodiversity]] with a few colleagues, which we'll be presenting internally on the 6th of December.
+I've been working on a presentation about neurodiversity with a few colleagues, which we'll be presenting internally on the 6th of December.
 
 I've also been working on fixing up this website as there's been plenty of big & small bugs plaguing the site.

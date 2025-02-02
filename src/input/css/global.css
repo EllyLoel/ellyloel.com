@@ -319,9 +319,10 @@ figure {
 	}
 }
 
-/* Image and video */
+/* Picture and video */
 
-.image,
+picture .image,
+.markdown-container img,
 video {
 	border-radius: var(--radius-2);
 }
