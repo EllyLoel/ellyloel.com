@@ -34,6 +34,8 @@
 	},
 	"packageManager": "pnpm@9.14.2",
 	"dependencies": {
+		"@11ty/eleventy": "^3.0.0",
+		"@11ty/eleventy-upgrade-help": "3",
 		"@11ty/is-land": "^4.0.0",
 		"@google/model-viewer": "^3.4.0",
 		"@remy/webmention": "^1.5.0",
@@ -52,7 +54,6 @@
 		"whatwg-url": "5.0.0"
 	},
 	"devDependencies": {
-		"@11ty/eleventy": "^2.0.1",
 		"@11ty/eleventy-fetch": "^4.0.1",
 		"@11ty/eleventy-img": "^3.1.8",
 		"@11ty/eleventy-navigation": "^0.3.5",
