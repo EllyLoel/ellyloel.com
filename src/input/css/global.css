@@ -319,9 +319,9 @@ figure {
 	}
 }
 
-/* Picture and video */
+/* Image and video */
 
-picture .image,
+.image,
 video {
 	border-radius: var(--radius-2);
 }
