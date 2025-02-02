@@ -10,7 +10,7 @@ modified: 2022-10-18
 
 I don't know if this is a dumb idea, but with my current knowledge, this seems like a good idea.
 
-Maybe it's best for non-[[atomic]] components, like layout components or templates, whatever you want to call them.
+Maybe it's best for non-atomic components, like layout components or templates, whatever you want to call them.
 
 ---
 

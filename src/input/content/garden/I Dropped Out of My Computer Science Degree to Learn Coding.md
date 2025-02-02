@@ -13,7 +13,12 @@
 
 Well hello there! My name is [Elly Loel](https://ellyloel.com/about). I'm a developer, designer and writer, currently working as a junior developer at Portable!
 
-![Lulu our black cat sitting behind my laptop with code open poking her eyes over looking at the camera](./src/assets/img/LuluCoding.png)_Lulu trying her very best to distract me._
+<figure>
+{% md %}
+![Lulu our black cat sitting behind my laptop with code open poking her eyes over looking at the camera](../../../assets/img/LuluCoding.png)
+{% endmd %}
+<figcaption>Lulu trying her very best to distract me.</figcaption>
+</figure>
 
 I run a [newsletter](http://newsletter.ellyloel.com/) and love [sharing interesting things](https://elly.to/twitter) to help people become better coders! In my spare time, I love building mechanical keyboards, watching cartoons and anime, and hanging out with my partner Brodie and our cat Lulu. {% emoji "🐈‍⬛" %}
 
@@ -25,7 +30,12 @@ I always knew I wanted to work with computers for a career, but I never specific
 
 Just as the pandemic spread around the world and the first Melbourne lockdown was enforced in March 2020, I started a degree in Computer Science at Swinburne University of Technology. During the first half of my course, I fell in love with web development but then realised that I wouldn’t be able to pursue it in this course. Unfortunately, I had completed all of the web development classes, leaving me with a difficult choice: stay and finish the degree or take a leap and learn web development on my own. Obviously, I left and took the self-taught route, mainly with the help of Scrimba. I eventually completed The Frontend Developer Career Path. This helped me learn most of what I needed to know to land a job as a web developer. I also focused a lot of effort into building my personal portfolio website to demonstrate my knowledge and skills.
 
-![A design frame in Figma with an early design of my portfolio website. The design has an alternating gradient and solid colour backgrounds, filled with placeholder content.](./src/assets/img/EarlyDesigns.png)_An early design of my portfolio website_
+<figure>
+{% md %}
+![A design frame in Figma with an early design of my portfolio website. The design has an alternating gradient and solid colour backgrounds, filled with placeholder content.](../../../assets/img/EarlyDesigns.png)
+{% endmd %}
+<figcaption>An early design of my portfolio website</figcaption>
+</figure>
 
 When it came to the job hunt I really won the lottery, I only applied to two tech jobs before I landed my role at Portable. With hindsight, I realise how lucky I was to find a recruiter, on LinkedIn, who was looking for new people to help. The support that I got from the recruiter to find roles that were the right fit for me was invaluable. I would have never discovered Portable if it wasn’t for him. Finding that right fit job is the first step, then really going for it is the best way to secure a job. The ‘shotgun method’ of applying, where you send of as many applications as you can, means that you’re likely going to end up at some random company that you don’t know, doing work that you don’t care about, while you could be at an awesome company where you fit in, doing work that you love!
 
@@ -41,7 +51,12 @@ At the time, I was into graphic and motion design, which really flowed through i
 
 After the course finished I was left with the desire to code and create websites but I couldn’t due to high school, and as I mentioned, university didn’t really fulfil that desire either. So I had lots of motivation but no way to use it. Which is what led me to trying to find resources online so I could continue learning.
 
-![A photo of my desk and computer setup which is absolutely covered with prints, figurines, pins, zines, stickers, and much more.](./src/assets/img/Setup.png)_My desk setup is the perfect showcase and explanation of my love of design and art._
+<figure>
+{% md %}
+![A photo of my desk and computer setup which is absolutely covered with prints, figurines, pins, zines, stickers, and much more.](../../../assets/img/Setup.png)
+{% endmd %}
+<figcaption>My desk setup is the perfect showcase and explanation of my love of design and art.</figcaption>
+</figure>
 
 ## How you picked a resource
 
@@ -67,7 +82,12 @@ What I'm trying to say is that you probably shouldn't do what I did, or what any
 
 Take the time to think about what is going to work best for you in terms of time and energy. And also consider how you learn best, maybe to make things stick you need to go over the lessons twice or maybe you're someone who loves taking notes, just make sure you do whatever works for you.
 
-![A chibi style drawing of me, a blonde woman in a white sweater hunched over sleeping on a desk drooling with Z’s floating above my head.](./src/assets/img/sleepy.png)_Commission by [Nervous Ghost](https://twitter.com/nervousgh0st)_
+<figure>
+{% md %}
+![A chibi style drawing of me, a blonde woman in a white sweater hunched over sleeping on a desk drooling with Z’s floating above my head.](../../../assets/img/sleepy.png)
+{% endmd %}
+<figcaption>{% md %}Commission by [Nervous Ghost](https://twitter.com/nervousgh0st){% endmd %}</figcaption>
+</figure>
 
 ## What made coding concepts “stick” for you
 
@@ -84,13 +104,18 @@ I didn't, I really didn't feel ready to start applying at all. I forced myself t
 
 I'm so glad I did it because I wouldn't have my job if it wasn't for the recruiter. I would still be stuck at university going through my course.
 
+<figure>
+{% md %}
 ![The recruiter’s LinkedIn post: “I heard a little rumour... that apparently... the Australian job market is HOT.
 Every 2nd or 3rd post I'm seeing on here is for people looking to hire.
 There's some absolutely brilliant opportunities out there at the moment - some of which just happen to be with my clients :)
 If you're a Developer or Designer, let's have a chat. Maybe you're wanting a bigger/smaller company? A bit of a bump up in your salary? An opportunity to take on more responsibility? More flexibility with WFH or Remote options? Something else?
 There's plenty of options :)
 Cheers!”
-My comment response: “Hi Andrew, I'd love to have a chat 😄”](./src/assets/img/RecruiterPost.png)_The post that lead me to getting in contact with the recruiter_
+My comment response: “Hi Andrew, I'd love to have a chat 😄”](../../../assets/img/RecruiterPost.png)
+{% endmd %}
+<figcaption>The post that lead me to getting in contact with the recruiter</figcaption>
+</figure>
 
 ## How you went about applying to new jobs
 
@@ -100,7 +125,12 @@ Having that help from someone who had lots of connections in the industry and wa
 
 I would definitely recommend for anyone who is about to or is currently applying to jobs to reach out to a recruiter. Even if you don't think you're ready, get in contact with a recruiter and see if they can help you find some roles that would fit you in terms of who you are and what you're looking for.
 
-![Elly: “Yeah exactly, that's definitely what my first year showed me. The reason I wanted to have a chat was in relation to your post, as you can tell I'm pretty new to the job market, so I'm looking for some guidance towards finding my first web development job.” Recruiter: “Have you finished your degree? Or looking for part time work? Or can you study and full time work?” Elly: “Ideally I'm looking for part time work but I could do full-time if part-time isn't available.” Recruiter: “Ok cool. Big workload to take on. Good on you though!” Recruiter: “I dropped out of uni... twice... can’t imagine working full time AND studying. I couldn’t even do the study part 🤣” Elly: “hahah fair enough! I'm actually planning on dropping out if I can get a job.” Recruiter: “When it comes to web/software development... you don’t need a degree” “It’s not like a doctor or lawyer” Elly: “yeah exactly that's what I've figured out, which is why I'm trying to get into a job before the next semester of uni starts.”](./src/assets/img/RecruiterChat.png)_Part of the conversation I had with the recruiter_
+<figure>
+{% md %}
+![Elly: “Yeah exactly, that's definitely what my first year showed me. The reason I wanted to have a chat was in relation to your post, as you can tell I'm pretty new to the job market, so I'm looking for some guidance towards finding my first web development job.” Recruiter: “Have you finished your degree? Or looking for part time work? Or can you study and full time work?” Elly: “Ideally I'm looking for part time work but I could do full-time if part-time isn't available.” Recruiter: “Ok cool. Big workload to take on. Good on you though!” Recruiter: “I dropped out of uni... twice... can’t imagine working full time AND studying. I couldn’t even do the study part 🤣” Elly: “hahah fair enough! I'm actually planning on dropping out if I can get a job.” Recruiter: “When it comes to web/software development... you don’t need a degree” “It’s not like a doctor or lawyer” Elly: “yeah exactly that's what I've figured out, which is why I'm trying to get into a job before the next semester of uni starts.”](../../../assets/img/RecruiterChat.png)
+{% endmd %}
+<figcaption>Part of the conversation I had with the recruiter</figcaption>
+</figure>
 
 ## The interview process and how it made you feel
 
@@ -136,7 +166,12 @@ I also wish I knew how important building projects to showcase your abilities an
 
 The final thing I wish I had done was written more and shared more as I was going through the journey of learning web development and applying to jobs. As they always say, the best time to plant a tree was 20 years ago and the second best time is now. So I'm glad I've started doing it now, better late than never.
 
-![A website entitled “React Movie Search” displaying results for the search “Evangelion 3.0”. Each result has the movie poster, title, release date, rating, and description.](./src/assets/img/ReactMovieSearch.png)_React Movie Search project from the Frontend Developer Career Path_
+<figure>
+{% md %}
+![A website entitled “React Movie Search” displaying results for the search “Evangelion 3.0”. Each result has the movie poster, title, release date, rating, and description.](../../../assets/img/ReactMovieSearch.png)
+{% endmd %}
+<figcaption>React Movie Search project from the Frontend Developer Career Path</figcaption>
+</figure>
 
 ## Your greatest challenges and how you overcame them
 
@@ -148,4 +183,9 @@ The other huge challenge for me was taking the leap of faith to leave university
 
 So that was a really huge challenge and a big leap of faith that I took, but I'm very grateful I did.
 
-![A drawing of me, a blonde woman in a white sweater with headphones on sitting at my desk in front of a keyboard and monitor coding.](./src/assets/img/coding.png)_Commission by [Nervous Ghost](https://twitter.com/nervousgh0st)_
+<figure>
+{% md %}
+![A drawing of me, a blonde woman in a white sweater with headphones on sitting at my desk in front of a keyboard and monitor coding.](../../../assets/img/coding.png)
+{% endmd %}
+<figcaption>{% md %}Commission by [Nervous Ghost](https://twitter.com/nervousgh0st){% endmd %}</figcaption>
+</figure>

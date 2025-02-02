@@ -1,4 +1,5 @@
 // External imports
+import { eleventyImageTransformPlugin as pluginImageTransform } from "@11ty/eleventy-img";
 import pluginEmoji from "eleventy-plugin-emoji";
 import pluginFavicons from "eleventy-plugin-gen-favicons";
 import pluginIcons from "eleventy-plugin-icons";
@@ -114,6 +115,7 @@ export default function(eleventyConfig) {
 		token: process.env.WEBMENTION_IO_API_KEY,
 		truncate: false,
 	});
+	eleventyConfig.addPlugin(pluginImageTransform);
 
 	// Internal plugins
 	eleventyConfig.addPlugin(pluginExcerpt);

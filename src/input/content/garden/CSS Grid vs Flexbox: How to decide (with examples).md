@@ -12,7 +12,7 @@
 }
 ---
 
-![](./src/assets/img/Should-I-use-Flexbox-or-Grid.png)
+![](../../../assets/img/Should-I-use-Flexbox-or-Grid.png)
 
 Should you use a hammer or a screwdriver? Of course that would depend on the job!
 
@@ -61,13 +61,13 @@ For the same reason people had reservations around grid when it first came out b
 
 I covered this history in detail to help bring some context to the discussion surrounding layout in CSS. The path to get here was long and windy. So windy, many developers were reluctant to adopt Flexbox in case it changed again. For this reason, it would be many years until Flexbox became commonplace. Around that time, Grid entered the scene and confused matters further.
 
-![The history of flexbox. 2008, Birth of an idea, CSS Working Group first discussed the idea of Flexbox. 2009, Published Draft, CSS Working Group publishes first public draft. 2012, W3C Candidate Recommendation, Flexbox is stable and supported in browsers. 2014, Improvements, The Flexbox team started working on improvements. 2016, W3C Candidate Recommendation, Flexbox is updated and is stable and supported in browsers.](./src/assets/img/The-History-of-Flexbox.webp)
+![The history of flexbox. 2008, Birth of an idea, CSS Working Group first discussed the idea of Flexbox. 2009, Published Draft, CSS Working Group publishes first public draft. 2012, W3C Candidate Recommendation, Flexbox is stable and supported in browsers. 2014, Improvements, The Flexbox team started working on improvements. 2016, W3C Candidate Recommendation, Flexbox is updated and is stable and supported in browsers.](../../../assets/img/The-History-of-Flexbox.webp)
 
 Flex and Grid are not the only layout modes! There's flow (aka the default layout mode), tables, floats, multi-column, and the list goes on. There are many different options, and it's all about picking the best one for your use case.
 
 Flexbox was what the web needed, but because it was the first tool of it's kind, developers misunderstood and misused it from time to time. Many layout problems would be better solved with Grid but are hacked together with Flex instead.
 
-![Not the hero we deserved, but the hero we needed.](./src/assets/img/hero-we-needed.png)
+![Not the hero we deserved, but the hero we needed.](../../../assets/img/hero-we-needed.png)
 
 The [law of the instrument](https://en.wikipedia.org/wiki/Law_of_the_instrument) is a cognitive bias that involves an over-reliance on a familiar tool. This perfectly describes most web developers' relationship with Flexbox {% emoji "🤣", "ROFL." %}.
 
@@ -168,19 +168,34 @@ In this section let's look at some common uses for CSS Grid:
 
 Grid gives you great control over element placement, including layering elements on top of each other.
 
-![A grid of 6 semi transparent elements overlapping in different ways.](./src/assets/img/overlapping-elements.png)_OVERLAP ALL THE THINGS._
+<figure>
+{% md %}
+![A grid of 6 semi transparent elements overlapping in different ways.](../../../assets/img/overlapping-elements.png)
+{% endmd %}
+<figcaption>OVERLAP ALL THE THINGS.</figcaption>
+</figure>
 
 #### Subgrid (coming soon)
 
 [Subgrid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid) is only supported in Gecko (Firefox) and WebKit (Safari), currently in development for Blink/Chromium (Chrome/Edge/Opera/Samsung/etc.):
 
-![2 grids, each with 3 columns containing cards. The first grid's cards content sections are misaligned while the second grid's cards are correctly aligned thanks to subgrid.](./src/assets/img/subgrid.png)_The contents of the cards are able to be aligned thanks to subgrid._
+<figure>
+{% md %}
+![2 grids, each with 3 columns containing cards. The first grid's cards content sections are misaligned while the second grid's cards are correctly aligned thanks to subgrid.](../../../assets/img/subgrid.png)
+{% endmd %}
+<figcaption>The contents of the cards are able to be aligned thanks to subgrid.</figcaption>
+</figure>
 
 #### Masonry layout (coming not so soon)
 
 [Masonry](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) layout only supported in Gecko (Firefox) behind a flag.
 
-![A screenshot of a search for 'cats' on Pinterest showcasing their iconic masonry layout.](./src/assets/img/masonry-layout.webp)_We're focusing on the layout, right? Totally not the cats..._
+<figure>
+{% md %}
+![A screenshot of a search for 'cats' on Pinterest showcasing their iconic masonry layout.](../../../assets/img/masonry-layout.webp)
+{% endmd %}
+<figcaption>We're focusing on the layout, right? Totally not the cats...</figcaption>
+</figure>
 
 ## How to choose CSS Grid or Flexbox?
 
@@ -190,11 +205,11 @@ Now you've seen some examples I hope you'll have a better idea about which tool 
 
 Flexbox lays out it's elements in either a row or a column, not both. You can fake it, and get something that looks like a Grid with Flexbox but the Flexbox algorithm doesn't know about the second dimension.
 
-![5 elements laid out with flex, 4 and 5 are much wider than 1, 2, and 3.](./src/assets/img/1d-vs-2d-1.png)
+![5 elements laid out with flex, 4 and 5 are much wider than 1, 2, and 3.](../../../assets/img/1d-vs-2d-1.png)
 
 Grid positions its elements based on both it's rows and columns.
 
-![5 elements laid out with grid, all the elements are the same width.](./src/assets/img/1d-vs-2d-2.png)
+![5 elements laid out with grid, all the elements are the same width.](../../../assets/img/1d-vs-2d-2.png)
 
 ### Content first (intrinsic) or layout first (extrinsic)?
 
@@ -202,27 +217,72 @@ Use Grid when you already have the layout structure in mind, and Flexbox when yo
 
 #### Flexbox will listen to it's content, so it's content first (intrinsic).
 
-![5 elements laid out with flex, 4 and 5 are much wider than 1, 2, and 3.](./src/assets/img/intrinsic-or-extrinsic-1.png)_Intended layout._
+<figure>
+{% md %}
+![5 elements laid out with flex, 4 and 5 are much wider than 1, 2, and 3.](../../../assets/img/intrinsic-or-extrinsic-1.png)
+{% endmd %}
+<figcaption>Intended layout.</figcaption>
+</figure>
 
-![The same 5 elements but now 1 and 2 have shrunk slightly and 3 has grown slightly due to it's content.](./src/assets/img/intrinsic-or-extrinsic-2.png)_Doesn't look like it's changed (it has)._
+<figure>
+{% md %}
+![The same 5 elements but now 1 and 2 have shrunk slightly and 3 has grown slightly due to it's content.](../../../assets/img/intrinsic-or-extrinsic-2.png)
+{% endmd %}
+<figcaption>Doesn't look like it's changed (it has).</figcaption>
+</figure>
 
-![The same 5 elements but now 1, 2, 3, and 4 are all the same size and 5 is twice their size.](./src/assets/img/intrinsic-or-extrinsic-3.png)_Woah, what the?!_
+<figure>
+{% md %}
+![The same 5 elements but now 1, 2, 3, and 4 are all the same size and 5 is twice their size.](../../../assets/img/intrinsic-or-extrinsic-3.png)
+{% endmd %}
+<figcaption>Woah, what the?!</figcaption>
+</figure>
 
-![The same 5 elements but now none of the elements are the same size, all because of 3's large content.](./src/assets/img/intrinsic-or-extrinsic-4.png)_Oh boy, what in the world is going on?!?_
+<figure>
+{% md %}
+![The same 5 elements but now none of the elements are the same size, all because of 3's large content.](../../../assets/img/intrinsic-or-extrinsic-4.png)
+{% endmd %}
+<figcaption>Oh boy, what in the world is going on?!?</figcaption>
+</figure>
 
 #### Grid will stick to it's rows and columns no matter what, so it's layout first or extrinsic.
 
-![5 elements laid out with grid, all the elements are the same width.](./src/assets/img/intrinsic-or-extrinsic-5.png)_Intended layout._
+<figure>
+{% md %}
+![5 elements laid out with grid, all the elements are the same width.](../../../assets/img/intrinsic-or-extrinsic-5.png)
+{% endmd %}
+<figcaption>Intended layout.</figcaption>
+</figure>
 
-![The same 5 elements but now 2 and 5 are slightly wider because of 2's content.](./src/assets/img/intrinsic-or-extrinsic-6.png)_Doesn't look like it's changed (it has)._
+<figure>
+{% md %}
+![The same 5 elements but now 2 and 5 are slightly wider because of 2's content.](../../../assets/img/intrinsic-or-extrinsic-6.png)
+{% endmd %}
+<figcaption>Doesn't look like it's changed (it has).</figcaption>
+</figure>
 
-![The same 5 elements but now 2 and 5 are wider because of 2's content.](./src/assets/img/intrinsic-or-extrinsic-7.png)_Never changing these columns._
+<figure>
+{% md %}
+![The same 5 elements but now 2 and 5 are wider because of 2's content.](../../../assets/img/intrinsic-or-extrinsic-7.png)
+{% endmd %}
+<figcaption>Never changing these columns.</figcaption>
+</figure>
 
-![The same 5 elements but now 2 and 5 are a lot wider and 3 is overflowing because of 2's content.](./src/assets/img/intrinsic-or-extrinsic-8.png)_Uh oh, we've got some overflow._
+<figure>
+{% md %}
+![The same 5 elements but now 2 and 5 are a lot wider and 3 is overflowing because of 2's content.](../../../assets/img/intrinsic-or-extrinsic-8.png)
+{% endmd %}
+<figcaption>Uh oh, we've got some overflow.</figcaption>
+</figure>
 
 If you want you can even make the layout so rigid that it stays exactly the same, though you probably don't actually want this.
 
-![The same 5 elements, all the elements are the same width but 2's content is cut off.](./src/assets/img/intrinsic-or-extrinsic-9.png)_A very very long what?_
+<figure>
+{% md %}
+![The same 5 elements, all the elements are the same width but 2's content is cut off.](../../../assets/img/intrinsic-or-extrinsic-9.png)
+{% endmd %}
+<figcaption>A very very long what?</figcaption>
+</figure>
 
 ## Layout mode cheat sheet
 
@@ -264,7 +324,7 @@ A CSS layout mode, sometimes called layout, is an algorithm that determines the 
 	</table>
 </div>
 
-![](./src/assets/img/layout-mode-cheat-sheet.png)
+![](../../../assets/img/layout-mode-cheat-sheet.png)
 
 ```callout Warning
 Developers used to push table and float to the limit to layout pages. This is now considered a bad practice, as you should use the best layout mode for the job, reserving table and float for what they were originally designed to do.
