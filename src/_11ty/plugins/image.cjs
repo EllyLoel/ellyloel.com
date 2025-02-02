@@ -29,7 +29,16 @@ module.exports = (eleventyConfig) => {
 			};
 
 			const generateImage = async () => {
-				let formats = ["avif", "webp", "auto"];
+				// Skip optimization in development mode
+				if (process.env.ELEVENTY_ENV === "development") {
+					const imgSrc = src.replace("./src/", "/");
+					const imgTag = `<img src="${imgSrc}" alt="${alt}" class="[ image ] ${classes}" decoding="async" loading="lazy">`;
+					return caption
+						? `<figure>${imgTag}<figcaption ${noItalics ? `class="no-italics"` : ``}>${caption}</figcaption></figure>`
+						: imgTag;
+				}
+
+				let formats = ["webp", "jpeg", "auto"];
 
 				let metadata = await eleventyImage(src, {
 					cacheOptions: {
@@ -48,21 +57,17 @@ module.exports = (eleventyConfig) => {
 					sizes,
 				};
 
-				if (caption) {
-					return `<figure>${eleventyImage.generateHTML(
-						metadata,
-						imageAttributes,
-						{
-							whiteSpace: "inline",
-						}
-					)}<figcaption ${
-						noItalics ? `class="no-italics"` : ``
-					}>${caption}</figcaption></figure>`;
-				}
-
-				return eleventyImage.generateHTML(metadata, imageAttributes, {
+				// Generate the HTML for the image
+				const imageHtml = eleventyImage.generateHTML(metadata, imageAttributes, {
 					whiteSpace: "inline",
 				});
+
+				// Wrap in figure only if there's a caption
+				return caption
+					? `<figure>${imageHtml}<figcaption ${
+							noItalics ? `class="no-italics"` : ``
+					}>${caption}</figcaption></figure>`
+					: imageHtml;
 			};
 
 			const generatePlaceholder = () => {

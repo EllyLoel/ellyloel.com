@@ -108,12 +108,17 @@ markdownLibrary.renderer.rules.image = function (tokens, idx) {
 		return figure(generated, caption);
 	}
 
+	if (process.env.ELEVENTY_ENV === "development") {
+		const imgSrc = src.replace("./src/", "/");
+		return `<img src="${imgSrc}" alt="${alt}" loading="lazy">`;
+	}
+
 	const widths = [250, 316, 426, 460, 580, 768];
 	const options = {
 		cacheOptions: {
 			duration: "4w",
 		},
-		formats: ["avif", "webp", "jpeg"],
+		formats: ["webp", "jpeg", "auto"],
 		outputDir: path.join("_site", "img"),
 		widths: widths
 			.concat(widths.map((w) => w * 2)) // generate 2x sizes
