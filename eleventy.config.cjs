@@ -19,18 +19,20 @@ module.exports = (eleventyConfig) => {
 			.getFilteredByTag("Bookmarks")
 			.sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
 	);
-	let collection = [];
 	eleventyConfig.addCollection("notBookmarksSortedByDate", (collectionApi) => {
-		collection.push(...collectionApi.getFilteredByTag("Essays"));
-		collection.push(...collectionApi.getFilteredByTag("Garden"));
-		collection.push(...collectionApi.getFilteredByTag("Projects"));
-		collection.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
-		return collection;
+		return collectionApi
+			.getAll()
+			.filter((item) => 
+				!item.data.tags?.includes("Pages") &&
+				!item.data.tags?.includes("Bookmarks")
+			)
+			.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
 	});
 	eleventyConfig.addCollection("postsSortedByDate", (collectionApi) => {
-		collection.push(...collectionApi.getFilteredByTag("Bookmarks"));
-		collection.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
-		return collection;
+		return collectionApi
+			.getAll()
+			.filter((item) => !item.data.tags?.includes("Pages"))
+			.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
 	});
 
 	// Filters
