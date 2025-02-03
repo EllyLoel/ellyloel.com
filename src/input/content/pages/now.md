@@ -11,13 +11,75 @@ eleventyNavigation:
 An on & off log of what I'm currently doing/interested in. Slower paced than a twitter feed but less permanent then an [about](/about/) page.
 [Now pages](https://nownownow.com/about) are becoming more common, you should make one for yourself!
 
+## Febuary, 2025
+
+I was interviewed for the [Lookahead's 'Ducks in a Row' newsletter](https://lookahead.cmail19.com/t/t-e-shrurjt-yhtudyjrv-hl/#:~:text=We%20love%20attending!-,Friends,Let%20us%20introduce%20you%20to%20Elly%20Loel.,-Introduce%20yourself!). It was great fun, I love answering questions lol.
+
+Still tinkering with the structural overhaul of the website. Also lots of tidying up and just removing general cruft, like updating dependencies, removing unneeded dependencies, etc. (Finally on 11ty v3! 🎉)
+
+Helped Brodie table at [Kaiga Anime Convention](https://www.kaigaconvention.com.au/upcoming-events/melbourne-pop-up-artist-alley-2025).
+
+## January, 2025
+
+Starting the year off with a nasty long cold!
+
+Continuing with the design changes to the website, also making some more structural and IA related changes.
+
+## December, 2024
+
+Helped Brodie table at [Peko Peko Art Mart](https://www.instagram.com/pekopekoartmart/).
+
+Making some visual and content design changes to the website.
+
+## November, 2024
+
+Presented my talk [View transitions in the real world](/garden/web-directions-developer-summit-24-view-transitions-in-the-real-world/) at Web Directions Developer Summit.
+
+## October, 2024
+
+Helped Brodie table at [Raven Witch's Market](https://www.pixiewitchstore.com.au/raven-witchs-market).
+
+Helped Brodie table at [Boo Fest Halloween Market](https://www.instagram.com/boofest.au/).
+
+## September, 2024
+
+Managed to have a surprisingly not-that-late birthday celebration! 🎉
+
+Helped Brodie table at [Mellow Art Market](https://www.mellowart.com.au/upcoming-events/art-market-september-2024).
+
+## August, 2024
+
+Happy birthday me!
+
+Helped Brodie table at [Oh My Hues Art Market](https://www.ohmyhues.com/).
+
+## July, 2024
+
+Helped Brodie table at [UglyCutie Art Market](https://market.uglycutie.com.au/).
+
+## June, 2024
+
+Presented my talk [Front-end development's identity crisis](/garden/web-directions-code24-front-end-development-s-identity-crisis/) at Web Directions Code.
+
+## May, 2024
+
+Helped Brodie table at [Sabby Gallery Market Day](https://sabby.gallery/events/2024/05-market-day/).
+
+Finally got a job! I'm starting as a Digital Accessibility Officer at the Department of Employment and Workplace Relations (DEWR).
+
+[Catch me at Web Directions Code](/garden/catch-me-at-web-directions-code-24/)!
+
 ## April, 2024
+
+Helped Brodie table at Dark Moon Expo.
 
 Updated my now page for the first time in a year... That's why the last year of updates are so sparse. I honestly couldn't remember much.
 
 Still jobless.
 
 ## March, 2024
+
+Helped Brodie table at [Raven Witch's Market](https://www.pixiewitchstore.com.au/raven-witchs-market).
 
 Brodie's birthday! 🎉
 
@@ -35,7 +97,7 @@ Still jobless.
 
 Officially jobless.
 
-Helped Brodie out tabling at Dark Moon Expo.
+Helped Brodie table at Dark Moon Expo.
 
 Brodie got covid for the second time, I miraculously managed to avoid it.
 
@@ -49,7 +111,7 @@ Made some amazing new friends.
 
 I might be made redundant.
 
-Helped Brodie out tabling at Raven Witch's Market.
+Helped Brodie table at [Raven Witch's Market](https://www.pixiewitchstore.com.au/raven-witchs-market).
 
 ## October, 2023
 
