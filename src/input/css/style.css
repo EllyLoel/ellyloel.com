@@ -27,7 +27,6 @@
 @import url("./utilities/radius.css") layer(utilities);
 @import url("./utilities/recursive-flow.css") layer(utilities);
 @import url("./utilities/stroke.css") layer(utilities);
-@import url("./utilities/truncate.css") layer(utilities);
 @import url("./utilities/typography.css") layer(utilities);
 @import url("./utilities/visually-hidden.css") layer(utilities);
 @import url("./utilities/wrapper.css") layer(utilities);
