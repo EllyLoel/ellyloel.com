@@ -594,10 +594,6 @@ menu {
 		transition: outline-offset 145ms var(--ease-2);
 	}
 
-	:defined:focus-visible {
-		transition: outline-offset 145ms var(--ease-2), opacity 500ms var(--ease-3);
-	}
-
 	:not(:active):focus-visible {
 		transition-duration: 0.25s;
 	}

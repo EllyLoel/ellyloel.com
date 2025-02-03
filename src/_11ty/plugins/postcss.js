@@ -4,7 +4,7 @@ import postcss from "postcss";
 import postcssrc from "postcss-load-config";
 
 /** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
-export default function eleventyPluginPostcss(eleventyConfig) {
+export default async (eleventyConfig) => {
 	let postcssConfig = {
 		options: {},
 		plugins: [],
@@ -39,4 +39,4 @@ export default function eleventyPluginPostcss(eleventyConfig) {
 		outputFileExtension: "css",
 		useLayouts: false,
 	});
-}
+};

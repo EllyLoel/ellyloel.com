@@ -1,3 +1,4 @@
+/* global Howler, Howl */
 import "howler/dist/howler.core.min.js";
 
 let soundEnabled = localStorage.getItem("sound-enabled") ?? true;

@@ -1,0 +1,13 @@
+diff --git a/webmentions.js b/webmentions.js
+index 995c106561a518ac953bb1197ccf8e2e8943c217..c7c2bf84aba47f636738307c96cecd74cb2c6ff1 100644
+--- a/webmentions.js
++++ b/webmentions.js
+@@ -68,7 +68,7 @@ function Webmentions({
+     const params = `&per-page=${PER_PAGE}&page=${page}${
+       since ? `&since=${since}` : ""
+     }`;
+-    console.log(`Getting ${getUrl(idx)}${params}`);
++    // console.log(`Getting ${getUrl(idx)}${params}`);
+     const response = await fetch(`${getUrl(idx)}${params}`);
+ 
+     if (response.ok) {
