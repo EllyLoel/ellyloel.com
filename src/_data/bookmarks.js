@@ -16,7 +16,7 @@ export default async () => {
 		);
 		const data = await EleventyFetch(raindropApiUrl, {
 			directory: "bookmarks",
-			duration: "0s",
+			duration: process.env.ELEVENTY_ENV === "production" ? "0s" : "1d",
 			fetchOptions: {
 				headers: {
 					Authorization: `Bearer ${process.env.RAINDROP_ACCESS_TOKEN}`,
@@ -36,6 +36,7 @@ export default async () => {
 		const newItems = data.items.map((item) => {
 			if (item.highlights.length > 0) {
 				for (let i = 0; i < item.highlights.length; i++) {
+					if (typeof item.highlights[i] === "string") continue;
 					item.highlights[i] = item.highlights[i].text;
 				}
 			}
