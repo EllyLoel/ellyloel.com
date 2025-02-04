@@ -6,8 +6,6 @@ import postcssPresetEnv from "postcss-preset-env";
 
 /** @type {import('postcss-load-config').Config} */
 export default {
-	from: "src/input/css/style.css",
-	map: process.env.ELEVENTY_ENV !== "production",
 	plugins: [
 		postcssImport(),
 		postcssJitProps(openProps), // only variables that are used are in the build output (tree shaking)
