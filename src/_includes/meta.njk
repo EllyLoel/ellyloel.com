@@ -1,6 +1,6 @@
 {%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(metadata.url) }}{%- endset -%}
 {%- if title === "Home" -%}
-	{%- set desc = description -%}
+	{%- set desc = metadata.description -%}
 	{%- set ogTitle = "Elly Loel" -%}
 	{%- set ogAlt = "A screenshot of ellyloel.com." -%}
 	{%- set ogUrl = "https://api.microlink.io/?url=https%3A%2F%2Fwww.ellyloel.com&screenshot=true&meta=false&embed=screenshot.url" -%}
