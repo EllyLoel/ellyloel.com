@@ -32,7 +32,7 @@
 		{%- if page.url !== "/bookmarks/" and page.url | includes("/bookmarks/") -%}
 			{%- rollup "src/input/js/lite-youtube.js" | url -%}
 		{%- endif -%}
-		{%- if page.url === "/feeds/" -%}
+		{%- if page.url === "/follow/" -%}
 			{%- rollup "src/input/js/confetti.js" | url -%}
 		{%- endif -%}
 		{%- set countPath = "src/input/js/count.js" | url -%}

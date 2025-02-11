@@ -1,0 +1,182 @@
+---
+layout: base
+title: Follow
+eleventyNavigation:
+  key: Follow
+  parent: Garden
+  order: 1
+---
+
+{%- rollup "src/input/js/table-of-contents.js" | url -%}
+<table-of-contents>
+	<nav aria-labelledby="toc-heading" class="[ toc-container ][ content-width ]" data-pagefind-ignore>
+		<h2 id="toc-heading">Table of contents</h2>
+		{{ page.rawInput | replace("<h2 id=\"toc-heading\">Table of contents</h2>", "") | md | toc | safe }}
+	</nav>
+</table-of-contents>
+
+{%- md -%}
+## Web feeds
+
+If you want to keep up with my posts via a feed, here they are! Provided in the flavour of your liking.
+
+If you don't already have a feed reader, I'd recommend [Feedbin](https://feedbin.com/home) with any of these [great apps](https://feedbin.com/apps) or check out the [comparison of feed aggregators](https://en.wikipedia.org/wiki/Comparison_of_feed_aggregators) page on Wikipedia.
+
+Also, you should [learn how to setup your own feed(s)](https://www.mnot.net/rss/tutorial/).
+{%- endmd -%}
+
+<div class="[ table-container ]">
+	<table>
+		<thead>
+			<tr>
+				<th></th>
+				<th style="font-size: var(--font-size-4);">
+					<a href="https://www.rssboard.org/rss-specification" class="[ link-icon-start text-decoration-none move-link-styling-to-child ]">
+						{%- inlineIcon "fas:rss" -%}
+						<span>RSS</span>
+					</a>
+				</th>
+				<th style="font-size: var(--font-size-4);">
+					<a href="https://www.rfc-editor.org/rfc/rfc4287.html" class="[ link-icon-start text-decoration-none move-link-styling-to-child ]">
+						{%- inlineIcon "local:Atom" -%}
+						<span>Atom</span>
+					</a>
+				</th>
+				<th style="font-size: var(--font-size-4);">
+					<a href="https://www.jsonfeed.org/" class="[ link-icon-start text-decoration-none move-link-styling-to-child ]">
+						{%- inlineIcon "local:JSON Feed" -%}
+						<span>JSON</span>
+					</a>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>
+					<a href="/garden/">Everything</a>
+				</th>
+				<td>
+					<a href="/feed.rss">feed.rss</a>
+				</td>
+				<td>
+					<a href="/feed.atom">feed.atom</a>
+				</td>
+				<td>
+					<a href="/feed.json">feed.json</a>
+				</td>
+			</tr>
+			<tr>
+				<th>
+					<a href="/tags/bookmarks/">Bookmarks</a>
+				</th>
+				<td>
+					<a href="/bookmarks.rss">bookmarks.rss</a>
+				</td>
+				<td>
+					<a href="/bookmarks.atom">bookmarks.atom</a>
+				</td>
+				<td>
+					<a href="/bookmarks.json">bookmarks.json</a>
+				</td>
+			</tr>
+			<tr>
+				<th>
+					Everything but bookmarks
+				</th>
+				<td>
+					<a href="/not-bookmarks.rss">not-bookmarks.rss</a>
+				</td>
+				<td>
+					<a href="/not-bookmarks.atom">not-bookmarks.atom</a>
+				</td>
+				<td>
+					<a href="/not-bookmarks.json">not-bookmarks.json</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+{%- md -%}
+## Newsletter
+
+If you prefer email over feed readers,,, *boo!* 👎🏻
+that sucks, but because I'm nice you can have it.
+
+You can expect a round up of what I've posted on here at the end of each month. If you want a sneak peak you can here you have a look at the [newsletter archives](https://buttondown.com/ellyloel/archive/).
+{%- endmd -%}
+{%- include "newsletter.njk" -%}
+
+{%- md -%}
+## Social media
+
+I'm also on plenty of different social media platforms, so you can find me around the web.
+{%- endmd -%}
+<ul class="[ social-links ][ flow ]">
+	<li>
+		<a href="https://elly.to/mastodon" rel="me" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">
+			{%- inlineIcon "fab:mastodon" -%}
+			<span>Mastodon</span>
+		</a>
+	</li>
+	<li>
+		<a href="https://elly.to/bluesky" rel="me" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">
+			{%- inlineIcon "fab:bluesky" -%}
+			<span>Bluesky</span>
+		</a>
+	</li>
+	<li>
+		<a href="https://elly.to/linkedin" rel="me" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">
+			{%- inlineIcon "fab:linkedin" -%}
+			<span>LinkedIn</span>
+		</a>
+	</li>
+	<li>
+		<a href="https://elly.to/github" rel="me" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">
+			{%- inlineIcon "fab:github" -%}
+			<span>GitHub</span>
+		</a>
+	</li>
+	<li>
+		<a href="https://elly.to/kofi" rel="me" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">
+			{%- inlineIcon "local:kofi" -%}
+			<span>Ko-fi</span>
+		</a>
+	</li>
+	<li>
+		<a href="https://elly.to/codepen" rel="me" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">
+			{%- inlineIcon "fab:codepen" -%}
+			<span>Codepen</span>
+		</a>
+	</li>
+	<li>
+		<a href="https://www.threads.net/fediverse_profile/elly@front-end.social" rel="me" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">
+			{%- inlineIcon "fab:threads" -%}
+			<span>Threads</span> <small>(Fediverse profile)</small>
+		</a>
+	</li>
+	<li>
+		<a href="https://instagram.com/elly.louise.loel" rel="me" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">
+			{%- inlineIcon "fab:instagram" -%}
+			<span>Private Instagram</span> <small>(kinda use)</small>
+		</a>
+	</li>
+	<li>
+		<a href="https://instagram.com/ellyloel" rel="me" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">
+			{%- inlineIcon "fab:instagram" -%}
+			<span>Public Instagram</span> <small>(don't use)</small>
+		</a>
+	</li>
+	<li>
+		<a href="https://tumblr.com/ellyloel" rel="me" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">
+			{%- inlineIcon "fab:tumblr" -%}
+			<span>Tumblr</span> <small>(kinda use)</small>
+		</a>
+	</li>
+	<li>
+		<a href="https://twitter.ellyloel.com" rel="me" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">
+			{%- inlineIcon "fab:twitter" -%}
+			<del datetime="2022-11-18" cite="https://twitter.ellyloel.com/1593505830347100160/"><span>Twitter</span></del> <small>(archive)</small>
+		</a>
+	</li>
+</ul>
