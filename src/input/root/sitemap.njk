@@ -2,12 +2,19 @@
 permalink: "sitemap.xml"
 ---
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/sitemap-styles.xsl" type="text/xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {%- for page in collections.all -%}
 	{%- if not page.data.excludeFromSitemap and page.url %}
 	<url>
 		<loc>{{ page.url | url | absoluteUrl(metadata.url) }}</loc>
-		<lastmod>{{ page.date | dateToISO }}</lastmod>
+		<lastmod>
+			{%- if page.data.modified -%}
+				{{ page.data.modified | dateToISO }}
+			{%- else -%}
+				{{ page.data.date | dateToISO }}
+			{%- endif -%}
+		</lastmod>
 	</url>
 	{%- endif -%}
 {%- endfor -%}
