@@ -46,7 +46,7 @@ const bite = new Howl({
 
 if (soundEnabled) bite.play();
 
-document.querySelectorAll("dialog").forEach((dialog) => {
+document.querySelectorAll("dialog")?.forEach((dialog) => {
 	dialog.addEventListener("opening", () => {
 		if (soundEnabled) popOpen.play();
 	});
@@ -58,12 +58,14 @@ document.querySelectorAll("dialog").forEach((dialog) => {
 const colorSchemeSwitcher = document.querySelector(".color-scheme-switcher");
 const buttons = colorSchemeSwitcher.querySelectorAll("button");
 
-buttons.forEach((button) => {
-	button.addEventListener("click", () => {
-		const isPressed = button.getAttribute("aria-pressed");
-		if (soundEnabled && isPressed !== "true") bite.play();
+if (buttons.length > 0) {
+	buttons.forEach((button) => {
+		button.addEventListener("click", () => {
+			const isPressed = button.getAttribute("aria-pressed");
+			if (soundEnabled && isPressed !== "true") bite.play();
+		});
 	});
-});
+}
 
 ////////////
 
@@ -71,13 +73,15 @@ const pop = new Howl({
 	src: ["/assets/sounds/pop.mp3"],
 });
 
-const stroked = document.querySelectorAll("span.stroke");
+const stroked = document.querySelectorAll(".home header .grid .stroke");
 
-stroked.forEach((element) => {
-	element.addEventListener("click", () => {
-		if (soundEnabled) pop.play();
+if (stroked.length > 0) {
+	stroked.forEach((element) => {
+		element.addEventListener("click", () => {
+			if (soundEnabled) pop.play();
+		});
 	});
-});
+}
 
 ////////////
 
@@ -87,12 +91,14 @@ const fanfare = new Howl({
 
 const newsletterForm = document.querySelector("form.newsletter");
 
-newsletterForm.addEventListener("submit", (e) => {
-	if (soundEnabled) {
-		e.preventDefault();
-		fanfare.play();
-		setTimeout(() => {
-			newsletterForm.submit();
-		}, 2000);
-	}
-});
+if (newsletterForm) {
+	newsletterForm.addEventListener("submit", (e) => {
+		if (soundEnabled) {
+			e.preventDefault();
+			fanfare.play();
+			setTimeout(() => {
+				newsletterForm.submit();
+			}, 2000);
+		}
+	});
+}
