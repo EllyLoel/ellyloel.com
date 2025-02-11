@@ -56,6 +56,15 @@ export default async function(eleventyConfig) {
 	// Watch targets
 	eleventyConfig.addWatchTarget("src/input/css");
 	eleventyConfig.addWatchTarget("src/input/js");
+
+	// Server options
+	eleventyConfig.setServerOptions({
+		https: {
+			cert: "./localhost.pem",
+			key: "./localhost-key.pem",
+		},
+		showAllHosts: true,
+	});
 }
 
 export const config = {

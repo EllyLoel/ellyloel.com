@@ -5,6 +5,8 @@
 .cache
 .vscode
 **/.DS_Store
+localhost.pem
+localhost-key.pem
 
 # App-specific
 cache
