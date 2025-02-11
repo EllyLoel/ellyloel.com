@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="/styles.xsl" type="text/xsl"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="{{ metadata.url }}" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>{{ title or metadata.title }}</title>
+		<link>{{ metadata.url | addPathPrefixToFullUrl }}</link>
+		<atom:link href="{{ permalink | htmlBaseUrl(metadata.url) }}" rel="self" type="application/rss+xml"/>
+		<description>{{ metadata.description }}</description>
+		<language>{{ metadata.lang or page.lang }}</language>
+		<pubDate>{{ collections[collection] | getLatestCollectionItemDate | dateToRfc822 }}</pubDate>
+		<lastBuildDate>{{ build.timestamp | dateToRfc822 }}</lastBuildDate>
+		<generator>{{ eleventy.generator }}</generator>
+		{%- for post in collections[collection] %}
+			{%- set absolutePostUrl = post.url | htmlBaseUrl(metadata.url) %}
+			<item>
+				<title>{{ post.data.title }}</title>
+				<link>{{ absolutePostUrl }}</link>
+				<description>{{ post.content | renderTransforms(post.data.page, metadata.url) }}</description>
+				<comments>{{ absolutePostUrl }}#webmentions</comments>
+				<pubDate>{{ post.data.date | dateObj | dateToRfc822 }}</pubDate>
+				<dc:creator>{{ metadata.author.name }}</dc:creator>
+				<guid>{{ post.data.id }}</guid>
+				{% if post.data.bookmark.tags -%}
+					{%- set tags = post.data.tags.concat(post.data.bookmark.tags) -%}
+				{%- else -%}
+					{%- set tags = post.data.tags -%}
+				{%- endif -%}
+				{%- for tag in tags | reject("equalto", "YouTube") | reject("equalto", "Seedling") | reject("equalto", "Budding") | reject("equalto", "Evergreen") | reject("equalto", "Essays") | reject("equalto", "Notes") | reject("equalto", "Microposts") | reject("equalto", "Bookmarks") | reject("equalto", "Projects") | reject("equalto", "Garden") -%}
+					<category>{{ tag }}</category>
+				{%- endfor %}
+			</item>
+		{%- endfor %}
+	</channel>
+</rss>
