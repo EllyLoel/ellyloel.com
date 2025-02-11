@@ -26,8 +26,8 @@ const renderWebmentions = async (webmentions) => {
 	}
 
 	const webmentionsSummary = document.getElementById("webmentions-summary");
-	const webmentionsLikes = document.getElementById("webmentions-Likes");
-	const webmentionsReposts = document.getElementById("webmentions-Reposts");
+	const webmentionsLikes = document.getElementById("webmentions-likes");
+	const webmentionsReposts = document.getElementById("webmentions-reposts");
 	const webmentionsComments = document.getElementById("webmentions-comments");
 	const webmentionsMentions = document.getElementById("webmentions-mentions");
 
