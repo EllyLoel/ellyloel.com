@@ -1,5 +1,11 @@
+<p>
+	<a href="https://youtu.be/{{ videoId }}" class="[ link-icon-start text-decoration-none move-link-styling-to-child ]">
+		{% inlineIcon "fab:youtube" %}
+		<span>Watch on YouTube</span>
+	</a>
+</p>
 <lite-youtube videoid="{{ videoId }}" style="background-image: url('https://i.ytimg.com/vi/{{ videoId }}/hqdefault.jpg');"{% if params %} params="{{ params }}"{% endif %}>
-	<button type="button" class="lty-playbtn">
-		<span class="lyt-visually-hidden">Play Video: {{ videoTitle }}</span>
+	<button type="button" class="[ lyt-playbtn ]">
+		<span class="[ visually-hidden ]">Play Video: {{ videoTitle }}</span>
 	</button>
 </lite-youtube>
