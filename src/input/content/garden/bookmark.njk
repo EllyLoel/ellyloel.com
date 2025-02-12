@@ -7,7 +7,7 @@ pagination:
   size: 1
   alias: bookmark
   addAllPagesToCollections: true
-permalink: "bookmarks/{{ bookmark.title | slugify }}/"
+permalink: "{{ bookmark.title | slugify }}/"
 ---
 
 {%- if bookmark.note -%}

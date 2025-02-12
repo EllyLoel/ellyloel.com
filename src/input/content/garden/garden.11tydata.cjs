@@ -1,5 +1,5 @@
 module.exports = {
 	layout: "post",
-	permalink: "garden/{{ title | slugify }}/",
+	permalink: "{{ title | slugify }}/",
 	tags: ["Garden"],
 };
