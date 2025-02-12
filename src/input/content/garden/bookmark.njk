@@ -29,6 +29,7 @@ permalink: "{{ bookmark.title | slugify }}/"
 {%- endif -%}
 
 {%- if bookmark.tags | includes("YouTube") -%}
+	{%- rollup "src/input/js/lite-youtube.js" | url -%}
 	{% set videoTitle = bookmark.title %}
 	{% set videoId = bookmark.link | getYouTubeId %}
 	{% include "youtube.njk" %}
