@@ -5,6 +5,7 @@
 	tags: ["Evergreen", "Essays", "Working"],
 	created: new Date("2022-05-01"),
 	modified: new Date("2022-05-19"),
+	id: "5fa9114a1a105d19c70f5e5fa49a8bbf",
 	eleventyComputed: {
 		canonical: () => "https://scrimba.com/articles/dropped-out-of-compsci-to-learn-coding-with-adhd/",
 	},

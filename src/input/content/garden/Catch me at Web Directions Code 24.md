@@ -8,6 +8,7 @@ tags:
   - Community
 created: 2024-05-02
 modified: 2024-05-02
+id: afd73e88a0136187722fe1691672c3f2
 ---
 
 I've got some incredibly exciting news to share! Recently, I was extended an invitation by John Allsopp to present at [Web Directions Code](https://webdirections.org/code/). It's an incredible opportunity that stemmed from the recent blog post I wrote titled "[Front-end development’s identity crisis](https://www.ellyloel.com/blog/front-end-development-s-identity-crisis)." Little did I know, that post would resonate with so many amazing individuals, including John. The response was overwhelming, and thankfully it caught the attention of the right people.

@@ -7,6 +7,7 @@ tags:
   - CSS
 created: 2022-09-10
 modified: 2022-09-10
+id: 4ecc8f6cafb70e2977ca9bdcf8803458
 ---
 
 Semantic/stateful/accessible selectors are really important!

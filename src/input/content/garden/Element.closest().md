@@ -6,6 +6,7 @@ tags:
   - JavaScript
 created: 2022-11-02
 modified: 2022-11-02
+id: 97382a58d3a94d10b3ccbf53c1f950d8
 ---
 
 {% unfurl "https://developer.mozilla.org/en-US/docs/Web/API/Element/closest" %}

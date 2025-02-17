@@ -6,6 +6,7 @@
 	tags: ["Evergreen", "Essays", "CSS"],
 	created: new Date("2022-10-04"),
 	modified: new Date("2022-10-24"),
+	id: "da2d4b2ce9549293f825711d3d955aca",
 	eleventyComputed: {
 		canonical: () => "https://scrimba.com/articles/css-grid-vs-flexbox/",
 	},

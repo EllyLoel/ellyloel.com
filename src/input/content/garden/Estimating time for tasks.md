@@ -3,6 +3,7 @@ title: Estimating time for tasks
 tags:
   - Budding
   - Notes
+id: ce55acf94ea220df97c2f715f3e22724
 ---
 
 Time blindness is a common problem for people with ADHD, so equally hard is estimating the time it will take to complete a task.

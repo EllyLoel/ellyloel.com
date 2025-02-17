@@ -3,6 +3,7 @@ title: Finding the perfect app
 tags:
   - Budding
   - Notes
+id: 7fe89f1b19420e381ca8a0f860a8c37d
 ---
 
 I've tried just about every productivity app under the sun, and I still haven't found "the one".

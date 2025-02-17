@@ -30,7 +30,7 @@
 					{{ post.data.date | dateObj | dateToRfc3339 }}
 				{%- endif -%}
 			</updated>
-			<id>{{ post.data.id }}</id>
+			<id>tag:ellyloel.com,{{ post.data.date | dateToISO }}:{{ post.data.id }}</id>
 			<content type="html">
 				{{ post.content | renderTransforms(post.data.page, metadata.url) }}
 			</content>

@@ -5,7 +5,8 @@ tags:
   - Notes
   - Accessibility
 created: 2023-03-07
-modified: 2023-03-13
+modified: 2025-01-24
+id: aec8360bf759684e52ce230aef36c904
 ---
 
 ## TL;DR
@@ -85,3 +86,7 @@ If you really do need a date picker:
 ### Search
 
 {% unfurl "https://adrianroselli.com/2019/07/ignore-typesearch.html" %}
+
+### Button
+
+https://github.com/openui/open-ui/issues/1138#issuecomment-2610399934

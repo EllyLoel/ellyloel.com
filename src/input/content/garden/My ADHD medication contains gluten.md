@@ -7,6 +7,7 @@ tags:
   - ADHD
 created: 2022-10-09
 modified: 2025-01-12
+id: a8a91f2b50d1f01d9d4b461b70c7eb1a
 ---
 
 This means next to nothing for anyone else but, UGH!! WTF, like whyyyyy {% emoji "🫠", "melting face" %}

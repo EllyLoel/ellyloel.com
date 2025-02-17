@@ -6,6 +6,7 @@ tags:
   - CSS
 created: 2022-09-28
 modified: 2022-10-07
+id: 73cffd11a92cd27d7984039848eda2e1
 ---
 
 ~~~ callout **{% emoji "👷🏼‍♀️", "Construction worker woman." %} Under construction {% emoji "🚧", "Construction sign." %}**

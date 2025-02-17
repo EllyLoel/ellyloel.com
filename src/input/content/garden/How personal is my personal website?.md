@@ -6,6 +6,7 @@ tags:
   - Why you need a personal website
 created: 2025-01-09
 modified: 2025-01-09
+id: 1940d83aadd9901986d3dec6e5ea6d62
 ---
 
 ~~~ callout _to be read as a conversation with my brain_

@@ -3,6 +3,7 @@ title: Habit Creation
 tags:
   - Budding
   - Notes
+id: ec6fd3e1886914188aae3edc17dff8f6
 ---
 
 The most impossible task for someone^[me, I am someone] with ADHD is to create a habit.

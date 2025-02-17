@@ -19,7 +19,7 @@
 				<comments>{{ absolutePostUrl }}#webmentions</comments>
 				<pubDate>{{ post.data.date | dateObj | dateToRfc822 }}</pubDate>
 				<dc:creator>{{ metadata.author.name }}</dc:creator>
-				<guid>{{ post.data.id }}</guid>
+				<guid>tag:ellyloel.com,{{ post.data.date | dateToISO }}:{{ post.data.id }}</guid>
 				{% if post.data.bookmark.tags -%}
 					{%- set tags = post.data.tags.concat(post.data.bookmark.tags) -%}
 				{%- else -%}

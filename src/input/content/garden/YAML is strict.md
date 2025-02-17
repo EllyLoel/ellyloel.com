@@ -5,6 +5,7 @@ tags:
   - Notes
 created: 2022-07-06
 modified: 2022-09-28
+id: e152529df04285a400c438975d15391b
 ---
 
 If you've never written YAML before, one common issue, and one that I ran into myself making this blog, is using tabs rather than spaces {% emoji "🤯", "Mind blown" %}

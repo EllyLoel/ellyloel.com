@@ -7,6 +7,7 @@ tags:
   - Working
 created: 2024-12-04
 modified: 2024-12-04
+id: d1279b7d021bde7c767f7b78df3d249a
 ---
 
 The Luddites knew wtf was up.
