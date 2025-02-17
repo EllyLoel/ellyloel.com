@@ -3,7 +3,7 @@ title: The right number of design tokens
 tags:
   - Seedling
   - Notes
-  - Design tokens
+  - Design Tokens
 created: 2022-09-21
 modified: 2022-09-21
 id: ebaee0e2c9150eddf197cc57e913fe74

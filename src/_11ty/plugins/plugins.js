@@ -14,7 +14,6 @@ import pluginWebmentions from "eleventy-plugin-webmentions";
 
 // Internal imports
 import metadata from "../../_data/metadata.json" with { type: "json" }; // eslint-disable-line
-import pluginBookmarks from "./bookmarks.js";
 import pluginExcerpt from "./excerpt.js";
 import pluginImage from "./image.js";
 import { plugin as pluginMarkdown } from "./markdown.js";
@@ -119,7 +118,6 @@ export default function(eleventyConfig) {
 	eleventyConfig.addPlugin(pluginImageTransform);
 
 	// Internal plugins
-	eleventyConfig.addPlugin(pluginBookmarks);
 	eleventyConfig.addPlugin(pluginExcerpt);
 	eleventyConfig.addPlugin(pluginImage);
 	eleventyConfig.addPlugin(pluginMarkdown);

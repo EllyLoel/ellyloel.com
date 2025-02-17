@@ -27,6 +27,7 @@
 		"build:debug": "DEBUG=Eleventy* eleventy",
 		"build:benchmark": "DEBUG=Eleventy:Benchmark* eleventy",
 		"postId": "./scripts/postId.js -a -d=./src/input/content/garden/",
+		"bookmarks": "./scripts/bookmarks.js",
 		"lint:css": "stylelint \"src/input/css/**/*.css\"",
 		"lint:css:fix": "stylelint \"src/input/css/**/*.css\" --fix",
 		"lint:js": "eslint src/input/js/",
