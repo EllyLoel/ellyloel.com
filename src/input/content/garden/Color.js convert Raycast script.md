@@ -7,6 +7,7 @@ tags:
   - CSS
 created: 2025-01-19
 modified: 2025-01-19
+id: 0373f587ead6c72db59c8fea29e12538
 ---
 
 Similar to my [OddContrast Raycast script](/garden/oddcontrast-raycast-script), I built this for myself but again I figured others would find it useful as well. [Color.js convert](https://apps.colorjs.io/convert/) is my preferred color converter and I use Raycast for almost everything so using their [Script Commands](https://github.com/raycast/script-commands) feature for this made sense.

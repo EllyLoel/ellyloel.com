@@ -5,6 +5,7 @@ tags:
   - Notes
   - Web Components
 archived: true
+id: 961104229cbcabdac46fb5ca406b9e61
 ---
 
 ~~~ callout **Currently this is a bunch of snippets from other articles**

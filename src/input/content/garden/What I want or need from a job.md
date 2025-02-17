@@ -5,7 +5,8 @@ tags:
   - Notes
   - Working
 created: 2024-02-12
-modified: 2024-02-12
+modified: 2025-02-15
+id: 7b7fe092c9b15fd87353b33547a17830
 ---
 
 This post was inspired by Lynn Fisher's post [Unordered, incomplete list of things I want from a job](https://lynnandtonic.com/thoughts/entries/unordered-incomplete-list-of-things-i-want-from-a-job/) and my lovely former colleague Joanne Osbourne-Taylor. The dot points are based on the workplace attributes cards that were made by my wonderful friend Julia Birks.
@@ -37,3 +38,16 @@ I'm doing this because I need a place to direct others and a way to remind mysel
 - **I like the people I work with** – The people I work with are a good social, cultural or values fit.
 - **Work in an industry I like** – The industry the role sits within is one I find interesting, enjoyable or motivating.
 - **Diverse work and tasks** – The tasks I do in the role will provide lots of opportunity to keep things interesting and stimulating intellectually or physically.
+
+---
+
+Struggling with the idea of "do something chill but that I don't really care about for work and then use the extra energy to do meaningful stuff outside of work" or "do something meaningful but likely exhausting for work and have no energy for anything outside of work".
+When I think about it that way it sounds obvious and makes my current circumstances seem ideal.
+But I can't deny that something feels off.
+I feel like I want to be able to put my energy into something meaningful and also interesting and engaging. But that's likely to never really be possible because it won't pay well enough and it likely won't really be ***that*** meaningful or interesting/engaging.
+For example, Portable was probably on the more meaningful side of things but the pay was pretty shit and it wasn't super interesting/engaging and it was super ultra exhausting.
+It needs to be more radical and community focused than that but that's likely to pay even less, though I think it'd be more meaningful, interesting and engaging.
+So logically it sounds like it'd have to be on the side. but even with something as low effort as my current job it feels like I still wouldn't have enough energy to do it on the side. **though I could be wrong about that honestly**.
+
+Another similar thought/idea, I want to work on standards but I don't know if it would really get at the outcomes I want? idk if I'm really wording that well, but basically standards excites me because it's on the cutting edge, so it's always new and interesting, but it's very slow moving which can be annoying but also good for not being too overwhelming or energy intensive. 
+But it also feels like it's the least revolutionary thing possible. I don't feel like I'll have the kind of impactful outcomes that I desire, there might be community impact but it'd be on a huge community and many smaller sub-communities, some of which I care about a lot, but none of which I care about as much as say local queer community. So it's meaningful but less of what I want? I think the dream is for my job to be a slow chill job working on standards and then my side gig can be local queer community focused. I just worry that jobs working on standards are only really at big companies that I ethically don't agree with.

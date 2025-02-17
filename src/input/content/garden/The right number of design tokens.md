@@ -6,6 +6,7 @@ tags:
   - Design tokens
 created: 2022-09-21
 modified: 2022-09-21
+id: ebaee0e2c9150eddf197cc57e913fe74
 ---
 
 Something I've been thinking about for a while now is, how many design tokens is the right amount?

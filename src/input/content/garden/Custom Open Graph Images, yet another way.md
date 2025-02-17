@@ -6,6 +6,7 @@ tags:
   - Building websites
 created: 2023-01-10
 modified: 2023-01-10
+id: b7ee4defb92f846a08850d93365a0e90
 ---
 
 ## Creating a page for every page

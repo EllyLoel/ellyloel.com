@@ -8,6 +8,7 @@ tags:
   - CSS
 created: 2025-01-19
 modified: 2025-01-19
+id: 5c4db3f5c64ebdcf27323e0d3fd0d825
 ---
 
 I built this for myself but I figure others will likely find it useful too. [OddContrast](https://www.oddcontrast.com/) is my preferred contrast checker and I use Raycast for almost everything so using their [Script Commands](https://github.com/raycast/script-commands) feature for this made sense (an extension might be nicer but, it would also much more complex).

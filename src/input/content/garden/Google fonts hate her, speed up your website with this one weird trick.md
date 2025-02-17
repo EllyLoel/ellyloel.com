@@ -7,6 +7,7 @@ tags:
   - Building websites
 created: 2022-12-30
 modified: 2023-01-10
+id: 32059076e3a6e570c1df44d8f4aba62e
 ---
 
 ![Parody of an old school clickbait web ad with the text “GOOGLE FONTS HATE HER! Speed up your website With this one weird trick! LEARN THE TRUTH NOW”](../../../assets/img/one-weird-trick.png)

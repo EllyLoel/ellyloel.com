@@ -6,6 +6,7 @@ tags:
   - Web Components
 created: 2022-10-18
 modified: 2022-10-18
+id: 20826e2874978874677d8147214a5125
 ---
 
 I don't know if this is a dumb idea, but with my current knowledge, this seems like a good idea.

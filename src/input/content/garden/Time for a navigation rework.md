@@ -6,6 +6,7 @@ tags:
   - Information architecture
 created: 2024-12-22
 modified: 2024-12-22
+id: 00a9efd477f80450dbd1c04757f46bb6
 ---
 
 - "me" and "writing" don't feel right.

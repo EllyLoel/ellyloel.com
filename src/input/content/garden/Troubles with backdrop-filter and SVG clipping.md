@@ -6,6 +6,7 @@ tags:
   - CSS
 created: 2022-07-04
 modified: 2022-07-04
+id: 5d1fa596f71b8f897cb9f86a8ea9400c
 ---
 
 ## Navigation menu story
