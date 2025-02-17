@@ -3,12 +3,13 @@ import EleventyFetch from "@11ty/eleventy-fetch";
 import { normalize } from "node:path";
 import { readFile } from "node:fs/promises";
 
-export default async () => {
-	const publicCollectionId = "33237518";
-	const raindropApiUrl = `https://api.raindrop.io/rest/v1/raindrops/${publicCollectionId}`;
-	const backupFilePath = normalize(
-		`${import.meta.dirname}/../../bookmarks/backup.json`
-	);
+export default async (collectionId = "33237518") => {
+	if (typeof collectionId !== "string") {
+		collectionId = "33237518";
+	}
+
+	const raindropApiUrl = `https://api.raindrop.io/rest/v1/raindrops/${collectionId}`;
+	const backupFilePath = normalize(`${import.meta.dirname}/../../bookmarks/backup.json`);
 
 	try {
 		const backupData = JSON.parse(
@@ -51,11 +52,16 @@ export default async () => {
 				index === self.findIndex((itemB) => itemB.id === itemA.id)
 		);
 
-		let response = [];
+		let response = new Set([]);
+		let allTags = new Set(["Bookmarks"]);
 
 		if (items.length) {
-			items.forEach((item) => {
-				response.push({
+			for (const item of items) {
+				for (const tag of item.tags ?? []) {
+					allTags.add(tag);
+				}
+				
+				response.add({
 					created: item.created,
 					excerpt: item.excerpt,
 					highlights: item.highlights,
@@ -67,19 +73,26 @@ export default async () => {
 					title: item.title,
 					type: item?.type || "",
 				});
-			});
+			}
 
+			// I think there's an infinite loop or something recursive happening that's causing issues
+			const responseArr = Array.from(response);
 			const newestItemDate = new Date(
-				Math.max(...response.map((item) => new Date(item?.modified || "")))
+				Math.max(...responseArr.map((item) => new Date(item?.modified || "")))
 			);
 
 			return {
-				items: response,
+				allTags: Array.from(allTags).sort(),
+				items: responseArr,
 				newestItemDate,
 			};
 		}
 	} catch (error) {
-		console.log(`\n${error}\n`);
-		return [];
+		console.error("Error fetching bookmarks:", error);
+		return {
+			allTags: [],
+			items: [],
+			newestItemDate: "",
+		};
 	}
 };
