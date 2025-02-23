@@ -1,0 +1,9 @@
+:not(aside) > .social-links {
+	& li a {
+		display: block;
+	}
+
+	& del {
+		color: inherit;
+	}
+}
