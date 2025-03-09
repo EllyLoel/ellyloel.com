@@ -1,8 +1,4 @@
-/* eslint-disable no-useless-escape */
-import slugify from "@sindresorhus/slugify";
-
-// This regex finds all wikilinks in a string
-const wikilinkRegEx = /\[\[\s*([^\[\]\|\n\r]+)(\|[^\[\]\|\n\r]+)?\s*\]\]/g;
+const mdLinkRegEx = /^\[([\w\s\d]+)\]\(((?:\/|https?:\/\/)[\w\d./?=#]+)\)$/gm;
 
 export default async (posts) => {
 	const linkGraph = {
@@ -20,14 +16,12 @@ export default async (posts) => {
 		});
 
 		const postTemplate = await post.template.read();
-		const postContent = postTemplate.content;
+		const postContent = postTemplate?.content || "";
+
+		if (typeof postContent === "object") continue;
 
 		// Get all links from the post
-		const outboundLinks = (
-			[...new Set(postContent.match(wikilinkRegEx))] || []
-		).map((wikilink) => {
-			return slugify(wikilink.slice(2, -2).split("|")[0], { lower: true });
-		});
+		const outboundLinks = [...new Set(postContent.match(mdLinkRegEx))];
 
 		for (const link of outboundLinks) {
 			for (const otherPost of posts) {
