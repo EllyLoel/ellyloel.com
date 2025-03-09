@@ -37,7 +37,6 @@
 		margin-inline-end: auto;
 
 		& a {
-			border-radius: var(--radius-2);
 			display: block;
 			text-decoration: none;
 

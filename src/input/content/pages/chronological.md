@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: chronological
 title: Chronological
 eleventyNavigation:
   key: Chronological

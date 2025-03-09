@@ -1,0 +1,27 @@
+.weeks {
+	/* display: flex;
+	flex-wrap: wrap; */
+	display: grid;
+	gap: var(--size-1);
+	grid-template-columns: repeat(auto-fill, minmax(1em, 1fr));
+	
+	& li {
+		border: var(--border-size-1) solid var(--accent-border);
+		border-radius: var(--radius-2);
+		min-block-size: 1em;
+		min-inline-size: 1em;
+		padding: var(--size-1);
+
+		&:has(.event) {
+			grid-column: span 8;
+		}
+
+		&:not(:has(.event)) {
+			border-color: var(--neutral-border);
+
+			& * {
+				display: none;
+			}
+		}
+	}
+}
