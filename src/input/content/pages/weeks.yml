@@ -1,0 +1,44 @@
+"weeks":
+  "2001-08-16":
+    headline: "Birthday"
+    description: "Hello, World!"
+    based: "Mid North Coast, New South Wales"
+  "2001-09-11":
+    headline: "Due date"
+    description: "👀 yikes lol"
+  "2009-02-07":
+    headline: "Hello, Naarm!"
+    description: '<a href="https://en.wikipedia.org/wiki/2009_southeastern_Australia_heat_wave">A rather hot</a> <a href="https://en.wikipedia.org/wiki/Black_Saturday_bushfires">time to arrive</a>.'
+    based: "Mornington Peninsula, Victoria"
+  "2007-01-29":
+    headline: "Start primary school"
+  "2013-12-20":
+    headline: "Graduate primary school"
+  "2014-01-28":
+    headline: "Start high school"
+  "2019-09-05":
+    headline: "Start HRT"
+  "2019-10-20":
+    headline: "Brodie and I start dating"
+  "2019-12-20":
+    headline: "Graduate high school"
+  "2020-03-02":
+    headline: "Start university"
+  "2020-12-08":
+    headline: "Start working at Aftershock"
+  "2021-01-29":
+    headline: "Brodie and I move in together"
+    based: "Naarm (Melbourne, Victoria)"
+  "2021-08-31":
+    headline: "Drop out of university"
+  "2021-09-27":
+    headline: "Start my first developer job at Portable"
+  "2024-01-01":
+    headline: "Made redundant from Portable"
+  "2024-05-15":
+    headline: "Start working at DEWR"
+  "2024-06-20":
+    headline: "First conference talk"
+  "2081-08-16":
+    headline: "80 years old"
+    description: "Probably die."

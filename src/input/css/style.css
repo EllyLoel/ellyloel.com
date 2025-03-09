@@ -37,6 +37,7 @@
 @import url("./blocks/button.css") layer(blocks);
 @import url("./blocks/callout.css") layer(blocks);
 @import url("./blocks/card.css") layer(blocks);
+@import url("./blocks/chronological.css") layer(blocks);
 @import url("./blocks/date.css") layer(blocks);
 @import url("./blocks/eight-ball.css") layer(blocks);
 @import url("./blocks/emoji.css") layer(blocks);
@@ -67,3 +68,4 @@
 @import url("./blocks/toc.css") layer(blocks);
 @import url("./blocks/unfurl.css") layer(blocks);
 @import url("./blocks/webmentions.css") layer(blocks);
+@import url("./blocks/weeks.css") layer(blocks);
