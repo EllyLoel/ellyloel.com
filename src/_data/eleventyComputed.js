@@ -1,6 +1,4 @@
-// This regex finds all wikilinks in a string
-// eslint-disable-next-line no-useless-escape
-const wikilinkRegEx = /\[\[\s*([^\[\]\|\n\r]+)(\|[^\[\]\|\n\r]+)?\s*\]\]/g;
+const mdLinkRegEx = /^\[([\w\s\d]+)\]\(((?:\/|https?:\/\/)[\w\d./?=#]+)\)$/gm;
 
 export default {
 	backlinks: async (data) => {
@@ -11,14 +9,12 @@ export default {
 		// Search all posts for links
 		for (const post of posts) {
 			const postTemplate = await post.template.read();
-			const postContent = postTemplate.content;
+			const postContent = postTemplate?.content || "";
+
+			if (typeof postContent === "object") continue;
 
 			// Get all links from the post
-			const outboundLinks = (
-				[...new Set(postContent.match(wikilinkRegEx))] || []
-			).map((link) => {
-				return link.slice(2, -2).split("|")[0];
-			});
+			const outboundLinks = [...new Set(postContent.match(mdLinkRegEx))];
 
 			if (outboundLinks.some((link) => link === data.title)) {
 				backlinks.push({
