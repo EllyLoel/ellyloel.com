@@ -115,7 +115,11 @@ export default function(eleventyConfig) {
 		token: process.env.WEBMENTION_IO_API_KEY,
 		truncate: false,
 	});
-	eleventyConfig.addPlugin(pluginImageTransform);
+	eleventyConfig.addPlugin(pluginImageTransform, {
+		sharpOptions: {
+			animated: true,
+		},
+	});
 
 	// Internal plugins
 	eleventyConfig.addPlugin(pluginExcerpt);
