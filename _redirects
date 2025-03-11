@@ -1,3 +1,5 @@
+/garden/index.html /garden/ 301
+/og/garden/index.html /og/garden/ 301
 /blog/* /:splat 301
 /bookmarks/* /:splat 301
 /garden/* /:splat 301
