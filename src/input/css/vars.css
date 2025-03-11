@@ -77,6 +77,9 @@
 	--warning: oklch(74.2% 0.1459 61.88deg);
 	--error: oklch(74.2% 0.1387 31.88deg);
 
+	/* Misc */
+	--code-bg: var(--neutral-bg-subtle);
+
 	/* Typography */
 	--font-weight-body-bold: 622;
 	--font-weight-body-normal: 400;
@@ -111,6 +114,9 @@
 		--neutral-8: var(--herring-silver);
 		--neutral-9: var(--peekaboo);
 		--neutral-10: var(--white);
+
+		/* Misc */
+		--code-bg: var(--neutral-bg);
 	}
 }
 
@@ -137,6 +143,9 @@
 	--neutral-8: var(--moonless-night);
 	--neutral-9: var(--piano-black);
 	--neutral-10: var(--black);
+
+	/* Misc */
+	--code-bg: var(--neutral-bg-subtle);
 }
 
 [data-selected-color-scheme="dark"] {
@@ -162,4 +171,7 @@
 	--neutral-8: var(--herring-silver);
 	--neutral-9: var(--peekaboo);
 	--neutral-10: var(--white);
+
+	/* Misc */
+	--code-bg: var(--neutral-bg);
 }
