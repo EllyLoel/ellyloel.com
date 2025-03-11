@@ -9,6 +9,7 @@ tags:
 created: 2025-02-15
 modified: 2025-02-15
 id: c1ef6c76eddd80ecdb54e0e8c40f4301
+draft: true
 ---
 
 - min and max (clamp) are bad in our stylesheets
