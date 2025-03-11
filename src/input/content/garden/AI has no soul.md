@@ -8,6 +8,7 @@ tags:
 created: 2025-02-11
 modified: 2025-02-11
 id: 3a946f767ce63b4489e2a71f7eef64a5
+draft: true
 ---
 
 AI is good at prose, language, etc. but it isn't good at meaning.

@@ -7,6 +7,11 @@ import yaml from "js-yaml";
 
 /** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
+	// Preprocessors
+	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
+		if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") return false;
+	});
+
 	// Plugins
 	eleventyConfig.addPlugin(plugins);
 
