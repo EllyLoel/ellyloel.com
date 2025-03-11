@@ -7,6 +7,7 @@ image: ./src/assets/img/colour-gradient.png
 created: 2023-01-10
 modified: 2023-01-10
 id: e6a5f069c27543d884165f71e998ad99
+draft: true
 ---
 
 ~~~ callout **{% emoji "⚠️", "Warning." %} This post is not complete, be wary.**
