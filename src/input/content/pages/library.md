@@ -4,7 +4,7 @@ title: Library
 eleventyNavigation:
   key: Library
   parent: Garden
-  order: 5
+  order: 3
 ---
 
 ![A simple 3D modelled person wearing a hard hat and a high vis vest, using a jackhammer to breakup the website.](../../../assets/img/construction-2.gif){eleventy:formats="gif" eleventy:widths="100"}

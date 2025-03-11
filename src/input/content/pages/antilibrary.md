@@ -4,7 +4,7 @@ title: Antilibrary
 eleventyNavigation:
   key: Antilibrary
   parent: Garden
-  order: 6
+  order: 4
 ---
 
 Media that I might or might not engage with.
