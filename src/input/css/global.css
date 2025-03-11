@@ -117,8 +117,8 @@ pre {
 }
 
 :not(pre) > code {
-	background: var(--neutral-bg-subtle);
-	padding: var(--size-1) var(--size-2);
+	background: var(--code-bg);
+	padding-inline: var(--size-1);
 }
 
 kbd {
@@ -203,6 +203,7 @@ input:is([type="checkbox"], [type="radio"]) {
 mark {
 	background: var(--accent-bg);
 	border-radius: var(--radius-2);
+	color: var(--accent-text);
 	padding-inline: var(--size-1);
 }
 
