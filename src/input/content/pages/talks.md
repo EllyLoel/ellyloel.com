@@ -4,7 +4,7 @@ title: Talks
 eleventyNavigation:
   key: Talks
   parent: Garden
-  order: 6
+  order: 5
 ---
 
 ## [Web Directions Code](https://webdirections.org/code/): [Front-end development’s identity crisis](https://webdirections.org/code/speakers/elly-loel.php)
