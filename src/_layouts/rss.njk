@@ -11,24 +11,26 @@
 		<lastBuildDate>{{ build.timestamp | dateToRfc822 }}</lastBuildDate>
 		<generator>{{ eleventy.generator }}</generator>
 		{%- for post in collections[collection] %}
-			{%- set absolutePostUrl = post.url | htmlBaseUrl(metadata.url) %}
-			<item>
-				<title>{{ post.data.title }}</title>
-				<link>{{ absolutePostUrl }}</link>
-				<description>{{ post.content | renderTransforms(post.data.page, metadata.url) }}</description>
-				<comments>{{ absolutePostUrl }}#webmentions</comments>
-				<pubDate>{{ post.data.date | dateObj | dateToRfc822 }}</pubDate>
-				<dc:creator>{{ metadata.author.name }}</dc:creator>
-				<guid>tag:ellyloel.com,{{ post.data.date | dateToISO }}:{{ post.data.id }}</guid>
-				{% if post.data.bookmark.tags -%}
-					{%- set tags = post.data.tags.concat(post.data.bookmark.tags) -%}
-				{%- else -%}
-					{%- set tags = post.data.tags -%}
+		{%- set absolutePostUrl = post.url | htmlBaseUrl(metadata.url) %}
+		<item>
+			<title>{{ post.data.title }}</title>
+			<link>{{ absolutePostUrl }}</link>
+			<description>
+				{%- if post.content -%}
+					{%- set content = post.content %}
+				{%- elseif post.data.layout === "bookmark" -%}
+					{%- set content %}{% include "bookmark.njk" %}{% endset -%}
 				{%- endif -%}
-				{%- for tag in tags | reject("equalto", "YouTube") | reject("equalto", "Seedling") | reject("equalto", "Budding") | reject("equalto", "Evergreen") | reject("equalto", "Essays") | reject("equalto", "Notes") | reject("equalto", "Microposts") | reject("equalto", "Bookmarks") | reject("equalto", "Projects") | reject("equalto", "Garden") -%}
-					<category>{{ tag }}</category>
-				{%- endfor %}
-			</item>
+				{{- content | renderTransforms(post.data.page, metadata.url) -}}
+			</description>
+			<comments>{{ absolutePostUrl }}#webmentions</comments>
+			<pubDate>{{ post.data.date | dateObj | dateToRfc822 }}</pubDate>
+			<dc:creator>{{ metadata.author.name }}</dc:creator>
+			<guid>tag:ellyloel.com,{{ post.data.date | dateToISO }}:{{ post.data.id }}</guid>
+			{%- for tag in post.data.tags | reject("equalto", "YouTube") | reject("equalto", "Seedling") | reject("equalto", "Budding") | reject("equalto", "Evergreen") | reject("equalto", "Essays") | reject("equalto", "Notes") | reject("equalto", "Microposts") | reject("equalto", "Bookmarks") | reject("equalto", "Projects") | reject("equalto", "Garden") %}
+			<category>{{ tag }}</category>
+			{%- endfor %}
+		</item>
 		{%- endfor %}
 	</channel>
 </rss>

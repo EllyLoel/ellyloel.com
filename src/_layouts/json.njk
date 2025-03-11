@@ -10,24 +10,27 @@
 	},
 	"items": [
 		{%- for post in collections[collection] %}
-		{%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
+		{%- set absolutePostUrl = post.url | htmlBaseUrl(metadata.url) %}
 		{
-			"id": "{{ absolutePostUrl }}",
+			"id": "tag:ellyloel.com,{{ post.data.date | dateToISO }}:{{ post.data.id }}",
 			"url": "{{ absolutePostUrl }}",
 			"title": "{{ post.data.title }}",
-			"content_html": {% if post.templateContent %}{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | dump | safe }}{% else %}""{% endif %},
-			{%- if post.data.bookmark.link %}
-			"external_url": "{{ post.data.bookmark.link }}",
-			{% endif -%}
-			{%- if post.data.tags or post.data.bookmark.tags -%}
+			"content_html":{{ " " }}
+			{%- if post.content -%}
+				{%- set content = post.content %}
+			{%- elseif post.data.layout === "bookmark" -%}
+				{%- set content %}{% include "bookmark.njk" %}{% endset -%}
+			{%- else -%}
+				{%- set content = "" %}
+			{%- endif -%}
+			{{- content | renderTransforms(post.data.page, metadata.url) | dump | safe -}},
+			{%- if post.data.link %}
+			"external_url": "{{ post.data.link }}",
+			{%- endif -%}
+			{%- if post.data.tags %}
 			"tags": [
-				{% if post.data.bookmark.tags -%}
-					{%- set tags = post.data.tags.concat(post.data.bookmark.tags) -%}
-				{%- else -%}
-					{%- set tags = post.data.tags -%}
-				{%- endif -%}
-				{%- for tag in tags | reject("equalto", "YouTube") | reject("equalto", "Seedling") | reject("equalto", "Budding") | reject("equalto", "Evergreen") | reject("equalto", "Essays") | reject("equalto", "Notes") | reject("equalto", "Microposts") | reject("equalto", "Bookmarks") | reject("equalto", "Projects") | reject("equalto", "Garden") -%}
-					"{{ tag }}"{% if not loop.last %}{{ ",\n" }}{% endif %}
+				{%- for tag in post.data.tags | reject("equalto", "YouTube") | reject("equalto", "Seedling") | reject("equalto", "Budding") | reject("equalto", "Evergreen") | reject("equalto", "Essays") | reject("equalto", "Notes") | reject("equalto", "Microposts") | reject("equalto", "Bookmarks") | reject("equalto", "Projects") | reject("equalto", "Garden") %}
+				"{{ tag }}"{% if not loop.last %}{{ "," }}{% endif %}
 				{%- endfor %}
 			],
 			{%- endif -%}
