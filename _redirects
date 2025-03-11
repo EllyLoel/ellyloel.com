@@ -1,0 +1,10 @@
+/blog/* /:splat 301
+/bookmarks/* /:splat 301
+/garden/* /:splat 301
+/projects/* /:splat 301
+/til/* /:splat 301
+/og/blog/* /og/:splat 301
+/og/bookmarks/* /og/:splat 301
+/og/garden/* /og/:splat 301
+/og/projects/* /og/:splat 301
+/og/til/* /og/:splat 301
