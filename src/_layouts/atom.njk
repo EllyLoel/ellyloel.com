@@ -32,15 +32,15 @@
 			</updated>
 			<id>tag:ellyloel.com,{{ post.data.date | dateToISO }}:{{ post.data.id }}</id>
 			<content type="html">
-				{{ post.content | renderTransforms(post.data.page, metadata.url) }}
+				{%- if post.content -%}
+					{%- set content = post.content %}
+				{%- elseif post.data.layout === "bookmark" -%}
+					{%- set content %}{% include "bookmark.njk" %}{% endset -%}
+				{%- endif -%}
+				{{- content | renderTransforms(post.data.page, metadata.url) -}}
 			</content>
-			{% if post.data.bookmark.tags -%}
-				{%- set tags = post.data.tags.concat(post.data.bookmark.tags) -%}
-			{%- else -%}
-				{%- set tags = post.data.tags -%}
-			{%- endif -%}
-			{%- for tag in tags | reject("equalto", "YouTube") | reject("equalto", "Seedling") | reject("equalto", "Budding") | reject("equalto", "Evergreen") | reject("equalto", "Essays") | reject("equalto", "Notes") | reject("equalto", "Microposts") | reject("equalto", "Bookmarks") | reject("equalto", "Projects") | reject("equalto", "Garden") -%}
-				<category term="{{ tag }}"/>
+			{%- for tag in post.data.tags | reject("equalto", "YouTube") | reject("equalto", "Seedling") | reject("equalto", "Budding") | reject("equalto", "Evergreen") | reject("equalto", "Essays") | reject("equalto", "Notes") | reject("equalto", "Microposts") | reject("equalto", "Bookmarks") | reject("equalto", "Projects") | reject("equalto", "Garden") %}
+			<category term="{{ tag }}"/>
 			{%- endfor %}
 		</entry>
 	{%- endfor %}
