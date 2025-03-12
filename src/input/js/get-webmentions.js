@@ -3,7 +3,7 @@ import DOMPurify from "dompurify";
 // Internal imports
 import renderWebmentions from "./webmentions";
 
-const API_ORIGIN = "webmention.io/api/mentions.jf2";
+const API_ORIGIN = "https://webmention.io/api/mentions.jf2";
 const BASE_URL = "www.ellyloel.com";
 
 const webmentionsElement = document.getElementById("webmentions");
