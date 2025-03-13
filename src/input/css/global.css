@@ -295,6 +295,10 @@ hr {
 		transform: rotate(-45deg);
 		z-index: -1;
 	}
+
+	> iframe {
+		border: none;
+	}
 }
 
 /* Figures */
@@ -390,7 +394,7 @@ details[open] > summary {
 	overflow-x: auto;
 	position: relative;
 
-	@media (any-pointer: fine) and (width <=45.9375em) {
+	@media (any-pointer: fine) and (width <= 45.9375em) {
 		/* 735px */
 		&,
 		& * {
