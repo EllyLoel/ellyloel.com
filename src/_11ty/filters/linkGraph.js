@@ -9,7 +9,7 @@ export default async (posts) => {
 	// Search all posts for links
 	for (const post of posts) {
 		linkGraph.nodes.push({
-			group: post.url.split("/")[1],
+			group: post.url.split?.("/")[1],
 			id: post.url,
 			name: post.data.title,
 			val: "2",
@@ -25,7 +25,7 @@ export default async (posts) => {
 
 		for (const link of outboundLinks) {
 			for (const otherPost of posts) {
-				otherPost.url.includes(link)
+				otherPost.url.includes?.(link)
 					? linkGraph.links.push({
 							source: post.url,
 							target: otherPost.url,

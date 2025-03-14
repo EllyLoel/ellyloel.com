@@ -30,10 +30,10 @@
 					{%- macro renderNavListItem(entry) -%}
 						<li>
 							<a href="{{ entry.url | url }}"{% if entry.url === page.url %} aria-current="page"{% endif %}>
-								{{ entry.title }}
+								{{- entry.title -}}
 							</a>
-							{%- if entry.children -%}
-								<ul class="[ flow ][ margin-block-start-3 margin-inline-start-3 ]">
+							{%- if entry.children.length > 0 -%}
+								<ul class="[ flow ][ margin-inline-start-3 ]">
 									{%- for child in entry.children %}
 										{{ renderNavListItem(child) }}
 									{%- endfor -%}
@@ -42,7 +42,9 @@
 						</li>
 					{%- endmacro -%}
 					{%- for entry in collections.all | eleventyNavigation -%}
+						{%- if entry.url !== "/footer/" -%}
 						{{ renderNavListItem(entry) }}
+						{%- endif -%}
 					{%- endfor -%}
 				</ul>
 			</nav>
