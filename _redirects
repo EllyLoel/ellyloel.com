@@ -8,3 +8,5 @@
 /og/til/* /og/:splat 301
 /feeds /follow 301
 /mastodon /microposts 301
+/speaking /talks 301
+/archive /garden 301
