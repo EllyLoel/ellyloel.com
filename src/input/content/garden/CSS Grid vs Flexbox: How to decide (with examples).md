@@ -1,7 +1,7 @@
 ---js
 {
 	title: "CSS Grid vs Flexbox: How to decide (with examples)",
-	permalink: "garden/css-grid-vs-flexbox/",
+	permalink: "css-grid-vs-flexbox/",
 	image: "./src/assets/img/Should-I-use-Flexbox-or-Grid.png",
 	tags: ["Evergreen", "Essays", "CSS"],
 	created: new Date("2022-10-04"),
