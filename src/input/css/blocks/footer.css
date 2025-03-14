@@ -34,8 +34,32 @@
 			block-size: fit-content;
 			grid-area: sitemap;
 
-			& a[href="/footer/"] {
-				visibility: hidden;
+			> ul {
+				> li {
+					font-size: var(--font-size-4);
+
+					> a {
+						font-weight: var(--font-weight-body-bold);
+					}
+
+					> ul {
+						margin-block-start: 0.5em;
+
+						> li {
+							font-size: var(--font-size-2);
+
+							> ul {
+								margin-block-start: 0.5em;
+
+								> li {
+									--flow-space: 0.5em;
+			
+									font-size: var(--font-size-0);
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 
