@@ -6,3 +6,5 @@
 /og/bookmarks/* /og/:splat 301
 /og/projects/* /og/:splat 301
 /og/til/* /og/:splat 301
+/feeds /follow 301
+/mastodon /microposts 301
