@@ -18,7 +18,7 @@
 		<!-- Include scripts here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
 		{%- rollup "src/input/js/main.js" | url -%}
 		{%- if page.url === "/" -%}
-			{%- rollup "src/input/js/spotify.js" | url -%}
+			{%- rollup "src/input/js/lastfm.js" | url -%}
 		{%- endif -%}
 		{%- if page.url === "/garden/" or page.url === "/essays/" or page.url === "/notes/" or page.url === "/bookmarks/" or page.url === "/projects/" or page.url === "/garden/d3/" -%}
 			{%- rollup "src/input/js/graph.js" | url -%}
