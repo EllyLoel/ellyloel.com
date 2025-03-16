@@ -44,13 +44,13 @@ class Weeks {
 					}
 
 					if (dateString === today.toISOString().split("T")[0]) {
-						eventsThisWeek.push({ date: dateString, headline: "Today" });
+						eventsThisWeek.push({ date: dateString, headline: "📅 Today" });
 					}
 
 					if (dateString.slice(4) === birthDate.toISOString().split("T")[0].slice(4) && 
 						currentDay.getFullYear() !== birthDate.getFullYear()) {
 						eventsThisWeek.push({
-							headline: `${currentDay.getFullYear() - birthDate.getFullYear()} in ${currentDay.getFullYear()}`,
+							headline: `🎉 ${currentDay.getFullYear() - birthDate.getFullYear()} in ${currentDay.getFullYear()}`,
 						});
 					}
 
@@ -85,7 +85,11 @@ class Weeks {
 			</section>`;
 		}).join('');
 
-		return `<div class="[ decades ]">${decades}</div>`;
+		return `
+			<p>Inspired by <a href="https://waitbutwhy.com/2014/05/life-weeks.html">Wait But Why</a>, <a href="https://busterbenson.com/life-in-weeks">Buster Benson</a> and <a href="https://weeks.ginatrapani.org">Gina Trapani</a>.</p>
+			<p>Made cautious by <a href="https://werd.io/2025/life-in-weeks">Ben Werdmuller</a>.</p>
+			<div class="[ decades ]">${decades}</div>
+		`.trim();
 	}
 }
 
