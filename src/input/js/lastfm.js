@@ -6,10 +6,11 @@
 	const artist = data.recenttracks.track[0].artist["#text"];
 	const url = data.recenttracks.track[0].url;
 
-	const songEl = document.querySelector(".spotify-playing > .song");
-	const artistEl = document.querySelector(".spotify-playing > .artist");
+	const linkEl = document.querySelector(".lastfm-playing > .song");
+	const songEl = document.querySelector(".lastfm-playing > .song > span");
+	const artistEl = document.querySelector(".lastfm-playing > .artist");
 
+	linkEl.setAttribute("href", url);
 	songEl.innerHTML = song;
-	songEl.setAttribute("href", url);
 	artistEl.innerHTML = artist;
 })();
