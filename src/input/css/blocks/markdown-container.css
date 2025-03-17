@@ -1,4 +1,4 @@
-.markdown-container {
+.markdown-container > .flow {
 	container: markdown / inline-size;
 	display: grid;
 	grid-template-columns: 1fr min(var(--size-content-3), 100%) 1fr;
