@@ -9,7 +9,7 @@ eleventyNavigation:
 
 ## Elly Loel
 
-<span class="badge">Front-end Developer/Designer</span> <span class="badge">Design System Developer</span> <span class="badge">Accessibility Specialist</span>
+{% include "job-titles.njk" %}
 
 ## Contact details
 
@@ -47,7 +47,8 @@ Passionate about continuous learning, I actively share valuable insights and res
 
 ## Experience
 
-- **Portable** – Developer<br><span class="[ badge ][ neutral pill ]">Sep 2021-Present</span>
+- **Department of Employment and Workplace Relations (DEWR)** – Digital Accessibility Officer<br><span class="[ badge ][ neutral pill ]">May 2024-Present</span>
+- **Portable** – Developer<br><span class="[ badge ][ neutral pill ]">Sep 2021-Jan 2024</span>
 - **Aftershock PC Australia** – PC Sales, Support and Service Technician<br><span class="[ badge ][ neutral pill ]">Dec 2020-Jun 2021</span>
 - **Idleglance** – Video Editor and Motion Designer (_YouTube Channel_)<br><span class="[ badge ][ neutral pill ]">2018-2019</span>
 - **Coaching Psychology Online** – Social Media Manager and Content Curator<br><span class="[ badge ][ neutral pill ]">2017-2018</span>

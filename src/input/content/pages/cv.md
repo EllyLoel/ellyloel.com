@@ -9,7 +9,7 @@ eleventyNavigation:
 
 ## Elly Loel
 
-<span class="badge">Front-end Developer/Designer</span> <span class="badge">Design System Developer</span> <span class="badge">Accessibility Specialist</span>
+{% include "job-titles.njk" %}
 
 ## Contact details
 
@@ -21,9 +21,13 @@ eleventyNavigation:
 
 ## Experience
 
+### Department of Employment and Workplace Relations (DEWR) - Digital Accessibility Officer
+
+<span class="[ badge ][ neutral pill ]">May 2024-Present</span>
+
 ### Portable - Developer
 
-<span class="[ badge ][ neutral pill ]">Sep 2021-Present</span>
+<span class="[ badge ][ neutral pill ]">Sep 2021-Jan 2024</span>
 
 - **Built impactful websites** — I have successfully developed a diverse range of websites for various clients, including brochure sites, blogs, information-heavy sites, learning material sites, and marketing sites. These clients have included government organisations, non-governmental organisations, non-profit organisations, and corporate entities. My expertise primarily lies in front-end development, utilising semantic HTML, CSS, and 🤏 JavaScript, but I also have experience in back-end development and dev-ops using PHP, Docker, and other relevant technologies, in addition to being competent on the command line. I have assisted clients in establishing or upgrading their online presence, ensuring their websites are accessible to a wide audience. I have acquired knowledge in various web frameworks and libraries, enabling me to be a T-shaped developer with a broad foundation of skills, specialising in front-end development and accessibility.
 - **Audited for Accessibility** — I have played a key role in promoting digital inclusivity by conducting thorough accessibility audits and producing detailed reports that ultimately resulted in improved website accessibility for clients. Using the Web Content Accessibility Guidelines Evaluation Methodology (WCAG-EM), I ensured a standardised, comprehensive evaluation process was achieved during audits. In addition to identifying issues, I explained the issues to our clients so they could make informed decisions about the remediation process. Notably, I successfully conducted accessibility audits, produced reports, and resolved issues for the Victorian Equal Opportunity and Human Rights Commission (VEOHRC) and Bank Australia.
