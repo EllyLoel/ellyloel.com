@@ -8,8 +8,8 @@ tags:
 created: 2024-12-04
 modified: 2024-12-04
 id: d1279b7d021bde7c767f7b78df3d249a
+date: 2024-12-04
 ---
-
 The Luddites knew wtf was up.
 
 Productivity is pointless to us workers because we live in a capitalist system predicated on continual growth.

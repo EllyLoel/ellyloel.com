@@ -3,7 +3,9 @@ layout: bookmark
 title: Authors Together
 tags:
   - Bookmarks
-created: '2024-12-07T06:26:55.154000+00:00'
+date: 2024-12-07T06:26:55.154Z
+created: 2024-12-07T06:26:55.154Z
+modified: 2024-12-07T06:27:15.820Z
 link: https://authors-together.org/
 id: 916156845
 excerpt: A directory of books by the former authors of A Book Apart

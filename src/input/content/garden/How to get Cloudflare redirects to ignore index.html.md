@@ -7,8 +7,8 @@ tags:
 created: 2025-03-12
 modified: 2025-03-12
 id: 7eadd018223dd54cb520fc17ccf1b239
+date: 2025-03-12
 ---
-
 As you may or may not be aware I rearranged things around here a bit, and thus I needed to setup some redirects because [Cool URIs don't change](https://www.w3.org/Provider/Style/URI).
 
 So I went looking and saw that Cloudflare Pages supports a `_redirects` files, similar to Netlify. So I tried this:

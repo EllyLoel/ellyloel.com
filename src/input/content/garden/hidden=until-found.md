@@ -9,8 +9,8 @@ tags:
 created: 2025-01-06
 modified: 2025-01-13
 id: 4e3bf56f3b688854bcbdf8e0a598dbfa
+date: 2025-01-06
 ---
-
 Don't use `[hidden] { display: none }` as it will break `hidden=until-found`.
 
 Instead use `[hidden]:not([hidden="until-found"]) { display: none }` if you must.

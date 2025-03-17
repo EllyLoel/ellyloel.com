@@ -8,8 +8,8 @@ tags:
 created: 2023-05-26
 modified: 2023-05-26
 id: 9d337d79d653bb38ba273fe0c1d910e9
+date: 2023-05-26
 ---
-
 I have so many ideas but I'm too scared to actually turn them into anything.
 
 I'm scared of getting stuck.

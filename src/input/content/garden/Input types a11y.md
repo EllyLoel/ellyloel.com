@@ -7,8 +7,8 @@ tags:
 created: 2023-03-07
 modified: 2025-01-24
 id: aec8360bf759684e52ce230aef36c904
+date: 2023-03-07
 ---
-
 ## TL;DR
 
 See here for [a list of every single input type](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types).

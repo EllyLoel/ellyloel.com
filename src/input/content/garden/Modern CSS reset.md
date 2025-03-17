@@ -6,8 +6,8 @@ tags:
 created: 2022-06-20
 modified: 2022-08-17
 id: 4a46ed11c2303f9f2dbc9033281303e2
+date: 2022-06-20
 ---
-
 I put together a CSS Reset that uses modern CSS features such as :where(), logical properties, prefers-reduced-motion, etc. :sparkles:
 
 Lots of inspiration from Josh W Comeau, Andy Bell, and Adam Argyle.

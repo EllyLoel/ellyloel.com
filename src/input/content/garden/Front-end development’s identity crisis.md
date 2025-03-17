@@ -11,8 +11,8 @@ syndication:
   - https://front-end.social/@elly/112181535785151957
   - https://bsky.app/profile/ellyloel.com/post/3kounk7mao622
 id: ef33745c61b04562bbd6adc4c27bc319
+date: 2024-03-29
 ---
-
 I’m not a “[\[full-stack\] developer](https://bradfrost.com/blog/post/full-stack-developers/)”, regardless of what my last job title says.
 
 I’m not even a [front-end developer](https://css-tricks.com/the-great-divide/), thanks to the JavaScript–[industrial complex](https://en.wikipedia.org/wiki/Industrial_complex).

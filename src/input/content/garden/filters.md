@@ -6,7 +6,9 @@ tags:
   - Community
   - Web
   - AI
-created: '2024-12-07T07:21:42.604000+00:00'
+date: 2024-12-07T07:21:42.604Z
+created: 2024-12-07T07:21:42.604Z
+modified: 2024-12-08T22:17:44.782Z
 link: https://adactio.com/journal/21241
 id: 916166188
 excerpt: A web by humans, for humans.

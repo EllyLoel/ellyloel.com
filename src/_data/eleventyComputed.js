@@ -28,8 +28,4 @@ export default {
 		return backlinks;
 	},
 	canonical: (data) => new URL(data.page.url, data.metadata.url).href,
-	date: function (data) {
-		if (data?.created) return this.dateToISO(new Date(data?.created));
-		return this.dateToISO("2001-08-16");
-	},
 };

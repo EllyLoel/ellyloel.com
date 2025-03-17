@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 
 import "dotenv/config";
-import { existsSync, mkdirSync } from 'node:fs';
+import { existsSync, mkdirSync } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 import EleventyFetch from "@11ty/eleventy-fetch";
 import { normalize } from "node:path";
+import process from "node:process";
 import slugify from "@sindresorhus/slugify";
-import yaml from 'js-yaml';
+import yaml from "js-yaml";
 
 const outputDir = normalize(`${import.meta.dirname}/../src/input/content/garden/`);
 
@@ -16,6 +17,7 @@ const markdownContent = (item) => {
 		layout: 'bookmark',
 		title: item.title,
 		tags: item.tags,
+		date: item.created,
 		created: item.created,
 		modified: item.modified,
 		link: item.link,
@@ -31,84 +33,98 @@ const markdownContent = (item) => {
 
 	if (item.highlights?.length > 0) frontmatter.highlights = item.highlights;
 
-	const yamlString = yaml.dump(frontmatter);
+	const yamlString = yaml.dump(frontmatter, {
+			lineWidth: -1,
+			schema: yaml.JSON_SCHEMA,
+		});
 	return `---\n${yamlString}---`;
 };
 
-async function writeBookmarkToMarkdown(item) {
-  const filename = `${outputDir}/${slugify(item.title)}.md`;
-  let existingContent = "";
-  if (existsSync(filename)) {
-    existingContent = await readFile(filename, { encoding: "utf8" });
-  }
+async function writeBookmarkToMarkdown(item, index) {
+	const filename = `${outputDir}${slugify(item.title)}.md`;
+	let existingContent = "";
+	if (existsSync(filename)) {
+		existingContent = await readFile(filename, { encoding: "utf8" });
+	}
 
-  const content = markdownContent(item);
+	const content = markdownContent(item);
 
-  let finalContent = content;
+	let finalContent = content;
 
-  if (existingContent) {
-    const endOfFrontmatter = existingContent.indexOf("---", 3);
-    if (endOfFrontmatter !== -1) {
-      const existingContentBody = existingContent.substring(endOfFrontmatter + 3);
-      finalContent = content + existingContentBody;
-    }
-  }
+	if (existingContent) {
+		const endOfFrontmatter = existingContent.indexOf("---", 3);
+		if (endOfFrontmatter !== -1) {
+			const existingContentBody = existingContent.substring(endOfFrontmatter + 3);
+			finalContent = content + existingContentBody;
+		}
+		console.log(`${index+1} Updating bookmark: ${filename}`);
+	} else {
+		console.log(`${index+1} Creating bookmark: ${filename}`);
+	}
 
-  await writeFile(filename, finalContent, { encoding: "utf8" });
+	await writeFile(filename, finalContent, { encoding: "utf8" });
 }
 
-const fetchBookmarks = async () => {
+const fetchBookmarks = async (fetchAll) => {
 	const collectionId = "33237518";
-	const raindropApiUrl = `https://api.raindrop.io/rest/v1/raindrops/${collectionId}`;
-	const backupFilePath = normalize(`${import.meta.dirname}/../bookmarks/backup.json`);
+	const perPage = 50;
+	let allItems = [];
+	let page = 0;
+	let hasMoreItems = true;
 
 	try {
-		const backupData = JSON.parse(
-			await readFile(backupFilePath, { encoding: "utf8" })
-		);
-		const data = await EleventyFetch(raindropApiUrl, {
-			directory: ".cache",
-			duration: process.env.ELEVENTY_ENV === "production" ? "0s" : "1d",
-			fetchOptions: {
-				headers: {
-					Authorization: `Bearer ${process.env.RAINDROP_ACCESS_TOKEN}`,
+		while (hasMoreItems) {
+			const raindropApiUrl = `https://api.raindrop.io/rest/v1/raindrops/${collectionId}?perpage=${perPage}&page=${page}`;
+			
+			console.log(`Fetching page ${page+1} of bookmarks...`);
+			
+			const data = await EleventyFetch(raindropApiUrl, {
+				directory: ".cache",
+				duration: process.env.ELEVENTY_ENV === "production" ? "0s" : "1d",
+				fetchOptions: {
+					headers: {
+						Authorization: `Bearer ${process.env.RAINDROP_ACCESS_TOKEN}`,
+					},
 				},
-			},
-			type: "json",
-		});
+				type: "json",
+			});
 
-		const backupItems = backupData.items.map((item) => {
-			if (item.tags) {
-				item.tags = item.tags.split(", ");
-			} else {
-				item.tags = [];
-			}
-			return item;
-		});
-		const newItems = data.items.map((item) => {
-			if (item.highlights.length > 0) {
-				for (let i = 0; i < item.highlights.length; i++) {
-					if (typeof item.highlights[i] === "string") continue;
-					item.highlights[i] = item.highlights[i].text;
+			const items = data.items.map((item) => {
+				if (item.highlights.length > 0) {
+					for (let i = 0; i < item.highlights.length; i++) {
+						if (typeof item.highlights[i] === "string") continue;
+						item.highlights[i] = item.highlights[i].text;
+					}
 				}
-			}
-			item.id = item._id;
-			delete item._id;
-			return item;
-		});
-		let items = newItems.concat(backupItems);
+				item.id = item._id;
+				delete item._id;
+				return item;
+			});
 
-		items = items.filter(
+			allItems = [...allItems, ...items];
+			
+			// If we're not fetching all or there are no more items, break the loop
+			if (!fetchAll || data.items.length < perPage) {
+				hasMoreItems = false;
+			} else {
+				page++;
+			}
+		}
+
+		// Remove duplicates
+		allItems = allItems.filter(
 			(itemA, index, self) => index === self.findIndex((itemB) => itemB.id === itemA.id)
 		);
 
-		if (items.length) {
+		if (allItems.length) {
 			// Ensure the output directory exists
 			if (!existsSync(outputDir)) {
 				mkdirSync(outputDir, { recursive: true });
 			}
 
-			for (const item of items) {
+			console.log(`Processing ${allItems.length} bookmarks...`);
+
+			for (const [index, item] of allItems.entries()) {
 				const bookmark = {
 					created: item.created,
 					excerpt: item.excerpt,
@@ -122,7 +138,7 @@ const fetchBookmarks = async () => {
 					title: item.title,
 				};
 
-				await writeBookmarkToMarkdown(bookmark);
+				await writeBookmarkToMarkdown(bookmark, index);
 			}
 		}
 	} catch (error) {
@@ -130,4 +146,4 @@ const fetchBookmarks = async () => {
 	}
 };
 
-await fetchBookmarks();
+await fetchBookmarks(process.argv?.[2] === "-a" || process.argv?.[2] === "--all");

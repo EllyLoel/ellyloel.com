@@ -12,8 +12,8 @@ tags:
 created: 2024-04-06
 modified: 2024-04-06
 id: d3531a5c82014d757dec47c3cdb318ed
+date: 2024-04-06
 ---
-
 This is a post that I'm going to **continually update** with more thoughts and information **over time**.
 
 I thought about different ways to order this post but in the end I just ended up going with A–Z.

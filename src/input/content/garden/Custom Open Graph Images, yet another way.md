@@ -7,8 +7,8 @@ tags:
 created: 2023-01-10
 modified: 2023-01-10
 id: b7ee4defb92f846a08850d93365a0e90
+date: 2023-01-10
 ---
-
 ## Creating a page for every page
 
 ~~~ callout **{% emoji "⚠️", "Warning." %} This probably isn't the best way to do this!**

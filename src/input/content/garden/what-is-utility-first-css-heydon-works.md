@@ -4,11 +4,12 @@ title: 'What is Utility-First CSS?: HeydonWorks'
 tags:
   - Bookmarks
   - CSS
-created: '2024-03-01T22:22:52.093Z'
+date: 2024-03-01T22:22:52.093Z
+created: 2024-03-01T22:22:52.093Z
+modified: 2024-03-01T22:23:41.655Z
 link: https://heydonworks.com/article/what-is-utility-first-css/
 id: 746196987
+image: https://rdl.ink/render/https%3A%2F%2Fheydonworks.com%2Farticle%2Fwhat-is-utility-first-css%2F
 highlights:
-  - >-
-    It turns out, people in tech are particularly bad at distinguishing between
-    paradigm shifts and paradigm sharts.
+  - It turns out, people in tech are particularly bad at distinguishing between paradigm shifts and paradigm sharts.
 ---

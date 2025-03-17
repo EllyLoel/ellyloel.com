@@ -6,7 +6,7 @@ export default function (collection, emptyFallbackDate) {
 	return new Date(
 		Math.max(
 			...collection.map((item) => {
-				return new Date(item.data.date);
+				return new Date(item.date);
 			})
 		)
 	);
