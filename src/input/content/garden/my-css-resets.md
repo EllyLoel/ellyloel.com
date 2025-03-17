@@ -6,7 +6,7 @@ tags:
   - CSS
 date: 2024-01-04T19:57:09.556Z
 created: 2024-01-04T19:57:09.556Z
-modified: 2024-01-04T19:57:09.556Z
+modified: 2025-03-17T02:53:59.059Z
 link: https://keithjgrant.com/posts/2024/01/my-css-resets/
 id: 708987369
 excerpt: Every now and then, I see someone post their latest and greatest set of CSS resets. Here’s mine.

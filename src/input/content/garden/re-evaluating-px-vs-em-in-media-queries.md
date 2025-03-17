@@ -3,11 +3,11 @@ layout: bookmark
 title: Re-evaluating px vs em in Media Queries
 tags:
   - Bookmarks
-  - CSS
   - Accessibility
+  - CSS
 date: 2023-05-31T22:19:24.339Z
 created: 2023-05-31T22:19:24.339Z
-modified: 2024-12-23T06:28:58.408Z
+modified: 2025-03-17T02:53:59.059Z
 link: https://keithjgrant.com/posts/2023/05/px-vs-em-in-media-queries/
 id: 582202404
 excerpt: |-

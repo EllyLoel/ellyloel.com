@@ -3,11 +3,11 @@ layout: bookmark
 title: CSS HD Gradients
 tags:
   - Bookmarks
-  - CSS
   - Tools
+  - CSS
 date: 2023-04-27T00:56:03.186Z
 created: 2023-04-27T00:56:03.186Z
-modified: 2023-04-27T00:56:03.186Z
+modified: 2025-03-17T02:53:59.059Z
 link: https://gradient.style/
 id: 564101166
 excerpt: Wide gamut Color 4 complaint CSS gradient builder.

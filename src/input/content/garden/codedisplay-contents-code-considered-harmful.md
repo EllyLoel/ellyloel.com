@@ -5,11 +5,11 @@ tags:
   - Bookmarks
   - Browsers
   - HTML
-  - CSS
   - Accessibility
+  - CSS
 date: 2023-05-27T05:43:13.269Z
 created: 2023-05-27T05:43:13.269Z
-modified: 2024-12-23T06:28:58.408Z
+modified: 2025-03-17T02:53:59.059Z
 link: https://ericwbailey.website/published/display-contents-considered-harmful/
 id: 579396260
 image: https://ericwbailey.website/static/favicons/social/facebook.png

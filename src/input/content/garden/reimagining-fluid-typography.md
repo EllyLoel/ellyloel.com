@@ -4,12 +4,12 @@ title: Reimagining Fluid Typography
 tags:
   - Bookmarks
   - Typography
-  - CSS
   - Accessibility
   - Browsers
+  - CSS
 date: 2025-02-21T01:13:45.690Z
 created: 2025-02-21T01:13:45.690Z
-modified: 2025-02-21T01:14:33.979Z
+modified: 2025-03-17T02:53:59.059Z
 link: https://www.oddbird.net/2025/02/12/fluid-type/
 id: 976530770
 excerpt: Are we responding to the right inputs?
