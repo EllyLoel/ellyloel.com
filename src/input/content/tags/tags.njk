@@ -18,8 +18,8 @@ eleventyComputed:
 {%- include "crazy-filter.njk" -%}
 
 <ul id="feed" class="[ feed ]">
-	{% set taglist = collections[tag] %}
-	{% for post in taglist | reverse %}
+	{% set taglist = collections[tag] | sort(true, false, "data.date") %}
+	{% for post in taglist %}
 		{%- set title = post.data.title -%}
 		{%- set url = post.url -%}
 		{%- setAsync "imageMarkup" -%}{%- endsetAsync -%}
