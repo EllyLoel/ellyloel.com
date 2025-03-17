@@ -6,12 +6,12 @@ tags:
   - Web Design
   - Working
   - Living
-  - CSS
   - HTML
   - Development
+  - CSS
 date: 2024-06-15T05:41:22.307Z
 created: 2024-06-15T05:41:22.307Z
-modified: 2024-06-15T05:42:00.587Z
+modified: 2025-03-17T02:53:59.059Z
 link: https://www.baldurbjarnason.com/2024/the-deskilling-of-web-dev-is-harming-us-all/
 id: 801361104
 excerpt: Even before the web developer job market became as dire as it is today, I was regularly seeing developers burn out and leave the industry. Some left for good; some only temporarily.

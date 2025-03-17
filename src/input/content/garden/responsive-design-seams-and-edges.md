@@ -3,11 +3,11 @@ layout: bookmark
 title: 'Responsive design: seams & edges'
 tags:
   - Bookmarks
-  - CSS
   - Building websites
+  - CSS
 date: 2023-05-28T12:00:32.902Z
 created: 2023-05-28T12:00:32.902Z
-modified: 2023-05-28T12:02:11.575Z
+modified: 2025-03-17T02:53:59.059Z
 link: https://ethanmarcotte.com/wrote/responsive-design-seams-edges/
 id: 580106008
 excerpt: In some ways, responsive design was an attempt to move past the idea of a “page.” How’s that worked out for us?

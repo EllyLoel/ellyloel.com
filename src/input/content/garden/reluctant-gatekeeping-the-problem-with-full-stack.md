@@ -4,12 +4,12 @@ title: 'Reluctant Gatekeeping: The Problem With Full Stack'
 tags:
   - Bookmarks
   - Building websites
-  - CSS
   - HTML
   - JavaScript
+  - CSS
 date: 2023-07-10T23:20:42.335Z
 created: 2023-07-10T23:20:42.335Z
-modified: 2025-03-11T10:49:49.149Z
+modified: 2025-03-17T02:53:59.059Z
 link: https://medium.com/@Heydon/reluctant-gatekeeping-the-problem-with-full-stack-e9ad836570f6
 id: 604175719
 image: https://rdl.ink/render/https%3A%2F%2Fmedium.com%2F%40Heydon%2Freluctant-gatekeeping-the-problem-with-full-stack-e9ad836570f6

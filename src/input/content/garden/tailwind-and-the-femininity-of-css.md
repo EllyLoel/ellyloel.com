@@ -6,7 +6,7 @@ tags:
   - CSS
 date: 2023-07-10T23:27:56.262Z
 created: 2023-07-10T23:27:56.262Z
-modified: 2023-07-10T23:30:05.635Z
+modified: 2025-03-17T02:53:59.059Z
 link: https://thoughtbot.com/blog/tailwind-and-the-femininity-of-css
 id: 604176439
 excerpt: Why we undervalue front-end expertise in the web development world.

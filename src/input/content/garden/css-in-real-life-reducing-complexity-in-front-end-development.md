@@ -3,11 +3,11 @@ layout: bookmark
 title: CSS { In Real Life } | Reducing Complexity in Front End Development
 tags:
   - Bookmarks
-  - CSS
   - Building websites
+  - CSS
 date: 2023-07-10T23:30:45.806Z
 created: 2023-07-10T23:30:45.806Z
-modified: 2023-07-10T23:31:27.583Z
+modified: 2025-03-17T02:53:59.059Z
 link: https://css-irl.info/reducing-complexity-in-front-end-development/
 id: 604176645
 excerpt: Tips, tricks and tutorials on the web’s most beautiful language.

@@ -3,11 +3,11 @@ layout: bookmark
 title: Watch Out for Layout Shifts with ‘ch’ Units
 tags:
   - Bookmarks
-  - CSS
   - Typefaces
+  - CSS
 date: 2023-05-31T22:33:20.879Z
 created: 2023-05-31T22:33:20.879Z
-modified: 2023-05-31T22:33:20.879Z
+modified: 2025-03-17T02:53:59.059Z
 link: https://cloudfour.com/thinks/watch-out-for-layout-shifts-with-ch-units/
 id: 582203817
 excerpt: Since `ch` units are based on your current font their value can change when fonts are loaded and cause unexpected layout shifts.
