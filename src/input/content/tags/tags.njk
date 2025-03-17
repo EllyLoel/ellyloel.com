@@ -15,10 +15,13 @@ eleventyComputed:
   title: "{{ tag }}"
 ---
 
+{%- set number = collections[tag] | length -%}
+<p>There {{ "is" if number === 1 else "are" }} <strong>{{ number }}</strong> post{{ "s" if number !== 1 }} tagged with <q>{{ tag }}</q>.</p>
+
 {%- include "crazy-filter.njk" -%}
 
 <ul id="feed" class="[ feed ]">
-	{% set taglist = collections[tag] | sort(true, false, "data.date") %}
+	{% set taglist = collections[tag] | sort(true, false, "date") %}
 	{% for post in taglist %}
 		{%- set title = post.data.title -%}
 		{%- set url = post.url -%}
@@ -31,7 +34,7 @@ eleventyComputed:
 			</svg>
 			{%- endsetAsync -%}
 		{%- endif -%}
-		{%- set date = post.data.date -%}
+		{%- set date = post.date -%}
 		{%- set label = "" -%}
 		{%- if post.data.modified -%}
 			{%- set label = "Last modified" -%}

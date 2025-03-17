@@ -7,8 +7,8 @@ tags:
 created: 2022-09-21
 modified: 2022-09-21
 id: ebaee0e2c9150eddf197cc57e913fe74
+date: 2022-09-21
 ---
-
 Something I've been thinking about for a while now is, how many design tokens is the right amount?
 
 I often see roughly around 10 for each colour, whether they're named 1-10 counting one-by-one or 100-1000 like font weights. So for example, in the font weight style of naming you might have `purple-300` and `teal-900`, etc.

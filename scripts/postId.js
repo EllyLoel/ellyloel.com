@@ -2,9 +2,10 @@
 
 // https://github.com/bobmonsour/rssid/
 
-import crypto from "crypto";
-import fs from "fs";
-import path from "path";
+import crypto from "node:crypto";
+import fs from "node:fs";
+import path from "node:path";
+import process from 'node:process';
 import yaml from "js-yaml";
 
 // Display the help message
@@ -96,7 +97,7 @@ function processFile(filename) {
 	const fileContent = fs.readFileSync(filePath, "utf-8");
 
 	// Extract existing front matter
-	const frontMatterMatch = fileContent.match(/^---\n([\s\S]*?)\n---\n/);
+	const frontMatterMatch = fileContent.match(/^---\n([\s\S]*?)\n---/);
 	let frontMatter = {};
 	let content = fileContent;
 

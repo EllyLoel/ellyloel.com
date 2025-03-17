@@ -7,7 +7,9 @@ tags:
   - Design
   - Development
   - Web Design
-created: '2023-10-25T09:42:47.387Z'
+date: 2023-10-25T09:42:47.387Z
+created: 2023-10-25T09:42:47.387Z
+modified: 2024-03-19T03:10:50.140Z
 link: https://heather-buchel.com/blog/2023/10/why-your-web-design-sucks/
 id: 667439274
 excerpt: Exploring the reasons why we no longer have web designers.

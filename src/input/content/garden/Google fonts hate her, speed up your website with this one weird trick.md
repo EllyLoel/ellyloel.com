@@ -8,8 +8,8 @@ tags:
 created: 2022-12-30
 modified: 2023-01-10
 id: 32059076e3a6e570c1df44d8f4aba62e
+date: 2022-12-30
 ---
-
 ![Parody of an old school clickbait web ad with the text “GOOGLE FONTS HATE HER! Speed up your website With this one weird trick! LEARN THE TRUTH NOW”](../../../assets/img/one-weird-trick.png)
 
 Jokes aside, I have spent a fair amount of time and effort figuring out how to improve my font situation.

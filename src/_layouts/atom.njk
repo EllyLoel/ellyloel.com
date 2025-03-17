@@ -17,20 +17,16 @@
 			<title>{{ post.data.title }}</title>
 			<link href="{{ absolutePostUrl }}"/>
 			<published>
-				{%- if post.data.created -%}
-					{{ post.data.created | dateObj | dateToRfc3339 }}
-				{%- else -%}
-					{{ post.data.date | dateObj | dateToRfc3339 }}
-				{%- endif -%}
+				{{- post.date | dateObj | dateToRfc3339 -}}
 			</published>
 			<updated>
 				{%- if post.data.modified -%}
 					{{ post.data.modified | dateObj | dateToRfc3339 }}
 				{%- else -%}
-					{{ post.data.date | dateObj | dateToRfc3339 }}
+					{{ post.date | dateObj | dateToRfc3339 }}
 				{%- endif -%}
 			</updated>
-			<id>tag:ellyloel.com,{{ post.data.date | dateToISO }}:{{ post.data.id }}</id>
+			<id>tag:ellyloel.com,{{ post.date | dateToISO }}:{{ post.data.id }}</id>
 			<content type="html">
 				{%- if post.content -%}
 					{%- set content = post.content %}

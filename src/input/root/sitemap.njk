@@ -12,7 +12,7 @@ permalink: "sitemap.xml"
 			{%- if page.data.modified -%}
 				{{ page.data.modified | dateToISO }}
 			{%- else -%}
-				{{ page.data.date | dateToISO }}
+				{{ page.date | dateToISO }}
 			{%- endif -%}
 		</lastmod>
 	</url>

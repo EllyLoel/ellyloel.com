@@ -7,8 +7,8 @@ tags:
 created: 2022-09-19
 modified: 2025-01-13
 id: 28bd1b0d167f5b57d49c2da1553ab4db
+date: 2022-09-19
 ---
-
 ~~~ callout **This post is old**
 Read it if you want, though I'd recommend my essay [front-end development’s identity crisis](/garden/front-end-development-s-identity-crisis/) instead.
 ~~~

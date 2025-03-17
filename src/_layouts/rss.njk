@@ -24,9 +24,9 @@
 				{{- content | renderTransforms(post.data.page, metadata.url) -}}
 			</description>
 			<comments>{{ absolutePostUrl }}#webmentions</comments>
-			<pubDate>{{ post.data.date | dateObj | dateToRfc822 }}</pubDate>
+			<pubDate>{{ post.date | dateObj | dateToRfc822 }}</pubDate>
 			<dc:creator>{{ metadata.author.name }}</dc:creator>
-			<guid>tag:ellyloel.com,{{ post.data.date | dateToISO }}:{{ post.data.id }}</guid>
+			<guid>tag:ellyloel.com,{{ post.date | dateToISO }}:{{ post.data.id }}</guid>
 			{%- for tag in post.data.tags | reject("equalto", "YouTube") | reject("equalto", "Seedling") | reject("equalto", "Budding") | reject("equalto", "Evergreen") | reject("equalto", "Essays") | reject("equalto", "Notes") | reject("equalto", "Microposts") | reject("equalto", "Bookmarks") | reject("equalto", "Projects") | reject("equalto", "Garden") %}
 			<category>{{ tag }}</category>
 			{%- endfor %}

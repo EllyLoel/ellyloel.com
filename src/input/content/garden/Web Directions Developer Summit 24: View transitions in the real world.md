@@ -11,8 +11,8 @@ syndication:
   - https://front-end.social/@elly/113568897446114657
   - https://bsky.app/profile/ellyloel.com/post/3lc4rebeqsc2q
 id: dde35eca6019748d6631963059682615
+date: 2024-11-28
 ---
-
 <picture>
 	<source
 		srcset="../../../assets/img/wdds24-horizontal.webp"

@@ -4,6 +4,7 @@
 	permalink: "css-grid-vs-flexbox/",
 	image: "./src/assets/img/Should-I-use-Flexbox-or-Grid.png",
 	tags: ["Evergreen", "Essays", "CSS"],
+	date: new Date("2022-10-04"),
 	created: new Date("2022-10-04"),
 	modified: new Date("2022-10-24"),
 	id: "da2d4b2ce9549293f825711d3d955aca",

@@ -3,6 +3,7 @@
 	title: "I Dropped Out of My Computer Science Degree to Learn Coding",
 	image: "./src/assets/img/I-Dropped-Out-of-My-Computer-Science-Degree-to-Learn-Coding-on-Scrimba.png",
 	tags: ["Evergreen", "Essays", "Working"],
+	date: new Date("2022-05-01"),
 	created: new Date("2022-05-01"),
 	modified: new Date("2022-05-19"),
 	id: "5fa9114a1a105d19c70f5e5fa49a8bbf",

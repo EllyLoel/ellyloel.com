@@ -8,8 +8,8 @@ created: 2024-12-22
 modified: 2024-12-22
 id: 00a9efd477f80450dbd1c04757f46bb6
 draft: true
+date: 2024-12-22
 ---
-
 - "me" and "writing" don't feel right.
 - bookmarks, projects, etc. are top level when they shouldn't be, not really that important
 - Fun/cool things are being hidden

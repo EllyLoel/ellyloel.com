@@ -8,8 +8,8 @@ created: 2025-01-21
 modified: 2025-01-21
 id: eb99643131e8eb61e8588edd15617ce7
 draft: true
+date: 2025-01-21
 ---
-
 [A Framework for Evaluating Browser Support](https://www.joshwcomeau.com/css/browser-support/)
 
 We need [Can I use](https://caniuse.com/) but instead of support and usage data for front-end web technologies in browsers it's support and usage data for accessibility web technologies in assistive technologies and browsers.

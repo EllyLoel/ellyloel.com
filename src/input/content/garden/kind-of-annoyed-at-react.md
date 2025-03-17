@@ -6,7 +6,9 @@ tags:
   - JavaScript
   - Development
   - Building websites
-created: '2024-01-29T21:30:42.133Z'
+date: 2024-01-29T21:30:42.133Z
+created: 2024-01-29T21:30:42.133Z
+modified: 2024-01-29T21:30:42.133Z
 link: https://blog.cassidoo.co/post/annoyed-at-react/
 id: 725551826
 excerpt: Just a little ranty rant about my fave JS library, ya know.

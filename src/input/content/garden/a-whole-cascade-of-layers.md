@@ -4,7 +4,9 @@ title: A Whole Cascade of Layers
 tags:
   - Bookmarks
   - CSS
-created: '2022-12-05T10:12:50.000Z'
+date: 2022-12-05T10:12:50.000Z
+created: 2022-12-05T10:12:50.000Z
+modified: 2023-04-11T23:52:24.459Z
 link: https://www.miriamsuzanne.com/2022/09/06/layers
 id: 552296936
 image: https://www.miriamsuzanne.com/images/headshots/GBoSaie2zL-1600.jpeg

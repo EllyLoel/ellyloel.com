@@ -4,7 +4,9 @@ title: Hard Code & Soft Skills
 tags:
   - Bookmarks
   - Games
-created: '2024-12-21T10:41:52.258000+00:00'
+date: 2024-12-21T10:41:52.258Z
+created: 2024-12-21T10:41:52.258Z
+modified: 2024-12-21T10:42:40.158Z
 link: https://hardcodesoftskills.daverupert.com/
 id: 926160407
 excerpt: A Workplace Adventure Game

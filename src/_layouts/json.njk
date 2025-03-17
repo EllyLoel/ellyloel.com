@@ -12,7 +12,7 @@
 		{%- for post in collections[collection] %}
 		{%- set absolutePostUrl = post.url | htmlBaseUrl(metadata.url) %}
 		{
-			"id": "tag:ellyloel.com,{{ post.data.date | dateToISO }}:{{ post.data.id }}",
+			"id": "tag:ellyloel.com,{{ post.date | dateToISO }}:{{ post.data.id }}",
 			"url": "{{ absolutePostUrl }}",
 			"title": "{{ post.data.title }}",
 			"content_html":{{ " " }}
@@ -37,7 +37,7 @@
 			{%- if post.data.modified %}
 			"date_modified": "{{ post.data.modified | dateObj | dateToRfc3339 }}",
 			{% endif -%}
-			"date_published": "{% if post.data.created %}{{ post.data.created | dateObj | dateToRfc3339 }}{% else %}{{ post.data.date | dateObj | dateToRfc3339 }}{% endif %}"
+			"date_published": "{{ post.date | dateObj | dateToRfc3339 }}"
 		}{% if not loop.last %},{% endif %}
 		{%- endfor %}
 	]

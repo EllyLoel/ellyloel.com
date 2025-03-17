@@ -8,8 +8,8 @@ tags:
 created: 2022-09-10
 modified: 2022-09-10
 id: 4ecc8f6cafb70e2977ca9bdcf8803458
+date: 2022-09-10
 ---
-
 Semantic/stateful/accessible selectors are really important!
 
 I strongly recommend these articles for anyone, especially if you’re still using `.is-active` or similar classes for styling state.

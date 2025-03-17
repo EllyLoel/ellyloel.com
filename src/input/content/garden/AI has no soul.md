@@ -9,8 +9,8 @@ created: 2025-02-11
 modified: 2025-02-11
 id: 3a946f767ce63b4489e2a71f7eef64a5
 draft: true
+date: 2025-02-11
 ---
-
 AI is good at prose, language, etc. but it isn't good at meaning.
 It has nothing to say, so it doesn't say much. But it looks like it's saying lots.
 We find use in AI because we're forced to do lots of writing that conforms to expectations of share but often contain little to no meaning.

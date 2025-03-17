@@ -6,8 +6,8 @@ tags:
 created: 2022-10-18
 modified: 2022-10-18
 id: 394f471086b68d8e6e9c8941ab72a047
+date: 2022-10-18
 ---
-
 ~~~ callout **Heads up this is an old post**
 This post hasn't been updated a long time, so it might be kinda crusty.
 ~~~

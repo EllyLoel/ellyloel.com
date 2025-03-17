@@ -7,8 +7,8 @@ tags:
 created: 2022-09-19
 modified: 2022-09-23
 id: 2c069db1b39669c32c2d8cca10f35567
+date: 2022-09-19
 ---
-
 ~~~ callout **Multi layered design system**
 With different levels of abstraction.
 ~~~

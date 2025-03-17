@@ -7,8 +7,8 @@ tags:
 created: 2022-07-04
 modified: 2022-07-04
 id: 5d1fa596f71b8f897cb9f86a8ea9400c
+date: 2022-07-04
 ---
-
 ## Navigation menu story
 
 While building the navigation menu for a past version of this site, I had some troubles getting it to work. I wanted it to have a frosted glass look as well as a wavy shape. The links below helped me get it working.

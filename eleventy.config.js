@@ -19,12 +19,12 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addCollection("allSortedByDate", (collectionApi) =>
 		collectionApi
 			.getAll()
-			.sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
+			.sort((a, b) => new Date(b.date) - new Date(a.date))
 	);
 	eleventyConfig.addCollection("BookmarksSortedByDate", (collectionApi) =>
 		collectionApi
 			.getFilteredByTag("Bookmarks")
-			.sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
+			.sort((a, b) => new Date(b.date) - new Date(a.date))
 	);
 	eleventyConfig.addCollection("notBookmarksSortedByDate", (collectionApi) => {
 		return collectionApi
@@ -33,13 +33,13 @@ export default async function(eleventyConfig) {
 				!item.data.tags?.includes("Pages") &&
 				!item.data.tags?.includes("Bookmarks")
 			)
-			.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
+			.sort((a, b) => new Date(b.date) - new Date(a.date));
 	});
 	eleventyConfig.addCollection("postsSortedByDate", (collectionApi) => {
 		return collectionApi
 			.getAll()
 			.filter((item) => !item.data.tags?.includes("Pages"))
-			.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
+			.sort((a, b) => new Date(b.date) - new Date(a.date));
 	});
 
 	// Filters

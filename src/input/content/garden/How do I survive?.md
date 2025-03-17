@@ -13,8 +13,8 @@ modified: 2024-03-23
 syndication:
   - https://front-end.social/@elly/112118705289157048
 id: 0057492cb87e50afb976ae275253347a
+date: 2024-03-18
 ---
-
 I thought I'd share my current musings. With the hope that it might either find me some answers from those in similar situations or maybe help someone else in a similar situation feel less alone.
 
 ## I'm unemployed, yay?

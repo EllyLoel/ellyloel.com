@@ -5,7 +5,9 @@ tags:
   - Bookmarks
   - Design Systems
   - Community
-created: '2023-10-07T02:52:19.257Z'
+date: 2023-10-07T02:52:19.257Z
+created: 2023-10-07T02:52:19.257Z
+modified: 2023-10-07T02:52:19.257Z
 link: https://amyhupe.co.uk/articles/burn-baby-burnout/
 id: 657131337
 excerpt: Why do design systems burn us out, and what can we do about it?
