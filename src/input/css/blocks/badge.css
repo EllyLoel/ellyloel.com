@@ -8,10 +8,10 @@
 	font-size: var(--font-size-0);
 	font-weight: var(--font-weight-body-bold);
 	justify-content: center;
-	line-height: 1;
+	line-height: 1.5;
 	margin: 0;
-	padding: 0.35em 0.6em;
-	white-space: nowrap;
+  padding-block: 0.1em;
+	padding-inline: 0.6em;
 
 	&.outline {
 		background: transparent;
