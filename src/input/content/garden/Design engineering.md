@@ -10,7 +10,7 @@ id: 28bd1b0d167f5b57d49c2da1553ab4db
 date: 2022-09-19
 ---
 ~~~ callout **This post is old**
-Read it if you want, though I'd recommend my essay [front-end development’s identity crisis](/garden/front-end-development-s-identity-crisis/) instead.
+Read it if you want, though I'd recommend my essay [front-end development’s identity crisis](/front-end-development-s-identity-crisis/) instead.
 ~~~
 
 There really is a difference between being able to evaluate and implement designs and being able to build and connect functionality to the backend.

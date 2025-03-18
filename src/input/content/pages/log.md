@@ -29,7 +29,7 @@ Making some visual and content design changes to the website.
 
 ## November, 2024
 
-Presented my talk [View transitions in the real world](/garden/web-directions-developer-summit-24-view-transitions-in-the-real-world/) at Web Directions Developer Summit.
+Presented my talk [View transitions in the real world](/web-directions-developer-summit-24-view-transitions-in-the-real-world/) at Web Directions Developer Summit.
 
 ## October, 2024
 
@@ -55,7 +55,7 @@ Helped Brodie table at [UglyCutie Art Market](https://market.uglycutie.com.au/).
 
 ## June, 2024
 
-Presented my talk [Front-end development's identity crisis](/garden/web-directions-code24-front-end-development-s-identity-crisis/) at Web Directions Code.
+Presented my talk [Front-end development's identity crisis](/web-directions-code24-front-end-development-s-identity-crisis/) at Web Directions Code.
 
 ## May, 2024
 
@@ -63,7 +63,7 @@ Helped Brodie table at [Sabby Gallery Market Day](https://sabby.gallery/events/2
 
 Finally got a job! I'm starting as a Digital Accessibility Officer at the Department of Employment and Workplace Relations (DEWR).
 
-[Catch me at Web Directions Code](/garden/catch-me-at-web-directions-code-24/)!
+[Catch me at Web Directions Code](/catch-me-at-web-directions-code-24/)!
 
 ## April, 2024
 
@@ -81,7 +81,7 @@ Brodie's birthday! 🎉
 
 Diagnosed with POTS.
 
-Wrote some banger posts, [How do I survive?](/blog/how-do-i-survive) and [Front-end development’s identity crisis](/blog/front-end-development-s-identity-crisis).
+Wrote some banger posts, [How do I survive?](/how-do-i-survive) and [Front-end development’s identity crisis](/front-end-development-s-identity-crisis).
 
 Still jobless.
 
@@ -149,7 +149,7 @@ Had the great pleasure of taking part in a [Crafting Type](https://craftingtype.
 
 Helped build a website for [Victorian Law Week](https://www.viclawweek.org.au/) (_yay!_) but it was on WebFlow (_oh nooo_).
 
-Wrote about [the accessibility of the different input types](/garden/input-types-a11y).
+Wrote about [the accessibility of the different input types](/input-types-a11y).
 
 Still working on building out the Portable Design System, things are slow moving working as a one woman show.
 
@@ -222,7 +222,7 @@ Completed Web components course by Dave Rupert on Frontend Masters
 
 Reading Every layout by Andy Bell and Hayden Pickering
 
-Building a Web Component to make [stylized text](/projects/stylized-text/) accessible
+Building a Web Component to make [stylized text](/stylized-text/) accessible
 
 Hosted a webinar about neurodiversity ([Neurodiversity in projects and at Portable](https://portable.com.au/events/neurodiversity-in-projects-and-at-portable))
 
@@ -302,7 +302,7 @@ Started CSS-for-JS Devs by Josh W Comeau
 
 ## December 2021
 
-I remixed a cool [Glitch In Bio](https://glitch.com/glitch-in-bio) on [Glitch](https://glitch.com/) for my partner [nervous ghost](https://twitter.com/nervousgh0st) (https://nervousgh0st.glitch.me/). The combination of simplicity and customisability makes it approachable for anyone. I was able to go in and make more advanced tweaks to set it up, but if my partner ever wants to add or change things they will easily be able to without having to worry about the more complex side.
+I remixed a cool [Glitch In Bio](https://glitch.com/glitch-in-bio) on [Glitch](https://glitch.com/) for my partner [Nervous Ghost](https://nervousghost.com) (https://nervousgh0st.glitch.me/). The combination of simplicity and customisability makes it approachable for anyone. I was able to go in and make more advanced tweaks to set it up, but if my partner ever wants to add or change things they will easily be able to without having to worry about the more complex side.
 
 I finally got all of the bug fixes and small tweaks for my website shipped. Most of the changes were to do with parts of the [digital garden](/garden/) (graph, markdown processing, link capturing, etc.) as well as some redirects 'n' stuff.
 

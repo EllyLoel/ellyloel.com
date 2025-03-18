@@ -20,13 +20,13 @@ I thought I'd share my current musings. With the hope that it might either find 
 ## I'm unemployed, yay?
 
 The duality of unemployment is exhausting. I can finally do what I want, rest when I need to, enjoy my interests again, spend time with friends and family, and so much more. But it's hard to enjoy any of that because I have no income and my savings are almost all gone and I feel guilty, stressed and anxious that I'm not doing enough. Constantly having all that swirling around in my head is exhausting.
-The number one biggest thing that's looming over me is obviously finding a job. But with [ADHD](/garden/adhd/) it's hard to find any motivation to look for jobs when I know that they're going to leave me feeling even worse than I'm currently feeling.
+The number one biggest thing that's looming over me is obviously finding a job. But with ADHD it's hard to find any motivation to look for jobs when I know that they're going to leave me feeling even worse than I'm currently feeling.
 The thing that sucks the most is that I'm sure I'll look back and wonder why I didn't enjoy my time off more.
 
 ### What jobs I'm applying for
 
 Looking at my [résumé](/resume/) or [LinkedIn recommendations](https://www.linkedin.com/in/ellyloel/#recommendations) it would probably seem like I'd be applying for all the Developer roles in the world but actually I really don't want to go back to roles like that again. (I'll get more into that soon.) So currently I'm mainly applying for Accessibility Specialist roles because I'm hopeful that they'll be better for me than Developer roles, all things considered. Though it's starting to get to the point where I can't be picky, so I'm also applying to _some_ Developer roles as well.
-It's also annoying because I know [what I want/need from a job](/garden/what-i-want-need-from-a-job/) I'm already looking at a smaller pool of jobs.
+It's also annoying because I know [what I want/need from a job](/what-i-want-need-from-a-job/) I'm already looking at a smaller pool of jobs.
 
 ## I feel like I'm running out of jobs
 
@@ -50,7 +50,7 @@ The shrinking is not just of the roles I want to do but also the places I want t
 - DEI more like DIE (transphobic, queerphobic, ableist, etc.)
 
 Almost every place I used to think would be cool to work at is now one (or more) of the above. Even places like Not-for-profits that seem like they'd be better on most of these issues end up over working the crap out of their workers.
-I feel like the last place I can turn to is government roles but they have their own slew of problems. Maybe I should go the self employment route, but I don’t think I could run my own business or freelance because of the inconsistency in salary. I can’t handle the monotony in government thanks to my [ADHD](/garden/adhd/) but then on the flip side I also can’t handle the inconsistency from self employment thanks to my autism.
+I feel like the last place I can turn to is government roles but they have their own slew of problems. Maybe I should go the self employment route, but I don’t think I could run my own business or freelance because of the inconsistency in salary. I can’t handle the monotony in government thanks to my ADHD but then on the flip side I also can’t handle the inconsistency from self employment thanks to my autism.
 
 ## I'm a living breathing contradiction to capitalism
 

@@ -20,7 +20,7 @@
 		{%- if page.url === "/" -%}
 			{%- rollup "src/input/js/lastfm.js" | url -%}
 		{%- endif -%}
-		{%- if page.url === "/garden/" or page.url === "/essays/" or page.url === "/notes/" or page.url === "/bookmarks/" or page.url === "/projects/" or page.url === "/garden/d3/" -%}
+		{%- if page.url === "/garden/" or page.url === "/d3/" -%}
 			{%- rollup "src/input/js/graph.js" | url -%}
 		{%- endif -%}
 		{%- if page.url === "/garden/" -%}
@@ -44,13 +44,13 @@
 
 		<main
 			class="[ wrapper flow ]
-				{%- if page.url === "/garden/" or page.url === "/essays/" or page.url === "/notes/" or page.url === "/microposts/" or page.url === "/bookmarks/" or page.url === "/projects/" -%}
+				{%- if page.url === "/garden/" or page.url === "/microposts/" or (page.url !== "/tags/" and page.url | includes("/tags/")) -%}
 					[ h-feed ]
 				{%- elif page.url !== "/" and page.url !== "/about/" -%}
 					[ h-entry ]
 				{%- endif -%}"
 			style="--wrapper-size: 100ch;"
-			{% if page.url !== "/" and page.url !== "/garden/" and page.url !== "/essays/" and page.url !== "/notes/" and page.url !== "/microposts/" and page.url !== "/bookmarks/" and page.url !== "/projects/" and page.url !== "/archive/" and not page.url | includes("/tags/") %}
+			{% if page.url !== "/" and page.url !== "/garden/" and page.url !== "/microposts/" and not page.url | includes("/tags/") %}
 				data-pagefind-body
 			{% endif %}
 		>
