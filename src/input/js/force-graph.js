@@ -9,26 +9,29 @@ export function ForceGraph(
 	},
 	{
 		nodeId = (d) => d.id, // given d in nodes, returns a unique identifier (string)
-		nodeGroup, // given d in nodes, returns an (ordinal) value for color
+		nodeGroup, // given d in nodes, returns an (ordinal) value for symbol
 		nodeGroups, // an array of ordinal values representing the node groups
 		nodeTitle, // given d in nodes, a title string
-		nodeFill = "currentColor", // node stroke fill (if not using a group color encoding)
-		nodeStroke = "#fff", // node stroke color
-		nodeStrokeWidth = 1.5, // node stroke width, in pixels
+		nodeFill = "currentColor", // node fill color
+		nodeStroke = "CanvasText", // node stroke color
+		nodeStrokeWidth = 0.5, // node stroke width, in pixels
 		nodeStrokeOpacity = 1, // node stroke opacity
 		nodeRadius = 5, // node radius, in pixels
 		nodeStrength,
 		linkSource = ({ source }) => source, // given d in links, returns a node identifier string
 		linkTarget = ({ target }) => target, // given d in links, returns a node identifier string
-		linkStroke = "#999", // link stroke color
-		linkStrokeOpacity = 0.6, // link stroke opacity
+		linkStroke = "CanvasText", // link stroke color
+		linkStrokeOpacity = 1, // link stroke opacity
 		linkStrokeWidth = 1.5, // given d in links, returns a stroke width in pixels
 		linkStrokeLinecap = "round", // link stroke linecap
 		linkStrength,
 		colors = d3.schemeTableau10, // an array of color strings, for the node groups
+		symbols = d3.symbolsFill, // an array of symbol types for node groups
 		width = 640, // outer width, in pixels
 		height = 400, // outer height, in pixels
 		invalidation, // when this promise resolves, stop the simulation
+		enableZoom = true, // whether to enable zoom behavior
+		zoomExtent = [0.1, 10], // zoom scale extent [min, max]
 	} = {}
 ) {
 	// Compute values.
@@ -44,18 +47,20 @@ export function ForceGraph(
 			: d3.map(links, linkStrokeWidth);
 
 	// Replace the input nodes and links with mutable objects for the simulation.
-	nodes = d3.map(nodes, (_, i) => ({ id: N[i] }));
-	links = d3.map(links, (_, i) => ({ source: LS[i], target: LT[i] }));
+	// Create copies to avoid mutating the original data
+	nodes = d3.map(nodes, (d, i) => ({...d, id: N[i]}));
+	links = d3.map(links, (d, i) => ({...d, source: LS[i], target: LT[i]}));
 
 	// Compute default domains.
 	if (G && nodeGroups === undefined) nodeGroups = d3.sort(G);
 
 	// Construct the scales.
 	const color = nodeGroup == null ? null : d3.scaleOrdinal(nodeGroups, colors);
+	const symbol = nodeGroup == null ? null : d3.scaleOrdinal(nodeGroups, symbols);
 
 	// Construct the forces.
 	const forceNode = d3.forceManyBody();
-	const forceLink = d3.forceLink(links).id(({ index: i }) => N[i]);
+	const forceLink = d3.forceLink(links).id(d => d.id);
 	if (nodeStrength !== undefined) forceNode.strength(nodeStrength);
 	if (linkStrength !== undefined) forceLink.strength(linkStrength);
 
@@ -64,8 +69,7 @@ export function ForceGraph(
 		.force("link", forceLink)
 		.force("charge", forceNode)
 		.force("x", d3.forceX())
-		.force("y", d3.forceY())
-		.on("tick", ticked);
+		.force("y", d3.forceY());
 
 	const svg = d3
 		.create("svg")
@@ -75,7 +79,21 @@ export function ForceGraph(
 		.attr("viewBox", [-width / 2, -height / 2, width, height])
 		.attr("style", "max-width: 100%; height: auto;");
 
-	const link = svg
+	// Create a container group for all elements that will be transformed by zoom
+	const container = svg.append("g");
+
+	// Add zoom behavior if enabled
+	if (enableZoom) {
+		const zoom = d3.zoom()
+			.scaleExtent(zoomExtent)
+			.on("zoom", (event) => {
+				container.attr("transform", event.transform);
+			});
+
+		svg.call(zoom);
+	}
+
+	const link = container
 		.append("g")
 		.attr("stroke", linkStroke)
 		.attr("stroke-opacity", linkStrokeOpacity)
@@ -88,24 +106,41 @@ export function ForceGraph(
 		.data(links)
 		.join("line");
 
-	if (W) link.attr("stroke-width", ({ index: i }) => W[i]);
+	if (W) link.attr("stroke-width", (d, i) => W[i]);
 
-	const node = svg
+	const node = container
 		.append("g")
 		.attr("fill", nodeFill)
 		.attr("stroke", nodeStroke)
 		.attr("stroke-opacity", nodeStrokeOpacity)
 		.attr("stroke-width", nodeStrokeWidth)
-		.selectAll("circle")
+		.selectAll("path")
 		.data(nodes)
 		.join("a")
-		.attr("href", (node) => `..${node.id}`)
-		.append("circle")
-		.attr("r", nodeRadius)
-		.call(drag(simulation));
+		.attr("href", (node) => node.id)
+		.append("path")
+		.call(d3.drag()
+			.on("start", dragstarted)
+			.on("drag", dragged)
+			.on("end", dragended));
 
-	if (G) node.attr("fill", ({ index: i }) => color(G[i]));
-	if (T) node.append("title").text(({ index: i }) => T[i]);
+	if (G) {
+		node.attr("d", ({ val = 1 }, i) => {
+			console.log(val);
+			const symbolType = symbol(G[i]);
+			const symbolGen = d3.symbol().type(symbolType).size(nodeRadius * val * 20);
+			return symbolGen();
+		});
+		
+		node.attr("fill", (d, i) => color(G[i]));
+	} else {
+		node.attr("d", ({ val = 1 }, i) => d3.symbol().type(d3.symbolCircle).size(nodeRadius * val * 20));
+	}
+	
+	if (T) node.append("title").text((d, i) => T[i]);
+
+	// Set up the simulation
+	simulation.on("tick", ticked);
 
 	// Handle invalidation.
 	if (invalidation != null) invalidation.then(() => simulation.stop());
@@ -118,38 +153,31 @@ export function ForceGraph(
 
 	function ticked() {
 		link
-			.attr("x1", (d) => d.source.x)
-			.attr("y1", (d) => d.source.y)
-			.attr("x2", (d) => d.target.x)
-			.attr("y2", (d) => d.target.y);
+			.attr("x1", d => d.source.x)
+			.attr("y1", d => d.source.y)
+			.attr("x2", d => d.target.x)
+			.attr("y2", d => d.target.y);
 
-		node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+		node.attr("transform", d => `translate(${d.x},${d.y})`);
 	}
 
-	function drag(simulation) {
-		function dragstarted(event) {
-			if (!event.active) simulation.alphaTarget(0.3).restart();
-			event.subject.fx = event.subject.x;
-			event.subject.fy = event.subject.y;
-		}
-
-		function dragged(event) {
-			event.subject.fx = event.x;
-			event.subject.fy = event.y;
-		}
-
-		function dragended(event) {
-			if (!event.active) simulation.alphaTarget(0);
-			event.subject.fx = null;
-			event.subject.fy = null;
-		}
-
-		return d3
-			.drag()
-			.on("start", dragstarted)
-			.on("drag", dragged)
-			.on("end", dragended);
+	// Drag functions from the newer version
+	function dragstarted(event) {
+		if (!event.active) simulation.alphaTarget(0.3).restart();
+		event.subject.fx = event.subject.x;
+		event.subject.fy = event.subject.y;
 	}
 
-	return Object.assign(svg.node(), { scales: { color } });
+	function dragged(event) {
+		event.subject.fx = event.x;
+		event.subject.fy = event.y;
+	}
+
+	function dragended(event) {
+		if (!event.active) simulation.alphaTarget(0);
+		event.subject.fx = null;
+		event.subject.fy = null;
+	}
+
+	return Object.assign(svg.node(), { scales: { color, symbol } });
 }
