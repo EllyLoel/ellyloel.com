@@ -1,16 +1,18 @@
-.markdown-container > .flow {
-	container: markdown / inline-size;
-	display: grid;
-	grid-template-columns: 1fr min(var(--size-content-3), 100%) 1fr;
+.markdown-container {
+	> .flow {
+		container: markdown / inline-size;
+		display: grid;
+		grid-template-columns: 1fr min(var(--size-content-3), 100%) 1fr;
 
-	& > * {
-		grid-column: 2 / auto;
-	}
+		& > * {
+			grid-column: 2 / auto;
+		}
 
-	& > :is(figure, picture, .table-container, .iframe-container) {
-		margin-inline: auto;
-		max-inline-size: 100%;
-		text-align: center;
+		& > :is(figure, picture, .table-container, .iframe-container) {
+			margin-inline: auto;
+			max-inline-size: 100%;
+			text-align: center;
+		}
 	}
 
 	& + .content-footer {
@@ -29,69 +31,69 @@
 			padding-inline: var(--size-4);
 			transition: box-shadow 0.3s var(--ease-1), opacity 0.5s var(--ease-2);
 
-			&.share {
-				--flow-space-setter: 0.75rem;
-
-				> h2 {
-					font-size: var(--font-size-5);
-					line-height: 1;
-				}
-
-				> div,
-				& share-button {
-					display: flex;
-					flex-wrap: wrap;
-					gap: var(--size-2);
-				}
-
-				> div {
-					font-size: var(--font-size-5);
-					margin-block-start: 0.25em;
-				}
-
-				& a,
-				& button {
-					margin: calc(var(--size-1) * -1);
-					padding: var(--size-1);
-				}
-
-				& button {
-					background: none;
-					border: none;
-					box-shadow: 0 0 0 var(--_highlight-size) var(--_highlight);
-					color: var(--link);
-					display: inline;
-					font-weight: var(--font-weight-body-normal);
-
-					&:hover {
-						--_highlight-size: 0.1em;
-					}
-				}
-
-				& a {
-					display: block;
-				}
-
-				& details {
-					margin: 0;
-					padding: 0;
-
-					& summary {
-						margin: 0;
-						padding: 0;
-					}
-
-					& img {
-						border-radius: var(--radius-2);
-						margin-block-start: var(--size-2);
-					}
-				}
-			}
-
 			&:is(:hover, :focus-within) {
 				--shadow-offset: var(--size-2);
 
 				transition: box-shadow 0.15s var(--ease-1);
+			}
+		}
+
+		> .share {
+			--flow-space-setter: 0.75rem;
+
+			> h2 {
+				font-size: var(--font-size-5);
+				line-height: 1;
+			}
+
+			> div,
+			& share-button {
+				display: flex;
+				flex-wrap: wrap;
+				gap: var(--size-2);
+			}
+
+			> div {
+				font-size: var(--font-size-5);
+				margin-block-start: 0.25em;
+			}
+
+			& a,
+			& button {
+				margin: calc(var(--size-1) * -1);
+				padding: var(--size-1);
+			}
+
+			& button {
+				background: none;
+				border: none;
+				box-shadow: 0 0 0 var(--_highlight-size) var(--_highlight);
+				color: var(--link);
+				display: inline;
+				font-weight: var(--font-weight-body-normal);
+
+				&:hover {
+					--_highlight-size: 0.1em;
+				}
+			}
+
+			& a {
+				display: block;
+			}
+
+			& details {
+				margin: 0;
+				padding: 0;
+
+				& summary {
+					margin: 0;
+					padding: 0;
+				}
+
+				& img {
+					border-radius: var(--radius-2);
+					margin-block-start: var(--size-2);
+				}
 			}
 		}
 
