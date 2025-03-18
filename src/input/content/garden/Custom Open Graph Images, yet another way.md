@@ -69,7 +69,7 @@ The size I'm using is `opengraph`, this just means that the screenshot will alwa
 As I mentioned earlier and as stated in the docs, the URL "must be URI encoded." This is what it looks like decoded:
 
 ```txt
-https://ellyloel.com/og/garden/custom-open-graph-images-yet-another-way/
+https://ellyloel.com/og/custom-open-graph-images-yet-another-way/
 ```
 
 Feel free to go to that URL if you want, as I've explained, it is literally the HTML version of the Open Graph image for this page. I think Ideally I wouldn't actually want to have this be an accessible page, but it wouldn't work if it wasn't as the 11ty Screenshot API needs to be able to go to it. Soooo.... {% emoji "🤷🏼‍♀️", "Woman shrugging." %}

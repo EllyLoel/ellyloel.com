@@ -13,7 +13,7 @@
 }
 ---
 
-Well hello there! My name is [Elly Loel](https://ellyloel.com/about). I'm a developer, designer and writer, currently working as a junior developer at Portable!
+Well hello there! My name is [Elly Loel](/about/). I'm a developer, designer and writer, currently working as a junior developer at Portable!
 
 <figure>
 {% md %}
@@ -22,7 +22,7 @@ Well hello there! My name is [Elly Loel](https://ellyloel.com/about). I'm a deve
 <figcaption>Lulu trying her very best to distract me.</figcaption>
 </figure>
 
-I run a [newsletter](http://newsletter.ellyloel.com/) and love [sharing interesting things](https://elly.to/twitter) to help people become better coders! In my spare time, I love building mechanical keyboards, watching cartoons and anime, and hanging out with my partner Brodie and our cat Lulu. {% emoji "🐈‍⬛" %}
+I run a [newsletter](https://buttondown.com/ellyloel) and love [sharing interesting things](https://elly.to/mastodon) to help people become better coders! In my spare time, I love building mechanical keyboards, watching cartoons and anime, and hanging out with my partner Brodie and our cat Lulu. {% emoji "🐈‍⬛" %}
 
 You might have heard me on [the Scrimba podcast with Alex Booker](https://scrimba.com/podcast/ep-44-elly-loel/) or seen me in Portable’s [How to land your first tech job](https://youtu.be/1vix3U1P5xk) event.
 
@@ -88,7 +88,7 @@ Take the time to think about what is going to work best for you in terms of time
 {% md %}
 ![A chibi style drawing of me, a blonde woman in a white sweater hunched over sleeping on a desk drooling with Z’s floating above my head.](../../../assets/img/sleepy.png)
 {% endmd %}
-<figcaption>{% md %}Commission by [Nervous Ghost](https://twitter.com/nervousgh0st){% endmd %}</figcaption>
+<figcaption>{% md %}Commission by [Nervous Ghost](https://nervousghost.com){% endmd %}</figcaption>
 </figure>
 
 ## What made coding concepts “stick” for you
@@ -189,5 +189,5 @@ So that was a really huge challenge and a big leap of faith that I took, but I'm
 {% md %}
 ![A drawing of me, a blonde woman in a white sweater with headphones on sitting at my desk in front of a keyboard and monitor coding.](../../../assets/img/coding.png)
 {% endmd %}
-<figcaption>{% md %}Commission by [Nervous Ghost](https://twitter.com/nervousgh0st){% endmd %}</figcaption>
+<figcaption>{% md %}Commission by [Nervous Ghost](https://nervousghost.com){% endmd %}</figcaption>
 </figure>
