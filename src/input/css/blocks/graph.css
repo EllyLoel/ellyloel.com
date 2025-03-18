@@ -25,6 +25,8 @@ a[href="#skip-graph"] {
 	--opacity-duration: 100ms;
 	--transform-duration: 250ms;
 
+	background: var(--accent-bg-subtle);
+	inline-size: fit-content;
 	left: 0;
 	opacity: 0;
 	pointer-events: none;
@@ -32,7 +34,6 @@ a[href="#skip-graph"] {
 	right: 0;
 	transform: translateX(0%) translateY(-50%);
 	transition: opacity var(--opacity-duration) var(--ease-1) !important;
-	z-index: -1;
 
 	@media (prefers-reduced-motion: no-preference) {
 		transition: opacity var(--opacity-duration) var(--ease-1),
