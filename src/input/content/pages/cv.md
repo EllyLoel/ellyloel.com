@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: work
 title: CV
 eleventyNavigation:
   key: CV
@@ -24,6 +24,25 @@ eleventyNavigation:
 ### Department of Employment and Workplace Relations (DEWR) - Digital Accessibility Officer
 
 <span class="[ badge ][ neutral pill ]">May 2024-Present</span>
+
+- As a Digital Accessibility Officer, I ensure enterprise-level government systems are accessible and inclusive for all users, particularly those with disabilities. Working closely with design, development, and product teams, I conduct accessibility reviews, audits, and testing to ensure compliance with WCAG and best practices. My contributions impact millions of Australians by making essential government services more accessible.
+- **Key Responsibilities:**
+  - Conduct accessibility audits of websites, mobile applications, digital documents, and emails using WCAG standards and industry methodologies.
+  - Perform design reviews and provide accessibility recommendations for DEWR’s **Enterprise Design System** (Vue, D3, Figma) and other major projects.
+  - Use assistive technologies (JAWS, NVDA, VoiceOver, TalkBack, Dragon NaturallySpeaking, and more) to assess usability and accessibility compliance.
+  - Collaborate with delivery teams across multiple government agencies to improve accessibility at all stages of the development lifecycle.
+  - Mentor and train developers on writing accessible code, particularly within the design system team.
+  - Manage accessibility work items using Azure DevOps and provide guidance on accessibility implementation.
+- **Key Achievements:**
+  - Led **accessibility regression testing** for the department’s **design system**, ensuring components remained accessible and enhancing documentation for better adoption.
+  - Conducted baseline accessibility checks across **all department applications** to identify and prioritise improvements.
+  - Improved cross-team accessibility knowledge by mentoring developers and providing training sessions on accessible UI development.
+- **Skills & Tools:**
+  - **Accessibility Auditing & Remediation** (WCAG, WACEM, ARIA)
+  - **Assistive Technologies** (JAWS, NVDA, VoiceOver, TalkBack, Dragon)
+  - **Design System Development** (Vue, D3, Figma)
+  - **Agile & DevOps** (Azure DevOps, Microsoft 365)
+  - **Cross-Department Collaboration & Mentorship**
 
 ### Portable - Developer
 
