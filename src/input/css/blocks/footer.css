@@ -20,11 +20,16 @@
 		grid-auto-rows: max-content;
 		grid-template-areas:
 			"sitemap"
+			"AoC"
 			"socials"
 			"edit";
 		grid-template-columns: auto 1fr;
 		padding-block: var(--size-9);
 		row-gap: var(--size-9);
+
+		& .acknowledgement-of-country {
+			grid-area: AoC;
+		}
 
 		& picture {
 			display: none;
@@ -84,8 +89,9 @@
 			column-gap: var(--size-9);
 			grid-template-areas:
 				"sitemap image"
-				"socials image"
-				"edit image";
+				"AoC AoC"
+				"socials socials"
+				"edit edit";
 
 			& picture {
 				block-size: fit-content;
