@@ -36,9 +36,9 @@ eleventyNavigation:
 - **Key Achievements:**
   - Led **accessibility regression testing** for the department’s **design system**, ensuring components remained accessible and enhancing documentation for better adoption.
   - Conducted baseline accessibility checks across **all department applications** to identify and prioritise improvements.
-  - Improved cross-team accessibility knowledge by mentoring developers and providing training sessions on accessible UI development.
+  - Improved cross-team accessibility knowledge by mentoring developers on accessible UI development.
 - **Skills & Tools:**
-  - **Accessibility Standards, Auditing and Remediation** (WCAG, ARIA, WCAG-EM, DTA's Digital Inclusion Standard)
+  - **Accessibility standards, auditing and remediation** (WCAG, ARIA, WCAG-EM, DTA's Digital Inclusion Standard)
   - **Assistive technologies** (JAWS, NVDA, VoiceOver, TalkBack, Dragon, etc.)
   - **Design system design and development** (Vue, D3, Figma)
   - **Enterprise productivity tools** (Azure DevOps, Microsoft 365 apps)
