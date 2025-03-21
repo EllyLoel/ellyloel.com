@@ -43,9 +43,9 @@ const renderComments = (comments) => {
 
 	return `
 <details id="webmentions-comments">
-	<summary class="[ h3 ]">${comments.length} Comment${
+	<summary class="[ h3 ]"><h3>${comments.length} Comment${
 		comments.length > 1 ? "s" : ""
-	}</summary>
+	}</h3></summary>
 	<ol class="[ flow ]">
 		${comments.map(renderComment).join("")}
 	</ol>

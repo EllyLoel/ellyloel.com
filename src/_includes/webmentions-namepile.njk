@@ -1,7 +1,9 @@
 <details id="webmentions-{{ namepileMentionType }}s" class="[ namepile ]">
 	<summary class="[ h3 ]">
-		{{- namepileMentions.length }} {{ namepileMentionType }}
-		{{- "s" if (namepileMentions.length > 1) -}}
+		<h3>
+			{{- namepileMentions.length }} {{ namepileMentionType }}
+			{{- "s" if (namepileMentions.length > 1) -}}
+		</h3>
 	</summary>
 	<p>
 		{%- for namepileMention in namepileMentions -%}

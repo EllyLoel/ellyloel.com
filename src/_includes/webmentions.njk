@@ -2,8 +2,10 @@
 <div id="webmentions" class="[ webmentions ]">
 	<details class="[ flow ]">
 		<summary id="webmentions-summary" class="[ h2 ]">
-			{{- postMentions.total + " " if postMentions.total >= 1 -}}
-			Webmentions
+			<h2>
+				{{- postMentions.total + " " if postMentions.total >= 1 -}}
+				Webmentions
+			</h2>
 		</summary>
 		<is-land on:visible>
 			<template data-island>
@@ -27,8 +29,10 @@
 		{%- if postMentions.comments.length -%}
 			<details id="webmentions-comments">
 				<summary class="[ h3 ]">
-					{{- postMentions.comments.length }} Comment
-					{%- if (postMentions.comments.length > 1) %}s{% endif -%}
+					<h3>
+						{{- postMentions.comments.length }} Comment
+						{%- if (postMentions.comments.length > 1) %}s{% endif -%}
+					</h3>
 				</summary>
 				<ol class="[ flow ]">
 					{%- asyncEach comment in postMentions.comments -%}
@@ -42,8 +46,10 @@
 		{%- if postMentions.mentions.length -%}
 			<details id="webmentions-mentions">
 				<summary class="[ h3 ]">
-					{{- postMentions.mentions.length }} Mention
-					{%- if (postMentions.mentions.length > 1) %}s{% endif -%}
+					<h3>
+						{{- postMentions.mentions.length }} Mention
+						{%- if (postMentions.mentions.length > 1) %}s{% endif -%}
+					</h3>
 				</summary>
 				<ol class="[ flow ]">
 					{%- asyncEach mention in postMentions.mentions -%}
@@ -55,7 +61,7 @@
 			<div id="webmentions-mentions" hidden></div>
 		{%- endif -%}
 		<details class="[ flow flow-space-setter ]" style="--flow-space-setter: 0.5em;">
-			<summary style="font-size: var(--font-size-2);">Have you published your own post mentioning this one?</summary>
+			<summary style="font-size: var(--font-size-2);"><h3 class="[ detitlify ]">Have you published your own post mentioning this one?</h3></summary>
 			<form action="https://webmention.io/www.ellyloel.com/webmention" method="post" class="[ webmentions-form ][ flow flow-space-setter ]">
 				<label for="form-webmention-source">
 					Let me know the URL
