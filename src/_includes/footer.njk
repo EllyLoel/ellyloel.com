@@ -1,6 +1,12 @@
-<footer>
+<footer class="[ gradient-border ]" data-gradient-border="block-start">
 	<div class="[ site-footer ]">
 		<is-land on:visible>
+			<div class="[ wrapper ][ padding-block-start-9 ]" style="--wrapper-size: 100ch;">
+				<button type="button" id="update-doodle">
+					{%- inlineIcon "fas:dice" -%}
+					Refresh doodle
+				</button>
+			</div>
 			<template data-island>
 				{%- rollup "src/input/js/css-doodle.js" | url -%}
 			</template>
