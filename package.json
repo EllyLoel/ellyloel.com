@@ -37,7 +37,7 @@
 	"packageManager": "pnpm@9.14.2",
 	"dependencies": {
 		"@11ty/eleventy": "^3.0.0",
-		"@11ty/is-land": "^4.0.0",
+		"@11ty/is-land": "^4.0.1",
 		"@google/model-viewer": "^4.0.0",
 		"@remy/webmention": "^1.5.0",
 		"@terriblemia/eight-ball": "^0.2.0",
