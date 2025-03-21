@@ -63,9 +63,9 @@ const renderMentions = async (mentions) => {
 
 	return `
 <details id="webmentions-mentions">
-	<summary class="[ h3 ]">${mentions.length} Mention${
+	<summary class="[ h3 ]"><h3>${mentions.length} Mention${
 		mentions.length > 1 ? "s" : ""
-	}</summary>
+	}</h3></summary>
 	<ol class="[ flow ]">
 		${await mentionsMarkup()}
 	</ol>

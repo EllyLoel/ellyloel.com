@@ -1,5 +1,6 @@
 import addNonBreakingSpace from "./addNonBreakingSpace.js";
 import arrayFilter from "./arrayFilter.js";
+import backlinks from "./backlinks.js";
 import dateObj from "./dateObj.js";
 import dateToISO from "./dateToISO.js";
 import dateToLocale from "./dateToLocale.js";
@@ -26,6 +27,7 @@ import unique from "./unique.js";
 export default function(eleventyConfig) {
 	eleventyConfig.addFilter("addNonBreakingSpace", addNonBreakingSpace);
 	eleventyConfig.addFilter("arrayFilter", arrayFilter);
+	eleventyConfig.addFilter("backlinks", backlinks);
 	eleventyConfig.addFilter("dateObj", dateObj);
 	eleventyConfig.addFilter("dateToISO", dateToISO);
 	eleventyConfig.addFilter("dateToLocale", dateToLocale);

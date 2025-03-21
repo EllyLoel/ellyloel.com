@@ -15,7 +15,7 @@ const renderNamepile = (mentions, mentionType) => {
 
 	return `
 <details id="webmentions-${mentionType}s" class="[ namepile ]">
-	<summary class="[ h3 ]">${namepileTitle}</summary>
+	<summary class="[ h3 ]"><h3>${namepileTitle}</h3></summary>
 	<p>${mentions.map(namepileMention).join("")}</p>
 </details>`.trim();
 };
