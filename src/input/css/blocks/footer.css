@@ -1,8 +1,13 @@
 .site-footer {
 	position: relative;
 
+	& #update-doodle {
+		position: relative;
+		z-index: 1;
+	}
+
 	& css-doodle {
-		filter: blur(8px);
+		filter: blur(0.4rem);
 		inset: 0;
 		position: absolute;
 
