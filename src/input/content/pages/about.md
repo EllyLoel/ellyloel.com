@@ -9,9 +9,9 @@ eleventyNavigation:
 ## Who am I?
 
 Well hello there! My name is [Elly Loel](/){.h-card rel=me}. I'm a web designer ([front-end developer?](/front-end-development-s-identity-crisis/)) and accessibility & design system specialist.
-I love sharing interesting things so check out my socials or my newsletter! In my spare time, I love building mechanical keyboards, watching cartoons and anime, and hanging out with my partner [Brodie](https://nervousghost.com) and our cat [Lulu](/lulu/). 🐈‍⬛
+I love sharing interesting things so check out my socials or my newsletter! In my spare time, I love building [mechanical keyboards](/uses/), watching cartoons and anime, and hanging out with my partner [Brodie](https://nervousghost.com) and our cat [Lulu](/lulu/). 🐈‍⬛
 
-For more up to date details check out the [now](/now/) page.
+For more up-to-date details check out the [now](/now/) page.
 
 <details>
   <summary>

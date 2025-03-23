@@ -55,7 +55,7 @@ Helped Brodie table at [UglyCutie Art Market](https://market.uglycutie.com.au/).
 
 ## June, 2024
 
-Presented my talk [Front-end development's identity crisis](/web-directions-code24-front-end-development-s-identity-crisis/) at Web Directions Code.
+Presented my talk [Front-end development's identity crisis](/web-directions-code24-front-end-developments-identity-crisis/) at Web Directions Code.
 
 ## May, 2024
 
@@ -81,7 +81,7 @@ Brodie's birthday! 🎉
 
 Diagnosed with POTS.
 
-Wrote some banger posts, [How do I survive?](/how-do-i-survive) and [Front-end development’s identity crisis](/front-end-development-s-identity-crisis).
+Wrote some banger posts, [How do I survive?](/how-do-i-survive/) and [Front-end development’s identity crisis](/front-end-development-s-identity-crisis/).
 
 Still jobless.
 
@@ -149,7 +149,7 @@ Had the great pleasure of taking part in a [Crafting Type](https://craftingtype.
 
 Helped build a website for [Victorian Law Week](https://www.viclawweek.org.au/) (_yay!_) but it was on WebFlow (_oh nooo_).
 
-Wrote about [the accessibility of the different input types](/input-types-a11y).
+Wrote about [the accessibility of the different input types](/input-types-a11y/).
 
 Still working on building out the Portable Design System, things are slow moving working as a one woman show.
 

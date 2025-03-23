@@ -4,9 +4,9 @@ fetch("/api/graph.json")
 	.then((res) => res.json())
 	.then((data) => {
 		const graph = ForceGraph(data, {
-			nodeGroup: (d) => d.group,
-			nodeId: (d) => d.id,
-			nodeTitle: (d) => d.group && d.name.toLowerCase() !== d.group.toLowerCase() ? `${d.name} (${d.group})` : d.name,
+			getNodeGroup: (d) => d.group,
+			getNodeId: (d) => d.id,
+			getNodeTitle: (d) => d.group && d.name.toLowerCase() !== d.group.toLowerCase() ? `${d.name} (${d.group})` : d.name,
 		});
 
 		const skipLink = document.createElement("a");
