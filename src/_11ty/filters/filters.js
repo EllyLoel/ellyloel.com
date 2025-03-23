@@ -15,7 +15,6 @@ import getYouTubeId from "./getYouTubeId.js";
 import imageLink from "./imageLink.js";
 import includes from "./includes.js";
 import limit from "./limit.js";
-import linkGraph from "./linkGraph.js";
 import md from "./md.js";
 import newUrl from "./newUrl.js";
 import objKeys from "./objKeys.js";
@@ -42,7 +41,6 @@ export default function(eleventyConfig) {
 	eleventyConfig.addFilter("imageLink", imageLink);
 	eleventyConfig.addFilter("includes", includes);
 	eleventyConfig.addFilter("limit", limit);
-	eleventyConfig.addFilter("linkGraph", linkGraph);
 	eleventyConfig.addFilter("md", md);
 	eleventyConfig.addFilter("newUrl", newUrl);
 	eleventyConfig.addFilter("objKeys", objKeys);
