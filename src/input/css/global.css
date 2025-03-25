@@ -14,8 +14,10 @@ html {
 	font-family: var(--font-sans), var(--font-emoji);
 	font-size: calc(0.25vi + 0.25vb + 1em);
 	font-weight: var(--font-weight-body-normal);
+	hyphens: auto;
 	interpolate-size: allow-keywords;
 	letter-spacing: 0.04em;
+	overflow-wrap: anywhere;
 }
 
 body {
@@ -367,7 +369,6 @@ blockquote {
 summary {
 	border-radius: var(--radius-2);
 	margin: calc(var(--size-2) * -1) calc(var(--size-3) * -1);
-	overflow-wrap: break-word;
 	padding: var(--size-2) var(--size-3);
 
 	& :is(h1, h2, h3, h4, h5, h6) {
