@@ -29,3 +29,8 @@ date: 2025-02-15
 	- https://ashleemboyer.com/blog/why-you-should-use-px-units-for-margin-padding-and-other-spacing-techniques
 		- https://codepen.io/miriamsuzanne/pen/KKjVQMK?editors=0100
 - it can be frustrating when you resize the horizontal viewport and then you lose where you were in the page because the scroll point you were at no longer corresponds with the same point in the content.
+
+> I got into this because I found it interesting to think about interacting with an audience in terms of relationships to their preferences. I think that's the thing that drew me to CSS in the first place. [I wondered,] how far can I set aside the photons? How far down the path can I put that question of what's actually going to get rendered? [I wanted to] document the process of getting to it in a way where I can jump in and, when I adjust my user preferences, it feels like the result is right for that preference.
+> So I haven't thought too much about what is the right font size for my site, and instead I've thought about what is the right way of arriving at a font size for my site. If I start from this point, where should I arrive if I start from that point? [It's about] figuring out the logic of arriving at a design instead of thinking about the design.
+> But I know that I'm way out there when I think this way, and it's not the way most designers are working.
+— https://youtu.be/py41Ys-iRvk?t=1679
