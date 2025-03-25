@@ -124,11 +124,6 @@ body {
 	}
 }
 
-/* Avoid text overflows */
-:where(p, h1, h2, h3, h4, h5, h6) {
-	overflow-wrap: break-word;
-}
-
 /* Fix h1 font size inside article, aside, nav, and section */
 h1 {
 	font-size: 2em;
