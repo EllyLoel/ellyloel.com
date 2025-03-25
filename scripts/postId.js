@@ -125,7 +125,7 @@ function processFile(filename) {
 		lineWidth: -1,
 		schema: yaml.JSON_SCHEMA,
 	});
-	const newFileContent = `---\n${newFrontMatter}---\n${content}`;
+	const newFileContent = `---\n${newFrontMatter}---\n${content.trim()}`;
 	fs.writeFileSync(filePath, newFileContent, "utf-8");
 	return true; // Return true if processed successfully, false otherwise
 }
