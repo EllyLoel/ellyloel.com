@@ -14,7 +14,21 @@ html {
 	font-family: var(--font-sans), var(--font-emoji);
 	font-size: calc(0.25vi + 0.25vb + 1em);
 	font-weight: var(--font-weight-body-normal);
+	hanging-punctuation: first last;
+	/* stylelint-disable property-no-vendor-prefix */
+	-webkit-hyphenate-limit-after: 3;
+	-webkit-hyphenate-limit-before: 3;
+	-webkit-hyphenate-limit-chars: 6 3 3;
+	hyphenate-limit-chars: 6 3 3;
+	-webkit-hyphenate-limit-last: always;   
+	hyphenate-limit-last: always;   
+	-webkit-hyphenate-limit-lines: 2;
+	hyphenate-limit-lines: 2;
+	-webkit-hyphenate-limit-zone: 8%;
+	hyphenate-limit-zone: 8%;
+	-webkit-hyphens: auto;
 	hyphens: auto;
+	/* stylelint-enable property-no-vendor-prefix */
 	interpolate-size: allow-keywords;
 	letter-spacing: 0.04em;
 	overflow-wrap: anywhere;
