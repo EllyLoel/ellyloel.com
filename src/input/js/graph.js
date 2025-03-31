@@ -10,16 +10,19 @@ fetch("/api/graph.json")
 		});
 
 		const skipLink = document.createElement("a");
-		const skipLinkText = document.createTextNode("Skip force directed graph of posts");
+		const skipLinkText = document.createTextNode("Skip to after graph of posts");
 		skipLink.appendChild(skipLinkText);
-		skipLink.setAttribute("href", "#skip-graph");
+		skipLink.setAttribute("href", "#after-graph");
+		skipLink.setAttribute("id", "before-graph");
 
 		const skipLinkAnchor = document.createElement("a");
-		skipLinkAnchor.setAttribute("id", "skip-graph");
-		skipLinkAnchor.className = "[ visually-hidden ]";
+		const skipLinkAnchorText = document.createTextNode("Skip to before graph of posts");
+		skipLinkAnchor.appendChild(skipLinkAnchorText);
+		skipLinkAnchor.setAttribute("href", "#before-graph");
+		skipLinkAnchor.setAttribute("id", "after-graph");
 
 		const graphEl = document.querySelector("#graph");
 
-		graphEl.previousElementSibling.removeAttribute("hidden");
+		graphEl.previousElementSibling.removeAttribute("hidden"); // Unhide the heading
 		graphEl.append(skipLink, graph, skipLinkAnchor);
 	});
