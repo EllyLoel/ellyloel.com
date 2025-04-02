@@ -32,6 +32,8 @@ export function ForceGraph(
 		height = 400, // outer height, in pixels
 		enableZoom = true,
 		zoomExtent = [0.1, 10], // zoom scale extent [min, max]
+		hasBeenZoomed = false,
+		hasBeenDragged = false,
 	} = {}
 ) {
 	let nodeGroups = d3
@@ -65,13 +67,12 @@ export function ForceGraph(
 		.create("svg")
 		.attr("width", width)
 		.attr("height", height)
-		.attr("viewBox", [-width / 2, -height / 2, width, height])
-		.attr("style", "max-width: 100%; height: auto;");
+		.attr("viewBox", [-width / 2, -height / 2, width, height]);
 
 	// Give the SVG an accessible name
 	svg
 		.append("title")
-		.text("Force directed graph of all the pages and links on this site.");
+		.text("Force-directed pages and links graph");
 
 	// Create a container group for all elements that will be transformed by zoom
 	const container = svg.append("g");
@@ -79,6 +80,7 @@ export function ForceGraph(
 	// Create the link container and the links
 	const link = container
 		.append("g")
+		.attr("aria-hidden", "true")
 		.attr("stroke", linkStroke)
 		.attr("stroke-width", linkStrokeWidth)
 		.attr("stroke-linecap", linkStrokeLinecap)
@@ -87,34 +89,96 @@ export function ForceGraph(
 		.data(links)
 		.join("line");
 
-	// Create the node container
+	// Create the node container and the nodes
 	const nodeContainer = container
 		.append("g")
 		.attr("fill", nodeFill)
 		.attr("stroke", nodeStroke)
 		.attr("stroke-width", nodeStrokeWidth)
 
-	// Create the nodes
 	const node = nodeContainer
-		.selectAll("path")
+		.selectAll("g")
 		.data(nodes)
 		.join("g");
 
-	// Create text
-	// const text = node
-	// 	.append("text")
-		// .attr("text-anchor", "middle")
-		// .attr("dominant-baseline", "hanging")
-		// .attr("y", 10)
-		// .style("font-size", "0.5em");
+	const button = node
+		.append("foreignObject")
+		.attr("class", "[ block ]")
+		.attr("width", 0) // Initial width, will be updated
+		.attr("height", 0) // Initial height, will be updated
+		.attr("x", 0) // Center the foreignObject
+		.attr("y", 0)
+		.append("xhtml:button")
+		.attr("id", (d) => `graph-${d.id.replace("https://", "").replaceAll(/[^a-zA-Z0-9_-]/g, "")}`)
+		.attr("class", "[ button-reset ][ block ]")
+		.on("click", (event, node) => {
+			const graphDialog = d3.select("#graph-dialog");
 
-	// Create link
-	node
-		.append("a")
-		.attr("fill", "CanvasText")
-		.attr("stroke", "Canvas")
-		.attr("paint-order", "stroke")
-		.attr("href", (node) => node.id)
+			graphDialog.selectAll("h2 a").remove();
+
+			graphDialog
+				.select("h2")
+				.append("a")
+				.text(node.group && node.name.toLowerCase() !== node.group.toLowerCase() ? `${node.name} (${node.group})` : node.name)
+				.attr("href", node.id);
+
+			graphDialog.selectAll("details :is(ul, p)").remove();
+
+			if (node?.backlinks?.length) {
+				graphDialog.select("details.incoming-links")
+					.append("ul")
+					.selectAll("li")
+					.data(node.backlinks)
+					.join("li")
+					.append("a")
+					.text((d) => d.name)
+					.attr("href", (d) => `#graph-${d.url.replace("https://", "").replaceAll(/[^a-zA-Z0-9_-]/g, "")}`)
+					.on("click", (event, node) => {
+						graphDialog.node().close();
+						document.querySelector(event.target.getAttribute("href")).focus();
+					});
+			} else {
+				graphDialog.select("details.incoming-links")
+					.append("p")
+					.text("None");
+			}
+
+			if (node?.links?.length) {
+				graphDialog.select("details.outgoing-links")
+					.append("ul")
+					.selectAll("li")
+					.data(node.links)
+					.join("li")
+					.append("a")
+					.text((d) => d.name)
+					.attr("href", (d) => `#graph-${d.url.replace("https://", "").replaceAll(/[^a-zA-Z0-9_-]/g, "")}`)
+					.on("click", (event, node) => {
+						graphDialog.node().close();
+						document.querySelector(event.target.getAttribute("href")).focus();
+					});
+			} else {
+				graphDialog.select("details.outgoing-links")
+					.append("p")
+					.text("None");
+			}
+
+			graphDialog
+				.node()
+				.showModal();
+
+			event.stopPropagation();
+		});
+
+	button
+		.append("span")
+		.attr("class", "[ visually-hidden ]")
+		.text(getNodeTitle)
+
+	const path = button
+		.append("svg:svg")
+		.attr("aria-hidden", "true")
+		.attr("width", 0) // Initial width, will be updated
+		.attr("height", 0) // Initial height, will be updated
 		.append("path")
 		.attr("fill", (node) => colorScale(node.group))
 		.attr("d", (node) => {
@@ -127,7 +191,9 @@ export function ForceGraph(
 				.type(symbolType)
 				.size(nodeRadius * val * 20);
 			return symbolGen();
-		})
+		});
+
+	path
 		.append("title")
 		.text(getNodeTitle);
 
@@ -137,6 +203,7 @@ export function ForceGraph(
 			.zoom()
 			.scaleExtent(zoomExtent)
 			.on("zoom", (event) => {
+				hasBeenZoomed = true;
 				container.attr("transform", event.transform);
 			});
 
@@ -144,6 +211,8 @@ export function ForceGraph(
 
 		// Wait for simulation to cool down before zooming to fit
 		simulation.on("end", () => {
+			if (hasBeenZoomed || hasBeenDragged) return;
+
 			// Calculate bounds from actual node positions
 			const xExtent = d3.extent(nodes, d => d.x);
 			const yExtent = d3.extent(nodes, d => d.y);
@@ -173,6 +242,26 @@ export function ForceGraph(
 
 	// Set the position attributes of links and nodes each time the simulation ticks
 	simulation.on("tick", () => {
+		path
+			.each(function() {
+				// Get the path's bounding box
+				const bbox = this.getBBox();
+				const padding = 2;
+				const width = bbox.width + padding * 2;
+				const height = bbox.height + padding * 2;
+
+				d3.select(this.parentNode) // svg
+					.attr("width", width)
+					.attr("height", height)
+					.attr("viewBox", `${bbox.x - padding} ${bbox.y - padding} ${width} ${height}`);
+	
+				d3.select(this.parentNode.parentNode.parentNode) // foreignObject
+					.attr("width", width)
+					.attr("height", height)
+					.attr("x", -width / 2)
+					.attr("y", -height / 2);
+			});
+
 		link
 			.attr("x1", (d) => d.source.x)
 			.attr("y1", (d) => d.source.y)
@@ -185,6 +274,7 @@ export function ForceGraph(
 
 	// Reheat the simulation when drag starts, and fix the subject position
 	function dragStarted(event) {
+		hasBeenDragged = true;
 		if (!event.active) simulation.alphaTarget(0.3).restart();
 		event.subject.fx = event.subject.x;
 		event.subject.fy = event.subject.y;

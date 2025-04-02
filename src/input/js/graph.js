@@ -23,6 +23,5 @@ fetch("/api/graph.json")
 
 		const graphEl = document.querySelector("#graph");
 
-		graphEl.previousElementSibling.removeAttribute("hidden"); // Unhide the heading
 		graphEl.append(skipLink, graph, skipLinkAnchor);
 	});

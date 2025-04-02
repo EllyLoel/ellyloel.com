@@ -26,13 +26,13 @@ const renderWebmentions = async (webmentions) => {
 	}
 
 	const webmentionsSummary = document.getElementById("webmentions-summary");
-	const webmentionsLikes = document.getElementById("webmentions-likes");
-	const webmentionsReposts = document.getElementById("webmentions-reposts");
-	const webmentionsComments = document.getElementById("webmentions-comments");
-	const webmentionsMentions = document.getElementById("webmentions-mentions");
+	const webmentionsLikes = document.querySelector("#webmentions-likes, #webmentions-Likes");
+	const webmentionsReposts = document.querySelector("#webmentions-reposts, #webmentions-Reposts");
+	const webmentionsComments = document.querySelector("#webmentions-comments, #webmentions-Comments");
+	const webmentionsMentions = document.querySelector("#webmentions-mentions, #webmentions-Mentions");
 
 	if (webmentions.length) {
-		webmentionsSummary.innerHTML = `${webmentions.length} Webmentions`;
+		webmentionsSummary.innerHTML = `<h2>${webmentions.length} Webmentions</h2>`;
 	}
 
 	if (likes.length) {

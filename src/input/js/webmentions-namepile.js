@@ -5,7 +5,13 @@ const renderNamepile = (mentions, mentionType) => {
 
 	const namepileMention = (mention, index) =>
 		`${
-			index === mentions.length - 1 && mentions.length > 1 ? "and " : ""
+			index === mentions.length - 1
+				? mentions.length > 2
+					? " and "
+					: mentions.length > 1
+						? "and "
+						: ""
+				: ""
 		}<a href="${mention.author.url}">${mention.author.name
 			.replaceAll("????", "")
 			.replaceAll(/:\w*:/g, "")
@@ -14,7 +20,7 @@ const renderNamepile = (mentions, mentionType) => {
 		}${index === mentions.length - 1 ? "." : ""}`;
 
 	return `
-<details id="webmentions-${mentionType}s" class="[ namepile ]">
+<details id="webmentions-${mentionType}s" class="[ namepile ][ details-reset ]">
 	<summary class="[ h3 ]"><h3>${namepileTitle}</h3></summary>
 	<p>${mentions.map(namepileMention).join("")}</p>
 </details>`.trim();

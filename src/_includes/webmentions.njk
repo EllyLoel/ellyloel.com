@@ -1,6 +1,6 @@
-{%- set postMentions = webmentions | webmentionsForPage -%}
+{%- set postMentions = webmentions | webmentionsForPage(page.url) -%}
 <div id="webmentions" class="[ webmentions ]">
-	<details class="[ flow ]">
+	<details class="[ details-reset ][ flow ]">
 		<summary id="webmentions-summary" class="[ h2 ]">
 			<h2>
 				{{- postMentions.total + " " if postMentions.total >= 1 -}}
@@ -27,7 +27,7 @@
 			<div id="webmentions-reposts" hidden></div>
 		{%- endif -%}
 		{%- if postMentions.comments.length -%}
-			<details id="webmentions-comments">
+			<details id="webmentions-comments" class="[ details-reset ]">
 				<summary class="[ h3 ]">
 					<h3>
 						{{- postMentions.comments.length }} Comment
@@ -44,7 +44,7 @@
 			<div id="webmentions-comments" hidden></div>
 		{%- endif -%}
 		{%- if postMentions.mentions.length -%}
-			<details id="webmentions-mentions">
+			<details id="webmentions-mentions" class="[ details-reset ]">
 				<summary class="[ h3 ]">
 					<h3>
 						{{- postMentions.mentions.length }} Mention
@@ -60,7 +60,7 @@
 		{%- else -%}
 			<div id="webmentions-mentions" hidden></div>
 		{%- endif -%}
-		<details class="[ flow flow-space-setter ]" style="--flow-space-setter: 0.5em;">
+		<details class="[ details-reset ][ flow flow-space-setter ]" style="--flow-space-setter: 0.5em;">
 			<summary style="font-size: var(--font-size-2);"><h3 class="[ detitlify ]">Have you published your own post mentioning this one?</h3></summary>
 			<form action="https://webmention.io/www.ellyloel.com/webmention" method="post" class="[ webmentions-form ][ flow flow-space-setter ]">
 				<label for="form-webmention-source">

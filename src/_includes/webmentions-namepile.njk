@@ -1,4 +1,4 @@
-<details id="webmentions-{{ namepileMentionType }}s" class="[ namepile ]">
+<details id="webmentions-{{ namepileMentionType }}s" class="[ namepile ][ details-reset ]">
 	<summary class="[ h3 ]">
 		<h3>
 			{{- namepileMentions.length }} {{ namepileMentionType }}
@@ -7,6 +7,7 @@
 	</summary>
 	<p>
 		{%- for namepileMention in namepileMentions -%}
+			{{- " " if loop.last and loop.length === 2 -}}
 			{{- "and " if loop.last and not loop.first -}}
 			<a href="{{ namepileMention.author.url }}">
 				{{- namepileMention.author.name | replace("????", "") | replace(r/:\w*:/g, "") | trim -}}

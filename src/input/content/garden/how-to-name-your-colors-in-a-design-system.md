@@ -13,5 +13,16 @@ id: 555699987
 excerpt: Definitive, Semantic, and Contextual naming conventions
 image: https://miro.medium.com/v2/resize:fit:1200/1*d0yaWBxPDG10Mfc0FAVAGA.jpeg
 highlights:
-  - Naming ConventionsDefinitive naming (Avoid!!!)Semantic naming (Describe color intent)Contextual naming (Describe color use)Combining Semantic+ContextualSemantic for DesignersContextual for EngineersColor weightsSemantic+weighted (tints/shades with numbers)Meaningful/useful weights (Use of L* values)Incidental vs. Essential weights (WCAG compliance)
+  - |-
+    Naming Conventions
+    - Definitive naming (Avoid!!!)
+    - Semantic naming (Describe color intent)
+    - Contextual naming (Describe color use)
+    Combining Semantic+Contextual
+    - Semantic for Designers
+    - Contextual for Engineers
+    Color weights
+    - Semantic+weighted (tints/shades with numbers)
+    - Meaningful/useful weights (Use of L* values)
+    - Incidental vs. Essential weights (WCAG compliance)
 ---

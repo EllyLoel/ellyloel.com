@@ -1,24 +1,20 @@
-// External imports
-import { eleventyImageTransformPlugin as pluginImageTransform } from "@11ty/eleventy-img";
 import pluginEmoji from "eleventy-plugin-emoji";
+import pluginExcerpt from "./excerpt.js";
 import pluginFavicons from "eleventy-plugin-gen-favicons";
 import pluginIcons from "eleventy-plugin-icons";
+import pluginImage from "./image.js";
+import { eleventyImageTransformPlugin as pluginImageTransform } from "@11ty/eleventy-img";
 // TODO: Come back to this
 // import pluginInterlinker from "@photogabble/eleventy-plugin-interlinker";
+import { plugin as pluginMarkdown } from "./markdown.js";
 import pluginNavigation from "@11ty/eleventy-navigation";
 import pluginNestingToc from "eleventy-plugin-nesting-toc";
+import pluginPostcss from "./postcss.js";
 import pluginRollup from "eleventy-plugin-rollup";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxhighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import pluginWebmentions from "eleventy-plugin-webmentions";
-
-// Internal imports
-import metadata from "../../_data/metadata.json" with { type: "json" }; // eslint-disable-line
-import pluginExcerpt from "./excerpt.js";
-import pluginImage from "./image.js";
-import { plugin as pluginMarkdown } from "./markdown.js";
-import pluginPostcss from "./postcss.js";
 import pluginUnfurl from "./unfurl.js";
+import pluginWebmentions from "./webmentions.js";
 
 /** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 export default function(eleventyConfig) {
@@ -105,15 +101,18 @@ export default function(eleventyConfig) {
 	eleventyConfig.addPlugin(pluginSyntaxhighlight);
 	eleventyConfig.addPlugin(pluginWebmentions, {
 		cacheDirectory: "./.cache",
-		domain: metadata.domain,
+		domain: ["www.ellyloel.com", "ellyloel.com"],
 		mentionTypes: {
 			comments: ["in-reply-to"],
 			likes: ["like-of"],
 			mentions: ["bookmark-of", "mention-of"],
 			reposts: ["repost-of"],
 		},
+		sanitizeOptions: {
+			allowedAttributes: ["class", "href", "title", "cite", "datetime"],
+			allowedTags: ["a", "abbr", "acronym", "b", "blockquote", "cite", "code", "del", "em", "i", "ins", "img", "q", "s", "strike", "strong"],
+		},
 		token: process.env.WEBMENTION_IO_API_KEY,
-		truncate: false,
 	});
 	eleventyConfig.addPlugin(pluginImageTransform, {
 		sharpOptions: {

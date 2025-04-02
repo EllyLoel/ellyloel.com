@@ -87,21 +87,5 @@
 	> nav[aria-labelledby="backlinks"] {
 		margin-inline: auto;
 		width: min(var(--size-content-3), 95%);
-
-		> details {
-			background: transparent;
-			block-size: fit-content;
-			padding: 0;
-			padding-block-end: var(--size-1);
-
-			> summary {
-				margin: 0;
-				padding: 0;
-			}
-
-			&[open] > summary {
-				margin-bottom: 0;
-			}
-		}
 	}
 }

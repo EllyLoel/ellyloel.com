@@ -62,7 +62,7 @@ const renderMentions = async (mentions) => {
 	};
 
 	return `
-<details id="webmentions-mentions">
+<details id="webmentions-mentions" class="[ details-reset ]">
 	<summary class="[ h3 ]"><h3>${mentions.length} Mention${
 		mentions.length > 1 ? "s" : ""
 	}</h3></summary>
