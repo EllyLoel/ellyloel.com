@@ -42,7 +42,7 @@ const renderComments = (comments) => {
 	};
 
 	return `
-<details id="webmentions-comments">
+<details id="webmentions-comments" class="[ details-reset ]">
 	<summary class="[ h3 ]"><h3>${comments.length} Comment${
 		comments.length > 1 ? "s" : ""
 	}</h3></summary>

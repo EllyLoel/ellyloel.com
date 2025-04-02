@@ -31,7 +31,11 @@ html {
 	/* stylelint-enable property-no-vendor-prefix */
 	interpolate-size: allow-keywords;
 	letter-spacing: 0.04em;
-	overflow-wrap: anywhere;
+	overflow-wrap: break-word;
+
+	@media (width <= 20em) {
+		overflow-wrap: anywhere;
+	}
 }
 
 body {
@@ -349,6 +353,7 @@ video {
 }
 
 /* svg */
+
 :not(#graph) > svg {
 	overflow: visible;
 }
@@ -380,30 +385,31 @@ blockquote {
 
 /* Details */
 
-summary {
-	border-radius: var(--radius-2);
-	margin: calc(var(--size-2) * -1) calc(var(--size-3) * -1);
-	padding: var(--size-2) var(--size-3);
-
-	& :is(h1, h2, h3, h4, h5, h6) {
-		display: inline;
-	}
+summary :is(h1, h2, h3, h4, h5, h6) {
+	display: inline;
 }
 
-details {
+details:not(.details-reset) {
 	background: var(--accent-bg-subtle);
 	border-radius: var(--radius-2);
 	padding-block: var(--size-2);
 	padding-inline: var(--size-3);
-}
 
-details[open] > summary {
-	border-end-end-radius: 0;
-	border-end-start-radius: 0;
-	margin-bottom: var(--size-2);
+	> summary {
+		border-radius: var(--radius-2);
+		margin: calc(var(--size-2) * -1) calc(var(--size-3) * -1);
+		padding: var(--size-2) var(--size-3);
+	}
+
+	&[open] > summary {
+		border-end-end-radius: 0;
+		border-end-start-radius: 0;
+		margin-bottom: var(--size-2);
+	}
 }
 
 /* Tables */
+
 .table-container {
 	--_border: var(--border-size-1) solid var(--accent-4);
 

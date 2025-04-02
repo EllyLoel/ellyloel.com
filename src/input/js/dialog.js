@@ -1,64 +1,22 @@
-// custom events to be added to <dialog>
-const dialogClosingEvent = new Event("closing");
-const dialogClosedEvent = new Event("closed");
-const dialogOpeningEvent = new Event("opening");
-const dialogOpenedEvent = new Event("opened");
-
-// track opening
-const dialogAttrObserver = new MutationObserver((mutations, observer) => {
-	mutations.forEach(async (mutation) => {
-		if (mutation.attributeName === "open") {
-			const dialog = mutation.target;
-
-			const isOpen = dialog.hasAttribute("open");
-			if (!isOpen) return;
-
-			dialog.removeAttribute("inert");
-
-			// set focus
-			const focusTarget = dialog.querySelector("[autofocus]");
-			focusTarget
-				? focusTarget.focus()
-				: dialog.querySelector("button").focus();
-
-			dialog.dispatchEvent(dialogOpeningEvent);
-			await animationsComplete(dialog);
-			dialog.dispatchEvent(dialogOpenedEvent);
-		}
-	});
-});
-
-// wait for all dialog animations to complete their promises
-const animationsComplete = (element) =>
-	Promise.allSettled(
-		element.getAnimations().map((animation) => animation.finished)
-	);
+const closedBySupported = (
+	typeof HTMLDialogElement !== "undefined" &&
+	typeof HTMLDialogElement.prototype === "object" &&
+	"closedBy" in HTMLDialogElement.prototype
+);
 
 // click outside the dialog handler
-const lightDismiss = ({ target: dialog }) => {
-	if (dialog.nodeName === "DIALOG") dialog.close("dismiss");
+const lightDismiss = ({ target }) => {
+	if (
+		!closedBySupported &&
+		target.getAttribute("closedby") === "any" &&
+		target.nodeName === "DIALOG" &&
+		target.childElementCount === 1 &&
+		target.children[0].classList.contains("container")
+	) {
+		target.close("dismiss");
+	}
 };
 
-const dialogClose = async ({ target: dialog }) => {
-	dialog.setAttribute("inert", "");
-	dialog.dispatchEvent(dialogClosingEvent);
-
-	await animationsComplete(dialog);
-
-	dialog.dispatchEvent(dialogClosedEvent);
-};
-
-// page load dialogs setup
-export default async function (dialog) {
+for (const dialog of document.querySelectorAll("dialog")) {
 	dialog.addEventListener("click", lightDismiss);
-	dialog.addEventListener("close", dialogClose);
-
-	dialogAttrObserver.observe(dialog, {
-		attributes: true,
-	});
-
-	// remove loading attribute
-	// prevent page load @keyframes playing
-	await animationsComplete(dialog);
-	dialog.removeAttribute("loading");
 }

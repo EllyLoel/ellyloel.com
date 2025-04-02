@@ -20,9 +20,6 @@
 		{%- if page.url === "/" -%}
 			{%- rollup "src/input/js/lastfm.js" | url -%}
 		{%- endif -%}
-		{%- if page.url === "/garden/" or page.url === "/d3/" -%}
-			{%- rollup "src/input/js/graph.js" | url -%}
-		{%- endif -%}
 		{%- if page.url === "/garden/" -%}
 			{%- rollup "src/input/js/garden-filters.js" | url -%}
 		{%- endif -%}

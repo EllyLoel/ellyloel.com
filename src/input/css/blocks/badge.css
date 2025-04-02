@@ -13,8 +13,12 @@
   padding-block: 0.1em;
 	padding-inline: 0.6em;
 
+	button:is(&):not(:active):hover {
+		--_highlight-size: var(--size-px-1);
+	}
+
 	&.outline {
-		background: transparent;
+		background: var(--accent-base);
 		border-color: var(--accent-6);
 		color: var(--accent-6);
 	}
@@ -24,7 +28,7 @@
 		color: var(--neutral-base);
 
 		&.outline {
-			background: transparent;
+			background: var(--neutral-base);
 			border-color: var(--neutral-6);
 			color: var(--neutral-6);
 		}

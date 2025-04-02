@@ -41,7 +41,12 @@ function extractLinksFromHtml(htmlContent) {
 
 				// For internal links only return the pathname for the url
 				return {
-					name: link.textContent.trim(),
+					name: link.childElementCount
+						? Array.from(link.childNodes)
+							.filter((child) => child.nodeType === 3 || child.nodeType === 1 && !child.hasAttribute("aria-hidden") && !child.hasAttribute("hidden"))
+							.map((child) => child.textContent.trim())
+							.join(" ")
+						: link.textContent.trim(),
 					url: url.hostname === DOMAIN || `www.${url.hostname}` === DOMAIN
 						? url.pathname
 						: url.toString(),
@@ -116,20 +121,22 @@ export async function render(data) {
 		if (EXCLUDE.includes(page.url) || page.url.includes("/tags/")) continue;
 
 		const links = extractLinksFromHtml(page.content);
-
+		
 		// Add node for this page if one doesn't already exist
+		const group = page.data.tags.find((tag) => !["Garden", "Seedling", "Budding", "Evergreen"].includes(tag));
+		const linksArray = Array.from(links);
 		if (!linkGraph.nodes.some((node) => node.id === page.url)) {
 			linkGraph.nodes.push({
-				group: page.data.tags?.[1] || page.data.tags?.[0] || "Tags",
+				group,
 				id: page.url,
 				name: page.data.title,
-				links: Array.from(links),
+				links: linksArray,
 			});
 		} else {
 			// If the node already exists add the group because it wouldn't exist
 			const node = linkGraph.nodes.find((node) => node.id === page.url);
-			node.group = page.data.tags?.[1] || page.data.tags?.[0] || "Tags";
-			Array.isArray(node.links) ? node.links.concat(Array.from(links)) : node.links = Array.from(links);
+			node.group = group;
+			Array.isArray(node.links) ? node.links.concat(linksArray) : node.links = linksArray;
 		}
 
 		for (const link of links) {
@@ -145,7 +152,7 @@ export async function render(data) {
 					otherLinks = content ? extractLinksFromHtml(content) : undefined;
 				}
 				linkGraph.nodes.push({
-					group: isExternal ? "External" : (link.url.startsWith("/tags/") && link.url !== "/tags/") ? "Tags" : undefined,
+					group: isExternal ? "External" : undefined,
 					id: link.url,
 					name: isExternal ? link.name : data.collections.all.find((page) => page.url === link.url)?.data.title || link.name,
 					links: otherLinks,

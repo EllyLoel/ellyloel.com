@@ -1,47 +1,49 @@
-<dialog class="[ settings-dialog ]" inert="inert" loading="loading">
-	<div class="[ container ][ flex flex-col gap-5 ]">
-		<h2 class="[ margin-0 line-height-1 ]">Settings</h2>
+<dialog closedby="any" class="[ settings-dialog ]">
+	<div class="[ container ]">
+		<form method="dialog" class="[ flow ]">
+			<button type="submit" autofocus>
+				<span class="[ visually-hidden ]">Close</span>
+				{%- icon "fas:xmark" -%}
+			</button>
 
-		<button type="button" data-action="close" class="[ padding-1 ]" style="font-size: 1.25rem;">
-			<span class="[ visually-hidden ]">Close</span>
-			{%- icon "fas:xmark" -%}
-		</button>
+			<h2 class="[ margin-0 line-height-1 ]">Settings</h2>
 
-		<button type="button" id="sound-button" aria-pressed="true">
-			{%- icon "fas:volume-high" -%}
-			{%- icon "fas:volume-xmark" -%}
-			Sounds
-		</button>
+			<button type="button" id="sound-button" aria-pressed="true">
+				{%- icon "fas:volume-high" -%}
+				{%- icon "fas:volume-xmark" -%}
+				Sounds
+			</button>
 
-		<button type="button" id="text-transform-button" aria-pressed="true">
-			{%- icon "fas:text-height" -%} Lowercase Text
-		</button>
+			<button type="button" id="text-transform-button" aria-pressed="true">
+				{%- icon "fas:text-height" -%} Lowercase Text
+			</button>
 
-		<fieldset style="border: none;">
-			<legend class="[ h3 line-height-1 margin-block-end-2 ]">Pick a colour scheme</legend>
-			<div class="[ color-scheme-switcher ][ flex flex-wrap gap-3 ]">
-				<button data-color-scheme="auto" aria-pressed="true">
-					{%- icon "fas:laptop" -%} Auto
-				</button>
-				<button data-color-scheme="light" aria-pressed="false">
-					{%- icon "fas:sun" -%} Light
-				</button>
-				<button data-color-scheme="dark" aria-pressed="false">
-					{%- icon "fas:moon" -%} Dark
-				</button>
+			<fieldset style="border: none;">
+				<legend class="[ h3 line-height-1 margin-block-end-2 ]">Pick a colour scheme</legend>
+				<div class="[ color-scheme-switcher ][ flex flex-wrap gap-3 ]">
+					<button type="button" data-color-scheme="auto" aria-pressed="true">
+						{%- icon "fas:laptop" -%} Auto
+					</button>
+					<button type="button" data-color-scheme="light" aria-pressed="false">
+						{%- icon "fas:sun" -%} Light
+					</button>
+					<button type="button" data-color-scheme="dark" aria-pressed="false">
+						{%- icon "fas:moon" -%} Dark
+					</button>
+				</div>
+			</fieldset>
+
+			<div class="[ flex flex-col gap-2 ]">
+				<h3 class="[ line-height-1 ]">
+					Change theme hue
+				</h3>
+				<is-land on:visible>
+					<template data-island>
+						{%- rollup "src/input/js/channel-slider.js" | url -%}
+					</template>
+					<channel-slider id="theme-hue" space="oklch" channel="h" color="oklch(50% 50% 315deg)"></channel-slider>
+				</is-land>
 			</div>
-		</fieldset>
-
-		<div class="[ flex flex-col gap-2 ]">
-			<h3 class="[ line-height-1 ]">
-				Change theme hue
-			</h3>
-			<is-land on:visible>
-				<template data-island>
-					{%- rollup "src/input/js/channel-slider.js" | url -%}
-				</template>
-				<channel-slider id="theme-hue" space="oklch" channel="h" color="oklch(50% 50% 315deg)"></channel-slider>
-			</is-land>
-		</div>
+		</form>
 	</div>
 </dialog>

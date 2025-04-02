@@ -9,23 +9,8 @@
 	}
 
 	& details {
-		background: transparent;
-		block-size: fit-content;
-		padding: 0;
-		padding-bottom: var(--size-1);
-		padding-right: var(--size-1);
-
-		> summary {
-			margin: 0;
-			padding: 0;
-		}
-
 		> summary:not(.h1, .h2, .h3, .h4, .h5, .h6) {
 			font-size: var(--font-size-4);
-		}
-
-		&[open] > summary {
-			margin-bottom: 0;
 		}
 	}
 

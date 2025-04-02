@@ -1,0 +1,56 @@
+dialog {
+	border-radius: var(--radius-3);
+	box-shadow: var(--shadow-6);
+	inline-size: 100%;
+	margin: auto;
+  max-block-size: 90%;
+	max-inline-size: min(95%, var(--size-content-2));
+	transition-behavior: allow-discrete;
+	transition-duration: 500ms;
+	transition-property: opacity, display, overlay, scale;
+	transition-timing-function: var(--ease-3);
+
+	&:modal {
+		opacity: 1;
+	}
+
+	&:not(:modal) {
+		opacity: 0;
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		&:modal {
+			scale: 100%;
+		}
+
+		&:not(:modal) {
+			scale: 80%;
+		}
+	}
+
+	@starting-style {
+		&:modal {
+			opacity: 0;
+
+			@media (prefers-reduced-motion: no-preference) {
+				scale: 80%;
+			}
+		}
+	}
+
+	> .container {
+		padding: var(--size-3);
+
+		& form[method="dialog"] {
+			float: inline-end;
+
+			& button[type="submit"] {
+				padding: var(--size-1);
+			}
+		}
+
+		:is(&.flow, & .flow) h2 {
+			--flow-space: 0;
+		}
+	}
+}

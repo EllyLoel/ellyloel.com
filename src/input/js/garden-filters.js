@@ -1,4 +1,4 @@
-const form = document.querySelector("form");
+const form = document.querySelector("form.garden-filters");
 const filterButtons = form.querySelectorAll("button[data-filter-name]");
 const showMoreTagsButton = form.querySelector("#show-more-tags");
 const showLessTagsButton = form.querySelector("#show-less-tags");

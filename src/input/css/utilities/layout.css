@@ -30,6 +30,14 @@
 	justify-content: center;
 }
 
+.justify-start {
+	justify-content: start;
+}
+
+.block {
+	display: block;
+}
+
 .inline {
 	display: inline;
 }
