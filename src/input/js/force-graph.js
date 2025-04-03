@@ -231,6 +231,13 @@ export function ForceGraph(
 			// Apply the zoom transform
 			svg.transition().duration(750).call(zoom.transform, transform);
 		});
+
+		button.on("focus", (event, node) => {
+			const transform = d3.zoomIdentity
+				.translate(-node.x, -node.y);
+
+			svg.transition().duration(145).call(zoom.transform, transform);
+		});
 	}
 
 	// Add drag behaviour
