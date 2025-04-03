@@ -611,7 +611,7 @@ menu {
 /* General interactive states */
 
 :focus-visible {
-	outline: 2px solid var(--link);
+	outline: 2px auto var(--link);
 	outline-offset: 0;
 }
 
