@@ -44,6 +44,10 @@
 			block-size: fit-content;
 			grid-area: sitemap;
 
+			& a {
+				margin-inline: 0;
+			}
+
 			> ul {
 				> li {
 					font-size: var(--font-size-4);
