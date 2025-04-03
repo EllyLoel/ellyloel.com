@@ -33,7 +33,6 @@
 
 /* Blocks */
 @import url("./blocks/badge.css") layer(blocks);
-@import url("./blocks/breadcrumb.css") layer(blocks);
 @import url("./blocks/button.css") layer(blocks);
 @import url("./blocks/callout.css") layer(blocks);
 @import url("./blocks/card.css") layer(blocks);
