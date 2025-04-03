@@ -72,7 +72,6 @@ is-land[data-for="graph"] {
 
 		& button {
 			cursor: grab;
-			outline: none;
 			pointer-events: none;
 			
 			&:active {
@@ -81,11 +80,6 @@ is-land[data-for="graph"] {
 
 			& path {
 				pointer-events: auto;
-			}
-
-			&:focus-visible path {
-				stroke-dasharray: 3 1;
-				stroke-width: 1px;
 			}
 		}
 	}
