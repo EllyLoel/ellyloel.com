@@ -39,14 +39,17 @@
 
 		{%- include "header.njk" -%}
 
+		<!-- tabindex fixes focus issue: https://benmyers.dev/blog/skip-links/#tldr -->
 		<main
+			id="content"
+			tabindex="-1"
 			class="[ wrapper flow ]
 				{%- if page.url === "/garden/" or page.url === "/microposts/" or (page.url !== "/tags/" and page.url | includes("/tags/")) -%}
 					[ h-feed ]
 				{%- elif page.url !== "/" and page.url !== "/about/" -%}
 					[ h-entry ]
 				{%- endif -%}"
-			style="--wrapper-size: 100ch;"
+			style="--wrapper-size: 60em;"
 			{% if page.url !== "/" and page.url !== "/garden/" and page.url !== "/microposts/" and not page.url | includes("/tags/") %}
 				data-pagefind-body
 			{% endif %}

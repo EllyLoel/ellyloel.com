@@ -39,13 +39,15 @@ dialog {
 	}
 
 	> .container {
-		padding: var(--size-3);
+		padding-block: var(--block-size-3);
+		padding-inline: var(--inline-size-3);
 
 		& form[method="dialog"] {
 			float: inline-end;
 
 			& button[type="submit"] {
-				padding: var(--size-1);
+				padding-block: var(--block-size-1);
+				padding-inline: var(--inline-size-1);
 			}
 		}
 

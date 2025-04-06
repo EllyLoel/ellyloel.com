@@ -1,3 +1,23 @@
-.radius {
-	border-radius: var(--size-1);
+.radius-1 {
+	border-radius: var(--radius-1);
+}
+
+.radius-2 {
+	border-radius: var(--radius-2);
+}
+
+.radius-3 {
+	border-radius: var(--radius-3);
+}
+
+.radius-4 {
+	border-radius: var(--radius-4);
+}
+
+.radius-5 {
+	border-radius: var(--radius-5);
+}
+
+.radius-6 {
+	border-radius: var(--radius-6);
 }

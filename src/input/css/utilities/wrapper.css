@@ -6,6 +6,6 @@
 .wrapper {
 	margin-inline: auto;
 	max-inline-size: var(--wrapper-size, var(--size-content-3));
-	padding-inline: var(--size-4);
+	padding-inline: var(--inline-size-4);
 	position: relative;
 }

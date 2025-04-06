@@ -13,6 +13,9 @@ modified: 2025-03-26
 date: 2025-03-26
 draft: true
 id: 9e84ce605468bbb52d405ac70736b195
+summary: |-
+  > The web is fundamentally different from other platforms, built around a radical political vision for resilience, adaptability, and user control.
+  > — Miriam Suzanne, in [Hints and suggestions](https://www.oddbird.net/talks/hints/)
 ---
 https://www.igalia.com/chats/alex-owa-remedy
 https://www.igalia.com/chats/chris-coyier

@@ -1,7 +1,7 @@
-.flow > * + * {
+.flow > *:not(.visually-hidden) + *:not(.visually-hidden) {
 	margin-block-start: var(--flow-space, 1em);
 }
 
-.flow-space-setter > * + * {
+.flow-space-setter > *:not(.visually-hidden) + *:not(.visually-hidden) {
 	--flow-space: var(--flow-space-setter);
 }

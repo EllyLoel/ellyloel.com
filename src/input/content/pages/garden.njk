@@ -126,7 +126,7 @@ eleventyImport:
 {%- include "crazy-filter.njk" -%}
 <h2>Posts</h2>
 {%- set posts = collections.postsSortedByDate -%}
-<ul id="feed" tabindex="-1" class="[ feed ]" style="--flow-space: var(--size-7)">
+<ul id="feed" tabindex="-1" class="[ feed ]" style="--flow-space: var(--block-size-7)">
 	{%- for post in posts %}
 		{%- if post.data.archived !== true -%}
 			{%- set headingLevel = 3 -%}

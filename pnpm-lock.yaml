@@ -128,12 +128,12 @@ importers:
       eleventy-plugin-icons:
         specifier: ^2.4.3
         version: 2.4.3
-      eleventy-plugin-nesting-toc:
-        specifier: ^1.3.0
-        version: 1.3.0
       eleventy-plugin-rollup:
         specifier: ^1.3.0
         version: 1.3.0(patch_hash=6bkplkunu2lg22hn2qr2pbc7hq)
+      eleventy-plugin-toc:
+        specifier: ^1.1.5
+        version: 1.1.5
       eleventy-plugin-webmentions:
         specifier: ^2.1.0
         version: 2.1.0(patch_hash=3ebnscwnn4uaxle6xxcgkrasua)
@@ -161,6 +161,9 @@ importers:
       markdown-it-anchor:
         specifier: ^9.2.0
         version: 9.2.0(@types/markdown-it@14.1.2)(markdown-it@14.1.0)
+      markdown-it-attribution:
+        specifier: ^0.1.4
+        version: 0.1.4
       markdown-it-attrs:
         specifier: ^4.3.1
         version: 4.3.1(markdown-it@14.1.0)
@@ -1352,10 +1355,6 @@ packages:
     resolution: {integrity: sha512-8/MzidM6G/TgRelkzDG13y3Y9LxBjCb+8yOEZ9+wwq5gVF2w2pV0wmHvjfT0RvuxGyR7UEuK36r+yYMbT4uKgA==}
     engines: {node: '>= 0.6'}
 
-  cheerio@1.0.0:
-    resolution: {integrity: sha512-quS9HgjQpdaXOvsZz82Oz7uxtXiy6UIsIQcpBj7HRw2M63Skasm9qlDocAM7jNuaxdhpPU7c4kJN+gA5MCu4ww==}
-    engines: {node: '>=18.17'}
-
   cheerio@1.0.0-rc.12:
     resolution: {integrity: sha512-VqR8m68vM46BNnuZ5NtnGBKIE/DfN0cRIzg9n40EIq9NOv90ayxLBXA8fXC5gquFRGJSTRqBq25Jt2ECLR431Q==}
     engines: {node: '>= 6'}
@@ -1811,11 +1810,11 @@ packages:
   eleventy-plugin-icons@2.4.3:
     resolution: {integrity: sha512-804FPvSzhN8r1IEbyc2mmG+ODJXYZhJLe/n2HLGl6VHLlatsYwUF/MiHwswMxQ2r/FPeEJYn3BUCUCm0OQZAbg==}
 
-  eleventy-plugin-nesting-toc@1.3.0:
-    resolution: {integrity: sha512-WZzVkz28nw3A0DpJFQWXZzQxniyjvOZKxVix5x7WVAS0H1OD1hYJbR0go/Lr1kK2SrmxfbsUHUlekR+mQPvqMA==}
-
   eleventy-plugin-rollup@1.3.0:
     resolution: {integrity: sha512-Ylfp5aeRY+3BkflizlM688KxX6c2efoHKtDNb8Udb2gSVf/fSO+0SAC+dzbqwhX1MopumEgMM77iEApxurFbfg==}
+
+  eleventy-plugin-toc@1.1.5:
+    resolution: {integrity: sha512-Fo5AZZSBH8CKvz0axJQA9nmnTFOflAMFrngaKER4rOz3C6oDwqxK8N+kNFepmIsieTPkrH+iREWLJ+/9j5JjUg==}
 
   eleventy-plugin-webmentions@2.1.0:
     resolution: {integrity: sha512-zoLTF/xw1KkU6xU3eMH+DFF+RaCtF7VImyJS3MQ1vRHQ7siBSb/bF7gv7ldSwk0eMxtj5ABVhalUf6dt+2wiVg==}
@@ -1829,9 +1828,6 @@ packages:
   encodeurl@2.0.0:
     resolution: {integrity: sha512-Q0n9HRi4m6JuGIV1eFlmvJB7ZEVxu93IrMyiMsGC0lrMJMWzRgx6WGquyfQgZVb31vhGgXnfmPNNXmxnOkRBrg==}
     engines: {node: '>= 0.8'}
-
-  encoding-sniffer@0.2.0:
-    resolution: {integrity: sha512-ju7Wq1kg04I3HtiYIOrUrdfdDvkyO9s5XM8QAj/bN61Yo/Vb4vgJxy5vi4Yxk01gWHbrofpPtpxM8bKger9jhg==}
 
   ent-replace@1.0.4:
     resolution: {integrity: sha512-Ki1Xt6aNzgqOf4sFbj+MaeEz/zwJSteP7Z2WgAmpJd3SpsoDie4gLFaaAfVoY0X98n9LWW/mTCU4T8k0NcpK4Q==}
@@ -2182,9 +2178,6 @@ packages:
   htmlparser2@8.0.2:
     resolution: {integrity: sha512-GYdjWKDkbRLkZ5geuHs5NY1puJ+PXwP7+fHPRz06Eirsb9ugf6d8kkXav6ADhcODhFFPMIXyxkxSuMf3D6NCFA==}
 
-  htmlparser2@9.1.0:
-    resolution: {integrity: sha512-5zfg6mHUoaer/97TxnGpxmbR7zJtPwIYFMZ/H5ucTlPZhKvtum05yiPK3Mgai3a0DyVxv7qYqoweaEd2nrYQzQ==}
-
   http-equiv-refresh@2.0.1:
     resolution: {integrity: sha512-XJpDL/MLkV3dKwLzHwr2dY05dYNfBNlyPu4STQ8WvKCFdc6vC5tPXuq28of663+gHVg03C+16pHHs/+FmmDjcw==}
     engines: {node: '>= 6'}
@@ -2495,6 +2488,9 @@ packages:
       '@types/markdown-it': '*'
       markdown-it: '*'
 
+  markdown-it-attribution@0.1.4:
+    resolution: {integrity: sha512-9oNU/Gb7gTyfJlLJKbMhijFfV/Frp+k4efoFwp5zgIDiBWFOXr986YfUHdGmQQz4hG0SMpjtAxGBBK+ukvZwaA==}
+
   markdown-it-attrs@4.3.1:
     resolution: {integrity: sha512-/ko6cba+H6gdZ0DOw7BbNMZtfuJTRp9g/IrGIuz8lYc/EfnmWRpaR3CFPnNbVz0LDvF8Gf1hFGPqrQqq7De0rg==}
     engines: {node: '>=6'}
@@ -2747,9 +2743,6 @@ packages:
 
   parse5-htmlparser2-tree-adapter@7.1.0:
     resolution: {integrity: sha512-ruw5xyKs6lrpo9x9rCZqZZnIUntICjQAd0Wsmp396Ul9lN/h+ifgVV1x1gZHi8euej6wTfpqX8j+BFQxF0NS/g==}
-
-  parse5-parser-stream@7.1.2:
-    resolution: {integrity: sha512-JyeQc9iwFLn5TbvvqACIF/VXG6abODeB3Fwmv/TGdLk2LfbWkaySGY72at4+Ty7EkPZj854u4CrICqNk2qIbow==}
 
   parse5@7.2.1:
     resolution: {integrity: sha512-BuBYQYlv1ckiPdQi/ohiivi9Sagc9JG+Ozs0r7b/0iK3sKmrb0b9FdWdBbOdx6hBCM/F9Ir82ofnBhtZOjCRPQ==}
@@ -3608,10 +3601,6 @@ packages:
   undici@5.28.5:
     resolution: {integrity: sha512-zICwjrDrcrUE0pyyJc1I2QzBkLM8FINsgOrt6WjA+BgajVq9Nxu2PbFFXUrAggLfDXlZGZBVZYw7WNV5KiBiBA==}
     engines: {node: '>=14.0'}
-
-  undici@6.21.1:
-    resolution: {integrity: sha512-q/1rj5D0/zayJB2FraXdaWxbhWiNKDvu8naDT2dl1yTlvJp4BLtOcp2a5BvgGNQpYYJzau7tf1WgKv3b+7mqpQ==}
-    engines: {node: '>=18.17'}
 
   unenv@2.0.0-rc.1:
     resolution: {integrity: sha512-PU5fb40H8X149s117aB4ytbORcCvlASdtF97tfls4BPIyj4PeVxvpSuy1jAptqYHqB0vb2w2sHvzM0XWcp2OKg==}
@@ -4858,20 +4847,6 @@ snapshots:
       lodash.reject: 4.6.0
       lodash.some: 4.6.0
 
-  cheerio@1.0.0:
-    dependencies:
-      cheerio-select: 2.1.0
-      dom-serializer: 2.0.0
-      domhandler: 5.0.3
-      domutils: 3.2.2
-      encoding-sniffer: 0.2.0
-      htmlparser2: 9.1.0
-      parse5: 7.2.1
-      parse5-htmlparser2-tree-adapter: 7.1.0
-      parse5-parser-stream: 7.1.2
-      undici: 6.21.1
-      whatwg-mimetype: 4.0.0
-
   cheerio@1.0.0-rc.12:
     dependencies:
       cheerio-select: 2.1.0
@@ -5378,11 +5353,11 @@ snapshots:
       prettier: 2.8.8
       svgo: 3.3.2
 
-  eleventy-plugin-nesting-toc@1.3.0:
-    dependencies:
-      cheerio: 1.0.0
-
   eleventy-plugin-rollup@1.3.0(patch_hash=6bkplkunu2lg22hn2qr2pbc7hq): {}
+
+  eleventy-plugin-toc@1.1.5:
+    dependencies:
+      cheerio: 1.0.0-rc.12
 
   eleventy-plugin-webmentions@2.1.0(patch_hash=3ebnscwnn4uaxle6xxcgkrasua):
     dependencies:
@@ -5399,11 +5374,6 @@ snapshots:
   emoji-regex@9.2.2: {}
 
   encodeurl@2.0.0: {}
-
-  encoding-sniffer@0.2.0:
-    dependencies:
-      iconv-lite: 0.6.3
-      whatwg-encoding: 3.1.1
 
   ent-replace@1.0.4: {}
 
@@ -5807,13 +5777,6 @@ snapshots:
       domutils: 3.2.2
       entities: 4.5.0
 
-  htmlparser2@9.1.0:
-    dependencies:
-      domelementtype: 2.3.0
-      domhandler: 5.0.3
-      domutils: 3.2.2
-      entities: 4.5.0
-
   http-equiv-refresh@2.0.1: {}
 
   http-errors@2.0.0:
@@ -6115,6 +6078,8 @@ snapshots:
       '@types/markdown-it': 14.1.2
       markdown-it: 14.1.0
 
+  markdown-it-attribution@0.1.4: {}
+
   markdown-it-attrs@4.3.1(markdown-it@14.1.0):
     dependencies:
       markdown-it: 14.1.0
@@ -6368,10 +6333,6 @@ snapshots:
   parse5-htmlparser2-tree-adapter@7.1.0:
     dependencies:
       domhandler: 5.0.3
-      parse5: 7.2.1
-
-  parse5-parser-stream@7.1.2:
-    dependencies:
       parse5: 7.2.1
 
   parse5@7.2.1:
@@ -7316,8 +7277,6 @@ snapshots:
   undici@5.28.5:
     dependencies:
       '@fastify/busboy': 2.1.1
-
-  undici@6.21.1: {}
 
   unenv@2.0.0-rc.1:
     dependencies:

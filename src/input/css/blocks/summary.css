@@ -1,0 +1,8 @@
+.summary {
+	inline-size: min(var(--size-content-3), 100%);
+	margin-inline: auto;
+
+	& blockquote > * {
+		font-size: var(--font-size-5);
+	}
+}

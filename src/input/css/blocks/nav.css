@@ -19,10 +19,12 @@
 
 		border-width: var(--border-size-1);
 		color: var(--accent-bg-active);
-		padding: var(--size-1);
+		margin: 0;
+		padding-block: var(--block-size-1);
+		padding-inline: var(--inline-size-1);
 
 		&:hover {
-			--_highlight-size: var(--size-1);
+			--_highlight-size: var(--size-px-1);
 		}
 
 		&:is(:hover, :focus, :active) {
@@ -33,11 +35,29 @@
 	& .list {
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--size-2) var(--size-3);
+		gap: var(--block-size-2) var(--inline-size-3);
 		margin-inline-end: auto;
+
+		&:first-of-type {
+			display: flex;
+
+			@media (width < 40em) {
+				display: none;
+			}
+		}
+
+		&:last-of-type {
+			display: none;
+
+			@media (width < 40em) {
+				display: flex;
+				flex-basis: 100%;
+			}
+		}
 
 		& a {
 			display: block;
+			margin: 0;
 			text-decoration: none;
 
 			&[aria-current="page"] {

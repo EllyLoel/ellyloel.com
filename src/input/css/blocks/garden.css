@@ -1,6 +1,6 @@
 .garden-filters {
 	& fieldset {
-		--flow-space: var(--size-2);
+		--flow-space: var(--block-size-2);
 
 		border: none;
 		margin: 0;

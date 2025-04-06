@@ -22,20 +22,22 @@ is-land[data-for="graph"] {
 		> button {
 			border-radius: var(--radius-3);
 			outline-offset: -2px;
-			padding: var(--size-2) var(--size-1);
+			padding-block: var(--block-size-2);
+			padding-inline: var(--inline-size-1);
 	
 			> span {
 				background: var(--accent-bg-subtle);
 				border-radius: var(--radius-2);
 				box-decoration-break: clone;
-				padding: var(--size-1);
+				padding-block: var(--block-size-1);
+				padding-inline: var(--inline-size-1);
 			}
 		}
 	}
 
 	> [id="graph"] > svg,
 	> [data-preload] picture {
-		--shadow-offset: var(--size-1);
+		--shadow-offset: var(--size-px-1);
 
 		background: var(--accent-bg-subtle);
 		border: var(--border-size-2) solid var(--accent-bg-hover);
@@ -45,7 +47,7 @@ is-land[data-for="graph"] {
 		transition: box-shadow 300ms var(--ease-1);
 
 		&:has(+ button:is(:hover, :focus-visible)) {
-			--shadow-offset: var(--size-2);
+			--shadow-offset: var(--size-px-2);
 
 			transition: box-shadow 150ms var(--ease-1);
 		}
@@ -90,13 +92,13 @@ a[id="before-graph"][href="#after-graph"] {
 	top: -1lh;
 
 	&:focus-visible {
-		transform: translateY(calc(-1 * var(--size-2)));
+		transform: translateY(calc(-1 * var(--block-size-2)));
 	}
 }
 
 a[id="after-graph"][href="#before-graph"] {
 	&:focus-visible {
-		transform: translateY(var(--size-2));
+		transform: translateY(var(--block-size-2));
 	}
 }
 

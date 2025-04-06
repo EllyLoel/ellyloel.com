@@ -54,12 +54,8 @@ For the same reason people had reservations around grid when it first came out b
 
 ### CSS’s first layout mode intended for designing UIs
 
-<figure>
-  <blockquote>Flex layout ... is designed for laying out more complex applications and webpages.</blockquote>
-  <figcaption>
-    — <cite><a href="https://www.w3.org/TR/css-flexbox-1/#flex-layout">W3C Flexbox spec</a></cite>
-  </figcaption>
-</figure>
+> Flex layout ... is designed for laying out more complex applications and webpages.
+> — [W3C Flexbox spec](https://www.w3.org/TR/css-flexbox-1/#flex-layout)
 
 I covered this history in detail to help bring some context to the discussion surrounding layout in CSS. The path to get here was long and windy. So windy, many developers were reluctant to adopt Flexbox in case it changed again. For this reason, it would be many years until Flexbox became commonplace. Around that time, Grid entered the scene and confused matters further.
 
@@ -73,12 +69,8 @@ Flexbox was what the web needed, but because it was the first tool of it's kind,
 
 The [law of the instrument](https://en.wikipedia.org/wiki/Law_of_the_instrument) is a cognitive bias that involves an over-reliance on a familiar tool. This perfectly describes most web developers' relationship with Flexbox {% emoji "🤣", "ROFL." %}.
 
-<figure>
-  <blockquote>If the only tool you have is a hammer, it is tempting to treat everything as if it were a nail</blockquote>
-  <figcaption>
-    — <cite>A. Maslow</cite>
-  </figcaption>
-</figure>
+> If the only tool you have is a hammer, it is tempting to treat everything as if it were a nail.
+> — A. Maslow
 
 You might think there's no need to learn Grid when you know Flex because they are basically the same.
 
@@ -170,34 +162,19 @@ In this section let's look at some common uses for CSS Grid:
 
 Grid gives you great control over element placement, including layering elements on top of each other.
 
-<figure>
-{% md %}
-![A grid of 6 semi transparent elements overlapping in different ways.](../../../assets/img/overlapping-elements.png)
-{% endmd %}
-<figcaption>OVERLAP ALL THE THINGS.</figcaption>
-</figure>
+![A grid of 6 semi transparent elements overlapping in different ways.](../../../assets/img/overlapping-elements.png "Overlap all the things.")
 
 #### Subgrid (coming soon)
 
 [Subgrid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid) is only supported in Gecko (Firefox) and WebKit (Safari), currently in development for Blink/Chromium (Chrome/Edge/Opera/Samsung/etc.):
 
-<figure>
-{% md %}
-![2 grids, each with 3 columns containing cards. The first grid's cards content sections are misaligned while the second grid's cards are correctly aligned thanks to subgrid.](../../../assets/img/subgrid.png)
-{% endmd %}
-<figcaption>The contents of the cards are able to be aligned thanks to subgrid.</figcaption>
-</figure>
+![2 grids, each with 3 columns containing cards. The first grid's cards content sections are misaligned while the second grid's cards are correctly aligned thanks to subgrid.](../../../assets/img/subgrid.png "The contents of the cards are able to be aligned thanks to subgrid.")
 
 #### Masonry layout (coming not so soon)
 
 [Masonry](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) layout only supported in Gecko (Firefox) behind a flag.
 
-<figure>
-{% md %}
-![A screenshot of a search for 'cats' on Pinterest showcasing their iconic masonry layout.](../../../assets/img/masonry-layout.webp)
-{% endmd %}
-<figcaption>We're focusing on the layout, right? Totally not the cats...</figcaption>
-</figure>
+![A screenshot of a search for 'cats' on Pinterest showcasing their iconic masonry layout.](../../../assets/img/masonry-layout.webp "We're focusing on the layout, right? Totally not the cats...")
 
 ## How to choose CSS Grid or Flexbox?
 
@@ -219,72 +196,27 @@ Use Grid when you already have the layout structure in mind, and Flexbox when yo
 
 #### Flexbox will listen to it's content, so it's content first (intrinsic).
 
-<figure>
-{% md %}
-![5 elements laid out with flex, 4 and 5 are much wider than 1, 2, and 3.](../../../assets/img/intrinsic-or-extrinsic-1.png)
-{% endmd %}
-<figcaption>Intended layout.</figcaption>
-</figure>
+![5 elements laid out with flex, 4 and 5 are much wider than 1, 2, and 3.](../../../assets/img/intrinsic-or-extrinsic-1.png "Intended layout.")
 
-<figure>
-{% md %}
-![The same 5 elements but now 1 and 2 have shrunk slightly and 3 has grown slightly due to it's content.](../../../assets/img/intrinsic-or-extrinsic-2.png)
-{% endmd %}
-<figcaption>Doesn't look like it's changed (it has).</figcaption>
-</figure>
+![The same 5 elements but now 1 and 2 have shrunk slightly and 3 has grown slightly due to it's content.](../../../assets/img/intrinsic-or-extrinsic-2.png "Doesn't look like it's changed (it has).")
 
-<figure>
-{% md %}
-![The same 5 elements but now 1, 2, 3, and 4 are all the same size and 5 is twice their size.](../../../assets/img/intrinsic-or-extrinsic-3.png)
-{% endmd %}
-<figcaption>Woah, what the?!</figcaption>
-</figure>
+![The same 5 elements but now 1, 2, 3, and 4 are all the same size and 5 is twice their size.](../../../assets/img/intrinsic-or-extrinsic-3.png "Woah, what the?!")
 
-<figure>
-{% md %}
-![The same 5 elements but now none of the elements are the same size, all because of 3's large content.](../../../assets/img/intrinsic-or-extrinsic-4.png)
-{% endmd %}
-<figcaption>Oh boy, what in the world is going on?!?</figcaption>
-</figure>
+![The same 5 elements but now none of the elements are the same size, all because of 3's large content.](../../../assets/img/intrinsic-or-extrinsic-4.png "Oh boy, what in the world is going on?!?")
 
 #### Grid will stick to it's rows and columns no matter what, so it's layout first or extrinsic.
 
-<figure>
-{% md %}
-![5 elements laid out with grid, all the elements are the same width.](../../../assets/img/intrinsic-or-extrinsic-5.png)
-{% endmd %}
-<figcaption>Intended layout.</figcaption>
-</figure>
+![5 elements laid out with grid, all the elements are the same width.](../../../assets/img/intrinsic-or-extrinsic-5.png "Intended layout.")
 
-<figure>
-{% md %}
-![The same 5 elements but now 2 and 5 are slightly wider because of 2's content.](../../../assets/img/intrinsic-or-extrinsic-6.png)
-{% endmd %}
-<figcaption>Doesn't look like it's changed (it has).</figcaption>
-</figure>
+![The same 5 elements but now 2 and 5 are slightly wider because of 2's content.](../../../assets/img/intrinsic-or-extrinsic-6.png "Doesn't look like it's changed (it has).")
 
-<figure>
-{% md %}
-![The same 5 elements but now 2 and 5 are wider because of 2's content.](../../../assets/img/intrinsic-or-extrinsic-7.png)
-{% endmd %}
-<figcaption>Never changing these columns.</figcaption>
-</figure>
+![The same 5 elements but now 2 and 5 are wider because of 2's content.](../../../assets/img/intrinsic-or-extrinsic-7.png "Never changing these columns.")
 
-<figure>
-{% md %}
-![The same 5 elements but now 2 and 5 are a lot wider and 3 is overflowing because of 2's content.](../../../assets/img/intrinsic-or-extrinsic-8.png)
-{% endmd %}
-<figcaption>Uh oh, we've got some overflow.</figcaption>
-</figure>
+![The same 5 elements but now 2 and 5 are a lot wider and 3 is overflowing because of 2's content.](../../../assets/img/intrinsic-or-extrinsic-8.png "Uh oh, we've got some overflow.")
 
 If you want you can even make the layout so rigid that it stays exactly the same, though you probably don't actually want this.
 
-<figure>
-{% md %}
-![The same 5 elements, all the elements are the same width but 2's content is cut off.](../../../assets/img/intrinsic-or-extrinsic-9.png)
-{% endmd %}
-<figcaption>A very very long what?</figcaption>
-</figure>
+![The same 5 elements, all the elements are the same width but 2's content is cut off.](../../../assets/img/intrinsic-or-extrinsic-9.png "A very very long what?")
 
 ## Layout mode cheat sheet
 
@@ -292,7 +224,6 @@ A CSS layout mode, sometimes called layout, is an algorithm that determines the 
 
 <div class="[ table-container ][ visually-hidden ]">
 	<table>
-		<caption>Layout mode cheat sheet</caption>
 		<tbody>
 			<tr>
 				<th>Flexbox</th>

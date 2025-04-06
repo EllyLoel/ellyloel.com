@@ -1,21 +1,21 @@
 .feed {
 	& > li {
-		max-inline-size: 60ch;
+		max-inline-size: none;
 	}
 
 	& > li + li {
-		margin-block-start: var(--size-7);
+		margin-block-start: var(--block-size-7);
 	}
 
 	@media (width >= 48em) { /* 768px */
 		& > li + li {
-			margin-block-start: var(--size-4);
+			margin-block-start: var(--block-size-4);
 		}
 	}
 }
 
 .home .feed {
 	& > li + li {
-		margin-block-start: var(--size-7);
+		margin-block-start: var(--block-size-7);
 	}
 }

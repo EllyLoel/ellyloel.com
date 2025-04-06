@@ -8,11 +8,11 @@ import { eleventyImageTransformPlugin as pluginImageTransform } from "@11ty/elev
 // import pluginInterlinker from "@photogabble/eleventy-plugin-interlinker";
 import { plugin as pluginMarkdown } from "./markdown.js";
 import pluginNavigation from "@11ty/eleventy-navigation";
-import pluginNestingToc from "eleventy-plugin-nesting-toc";
 import pluginPostcss from "./postcss.js";
 import pluginRollup from "eleventy-plugin-rollup";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxhighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import pluginToc from "eleventy-plugin-toc";
 import pluginUnfurl from "./unfurl.js";
 import pluginWebmentions from "./webmentions.js";
 
@@ -82,10 +82,10 @@ export default function(eleventyConfig) {
 	});
 	// eleventyConfig.addPlugin(pluginInterlinker);
 	eleventyConfig.addPlugin(pluginNavigation);
-	eleventyConfig.addPlugin(pluginNestingToc, {
+	eleventyConfig.addPlugin(pluginToc, {
 		tags: ["h2", "h3", "h4", "h5", "h6"],
 		wrapper: "div",
-		wrapperClass: "[ toc ][ recursive-flow ]",
+		wrapperClass: "[ padding-block-start-3 padding-block-end-2 ]",
 	});
 	eleventyConfig.addPlugin(pluginRollup, {
 		rollupOptions: "rollup.config.js",

@@ -1,21 +1,3 @@
 .site-head {
-	border-block-end-style: solid;
-	border-block-end-width: var(--border-size-2);
-	padding-block: var(--size-6);
-
-	& .list:first-of-type {
-		display: flex;
-
-		@media (width < 35em) {
-			display: none;
-		}
-	}
-
-	& .list:last-of-type {
-		display: none;
-
-		@media (width < 35em) {
-			display: flex;
-		}
-	}
+	padding-block: var(--block-size-6);
 }

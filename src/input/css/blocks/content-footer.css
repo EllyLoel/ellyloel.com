@@ -1,6 +1,6 @@
 .content-footer {
 	> :is(.share, .post-pagination) {
-		--shadow-offset: var(--size-1);
+		--shadow-offset: var(--size-px-1);
 
 		background: var(--accent-bg-subtle);
 		border-color: var(--accent-bg-hover);
@@ -10,12 +10,12 @@
 			var(--accent-bg-hover);
 		inline-size: min(var(--size-content-3), 95%);
 		margin-inline: auto;
-		padding-block: var(--size-4);
-		padding-inline: var(--size-4);
+		padding-block: var(--block-size-4);
+		padding-inline: var(--inline-size-4);
 		transition: box-shadow 0.3s var(--ease-1), opacity 0.5s var(--ease-2);
 
 		&:is(:hover, :focus-within) {
-			--shadow-offset: var(--size-2);
+			--shadow-offset: var(--size-px-2);
 
 			transition: box-shadow 0.15s var(--ease-1);
 		}
@@ -33,7 +33,7 @@
 		& share-button {
 			display: flex;
 			flex-wrap: wrap;
-			gap: var(--size-2);
+			gap: var(--block-size-2) var(--inline-size-2);
 		}
 
 		> div {
@@ -43,8 +43,10 @@
 
 		& a,
 		& button {
-			margin: calc(var(--size-1) * -1);
-			padding: var(--size-1);
+			margin-block: var(--block-size-negative);
+			margin-inline: var(--inline-size-negative);
+			padding-block: var(--block-size-1);
+			padding-inline: var(--inline-size-1);
 		}
 
 		& button {
@@ -75,7 +77,7 @@
 
 			& img {
 				border-radius: var(--radius-2);
-				margin-block-start: var(--size-2);
+				margin-block-start: var(--block-size-2);
 			}
 		}
 	}

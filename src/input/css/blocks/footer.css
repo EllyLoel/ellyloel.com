@@ -1,4 +1,5 @@
 .site-footer {
+	overflow-y: clip;
 	position: relative;
 
 	& #update-doodle {
@@ -29,8 +30,8 @@
 			"socials"
 			"edit";
 		grid-template-columns: auto 1fr;
-		padding-block: var(--size-9);
-		row-gap: var(--size-9);
+		padding-block: var(--block-size-9);
+		row-gap: var(--block-size-9);
 
 		& .acknowledgement-of-country {
 			grid-area: AoC;
@@ -81,7 +82,7 @@
 			block-size: fit-content;
 			display: flex;
 			font-size: var(--font-size-4);
-			gap: var(--size-3);
+			gap: var(--block-size-3) var(--inline-size-3);
 			grid-area: socials;
 
 			& a {
@@ -95,7 +96,7 @@
 		}
 
 		@media (width >= 64em) { /* 1024px */
-			column-gap: var(--size-9);
+			column-gap: var(--inline-size-9);
 			grid-template-areas:
 				"sitemap image"
 				"AoC AoC"

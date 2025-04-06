@@ -11,7 +11,6 @@
 		& > :is(figure, picture, .table-container, .iframe-container) {
 			margin-inline: auto;
 			max-inline-size: 100%;
-			text-align: center;
 		}
 	}
 }

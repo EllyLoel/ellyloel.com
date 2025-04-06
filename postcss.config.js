@@ -8,15 +8,20 @@ import postcssPresetEnv from "postcss-preset-env";
 export default {
 	plugins: [
 		postcssImport(),
-		postcssJitProps(openProps), // only variables that are used are in the build output (tree shaking)
-		postcssPresetEnv({
-			features: {
-				"gradients-interpolation-method": true,
-			},
-			stage: 0,
-		}),
+		postcssJitProps({
+			...openProps,
+			layer: "variables.open-props"
+		}), // only variables that are used are in the build output (tree shaking)
 		...(process.env.ELEVENTY_ENV === "production"
-			? [cssnano({ preset: "default" })]
+			? [
+				cssnano({ preset: "default" }),
+				postcssPresetEnv({
+					features: {
+						"gradients-interpolation-method": true,
+					},
+					stage: 0,
+				}),
+			]
 			: []),
 	],
 };
