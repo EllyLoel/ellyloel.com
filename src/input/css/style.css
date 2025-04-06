@@ -1,5 +1,5 @@
 /* Layers */
-@layer reset, vars, base, blocks, utilities;
+@layer reset, variables, base, blocks, utilities;
 
 /* Reset */
 @import url("cssremedy/css/remedy.css") layer(reset);
@@ -9,7 +9,9 @@
 @import url("./fonts.css") layer(base);
 
 /* Variables */
-@import url("./vars.css") layer(vars);
+@import url("./variables/colours.css") layer(variables);
+@import url("./variables/spacing.css") layer(variables);
+@import url("./variables/typography.css") layer(variables);
 
 /* Global styles */
 @import url("./global.css") layer(base);
@@ -54,6 +56,7 @@
 @import url("./blocks/link-icon-start.css") layer(blocks);
 @import url("./blocks/lite-youtube.css") layer(blocks);
 @import url("./blocks/logo.css") layer(blocks);
+@import url("./blocks/main-header.css") layer(blocks);
 @import url("./blocks/markdown-container.css") layer(blocks);
 @import url("./blocks/nav.css") layer(blocks);
 @import url("./blocks/newsletter.css") layer(blocks);
@@ -65,6 +68,7 @@
 @import url("./blocks/skip-link.css") layer(blocks);
 @import url("./blocks/social-links.css") layer(blocks);
 @import url("./blocks/sound-button.css") layer(blocks);
+@import url("./blocks/summary.css") layer(blocks);
 @import url("./blocks/tags.css") layer(blocks);
 @import url("./blocks/toc.css") layer(blocks);
 @import url("./blocks/unfurl.css") layer(blocks);

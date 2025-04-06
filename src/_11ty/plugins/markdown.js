@@ -1,8 +1,10 @@
 import markdownit from "markdown-it";
 import markdownitAbbr from "markdown-it-abbr";
 import markdownitAnchor from "markdown-it-anchor";
+import markdownitAttribution from "markdown-it-attribution";
 import markdownitAttrs from "markdown-it-attrs";
 import markdownitContainer from "markdown-it-container";
+import markdownitFigure from "./markdownFigure.js";
 import markdownitFootnote from "markdown-it-footnote";
 import markdownitInsDel from "markdown-it-ins-del";
 import markdownitMark from "markdown-it-mark";
@@ -42,7 +44,16 @@ let markdownLibrary = markdownit({
 		level: 2,
 		slugify: slugify,
 	})
-	.use(markdownitAttrs);
+	.use(markdownitAttrs)
+	.use(markdownitAttribution, {
+		classNameAttribution: null,
+		classNameContainer: null,
+		marker: "—",
+		removeMarker: false,
+	})
+	.use(markdownitFigure, {
+		figcaption: true,
+	});
 
 /** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 export function plugin(eleventyConfig) {

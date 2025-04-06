@@ -1,12 +1,14 @@
 /* stylelint-disable selector-class-pattern */
 .unfurl {
 	--_border-radius: 1.5rem;
-	--_padding: var(--size-3);
+	--_padding-block: var(--block-size-3);
+	--_padding-inline: var(--inline-size-3);
 
 	border: 0.25rem solid var(--accent-border);
 	border-radius: var(--_border-radius);
 	max-width: 35rem;
-	padding: var(--_padding);
+	padding-block: var(--_padding-block);
+	padding-inline: var(--_padding-inline);
 
 	> p > *:not(br) {
 		display: block;
@@ -18,15 +20,11 @@
 	}
 
 	& .unfurl-heading:not(:first-child) {
-		margin-block-start: var(--size-2);
+		margin-block-start: var(--block-size-2);
 	}
 
 	& .unfurl-description {
-		-webkit-box-orient: vertical;
-		display: -webkit-box;
-		-webkit-line-clamp: 3;
-		margin-block-start: var(--size-2);
-		overflow: hidden; /* truncating */
+		margin-block-start: var(--block-size-2);
 	}
 
 	& img,
@@ -36,9 +34,9 @@
 	}
 
 	& .unfurl-image {
-		border-radius: calc(var(--_border-radius) - var(--_padding));
+		border-radius: calc(var(--_border-radius) - var(--_padding-block));
 		inline-size: 100%;
-		margin-block-start: var(--size-3);
+		margin-block-start: var(--block-size-3);
 	}
 
 	& .unfurl-meta {

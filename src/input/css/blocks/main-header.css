@@ -1,0 +1,4 @@
+.main-header {
+	inline-size: min(var(--size-content-3), 100%);
+	margin-inline: auto;
+}

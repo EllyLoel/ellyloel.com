@@ -1,11 +1,8 @@
 ---
 layout: base-without-header.njk
 ---
-<header class="[ main-header ][ padding-block-end-6 gradient-border ]" data-gradient-border="block-end">
-	<!-- tabindex fixes focus issue: https://benmyers.dev/blog/skip-links/#tldr -->
+<header class="[ main-header ]">
 	<h1
-		id="content"
-		tabindex="-1"
 		class="
 			{%- if page.url === "/garden/" or page.url === "/microposts/" -%}
 				[ p-name ]
@@ -17,16 +14,7 @@ layout: base-without-header.njk
 	</h1>
 </header>
 <article class="[ markdown-container ][ flow ]">
-	{% if content | includes("<!-- intro -->") %}
-	<div class="[ intro ][ flow ]">
-		{{ content | split("<!-- intro -->") | first | safe }}
-	</div>
-	<div class="[ flow ]">
-		{{ content | split("<!-- intro -->") | last | safe }}
-	</div>
-	{% else %}
 	<div class="[ flow ]">
 		{{ content | safe }}
 	</div>
-	{% endif %}
 </article>

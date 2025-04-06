@@ -80,16 +80,6 @@
 	/* Misc */
 	--code-bg: var(--neutral-bg-subtle);
 
-	/* Typography */
-	--font-weight-body-bold: 622;
-	--font-weight-body-normal: 400;
-	--font-emoji: "Noto Color Emoji", "Apple Color Emoji", "Twemoji Mozilla", "Segoe UI Emoji", "Segoe UI Symbol", "EmojiOne Color", "Android Emoji";
-
-	/* Scrollbar width */
-	--scrollbar-width: 15px;
-
-	color-scheme: light dark;
-
 	/* Dark colour scale */
 	@media (prefers-color-scheme: dark) {
 		--accent-0: var(--black);

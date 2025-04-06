@@ -68,7 +68,7 @@ permalink: "sitemap-styles.xsl"
 			<body>
 				<a class="[ skip-link ] [ button ]" href="#content">Skip to content</a>
 
-				<header class="[ site-head ] [ wrapper gradient-border ]" style="--wrapper-size: 100ch;">
+				<header class="[ site-head ] [ wrapper gradient-border ]" style="--wrapper-size: 60em;">
 					<nav class="[ nav ][ flex flex-wrap gap-3 align-center ]">
 						<!-- link to home: http://microformats.org/wiki/rel-home -->
 						<a href="/" rel="home" class="[ u-url u-uid ] [ text-decoration-none ]">
@@ -89,10 +89,10 @@ permalink: "sitemap-styles.xsl"
 					</nav>
 				</header>
 
-				<main class="[ h-feed ][ wrapper flow ]" style="--wrapper-size: 100ch;">
+				<!-- tabindex fixes focus issue: https://benmyers.dev/blog/skip-links/#tldr -->
+				<main id="content" tabindex="-1" class="[ h-feed ][ wrapper flow ]" style="--wrapper-size: 60em;">
 					<header class="[ main-header ][ padding-block-end-6 gradient-border ]" data-gradient-border="block-end">
-						<!-- tabindex fixes focus issue: https://benmyers.dev/blog/skip-links/#tldr -->
-						<h1 id="content" tabindex="-1" class="[ p-name ][ margin-0 line-height-1 ]">
+						<h1 class="[ p-name ][ margin-0 line-height-1 ]">
 							Sitemap
 						</h1>
 					</header>
@@ -122,7 +122,7 @@ permalink: "sitemap-styles.xsl"
 
 				<footer>
 					<div class="[ site-footer ]">
-						<div class="[ inner ] [ wrapper ]" style="--wrapper-size: 100ch;">
+						<div class="[ inner ] [ wrapper ]" style="--wrapper-size: 60em;">
 							<ul role="list" class="[ social-links ][ flex-wrap ]">
 								<li>
 									<a href="/" class="[ logo-link ]">

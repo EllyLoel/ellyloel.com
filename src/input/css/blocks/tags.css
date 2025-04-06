@@ -14,16 +14,9 @@
 		}
 
 		& small {
-			color: var(--accent-bg);
+			color: var(--accent-bg-subtle);
 			font-size: smaller;
+			font-weight: var(--font-weight-body-normal);
 		}
 	}
-
-	/* & small {
-		display: none;
-	}
-
-	& a:is(:hover, :focus) + small {
-		display: inline;
-	} */
 }

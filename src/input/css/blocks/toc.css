@@ -6,28 +6,26 @@ table-of-contents {
 	--flow-space: 0.5em;
 
 	overflow-y: clip;
+	padding-block: 0;
 	transition-behavior: allow-discrete;
 	transition-duration: 300ms;
 	transition-property: block-size, padding-block, content-visibility, opacity;
 	transition-timing-function: ease-in-out;
 
-	table-of-contents:has(button[aria-expanded="true"]) & {
-		content-visibility: auto;
-		display: block;
-		opacity: 1;
-		padding-block: var(--size-3) var(--size-2);
-	}
-
-	table-of-contents:has(button[aria-expanded="false"]) & {
+	@starting-style {
 		block-size: 0;
-		content-visibility: hidden;
-		opacity: 0;
-		padding-block: 0;
 	}
 
-	& > ol {
+	table-of-contents:has(button[aria-expanded="true"]) &:not([hidden="until-found"]) {
+	}
+
+	table-of-contents:has(button[aria-expanded="false"]) &[hidden="until-found"] {
+		block-size: 0;
+	}
+
+	& div > ol {
 		list-style-type: disc;
-		padding-left: var(--size-5);
+		padding-inline-start: var(--inline-size-5);
 
 		& ol {
 			list-style-type: circle;
@@ -43,12 +41,14 @@ table-of-contents {
 	background: var(--accent-bg-subtle);
 	border-radius: var(--radius-2);
 	margin-inline: auto;
-	padding: var(--size-2) var(--size-3);
+	padding-block: var(--block-size-2);
+	padding-inline: var(--inline-size-3);
 
 	& h2 {
 		background: none;
 		font-size: var(--font-size-4);
-		margin: calc(var(--size-2) * -1) calc(var(--size-3) * -1);
+		margin-block: calc(var(--block-size-2) * -1);
+		margin-inline: calc(var(--inline-size-3) * -1);
 		max-inline-size: none;
 	}
 
@@ -59,11 +59,12 @@ table-of-contents {
 		border-radius: var(--radius-2);
 		box-shadow: none;
 		display: flex;
-		gap: var(--size-3);
+		gap: var(--block-size-3) var(--inline-size-3);
 		inline-size: 100%;
 		justify-content: flex-start;
 		line-height: calc(0.25rem + 1em + 0.25rem);
-		padding: var(--size-2) var(--size-3);
+		padding-block: var(--block-size-2);
+		padding-inline: var(--inline-size-3);
 
 		& .inline-icon {
 			color: var(--accent-solid);

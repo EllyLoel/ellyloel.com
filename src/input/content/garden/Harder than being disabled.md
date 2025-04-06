@@ -8,8 +8,8 @@ modified: 2022-10-18
 id: 394f471086b68d8e6e9c8941ab72a047
 date: 2022-10-18
 ---
-~~~ callout **Heads up this is an old post**
-This post hasn't been updated a long time, so it might be kinda crusty.
+~~~ callout **Content warning**
+Future Elly here, I don't like how I worded this post. I wrote this in anger. The anger should've been solely directed at the ableist society we live in but due to my poor choice of words it can come across like I'm being dismissive of how hard being disabled can be. That isn't and wasn't ever my intention. Please keep that in mind while reading.
 ~~~
 
 You know what's harder than being disabled, accepting that you're actually disabled.

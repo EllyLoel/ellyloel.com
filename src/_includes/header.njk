@@ -1,4 +1,4 @@
-<header class="[ site-head ] [ wrapper gradient-border ]" style="--wrapper-size: 100ch;">
+<header class="[ site-head ] [ wrapper gradient-border ]" data-gradient-border="block-end" style="--wrapper-size: 60em;">
 	<nav class="[ nav ][ flex flex-wrap gap-3 align-center ]">
 		<!-- link to home: http://microformats.org/wiki/rel-home -->
 		<a href="/" rel="home" class="[ u-url u-uid ] [ text-decoration-none ]"{% if page.url === "/" %} aria-current="page"{% endif %}>
@@ -9,15 +9,16 @@
 		{#- Larger viewports -#}
 		{%- include "navigation.njk" -%}
 
-		<a href="/search/" class="[ button ]"{% if page.url === "/search/" %} aria-current="page"{% endif %}>
-			{%- icon "fas:magnifying-glass" -%}
-			<span class="[ visually-hidden ]">Search</span>
-		</a>
-
-		<button type="button" id="settings-dialog-open-button">
-			{%- icon "fas:gear" -%}
-			<span class="[ visually-hidden ]">Settings</span>
-		</button>
+		<div class="[ flex flex-wrap row-gap-2 column-gap-3 ]">
+			<a href="/search/" class="[ button ]"{% if page.url === "/search/" %} aria-current="page"{% endif %}>
+				{%- icon "fas:magnifying-glass" -%}
+				<span class="[ visually-hidden ]">Search</span>
+			</a>
+			<button type="button" id="settings-dialog-open-button">
+				{%- icon "fas:gear" -%}
+				<span class="[ visually-hidden ]">Settings</span>
+			</button>
+		</div>
 
 		{#- Smaller viewports -#}
 		{%- include "navigation.njk" -%}

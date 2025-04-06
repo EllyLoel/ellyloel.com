@@ -29,7 +29,7 @@
 	display: inline-flex;
 	font-size: var(--_size);
 	font-weight: var(--font-weight-7);
-	gap: var(--size-2);
+	gap: var(--block-size-2) var(--inline-size-2);
 	justify-content: center;
 	line-height: 1;
 	padding-block: 0.75ch;
@@ -51,7 +51,7 @@
 	}
 
 	&:not(:active):hover {
-		--_highlight-size: var(--size-2);
+		--_highlight-size: var(--size-px-2);
 
 		transition-duration: 0.25s;
 	}

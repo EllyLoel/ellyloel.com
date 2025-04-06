@@ -11,7 +11,9 @@ eleventyNavigation:
 <table-of-contents>
 	<nav aria-labelledby="toc-heading" class="[ toc-container ][ content-width ]" data-pagefind-ignore>
 		<h2 id="toc-heading">Table of contents</h2>
-		{{ page.rawInput | replace("<h2 id=\"toc-heading\">Table of contents</h2>", "") | md | toc | safe }}
+		<div class="[ toc ][ recursive-flow ]" hidden="until-found">
+			{{- page.rawInput | replace("<h2 id=\"toc-heading\">Table of contents</h2>", "") | md | toc | safe -}}
+		</div>
 	</nav>
 </table-of-contents>
 
@@ -27,6 +29,7 @@ Also, you should [learn how to setup your own feed(s)](https://www.mnot.net/rss/
 
 <div class="[ table-container ]">
 	<table>
+		<caption class="[ h6 ]">Web feeds</caption>
 		<thead>
 			<tr>
 				<th></th>
@@ -81,7 +84,7 @@ Also, you should [learn how to setup your own feed(s)](https://www.mnot.net/rss/
 			</tr>
 			<tr>
 				<th>
-					Everything but bookmarks
+					!Bookmarks
 				</th>
 				<td>
 					<a href="/not-bookmarks.rss">not-bookmarks.rss</a>

@@ -15,13 +15,13 @@ date: 2025-01-21
 We need [Can I use](https://caniuse.com/) but instead of support and usage data for front-end web technologies in browsers it's support and usage data for accessibility web technologies in assistive technologies and browsers.
 
 > Only accessibility-supported ways of using technologies are relied upon to satisfy the success criteria.
-— [5.2.4 Only Accessibility-Supported Ways of Using Technologies](https://www.w3.org/TR/WCAG/#cc4)
+> — [5.2.4 Only Accessibility-Supported Ways of Using Technologies](https://www.w3.org/TR/WCAG/#cc4)
 
 > supported by users' assistive technologies as well as the accessibility features in browsers and other user agents
-— [WCAG 2.2 Glossary: accessibility supported](https://www.w3.org/TR/WCAG/#dfn-accessibility-supported)
+> — [WCAG 2.2 Glossary: accessibility supported](https://www.w3.org/TR/WCAG/#dfn-accessibility-supported)
 
 > This topic raises the question of how many or which assistive technologies must support a Web technology in order for that Web technology to be considered "accessibility supported".
-[Level of Assistive Technology Support Needed for "Accessibility Support"](https://www.w3.org/WAI/WCAG22/Understanding/conformance#support-level)
+> — [Level of Assistive Technology Support Needed for "Accessibility Support"](https://www.w3.org/WAI/WCAG22/Understanding/conformance#support-level)
 
 There is [a11ysupport.io](https://a11ysupport.io/) which is awesome and I'm so glad it exists but it not the best. It needs more data and more features. 
 

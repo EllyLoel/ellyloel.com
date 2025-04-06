@@ -26,19 +26,20 @@ class TableOfContents extends HTMLElement {
 
 		this.button.setAttribute("aria-expanded", "false");
 
-		this.button.addEventListener("click", () => this.toggle());
+		this.button.addEventListener("click", () => this.expanded ? this.close() : this.show());
+		this.toc.addEventListener("beforematch", () => !this.expanded && this.show());
 	}
 
-	toggle() {
-		const expanded = this.button.getAttribute("aria-expanded");
+	show() {
+		this.button.setAttribute("aria-expanded", "true");
+		this.toc.removeAttribute("hidden");
+		this.expanded = true;
+	}
 
-		if (expanded === "true") {
-			this.button.setAttribute("aria-expanded", "false");
-		}
-
-		if (expanded === "false") {
-			this.button.setAttribute("aria-expanded", "true");
-		}
+	close() {
+		this.button.setAttribute("aria-expanded", "false");
+		this.toc.setAttribute("hidden", "until-found");
+		this.expanded = false;
 	}
 }
 
