@@ -1,6 +1,6 @@
 ---
 layout: bookmark
-title: Formative posts
+title: Formative posts – Eric Bailey
 tags:
   - Bookmarks
   - Resources
