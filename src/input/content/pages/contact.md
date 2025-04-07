@@ -22,3 +22,7 @@ Mail me at [hello@ellyloel.com](mailto:hello@ellyloel.com) or [hi@elly.lol](mail
 
 {% set flex = true %}
 {% include "social-links.njk" %}
+
+## Support me
+
+You can donate to me at [/support](/support/).

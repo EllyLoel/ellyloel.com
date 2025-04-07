@@ -26,6 +26,8 @@ Media that I've engaged with (saying consumed feels a bit icky).
 
 [Bookwyrm](https://elly.to/bookwyrm)
 [ReviewDB](https://elly.to/reviewdb)
+[Blogroll](/blogroll/)
+[Formative posts](/formative-posts/)
 
 ## Watching
 
