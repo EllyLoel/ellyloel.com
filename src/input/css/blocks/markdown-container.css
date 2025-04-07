@@ -1,0 +1,16 @@
+.markdown-container {
+	> .flow {
+		container: markdown / inline-size;
+		display: grid;
+		grid-template-columns: 1fr min(var(--size-content-3), 100%) 1fr;
+
+		& > * {
+			grid-column: 2 / auto;
+		}
+
+		& > :is(figure, picture, .table-container, .iframe-container) {
+			margin-inline: auto;
+			max-inline-size: 100%;
+		}
+	}
+}

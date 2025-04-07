@@ -1,0 +1,11 @@
+---
+layout: base
+---
+<nav aria-labelledby="work-summaries">
+	<h2 id="work-summaries">Work summaries</h2>
+	<ul class="[ ]">
+		<li><a{% if "/resume/" === page.url %} aria-current="page"{% endif %} href="/resume/">Résumé</a> — less detail/shorter</li>
+		<li><a{% if "/cv/" === page.url %} aria-current="page"{% endif %} href="/cv/">CV</a> — more detail/longer</li>
+	</ul>
+</nav>
+{{ content | safe }}

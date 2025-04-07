@@ -1,0 +1,17 @@
+/feed.atom
+  Content-Type: application/xml
+
+/feed.rss
+  Content-Type: application/xml
+
+/bookmarks.atom
+  Content-Type: application/xml
+
+/bookmarks.rss
+  Content-Type: application/xml
+
+/not-bookmarks.atom
+  Content-Type: application/xml
+
+/not-bookmarks.rss
+  Content-Type: application/xml

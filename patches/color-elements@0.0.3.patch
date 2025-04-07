@@ -1,0 +1,19 @@
+diff --git a/src/common/color-element.js b/src/common/color-element.js
+index ea6a29ee8c26849ea0afd7ad3c888821d5c265f9..c5ff5330a26ec8795558aefbcf322e09c05bfc7a 100644
+--- a/src/common/color-element.js
++++ b/src/common/color-element.js
+@@ -1,4 +1,4 @@
+-import NudeElement from "../../node_modules/nude-element/src/Element.js";
++import NudeElement from "../../../../node_modules/nude-element/src/Element.js";
+ import { getType, wait } from "./util.js";
+ 
+ const Self = class ColorElement extends NudeElement {
+@@ -30,7 +30,7 @@ const Self = class ColorElement extends NudeElement {
+ 
+ 			if (this.shadowStyle) {
+ 				let url = this.shadowStyle;
+-				url = url === true ? `./${this.tagName}.css` : url;
++				url = url === true ? `/css/${this.tagName}.css` : url;
+ 				url = new URL(url, this.url);
+ 				this.shadowTemplate = `<style>@import url("${ url }")</style>` + "\n" + this.shadowTemplate;
+ 			}

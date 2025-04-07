@@ -1,0 +1,10 @@
+/* Adds consitent space and padding for each full panel section */
+.panel {
+	margin-block: var(--block-size-7);
+	padding-block: var(--block-size-7);
+	
+	@media (width >= 48em) { /* 768px */
+		margin-block: var(--block-size-8);
+		padding-block: var(--block-size-8);
+	}
+}

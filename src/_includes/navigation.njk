@@ -1,60 +1,13 @@
-<div class="inner">
-	<!-- link to home: http://microformats.org/wiki/rel-home -->
-	<a href="/" rel="home" class="[ text-decoration-none ]"{% if page.url === "/" %} data-state="active" aria-current="page"{% endif %}>
-		<span class="[ logo ]" aria-hidden="true" title="Elly">
-			&lt;e//y&gt;
-		</span>
-		<span class="[ visually-hidden ]">
-			Elly
-		</span>
-	</a>
-
-	<sl-tooltip content="Disable sounds">
-		<sl-icon-button
-			id="sound-button"
-			library="fa"
-			name="fas-volume-high"
-			label="Disable sounds"
-		></sl-icon-button>
-	</sl-tooltip>
-
-	<sl-tooltip content="Switch theme">
-		<sl-icon-button
-			id="theme-switcher-open-button"
-			library="fa"
-			name="fas-palette"
-			label="Open theme switcher"
-		></sl-icon-button>
-	</sl-tooltip>
-
-	<nav role="navigation" aria-label="Primary" class="[ nav ]">
-		{% set navPages = collections.all | eleventyNavigation %}
-		<ul role="list" class="list">
-			{%- for entry in navPages %}
-				{%- if entry.url === "/me/" or entry.url === "/writing/" -%}
-					<li>
-						<details-utils close-esc close-click-outside>
-							<details>
-								<summary>
-									<sl-icon class="[ icon ]" library="fa" name="fas-play" label=""></sl-icon>
-									{{ entry.title }}
-								</summary>
-								<ul role="list">
-									{%- for child in entry.children %}
-										<li>
-											<a{% if child.url === page.url %} data-state="active" aria-current="page"{% endif %} href="{{ child.url | url }}">{{ child.title }}</a>
-										</li>
-									{% endfor -%}
-								</ul>
-							</details>
-						</details-utils>
-					</li>
-				{%- else -%}
-					<li>
-						<a{% if entry.url === page.url %} data-state="active" aria-current="page"{% endif %} href="{{ entry.url | url }}">{{ entry.title }}</a>
-					</li>
-				{%- endif -%}
-			{%- endfor %}
-		</ul>
-	</nav>
-</div>
+{% set navPages = collections.all | eleventyNavigation %}
+<ul role="list" class="[ list ][ align-center ]">
+	{%- for entry in navPages %}
+		{%- if entry.url !== "/footer/" %}
+			<li>
+				<a{% if entry.url === page.url %} aria-current="page"{% endif %} href="{{ entry.url | url }}">{{ entry.title }}</a>
+			</li>
+		{%- endif %}
+	{%- endfor %}
+	<li>
+		<a href="#footer-nav">More…</a>
+	</li>
+</ul>

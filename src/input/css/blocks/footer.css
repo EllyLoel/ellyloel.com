@@ -1,0 +1,113 @@
+.site-footer {
+	overflow-y: clip;
+	position: relative;
+
+	& #update-doodle {
+		position: relative;
+		z-index: 1;
+	}
+
+	& css-doodle {
+		filter: blur(0.4rem);
+		inset: 0;
+		position: absolute;
+
+		@media (forced-colors: active) {
+			display: none;
+		}
+
+		&:not(:defined) {
+			display: none;
+		}
+	}
+
+	& .inner {
+		display: grid;
+		grid-auto-rows: max-content;
+		grid-template-areas:
+			"sitemap"
+			"AoC"
+			"socials"
+			"edit";
+		grid-template-columns: auto 1fr;
+		padding-block: var(--block-size-9);
+		row-gap: var(--block-size-9);
+
+		& .acknowledgement-of-country {
+			grid-area: AoC;
+		}
+
+		& picture {
+			display: none;
+		}
+
+		& .sitemap {
+			block-size: fit-content;
+			grid-area: sitemap;
+
+			& a {
+				margin-inline: 0;
+			}
+
+			> ul {
+				> li {
+					font-size: var(--font-size-4);
+
+					> a {
+						font-weight: var(--font-weight-body-bold);
+					}
+
+					> ul {
+						margin-block-start: 0.5em;
+
+						> li {
+							font-size: var(--font-size-2);
+
+							> ul {
+								margin-block-start: 0.5em;
+
+								> li {
+									--flow-space: 0.5em;
+			
+									font-size: var(--font-size-0);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		& .social-links {
+			block-size: fit-content;
+			display: flex;
+			font-size: var(--font-size-4);
+			gap: var(--block-size-3) var(--inline-size-3);
+			grid-area: socials;
+
+			& a {
+				display: block;
+				height: 1em;
+			}
+		}
+
+		& .gh-edit {
+			grid-area: edit;
+		}
+
+		@media (width >= 64em) { /* 1024px */
+			column-gap: var(--inline-size-9);
+			grid-template-areas:
+				"sitemap image"
+				"AoC AoC"
+				"socials socials"
+				"edit edit";
+
+			& picture {
+				block-size: fit-content;
+				display: block;
+				grid-area: image;
+			}
+		}
+	}
+}

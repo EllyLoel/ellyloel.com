@@ -1,0 +1,14 @@
+{%- set backlinks = collections.allSortedByDate | backlinks(page.url) -%}
+{%- set backlinksCount = backlinks | length -%}
+{%- if backlinksCount > 0 -%}
+	<nav aria-labelledby="backlinks" class="[ flow content-width ]" data-pagefind-ignore>
+		<details class="[ details-reset ]">
+			<summary class="[ h2 ]"><h2 id="backlinks">{{ backlinksCount }} Backlinks</h2></summary>
+			<ul>
+				{%- for otherPost in backlinks -%}
+				<li><a href="{{ otherPost.url }}">{{ otherPost.data.title }}</a></li>
+				{%- endfor -%}
+			</ul>
+		</details>
+	</nav>
+{%- endif -%}

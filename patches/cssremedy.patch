@@ -1,0 +1,25 @@
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+deleted file mode 100644
+index a580f7dec815007c8b255a090bb72d5455e7e1db..0000000000000000000000000000000000000000
+diff --git a/css/remedy.css b/css/remedy.css
+index ccb4ca7c0548e3a7c81b22f3967749590aa3109f..f3d4f49aad511d412941956925044da7fa39fc3f 100644
+--- a/css/remedy.css
++++ b/css/remedy.css
+@@ -114,7 +114,7 @@ note: |
+ 
+ category: embedded elements
+ */
+-img, svg, video, canvas, audio, iframe, embed, object {
++:is(img, svg, video, canvas, audio, iframe, embed, object):not([hidden]) {
+   display: block;
+   vertical-align: middle;
+   max-width: 100%;
+@@ -179,7 +179,7 @@ note: |
+ 
+ category: legacy browsers
+ */
+-article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
++:is(article, aside, figcaption, figure, footer, header, hgroup, main, nav, section):not([hidden]) {
+   display: block;
+ }
+ 

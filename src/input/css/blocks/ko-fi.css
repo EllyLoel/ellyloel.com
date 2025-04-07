@@ -1,0 +1,8 @@
+.ko-fi {
+	background: oklch(100.00% 0 0deg);
+	block-size: 35rem;
+	border: none;
+	border-radius: var(--radius-3);
+	padding-block: var(--block-size-3);
+	padding-inline: var(--inline-size-3);
+}

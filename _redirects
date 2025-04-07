@@ -1,0 +1,16 @@
+/blog/* /:splat 301
+/bookmarks/* /:splat 301
+/projects/* /:splat 301
+/til/* /:splat 301
+/og/blog/* /og/:splat 301
+/og/bookmarks/* /og/:splat 301
+/og/projects/* /og/:splat 301
+/og/til/* /og/:splat 301
+/feeds /follow 301
+/mastodon /microposts 301
+/speaking /talks 301
+/archive /garden 301
+/tip /support 301
+/donate /support 301
+/pay /support 301
+/payment /support 301

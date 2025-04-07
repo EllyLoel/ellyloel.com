@@ -5,47 +5,55 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- specify viewport: https://developers.google.com/speed/docs/insights/ConfigureViewport -->
-		<title>{{ title }} | Elly Loel</title>
+		{%- if page.url === "/" -%}
+		<title>Elly Loel</title>
+		{%- else -%}
+		<title>{{ title }} - Elly Loel</title>
+		{%- endif -%}
 
 		<!-- Include stylesheets here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
-		<link rel="stylesheet" href="/assets/css/style.css">
-
-		<script>
-			const localStorageColorScheme = localStorage.getItem("color-scheme");
-			const body = document.documentElement;
-			// if there's a color-scheme id in localstorage, use it, if not use auto.
-			body.setAttribute("color-scheme", localStorageColorScheme || "auto");
-			body.setAttribute(
-				"class", localStorageColorScheme
-				?.includes("light")
-					? "sl-theme-light"
-					: localStorageColorScheme
-						?.includes("dark")
-							? "sl-theme-dark"
-							: window.matchMedia("(prefers-color-scheme: light)").matches
-								? "sl-theme-light"
-								: "sl-theme-dark");
-		</script>
+		<link rel="stylesheet" href="/css/style.css">
+		{%- include "init-settings.njk" -%}
 
 		<!-- Include scripts here. Concatenate & minify for performance: https://developers.google.com/speed/docs/insights/MinifyResources -->
-		<script type="module" src="/assets/js/main.js" defer></script>
+		{%- rollup "src/input/js/main.js" | url -%}
 		{%- if page.url === "/" -%}
-			<script type="module" src="/assets/js/model-viewer.js" defer></script>
-			<script type="module" src="/assets/js/spotify.js" defer></script>
+			{%- rollup "src/input/js/lastfm.js" | url -%}
 		{%- endif -%}
-		{%- if page.url === "/garden/" or page.url === "/blog/" or page.url === "/projects/" or page.url === "/bookmarks/" or page.url === "/til/" or page.url === "/til/d3/" -%}
-			<script type="module" src="/assets/js/graph.js" defer></script>
+		{%- if page.url === "/garden/" -%}
+			{%- rollup "src/input/js/garden-filters.js" | url -%}
 		{%- endif -%}
+		{%- if page.url === "/search/" -%}
+			{%- rollup "src/input/js/search.js" | url -%}
+		{%- endif -%}
+		{%- if page.url === "/follow/" -%}
+			{%- rollup "src/input/js/confetti.js" | url -%}
+		{%- endif -%}
+		{%- set countPath = "src/input/js/count.js" | url -%}
+		{%- rollup countPath, { "data-goatcounter": "https://ellyloel.goatcounter.com/count" } -%}
 
 		{%- include "meta.njk" -%}
 	</head>
-	<body>
+	<body class="{% if page.url === "/" or page.url === "/about/" %}[ h-card ]{% endif %}">
 		<a class="[ skip-link ] [ button ]" href="#content">Skip to content</a>
 
 		{%- include "header.njk" -%}
 
 		<!-- tabindex fixes focus issue: https://benmyers.dev/blog/skip-links/#tldr -->
-		<main id="content" tabindex="-1" class="[ wrapper flow ]" style="--wrapper-size: 100ch;">
+		<main
+			id="content"
+			tabindex="-1"
+			class="[ wrapper flow ]
+				{%- if page.url === "/garden/" or page.url === "/microposts/" or (page.url !== "/tags/" and page.url | includes("/tags/")) -%}
+					[ h-feed ]
+				{%- elif page.url !== "/" and page.url !== "/about/" -%}
+					[ h-entry ]
+				{%- endif -%}"
+			style="--wrapper-size: 60em;"
+			{% if page.url !== "/" and page.url !== "/garden/" and page.url !== "/microposts/" and not page.url | includes("/tags/") %}
+				data-pagefind-body
+			{% endif %}
+		>
 			{{ content | safe }}
 		</main>
 

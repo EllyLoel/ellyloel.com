@@ -1,0 +1,32 @@
+<li class="[ webmention ][ flow ]">
+	<div class="[ meta ]">
+		<a 
+			href="
+				{%- if mention.author.url -%}
+					{{ mention.author.url }}
+				{%- else -%}
+					https://{{ mention.url | getDomain }}
+				{%- endif -%}
+			"
+			class="[ author-wrapper ]">
+			<strong class="[ author-name ]">
+				{%- if mention.author.name -%}
+					{{ mention.author.name | replace("????", "") | replace(r/:\w*:/g, "") | trim }}
+				{%- else -%}
+					Anonymous
+				{%- endif -%}
+			</strong>
+		</a>
+		<small>
+			{%- if mention.published -%}
+				{%- set mentionPublished = mention.published -%}
+			{%- else -%}
+				{%- set mentionPublished = mention["wm-received"] -%}
+			{%- endif -%}
+			<time class="[ dt-published ]" datetime="{{ mentionPublished }}">{{ mentionPublished | dateToLocale({ timeStyle: "short" }) }}</time>
+		</small>
+	</div>
+	<p>
+		<a href="{{ mention.url }}">{{ mention.url }}</a>
+	</p>
+</li>

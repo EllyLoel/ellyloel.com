@@ -1,0 +1,45 @@
+.badge {
+	align-items: center;
+	background: var(--accent-6);
+	border: solid 1px transparent;
+	border-radius: 3px;
+	color: var(--accent-base);
+	display: inline-flex;
+	font-size: var(--font-size-0);
+	font-weight: var(--font-weight-body-bold);
+	justify-content: center;
+	line-height: 1.5;
+	margin: 0;
+  padding-block: 0.1em;
+	padding-inline: 0.6em;
+
+	button:is(&):not(:active):hover {
+		--_highlight-size: var(--size-px-1);
+	}
+
+	&.outline {
+		background: var(--accent-base);
+		border-color: var(--accent-6);
+		color: var(--accent-6);
+	}
+
+	&.neutral {
+		background: var(--neutral-6);
+		color: var(--neutral-base);
+
+		&.outline {
+			background: var(--neutral-base);
+			border-color: var(--neutral-6);
+			color: var(--neutral-6);
+		}
+	}
+
+	&.pill {
+		border-radius: var(--radius-round);
+	}
+
+	& * {
+		background: inherit;
+		color: inherit;
+	}
+}

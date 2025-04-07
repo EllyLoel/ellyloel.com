@@ -1,0 +1,177 @@
+@property --captured-length {
+	inherits: true;
+	initial-value: 0;
+	syntax: "<length>";
+}
+
+@property --captured-length2 {
+	inherits: true;
+	initial-value: 0;
+	syntax: "<length>";
+}
+
+.home header {
+	& .hero {
+		margin-block-end: var(--block-size-8);
+
+		& h1 {
+			margin: 0;
+			max-inline-size: none;
+
+			& .text-fit {
+				--captured-length: initial;
+				--support-sentinel: var(--captured-length, 9999px);
+
+				container: text-fix / inline-size;
+				display: flex;
+
+				& > [aria-hidden] {
+					visibility: hidden;
+				}
+
+				& > :not([aria-hidden]) {
+					--captured-length: 100cqi;
+					--available-space: var(--captured-length);
+
+					container-type: inline-size;
+					flex-grow: 1;
+
+					& > * {
+						--support-sentinel: inherit;
+						--captured-length: 100cqi;
+						--ratio: tan(
+							atan2(
+								var(--available-space),
+								var(--available-space) - var(--captured-length)
+							)
+						);
+						--font-size: clamp(
+							1em,
+							1em * var(--ratio),
+							var(--max-font-size, infinity * 1px) - var(--support-sentinel)
+						);
+
+						inline-size: var(--available-space);
+
+						&:not(.text-fit) {
+							display: block;
+							font-size: var(--font-size);
+
+							@container (inline-size > 0) {
+								white-space: nowrap;
+							}
+
+							@container text-fix (inline-size > 18rem) {
+								font-size: calc(
+									var(--font-size) * 1.02
+								); /* I know this looks really weird but without it everything is off by just a little bit and idk why lol */
+							}
+						}
+
+						&.text-fit {
+							--captured-length2: var(--font-size);
+
+							font-variation-settings: "opsz"
+								tan(atan2(var(--captured-length2), 1px));
+						}
+					}
+				}
+			}
+		}
+
+		> div {
+			font-size: smaller;
+			font-weight: 1000;
+			isolation: isolate;
+
+			/* stylelint-disable-next-line no-descending-specificity */
+			> * {
+				display: block;
+			}
+
+			& eight-ball {
+				color: var(--accent-solid);
+				margin-inline-start: auto;
+
+				/* for some reason this is causing my 11ty build to run out of memory 🤯 */
+
+				/* & span:not(:has(a)) {
+					text-decoration: 0.4rem wavy line-through oklch(from var(--accent-bg-hover) l c h / 20%);
+					text-decoration-skip-ink: none;
+				} */
+			}
+		}
+	}
+
+	& .grid {
+		grid-template-columns: minmax(0, 1fr);
+		place-items: center center;
+
+		& p {
+			font-size: 2.5rem;
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+			margin: 0;
+			max-inline-size: 100%;
+			z-index: 1;
+
+			/* stylelint-disable-next-line no-descending-specificity */
+			> * {
+				display: block;
+
+				& .stroke {
+					--color: var(--accent-solid);
+
+					cursor: url("/assets/img/meme-pop-cat-cursor.webp"), default;
+					margin-inline: 0.05em;
+					transition-duration: 500ms;
+					transition-property: color, -webkit-text-stroke-color;
+					transition-timing-function: ease;
+
+					&:active {
+						cursor: url("/assets/img/meme-pop-cat-pointer.webp"), default;
+					}
+
+					/* stylelint-disable-next-line selector-id-pattern, selector-not-notation */
+					&:hover:not(#\#):not(#\#) {
+						--stroke-color: var(--fill-color);
+
+						color: var(--hover-color, var(--color));
+						transition-duration: 250ms;
+						transition-property: color, -webkit-text-stroke-color;
+						transition-timing-function: ease;
+					}
+				}
+			}
+		}
+
+		& .lego-container {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+			max-inline-size: 100%;
+		}
+	}
+
+	@media (width >= 30em) { /* 480px */
+		& .hero > div {
+			font-size: var(--font-size-3);
+		}
+	}
+
+	@media (width >= 48em) { /* 768px */
+		& .grid {
+			grid-template-columns: 2fr 1fr;
+			place-items: center start;
+
+			& p {
+				grid-column: 1 / 2;
+				grid-row: 1 / 2;
+			}
+
+			& .lego-container {
+				grid-column: 2 / 3;
+				grid-row: 1 / 2;
+			}
+		}
+	}
+}

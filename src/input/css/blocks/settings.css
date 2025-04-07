@@ -1,0 +1,47 @@
+.settings-dialog {
+	&:modal {
+		display: grid;
+	}
+
+	> .container {
+		grid-column: 1/2;
+
+		& form[method="dialog"] {
+			float: none;
+		}
+
+		& button {
+			&[type="submit"] {
+				float: inline-end;
+			}
+
+			&[aria-pressed="true"] {
+				background: var(--accent-solid);
+				color: var(--accent-2);
+			}
+
+			&[aria-pressed="false"] {
+				background: var(--accent-bg-subtle);
+				color: var(--accent-solid);
+			}
+
+			&:not([data-color-scheme], [type="submit"]) {
+				inline-size: 100%;
+			}
+
+			&[data-color-scheme] {
+				flex: auto;
+			}
+
+			&[data-color-scheme="auto"] {
+				flex: 100%;
+			}
+		}
+
+		& channel-slider::part(slider) {
+			--_slider-thumb-radius: 9999px;
+
+			border-radius: 9999px;
+		}
+	}
+}

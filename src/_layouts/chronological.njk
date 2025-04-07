@@ -1,0 +1,14 @@
+---
+layout: base
+---
+<nav aria-labelledby="chronological">
+	<p id="chronological" hidden>Chronological</p>
+	<ul class="[ flex flex-wrap gap-3 ]">
+		<li><a{% if "/now/" === page.url %} aria-current="page"{% endif %} href="/now/">Now</a></li>
+		<li><a{% if "/next/" === page.url %} aria-current="page"{% endif %} href="/next/">Next</a></li>
+		<li><a{% if "/someday/" === page.url %} aria-current="page"{% endif %} href="/someday/">Someday</a></li>
+		<li><a{% if "/log/" === page.url %} aria-current="page"{% endif %} href="/log/">Log</a></li>
+		<li><a{% if "/weeks/" === page.url %} aria-current="page"{% endif %} href="/weeks/">Weeks</a></li>
+	</ul>
+</nav>
+{{ content | safe }}

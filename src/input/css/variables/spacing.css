@@ -1,0 +1,85 @@
+:root {
+	--scrollbar-width: 15px;
+
+	/* Block spacing */
+	--block-spacer: var(--block-spacer-clamped-rounded, var(--block-spacer-clamped));
+	--block-spacer-clamped: clamp(var(--block-min), var(--block-val), var(--block-max));
+	--block-min: 0.725em; /* roughly 0.5lh */
+	--block-val: 2vh;
+	--block-max: 1.45em; /* roughly 1lh */
+	--block-round: 0.3625em;
+
+	@supports (width: 1vb) {
+		--block-val: 2vb;
+	}
+
+	@supports (width: 1svh) {
+		--block-val: 2svh;
+	}
+
+	@supports (width: 1svb) {
+		--block-val: 2svb;
+	}
+
+	@supports (width: 1lh) {
+		--block-min: 0.5lh;
+		--block-max: 1lh;
+		--block-round: 0.25lh;
+	}
+
+	@supports (width: round(1em, 1px)) {
+		--block-spacer-clamped-rounded: round(var(--block-spacer-clamped), var(--block-round));
+	}
+
+	/* 1.067 - Minor Second
+	1.125 - Major Second
+	1.200 - Minior Third
+	1.250 - Major Third
+	1.333 - Perfect Fourth
+	1.414 - Augmented Fourth
+	1.500 - Perfect Fifth
+	1.618 - Golden Ratio */
+
+	--block-size-1: calc(var(--block-spacer) * 0.25);
+	--block-size-2: calc(var(--block-spacer) * 0.5);
+	--block-size-3: calc(var(--block-spacer) * 1);
+	--block-size-4: calc(var(--block-spacer) * 1.125);
+	--block-size-5: calc(var(--block-spacer) * 1.25);
+	--block-size-6: calc(var(--block-spacer) * 1.5);
+	--block-size-7: calc(var(--block-spacer) * 1.75);
+	--block-size-8: calc(var(--block-spacer) * 2);
+	--block-size-9: calc(var(--block-spacer) * 3);
+	--block-size-negative: calc(var(--block-size-1) * -1);
+
+	/* Inline spacing */
+	--inline-spacer: var(--inline-spacer-clamped-rounded, var(--inline-spacer-clamped));
+	--inline-spacer-clamped: clamp(var(--inline-min), var(--inline-val), var(--inline-max));
+	--inline-min: 12px;
+	--inline-val: 1.5vw;
+	--inline-max: 24px;
+	--inline-round: 4px;
+
+	@supports (width: 1vi) {
+		--inline-val: 1.5vi;
+	}
+
+	@supports (width: round(1em, 1px)) {
+		--inline-spacer-clamped-rounded: round(var(--inline-spacer-clamped), var(--inline-round));
+	}
+
+	--inline-size-1: calc(var(--inline-spacer) * 0.25);
+	--inline-size-2: calc(var(--inline-spacer) * 0.5);
+	--inline-size-3: calc(var(--inline-spacer) * 1);
+	--inline-size-4: calc(var(--inline-spacer) * 1.125);
+	--inline-size-5: calc(var(--inline-spacer) * 1.25);
+	--inline-size-6: calc(var(--inline-spacer) * 1.5);
+	--inline-size-7: calc(var(--inline-spacer) * 1.75);
+	--inline-size-8: calc(var(--inline-spacer) * 2);
+	--inline-size-9: calc(var(--inline-spacer) * 3);
+	--inline-size-negative: calc(var(--inline-size-1) * -1);
+
+	/* Content sizing */
+	--size-content-1: 14rem;
+	--size-content-2: 30rem;
+	--size-content-3: 37rem;
+}

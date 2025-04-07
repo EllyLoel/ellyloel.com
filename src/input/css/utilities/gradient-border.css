@@ -1,0 +1,37 @@
+.gradient-border {
+	border-image: linear-gradient(
+		to right,
+		transparent,
+		var(--accent-solid),
+		transparent
+	) 1;
+
+	@media (forced-colors: active) {
+		border-image: linear-gradient(
+			to right,
+			transparent,
+			CanvasText,
+			transparent
+		) 1;
+	}
+
+	&[data-gradient-border="block-start"] {
+		border-block-start-style: solid;
+		border-block-start-width: var(--border-size-2);
+	}
+
+	&[data-gradient-border="block-end"] {
+		border-block-end-style: solid;
+		border-block-end-width: var(--border-size-2);
+	}
+
+	&[data-gradient-border="inline-start"] {
+		border-inline-start-style: solid;
+		border-inline-start-width: var(--border-size-2);
+	}
+
+	&[data-gradient-border="inline-end"] {
+		border-inline-end-style: solid;
+		border-inline-end-width: var(--border-size-2);
+	}
+}

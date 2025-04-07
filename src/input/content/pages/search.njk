@@ -1,0 +1,21 @@
+---
+layout: base-without-header
+title: Search
+---
+
+<header class="[ main-header ][ padding-block-end-8 gradient-border ]" data-gradient-border="block-end">
+	<pagefind-search>
+		<form action="https://duckduckgo.com/" method="get" role="search" autocomplete="off" novalidate class="[ flow ]">
+			<h1 class="[ p-name ][ margin-0 line-height-1 ]"><label for="search">
+				{{ title }}
+			</label></h1>
+			<input type="text" id="search" name="q" enterkeyhint="search" autofocus>
+			<input type="hidden" name="sites" value="www.ellyloel.com">
+			<p><small>
+				Search provided by <is-land><a href="https://duckduckgo.com/">DuckDuckGo</a><template data-island="replace"><a href="https://pagefind.app/">Pagefind</a></template></is-land>.
+			</small></p>
+		</form>
+	</pagefind-search>
+</header>
+<h2 aria-live="polite"></h2>
+<div id="search-results" class="[ flow ]" hidden></div>

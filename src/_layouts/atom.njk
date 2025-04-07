@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="/styles.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ metadata.lang or page.lang }}">
+	<title>{{ title or metadata.title }}</title>
+	<subtitle>{{ metadata.description }}</subtitle>
+	<link href="{{ permalink | htmlBaseUrl(metadata.url) }}" rel="self"/>
+	<link href="{{ metadata.url | addPathPrefixToFullUrl }}"/>
+	<updated>{{ collections[collection] | getLatestCollectionItemDate | dateToRfc3339 }}</updated>
+	<id>{{ metadata.url | addPathPrefixToFullUrl }}/</id>
+	<author>
+		<name>{{ metadata.author.name }}</name>
+	</author>
+	<generator>{{ eleventy.generator }}</generator>
+	{%- for post in collections[collection] %}
+		{%- set absolutePostUrl = post.url | htmlBaseUrl(metadata.url) %}
+		<entry>
+			<title>{{ post.data.title }}</title>
+			<link href="{{ absolutePostUrl }}"/>
+			<published>
+				{{- post.date | dateObj | dateToRfc3339 -}}
+			</published>
+			<updated>
+				{%- if post.data.modified -%}
+					{{ post.data.modified | dateObj | dateToRfc3339 }}
+				{%- else -%}
+					{{ post.date | dateObj | dateToRfc3339 }}
+				{%- endif -%}
+			</updated>
+			<id>tag:ellyloel.com,{{ post.date | dateToISO }}:{{ post.data.id }}</id>
+			<content type="html">
+				{%- if post.content -%}
+					{%- set content = post.content %}
+				{%- elseif post.data.layout === "bookmark" -%}
+					{%- set content %}{% include "bookmark.njk" %}{% endset -%}
+				{%- endif -%}
+				{{- content | renderTransforms(post.data.page, metadata.url) -}}
+			</content>
+			{%- for tag in post.data.tags | reject("equalto", "YouTube") | reject("equalto", "Seedling") | reject("equalto", "Budding") | reject("equalto", "Evergreen") | reject("equalto", "Essays") | reject("equalto", "Notes") | reject("equalto", "Microposts") | reject("equalto", "Bookmarks") | reject("equalto", "Projects") | reject("equalto", "Garden") %}
+			<category term="{{ tag }}"/>
+			{%- endfor %}
+		</entry>
+	{%- endfor %}
+</feed>

@@ -1,0 +1,79 @@
+<ul class="[ social-links ]{{ "[ flex flex-wrap gap-3 ]" if flex else "[ flow ]" }}">
+	<li>
+		<a href="https://elly.to/mastodon" rel="me" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">
+			{%- inlineIcon "fab:mastodon" -%}
+			<span>Mastodon</span>
+		</a>
+	</li>
+	<li>
+		<a href="https://elly.to/bluesky" rel="me" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">
+			{%- inlineIcon "fab:bluesky" -%}
+			<span>Bluesky</span>
+		</a>
+	</li>
+	<li>
+		<a href="https://elly.to/linkedin" rel="me" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">
+			{%- inlineIcon "fab:linkedin" -%}
+			<span>LinkedIn</span>
+		</a>
+	</li>
+	<li>
+		<a href="https://elly.to/github" rel="me" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">
+			{%- inlineIcon "fab:github" -%}
+			<span>GitHub</span>
+		</a>
+	</li>
+	<li>
+		<a href="https://elly.to/kofi" rel="me" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">
+			{%- inlineIcon "local:kofi" -%}
+			<span>Ko-fi</span>
+		</a>
+	</li>
+	{%- if disclosure -%}
+	<li>
+		<details>
+			<summary>More links</summary>
+			<ul class="[ flow ]">
+	{%- endif -%}
+				<li>
+					<a href="https://elly.to/codepen" rel="me" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">
+						{%- inlineIcon "fab:codepen" -%}
+						<span>Codepen</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.threads.net/fediverse_profile/elly@front-end.social" rel="me" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">
+						{%- inlineIcon "fab:threads" -%}
+						<span>Threads</span> <small>(Fediverse profile)</small>
+					</a>
+				</li>
+				<li>
+					<a href="https://instagram.com/elly.louise.loel" rel="me" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">
+						{%- inlineIcon "fab:instagram" -%}
+						<span>Private Instagram</span> <small>(kinda use)</small>
+					</a>
+				</li>
+				<li>
+					<a href="https://instagram.com/ellyloel" rel="me" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">
+						{%- inlineIcon "fab:instagram" -%}
+						<span>Public Instagram</span> <small>(don't use)</small>
+					</a>
+				</li>
+				<li>
+					<a href="https://tumblr.com/ellyloel" rel="me" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">
+						{%- inlineIcon "fab:tumblr" -%}
+						<span>Tumblr</span> <small>(kinda use)</small>
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.ellyloel.com" rel="me" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">
+						{%- inlineIcon "fab:twitter" -%}
+						<del datetime="2022-11-18" cite="https://twitter.ellyloel.com/1593505830347100160/"><span>Twitter</span></del> <small>(archive)</small>
+					</a>
+				</li>
+	{%- if disclosure -%}
+			</ul>
+		</details>
+	</li>
+	{%- endif -%}
+</ul>

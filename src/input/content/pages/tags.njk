@@ -1,0 +1,36 @@
+---
+layout: base
+title: Tags
+eleventyNavigation:
+  key: Tags
+  parent: Garden
+  order: 2
+---
+
+<ul class="[ tags ][ flex flex-wrap gap-2 ]">
+	{%- set tagList = collections | objKeys | reject("equalto", "all") | reject("equalto", "allSortedByDate") | reject("equalto", "BookmarksSortedByDate") | reject("equalto", "notBookmarksSortedByDate") | reject("equalto", "postsSortedByDate") -%}
+	{%- set tagArray = [] -%}
+	{%- for tag in tagList -%}
+		{% set tagObj = { name: tag, count: collections[tag] | length } %}
+		{% set tagArray = (tagArray.push(tagObj), tagArray) %}
+	{%- endfor -%}
+	{%- for tag in tagArray | sort(attribute="name") | sort(true, false, "count") -%}
+		<li class="[ badge ][ pill gap-1 align-baseline ]">
+			{%- set icon -%}fas:
+				{%- if tag.name === "Seedling" -%}seedling{%- endif -%}
+				{%- if tag.name === "Budding" -%}spa{%- endif -%}
+				{%- if tag.name === "Evergreen" -%}tree{%- endif -%}
+			{%- endset -%}
+			<a
+				href="/tags/{{ tag.name | slugify }}/"
+				class="[ p-category ][ padding-0 margin-0 text-decoration-none ]"
+				data-pagefind-filter="tags">
+				{%- if icon !== "fas:" -%}
+					{%- inlineIcon icon -%}
+				{%- endif -%}
+				{{- tag.name -}}
+			</a>
+			<small>{{ tag.count }}</small>
+		</li>
+	{% endfor %}
+</ul>

@@ -1,0 +1,135 @@
+is-land[data-for="graph"] {
+	& [data-preload] {
+		display: grid;
+		grid-template-rows: minmax(0, 1fr);
+		max-block-size: 95svb;
+
+		> * {
+			grid-column: 1 / 1;
+			grid-row: 1 / 1;
+		}
+
+		> picture {
+			overflow: clip;
+	
+			> img {
+				block-size: 100%;
+				inline-size: 100%;
+				object-fit: cover;
+			}
+		}
+
+		> button {
+			border-radius: var(--radius-3);
+			outline-offset: -2px;
+			padding-block: var(--block-size-2);
+			padding-inline: var(--inline-size-1);
+	
+			> span {
+				background: var(--accent-bg-subtle);
+				border-radius: var(--radius-2);
+				box-decoration-break: clone;
+				padding-block: var(--block-size-1);
+				padding-inline: var(--inline-size-1);
+			}
+		}
+	}
+
+	> [id="graph"] > svg,
+	> [data-preload] picture {
+		--shadow-offset: var(--size-px-1);
+
+		background: var(--accent-bg-subtle);
+		border: var(--border-size-2) solid var(--accent-bg-hover);
+		border-radius: var(--radius-3);
+		box-shadow: var(--shadow-offset) var(--shadow-offset) 0 0
+			var(--accent-bg-hover);
+		transition: box-shadow 300ms var(--ease-1);
+
+		&:has(+ button:is(:hover, :focus-visible)) {
+			--shadow-offset: var(--size-px-2);
+
+			transition: box-shadow 150ms var(--ease-1);
+		}
+	}
+
+	> [id="graph"]:has(svg) + [data-preload] {
+		display: none;
+	}
+}
+
+#graph {
+	block-size: fit-content;
+	inline-size: 100%;
+	position: relative;
+
+	> svg {
+		inline-size: 100%;
+		max-block-size: 95svb;
+		max-inline-size: 100%;
+
+		& * {
+			overflow: visible;
+		}
+
+		& button {
+			cursor: grab;
+			pointer-events: none;
+			
+			&:active {
+				cursor: grabbing;
+			}
+
+			& path {
+				pointer-events: auto;
+			}
+		}
+	}
+}
+
+a[id="before-graph"][href="#after-graph"] {
+	top: -1em;
+	top: -1lh;
+
+	&:focus-visible {
+		transform: translateY(calc(-1 * var(--block-size-2)));
+	}
+}
+
+a[id="after-graph"][href="#before-graph"] {
+	&:focus-visible {
+		transform: translateY(var(--block-size-2));
+	}
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+a[id="before-graph"][href="#after-graph"], a[id="after-graph"][href="#before-graph"] {
+	--opacity-duration: 100ms;
+	--transform-duration: 250ms;
+
+	background: var(--accent-bg-subtle);
+	inline-size: fit-content;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	right: 0;
+	transition: opacity var(--opacity-duration) var(--ease-1) !important;
+
+	@media (prefers-reduced-motion: no-preference) {
+		transition: opacity var(--opacity-duration) var(--ease-1),
+			transform calc(var(--transform-duration) * 2) var(--ease-out-3) !important;
+	}
+
+	&:focus-visible {
+		opacity: 1;
+		pointer-events: all;
+		transition: opacity var(--opacity-duration) var(--ease-1) !important;
+
+		@media (prefers-reduced-motion: no-preference) {
+			transition: opacity var(--opacity-duration) var(--ease-1) calc(var(--transform-duration) - var(--opacity-duration)),
+				transform var(--transform-duration) var(--ease-in-3),
+				outline-offset 145ms var(--ease-2) !important;
+		}
+	}
+}

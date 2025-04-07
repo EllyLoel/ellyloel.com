@@ -1,0 +1,43 @@
+pagefind-search {
+	display: block;
+
+	& form[role="search"] {
+		& input[type="text"] {
+			display: block;
+			inline-size: min(100%, var(--size-content-2));
+		}
+
+		& p {
+			--flow-space: 0;
+		}
+	}
+}
+
+h2[aria-live="polite"], div[id="search-results"] {
+	--flow-space: var(--block-size-8);
+}
+
+div[id="search-results"] {
+	& article {
+		--flow-space: var(--block-size-8);
+
+		position: relative;
+
+		& a::after {
+			content: "";
+			display: block;
+			inset: 0;
+			position: absolute;
+		}
+
+		& p {
+			--flow-space: var(--block-size-2);
+		}
+
+		& .metadata {
+			color: var(--neutral-solid);
+			font-size: var(--font-size-0);
+		}
+	}
+}
+

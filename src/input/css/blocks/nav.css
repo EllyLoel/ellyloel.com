@@ -1,0 +1,74 @@
+.nav {
+	font-weight: var(--font-weight-body-bold);
+	line-height: 1;
+
+	& a[href="/"] {
+		&:hover {
+			background: transparent;
+		}
+
+		> .logo {
+			height: 1.5em;
+			transform: translateY(0.15rem);
+			width: auto;
+		}
+	}
+
+	& :is(button, .button) {
+		--_border: var(--accent-bg-subtle);
+
+		border-width: var(--border-size-1);
+		color: var(--accent-bg-active);
+		margin: 0;
+		padding-block: var(--block-size-1);
+		padding-inline: var(--inline-size-1);
+
+		&:hover {
+			--_highlight-size: var(--size-px-1);
+		}
+
+		&:is(:hover, :focus, :active) {
+			--_border: var(--accent-bg);
+		}
+	}
+
+	& .list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--block-size-2) var(--inline-size-3);
+		margin-inline-end: auto;
+
+		&:first-of-type {
+			display: flex;
+
+			@media (width < 40em) {
+				display: none;
+			}
+		}
+
+		&:last-of-type {
+			display: none;
+
+			@media (width < 40em) {
+				display: flex;
+				flex-basis: 100%;
+			}
+		}
+
+		& a {
+			display: block;
+			margin: 0;
+			text-decoration: none;
+
+			&[aria-current="page"] {
+				background: var(--accent-bg);
+				color: var(--link-visited);
+			}
+
+			&:hover {
+				background: var(--accent-text);
+				color: var(--accent-bg);
+			}
+		}
+	}
+}
