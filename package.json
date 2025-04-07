@@ -18,8 +18,8 @@
 	},
 	"scripts": {
 		"start": "ELEVENTY_ENV=development eleventy --serve --incremental --quiet",
-		"build": "ELEVENTY_ENV=production pnpm build:eleventy && pnpm build:pagefind",
-		"build:local": "ELEVENTY_ENV=development pnpm build:eleventy && pnpm build:pagefind",
+		"build": "pnpm bookmarks && ELEVENTY_ENV=production pnpm build:eleventy && pnpm build:pagefind",
+		"build:local": "pnpm bookmarks && ELEVENTY_ENV=development pnpm build:eleventy && pnpm build:pagefind",
 		"build:eleventy": "eleventy --quiet",
 		"build:pagefind": "pagefind --site _site",
 		"start:pagefind": "pagefind --site _site --serve",
