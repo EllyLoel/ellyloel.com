@@ -3,14 +3,16 @@
 {%- endif -%}
 
 {%- if excerpt -%}
-	{{ excerpt | md | safe }}
+	<blockquote>
+		{{- excerpt | md | safe -}}
+	</blockquote>
 {%- endif -%}
 
 {%- if highlights -%}
 	{%- for highlight in highlights -%}
 		{%- if highlight -%}
 			<blockquote>
-				{{ highlight | nl2br | replace(r/(<br \/>\n)+/gm, "<br><br>") | safe }}
+				{{- highlight | nl2br | replace(r/(<br \/>\n)+/gm, "<br><br>") | safe -}}
 			</blockquote>
 		{%- endif -%}
 	{%- endfor -%}
@@ -27,7 +29,7 @@
 		<picture>
 			<source media="(prefers-color-scheme: dark)" srcset="https://api.microlink.io?url={{ link }}&screenshot=true&colorScheme=dark&meta=false&embed=screenshot.url">
 			<source media="(prefers-color-scheme: light)" srcset="https://api.microlink.io?url={{ link }}&screenshot=true&colorScheme=light&meta=false&embed=screenshot.url">
-			<img eleventy:ignore alt="" class="[ u-photo ][ image ]" src="https://api.microlink.io?url={{ link }}&screenshot=true&meta=false&embed=screenshot.url" width="649" height="406">
+			<img eleventy:ignore alt="" class="[ u-photo ][ image ]" src="https://api.microlink.io?url={{ link }}&screenshot=true&meta=false&embed=screenshot.url" width="649" height="406" style="inline-size:100%">
 		</picture>
 	</a>
 {%- endif -%}
