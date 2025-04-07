@@ -84,8 +84,8 @@ importers:
         specifier: ^5.0.0
         version: 5.0.0
       '@eslint/js':
-        specifier: ^9.0.0
-        version: 9.19.0
+        specifier: ^9.24.0
+        version: 9.24.0
       '@fortawesome/fontawesome-free':
         specifier: ^6.7.2
         version: 6.7.2
@@ -762,6 +762,10 @@ packages:
 
   '@eslint/js@9.19.0':
     resolution: {integrity: sha512-rbq9/g38qjfqFLOVPvwjIvFFdNziEC5S65jmjPw5r6A//QH+W91akh9irMwjDN8zKUTak6W9EsAv4m/7Wnw0UQ==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@eslint/js@9.24.0':
+    resolution: {integrity: sha512-uIY/y3z0uvOGX8cp1C2fiC4+ZmBhp6yZWkojtHL1YEMnRt1Y63HB9TM17proGEmeG7HeUY+UP36F0aknKYTpYA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@eslint/object-schema@2.1.6':
@@ -3282,8 +3286,8 @@ packages:
     engines: {node: '>= 0.4'}
     hasBin: true
 
-  reurl@https://codeload.github.com/jsepia/reurl/tar.gz/a3210117636c115fb139517fcfb2ea929025cded:
-    resolution: {tarball: https://codeload.github.com/jsepia/reurl/tar.gz/a3210117636c115fb139517fcfb2ea929025cded}
+  reurl@git+https://git@github.com:jsepia/reurl.git#a3210117636c115fb139517fcfb2ea929025cded:
+    resolution: {commit: a3210117636c115fb139517fcfb2ea929025cded, repo: git@github.com:jsepia/reurl.git, type: git}
     version: 1.0.0-rc.2
 
   reusify@1.0.4:
@@ -4310,6 +4314,8 @@ snapshots:
       - supports-color
 
   '@eslint/js@9.19.0': {}
+
+  '@eslint/js@9.24.0': {}
 
   '@eslint/object-schema@2.1.6': {}
 
@@ -6100,7 +6106,7 @@ snapshots:
     dependencies:
       extend: 3.0.2
       markdown-it-regexp: 0.4.0
-      reurl: https://codeload.github.com/jsepia/reurl/tar.gz/a3210117636c115fb139517fcfb2ea929025cded
+      reurl: git+https://git@github.com:jsepia/reurl.git#a3210117636c115fb139517fcfb2ea929025cded
       sanitize-filename: 1.6.3
 
   markdown-it@14.1.0:
@@ -6876,7 +6882,7 @@ snapshots:
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
-  reurl@https://codeload.github.com/jsepia/reurl/tar.gz/a3210117636c115fb139517fcfb2ea929025cded:
+  reurl@git+https://git@github.com:jsepia/reurl.git#a3210117636c115fb139517fcfb2ea929025cded:
     dependencies:
       spec-url: 2.0.0-dev.1
 
