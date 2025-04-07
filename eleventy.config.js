@@ -60,6 +60,7 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("_redirects");
 	eleventyConfig.addPassthroughCopy({ "node_modules/color-elements/src/color-slider/color-slider.css": "css/color-slider.css" });
 	eleventyConfig.addPassthroughCopy({ "node_modules/color-elements/src/channel-slider/channel-slider.css": "css/channel-slider.css" });
+	eleventyConfig.addPassthroughCopy({ "src/input/css/fonts.css": "css/fonts.css" }); // This is needed for the OG image pages
 
 	// Watch targets
 	eleventyConfig.addWatchTarget("src/input/css");
