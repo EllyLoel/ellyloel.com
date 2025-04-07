@@ -52,6 +52,7 @@
 @import url("./blocks/hero.css") layer(blocks);
 @import url("./blocks/home.css") layer(blocks);
 @import url("./blocks/icon.css") layer(blocks);
+@import url("./blocks/ko-fi.css") layer(blocks);
 @import url("./blocks/lego.css") layer(blocks);
 @import url("./blocks/link-icon-start.css") layer(blocks);
 @import url("./blocks/lite-youtube.css") layer(blocks);
