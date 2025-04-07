@@ -26,8 +26,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0
       '@11ty/is-land':
-        specifier: ^4.0.0
-        version: 4.0.0
+        specifier: ^4.0.1
+        version: 4.0.1
       '@google/model-viewer':
         specifier: ^4.0.0
         version: 4.0.0(three@0.169.0)
@@ -275,8 +275,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  '@11ty/is-land@4.0.0':
-    resolution: {integrity: sha512-RxbjF2+FzSu3rerHrWLRsvsPX2YM47RwXpdWCCzLhwRSsz5sJe9TnK7mphEld1gZnp2GeD5ByvhqjIc4CqidsQ==}
+  '@11ty/is-land@4.0.1':
+    resolution: {integrity: sha512-Qo4qHgqaur1eOIMbjlAPIz5/rFBs6c1AyfU09qJQ1pVY0m8B29+XOIbXCdVO3zqPQq04ZgAhqrQB7QgqVWvmsA==}
 
   '@11ty/lodash-custom@4.17.21':
     resolution: {integrity: sha512-Mqt6im1xpb1Ykn3nbcCovWXK3ggywRJa+IXIdoz4wIIK+cvozADH63lexcuPpGS/gJ6/m2JxyyXDyupkMr5DHw==}
@@ -3282,8 +3282,8 @@ packages:
     engines: {node: '>= 0.4'}
     hasBin: true
 
-  reurl@https://codeload.github.com/jsepia/reurl/tar.gz/a3210117636c115fb139517fcfb2ea929025cded:
-    resolution: {tarball: https://codeload.github.com/jsepia/reurl/tar.gz/a3210117636c115fb139517fcfb2ea929025cded}
+  reurl@git+https://git@github.com:jsepia/reurl.git#a3210117636c115fb139517fcfb2ea929025cded:
+    resolution: {commit: a3210117636c115fb139517fcfb2ea929025cded, repo: git@github.com:jsepia/reurl.git, type: git}
     version: 1.0.0-rc.2
 
   reusify@1.0.4:
@@ -3879,7 +3879,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@11ty/is-land@4.0.0': {}
+  '@11ty/is-land@4.0.1': {}
 
   '@11ty/lodash-custom@4.17.21': {}
 
@@ -6100,7 +6100,7 @@ snapshots:
     dependencies:
       extend: 3.0.2
       markdown-it-regexp: 0.4.0
-      reurl: https://codeload.github.com/jsepia/reurl/tar.gz/a3210117636c115fb139517fcfb2ea929025cded
+      reurl: git+https://git@github.com:jsepia/reurl.git#a3210117636c115fb139517fcfb2ea929025cded
       sanitize-filename: 1.6.3
 
   markdown-it@14.1.0:
@@ -6876,7 +6876,7 @@ snapshots:
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
-  reurl@https://codeload.github.com/jsepia/reurl/tar.gz/a3210117636c115fb139517fcfb2ea929025cded:
+  reurl@git+https://git@github.com:jsepia/reurl.git#a3210117636c115fb139517fcfb2ea929025cded:
     dependencies:
       spec-url: 2.0.0-dev.1
 
