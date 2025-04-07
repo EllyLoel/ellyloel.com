@@ -1,7 +1,7 @@
 {
 	"title": "Elly Loel",
 	"short_name": "ellyloel",
-	"description": "This is my own lovely little corner of the internet. Look forward to plenty of interesting ideas & projects.",
+	"description": "Web Designer. Accessibility Specialist. Neurodivergent. Disabled. Queer.",
 	"url": "https://ellyloel.com",
 	"domain": "www.ellyloel.com",
 	"lang": "en",
@@ -12,9 +12,11 @@
 		"url": "https://ellyloel.com/about/",
 		"links": {
 			"Mastodon": "https://front-end.social/@elly",
+			"Bluesky": "https://bsky.app/profile/elly.lol",
 			"LinkedIn": "https://linkedin.com/in/ellyloel",
-			"CodePen": "https://codepen.io/ellyloel",
 			"GitHub": "https://github.com/ellyloel",
+			"CodePen": "https://codepen.io/ellyloel",
+			"Threads": "https://www.threads.net/@ellyloel",
 			"Twitter": "https://twitter.com/ellyloel"
 		}
 	}

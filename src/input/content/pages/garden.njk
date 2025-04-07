@@ -1,0 +1,156 @@
+---
+layout: base
+title: Garden
+eleventyNavigation:
+  key: Garden
+  order: 1
+eleventyImport:
+  collections: ["postsSortedByDate"]
+---
+
+<a href="#feed" class="[ visually-hidden ]">Skip to posts</a>
+
+<div class="[ p-summary ][ flow ]">
+	{%- md -%}Seedlings are fresh out of my mind, budding I have come back to and updated at least once, and evergreen I likely won't be updating anymore. For a more thorough explanation of what a digital garden is, I'd recommend [Maggie Appleton's wonderful essay](https://maggieappleton.com/garden-history).{%- endmd -%}
+	<p>Also available in your favourite flavour of feed <a href="/feed.rss" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">{% inlineIcon "fas:rss" %} <span>RSS</span></a>, <a href="/feed.atom" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">{% inlineIcon "local:Atom" %} <span>Atom</span></a> or <a href="/feed.json" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">{% inlineIcon "local:JSON Feed" %}<span>JSON</span></a>.</p>
+	<p>You can also find a list of all the <a href="/tags/" class="[ u-url ][ link-icon-start text-decoration-none move-link-styling-to-child ]">{% inlineIcon "fas:tags" %} <span>tags</span></a>.</p>
+</div>
+
+<h2 id="title-graph" tabindex="-1">Graph</h2>
+<is-land data-for="graph" on:interaction="">
+	<template data-island>
+		{%- rollup "src/input/js/graph.js" | url -%}
+		<script type="module">
+			if (!CSS.supports("selector(:has(a))")) {
+				document.querySelector("#graph + picture").setAttribute("hidden", "");
+			}
+		</script>
+	</template>
+	<div id="graph"></div>
+	<div data-preload>
+		<picture>
+			<source media="(prefers-color-scheme: dark)" srcset="/assets/img/graph-dark.webp">
+			<source media="(prefers-color-scheme: light)" srcset="/assets/img/graph-light.webp">
+			<img eleventy:ignore alt="" class="[ u-photo ][ image ]" src="/assets/img/graph-light.webp" width="640" height="400">
+		</picture>
+		<button type="button" class="[ button-reset ]" onclick="window['title-graph'].focus()">
+			<span>
+				{% inlineIcon "fas:hexagon-nodes" %}
+				Show force-directed pages and links graph
+			</span>
+		</button>
+	</div>
+</is-land>
+<dialog id="graph-dialog" closedby="any" aria-labelledby="graph-dialog-title" aria-describedby="graph-dialog-body">
+	<div class="[ container ][ flow ]">
+		<form method="dialog">
+			<button type="submit" autofocus>
+				<span class="[ visually-hidden ]">Close</span>
+				{%- icon "fas:xmark" -%}
+			</button>
+		</form>
+		<h2 id="graph-dialog-title" style="--flow-space: 0"></h2>
+		<div id="graph-dialog-body" class="[ flow ]">
+			<details open class="[ incoming-links ][ details-reset ]">
+				<summary class="[ h3 ]">
+					<h3>Incoming links</h3>
+				</summary>
+			</details>
+			<details open class="[ outgoing-links ][ details-reset ]">
+				<summary class="[ h3 ]">
+					<h3>Outgoing links</h3>
+				</summary>
+			</details>
+		</div>
+	</div>
+</dialog>
+
+<h2 hidden>Filters</h2>
+<form class="[ garden-filters ][ flow ]" hidden>
+	<fieldset>
+		<legend>Stages</legend>
+		<div id="fieldset-stages-content">
+			{% set stageButtons = [
+				{ id: "seedling", name: "Stages", label: "Seedling", icon: "fas:seedling" },
+				{ id: "budding", name: "Stages", label: "Budding", icon: "fas:spa" },
+				{ id: "evergreen", name: "Stages", label: "Evergreen", icon: "fas:tree" }
+			] -%}
+			{%- asyncAll button in stageButtons -%}
+				{# {%- include "filter-button.njk" -%} Had to remove this and inline it because of async weirdness #}
+				<button type="button" id="filters-{{ button.id }}" class="[ badge ]" aria-pressed="false" data-filter-name="{{ button.name | lower }}">
+					{%- if button.icon -%}{%- icon button.icon -%}{%- endif -%}
+					{{- button.label -}}
+				</button>
+			{%- endall -%}
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Types</legend>
+		<div id="fieldset-types-content">
+			{% set typeButtons = [
+				{ id: "essays", name: "Types", label: "Essays" },
+				{ id: "notes", name: "Types", label: "Notes" },
+				{ id: "microposts", name: "Types", label: "Microposts" },
+				{ id: "bookmarks", name: "Types", label: "Bookmarks" },
+				{ id: "projects", name: "Types", label: "Projects" }
+			] -%}
+			{%- for button in typeButtons -%}
+				{%- include "filter-button.njk" -%}
+			{%- endfor -%}
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Tags</legend>
+		<div id="fieldset-tags-content">
+			{% set tagArray = collections | objKeys | reject("equalto", "Seedling") | reject("equalto", "Budding") | reject("equalto", "Evergreen") | reject("equalto", "Essays") | reject("equalto", "Notes") | reject("equalto", "Microposts") | reject("equalto", "Bookmarks") | reject("equalto", "Projects") | reject("equalto", "Garden") | reject("equalto", "all") | reject("equalto", "allSortedByDate") | reject("equalto", "BookmarksSortedByDate") | reject("equalto", "notBookmarksSortedByDate") | reject("equalto", "postsSortedByDate") -%}
+			{%- set tagButtons = [] -%}
+			{%- for tag in tagArray -%}
+				{% set tagButton = { id: tag | lower, name: "Tags", label: tag, count: collections[tag] | length } %}
+				{% set tagButtons = (tagButtons.push(tagButton), tagButtons) %}
+			{%- endfor -%}
+			{%- for button in tagButtons | sort(attribute="name") | sort(true, false, "count") -%}
+				{%- include "filter-button.njk" -%}
+				{%- if loop.index === 5 and not loop.last -%}
+					<button type="button" id="show-more-tags" class="[ badge ][ outline ]">Show more</button>
+					<span hidden>
+				{%- endif -%}
+				{%- if loop.last and loop.index > 5 -%}
+					</span>
+					<button type="button" id="show-less-tags" class="[ badge ][ outline ]" hidden>Show less</button>
+				{%- endif -%}
+			{%- endfor -%}
+		</div>
+	</fieldset>
+</form>
+
+{%- include "crazy-filter.njk" -%}
+<h2>Posts</h2>
+{%- set posts = collections.postsSortedByDate -%}
+<ul id="feed" tabindex="-1" class="[ feed ]" style="--flow-space: var(--block-size-7)">
+	{%- for post in posts %}
+		{%- if post.data.archived !== true -%}
+			{%- set headingLevel = 3 -%}
+			{%- set title = post.data.title -%}
+			{%- set url = post.url -%}
+			{%- setAsync "imageMarkup" -%}{%- endsetAsync -%}
+			{%- if post.data.image -%}
+				{%- setAsync "imageMarkup" -%}
+				<svg viewBox="0 0 200 150" width="200" height="150">
+					{%- set randomNumber -%}{%- random 0, 1 -%}{%- endset -%}
+					<image class="image" xlink:href="https://res.cloudinary.com/ellyloel/image/fetch/f_auto/q_auto:low/c_fill,h_150,w_200/{{ post.data.image }}" x="-50%" y="-50%" width="200%" height="200%" filter="url(#filter)" opacity="0.65" style="transform: rotate({{ randomNumber | round(3) }}turn); transform-origin: center;">
+				</svg>
+				{%- endsetAsync -%}
+			{%- endif -%}
+			{%- set date = post.date -%}
+			{%- set label = "" -%}
+			{%- if post.data.modified -%}
+				{%- set label = "Modified" -%}
+			{%- elif post.data.created -%}
+				{%- set label = "Created" -%}
+			{%- endif -%}
+			{%- set tags = post.data.tags -%}
+			{%- set exclude = "Garden" -%}
+			{%- include "feedItem.njk" -%}
+		{%- endif -%}
+	{%- endfor %}
+</ul>

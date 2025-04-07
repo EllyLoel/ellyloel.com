@@ -1,0 +1,23 @@
+.callout {
+	background: var(--accent-bg-subtle);
+	border: var(--border-size-2) solid var(--accent-border);
+	border-radius: var(--radius-3);
+	padding-block: var(--block-size-5);
+	padding-inline: var(--inline-size-5);
+	position: relative;
+
+	> .inline-icon {
+		background: var(--accent-bg-subtle);
+		border-radius: var(--radius-round);
+		color: var(--accent-border);
+		font-size: var(--font-size-5);
+		inset-block-start: -14px;
+		inset-inline-start: -14px;
+		position: absolute;
+	}
+
+	> strong {
+		font-size: var(--font-size-3);
+		line-height: 1;
+	}
+}

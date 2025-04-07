@@ -1,0 +1,18 @@
+---
+layout: base
+title: Guestbook
+eleventyNavigation:
+  key: Guestbook
+  parent: Contact
+  order: 1
+---
+
+{%- md -%}
+~~~ callout **This page displays entries sent via Webmention!**
+If you want to sign the guestbook send through a Webmention, either from your website or you can **reply on [Mastodon](https://front-end.social/@elly/110143472326627842) or [Bluesky](https://bsky.app/profile/elly.lol/post/3lcteiaaxsc2j)**.
+~~~
+
+This page was inspired by [Ana Rodrigues’ guestbook](https://ohhelloana.blog/guestbook/).
+{%- endmd -%}
+
+{%- include "webmentions.njk" -%}

@@ -1,0 +1,171 @@
+---
+permalink: "sitemap-styles.xsl"
+---
+<xsl:stylesheet version="3.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:sitemap="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<xsl:output method="html" version="1.0" encoding="UTF-8" indent="yes"/>
+	<xsl:template match="/">
+		<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+			<head>
+				<meta charset="utf-8"/>
+				<meta name="viewport" content="width=device-width, initial-scale=1"/>
+				<title>
+					Sitemap - Elly Loel
+				</title>
+
+				<link rel="stylesheet" href="/css/style.css"/>
+				{%- rollup "src/input/js/main.js" | url -%}
+				{%- set countPath = "src/input/js/count.js" | url -%}
+				{%- rollup countPath, { "data-goatcounter": "https://ellyloel.goatcounter.com/count" } -%}
+
+				{# Meta #}
+				{%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(metadata.url) }}{%- endset -%}
+				{%- set ogTitle = "Web Feed" -%}
+				{%- set ogAlt = "A background of curved purple lines with the text “{{ title }}” ontop, Elly's logo is in the bottom right corner." -%}
+				{%- set ogUrl -%}https://api.microlink.io/?url=https%3A%2F%2Fwww.ellyloel.com%2Fog{{ page.url }}&screenshot=true&meta=false&embed=screenshot.url{%- endset -%}
+
+				{#- General -#}
+				<link rel="canonical" href="{{ canonical }}"/>
+				<meta name="author" content="{{ metadata.author.name }}"/>
+				<meta name="generator" content="{{ eleventy.generator }}"/>
+
+				{#- Style -#}
+				<meta name="color-scheme" content="light dark"/>
+				<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f9f9f9"/>
+				<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111111"/>
+
+				{#- Open Graph -#}
+				<meta property="og:site_name" content="{{ metadata.title }}"/>
+				<meta property="og:title" content="{{ ogTitle }}"/>
+				<meta property="og:description" content="{{ desc }}"/>
+				<meta property="og:url" content="{{ absolutePageUrl }}"/>
+				<meta property="og:locale" content="{{ metadata.locale }}"/>
+				<meta name="twitter:card" content="summary_large_image"/>
+				<meta property="twitter:image" content="{{ ogUrl }}"/>
+				<meta property="og:image" content="{{ ogUrl }}"/>
+				<meta name="og:image" content="{{ ogUrl }}"/>
+				<meta name="og:image:secure_url" content="{{ ogUrl }}"/>
+				<meta property="og:image:alt" content="{{ ogAlt}}"/>
+				<meta name="fediverse:creator" content="@elly@front-end.social"/>
+
+				{#- Icons -#}
+				<link rel="icon" href="/assets/img/icons/favicon.ico" sizes="any"/>
+				<link rel="icon" href="/assets/img/icons/favicon.svg" type="image/svg+xml"/>
+				<link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png"/>
+				<link rel="manifest" href="/manifest.webmanifest"/>
+
+				{#- RSS Feed -#}
+				<link type="application/atom+xml" rel="alternate" href="{{ metadata.url }}/feed.atom" title="{{ metadata.title }}"/>
+				<link type="application/rss+xml" rel="alternate" href="{{ metadata.url }}/feed.rss" title="{{ metadata.title }}"/>
+				<link type="application/json" rel="alternate" href="{{ metadata.url }}/feed.json" title="{{ metadata.title }}"/>
+
+				{#- Webmentions -#}
+				<link href="{{ metadata.author.links.Mastodon }}" rel="me"/>
+				<link href="{{ metadata.author.links.Bluesky }}" rel="me"/>
+				<link href="{{ metadata.author.links.GitHub }}" rel="me"/>
+				<link href="{{ metadata.author.links.Threads }}" rel="me"/>
+				<link rel="webmention" href="https://webmention.io/{{ metadata.domain }}/webmention"/>
+			</head>
+			<body>
+				<a class="[ skip-link ] [ button ]" href="#content">Skip to content</a>
+
+				<header class="[ site-head ] [ wrapper gradient-border ]" style="--wrapper-size: 60em;">
+					<nav class="[ nav ][ flex flex-wrap gap-3 align-center ]">
+						<!-- link to home: http://microformats.org/wiki/rel-home -->
+						<a href="/" rel="home" class="[ u-url u-uid ] [ text-decoration-none ]">
+							{%- labelledIcon "local:elly", class="logo" -%}
+							<span class="[ p-name ]" hidden="">Elly Loel</span>
+						</a>
+
+						{#- Larger viewports -#}
+						{%- include "navigation.njk" -%}
+
+						<a href="/search/" class="[ button ]"{% if page.url === "/search/" %} aria-current="page"{% endif %}>
+							{%- icon "fas:magnifying-glass" -%}
+							<span class="[ visually-hidden ]">Search</span>
+						</a>
+
+						{#- Smaller viewports -#}
+						{%- include "navigation.njk" -%}
+					</nav>
+				</header>
+
+				<!-- tabindex fixes focus issue: https://benmyers.dev/blog/skip-links/#tldr -->
+				<main id="content" tabindex="-1" class="[ h-feed ][ wrapper flow ]" style="--wrapper-size: 60em;">
+					<header class="[ main-header ][ padding-block-end-6 gradient-border ]" data-gradient-border="block-end">
+						<h1 class="[ p-name ][ margin-0 line-height-1 ]">
+							Sitemap
+						</h1>
+					</header>
+
+					<xsl:for-each select="/sitemap:urlset/sitemap:url">
+						<article class="[ feed-item-card ]">
+							<div class="[ flow ]">
+								<div class="[ feed-item-card-title ][ feed-item-card-body ]">
+									<h2 class="h3">
+										<a class="[ u-url p-name ]">
+											<xsl:attribute name="href">
+												<xsl:value-of select="sitemap:loc"/>
+											</xsl:attribute>
+											<xsl:value-of select="sitemap:loc"/>
+										</a>
+									</h2>
+								</div>
+								<div class="[ feed-item-card-footer ]">
+									<span style="font-size: 0.8em">
+										Modified on <time class="[ dt-published ]"><xsl:value-of select="sitemap:lastmod"/></time>
+									</span>
+								</div>
+							</div>
+						</article>
+					</xsl:for-each>
+				</main>
+
+				<footer>
+					<div class="[ site-footer ]">
+						<div class="[ inner ] [ wrapper ]" style="--wrapper-size: 60em;">
+							<ul role="list" class="[ social-links ][ flex-wrap ]">
+								<li>
+									<a href="/" class="[ logo-link ]">
+										{%- icon "local:elly" -%}
+										<span class="[ visually-hidden ]">
+											Elly
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="https://front-end.social/@elly">
+										{%- labelledIcon "fab:mastodon", { "aria-label": "Mastodon" } -%}
+									</a>
+								</li>
+								<li>
+									<a href="https://bsky.app/profile/elly.lol">
+										{%- labelledIcon "fab:bluesky", { "aria-label": "Bluesky" } -%}
+									</a>
+								</li>
+								<li>
+									<a href="https://elly.to/linkedin">
+										{%- labelledIcon "fab:linkedin", { "aria-label": "LinkedIn" } -%}
+									</a>
+								</li>
+								<li>
+									<a href="https://elly.to/github">
+										{%- labelledIcon "fab:github", { "aria-label": "GitHub" } -%}
+									</a>
+								</li>
+								<li>
+									<a href="https://elly.to/codepen">
+										{%- labelledIcon "fab:codepen", { "aria-label": "Codepen" } -%}
+									</a>
+								</li>
+							</ul>
+
+							<div class="[ gh-edit ]">
+								{% gh_edit page %}
+							</div>
+						</div>
+					</div>
+				</footer>
+			</body>
+		</html>
+	</xsl:template>
+</xsl:stylesheet>

@@ -1,0 +1,253 @@
+/*
+ * MIT License
+ * Copyright (c) 2018 Sarah Drasner
+ * Sarah Drasner's [@sdras] Night Owl & Light Owl
+ */
+
+/*
+ * MARK: Setup vars
+ */
+
+@media (forced-colors: none) {
+	:root {
+		--prism-background: var(--accent-bg-subtle);
+		--prism-no-token: var(--accent-text);
+
+		@media (prefers-color-scheme: light) {
+			--prism-comment: oklch(70.275% 0.0275 268.73deg);
+			--prism-punctuation: oklch(37.692% 0.0340 286.94deg);
+			--prism-attr-name: oklch(49.766% 0.2095 342.46deg);
+			--prism-class-name: oklch(58.187% 0.1557 263.15deg);
+			--prism-boolean: oklch(57.73% 0.1348 22.209deg);
+			--prism-constant: oklch(61.219% 0.1023 199.06deg);
+			--prism-number: oklch(49.766% 0.2095 342.46deg);
+			--prism-keyword: oklch(56.388% 0.1860 311.73deg);
+			--prism-property: oklch(61.219% 0.1023 199.06deg);
+			--prism-tag: oklch(56.388% 0.1860 311.73deg);
+			--prism-symbol: oklch(61.219% 0.1023 199.06deg);
+			--prism-deleted: oklch(62.801% 0.1251 22.487deg);
+			--prism-string: oklch(62.801% 0.1251 22.487deg);
+			--prism-builtin: oklch(58.187% 0.1557 263.15deg);
+			--prism-inserted: oklch(61.219% 0.1023 199.06deg);
+			--prism-regex: oklch(70.531% 0.1170 245.09deg);
+			--prism-variable: oklch(58.187% 0.1557 263.15deg);
+			--prism-operator: oklch(56.388% 0.1860 311.73deg);
+			--prism-function: oklch(58.187% 0.1557 263.15deg);
+			--prism-url: oklch(61.219% 0.1023 199.06deg);
+		}
+
+		@media (prefers-color-scheme: dark) {
+			--prism-comment: oklch(55.313% 0.0236 196.49deg);
+			--prism-punctuation: oklch(89.837% 0.0198 260.17deg);
+			--prism-attr-name: oklch(83.445% 0.1534 127.38deg);
+			--prism-class-name: oklch(87.391% 0.1001 71.696deg);
+			--prism-boolean: oklch(69.111% 0.2019 14.351deg);
+			--prism-constant: oklch(74.409% 0.1311 264.28deg);
+			--prism-number: oklch(74.861% 0.1381 37.456deg);
+			--prism-keyword: oklch(74.275% 0.1348 311.06deg);
+			--prism-property: oklch(79.119% 0.0755 188.24deg);
+			--prism-tag: oklch(82.922% 0.0920 180.7deg);
+			--prism-symbol: oklch(79.119% 0.0755 188.24deg);
+			--prism-deleted: oklch(68.752% 0.2051 14.465deg);
+			--prism-string: oklch(84.247% 0.0844 75.061deg);
+			--prism-builtin: oklch(74.409% 0.1311 264.28deg);
+			--prism-inserted: oklch(83.445% 0.1534 127.38deg);
+			--prism-regex: oklch(70.531% 0.1170 245.09deg);
+			--prism-variable: oklch(83.445% 0.1534 127.38deg);
+			--prism-operator: oklch(82.922% 0.0920 180.7deg);
+			--prism-function: oklch(74.409% 0.1311 264.28deg);
+			--prism-url: oklch(75.927% 0.1475 10.762deg);
+		}
+	}
+
+	[data-selected-color-scheme="light"] {
+		--prism-comment: oklch(70.275% 0.0275 268.73deg);
+		--prism-punctuation: oklch(37.692% 0.0340 286.94deg);
+		--prism-attr-name: oklch(49.766% 0.2095 342.46deg);
+		--prism-class-name: oklch(58.187% 0.1557 263.15deg);
+		--prism-boolean: oklch(57.73% 0.1348 22.209deg);
+		--prism-constant: oklch(61.219% 0.1023 199.06deg);
+		--prism-number: oklch(49.766% 0.2095 342.46deg);
+		--prism-keyword: oklch(56.388% 0.1860 311.73deg);
+		--prism-property: oklch(61.219% 0.1023 199.06deg);
+		--prism-tag: oklch(56.388% 0.1860 311.73deg);
+		--prism-symbol: oklch(61.219% 0.1023 199.06deg);
+		--prism-deleted: oklch(62.801% 0.1251 22.487deg);
+		--prism-string: oklch(62.801% 0.1251 22.487deg);
+		--prism-builtin: oklch(58.187% 0.1557 263.15deg);
+		--prism-inserted: oklch(61.219% 0.1023 199.06deg);
+		--prism-regex: oklch(70.531% 0.1170 245.09deg);
+		--prism-variable: oklch(58.187% 0.1557 263.15deg);
+		--prism-operator: oklch(56.388% 0.1860 311.73deg);
+		--prism-function: oklch(58.187% 0.1557 263.15deg);
+		--prism-url: oklch(61.219% 0.1023 199.06deg);
+	}
+
+	[data-selected-color-scheme="dark"] {
+		--prism-comment: oklch(55.313% 0.0236 196.49deg);
+		--prism-punctuation: oklch(89.837% 0.0198 260.17deg);
+		--prism-attr-name: oklch(83.445% 0.1534 127.38deg);
+		--prism-class-name: oklch(87.391% 0.1001 71.696deg);
+		--prism-boolean: oklch(69.111% 0.2019 14.351deg);
+		--prism-constant: oklch(74.409% 0.1311 264.28deg);
+		--prism-number: oklch(74.861% 0.1381 37.456deg);
+		--prism-keyword: oklch(74.275% 0.1348 311.06deg);
+		--prism-property: oklch(79.119% 0.0755 188.24deg);
+		--prism-tag: oklch(82.922% 0.0920 180.7deg);
+		--prism-symbol: oklch(79.119% 0.0755 188.24deg);
+		--prism-deleted: oklch(68.752% 0.2051 14.465deg);
+		--prism-string: oklch(84.247% 0.0844 75.061deg);
+		--prism-builtin: oklch(74.409% 0.1311 264.28deg);
+		--prism-inserted: oklch(83.445% 0.1534 127.38deg);
+		--prism-regex: oklch(70.531% 0.1170 245.09deg);
+		--prism-variable: oklch(83.445% 0.1534 127.38deg);
+		--prism-operator: oklch(82.922% 0.0920 180.7deg);
+		--prism-function: oklch(74.409% 0.1311 264.28deg);
+		--prism-url: oklch(75.927% 0.1475 10.762deg);
+	}
+}
+
+@media (forced-colors: active) {
+	:root {
+		--prism-background: Canvas;
+		--prism-no-token: CanvasText;
+		--prism-comment: GrayText;
+		--prism-punctuation: CanvasText;
+		--prism-attr-name: CanvasText;
+		--prism-class-name: LinkText;
+		--prism-boolean: CanvasText;
+		--prism-constant: CanvasText;
+		--prism-number: CanvasText;
+		--prism-keyword: CanvasText;
+		--prism-property: CanvasText;
+		--prism-tag: CanvasText;
+		--prism-symbol: CanvasText;
+		--prism-deleted: GrayText;
+		--prism-string: CanvasText;
+		--prism-builtin: LinkText;
+		--prism-inserted: MarkText;
+		--prism-regex: CanvasText;
+		--prism-variable: LinkText;
+		--prism-operator: CanvasText;
+		--prism-function: LinkText;
+		--prism-url: LinkText;
+	}
+
+	.token:is(.boolean, .number, .keyword) {
+		font-weight: var(--font-weight-body-bold);
+	}
+}
+
+/*
+ * MARK: Base Styles
+ */
+
+:is(code, pre)[class*="language-"] {
+	background: var(--prism-background);
+	color: var(--prism-no-token);
+}
+
+:is(:not(pre) > code, pre)[class*="language-"] {
+	background: var(--prism-background);
+}
+
+:is(pre, code)[class*="language-"]::selection,
+:is(pre, code)[class*="language-"] ::selection {
+	filter: invert(1);
+}
+
+.token:is(.important, .bold) {
+	font-weight: var(--font-weight-body-bold);
+}
+
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+/*
+ * MARK: Token Styles
+ */
+
+:is(.token.comment, .token.prolog, .token.cdata, .token.doctype) {
+	color: var(--prism-comment);
+}
+
+:is(.token.punctuation, .token.entity) {
+	color: var(--prism-punctuation);
+}
+
+.token.attr-name {
+	color: var(--prism-attr-name);
+}
+
+.token.class-name {
+	color: var(--prism-class-name);
+}
+
+.token.boolean {
+	color: var(--prism-boolean);
+}
+
+.token.constant {
+	color: var(--prism-constant);
+}
+
+.token.number {
+	color: var(--prism-number);
+}
+
+.token:is(.atrule, .keyword, .important, .selector) {
+	color: var(--prism-keyword);
+}
+
+.token.property {
+	color: var(--prism-property);
+}
+
+.token.tag {
+	color: var(--prism-tag);
+}
+
+.token.symbol {
+	color: var(--prism-symbol);
+}
+
+.token.deleted {
+	color: var(--prism-deleted);
+}
+
+.token:is(.string, .char, .attr-value) {
+	color: var(--prism-string);
+}
+
+.token.builtin {
+	color: var(--prism-builtin);
+}
+
+.token.inserted {
+	color: var(--prism-inserted);
+}
+
+.token.regex {
+	color: var(--prism-regex);
+}
+
+.token.variable {
+	color: var(--prism-variable);
+}
+
+.token.operator {
+	color: var(--prism-operator);
+}
+
+.token.function {
+	color: var(--prism-function);
+}
+
+.token.url {
+	color: var(--prism-url);
+}

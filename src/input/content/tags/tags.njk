@@ -1,0 +1,47 @@
+---
+layout: base
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - allSortedByDate
+    - BookmarksSortedByDate
+    - notBookmarksSortedByDate
+    - postsSortedByDate
+permalink: "tags/{{ tag | slugify }}/"
+eleventyComputed:
+  title: "{{ tag }}"
+---
+
+{%- set number = collections[tag] | length -%}
+<p>There {{ "is" if number === 1 else "are" }} <strong>{{ number }}</strong> post{{ "s" if number !== 1 }} tagged with <q>{{ tag }}</q>.</p>
+
+{%- include "crazy-filter.njk" -%}
+
+<ul id="feed" class="[ feed ]">
+	{% set taglist = collections[tag] | sort(true, false, "date") %}
+	{% for post in taglist %}
+		{%- set title = post.data.title -%}
+		{%- set url = post.url -%}
+		{%- setAsync "imageMarkup" -%}{%- endsetAsync -%}
+		{%- if post.data.image -%}
+			{%- setAsync "imageMarkup" -%}
+			<svg viewBox="0 0 200 150" width="200" height="150">
+				{%- set randomNumber -%}{%- random 0, 1 -%}{%- endset -%}
+				<image class="image" xlink:href="https://res.cloudinary.com/ellyloel/image/fetch/f_auto/q_auto:low/c_fill,h_150,w_200/{{ post.data.image }}" x="-50%" y="-50%" width="200%" height="200%" filter="url(#filter)" opacity="0.65" style="transform: rotate({{ randomNumber | round(3) }}turn); transform-origin: center;"></image>
+			</svg>
+			{%- endsetAsync -%}
+		{%- endif -%}
+		{%- set date = post.date -%}
+		{%- set label = "" -%}
+		{%- if post.data.modified -%}
+			{%- set label = "Last modified" -%}
+		{%- elif post.data.created -%}
+			{%- set label = "Created" -%}
+		{%- endif -%}
+		{%- set tags = post.data.tags -%}
+		{%- include "feedItem.njk" -%}
+	{% endfor %}
+</ul>

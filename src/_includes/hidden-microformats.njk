@@ -1,0 +1,12 @@
+{%- if page.url === "/feed.atom" -%}
+	{%- set link = absolutePostUrl -%}
+{%- else -%}
+	{%- set link = page.url | absoluteUrl(metadata.url) -%}
+{%- endif -%}
+<a rel="author" class="[ h-card p-author ]" href="https://ellyloel.com" hidden>Elly Loel</a>
+<a class="[ u-url ]" href="{{ link }}" hidden></a>
+{% if syndication %}
+	{%- for entry in syndication -%}
+		<a rel="syndication" class="[ u-syndication ]" href="{{ entry }}" hidden></a>
+	{%- endfor -%}
+{% endif %}

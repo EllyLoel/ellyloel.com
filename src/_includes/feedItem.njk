@@ -1,0 +1,41 @@
+<li class="[ h-entry ]">
+	<article class="[ feed-item-card ]">
+		<div
+			class="[ flow ]"
+			{% if imageMarkup -%}
+				style="grid-area: content;"
+			{% endif -%}
+		>
+			<div class="[ feed-item-card-title ] [ feed-item-card-{% if body %}header{% else %}body{% endif %} ]">
+				{%- if headingLevel === 3 -%}<h3>{%- else -%}<h2 class="h3">{%- endif -%}
+					<a href="{{ url }}" class="[ u-url p-name ]">{{ title }}</a>
+				{%- if headingLevel === 3 -%}</h3>{%- else -%}</h2>{%- endif -%}
+			</div>
+
+			{%- if body -%}
+				<div class="[ feed-item-card-body ]">
+					{{ body | safe }}
+				</div>
+			{%- endif -%}
+
+			<div class="[ feed-item-card-footer ]">
+				{% if date and label %}
+					{% include "date.njk" %}
+				{% endif %}
+
+				{% if tags and tags.length !== 0 %}
+					<span class="[ flex flex-wrap align-center gap-1 margin-block-start-1 ]">
+						{% labelledInlineIcon "fas:tag", { "aria-label": "Tags" } %}
+						{% include "tags.njk" %}
+					</span>
+				{% endif %}
+			</div>
+		</div>
+
+		{%- if imageMarkup -%}
+			<div class="[ feed-item-card-image ]">
+				{{ imageMarkup | safe }}
+			</div>
+		{%- endif -%}
+	</article>
+</li>

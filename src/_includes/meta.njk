@@ -1,53 +1,57 @@
 {%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(metadata.url) }}{%- endset -%}
 {%- if title === "Home" -%}
-	{% set text = "Creating delightful, magical, and accessible art with code." %}
-	{% set desc = description %}
-	{% set ogTitle = "Elly Loel" %}
-	{% set ogUrl = "" %}
-{% else %}
-	{% set text = title %}
-	{% set desc = page.excerpt %}
-	{% set ogTitle = title %}
-	{% set ogUrl = page.url %}
-{% endif %}
+	{%- set desc = metadata.description -%}
+	{%- set ogTitle = "Elly Loel" -%}
+	{%- set ogAlt = "A screenshot of ellyloel.com." -%}
+	{%- set ogUrl = "https://api.microlink.io/?url=https%3A%2F%2Fwww.ellyloel.com&screenshot=true&meta=false&embed=screenshot.url" -%}
+{%- else -%}
+	{%- set desc = page.excerpt -%}
+	{%- set ogTitle = title -%}
+	{%- set ogAlt = "A background of curved purple lines with the text “{{ title }}” ontop, Elly's logo is in the bottom right corner." -%}
+	{%- set ogUrl -%}https://api.microlink.io/?url=https%3A%2F%2Fwww.ellyloel.com%2Fog{{ page.url }}&screenshot=true&meta=false&embed=screenshot.url{%- endset -%}
+{%- endif -%}
 
-{# General #}
-<meta name="description" content="{{ desc }}">
+{#- General -#}
+{%- if desc -%}
+	<meta name="description" content="{{ desc | trim }}">
+{%- endif -%}
 <link rel="canonical" href="{{ canonical }}">
 <meta name="author" content="{{ metadata.author.name }}">
 <meta name="generator" content="{{ eleventy.generator }}">
 
-{# Style #}
-<meta name="color-scheme" content="dark light">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#bd93f9">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#5a1c93">
+{#- Style -#}
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f9f9f9">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111111">
 
-{# Open Graph #}
+{#- Open Graph -#}
 <meta property="og:site_name" content="{{ metadata.title }}">
 <meta property="og:title" content="{{ ogTitle }}">
 <meta property="og:description" content="{{ desc }}">
 <meta property="og:url" content="{{ absolutePageUrl }}">
 <meta property="og:locale" content="{{ metadata.locale }}">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:image" content="https://v1.screenshot.11ty.dev/https%3A%2F%2Fellyloel.com%2Fog{{ ogUrl | urlencode }}/opengraph/">
-<meta property="og:image" content="https://v1.screenshot.11ty.dev/https%3A%2F%2Fellyloel.com%2Fog{{ ogUrl | urlencode }}/opengraph/">
-<meta name="og:image" content="https://v1.screenshot.11ty.dev/https%3A%2F%2Fellyloel.com%2Fog{{ ogUrl | urlencode }}/opengraph/">
-<meta name="og:image:secure_url" content="https://v1.screenshot.11ty.dev/https%3A%2F%2Fellyloel.com%2Fog{{ ogUrl | urlencode }}/opengraph/">
-<meta property="og:image:alt" content="A background of curved purple lines with the text “{{ text }}” ontop, Elly's logo is in the bottom right corner.">
+<meta property="twitter:image" content="{{ ogUrl }}">
+<meta property="og:image" content="{{ ogUrl }}">
+<meta name="og:image" content="{{ ogUrl }}">
+<meta name="og:image:secure_url" content="{{ ogUrl }}">
+<meta property="og:image:alt" content="{{ ogAlt}}">
+<meta name="fediverse:creator" content="@elly@front-end.social">
 
-{# Icons #}
+{#- Icons -#}
 <link rel="icon" href="/assets/img/icons/favicon.ico" sizes="any">
 <link rel="icon" href="/assets/img/icons/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png">
-<link rel="manifest" href="/assets/manifest.webmanifest">
+<link rel="manifest" href="/manifest.webmanifest">
 
-{# RSS Feed #}
+{#- RSS Feed -#}
 <link type="application/atom+xml" rel="alternate" href="{{ metadata.url }}/feed.atom" title="{{ metadata.title }}">
 <link type="application/rss+xml" rel="alternate" href="{{ metadata.url }}/feed.rss" title="{{ metadata.title }}">
 <link type="application/json" rel="alternate" href="{{ metadata.url }}/feed.json" title="{{ metadata.title }}">
 
-{# Webmentions #}
-<link href="{{ metadata.author.links.GitHub }}" rel="me">
+{#- Webmentions -#}
 <link href="{{ metadata.author.links.Mastodon }}" rel="me">
+<link href="{{ metadata.author.links.Bluesky }}" rel="me">
+<link href="{{ metadata.author.links.GitHub }}" rel="me">
+<link href="{{ metadata.author.links.Threads }}" rel="me">
 <link rel="webmention" href="https://webmention.io/{{ metadata.domain }}/webmention">
-<link rel="pingback" href="https://webmention.io/{{ metadata.domain }}/xmlrpc">

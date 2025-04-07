@@ -1,0 +1,9 @@
+<span style="font-size: 0.8em">
+	{{ label + " on " }}
+	<time 
+		class="[ {% if label === "Created" %}dt-published{% else %}dt-updated{% endif %} ]"
+		datetime="{{ date | dateToISO }}"
+		data-pagefind-meta="date[datetime]"
+		data-pagefind-sort="date[datetime]"
+	>{{ date | dateToLocale }}</time>
+</span>

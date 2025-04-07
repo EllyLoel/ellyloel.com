@@ -1,0 +1,17 @@
+.photos {
+	& img {
+		aspect-ratio: 1 / 1;
+		inline-size: 100%;
+		object-fit: cover;
+	}
+
+	@media (width >= 48em) { /* 768px */
+		grid-template-columns: 2fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
+		row-gap: var(--block-size-8);
+
+		& img {
+			aspect-ratio: 2 / 3;
+		}
+	}
+}

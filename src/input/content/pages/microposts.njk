@@ -1,0 +1,63 @@
+---
+layout: base
+title: Microposts
+eleventyNavigation:
+  key: Microposts
+  parent: Garden
+  order: 6
+---
+
+<ul class="[ feed ]">
+	{%- for post in mastodon.items -%}
+		<li class="[ h-entry ]">
+			<div class="[ feed-item-card ]">
+				<div class="[ flow ]">
+					{%- if post.content | includes("<hr>") -%}
+						<details class="[ padding-0 ]">
+							<summary>
+								{{ post.content | split("<hr>") | first | striptags }}
+							</summary>
+						{%- endif -%}
+						<div class="[ feed-item-card-body ] [ flow ] [ e-content ]">
+							{%- if post.content | includes("<hr>") -%}
+								{{ post.content | replace(r/^.+<hr>/gim, "") | safe }}
+							{%- else -%}
+								{{ post.content | safe }}
+							{%- endif -%}
+							{%- if post["media:content"] -%}
+								<div style="columns: {{ post["media:content"].length }}">
+									{%- for image in post["media:content"] -%}
+										{%- if image["media:rating"][0]["_"] === "adult" -%}
+											<details class="[ padding-0 ]">
+												<summary>
+													Sensitive media
+												</summary>
+											{%- endif -%}
+											{%- set extension = image["$"].url | getUrlExtension -%}
+											{%- if extension === "mp4" -%}
+												<video aria-label="{{ image["media:description"][0]["_"] }}" src="{{ image["$"].url }}" controls loop playsinline></video>
+											{%- endif -%}
+											{%- image image["$"].url, image["media:description"][0]["_"] -%}
+											{%- if image["media:rating"][0]["_"] === "adult" -%}
+											</details>
+										{%- endif -%}
+									{%- endfor -%}
+								</div>
+							{%- endif -%}
+						</div>
+						{%- if post.content | includes("<hr>") -%}
+						</details>
+					{%- endif -%}
+					<div class="[ feed-item-card-footer ]">
+						<span class="[ flex align-center gap-1ch ]">
+							{%- labelledInlineIcon "far:calendar", { "aria-label": "Posted on" } -%}
+							<a href="{{ post.link }}" class="[ u-url u-syndication ]" rel="syndication">
+								<time class="[ dt-published ]" datetime="{{ post.isoDate }}" style="line-height: 1;">{{ post.isoDate | dateToLocale }}</time>
+							</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</li>
+	{%- endfor -%}
+</ul>

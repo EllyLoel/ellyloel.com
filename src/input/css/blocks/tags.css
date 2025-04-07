@@ -1,0 +1,22 @@
+.tags {
+	& li {
+		position: relative;
+
+		> * {
+			line-height: 1;
+		}
+
+		& a::after {
+			content: "";
+			display: block;
+			inset: 0;
+			position: absolute;
+		}
+
+		& small {
+			color: var(--accent-bg-subtle);
+			font-size: smaller;
+			font-weight: var(--font-weight-body-normal);
+		}
+	}
+}

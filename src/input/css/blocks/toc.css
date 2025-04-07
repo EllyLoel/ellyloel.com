@@ -1,0 +1,83 @@
+table-of-contents {
+	display: block;
+}
+
+.toc {
+	--flow-space: 0.5em;
+
+	overflow-y: clip;
+	padding-block: 0;
+	transition-behavior: allow-discrete;
+	transition-duration: 300ms;
+	transition-property: block-size, padding-block, content-visibility, opacity;
+	transition-timing-function: ease-in-out;
+
+	@starting-style {
+		block-size: 0;
+	}
+
+	table-of-contents:has(button[aria-expanded="true"]) &:not([hidden="until-found"]) {
+	}
+
+	table-of-contents:has(button[aria-expanded="false"]) &[hidden="until-found"] {
+		block-size: 0;
+	}
+
+	& div > ol {
+		list-style-type: disc;
+		padding-inline-start: var(--inline-size-5);
+
+		& ol {
+			list-style-type: circle;
+
+			& ol {
+				list-style-type: square;
+			}
+		}
+	}
+}
+
+.toc-container {
+	background: var(--accent-bg-subtle);
+	border-radius: var(--radius-2);
+	margin-inline: auto;
+	padding-block: var(--block-size-2);
+	padding-inline: var(--inline-size-3);
+
+	& h2 {
+		background: none;
+		font-size: var(--font-size-4);
+		margin-block: calc(var(--block-size-2) * -1);
+		margin-inline: calc(var(--inline-size-3) * -1);
+		max-inline-size: none;
+	}
+
+	& button {
+		align-items: center;
+		background: none;
+		border: none;
+		border-radius: var(--radius-2);
+		box-shadow: none;
+		display: flex;
+		gap: var(--block-size-3) var(--inline-size-3);
+		inline-size: 100%;
+		justify-content: flex-start;
+		line-height: calc(0.25rem + 1em + 0.25rem);
+		padding-block: var(--block-size-2);
+		padding-inline: var(--inline-size-3);
+
+		& .inline-icon {
+			color: var(--accent-solid);
+			font-size: var(--font-size-2);
+			transition: transform 300ms var(--ease-out-4);
+		}
+
+		&:is(:hover, :focus-visible) .inline-icon {
+			color: var(--accent-solid-hover);
+		}
+
+		&[aria-expanded="true"] .inline-icon {
+			transform: rotate(0.25turn);
+		}
+	}
+}
