@@ -21,10 +21,17 @@
 	}
 }
 
+.footnotes > ol {
+	list-style: decimal;
+	padding-inline-start: 2ch;
+}
+
 .footnote-item {
+	border-radius: var(--radius-1);
+
 	&:target {
 		outline: 2px auto var(--link);
-		outline-offset: var(--size-px-1);
+		outline-offset: 2px;
 	}
 
 	&::marker {
