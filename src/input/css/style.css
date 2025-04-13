@@ -47,6 +47,7 @@
 @import url("./blocks/feed-block.css") layer(blocks);
 @import url("./blocks/feed.css") layer(blocks);
 @import url("./blocks/footer.css") layer(blocks);
+@import url("./blocks/footnotes.css") layer(blocks);
 @import url("./blocks/garden.css") layer(blocks);
 @import url("./blocks/graph.css") layer(blocks);
 @import url("./blocks/hero.css") layer(blocks);

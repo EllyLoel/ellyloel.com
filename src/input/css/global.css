@@ -231,11 +231,7 @@ mark {
 }
 
 :is(ol, ul):not([class], [role="list"]) {
-	padding-inline-start: var(--inline-size-6);
-
-	& li {
-		padding-inline-start: var(--inline-size-2);
-	}
+	padding-inline-start: 2ch;
 }
 
 :is(li, dd) {

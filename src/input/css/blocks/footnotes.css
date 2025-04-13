@@ -1,0 +1,33 @@
+/* stylelint-disable block-no-empty */
+.footnote-ref {
+	> a {
+		display: inline;
+		font-size: inherit;
+		line-height: normal;
+		position: relative;
+
+		&::before {
+			border-radius: var(--radius-round);
+			content: "";
+			display: block;
+			inset: 0;
+			inset-block-end: -7px;
+			position: absolute;
+		}
+
+		> .visually-hidden {
+			inset: 50%;
+		}
+	}
+}
+
+.footnote-item {
+	&:target {
+		outline: 2px auto var(--link);
+		outline-offset: var(--size-px-1);
+	}
+
+	&::marker {
+		font-weight: var(--font-weight-body-bold);
+	}
+}

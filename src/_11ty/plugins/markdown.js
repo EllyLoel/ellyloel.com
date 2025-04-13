@@ -55,6 +55,43 @@ let markdownLibrary = markdownit({
 		figcaption: true,
 	});
 
+markdownLibrary.renderer.rules.footnote_ref = (tokens, index, options, env, self) => {
+	const id = self.rules.footnote_anchor_name(tokens, index, options, env, self);
+	let refid = id;
+
+	if (tokens[index].meta.subId > 0) refid += `:${tokens[index].meta.subId}`;
+
+	return (
+		`<sup class="[ footnote-ref ]">`+
+			`<a href="#fn${id}" id="fnref${refid}" class="[ badge pill outline ][ text-decoration-none padding-block-0 padding-inline-1 ]">`+
+				`<span aria-hidden="true">${id}</span>`+
+				`<span class="[ visually-hidden ]">To footnote ${id}</span>`+
+			`</a>`+
+		`</sup>`
+	);
+}
+
+markdownLibrary.renderer.rules.footnote_block_open = () => (
+	`<hr aria-hidden="true">`+
+	`<section id="footnotes" class="[ footnotes ]" aria-labelledby="footnotes-heading">`+
+	`	<h2 id="footnotes-heading" hidden>Footnotes</h2>`+
+	`	<ol>`
+);
+
+markdownLibrary.renderer.rules.footnote_anchor = (tokens, index, options, env, self) => {
+	let id = self.rules.footnote_anchor_name(tokens, index, options, env, self);
+
+	if (tokens[index].meta.subId > 0) id += `:${tokens[index].meta.subId}`;
+
+	/* ↩ with escape code to prevent display as Apple Emoji on iOS */
+	return (
+		` <a href="#fnref${id}" class="[ footnote-backref ]">`+
+			`<span aria-hidden="true">\u21a9\uFE0E</span>`+
+			`<span class="[ visually-hidden ]">Back to reference ${id}</span>`+
+		`</a>`
+	);
+}
+
 /** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 export function plugin(eleventyConfig) {
 	eleventyConfig.setLibrary("md", markdownLibrary);
