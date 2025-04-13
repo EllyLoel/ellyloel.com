@@ -81,7 +81,7 @@ permalink: "styles.xsl"
 			<body>
 				<a class="[ skip-link ] [ button ]" href="#content">Skip to content</a>
 
-				<header class="[ site-head ] [ wrapper gradient-border ]" style="--wrapper-size: 60em;">
+				<header class="[ site-head ] [ wrapper gradient-border ]" data-gradient-border="block-end" style="--wrapper-size: 60em;">
 					<nav class="[ nav ][ flex flex-wrap gap-3 align-center ]">
 						<!-- link to home: http://microformats.org/wiki/rel-home -->
 						<a href="/" rel="home" class="[ u-url u-uid ] [ text-decoration-none ]">
@@ -136,65 +136,75 @@ permalink: "styles.xsl"
 						</div>
 					</header>
 
-					<xsl:for-each select="/atom:feed/atom:entry">
-						<article class="[ feed-item-card ]">
-							<div class="[ flow ]">
-								<div class="[ feed-item-card-title ][ feed-item-card-body ]">
-									<h2 class="h3">
-										<a class="[ u-url p-name ]">
-											<xsl:attribute name="href">
-												<xsl:value-of select="atom:link/@href"/>
-											</xsl:attribute>
-											<xsl:value-of select="atom:title"/>
-										</a>
-									</h2>
-								</div>
-								<div class="[ feed-item-card-footer ]">
-									<span style="font-size: 0.8em">
-										Created on <time class="[ dt-published ]"><xsl:value-of select="substring(atom:published, 0, 11)"/></time>
-									</span>
-									<span class="[ flex flex-wrap align-center gap-1 margin-block-start-1 ]">
-										{% labelledInlineIcon "fas:tag", { "aria-label": "Tags" } %}
-										<xsl:for-each select="atom:category">
-											<span class="[ badge ] [ p-category ] [ neutral pill gap-1 text-decoration-none ]">
-												<xsl:value-of select="@term" />
-											</span>
-										</xsl:for-each>
-									</span>
-								</div>
-							</div>
-						</article>
-					</xsl:for-each>
+					<article class="[ markdown-container ][ flow ]">
+						<div class="[ flow ]">
+							<ul id="feed" tabindex="-1" class="[ feed ]" style="--flow-space: var(--block-size-7)">
+								<xsl:for-each select="/atom:feed/atom:entry">
+									<li class="[ h-entry ]">
+										<article class="[ feed-item-card ]">
+											<div class="[ flow ]">
+												<div class="[ feed-item-card-title ][ feed-item-card-body ]">
+													<h2 class="h3">
+														<a class="[ u-url p-name ]">
+															<xsl:attribute name="href">
+																<xsl:value-of select="atom:link/@href"/>
+															</xsl:attribute>
+															<xsl:value-of select="atom:title"/>
+														</a>
+													</h2>
+												</div>
+												<div class="[ feed-item-card-footer ]">
+													<span style="font-size: 0.8em">
+														Created on <time class="[ dt-published ]"><xsl:value-of select="substring(atom:published, 0, 11)"/></time>
+													</span>
+													<span class="[ flex flex-wrap align-center gap-1 margin-block-start-1 ]">
+														{% labelledInlineIcon "fas:tag", { "aria-label": "Tags" } %}
+														<xsl:for-each select="atom:category">
+															<span class="[ badge ] [ p-category ] [ neutral pill gap-1 text-decoration-none ]">
+																<xsl:value-of select="@term" />
+															</span>
+														</xsl:for-each>
+													</span>
+												</div>
+											</div>
+										</article>
+									</li>
+								</xsl:for-each>
 
-					<xsl:for-each select="/rss/channel/item">
-						<article class="[ feed-item-card ]">
-							<div class="[ flow ]">
-								<div class="[ feed-item-card-title ][ feed-item-card-body ]">
-									<h2 class="h3">
-										<a class="[ u-url p-name ]">
-											<xsl:attribute name="href">
-												<xsl:value-of select="link"/>
-											</xsl:attribute>
-											<xsl:value-of select="title"/>
-										</a>
-									</h2>
-								</div>
-								<div class="[ feed-item-card-footer ]">
-									<span style="font-size: 0.8em">
-										Created on <time class="[ dt-published ]"><xsl:value-of select="substring(pubDate, 1, 16)" /></time>
-									</span>
-									<span class="[ flex flex-wrap align-center gap-1 margin-block-start-1 ]">
-										{% labelledInlineIcon "fas:tag", { "aria-label": "Tags" } %}
-										<xsl:for-each select="category">
-											<span class="[ badge ] [ p-category ] [ neutral pill gap-1 text-decoration-none ]">
-												<xsl:value-of select="." />
-											</span>
-										</xsl:for-each>
-									</span>
-								</div>
-							</div>
-						</article>
-					</xsl:for-each>
+								<xsl:for-each select="/rss/channel/item">
+									<li class="[ h-entry ]">
+										<article class="[ feed-item-card ]">
+											<div class="[ flow ]">
+												<div class="[ feed-item-card-title ][ feed-item-card-body ]">
+													<h2 class="h3">
+														<a class="[ u-url p-name ]">
+															<xsl:attribute name="href">
+																<xsl:value-of select="link"/>
+															</xsl:attribute>
+															<xsl:value-of select="title"/>
+														</a>
+													</h2>
+												</div>
+												<div class="[ feed-item-card-footer ]">
+													<span style="font-size: 0.8em">
+														Created on <time class="[ dt-published ]"><xsl:value-of select="substring(pubDate, 1, 16)" /></time>
+													</span>
+													<span class="[ flex flex-wrap align-center gap-1 margin-block-start-1 ]">
+														{% labelledInlineIcon "fas:tag", { "aria-label": "Tags" } %}
+														<xsl:for-each select="category">
+															<span class="[ badge ] [ p-category ] [ neutral pill gap-1 text-decoration-none ]">
+																<xsl:value-of select="." />
+															</span>
+														</xsl:for-each>
+													</span>
+												</div>
+											</div>
+										</article>
+									</li>
+								</xsl:for-each>
+							</ul>
+						</div>
+					</article>
 				</main>
 
 				<footer>
