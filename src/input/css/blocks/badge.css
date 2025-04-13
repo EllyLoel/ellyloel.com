@@ -38,8 +38,10 @@
 		border-radius: var(--radius-round);
 	}
 
-	& * {
+	/* This can fix issues, but honestly I think it creates more than it solves. */
+
+	/* & * {
 		background: inherit;
 		color: inherit;
-	}
+	} */
 }
