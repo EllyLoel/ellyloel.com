@@ -1,5 +1,5 @@
 ---
-title: Modern CSS reset
+title: An even more modern CSS reset
 tags:
   - Budding
   - Projects
@@ -9,7 +9,6 @@ id: 4a46ed11c2303f9f2dbc9033281303e2
 date: 2025-04-07
 draft: true
 ---
-
 **A reset is more than a reset.**
 
 Sure if you wanna actually just reset things and nothing else then here you go:
