@@ -75,7 +75,7 @@ markdownLibrary.renderer.rules.footnote_block_open = () => (
 	`<hr aria-hidden="true">`+
 	`<section id="footnotes" class="[ footnotes ]" aria-labelledby="footnotes-heading">`+
 	`	<h2 id="footnotes-heading" hidden>Footnotes</h2>`+
-	`	<ol>`
+	`	<ol class="[ flow ]">`
 );
 
 markdownLibrary.renderer.rules.footnote_anchor = (tokens, index, options, env, self) => {
