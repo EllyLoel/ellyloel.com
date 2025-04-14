@@ -10,6 +10,7 @@
 
 /* Variables */
 @import url("./variables/colours.css") layer(variables);
+@import url("./variables/shadows.css") layer(variables);
 @import url("./variables/spacing.css") layer(variables);
 @import url("./variables/typography.css") layer(variables);
 
