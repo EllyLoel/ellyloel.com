@@ -44,7 +44,7 @@
 		"@zachleat/details-utils": "^2.0.2",
 		"canvas-confetti": "^1.9.3",
 		"color-elements": "^0.0.3",
-		"css-doodle": "0.41.0",
+		"css-doodle": "0.42.3",
 		"d3": "^7.9.0",
 		"dompurify": "^3.2.5",
 		"howler": "^2.2.4",
