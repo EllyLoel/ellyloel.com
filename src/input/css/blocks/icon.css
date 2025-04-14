@@ -1,14 +1,15 @@
 [data-icon]:not([data-icon="false"]),
 .icon,
 .inline-icon {
-	height: 1em;
+	block-size: 1em;
+	inline-size: 1em;
 	pointer-events: none;
-	width: 1em;
 }
 
 .inline-icon {
 	display: inline-block;
-	margin: 0 0.05em 0 0.1em;
+	margin-block: 0;
+	margin-inline: 0.1em 0.05em;
 	vertical-align: -0.15em;
 }
 
