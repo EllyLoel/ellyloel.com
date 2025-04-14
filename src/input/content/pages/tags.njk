@@ -15,7 +15,7 @@ eleventyNavigation:
 		{% set tagArray = (tagArray.push(tagObj), tagArray) %}
 	{%- endfor -%}
 	{%- for tag in tagArray | sort(attribute="name") | sort(true, false, "count") -%}
-		<li class="[ badge ][ pill gap-1 align-baseline ]">
+		<li>
 			{%- set icon -%}fas:
 				{%- if tag.name === "Seedling" -%}seedling{%- endif -%}
 				{%- if tag.name === "Budding" -%}spa{%- endif -%}
@@ -23,14 +23,15 @@ eleventyNavigation:
 			{%- endset -%}
 			<a
 				href="/tags/{{ tag.name | slugify }}/"
-				class="[ p-category ][ padding-0 margin-0 text-decoration-none ]"
-				data-pagefind-filter="tags">
+				class="[ p-category ][ badge pill flex gap-1 text-decoration-none ]"
+				data-pagefind-filter="tags"
+			>
 				{%- if icon !== "fas:" -%}
 					{%- inlineIcon icon -%}
 				{%- endif -%}
 				{{- tag.name -}}
+				<small class="[ badge pill line-height-1 ]">{{ tag.count }}</small>
 			</a>
-			<small>{{ tag.count }}</small>
 		</li>
 	{% endfor %}
 </ul>

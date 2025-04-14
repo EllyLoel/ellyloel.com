@@ -1,19 +1,9 @@
 .tags {
-	& li {
-		position: relative;
-
-		> * {
-			line-height: 1;
-		}
-
-		& a::after {
-			content: "";
-			display: block;
-			inset: 0;
-			position: absolute;
-		}
-
-		& small {
+	& a.badge {
+		& small.badge {
+			background: var(--accent-solid);
+			border: none;
+			box-shadow: var(--inner-shadow-1);
 			color: var(--accent-bg-subtle);
 			font-size: smaller;
 			font-weight: var(--font-weight-body-normal);
