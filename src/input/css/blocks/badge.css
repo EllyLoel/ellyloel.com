@@ -1,17 +1,17 @@
 .badge {
 	align-items: center;
 	background: var(--accent-6);
-	border: solid 1px transparent;
-	border-radius: 3px;
+	border: solid var(--border-size-1) transparent;
+	border-radius: var(--radius-1);
 	color: var(--accent-base);
 	display: inline-flex;
 	font-size: var(--font-size-0);
 	font-weight: var(--font-weight-body-bold);
 	justify-content: center;
-	line-height: 1.5;
+	line-height: var(--font-lineheight-0);
 	margin: 0;
-  padding-block: 0.1em;
-	padding-inline: 0.6em;
+	padding-block: var(--size-px-1);
+	padding-inline: var(--size-px-2);
 
 	button:is(&):not(:active):hover {
 		--_highlight-size: var(--size-px-1);
@@ -38,10 +38,7 @@
 		border-radius: var(--radius-round);
 	}
 
-	/* This can fix issues, but honestly I think it creates more than it solves. */
-
-	/* & * {
-		background: inherit;
-		color: inherit;
-	} */
+	&:has(> .badge) {
+		padding-inline-end: var(--size-px-1);
+	}
 }
