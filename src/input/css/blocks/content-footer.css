@@ -31,6 +31,7 @@
 
 		> div,
 		& share-button {
+			align-items: center;
 			display: flex;
 			flex-wrap: wrap;
 			gap: var(--block-size-2) var(--inline-size-2);
@@ -45,8 +46,8 @@
 		& button {
 			margin-block: var(--block-size-negative);
 			margin-inline: var(--inline-size-negative);
-			padding-block: var(--block-size-1);
-			padding-inline: var(--inline-size-1);
+			padding-block: var(--size-px-1);
+			padding-inline: var(--size-px-1);
 		}
 
 		& button {
