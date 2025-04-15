@@ -32,8 +32,8 @@
 	gap: var(--block-size-2) var(--inline-size-2);
 	justify-content: center;
 	line-height: 1;
-	padding-block: 0.75ch;
-	padding-inline: 1.75ch;
+	padding-block: var(--block-size-2);
+	padding-inline: var(--inline-size-3);
 	-webkit-tap-highlight-color: transparent;
 	text-align: center;
 	-webkit-touch-callout: none;
@@ -65,5 +65,11 @@
 			stroke: var(--_icon-color);
 			stroke-width: var(--border-size-2);
 		}
+	}
+
+	&:has(svg:not([data-icon="false"]) + .visually-hidden),
+	&:has(.visually-hidden + svg:not([data-icon="false"])) {
+		padding-block: var(--size-px-1);
+		padding-inline: var(--size-px-1);
 	}
 }

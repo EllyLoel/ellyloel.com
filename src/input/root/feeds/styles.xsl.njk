@@ -128,10 +128,10 @@ permalink: "styles.xsl"
 
 							Also, you should [learn how to setup your own feed(s)](https://www.mnot.net/rss/tutorial/).
 							{%- endmd -%}
-							<p class="[ flex flex-wrap gap-2 ]">
-								<code style="user-select: all"><xsl:value-of select="/rss/channel/atom:link/@href"/><xsl:value-of select="/atom:feed/atom:link[1]/@href"/></code>
+							<p class="[ flex flex-wrap gap-2 align-center ]">
+								<code style="user-select: all; padding-block: var(--size-px-1); padding-inline: var(--size-px-2);"><xsl:value-of select="/rss/channel/atom:link/@href"/><xsl:value-of select="/atom:feed/atom:link[1]/@href"/></code>
 								{%- rollup "src/input/js/share-button.js" | url -%}
-								<share-button class="[ flex flex-wrap gap-2 ]"></share-button>
+								<share-button class="[ flex flex-wrap gap-2 align-center ]"></share-button>
 							</p>
 						</div>
 					</header>
