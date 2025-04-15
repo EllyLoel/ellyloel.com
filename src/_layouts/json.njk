@@ -14,7 +14,7 @@
 		{
 			"id": "tag:ellyloel.com,{{ post.date | dateToISO }}:{{ post.data.id }}",
 			"url": "{{ absolutePostUrl }}",
-			"title": "{{ post.data.title }}",
+			"title": {{ post.data.title | dump | safe }},
 			"content_html":{{ " " }}
 			{%- if post.content -%}
 				{%- set content = post.content %}
