@@ -63,6 +63,7 @@
 @import url("./blocks/markdown-container.css") layer(blocks);
 @import url("./blocks/nav.css") layer(blocks);
 @import url("./blocks/newsletter.css") layer(blocks);
+@import url("./blocks/page-views.css") layer(blocks);
 @import url("./blocks/photos.css") layer(blocks);
 @import url("./blocks/prism.css") layer(blocks);
 @import url("./blocks/search.css") layer(blocks);

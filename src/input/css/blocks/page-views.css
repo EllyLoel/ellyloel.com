@@ -1,0 +1,16 @@
+div:has(> #page-views:only-child) {
+	inline-size: min(var(--size-content-3), 95%);
+	margin-inline: auto;
+}
+
+#page-views {
+	font-style: italic;
+
+	&:empty {
+		display: none;
+	}
+
+	> svg {
+		color: var(--accent-solid);
+	}
+}

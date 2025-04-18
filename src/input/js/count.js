@@ -252,4 +252,14 @@
 			if (!goatcounter.no_events)
 				goatcounter.bind_events()
 		})
+
+	fetch(`https://ellyloel.goatcounter.com/counter/${window.location.pathname.replace(/\/$/, "") || "/"}.json`)
+		.then((response) => response.json())
+		.then((data) => {
+			const countElement = document.getElementById("page-views");
+			if (countElement) countElement.innerHTML =
+				`<svg xmlns="http://www.w3.org/2000/svg" class="inline-icon icon-dice" aria-hidden="true" viewBox="0 0 576 512"><path d="M384 160c-17.7 0-32-14.3-32-32s14.3-32 32-32l160 0c17.7 0 32 14.3 32 32l0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-82.7L342.6 374.6c-12.5 12.5-32.8 12.5-45.3 0L192 269.3 54.6 406.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160c12.5-12.5 32.8-12.5 45.3 0L320 306.7 466.7 160 384 160z"/></svg>`+
+				` ${data.count} hit${data.count === 1 ? "" : "s"}`;
+		})
+		.catch((error) => console.error("Error fetching page views: ", error));
 })();
