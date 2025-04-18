@@ -51,3 +51,12 @@ but alas, CSS spec says no:
 I guess I'll cross my fingers that "This restriction may be relaxed in a future level of this module" because until then it's not doable[^1].
 
 [^1]:Technically it is kinda doable but it's gotta use `::before` and [CSS counters](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) to work around the fact that the `list-item` display keyword is needed to generate the `::marker`. You can see an example of this in Chris' CodePen example earlier in the post.
+
+## Update: 18 April 2025
+
+> @elly oh you already have the workaround in your post. When you ask questions, you bring receipts!
+> You link to the note in the spec, but I don't see any open issues for solving it. Maybe you should open one! (because I agree it's a common need)
+> https://github.com/w3c/csswg-drafts/issues/?q=is%3Aissue%20state%3Aopen%20%22list-item%22%20label%3Acss-display-4%20
+> — [Miriam Suzanne](https://front-end.social/@mia/114357139576097940)
+
+Well, thank you for the push Mia, here's the link to [the issue](https://github.com/w3c/csswg-drafts/issues/12100) if anyone wants to go +1 it!
