@@ -90,7 +90,7 @@ eleventyImport:
 			{% set typeButtons = [
 				{ id: "essays", name: "Types", label: "Essays" },
 				{ id: "notes", name: "Types", label: "Notes" },
-				{ id: "microposts", name: "Types", label: "Microposts" },
+				{ id: "talks", name: "Types", label: "Talks" },
 				{ id: "bookmarks", name: "Types", label: "Bookmarks" },
 				{ id: "projects", name: "Types", label: "Projects" }
 			] -%}
@@ -102,7 +102,7 @@ eleventyImport:
 	<fieldset>
 		<legend>Tags</legend>
 		<div id="fieldset-tags-content">
-			{% set tagArray = collections | objKeys | reject("equalto", "Seedling") | reject("equalto", "Budding") | reject("equalto", "Evergreen") | reject("equalto", "Essays") | reject("equalto", "Notes") | reject("equalto", "Microposts") | reject("equalto", "Bookmarks") | reject("equalto", "Projects") | reject("equalto", "Garden") | reject("equalto", "all") | reject("equalto", "allSortedByDate") | reject("equalto", "BookmarksSortedByDate") | reject("equalto", "notBookmarksSortedByDate") | reject("equalto", "postsSortedByDate") -%}
+			{% set tagArray = collections | objKeys | reject("equalto", "Seedling") | reject("equalto", "Budding") | reject("equalto", "Evergreen") | reject("equalto", "Essays") | reject("equalto", "Notes") | reject("equalto", "Talks") | reject("equalto", "Bookmarks") | reject("equalto", "Projects") | reject("equalto", "Garden") | reject("equalto", "all") | reject("equalto", "allSortedByDate") | reject("equalto", "BookmarksSortedByDate") | reject("equalto", "notBookmarksSortedByDate") | reject("equalto", "postsSortedByDate") -%}
 			{%- set tagButtons = [] -%}
 			{%- for tag in tagArray -%}
 				{% set tagButton = { id: tag | lower, name: "Tags", label: tag, count: collections[tag] | length } %}
@@ -124,7 +124,7 @@ eleventyImport:
 </form>
 
 {%- include "crazy-filter.njk" -%}
-<h2>Posts</h2>
+<h2 style="margin-block-start: var(--flow-space, 1em)">Posts</h2>
 {%- set posts = collections.postsSortedByDate -%}
 <ul id="feed" tabindex="-1" class="[ feed ]" style="--flow-space: var(--block-size-7)">
 	{%- for post in posts %}
