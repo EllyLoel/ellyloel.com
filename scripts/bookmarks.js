@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable no-console */
 
 import "dotenv/config";
 import { existsSync, mkdirSync } from "node:fs";
