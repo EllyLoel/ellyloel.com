@@ -7,6 +7,7 @@
 **/.DS_Store
 localhost.pem
 localhost-key.pem
+wrangler.toml
 
 # App-specific
 cache
