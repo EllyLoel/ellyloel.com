@@ -96,6 +96,7 @@ Take the time to think about what is going to work best for you in terms of time
 If I'm honest, I don't know if I've really had a whole lot of concepts stick for myself. I'm not someone who's spent hours upon hours learning data structures and algorithms or how to invert a binary tree. Because honestly, I don't think I could do that.
 
 For me it was more of getting to a point where I felt like I had enough of an idea to be able to ~~Google~~ ++DuckDuckGo++ solutions to my problems and figure it out on the fly. Then through lots and lots of repetition I slowly started to remember things.
+
 I think it's less about making sure all the coding concepts stick and more about getting to the point where you're able to start creating things. The more you create the more you'll learn by doing.
 
 Once you have a base of practical knowledge from building things then you might want to look into specific concepts. Having a practical understanding is extremely important to learning theoretical concepts and being able to translate them into what you're building.

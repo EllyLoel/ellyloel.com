@@ -16,6 +16,7 @@ date: 2023-01-10
 ## ~~Color~~ ++Colour++
 
 Let's get the elephant out of the room.
+
 I'm Australian, so I spell it like this, colour, not like this, color. _Except when I'm writing any kind of code haha…_ {% emoji "🥲", "Smiling face with tear." %}
 
 ## Fuck sRGB, all my homies hate sRGB

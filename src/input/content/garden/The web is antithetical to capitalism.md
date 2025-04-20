@@ -18,6 +18,7 @@ summary: |-
   > — Miriam Suzanne, in [Hints and suggestions](https://www.oddbird.net/talks/hints/)
 ---
 https://www.igalia.com/chats/alex-owa-remedy
+
 https://www.igalia.com/chats/chris-coyier
 
 https://youtu.be/s2rqYu6jqWY
@@ -51,23 +52,35 @@ it would be great if we didn't have to do thing based off of what pays, we shoul
 capitalism is antithetical to care
 
 i don't think businesses should own browsers
+
 i don't think governments should own browsers
+
 i think the people should own browsers
 
-issues with open source being unsustainable and users being too entitled 
+issues with open source being unsustainable and users being too entitled
+
 that's a capitalism issue really
+
 like yes labour is valuable but if we're in a non-capitalist system then things that benefit everyone but that doesn't make business sense become feasible 
 
 everyone uses the internet 
+
 5 billion people atm
+
 this should not be a product 
+
 this is public infrastructure like roads and railways and electricity and sewage and water, it's not meant to be profitable, it meant to be provided to everyone because it's a requirement for everyday life
+
 especially poignant because the internet is international unlike most other public infrastructure, which is why it shouldn't be controlled by one government
 
 subscriptions suck
+
 even subscriptions for things I really care about supporting
+
 they're only required because of capitalism
+
 because caring about something isn't enough
+
 we have to make it into a business so we can survive
 
 ---

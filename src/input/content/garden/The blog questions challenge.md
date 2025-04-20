@@ -19,6 +19,7 @@ Lots of love to [Sophie Koonin](https://localghost.dev/blog/the-blog-questions-c
 ## Why did you start blogging in the first place?
 
 I was going to say that I originally made this site for career reasons, which admittedly I did but honestly I wouldn't have been doing any of this if I didn't love it as much as I do. So no this is not a [professional career focused portfolio resume cv work business job capitalism](https://business-business.business/) site, it's for me.
+
 To answer the question, I started blogging because I love sharing and I love the web.
 
 ## What platform are you using to manage your blog and why did you choose it?
