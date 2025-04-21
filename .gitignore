@@ -16,3 +16,4 @@ node-supporters/
 src/_data/builtwith/
 .wrangler/
 wrangler.toml
+.dev.vars
