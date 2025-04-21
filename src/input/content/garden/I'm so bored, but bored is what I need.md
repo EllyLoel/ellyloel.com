@@ -158,3 +158,21 @@ This is so true and it's so incredibly fucked up. I'm working constantly to try 
 > You don't have to go work for Apple you don't have to go work for Google… it's not the only path… you're allowed to try things you're even allowed to fail at them and then try something else… you're allowed to try.
 > — Miriam Suzanne, [Web Development Is Theater](https://youtu.be/dQwtnsTa8JA)
 
+- going solo
+	- aka freelancer, contractor, sole trader, solo agency, consultant, etc. etc. what ever you want to call it
+- using my skills to help the my communities
+- paying one person to build you a website is much cheaper than paying a whole team of people so i'll make more money than i would if i were just taking home a salary
+- i will have more control over how things are done
+- i will *hopefully* be able to pick clients that i care about, like i said, helping my community
+
+- i don't want to just talk at conferences because they're all so expensive so they're full of more wealthy and more privileged people
+- this feels so silly and so full-circle, but honestly youtube is probably my best option
+- what is a talk if not a video essay ??? 💀
+- basically there are many different avenues for sharing my ideas, not just conferences
+- writing in my digital garden of course
+- youtube as well as i said
+- also podcasts (*eh idk if i'm huge on that*)
+- zines YES YES YES
+- basically i can use whatever mediums and channels that i like, i'm not bound to any one channel (conferences)
+
+Maybe a membership style support thing is the way to go? I know there are some people that do it (Eric Eggert and Chris Ferdinandi)
