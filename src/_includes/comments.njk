@@ -1,7 +1,11 @@
+{%- set totalComments = comments | length -%}
 <div id="comments" class="[ comments ]">
 	<details class="[ details-reset ][ flow ]">
 		<summary id="comments-summary" class="[ h2 ]">
-			<h2>Comments</h2>
+			<h2>
+				{{- totalComments + " " if totalComments >= 1 -}}
+				Comments
+			</h2>
 		</summary>
 
 		<ol class="[ flow ]">
