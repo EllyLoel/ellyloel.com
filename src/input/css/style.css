@@ -40,6 +40,7 @@
 @import url("./blocks/callout.css") layer(blocks);
 @import url("./blocks/card.css") layer(blocks);
 @import url("./blocks/chronological.css") layer(blocks);
+@import url("./blocks/comments.css") layer(blocks);
 @import url("./blocks/content-footer.css") layer(blocks);
 @import url("./blocks/date.css") layer(blocks);
 @import url("./blocks/dialog.css") layer(blocks);

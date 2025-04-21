@@ -6,7 +6,7 @@
 	border-radius: var(--radius-3);
 	border-width: var(--border-size-2);
 	box-shadow: var(--shadow-offset) var(--shadow-offset) 0 0 var(--accent-bg-hover);
-	inline-size: fit-content;
+	inline-size: min(100%, 30ch);
 	padding-block: var(--size-fluid-3);
 	padding-inline: var(--size-fluid-3);
 	transition: box-shadow 0.3s var(--ease-1), opacity 0.5s var(--ease-2);
@@ -17,27 +17,13 @@
 		transition: box-shadow 0.15s var(--ease-1);
 	}
 
-	> :is(div, button) {
-		inline-size: min(100%, 25ch);
-	}
-
-	& label {
-		color: var(--neutral-6);
-		font-weight: var(--font-weight-body-bold);
-	}
-
-	& input {
-		border-style: solid;
-		line-height: 1;
-		padding-block: 0.75ch;
-		padding-inline: 1ch;
-	}
-
-	> button {
+	& button {
 		--flow-space: 1.75em;
+
+		inline-size: 100%;
 	}
 
-	> small {
+	& small {
 		--flow-space: 0.75em;
 
 		display: block;

@@ -194,14 +194,20 @@ abbr {
 
 /* Form inputs */
 
+label {
+	color: var(--neutral-6);
+	font-weight: var(--font-weight-body-bold);
+}
+
 :is(input, textarea) {
-	padding-block: var(--block-size-1);
-	padding-inline: var(--inline-size-2);
+	border-style: solid;
+	padding-block: var(--block-size-2);
+	padding-inline: var(--inline-size-3);
 }
 
 select {
-	padding-block: 0.75ch;
-	padding-inline: 1.25ch 0;
+	padding-block: var(--block-size-2);
+	padding-inline: var(--inline-size-3) 0;
 }
 
 :is(textarea, select, input:not([type="button"], [type="submit"], [type="reset"], [type="checkbox"], [type="radio"])) {
@@ -219,6 +225,18 @@ select {
 input:is([type="checkbox"], [type="radio"]) {
 	block-size: var(--block-size-3);
 	inline-size: var(--inline-size-3);
+}
+
+input:not([type="checkbox"], [type="radio"]) {
+	line-height: 1;
+}
+
+textarea {
+	--_block-size: 4.4em;
+	--_block-size: 3lh;
+
+	field-sizing: content;
+	min-block-size: calc(var(--_block-size) + ((var(--block-size-2) + var(--border-size-2)) * 2));
 }
 
 /* Typography */

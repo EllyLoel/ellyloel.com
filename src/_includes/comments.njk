@@ -1,0 +1,54 @@
+<div id="comments" class="[ comments ]">
+	<details class="[ details-reset ][ flow ]">
+		<summary id="comments-summary" class="[ h2 ]">
+			<h2>Comments</h2>
+		</summary>
+
+		<ol class="[ flow ]">
+			{%- for comment in comments -%}
+			<li class="[ comment ][ flow ]">
+				<div class="[ meta ]">
+					<{{ "a" if comment.website else "span" }} {% if comment.website %}href="{{ comment.website }}"{% endif %} class="[ author-wrapper ]">
+						<strong class="[ author-name ]">
+							{{- comment.createdBy -}}
+						</strong>
+					</{{ "a" if comment.website else "span" }}>
+					<small>
+						<time class="[ dt-published ]" datetime="{{ comment.date }}">{{ comment.date | dateToLocale({ timeStyle: "short" }) }}</time>
+					</small>
+				</div>
+				{{ comment.html | safe }}
+			</li>
+			{%- endfor -%}
+		</ol>
+
+		<form name="comment" method="POST" action="/api/comment" class="[ flow ]" aria-labelledby="leave-a-comment">
+			<h3 id="leave-a-comment">Leave a comment</h3>
+			<div id="success" class="[ flow ]">
+				<h4>Success! 🎉</h4>
+				<p>Yay! Thanks for submitting your comment, it will appear here once I've reviewed and approved it.</p>
+				<p><a href="#leave-a-comment">Leave another comment</a></p>
+			</div>
+			<div class="[ input-group ]">
+				<label for="comment">Comment <small aria-hidden="true">(required)</small></label>
+				<small id="md-supported"><a href="https://www.markdownguide.org/basic-syntax/">Markdown</a> supported</small>
+				<p id="comment-error" class="[ error ]"></p>
+				<textarea id="comment" name="comment" aria-describedby="comment-error md-supported" required></textarea>
+			</div>
+			<div class="[ input-group ]">
+				<label for="name">Name <small aria-hidden="true">(required)</small></label>
+				<p id="name-error" class="[ error ]"></p>
+				<input id="name" name="name" aria-describedby="name-error" required>
+			</div>
+			<div class="input-email">
+				<label for="email">Email</label>
+				<input id="email" name="email">
+			</div>
+			<div class="[ input-group ]">
+				<label for="website">Website</label>
+				<input id="website" name="website">
+			</div>
+			<button type="submit">Submit</button>
+		</form>
+	</details>
+</div>
