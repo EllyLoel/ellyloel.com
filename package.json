@@ -100,7 +100,7 @@
 		"postcss-load-config": "^6.0.1",
 		"postcss-preset-env": "^10.1.6",
 		"remove-markdown": "^0.6.0",
-		"rollup": "^4.40.0",
+		"rollup": "^4.40.1",
 		"rss-parser": "^3.13.0",
 		"stylelint": "^16.18.0",
 		"stylelint-config-standard": "^38.0.0",
