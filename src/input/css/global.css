@@ -194,7 +194,7 @@ abbr {
 
 /* Form inputs */
 
-label {
+label, .label {
 	color: var(--neutral-6);
 	font-weight: var(--font-weight-body-bold);
 }
