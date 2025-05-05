@@ -1,3 +1,8 @@
+@property --_accent {
+	inherits: true;
+	syntax: "<color>";
+}
+
 .button-reset {
 	appearance: none;
 	background: none;
@@ -16,7 +21,7 @@
 	--_bg: var(--neutral-base);
 	--_border: currentcolor;
 	--_highlight-size: 0;
-	--_highlight: var(--accent-border);
+	--_highlight: var(--_accent, var(--accent-border));
 	--_icon-size: 2ch;
 	--_icon-color: var(--_accent, var(--link));
 
@@ -37,16 +42,17 @@
 	-webkit-tap-highlight-color: transparent;
 	text-align: center;
 	-webkit-touch-callout: none;
+	transition: border-color 0.5s var(--ease-3), color 0.5s var(--ease-3);
 
 	@media (prefers-reduced-motion: no-preference) {
-		transition: border-color 0.5s var(--ease-3), box-shadow 145ms var(--ease-4);
+		transition: border-color 0.5s var(--ease-3), box-shadow 145ms var(--ease-4), color 0.5s var(--ease-3);
 
 		&:focus-visible {
-			transition: outline-offset 145ms var(--ease-2), border-color 0.5s var(--ease-3), box-shadow 145ms var(--ease-4);
+			transition: outline-offset 145ms var(--ease-2), border-color 0.5s var(--ease-3), box-shadow 145ms var(--ease-4), color 0.5s var(--ease-3);
 		}
 
 		&:not(:active):focus-visible {
-			transition: outline-offset 0.25s var(--ease-2), border-color 0.5s var(--ease-3), box-shadow 145ms var(--ease-4);
+			transition: outline-offset 0.25s var(--ease-2), border-color 0.5s var(--ease-3), box-shadow 145ms var(--ease-4), color 0.5s var(--ease-3);
 		}
 	}
 
