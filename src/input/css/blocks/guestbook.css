@@ -253,7 +253,7 @@
 				image-rendering: pixelated;
 				inline-size: 100%;
 				/* stylelint-disable-next-line declaration-property-value-no-unknown */
-				mask: url("/assets/ripped-paper.svg") random(-400px, 400px);
+				mask: url("/assets/svg/ripped-paper.svg") random(-400px, 400px);
 			}
 		}
 	}
