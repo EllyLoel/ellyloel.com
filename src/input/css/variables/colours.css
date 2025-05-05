@@ -72,10 +72,10 @@
 	--neutral-solid-hover: var(--neutral-8);
 	--neutral-text: var(--neutral-9);
 	--neutral-text-contrast: var(--neutral-10);
-	--info: oklch(74.2% 0.1262 241.9deg);
-	--success: oklch(74.2% 0.1766 136.9deg);
-	--warning: oklch(74.2% 0.1459 61.88deg);
-	--error: oklch(74.2% 0.1387 31.88deg);
+	--info: oklch(54% 0.1262 241.9deg);
+	--success: oklch(54% 0.1766 136.9deg);
+	--warning: oklch(56.3% 0.1459 61.88deg);
+	--error: oklch(56.6% 0.1372 32deg);
 
 	/* Misc */
 	--code-bg: var(--neutral-bg-subtle);
@@ -104,6 +104,10 @@
 		--neutral-8: var(--herring-silver);
 		--neutral-9: var(--peekaboo);
 		--neutral-10: var(--white);
+		--info: oklch(74.2% 0.1262 241.9deg);
+		--success: oklch(74.2% 0.1766 136.9deg);
+		--warning: oklch(74.2% 0.1459 61.88deg);
+		--error: oklch(74.2% 0.1387 31.88deg);
 
 		/* Misc */
 		--code-bg: var(--neutral-bg);
@@ -133,6 +137,10 @@
 	--neutral-8: var(--moonless-night);
 	--neutral-9: var(--piano-black);
 	--neutral-10: var(--black);
+	--info: oklch(54% 0.1262 241.9deg);
+	--success: oklch(54% 0.1766 136.9deg);
+	--warning: oklch(56.3% 0.1459 61.88deg);
+	--error: oklch(56.6% 0.1372 32deg);
 
 	/* Misc */
 	--code-bg: var(--neutral-bg-subtle);
@@ -161,6 +169,10 @@
 	--neutral-8: var(--herring-silver);
 	--neutral-9: var(--peekaboo);
 	--neutral-10: var(--white);
+	--info: oklch(74.2% 0.1262 241.9deg);
+	--success: oklch(74.2% 0.1766 136.9deg);
+	--warning: oklch(74.2% 0.1459 61.88deg);
+	--error: oklch(74.2% 0.1387 31.88deg);
 
 	/* Misc */
 	--code-bg: var(--neutral-bg);
