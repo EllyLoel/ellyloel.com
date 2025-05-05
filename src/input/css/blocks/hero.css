@@ -18,63 +18,32 @@
 			margin: 0;
 			max-inline-size: none;
 
-			& .text-fit {
-				--captured-length: initial;
-				--support-sentinel: var(--captured-length, 9999px);
+			&, & span {
+				line-height: 1;
+			}
 
-				container: text-fix / inline-size;
-				display: flex;
+			& span {
+				font-size: var(--font-size-8);
 
-				& > [aria-hidden] {
-					visibility: hidden;
+				@media (width > 15em) {
+					display: none;
+				}
+			}
+
+			& svg {
+				fill: var(--accent-bg);
+				overflow: visible;
+				paint-order: stroke fill;
+				stroke: var(--accent-border);
+				stroke-width: 0.25;
+
+				@media (width <= 15em) {
+					display: none;
 				}
 
-				& > :not([aria-hidden]) {
-					--captured-length: 100cqi;
-					--available-space: var(--captured-length);
-
-					container-type: inline-size;
-					flex-grow: 1;
-
-					& > * {
-						--support-sentinel: inherit;
-						--captured-length: 100cqi;
-						--ratio: tan(
-							atan2(
-								var(--available-space),
-								var(--available-space) - var(--captured-length)
-							)
-						);
-						--font-size: clamp(
-							1em,
-							1em * var(--ratio),
-							var(--max-font-size, infinity * 1px) - var(--support-sentinel)
-						);
-
-						inline-size: var(--available-space);
-
-						&:not(.text-fit) {
-							display: block;
-							font-size: var(--font-size);
-
-							@container (inline-size > 0) {
-								white-space: nowrap;
-							}
-
-							@container text-fix (inline-size > 18rem) {
-								font-size: calc(
-									var(--font-size) * 1.02
-								); /* I know this looks really weird but without it everything is off by just a little bit and idk why lol */
-							}
-						}
-
-						&.text-fit {
-							--captured-length2: var(--font-size);
-
-							font-variation-settings: "opsz"
-								tan(atan2(var(--captured-length2), 1px));
-						}
-					}
+				& text {
+					font-size: 18px;
+					letter-spacing: 0.02em;
 				}
 			}
 		}
@@ -84,7 +53,6 @@
 			font-weight: 1000;
 			isolation: isolate;
 
-			/* stylelint-disable-next-line no-descending-specificity */
 			> * {
 				display: block;
 			}
@@ -92,13 +60,6 @@
 			& eight-ball {
 				color: var(--accent-solid);
 				margin-inline-start: auto;
-
-				/* for some reason this is causing my 11ty build to run out of memory 🤯 */
-
-				/* & span:not(:has(a)) {
-					text-decoration: 0.4rem wavy line-through oklch(from var(--accent-bg-hover) l c h / 20%);
-					text-decoration-skip-ink: none;
-				} */
 			}
 		}
 	}
