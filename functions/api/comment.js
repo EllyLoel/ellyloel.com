@@ -79,7 +79,7 @@ export async function onRequestPost(context) {
 			content: Buffer.from(JSON.stringify(postData, null, 2), "utf8").toString("base64"),
 			message: `Comment from ${output.name} on ${postName}`,
 			owner: REPO_OWNER,
-			path: `src/content/blog/${postName}.11tydata.json`,
+			path: `src/input/content/garden/${postName}.11tydata.json`,
 			repo: REPO_NAME,
 			sha,
 		});

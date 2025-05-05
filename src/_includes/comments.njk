@@ -18,7 +18,7 @@
 						</strong>
 					</{{ "a" if comment.website else "span" }}>
 					<small>
-						<time class="[ dt-published ]" datetime="{{ comment.date }}">{{ comment.date | dateToLocale({ timeStyle: "short" }) }}</time>
+						<time class="[ dt-published ]" datetime="{{ comment.date }}">{{ comment.date | dateToLocale({ timeStyle: "short", timeZone: "UTC" }) }}</time>
 					</small>
 				</div>
 				{{ comment.html | safe }}
