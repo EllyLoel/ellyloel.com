@@ -223,8 +223,18 @@ select {
 }
 
 input:is([type="checkbox"], [type="radio"]) {
-	block-size: var(--block-size-3);
-	inline-size: var(--inline-size-3);
+	aspect-ratio: 1;
+	block-size: auto;
+	inline-size: 0.7em;
+	inline-size: 1cap;
+
+	+ label {
+		color: inherit;
+	}
+
+	&:checked + label {
+		color: var(--link);
+	}
 }
 
 input:not([type="checkbox"], [type="radio"]) {
