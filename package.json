@@ -34,7 +34,7 @@
 		"lint:js:fix": "eslint src/input/js/ --fix",
 		"postbuild": "webmention _site/feed.atom --limit 10 --send"
 	},
-	"packageManager": "pnpm@10.8.1",
+	"packageManager": "pnpm@10.9.0",
 	"dependencies": {
 		"@11ty/eleventy": "^3.0.0",
 		"@11ty/is-land": "^4.0.1",
