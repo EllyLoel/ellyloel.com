@@ -37,12 +37,7 @@
 			--flow-space: 0.5em;
 		}
 
-		> p img {
-			display: inline;
-			width: 1.2em;
-		}
-
-		.meta {
+		& .meta {
 			align-items: baseline;
 			display: flex;
 			flex-wrap: wrap;
@@ -155,5 +150,4 @@
 			--flow-space: 1.75em;
 		}
 	}
-
 }

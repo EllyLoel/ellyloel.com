@@ -26,7 +26,6 @@
 @import url("./utilities/no-width.css") layer(utilities);
 @import url("./utilities/padding.css") layer(utilities);
 @import url("./utilities/flow.css") layer(utilities);
-@import url("./utilities/panel.css") layer(utilities);
 @import url("./utilities/radius.css") layer(utilities);
 @import url("./utilities/recursive-flow.css") layer(utilities);
 @import url("./utilities/stroke.css") layer(utilities);
@@ -52,6 +51,7 @@
 @import url("./blocks/footnotes.css") layer(blocks);
 @import url("./blocks/garden.css") layer(blocks);
 @import url("./blocks/graph.css") layer(blocks);
+@import url("./blocks/guestbook.css") layer(blocks);
 @import url("./blocks/hero.css") layer(blocks);
 @import url("./blocks/home.css") layer(blocks);
 @import url("./blocks/icon.css") layer(blocks);
@@ -67,6 +67,7 @@
 @import url("./blocks/page-views.css") layer(blocks);
 @import url("./blocks/photos.css") layer(blocks);
 @import url("./blocks/prism.css") layer(blocks);
+@import url("./blocks/scribbler.css") layer(blocks);
 @import url("./blocks/search.css") layer(blocks);
 @import url("./blocks/settings.css") layer(blocks);
 @import url("./blocks/site-head.css") layer(blocks);

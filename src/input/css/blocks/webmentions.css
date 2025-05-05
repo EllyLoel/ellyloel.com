@@ -58,7 +58,7 @@
 			width: 1.2em;
 		}
 
-		.meta {
+		& .meta {
 			align-items: baseline;
 			display: flex;
 			flex-wrap: wrap;
