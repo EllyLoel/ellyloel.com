@@ -379,8 +379,6 @@ video {
 
 blockquote {
 	border-left: var(--border-size-3) solid var(--accent-border);
-	display: grid;
-	gap: var(--block-size-2) var(--inline-size-3);
 	letter-spacing: normal;
 	padding-block: var(--block-size-2);
 	padding-inline: var(--inline-size-5);
@@ -395,6 +393,32 @@ blockquote {
 		font-style: italic;
 		font-variation-settings: "SOFT" var(--font-softness), "WONK" var(--font-wonkiness);
 		font-weight: 300;
+	}
+
+	> *:not(.visually-hidden) {
+		&:first-child,
+		&:last-child {
+			position: relative;
+		}
+
+		&:first-child::before,
+		&:last-child::after {
+			color: var(--accent-border);
+		}
+
+		&:first-child::before {
+			content: "“";
+			inset-inline-end: 100%;
+			position: absolute;
+		}
+
+		&:last-child::after {
+			content: "”";
+		}
+	}
+
+	> *:not(.visually-hidden) + *:not(.visually-hidden) {
+		margin-block-start: var(--flow-space, 1em);
 	}
 
 	> footer {
