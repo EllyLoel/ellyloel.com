@@ -1,0 +1,64 @@
+{%- rollup "src/input/js/scribbler.js" | url -%}
+<fieldset id="scribble-input-group" aria-describedby="scribble-error" class="[ flow ]">
+	<legend class="[ h3 ]">Scribble your heart out! <small>(required)</small></legend>
+	<p id="scribble-error" class="[ error ]"></p>
+	<div class="[ scribbler ][ flex flex-col gap-2 ]" id="scribbler">
+		<div id="controls" class="[ flow ]">
+			<div class="[ flex flex-wrap gap-2 ]">
+				<button type="button" id="pencil" aria-pressed="true">
+					{%- icon "fas:pencil" -%}
+					<span>Pen tool</span>
+				</button>
+				<button type="button" id="eraser" aria-pressed="false">
+					{%- icon "fas:eraser" -%}
+					<span>Eraser tool</span>
+				</button>
+			</div>
+			<div class="[ flex flex-wrap gap-2 ]">
+				<button type="button" id="small" aria-pressed="false" data-width="1" data-size="small">
+					<svg class="[ icon ]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+						<circle cx="8" cy="8" r="3" stroke="none" fill="currentColor"></circle>
+					</svg>
+					<span>Small size</span>
+				</button>
+				<button type="button" id="medium" aria-pressed="true" data-width="2" data-size="medium">
+					<svg class="[ icon ]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+						<circle cx="8" cy="8" r="5" stroke="none" fill="currentColor"></circle>
+					</svg>
+					<span>Medium size</span>
+				</button>
+				<button type="button" id="large" aria-pressed="false" data-width="4" data-size="large">
+					<svg class="[ icon ]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+						<circle cx="8" cy="8" r="7" stroke="none" fill="currentColor"></circle>
+					</svg>
+					<span>Large size</span>
+				</button>
+			</div>
+			<div class="[ flex flex-wrap gap-2 ]">
+				<button type="button" id="undo">
+					{%- icon "fas:rotate-left" -%}
+					<span>Undo</span>
+				</button>
+				<button type="button" id="redo">
+					{%- icon "fas:rotate-right" -%}
+					<span>Redo</span>
+				</button>
+				<button type="button" id="clear">
+					{%- icon "fas:trash" -%}
+					<span>Clear</span>
+				</button>
+			</div>
+		</div>
+		<div class="[ border ]">
+			<div class="[ artboard ]">
+				<canvas id="drawingCanvas" width="100" height="100" data-size="small" data-tool="pencil"></canvas>
+			</div>
+		</div>
+	</div>
+</fieldset>
+<div id="scribble-alt-input-group" class="[ input-group ]">
+	<label for="scribble-alt" class="[ h3 ]">Describe your scribble <small aria-hidden="true">(required)</small></label>
+	<p id="alt-hint">This will be included as the <code>alt</code> attribute on your scribble when it's displayed, so that Blind and low vision people can enjoy your wonderful scribble too!</p>
+	<p id="alt-error" class="[ error ]"></p>
+	<textarea id="scribble-alt" name="scribble-alt" aria-describedby="alt-hint"></textarea>
+</div>

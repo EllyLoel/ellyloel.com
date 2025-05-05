@@ -1,0 +1,75 @@
+.scribbler {
+	inline-size: min(100%, var(--size-content-2));
+
+	& #controls {
+		> div {
+			--flow-space: 0.5em;
+		}
+
+		& button {
+			--_size: var(--font-size-0);
+
+			gap: var(--block-size-1) var(--inline-size-1);
+			padding-block: var(--block-size-1);
+			padding-inline: var(--inline-size-2);
+
+			&:not(:active):hover {
+				--_highlight-size: var(--size-px-1);
+			}
+
+			&[aria-pressed="true"] {
+				background: var(--_text);
+				color: var(--_bg);
+			}
+
+			&[id="clear"]:is(:hover, :focus-visible) {
+				--_accent: var(--error);
+			}
+
+			& circle {
+				stroke: none;
+			}
+		}
+	}
+
+	& .border {
+		border: var(--border-size-2) solid var(--neutral-border);
+		border-radius: var(--radius-2);
+		overflow: hidden;
+		overflow: clip;
+	}
+
+	& .artboard {
+		:root[data-selected-color-scheme="auto"] & {
+			filter: contrast(75%) brightness(130%);
+
+			@media (prefers-color-scheme: dark) {
+				filter: invert(100%) contrast(80%) brightness(90%);
+			}
+		}
+
+		:root[data-selected-color-scheme="light"] & {
+			filter: contrast(75%) brightness(130%);
+		}
+
+		:root[data-selected-color-scheme="dark"] & {
+			filter: invert(100%) contrast(80%) brightness(90%);
+		}
+	}
+
+	& canvas {
+		aspect-ratio: 1;
+		background: white;
+		filter: contrast(100000%); /* lol i can't believe this works */
+		image-rendering: pixelated;
+		inline-size: 100%;
+
+		&:not([data-tool]), &[data-tool="pencil"] {
+			cursor: url("data:image/webp;base64,UklGRgQBAABXRUJQVlA4TPcAAAAvHgAHEIegJpKt5gcVvyPWGMggCV1IQAjdV4EWBW0kqbljVPBn4ElNZDtRJk4uA5eA1HGAFExQ4QMXyKGmnP8AACw4fRcf0X7WmLjVreVj2Ws4c4kdj7+Rk+FNNWVocBBJkiJV7+4x+ne7dNcPAiL6z8Bt20aC1Nv7XgEAAAAAgCQJwO44jkN+a6bRrtBqbl2fdFq0rvPca7Qsmueiz5iptid832kZx87yzt87N42dKSWjSqPMTk2Nw5C3em1btjYMblX5VZRS3vpJ0zTlr/DHOf/Oh933cwYveVOpz+O6LrVZ1PZddvEuFUomoZY/r19Qu8aj3+YCAA==") 0 29, pointer;
+		}
+
+		&[data-tool="eraser"] {
+			cursor: url("data:image/webp;base64,UklGRv4AAABXRUJQVlA4TPIAAAAvHgAHEIegJpKt5gcVvyPWGMggCV1IQAjdV4EWBW0kqbljVPBn4ElNZDtRJk4uA5eA1HGAFExQ4QMXyKGmnP8AACw4fRcf0X7WmLjVreVj2Ws4c4kdj7+Rk+FNNWVocNi2kSPZm/Nu/93Gv1ngC4joPwO3bRsZZm/vewUAAAAAAAAAAAAAknzappSmeE0ppcv5Qx8zQjNbH2Ke3GbEcia5Ipdz5qM9fdL4qDX+s8850pgX1lrSP7HOzcq3brsyxhjSHc1CIQSeEW1lCFcjv9Va690Y51f4ztEjUZa7KXETN6W0/52nXqT7/CQ74SLvfOlSAA==") 8 29, pointer;
+		}
+	}
+}

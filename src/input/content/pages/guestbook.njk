@@ -6,13 +6,105 @@ eleventyNavigation:
   parent: Contact
   order: 1
 ---
-
+<div class="[ guestbook ][ flow ]">
 {%- md -%}
-~~~ callout **This page displays entries sent via Webmention!**
+This page was inspired by the guestbooks of [Ana Rodrigues](https://ohhelloana.blog/guestbook/) and [Annie Mueller](https://anniemueller.com/guestbook).
+{%- endmd -%}
+<form name="guestbook" method="POST" action="/api/guestbook" aria-labelledby="sign-the-guestbook" class="[ flow ]">
+	<h2 id="sign-the-guestbook">Sign the guestbook</h2>
+	<div id="success" class="[ flow ]">
+		<h3>Success! 🎉</h3>
+		<p>Yay! Thanks for signing the guestbook, it will appear here once I've reviewed and approved it.</p>
+		<p><a href="#content">Sign the guestbook again</a></p>
+	</div>
+	<div class="[ error-summary ]" tabindex="0" hidden>
+		<h3 tabindex="-1">
+			Sorry! Looks like there's a problem
+		</h3>
+		<ol>
+			<li id="error-summary-message" hidden>
+				<a href="#message">Please include your message</a>
+			</li>
+			<li id="error-summary-scribble" hidden>
+				<a href="#pencil">Please include your scribble</a>
+			</li>
+			<li id="error-summary-scribble-alt" hidden>
+				<a href="#scribble-alt">Please include a description of your scribble</a>
+			</li>
+			<li id="error-summary-name" hidden>
+				<a href="#name">Please include your name</a>
+			</li>
+		</ol>
+	</div>
+	<fieldset role="radiogroup" id="input-picker" class="[ flow ]">
+		<legend class="[ h3 ]">What do you want to include in your guestbook signing? <small>(required)</small></legend>
+		<div class="[ input-group ][ flex-row align-baseline gap-2 ]">
+			<input type="radio" name="which" value="scribble" id="scribble-radio">
+			<label for="scribble-radio">A scribble</label>
+		</div>
+		<div class="[ input-group ][ flex-row align-baseline gap-2 ]">
+			<input type="radio" name="which" value="message" id="message-radio">
+			<label for="message-radio">A message</label>
+		</div>
+		<div class="[ input-group ][ flex-row align-baseline gap-2 ]">
+			<input type="radio" name="which" value="both" id="both-radio" checked>
+			<label for="both-radio">Both a scribble and a message</label>
+		</div>
+	</fieldset>
+	<div id="message-input-group" class="[ input-group ]">
+		<label for="message" class="[ h3 ]">Message <small aria-hidden="true">(required)</small></label>
+		<p id="md-supported">Your message can use <a href="https://www.markdownguide.org/basic-syntax/">markdown</a> if you want.</p>
+		<p id="message-error" class="[ error ]"></p>
+		<textarea id="message" name="message" aria-describedby="md-supported"></textarea>
+	</div>
+	{%- include "scribbler.njk" -%}
+	<div class="[ input-group ]">
+		<label for="name" class="[ h3 ]">Name <small aria-hidden="true">(required)</small></label>
+		<p id="name-hint">What do you want your name to be displayed as? <em>It can be <strong>whatever</strong> you want!</em></p>
+		<p id="name-error" class="[ error ]"></p>
+		<input id="name" name="name" aria-describedby="name-error name-hint" required>
+	</div>
+	<div class="input-email">
+		<label for="email">Email</label>
+		<input id="email" name="email">
+	</div>
+	<div class="[ input-group ]">
+		<label for="website" class="[ h3 ]">Website</label>
+		<p id="website-hint">Whatever link you want on your display name.</p>
+		<input id="website" name="website" aria-labelledby="website-hint">
+	</div>
+	<button type="submit">Sign the guestbook</button>
+	{%- rollup "src/input/js/guestbook.js" | url -%}
+</form>
+<h2>Previous signees</h2>
+<ol class="[ guestbook-comments ]">
+	{%- for comment in comments -%}
+	<li class="[ comment ][ flow ]">
+		<div class="[ meta ]">
+			<{{ "a" if comment.website else "span" }} {% if comment.website %}href="{{ comment.website }}"{% endif %} class="[ author-name ]">
+				{{- comment.createdBy -}}
+			</{{ "a" if comment.website else "span" }}>
+			<time class="[ dt-published ]" datetime="{{ comment.date }}">
+				{{- comment.date | dateToLocale({ timeStyle: "short", timeZone: "UTC" }) | replace(", ", ",<wbr> ") | safe -}}
+			</time>
+		</div>
+		{%- if comment.html -%}
+		{{ comment.html | safe }}
+		{%- endif -%}
+		{%- if comment.scribble -%}
+		<div class="[ scribble-image-wrapper ]">
+			<div class="[ scribble-image-filter ]">
+				<img src="{{ comment.scribble }}" alt="{{ comment.scribbleAlt }}" class="[ scribble-image ]" width="200" height="200">
+			</div>
+		</div>
+		{%- endif -%}
+	</li>
+	{%- endfor -%}
+</ol>
+{%- md -%}
+~~~ callout **This page also displays entries sent via Webmention!**
 If you want to sign the guestbook send through a Webmention, either from your website or you can **reply on [Mastodon](https://front-end.social/@elly/110143472326627842) or [Bluesky](https://bsky.app/profile/elly.lol/post/3lcteiaaxsc2j)**.
 ~~~
-
-This page was inspired by [Ana Rodrigues’ guestbook](https://ohhelloana.blog/guestbook/).
 {%- endmd -%}
-
 {%- include "webmentions.njk" -%}
+</div>
