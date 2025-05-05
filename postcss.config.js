@@ -1,3 +1,4 @@
+/* eslint-disable sort-keys */
 import cssnano from "cssnano";
 import openProps from "open-props";
 import postcssImport from "postcss-import";
@@ -12,15 +13,16 @@ export default {
 			...openProps,
 			layer: "variables.open-props"
 		}), // only variables that are used are in the build output (tree shaking)
+		postcssPresetEnv({
+			stage: 0,
+			features: {
+				"gradients-interpolation-method": true,
+				"random-function": true,
+			},
+		}),
 		...(process.env.ELEVENTY_ENV === "production"
 			? [
 				cssnano({ preset: "default" }),
-				postcssPresetEnv({
-					features: {
-						"gradients-interpolation-method": true,
-					},
-					stage: 0,
-				}),
 			]
 			: []),
 	],
