@@ -6,13 +6,15 @@
 	padding-inline: var(--inline-size-5);
 	position: relative;
 
-	> .inline-icon {
+	> .icon {
+		aspect-ratio: 1;
 		background: var(--accent-bg-subtle);
+		block-size: auto;
 		border-radius: var(--radius-round);
 		color: var(--accent-border);
-		font-size: var(--font-size-5);
-		inset-block-start: -14px;
-		inset-inline-start: -14px;
+		inline-size: var(--size-px-7);
+		inset-block-end: calc(100% - var(--size-px-4));
+		inset-inline-end: calc(100% - var(--size-px-4));
 		position: absolute;
 	}
 
