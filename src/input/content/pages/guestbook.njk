@@ -78,7 +78,7 @@ This page was inspired by the guestbooks of [Ana Rodrigues](https://ohhelloana.b
 </form>
 <h2>Previous signees</h2>
 <ol class="[ guestbook-comments ]">
-	{%- for comment in comments -%}
+	{%- for comment in comments | reverse -%}
 	<li class="[ comment ][ flow ]">
 		<div class="[ meta ]">
 			<{{ "a" if comment.website else "span" }} {% if comment.website %}href="{{ comment.website }}"{% endif %} class="[ author-name ]">
