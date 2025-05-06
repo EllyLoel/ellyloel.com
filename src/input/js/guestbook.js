@@ -81,17 +81,6 @@ form.addEventListener("submit", (event) => {
 	scribbleAltTextarea.removeAttribute("aria-invalid");
 	nameInput.removeAttribute("aria-invalid");
 
-	const ctx = scribbler.getContext("2d", { alpha: false });
-
-	removeAlpha(ctx, scribbler);
-	const scribbleInput = 
-		document.querySelector(`input[type="hidden"][name="scribble"]`)
-		|| document.createElement("input");
-	scribbleInput.type = "hidden";
-	scribbleInput.name = "scribble";
-	scribbleInput.value = scribbler.toDataURL();
-	event.currentTarget.append(scribbleInput);
-
 	if (!messageTextarea.value && (whichRadioMessage.checked || whichRadioBoth.checked)) {
 		messageError.textContent = "Please include your message";
 		messageError.removeAttribute("hidden");
@@ -101,6 +90,17 @@ form.addEventListener("submit", (event) => {
 	}
 
 	if (whichRadioScribble.checked || whichRadioBoth.checked) {
+		const ctx = scribbler.getContext("2d", { alpha: false });
+
+		removeAlpha(ctx, scribbler);
+		const scribbleInput = 
+			document.querySelector(`input[type="hidden"][name="scribble"]`)
+			|| document.createElement("input");
+		scribbleInput.type = "hidden";
+		scribbleInput.name = "scribble";
+		scribbleInput.value = scribbler.toDataURL();
+		scribbleFieldset.append(scribbleInput);
+
 		if (!scribbleInput || isCanvasBlank(scribbleInput.value, scribbler.width, scribbler.height)) {
 			scribbleError.textContent = "Please include your scribble";
 			scribbleError.removeAttribute("hidden");
@@ -116,6 +116,8 @@ form.addEventListener("submit", (event) => {
 			scribbleAltTextarea.setAttribute("aria-invalid", "true");
 			hasError = true;
 		}
+	} else {
+		document.querySelector(`input[type="hidden"][name="scribble"]`)?.remove();
 	}
 
 	if (!nameInput.value) {
