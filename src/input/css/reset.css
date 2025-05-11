@@ -4,9 +4,13 @@
 
 	/* Remove default margin on everything */
 	margin: 0;
+	margin-block: 0;
+	margin-inline: 0;
 
 	/* Remove default padding on everything */
 	padding: 0;
+	padding-block: 0;
+	padding-inline: 0;
 }
 
 /* Set sensible defaults for backgrounds, on all elements except fieldset progress and meter */

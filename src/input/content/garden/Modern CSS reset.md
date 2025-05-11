@@ -30,8 +30,12 @@ Lots of inspiration from Josh W Comeau, Andy Bell, and Adam Argyle.
 * {
 	/* Remove default margin on everything */
 	margin: 0;
+	margin-block: 0;
+	margin-inline: 0;
 	/* Remove default padding on everything */
 	padding: 0;
+	padding-block: 0;
+	padding-inline: 0;
 	/* Calc `em` based line height, bigger line height for smaller font size and smaller line height for bigger font size: https://kittygiraudel.com/2020/05/18/using-calc-to-figure-out-optimal-line-height/ */
 	line-height: calc(0.25rem + 1em + 0.25rem);
 }
