@@ -17,7 +17,7 @@ export default {
 			stage: 0,
 			features: {
 				"gradients-interpolation-method": true,
-				"random-function": true,
+				"random-function": { preserve: true },
 			},
 		}),
 		...(process.env.ELEVENTY_ENV === "production"
