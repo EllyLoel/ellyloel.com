@@ -144,11 +144,8 @@
 	}
 
 	& .guestbook-comments {
-		display: grid;
-		gap: var(--block-size-6) var(--inline-size-6);
-		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 		inline-size: 100%;
-		list-style-type: none;
+		list-style: none;
 		padding-left: 0;
 
 		& li {
@@ -158,10 +155,9 @@
 			border-color: var(--accent-bg-hover);
 			border-radius: var(--radius-3);
 			border-width: var(--border-size-2);
-			box-shadow: var(--shadow-offset) var(--shadow-offset) 0 0
-				var(--accent-bg-hover);
+			box-shadow: var(--shadow-offset) var(--shadow-offset) 0 0 var(--accent-bg-hover);
 			inline-size: 100%;
-			max-inline-size: unset;
+			max-inline-size: 23em;
 			padding-block: var(--block-size-3);
 			padding-inline: var(--inline-size-3);
 			transition: box-shadow 300ms var(--ease-1), opacity 0.5s var(--ease-2);
