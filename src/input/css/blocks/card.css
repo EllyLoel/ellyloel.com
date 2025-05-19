@@ -29,14 +29,21 @@
 		grid-template-areas: "content image";
 	}
 
-	.feed-item-card-image {
+	& .feed-item-card-image {
 		aspect-ratio: 4/3;
 		border-radius: var(--radius-2);
 		grid-area: image;
-		max-height: 150px;
-		max-width: 200px;
+		max-block-size: 150px;
+		max-inline-size: 200px;
 		mix-blend-mode: color-burn;
 		overflow: hidden;
+
+		&:has(img) {
+			aspect-ratio: unset;
+			max-block-size: none;
+			mix-blend-mode: normal;
+			overflow: auto;
+		}
 
 		[data-selected-color-scheme="light"] & {
 			mix-blend-mode: color-burn;
@@ -55,7 +62,7 @@
 		}
 	}
 
-	.feed-item-card-footer {
+	& .feed-item-card-footer {
 		--flow-space: var(--block-size-1);
 
 		& > a {
@@ -72,7 +79,13 @@
 		}
 	}
 
-	& .feed-item-card-title :is(h3, .h3) {
-		inline-size: 100%;
+	& .feed-item-card-title {
+		& :is(h3, .h3) {
+			inline-size: 100%;
+
+			& a {
+				margin-inline: 0;
+			}
+		}
 	}
 }

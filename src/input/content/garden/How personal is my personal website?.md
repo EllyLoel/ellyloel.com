@@ -9,7 +9,11 @@ created: 2025-05-18
 modified: 2025-05-18
 id: 1940d83aadd9901986d3dec6e5ea6d62
 date: 2025-05-18
+image: "/../assets/img/lets-see-who-you-really-are.webp"
+noFilter: true
 ---
+![Fred from Scooby Doo says “Let's see who you really are!” the first frame shows Elly's old profile picture depicting her fairly normally, the second frame reveals her new profile picture where she looks a puppy girl.](/../assets/img/lets-see-who-you-really-are.webp)
+
 ~~~ callout _to be read as a conversation with my brain_
 ~~~
 
