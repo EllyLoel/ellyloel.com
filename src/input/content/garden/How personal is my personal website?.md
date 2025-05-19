@@ -525,4 +525,4 @@ but I've had to give up bc it's taking wayyy too long 😔
 
 I feel like that's a valient effort, right? 🥲
 
-If you feel so inclined, please [help me finish writing all the alt text](https://github.com/ellyloel/ellyloel.com/edit/main/src/input/content/garden/How%20personal%20is%20my%20personal%20website?.md) 🙏🏻
+If you feel so inclined, please [help me finish writing all the alt text](https://github.com/EllyLoel/ellyloel.com/edit/main/src/input/content/garden/How%20personal%20is%20my%20personal%20website%3F.md) 🙏🏻
