@@ -1,7 +1,7 @@
 ---
 title: how personal is my personal website?
 tags:
-  - Seedling
+  - Budding
   - Notes
   - Why you need a personal website
   - Self expression
