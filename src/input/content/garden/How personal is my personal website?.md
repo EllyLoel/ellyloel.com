@@ -19,6 +19,8 @@ noFilter: true
 
 i feel very strongly that my personal website should be **personal**. it should be about me. it shouldn't just be my professional mask, it should be all of me.
 
+_see also: [i am a poem i am not software](https://robinrendle.com/notes/i-am-a-poem-i-am-not-software/)_
+
 ## but is it?
 
 _welllll…_ kinda,,, but no, not really. not as much as i might like to think it is.
@@ -512,6 +514,8 @@ document.addEventListener("DOMContentLoaded", () => {
     width: 100%;
   }
 </style>
+
+## Postscript
 
 So I finished this post like 6 months ago, but I've been putting off posting it because I wanted to make sure all _300_ of these images had alt text… 
 
