@@ -58,7 +58,7 @@ especially because, like i said earlier, i really like the idea of being open ab
 
 let me know if you're a star wars lore nerd, a fan of anime & cartoons & animation of all types, a devout worshiper of yuri & GL, a lover of puppygirls, furries, the quirky and the kinky. **let's embrace the full spectrum of what makes us unique and unapologetically ourselves.**
 
-<div>
+<div class="[ flex flex-wrap gap-3 ]">
   <button type="button" id="randomiseButton">
     {%- inlineIcon "fas:shuffle" -%}
     <span>shuffle the silly shit</span>
