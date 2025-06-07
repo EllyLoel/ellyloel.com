@@ -1,0 +1,31 @@
+.badge-wall {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--block-size-3) var(--inline-size-3);
+	justify-content: center;
+
+	& :is(iframe, img, picture) {
+		border-radius: 0;
+		display: block;
+	}
+
+	& img {
+		image-rendering: pixelated;
+	}
+
+	& iframe {
+		block-size: 31px;
+		inline-size: 88px;
+		min-block-size: 0;
+		min-inline-size: 0;
+	}
+
+	& a {
+		background: transparent;
+		display: block;
+		margin-inline: 0;
+		padding-inline: 0;
+		text-decoration: none;
+	}
+}

@@ -34,6 +34,7 @@
 @import url("./utilities/wrapper.css") layer(utilities);
 
 /* Blocks */
+@import url("./blocks/badge-wall.css") layer(blocks);
 @import url("./blocks/badge.css") layer(blocks);
 @import url("./blocks/button.css") layer(blocks);
 @import url("./blocks/callout.css") layer(blocks);

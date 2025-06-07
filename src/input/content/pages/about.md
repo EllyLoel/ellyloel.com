@@ -44,3 +44,35 @@ For more up-to-date details check out the [now](/now/) page.
 - Cartoons
 - Reading
 - Gaming
+
+## Badge wall
+
+~~~callout **Content warning**
+Some badges have motion and/or flashing content.
+~~~
+
+<ul class="badge-wall">
+{%- for badge in badges -%}
+<li>
+  {%- if badge.href -%}
+  <a href="{{ badge.href }}">
+  {%- endif -%}
+    <img
+      src="{{ badge.src }}"
+      alt="{{ badge.alt }}"
+      {%- if badge.width -%}
+      width="{{ badge.width }}"
+      {%- endif -%}
+      {%- if badge.height -%}
+      height="{{ badge.height }}"
+      {%- endif -%}
+    >
+  {%- if badge.href -%}
+  </a>
+  {%- endif -%}
+</li>
+{%- endfor -%}
+<li>
+  <iframe src="https://incr.easrng.net/badge?key=ellyloel" style="background: url(https://incr.easrng.net/bg.gif)" title="increment badge" width="88" height="31" frameborder="0"></iframe>
+</li>
+</ul>
