@@ -145,7 +145,7 @@ Image description: An example of bad PHP code, there is a function called `isEve
 
 ![](../../../assets/img/wdc24-slides/16.jpg)
 
-> “HTML, CSS, JavaScript, Python, C#, and SQL may all be code, but they’re really quite different kinds of code and are suited to different kinds of people.”
+> HTML, CSS, JavaScript, Python, C#, and SQL may all be code, but they’re really quite different kinds of code and are suited to different kinds of people.
 
 — _Heydon Pickering_ in [Reluctant Gatekeeping: The Problem With Full Stack](https://medium.com/@Heydon/reluctant-gatekeeping-the-problem-with-full-stack-e9ad836570f6)
 
@@ -153,7 +153,7 @@ Image description: An example of bad PHP code, there is a function called `isEve
 
 ![](../../../assets/img/wdc24-slides/17.jpg)
 
-> “The value you want from a CSS expert is their CSS, not their JavaScript, so it’s absurd to make JavaScript a requirement.”
+> The value you want from a CSS expert is their CSS, not their JavaScript, so it’s absurd to make JavaScript a requirement.
 
 — _Heydon Pickering_ in [Reluctant Gatekeeping: The Problem With Full Stack](https://medium.com/@Heydon/reluctant-gatekeeping-the-problem-with-full-stack-e9ad836570f6)
 
@@ -223,7 +223,7 @@ I am web designer
 
 ![](../../../assets/img/wdc24-slides/25.jpg)
 
-> “Not only are new services being built to a self-defeatingly low UX and performance standard, existing experiences are pervasively re-developed on unspeakably slow, JS-taxed stacks.”
+> Not only are new services being built to a self-defeatingly low UX and performance standard, existing experiences are pervasively re-developed on unspeakably slow, JS-taxed stacks.
 
 — _Alex Russell_ in [The Market for Lemons](https://infrequently.org/2023/02/the-market-for-lemons/)
 

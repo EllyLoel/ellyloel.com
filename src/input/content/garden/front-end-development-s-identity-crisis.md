@@ -27,9 +27,9 @@ So, I’m a [web designer](https://heather-buchel.com/blog/2023/10/why-your-web-
 
 I know how to do full-stack development, not because I wanted to but because I had to. My title was “developer”, as was everyone else’s. According to our titles there were no front-end or back-end developers. We had to do it all. This led to lots of bad HTML and CSS from back-end developers and lots of bad Node and PHP from front-end developers.
 
-> "HTML, CSS, JavaScript, Python, C#, and SQL may all be code, but they’re really quite different kinds of code and are suited to different kinds of people."
+> HTML, CSS, JavaScript, Python, C#, and SQL may all be code, but they’re really quite different kinds of code and are suited to different kinds of people.
 >
-> "I recently worked with an organization where there were dozens of Full Stack Developers and no Frontend Developers. We had a website to build and nobody understood Flexbox, except me. Of course I was happy to help, but I had to learn React on the job to put the work in place. Fortunately I picked it up quite quickly, but the next CSS expert may not have done. The value you want from a CSS expert is their CSS, not their JavaScript, so it’s absurd to make JavaScript a requirement."
+> I recently worked with an organization where there were dozens of Full Stack Developers and no Frontend Developers. We had a website to build and nobody understood Flexbox, except me. Of course I was happy to help, but I had to learn React on the job to put the work in place. Fortunately I picked it up quite quickly, but the next CSS expert may not have done. The value you want from a CSS expert is their CSS, not their JavaScript, so it’s absurd to make JavaScript a requirement.
 
 — Heydon Pickering in [Reluctant Gatekeeping: The Problem With Full Stack](https://medium.com/@Heydon/reluctant-gatekeeping-the-problem-with-full-stack-e9ad836570f6)
 
@@ -43,7 +43,7 @@ I came into the industry during the reign of React. I know React well. It was al
 
 I hate it. There are so many things wrong with React. The cult surrounding it, the company making it, its countless [footguns](https://en.wiktionary.org/wiki/footgun), its bloat, its incompatibility with web platform features—the list goes on.
 
-> "Not only are new services being built to a self-defeatingly low UX and performance standard, existing experiences are pervasively re-developed on unspeakably slow, JS-taxed stacks."
+> Not only are new services being built to a self-defeatingly low UX and performance standard, existing experiences are pervasively re-developed on unspeakably slow, JS-taxed stacks.
 
 — Alex Russell in [The Market for Lemons](https://infrequently.org/2023/02/the-market-for-lemons/)
 

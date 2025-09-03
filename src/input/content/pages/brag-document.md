@@ -80,13 +80,13 @@ https://scrimba.com/articles/dropped-out-of-compsci-to-learn-coding-with-adhd/
 
 <time datetime="2022-03">March, 2022</time>
 
-> "It hasn’t escaped me that after months (and months and months) of design and dev work, trouble shooting and testing and doing it all over again, The Never Ending Project To Get Search Up and Running On The VEOHRC WebsiteTM did in fact end, but with more of a whimper than a bang from our end after deployment was successfully completed.
+> It hasn’t escaped me that after months (and months and months) of design and dev work, trouble shooting and testing and doing it all over again, The Never Ending Project To Get Search Up and Running On The VEOHRC WebsiteTM did in fact end, but with more of a whimper than a bang from our end after deployment was successfully completed.
 > And that doesn’t seem right at all, given all the hard work you put in to get us here, and how excited we all are to have Search up and running.
 > I am sure I don’t even fully appreciate what an undertaking this particular piece of work turned out to be, though I suspect that it was a bit like that time my partner and I decided to upgrade some lights in one room of our house, only to discover we had to completely rewire the entirety of said building. What I do really value however is that you tried to bring in extra resource where you could to get the job done, and that you took the time to explain the challenges to us and keep us updated.
 > Hopefully it wasn’t a fully traumatic experience for you all, and you’ve come out of it with some useful new insights and learnings that you can apply to other projects, (or at minimum a handy experience you can pull out next time you get one of those “tell us about a time” questions in interview.)
 > We’re really happy with the finished result and the response from our colleagues around the Commission, including the Commissioner has been really positive and enthusiastic. More importantly, this should go a long way to making it quicker and easier for people in the community to find information about their human rights, and we look forward to potentially seeing what we can learn about the issues that matter people from their search behaviours.
 > Casini and Elly – an extra special thanks to you both, and if I have missed other Portable folks who contributed to making this happen (as I’m sure I have) – please do extend this thank you to them as well.
-> We look forward to continuing to work with you all over the coming year, starting with clearing out that anxiety-producing backlog we’ve got."
+> We look forward to continuing to work with you all over the coming year, starting with clearing out that anxiety-producing backlog we’ve got.
 
 https://humanrights.vic.gov.au/search
 

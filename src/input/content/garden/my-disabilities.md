@@ -52,7 +52,7 @@ If you're looking for a definition check out [Wikipedia's page on coeliac diseas
 
 I have been officially diagnosed. Ceoliac disease has potentially fatal complications if untreated. So I needed to get blood tests and an gastroscopy to find if I had it so I could treat it properly.
 
-> "Conclusion: \[Coeliac disease\] is associated with an increased risk of depression, anxiety, eating disorders as well as ASD and ADHD. More research is required to investigate specific biological explanations as well as any effect of gluten free diet."
+> Conclusion: \[Coeliac disease\] is associated with an increased risk of depression, anxiety, eating disorders as well as ASD and ADHD. More research is required to investigate specific biological explanations as well as any effect of gluten free diet.
 
 — [Psychiatric Manifestations of Coeliac Disease, a Systematic Review and Meta-Analysis](https://doi.org/10.3390/nu12010142) by Emma Clappison, Marios Hadjivassiliou, and Panagiotis Zis in the journal Nutrients
 

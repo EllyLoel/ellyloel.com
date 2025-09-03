@@ -157,4 +157,4 @@ I have successfully completed the first half of a Bachelor of Computer Science p
 
 <span class="[ badge ][ neutral pill ]">Dec 2022</span>
 
-> “We think you're really good at trying new things, Elly. [You are] so proactive in bringing new ideas and approaches and pushing for us to do better. [You are] an advocate and pioneer for neurodiversity, accessibility and inclusion and [you help] us raise the bar.”
+> We think you're really good at trying new things, Elly. [You are] so proactive in bringing new ideas and approaches and pushing for us to do better. [You are] an advocate and pioneer for neurodiversity, accessibility and inclusion and [you help] us raise the bar.
