@@ -16,7 +16,7 @@ tags:
   - Tech
 date: 2025-04-15T12:30:52.387Z
 created: 2025-04-15T12:30:52.387Z
-modified: 2025-04-15T13:27:57.906Z
+modified: 2025-04-15T12:30:52.387Z
 link: https://catalystjournal.org/index.php/catalyst/article/download/29607/24772?inline=1
 id: 1015449512
 note: All of you better sink your teeth into this, because omfg it's absolutely amazing.

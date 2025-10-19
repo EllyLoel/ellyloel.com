@@ -7,7 +7,7 @@ tags:
   - HTML
 date: 2025-07-15T04:05:02.632Z
 created: 2025-07-15T04:05:02.632Z
-modified: 2025-07-15T04:06:14.717Z
+modified: 2025-07-15T04:05:02.632Z
 link: https://tetralogical.github.io/screen-reader-HTML-support/
 id: 1249011632
 excerpt: how screen readers support HTML

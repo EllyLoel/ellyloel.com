@@ -7,7 +7,7 @@ tags:
   - Writing
 date: 2025-04-22T02:36:49.956Z
 created: 2025-04-22T02:36:49.956Z
-modified: 2025-04-22T02:43:23.425Z
+modified: 2025-04-22T02:36:49.956Z
 link: https://aworkinglibrary.com/writing/coming-home?__readwiseLocation=
 id: 1020743489
 excerpt: Into the gap.

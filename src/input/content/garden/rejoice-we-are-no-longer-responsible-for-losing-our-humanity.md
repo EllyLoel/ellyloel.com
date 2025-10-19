@@ -7,7 +7,7 @@ tags:
   - Self expression
 date: 2025-05-17T00:08:37.461Z
 created: 2025-05-17T00:08:37.461Z
-modified: 2025-05-17T00:12:26.051Z
+modified: 2025-05-17T00:08:37.461Z
 link: https://www.frank.computer/blog/2024/10/rejoice.html
 id: 1042457191
 excerpt: Large-language models are an affront to our humanity and an insult to life itself. And this is precisely why they are so appealing.

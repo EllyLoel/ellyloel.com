@@ -9,7 +9,7 @@ tags:
   - Web Design
 date: 2025-04-03T10:01:52.588Z
 created: 2025-04-03T10:01:52.588Z
-modified: 2025-04-11T09:51:13.374Z
+modified: 2025-04-03T10:01:52.588Z
 link: https://ashleemboyer.com/blog/why-you-should-use-px-units-for-margin-padding-and-other-spacing-techniques
 id: 1006246189
 excerpt: When users increase their text size, they're not trying to make the space around text bigger.

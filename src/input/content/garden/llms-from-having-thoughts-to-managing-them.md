@@ -7,7 +7,7 @@ tags:
   - Capitalism
 date: 2025-05-17T00:30:23.770Z
 created: 2025-05-17T00:30:23.770Z
-modified: 2025-05-17T00:32:05.799Z
+modified: 2025-05-17T00:30:23.770Z
 link: https://www.frank.computer/blog/2024/06/llms-and-thoughts.html
 id: 1042478165
 excerpt: Large-language models aren’t just coming for our jobs, they’re coming for our thoughts and vibes.

@@ -8,7 +8,7 @@ tags:
   - Web Design
 date: 2025-04-28T04:17:36.542Z
 created: 2025-04-28T04:17:36.542Z
-modified: 2025-04-28T04:18:56.490Z
+modified: 2025-04-28T04:17:36.542Z
 link: https://meiert.com/blog/what-happened-to-separation-of-concerns/#toc
 id: 1026858676
 note: 🥲

@@ -7,7 +7,7 @@ tags:
   - Ableism
 date: 2025-04-11T09:19:35.944Z
 created: 2025-04-11T09:19:35.944Z
-modified: 2025-04-11T09:50:57.587Z
+modified: 2025-04-11T09:19:35.944Z
 link: https://ashleemboyer.com/blog/disability-is-not-a-single-selection-field
 id: 1012520192
 excerpt: Please just give me checkboxes.

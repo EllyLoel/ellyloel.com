@@ -8,7 +8,7 @@ tags:
   - Fascism
 date: 2025-04-25T07:52:02.974Z
 created: 2025-04-25T07:52:02.974Z
-modified: 2025-04-25T08:23:22.913Z
+modified: 2025-04-25T07:52:02.974Z
 link: https://www.todepond.com/sky/let-me-piss/
 id: 1023546407
 note: '**assimilation = death**'

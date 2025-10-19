@@ -6,7 +6,7 @@ tags:
   - Why you need a personal website
 date: 2025-05-17T03:02:03.702Z
 created: 2025-05-17T03:02:03.702Z
-modified: 2025-05-17T03:02:47.648Z
+modified: 2025-05-17T03:02:03.702Z
 link: https://ohhelloana.blog/in-defense-of-unpolished-websites/
 id: 1042524384
 excerpt: Ana's personal blog

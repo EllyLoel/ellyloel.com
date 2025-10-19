@@ -6,7 +6,7 @@ tags:
   - Tools
 date: 2025-04-08T02:23:37.781Z
 created: 2025-04-08T02:23:37.781Z
-modified: 2025-04-08T02:23:46.462Z
+modified: 2025-04-08T02:23:37.781Z
 link: https://bgrins.github.io/browser-diff/
 id: 1010188077
 excerpt: Read differences between text files in your browser

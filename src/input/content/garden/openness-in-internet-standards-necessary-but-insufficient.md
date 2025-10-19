@@ -6,7 +6,7 @@ tags:
   - Web Standards
 date: 2025-04-15T11:49:28.922Z
 created: 2025-04-15T11:49:28.922Z
-modified: 2025-04-15T13:10:44.058Z
+modified: 2025-04-15T11:49:28.922Z
 link: https://www.mnot.net/blog/2024/07/05/open_internet_standards
 id: 1015438893
 note: |-

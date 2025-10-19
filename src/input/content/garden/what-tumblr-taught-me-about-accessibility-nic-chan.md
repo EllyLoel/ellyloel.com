@@ -8,7 +8,7 @@ tags:
   - Community
 date: 2025-04-21T03:14:34.316Z
 created: 2025-04-21T03:14:34.316Z
-modified: 2025-04-21T03:17:47.048Z
+modified: 2025-04-21T03:14:34.316Z
 link: https://www.nicchan.me/blog/what-tumblr-taught-me-about-accessibility/
 id: 1019818178
 excerpt: Things I've learned about accessibility from my many years on Tumblr.

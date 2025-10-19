@@ -10,7 +10,7 @@ tags:
   - Writing
 date: 2025-04-21T04:26:21.502Z
 created: 2025-04-21T04:26:21.502Z
-modified: 2025-04-21T07:33:38.739Z
+modified: 2025-04-21T04:26:21.502Z
 link: https://github.com/zserge/zine
 id: 1019837112
 note: oh fuck yeah, I'm definitely going to use this 👏🏼👏🏼

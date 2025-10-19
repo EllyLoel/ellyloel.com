@@ -133,7 +133,7 @@ const fetchBookmarks = async (fetchAll) => {
 					id: item.id,
 					image: item.cover,
 					link: item?.link || item?.url,
-					modified: item?.lastUpdate,
+					modified: item?.lastUpdate !== "2025-09-22T07:42:04.985Z" ? item?.lastUpdate : item.created,
 					note: item.note,
 					tags: ["Bookmarks", ...item.tags],
 					title: item.title,

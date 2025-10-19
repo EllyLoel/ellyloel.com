@@ -7,7 +7,7 @@ tags:
   - Resources
 date: 2025-03-04T20:43:59.184Z
 created: 2025-03-04T20:43:59.184Z
-modified: 2025-03-04T20:44:52.331Z
+modified: 2025-03-04T20:43:59.184Z
 link: https://henry.codes/writing/human-readable-date-formatting-with-vanilla-javascript/
 id: 985459864
 excerpt: A quick note about js.

@@ -9,7 +9,7 @@ tags:
   - Living
 date: 2025-04-28T05:38:48.995Z
 created: 2025-04-28T05:38:48.995Z
-modified: 2025-04-28T05:46:30.610Z
+modified: 2025-04-28T05:38:48.995Z
 link: https://winnielim.org/journal/practicing-is-also-a-practice/
 id: 1026878243
 note: |-
