@@ -41,7 +41,11 @@ I think the one thing that I have actually decided on is the case that I'm plann
 
 The other thing I've been struggling with is power supplies, all the ones with good [80 Plus](https://en.wikipedia.org/wiki/80_Plus) ratings are far higher wattage than I need because I won't have a GPU in there. I think the lowest wattage I've seen with at least a platinum rating was 750W or 850W which is just wild, I have a 750W in my gaming PC with an RTX 3080 in it!
 
-Oh and somewhat related, I bought a new router, the GL.iNet Flint 3. I thought about building my own router but I decided against it for sake of simplicity and cost, also the Flint 3 has OpenWRT preinstalled so that's cool. If I do want to build my own in future, I can just turn the Flint 3 into a wireless access point seeing as it's Wi-Fi 7, *which is incredibly overkill for my needs lol*. But yeah it was a great deal so I thought it made more sense than building my own.
+Oh and TrueNAS/HexOS boot drives! You can't put anything other than the OS on the boot drive which is understandable but when you look at the smallest available SSDs and all you need for the OS is [16GB](https://www.truenas.com/docs/scale/gettingstarted/scalehardwareguide/#:~:text=16%20GB%20SSD%20boot%20device) then your head starts to hurt. The smallest SSDs that I can find are 128GB, so I'm going to be throwing away almost 90% of the capacity. Like there are other more size appropriate options but they cost more, I'm not spending more of the little money I have just to waste less capacity. I did have a friend offer their 64 GB eMMC (PCIe Gen2x1) 500MB/s max Steam Deck SSD but honestly that'll possibly be even slower than a SATA SSD lol
+
+Somewhat related, I bought a new router, the GL.iNet Flint 3. I thought about building my own router but I decided against it for sake of simplicity and cost, also the Flint 3 has OpenWRT preinstalled so that's cool. If I do want to build my own in future, I can just turn the Flint 3 into a wireless access point seeing as it's Wi-Fi 7, *which is incredibly overkill for my needs lol*. But yeah it was a great deal so I thought it made more sense than building my own.
+
+And thanks to fedi friends for recommendations on [networking stuff](https://front-end.social/@elly/115603807440062381)! The Flint 3 is doing the trick wonderfully atm but if I do end up needing more APs in future I'll probably get UniFi stuff thanks to all the recommendations (probs U7 Pros).
 
 ## Software
 
