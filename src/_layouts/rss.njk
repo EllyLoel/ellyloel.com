@@ -19,6 +19,7 @@
 				{%- if post.content -%}
 					{%- set content = post.content %}
 				{%- elseif post.data.layout === "bookmark" -%}
+					{%- set link = post.data.link -%}
 					{%- set content %}{% include "bookmark.njk" %}{% endset -%}
 				{%- endif -%}
 				{{- content | renderTransforms(post.data.page, metadata.url) -}}
