@@ -16,6 +16,10 @@
 		inset-block-end: calc(100% - var(--size-px-4));
 		inset-inline-end: calc(100% - var(--size-px-4));
 		position: absolute;
+
+		+ :is(strong, h2, h3, h4, h5, h6) {
+			--flow-space: 0;
+		}
 	}
 
 	> strong {

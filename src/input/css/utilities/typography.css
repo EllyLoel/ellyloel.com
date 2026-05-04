@@ -6,6 +6,10 @@
 	text-transform: lowercase;
 }
 
+.force-uppercase {
+	text-transform: uppercase !important;
+}
+
 .line-height-1 {
 	line-height: 1;
 }
