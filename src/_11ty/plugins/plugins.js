@@ -29,12 +29,12 @@ export default function(eleventyConfig) {
 				"aria-hidden": "true",
 			},
 		},
-		sources: {
-			fab: "node_modules/@fortawesome/fontawesome-free/svgs/brands",
-			far: "node_modules/@fortawesome/fontawesome-free/svgs/regular",
-			fas: "node_modules/@fortawesome/fontawesome-free/svgs/solid",
-			local: "src/assets/svg",
-		},
+		sources: [
+			{ name: "fab", path: "node_modules/@fortawesome/fontawesome-free/svgs/brands" },
+			{ name: "far", path: "node_modules/@fortawesome/fontawesome-free/svgs/regular" },
+			{ name: "fas", path: "node_modules/@fortawesome/fontawesome-free/svgs/solid" },
+			{ name: "local", path: "src/assets/svg" },
+		],
 	});
 	eleventyConfig.addPlugin(pluginIcons, {
 		icon: {
@@ -43,12 +43,12 @@ export default function(eleventyConfig) {
 			},
 			shortcode: "labelledIcon",
 		},
-		sources: {
-			fab: "node_modules/@fortawesome/fontawesome-free/svgs/brands",
-			far: "node_modules/@fortawesome/fontawesome-free/svgs/regular",
-			fas: "node_modules/@fortawesome/fontawesome-free/svgs/solid",
-			local: "src/assets/svg",
-		},
+		sources: [
+			{ name: "fab", path: "node_modules/@fortawesome/fontawesome-free/svgs/brands" },
+			{ name: "far", path: "node_modules/@fortawesome/fontawesome-free/svgs/regular" },
+			{ name: "fas", path: "node_modules/@fortawesome/fontawesome-free/svgs/solid" },
+			{ name: "local", path: "src/assets/svg" },
+		],
 	});
 	eleventyConfig.addPlugin(pluginIcons, {
 		icon: {
@@ -58,12 +58,12 @@ export default function(eleventyConfig) {
 			},
 			shortcode: "inlineIcon",
 		},
-		sources: {
-			fab: "node_modules/@fortawesome/fontawesome-free/svgs/brands",
-			far: "node_modules/@fortawesome/fontawesome-free/svgs/regular",
-			fas: "node_modules/@fortawesome/fontawesome-free/svgs/solid",
-			local: "src/assets/svg",
-		},
+		sources: [
+			{ name: "fab", path: "node_modules/@fortawesome/fontawesome-free/svgs/brands" },
+			{ name: "far", path: "node_modules/@fortawesome/fontawesome-free/svgs/regular" },
+			{ name: "fas", path: "node_modules/@fortawesome/fontawesome-free/svgs/solid" },
+			{ name: "local", path: "src/assets/svg" },
+		],
 	});
 	eleventyConfig.addPlugin(pluginIcons, {
 		icon: {
@@ -73,12 +73,12 @@ export default function(eleventyConfig) {
 			},
 			shortcode: "labelledInlineIcon",
 		},
-		sources: {
-			fab: "node_modules/@fortawesome/fontawesome-free/svgs/brands",
-			far: "node_modules/@fortawesome/fontawesome-free/svgs/regular",
-			fas: "node_modules/@fortawesome/fontawesome-free/svgs/solid",
-			local: "src/assets/svg",
-		},
+		sources: [
+			{ name: "fab", path: "node_modules/@fortawesome/fontawesome-free/svgs/brands" },
+			{ name: "far", path: "node_modules/@fortawesome/fontawesome-free/svgs/regular" },
+			{ name: "fas", path: "node_modules/@fortawesome/fontawesome-free/svgs/solid" },
+			{ name: "local", path: "src/assets/svg" },
+		],
 	});
 	// eleventyConfig.addPlugin(pluginInterlinker);
 	eleventyConfig.addPlugin(pluginNavigation);

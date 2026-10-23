@@ -1,9 +1,9 @@
 import "dotenv/config";
+import * as yaml from "js-yaml";
 import filters from "./src/_11ty/filters/filters.js";
 import plugins from "./src/_11ty/plugins/plugins.js";
 import shortcodes from "./src/_11ty/shortcodes/shortcodes.js";
 import transforms from "./src/_11ty/transforms/transforms.js";
-import yaml from "js-yaml";
 
 /** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {

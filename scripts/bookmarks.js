@@ -2,13 +2,13 @@
 /* eslint-disable no-console */
 
 import "dotenv/config";
+import * as yaml from "js-yaml";
 import { existsSync, mkdirSync } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 import EleventyFetch from "@11ty/eleventy-fetch";
 import { normalize } from "node:path";
 import process from "node:process";
 import slugify from "@sindresorhus/slugify";
-import yaml from "js-yaml";
 
 const outputDir = normalize(`${import.meta.dirname}/../src/input/content/garden/`);
 

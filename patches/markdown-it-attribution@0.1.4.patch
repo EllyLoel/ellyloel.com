@@ -1,0 +1,12 @@
+diff --git a/index.js b/index.js
+--- a/index.js
++++ b/index.js
+@@ -36,7 +36,7 @@ module.exports = function attributionPlugin (md, options) {
+    *
+    * @type {Function}
+    */
+-  var assign = md.utils.assign;
++  var assign = md.utils.assign || Object.assign;
+
+   /**
+    * Prepare the plugin options and merge user options with the defauls.
