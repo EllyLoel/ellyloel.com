@@ -5,3 +5,12 @@ patchedDependencies:
   markdown-it-attribution@0.1.4: patches/markdown-it-attribution@0.1.4.patch
   color-elements@0.0.14: patches/color-elements@0.0.14.patch
 autoInstallPeers: true
+blockExoticSubdeps: false
+allowBuilds:
+  reurl@https://codeload.github.com/jsepia/reurl/tar.gz/a3210117636c115fb139517fcfb2ea929025cded: true
+overrides:
+  fast-xml-parser@<5.7.0: ^5.7.0
+  minimist@<0.2.4: ^0.2.4
+  nth-check@<2.0.1: ^2.0.1
+  sharp@<0.35.5: ^0.35.5
+  uuid@<11.1.1: ^11.1.1
