@@ -205,8 +205,8 @@ importers:
         specifier: ^0.0.14
         version: 0.0.14(patch_hash=3a2a8b36ce1e18b1a2a61254b4d832e004a4e7e59a63c75614e85ee5b890d641)
       css-doodle:
-        specifier: 0.63.0
-        version: 0.63.0
+        specifier: 0.66.0
+        version: 0.66.0
       d3:
         specifier: ^7.9.0
         version: 7.9.0
@@ -2058,8 +2058,8 @@ packages:
     peerDependencies:
       postcss: ^8.4
 
-  css-doodle@0.63.0:
-    resolution: {integrity: sha512-F+72SFxzVK/lUWoBRnK+1598wJz2+QFma3frG0mDEFLlzdCeGNRpEyA/w8SMqloqtm1QzaiY83ph+0xAJz2Pmg==}
+  css-doodle@0.66.0:
+    resolution: {integrity: sha512-GNIjrgpUDQ+OrJ3/xmzlulbJyH0nI/eWRsUpbqVaVxsqgYkY7jiBLY5HPTqC/gUXdktOaXqWvhwrR9g6JPGlzg==}
 
   css-functions-list@3.3.3:
     resolution: {integrity: sha512-8HFEBPKhOpJPEPu70wJJetjKta86Gw9+CCyCnB3sui2qQfOvRyqBy4IKLKKAwdMpWb2lHXWk9Wb4Z6AmaUT1Pg==}
@@ -5774,7 +5774,7 @@ snapshots:
       postcss: 8.5.31
       postcss-selector-parser: 7.1.7
 
-  css-doodle@0.63.0: {}
+  css-doodle@0.66.0: {}
 
   css-functions-list@3.3.3: {}
 
