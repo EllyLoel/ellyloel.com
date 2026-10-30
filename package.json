@@ -66,7 +66,7 @@
 		"@sindresorhus/slugify": "^3.0.1",
 		"@types/eslint": "^9.6.1",
 		"@types/markdown-it": "^14.2.0",
-		"browserslist": "^4.29.4",
+		"browserslist": "^4.29.5",
 		"cssnano": "^9.9.0",
 		"cssremedy": "0.1.0-beta.2",
 		"dotenv": "^18.0.9",
