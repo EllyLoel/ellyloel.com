@@ -93,7 +93,7 @@
 		"markdown-it-sup": "^2.0.0",
 		"markdown-it-wikilinks": "^1.4.0",
 		"open-props": "^1.7.23",
-		"postcss": "^8.5.31",
+		"postcss": "^8.5.32",
 		"postcss-import": "^17.0.1",
 		"postcss-jit-props": "^1.0.16",
 		"postcss-load-config": "^6.0.1",
