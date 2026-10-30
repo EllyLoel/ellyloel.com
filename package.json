@@ -105,7 +105,7 @@
 		"stylelint-config-standard": "^40.0.0",
 		"stylelint-gamut": "^2.0.1",
 		"stylelint-order": "^8.1.2",
-		"wrangler": "^4.152.0"
+		"wrangler": "^4.153.0"
 	},
 	"browserslist": [
 		"defaults"
